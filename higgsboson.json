@@ -1,0 +1,28 @@
+{
+	"name": "higgsboson",
+	"entryPoint": {
+		"styles": "prueba"
+	},
+	"path": {
+		"sources": {
+			"srcipts": "src/scripts",
+			"styles": "src/styles",
+			"templates": "src/templates",
+		},
+		"entryPoint": {
+			"srcipts": "src/scripts/entryPoints",
+			"styles": "src/styles/entryPoints",
+		},
+		"tests": {
+			"scripts": "test/specs/scripts",
+			"styles": "test/specs/styles",
+			"fixtures": "test/specs/fixtures"
+		}
+	},
+	"server": {
+		"host": "localhost",
+		"url": "http://localhost",
+		"port": 8000,
+		"browser": "chrome"
+	}
+}

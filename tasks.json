@@ -1,0 +1,12 @@
+{
+	"styles": {
+		"clear": [
+			"temp"
+		]
+		"build": [
+			"sass",
+			"stylus"
+		]
+	},
+	"versions": "bump"
+}
