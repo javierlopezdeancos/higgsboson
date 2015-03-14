@@ -1,6 +1,6 @@
 {
   "name": "higgsboson",
-  "version": "0.1.0",
+  "version": "0.0.1-0",
   "description": "particle with all task to atomic particles build and deploy",
   "main": "Gulpfile.js",
   "author": "Javier López de Ancos",
