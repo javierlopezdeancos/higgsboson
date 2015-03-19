@@ -1,22 +1,30 @@
 {
 	"name": "higgsboson",
 	"entryPoint": {
-		"styles": "prueba"
+		"styles": "component"
 	},
 	"path": {
 		"sources": {
 			"srcipts": "src/scripts",
 			"styles": "src/styles",
-			"templates": "src/templates",
+			"templates": "src/templates"
 		},
 		"entryPoint": {
 			"srcipts": "src/scripts/entryPoints",
-			"styles": "src/styles/entryPoints",
+			"styles": "src/styles/entryPoints"
 		},
 		"tests": {
 			"scripts": "test/specs/scripts",
 			"styles": "test/specs/styles",
 			"fixtures": "test/specs/fixtures"
+		},
+		"distribution": {
+			"styles": "dist/styles"
+		}
+	},
+	"dependencies": {
+		"internals": {
+			"prefix": "particle-"
 		}
 	},
 	"server": {

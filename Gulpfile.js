@@ -6,4 +6,4 @@ var gulp,
 
 gulp = require('gulp');
 requireDir = require('require-dir');
-dir = requireDir('./tasks');
+dir = requireDir('./tasks/styles/build/dist');
