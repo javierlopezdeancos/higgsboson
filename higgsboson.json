@@ -1,36 +1,40 @@
 {
-	"name": "higgsboson",
-	"entryPoint": {
-		"styles": "component"
-	},
-	"path": {
-		"sources": {
-			"srcipts": "src/scripts",
-			"styles": "src/styles",
-			"templates": "src/templates"
-		},
-		"entryPoint": {
-			"srcipts": "src/scripts/entryPoints",
-			"styles": "src/styles/entryPoints"
-		},
-		"tests": {
-			"scripts": "test/specs/scripts",
-			"styles": "test/specs/styles",
-			"fixtures": "test/specs/fixtures"
-		},
-		"distribution": {
-			"styles": "dist/styles"
-		}
-	},
-	"dependencies": {
-		"internals": {
-			"prefix": "particle-"
-		}
-	},
-	"server": {
-		"host": "localhost",
-		"url": "http://localhost",
-		"port": 8000,
-		"browser": "chrome"
-	}
+  "name": "higgsboson",
+  "entryPoint": {
+    "styles": "component"
+  },
+  "path": {
+    "sources": {
+      "srcipts": "src/scripts",
+      "styles": "src/styles",
+      "templates": "src/templates"
+    },
+    "entryPoint": {
+      "srcipts": "src/scripts/entryPoints",
+      "styles": "src/styles/entryPoints"
+    },
+    "tests": {
+      "scripts": "test/specs/scripts",
+      "styles": "test/specs/styles",
+      "fixtures": "test/specs/fixtures"
+    },
+    "dependencies": "bower_components",
+    "distribution": {
+      "styles": "dist/styles"
+    },
+    "development": {
+      "styles": "dev/styles"
+    }
+  },
+  "dependencies": {
+    "internals": {
+      "prefix": "particle-"
+    }
+  },
+  "server": {
+    "host": "localhost",
+    "url": "http://localhost",
+    "port": 8000,
+    "browser": "chrome"
+  }
 }

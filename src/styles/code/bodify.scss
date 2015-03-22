@@ -1,3 +1,4 @@
 .body {
+	@extend %layoutify;
   background-color: $azurdepuig;
 }

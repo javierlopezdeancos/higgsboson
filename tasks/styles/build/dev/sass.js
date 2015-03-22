@@ -1,14 +1,14 @@
 /* global require */
 
-/*************************************/
-/**  RECIPIE                        **/
-/**  Name:   Build                  **/
-/**  Tasks:  scsslint               **/
-/**          sass                   **/
-/**          autoprefixer           **/
-/**          cssmin                 **/
-/**  Output: build:dist:styles:sass **/
-/*************************************/
+/************************************/
+/**  RECIPIE                       **/
+/**  Name:   Build                 **/
+/**  Tasks:  scsslint              **/
+/**          sass                  **/
+/**          autoprefixer          **/
+/**          cssmin                **/
+/**  Output: build:dev:styles:sass **/
+/************************************/
 
 'use strict';
 
@@ -30,7 +30,7 @@ gulp.task( 'fixPathDependencies', function () {
     .pipe( gulp.dest( higgsboson.path.dependencies ) );
 } );
 
-gulp.task( 'build:dist:styles:sass', [ 'fixPathDependencies' ], function () {
+gulp.task( 'build:dev:styles:sass', [ 'fixPathDependencies' ], function () {
   return gulp.src( higgsboson.path.entryPoint.styles + '/' + higgsboson.entryPoint.styles + '.scss' )
     .pipe( scsslint() )
     .pipe( sass( {
@@ -41,5 +41,5 @@ gulp.task( 'build:dist:styles:sass', [ 'fixPathDependencies' ], function () {
       cascade: true
     } ) )
     .pipe( cssmin() )
-    .pipe( gulp.dest( higgsboson.path.distribution.styles ) );
+    .pipe( gulp.dest( higgsboson.path.development.styles ) );
 } );
