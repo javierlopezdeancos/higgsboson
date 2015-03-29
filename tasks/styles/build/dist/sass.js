@@ -2,7 +2,7 @@
 
 /*************************************/
 /**  RECIPIE                        **/
-/**  Name:   Build                  **/
+/**  Name:   Build Sass             **/
 /**  Tasks:  scsslint               **/
 /**          sass                   **/
 /**          autoprefixer           **/
@@ -23,7 +23,7 @@ var gulp = gulp || require( 'gulp' ),
 
 gulp.task( 'fixPathDependencies', function () {
   gulp.src( [ higgsboson.path.dependencies + '/' + higgsboson.dependencies.internals.prefix + '*/**/entryPoints/*.scss' ] )
-    .pipe( replace( /..\/.*\/bower_components\//g, '../../../../' + higgsboson.path.dependencies + '/', {
+    .pipe( replace( /..\/.*\/bower_components\//g, '../../../../../' + higgsboson.path.dependencies + '/', {
       skipBinary: true
     } ) )
     .pipe( clean() )

@@ -2,11 +2,11 @@
 
 /*************************************/
 /**  RECIPIE                        **/
-/**  Name:   Demo                   **/
-/**  Tasks:  scsslint               **/
-/**          sass                   **/
-/**          autoprefixer           **/
-/**          cssmin                 **/
+/**  Name:   Demo BrowserSync       **/
+/**  Tasks:  build:dist:styles:sass **/
+/**          browserSyncSass        **/
+/**          browserSync            **/
+/**          watch                  **/
 /**  Output: server                 **/
 /*************************************/
 
@@ -15,18 +15,25 @@
 var gulp = gulp || require( 'gulp' ),
   browserSync = require( 'browser-sync' ),
   reload = browserSync.reload,
+  options,
   higgsboson = higgsboson || require( '../../higgsboson.json' );
 
-gulp.task( 'browserSyncSass', [ 'build:dev:styles:sass' ], function () {
+var options = {
+  server: {
+    baseDir: './' + higgsboson.path.development.root,
+    //startPath: '/htmls/' + higgsboson.entryPoint.styles
+    directory: true
+  }
+};
+
+gulp.task( 'browserSync', [ 'build:dev' ], function () {
   reload( {
     stream: true
   } );
 } );
 
-gulp.task( 'server', [ 'browserSyncSass' ], function () {
-  browserSync( {
-    server: "./" + higgsboson.path.development
-  } );
-  gulp.watch( "app/scss/*.scss", [ 'browserSyncSass' ] );
-  gulp.watch( "app/*.html" ).on( 'change', reload );
+gulp.task( 'server', [ 'browserSync' ], function () {
+  browserSync( options );
+  gulp.watch( higgsboson.path.sources.styles + '/**/*.scss', [ 'browserSync' ] ).on( 'change', reload );
+  gulp.watch( higgsboson.path.sources.htmls + '/**/*.html', [ 'browserSync' ] ).on( 'change', reload );
 } );

@@ -1,12 +1,28 @@
 {
-	"styles": {
-		"clear": [
-			"temp"
-		]
-		"build": [
-			"sass",
-			"stylus"
-		]
-	},
-	"versions": "bump"
+  "htmls": {
+    "build": {
+      "dev": [
+        "htmls"
+      ],
+      "dist": [
+        "htmls"
+      ]
+    }
+  },
+  "styles": {
+    "clear": [
+      "temp"
+    ]
+    "build": {
+      "dev": [
+        "sass",
+        "stylus"
+      ],
+      "dist": [
+        "sass",
+        "stylus"
+      ]
+    }
+  },
+  "versions": "bump"
 }

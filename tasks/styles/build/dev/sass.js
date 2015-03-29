@@ -19,11 +19,13 @@ var gulp = gulp || require( 'gulp' ),
   cssmin = require( 'gulp-cssmin' ),
   replace = require( 'gulp-replace' ),
   clean = require( 'gulp-clean' ),
+  browserSync = require( 'browser-sync' ),
+  reload = browserSync.reload,
   higgsboson = higgsboson || require( '../../../../higgsboson.json' );
 
 gulp.task( 'fixPathDependencies', function () {
   gulp.src( [ higgsboson.path.dependencies + '/' + higgsboson.dependencies.internals.prefix + '*/**/entryPoints/*.scss' ] )
-    .pipe( replace( /..\/.*\/bower_components\//g, '../../../../' + higgsboson.path.dependencies + '/', {
+    .pipe( replace( /..\/.*\/bower_components\//g, '../../../../../' + higgsboson.path.dependencies + '/', {
       skipBinary: true
     } ) )
     .pipe( clean() )
@@ -41,5 +43,8 @@ gulp.task( 'build:dev:styles:sass', [ 'fixPathDependencies' ], function () {
       cascade: true
     } ) )
     .pipe( cssmin() )
-    .pipe( gulp.dest( higgsboson.path.development.styles ) );
+    .pipe( gulp.dest( higgsboson.path.development.styles ) )
+    .pipe( reload( {
+      stream: true
+    } ) );
 } );

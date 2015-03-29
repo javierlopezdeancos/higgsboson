@@ -5,25 +5,32 @@
   },
   "path": {
     "sources": {
+      "root": "src",
       "srcipts": "src/scripts",
       "styles": "src/styles",
-      "templates": "src/templates"
+      "templates": "src/templates",
+      "htmls": "src/htmls"
     },
     "entryPoint": {
       "srcipts": "src/scripts/entryPoints",
       "styles": "src/styles/entryPoints"
     },
     "tests": {
+      "root": "test",
       "scripts": "test/specs/scripts",
       "styles": "test/specs/styles",
       "fixtures": "test/specs/fixtures"
     },
     "dependencies": "bower_components",
     "distribution": {
-      "styles": "dist/styles"
+      "root": "dist",
+      "styles": "dist/styles",
+      "htmls": "dev/htmls"
     },
     "development": {
-      "styles": "dev/styles"
+      "root": "dev",
+      "styles": "dev/styles",
+      "htmls": "dev/htmls"
     }
   },
   "dependencies": {
