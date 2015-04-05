@@ -1,5 +1,3 @@
-/* global require */
-
 /*************************************/
 /**  RECIPIE                        **/
 /**  Name:   Copy Html              **/
@@ -7,16 +5,13 @@
 /**  Output: copy:dev:html          **/
 /*************************************/
 
-module.exports = function() {
+'use strict';
 
-  'use strict';
+var gulp = gulp || require('gulp'),
+ higgsboson = higgsboson || require('../../../../../../higgsboson.json');
 
-  var gulp = gulp || require('gulp'),
-  higgsboson = higgsboson || require('../../../../higgsboson.json');
+gulp.task('copy:dev:html', function() {
+  gulp.src(higgsboson.path.sources.htmls + '/**/*.*')
+  .pipe(gulp.dest(higgsboson.path.development.htmls));
+});
 
-  gulp.task('copy:dev:html', function() {
-    gulp.src(higgsboson.path.sources.htmls + '/**/*.*')
-    .pipe(gulp.dest(higgsboson.path.development.htmls));
-  });
-
-};

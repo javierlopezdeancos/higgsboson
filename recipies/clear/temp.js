@@ -1,8 +1,5 @@
-module.exports = function() {
+'use strict';
 
-  'use strict';
+var gulp = gulp || require('gulp'),
+ higgsboson = higgsboson || require('../../../../higgsboson.json');
 
-  var gulp = gulp || require('gulp'),
-  higgsboson = higgsboson || require('./higgsboson.json');
-
-};
