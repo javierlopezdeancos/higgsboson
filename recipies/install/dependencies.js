@@ -1,12 +1,14 @@
-/*************************************/
-/**  RECIPIE                        **/
-/**  Name:   Install Dependencies   **/
-/**  Tasks:  install:depdendencies  **/
-/**          browserSyncSass        **/
-/**          browserSync            **/
-/**          watch                  **/
-/**  Output: install                **/
-/*************************************/
+/*****************************************/
+/**  RECIPIE                        		**/
+/**  Name:   Install Dependencies   		**/
+/**  Tasks:  install:depdendencies  		**/
+/**          browserSyncSass        		**/
+/**          browserSync            		**/
+/**          watch                  		**/
+/**  Output: install:dependencies:bower **/
+/** 				 install:dependencies:npm   **/
+/**  				 install:dependencies:theme **/
+/*****************************************/
 
 'use strict';
 
