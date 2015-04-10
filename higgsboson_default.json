@@ -1,5 +1,5 @@
 {
-  "name": "higgsboson",
+  "name": "component name",
   "entryPoint": {
     "styles": "component",
     "htmls": "component"
@@ -39,6 +39,7 @@
       "prefix": "particle-"
     }
   },
+  "higgsparticles":"./bower_components/particle-higgsboson",
   "server": {
     "host": "localhost",
     "url": "http://localhost",
