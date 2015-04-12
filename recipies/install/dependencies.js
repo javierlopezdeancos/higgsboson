@@ -1,13 +1,13 @@
 /*****************************************/
-/**  RECIPIE                        		**/
-/**  Name:   Install Dependencies   		**/
-/**  Tasks:  install:depdendencies  		**/
-/**          browserSyncSass        		**/
-/**          browserSync            		**/
-/**          watch                  		**/
+/**  RECIPIE                            **/
+/**  Name:   Install Dependencies       **/
+/**  Tasks:  install:depdendencies      **/
+/**          browserSyncSass            **/
+/**          browserSync                **/
+/**          watch                      **/
 /**  Output: install:dependencies:bower **/
-/** 				 install:dependencies:npm   **/
-/**  				 install:dependencies:theme **/
+/**          install:dependencies:npm   **/
+/**          install:dependencies:theme **/
 /*****************************************/
 
 'use strict';
@@ -19,7 +19,7 @@ var gulp = gulp || require('gulp'),
   bower = require('../../../../bower.json');;
 
 gulp.task('install:dependencies:bower', shell.task([
-	'bower install ' + bower.devDependencies['particle-higgsboson'],
+  'bower install ' + bower.devDependencies['particle-higgsboson'],
   'bower install',
 ]));
 
