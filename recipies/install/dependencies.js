@@ -19,8 +19,7 @@ var gulp = gulp || require('gulp'),
   bower = require('../../../../bower.json');;
 
 gulp.task('install:dependencies:bower', shell.task([
-  'bower install ' + bower.devDependencies['particle-higgsboson'],
-  'bower install',
+  'bower install'
 ]));
 
 gulp.task('install:dependencies:npm', shell.task([
