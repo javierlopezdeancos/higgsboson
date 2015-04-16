@@ -1,10 +1,12 @@
 /*********************************************************/
 /**  RECIPIE                            								**/
 /**  Name:   Install Dependencies       								**/
-/**  Tasks:  install:depdendencies      								**/
-/**          browserSyncSass            								**/
-/**          browserSync                								**/
-/**          watch                      								**/
+/**  Tasks:  install:dependencies:bower                 **/
+/**          install:dependencies:npm                   **/
+/**          install:dependencies:theme                 **/
+/**          clean:dependencies:theme                   **/
+/**          clean:dependencies:themeinstaledbydefault  **/
+/**          rename:dependencies:theme                  **/
 /**  Output: install:dependencies:bower 								**/
 /**          install:dependencies:npm   								**/
 /**          install:dependencies:theme 								**/
