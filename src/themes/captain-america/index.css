@@ -1,5 +1,6 @@
 @import "resets.css";
 @import "../default.css";
+@import "fonts.css";
 @import "./theme.css";
 
 /* Components */
@@ -16,11 +17,3 @@
 @import "../../components/table/table.css";
 @import "../../components/box/box.css";
 @import "../../components/menu/hamburger.css";
-
-/* Feature Login */
-@import "../../features/login/login.css";
-
-/* Feature Main */
-@import "../../features/components/sidebar/sidebar.css";
-@import "../../features/components/content/content.css";
-@import "../../features/main/main.css";

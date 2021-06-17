@@ -1,5 +1,6 @@
 @import "resets.css";
 @import "../default.css";
+@import "fonts.css";
 @import "./theme.css";
 
 /* Components */
@@ -11,6 +12,3 @@
 @import "../../components/buttons/buttons.css";
 @import "../../components/form/form.css";
 @import "../../components/links/links.css";
-
-/* Feature Login */
-@import "../../features/login/login.css";
