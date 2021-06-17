@@ -1,4 +1,4 @@
-.vzr-button {
+.hggs-button {
   width: 100%;
   border: unset;
   text-align: center;
@@ -13,39 +13,39 @@
   margin: var(--button-margin-vertical) 0;
 }
 
-.vzr-button.vzr-button--primary {
+.hggs-button.hggs-button--primary {
   color: var(--buttton-color-primary);
   background-color: var(--buttton-background-primary);
 }
 
-.vzr-button.vzr-button--primary:hover {
+.hggs-button.hggs-button--primary:hover {
   background-color: var(--buttton-background-primary-hover);
 }
 
-.vzr-button.vzr-button--big {
+.hggs-button.hggs-button--big {
   width: var(--button-width-big);
 }
 
-.vzr-button.vzr-button--medium {
+.hggs-button.hggs-button--medium {
   width: var(--button-width-medium);
   height: var(--button-height-medium);
   padding: var(--button-padding-medium);
 }
 
-.vzr-button.vzr-button--small {
+.hggs-button.hggs-button--small {
   width: var(--button-width-small);
   height: var(--button-height-small);
   padding: var(--button-padding-small);
   font-size: var(--button-font-size-small);
 }
 
-.vzr-button.vzr-button--icon {
+.hggs-button.hggs-button--icon {
   width: var(--button-icon-width, --button-icon-width-default);
   background: unset;
   padding: var(--button-icon-padding, --button-icon-padding-default);
   margin: 0;
 }
 
-.vzr-button.vzr-button--icon .vzr-icon {
+.hggs-button.hggs-button--icon .hggs-icon {
   display: block;
 }

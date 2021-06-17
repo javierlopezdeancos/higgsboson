@@ -1,42 +1,42 @@
-.vzr-h1,
-.vzr-h2,
-.vzr-h3,
-.vzr-h4,
-.vzr-h5,
-.vzr-h6 {
+.hggs-h1,
+.hggs-h2,
+.hggs-h3,
+.hggs-h4,
+.hggs-h5,
+.hggs-h6 {
   color: var(--title-color);
   font-family: var(--title-font-famiy);
   margin-block: unset;
 }
 
-.vzr-h1 {
+.hggs-h1 {
   font-size: var(--title-h1-font-size, --title-h1-font-size-default);
   font-weight: var(--title-h1-font-weight, --title-h1-font-weight-default);
 }
 
-.vzr-h2 {
+.hggs-h2 {
   font-size: var(--title-h2-font-size, --title-h2-font-size-default);
   font-weight: var(--title-h2-font-weight, --title-h2-font-weight-default);
   margin: var(--title-h2-margin, --title-h2-margin-default);
 }
 
-.vzr-h3 {
+.hggs-h3 {
   font-size: var(--title-h3-font-size, --title-h3-font-size-default);
   font-weight: var(--title-h3-font-weight, --title-h3-font-weight-default);
 }
 
-.vzr-h4 {
+.hggs-h4 {
   font-size: var(--title-h4-font-size, --title-h4-font-size-default);
   font-weight: var(--title-h4-font-weight, --title-h4-font-weight-default);
   margin: var(--title-h4-margin, --title-h4-margin-default);
 }
 
-.vzr-h5 {
+.hggs-h5 {
   font-size: var(--title-h5-font-size, --title-h5-font-size-default);
   font-weight: var(--title-h5-font-weight, --title-h5-font-weight-default);
 }
 
-.vzr-h6 {
+.hggs-h6 {
   font-size: var(--title-h6-font-size, --title-h6-font-size-default);
   font-weight: var(--title-h6-font-weight, --title-h6-font-weight-default);
 }

@@ -1,4 +1,4 @@
-.vzr-link {
+.hggs-link {
   text-decoration: none;
   font-family: var(--link-font-family);
   font-weight: var(--link-font-weight);
@@ -6,7 +6,7 @@
   color: var(--link-color);
 }
 
-.vzr-link:hover {
+.hggs-link:hover {
   text-decoration: underline;
   color: var(--link-color-hover);
 }

@@ -1,4 +1,4 @@
-.vzr-input {
+.hggs-input {
   width: 100%;
   height: var(--input-height);
   border: var(--input-border);
@@ -10,11 +10,11 @@
   background: transparent;
 }
 
-.vzr-input::placeholder {
+.hggs-input::placeholder {
   color: var(--input-color-placeholder);
 }
 
-.vzr-input:focus {
+.hggs-input:focus {
   outline: none;
   border: var(--input-border-focus);
 }

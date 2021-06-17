@@ -1,4 +1,4 @@
-.vzr-form {
+.hggs-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6,6 +6,6 @@
   justify-content: center;
 }
 
-.vzr-form .vzr-input + .vzr-input {
+.hggs-form .hggs-input + .hggs-input {
   margin-top: var(--form-input-space-vertical);
 }

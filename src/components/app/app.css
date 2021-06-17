@@ -1,5 +1,5 @@
-.vzr-app {
-  @extend .vzr-flex--top-center-column;
+.hggs-app {
+  @extend .hggs-flex--top-center-column;
 
   width: 100%;
   height: 100%;

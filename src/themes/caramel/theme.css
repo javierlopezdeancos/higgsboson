@@ -22,21 +22,21 @@ html {
 
 /* Components */
 
-.vzr-app {
+.hggs-app {
   --app-background: var(--color-secondary);
 }
 
-.vzr-h1,
-.vzr-h2,
-.vzr-h3,
-.vzr-h4,
-.vzr-h5,
-.vzr-h6 {
+.hggs-h1,
+.hggs-h2,
+.hggs-h3,
+.hggs-h4,
+.hggs-h5,
+.hggs-h6 {
   --title-font-famiy: var(--font-family-primary);
   --title-color: var(--color-primary);
 }
 
-.vzr-input {
+.hggs-input {
   --input-border: 1px solid var(--color--secondary-003);
   --input-border-radius: var(--boder-radius);
   --input-border-focus: 1px solid var(--color-primary);
@@ -45,11 +45,11 @@ html {
   --input-color-placeholder: var(--color--secondary-002);
 }
 
-.vzr-form {
+.hggs-form {
   --form-input-space-vertical: var(--space-vertical-small);
 }
 
-.vzr-button {
+.hggs-button {
   --buttton-height: 64px;
   --buttton-padding: 0 40px;
   --button-font-family: var(--font-family-primary);
@@ -71,14 +71,14 @@ html {
   --button-font-size-small: var(--font-size-text-small);
 }
 
-.vzr-link {
+.hggs-link {
   --link-font-family: var(--font-family-primary);
   --link-font-weight: var(--font-weight-medium);
   --link-color: var(--color-primary);
   --link-color-hover: var(--color-auxiliary-001);
 }
 
-.vzr-logo {
+.hggs-logo {
   --logo-url: url("./assets/svg/logo.svg");
   --logo-width: 300px;
   --logo-height: 102px;
@@ -86,7 +86,7 @@ html {
 
 /* Features */
 
-.vzr-login {
+.hggs-login {
   --login-logo-width: 150px;
   --login-logo-height: 50px;
 }

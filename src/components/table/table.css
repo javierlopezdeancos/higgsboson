@@ -1,11 +1,11 @@
-.vzr-table-wrapper {
+.hggs-table-wrapper {
   width: 100%;
   overflow-x: auto;
   border-radius: var(--table-wrapper-border-radius, --table-wrapper-border-radius-default);
   box-shadow: var(--table-wrapper-box-shadow, --table-wrapper-box-shadow-default);
 }
 
-.vzr-table-wrapper .vzr-table {
+.hggs-table-wrapper .hggs-table {
   width: 100%;
   min-width: var(--table-min-width, --table-min-width-default);
   display: table;
@@ -13,7 +13,7 @@
   border-collapse: collapse;
 }
 
-.vzr-table-wrapper .vzr-table .vzr-table-head {
+.hggs-table-wrapper .hggs-table .hggs-table-head {
   display: table-header-group;
 }
 
@@ -30,23 +30,23 @@
   vertical-align: inherit;
 }
 
-.vzr-table-wrapper .vzr-table .vzr-table-cell {
+.hggs-table-wrapper .hggs-table .hggs-table-cell {
   @extend %vzr-table-cell;
 }
 
-.vzr-table-wrapper .vzr-table tbody tr:first-child .vzr-table-cell {
+.hggs-table-wrapper .hggs-table tbody tr:first-child .hggs-table-cell {
   padding-top: var(--table-tbody-first-row-padding-top, --table-tbody-first-row-padding-top-default);
 }
 
-.vzr-table-wrapper .vzr-table tbody tr .vzr-table-cell:first-child {
+.hggs-table-wrapper .hggs-table tbody tr .hggs-table-cell:first-child {
   padding-left: var(--table-tbody-first-column-padding-left, --table-tbody-first-column-padding-left-default);
 }
 
-.vzr-table-wrapper .vzr-table tbody tr:last-child .vzr-table-cell {
+.hggs-table-wrapper .hggs-table tbody tr:last-child .hggs-table-cell {
   border-bottom: var(--table-cell-border-bottom-last-child, --table-cell-border-bottom-last-child-default);
 }
 
-.vzr-table-wrapper .vzr-table .vzr-table-cell--head {
+.hggs-table-wrapper .hggs-table .hggs-table-cell--head {
   @extend %vzr-table-cell;
 
   padding: var(--table-cell-head-padding);
@@ -57,11 +57,11 @@
   border-bottom: var(--table-cell-head-border-bottom, --table-cell-head-border-bottom-default);
 }
 
-.vzr-table-wrapper .vzr-table .vzr-table-cell.vzr-table-cell--capitalize,
-.vzr-table-wrapper .vzr-table .vzr-table-cell--head.vzr-table-cell--capitalize {
+.hggs-table-wrapper .hggs-table .hggs-table-cell.hggs-table-cell--capitalize,
+.hggs-table-wrapper .hggs-table .hggs-table-cell--head.hggs-table-cell--capitalize {
   text-transform: capitalize;
 }
 
-.vzr-table-wrapper .vzr-table .vzr-table-cell.vzr-table-cell--bold {
+.hggs-table-wrapper .hggs-table .hggs-table-cell.hggs-table-cell--bold {
   font-weight: var(--table-cell-font-weight-bold, --table-cell-font-weight-bold-default);
 }

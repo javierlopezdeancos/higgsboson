@@ -1,13 +1,17 @@
-.vzr-logo {
-  width: var(--logo-width);
-  height: var(--logo-height);
-  background: var(--logo-url) no-repeat;
+.hggs-logo {
+  width: var(--logo-width, --logo-width-default);
+  height: var(--logo-height, --logo-height-default);
+  background: var(--logo-url, --logo-url-default) no-repeat;
 }
 
-.vzr-logo.vzr-logo--white {
+.hggs-logo.hggs-logo--white {
   background: var(--logo-url-white, --logo-url-white-default) no-repeat;
 }
 
-.vzr-logo.vzr-logo--color-primary {
+.hggs-logo.hggs-logo--black {
+  background: var(--logo-url-black, --logo-url-black-default) no-repeat;
+}
+
+.hggs-logo.hggs-logo--color-primary {
   fill: var(--icon-color-primary, --icon-color-primary-default);
 }
