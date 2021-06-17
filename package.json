@@ -1,21 +1,49 @@
 {
-  "name": "higgsboson",
-  "version": "0.0.1-0",
-  "description": "particle with all task to atomic particles build and deploy",
-  "main": "Gulpfile.js",
-  "author": "Javier López de Ancos",
-  "license": "ISC",
+  "name": "vizor-st-core-design",
+  "version": "0.1.21",
+  "description": "Vizor Core Design",
+  "main": "dist/vizor-st-core-design.min.css",
+  "engines": {
+    "node": ">=14.16.1",
+    "npm": ">=6.14.12"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32",
+    "win64"
+  ],
+  "arch": "any",
+  "scripts": {
+    "set:theme:vizor": "cross-env-shell THEME=vizor",
+    "set:theme:caramel": "cross-env-shell THEME=caramel",
+    "develop:vizor": "npm run set:theme:vizor npm run develop",
+    "develop:caramel": "npm run set:theme:caramel npm run develop",
+    "develop": "cross-env npx postcss ./src/themes/%THEME%/index.css --use postcss-preset-env postcss-import postcss-extend autoprefixer postcss-copy-assets --output ./dist/$THEME.css --watch",
+    "build:vizor": "npm run set:theme:vizor npm run build",
+    "build:caramel": "npm run set:theme:caramel npm run build",
+    "build": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-extend postcss-csso  autoprefixer postcss-copy-assets --output ./dist/vizor-st-core-design.min.css",
+    "format": "npx stylelint --fix \"src/**/*.css\"",
+    "lint": "npx stylelint \"src/**/*.css\"",
+    "develop:server": "lite-server"
+  },
   "devDependencies": {
-    "browser-sync": "^2.4.0",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.1.0",
-    "gulp-clean": "^0.3.1",
-    "gulp-cssmin": "^0.1.6",
-    "gulp-phantomcss": "0.0.4",
-    "gulp-replace": "^0.5.3",
-    "gulp-sass": "^1.3.3",
-    "gulp-scss-lint": "^0.1.10",
-    "gulp-shell": "^0.4.0",
-    "require-dir": "^0.1.0"
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.2",
+    "lite-server": "^2.6.1",
+    "postcss": "^8.2.14",
+    "postcss-cli": "^8.3.1",
+    "postcss-copy-assets": "^0.3.1",
+    "postcss-csso": "^5.0.1",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^14.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  },
+  "dependencies": {},
+  "optionalDependencies": {
+    "fsevents": "*"
   }
 }

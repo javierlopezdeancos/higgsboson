@@ -1,0 +1,157 @@
+@import "./vizor/fonts.css";
+
+html {
+  --color-primary-default: #325ae7;
+  --color-primary-001-default: #004ca8;
+  --color-secondary-default: #f37322;
+  --color-tertiary-default: #b50938;
+  --color-quaternary-default: #000;
+  --color-quinary-default: #fff;
+  --color-senary-default: #39bfff;
+  --color-auxiliary-gray-000-default: #f6f7f9;
+  --color-auxiliary-gray-001-default: #eee;
+  --color-auxiliary-gray-002-default: #e0e0e0;
+  --color-auxiliary-gray-003-default: #c9c9c9;
+  --color-auxiliary-gray-004-default: #6f839c;
+  --color-auxiliary-gray-005-default: #808292;
+  --color-auxiliary-gray-007-default: #4e4b4b;
+  --color-auxiliar-gray-008-default: #1b1d2a;
+  --font-family-primary-default: 'DM Sans', sans-serif;
+  --font-size-medium-default: 1.4rem;
+  --font-size-big-small: 24px;
+  --font-size-medium-small: 18px;
+  --font-size-text-normal-plus-default: 16px;
+  --font-size-text-default: 14px;
+  --font-size-text-small-default: 12px;
+  --font-weight-normal-default: 400;
+  --font-weight-medium-default: 500;
+  --font-weight-bold-default: 700;
+  --font-weight-extra-bold-default: 900;
+  --boder-radius-default: 8px;
+  --border-default: 1px solid var(--color-auxiliary-gray-001-default);
+  --space-vertical-medium-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --space-vertical-small-default: calc(var(--space-vertical-medium) / 2);
+  --layer-10-default: 11;
+  --layer-0-default: 1;
+}
+
+.vzr-app {
+  --app-background-default: var(--color-quinary-default);
+  --app-color-default: var(--color-auxiliar-gray-008-default);
+}
+
+.vzr-h1,
+.vzr-h2,
+.vzr-h3,
+.vzr-h4,
+.vzr-h5,
+.vzr-h6 {
+  --title-font-famiy-default: var(--font-family-primary-default);
+  --title-color-default: var(--app-color-default);
+  --title-h1-font-size-default: var(--font-size-colossal-default);
+  --title-h1-font-weight-default: var(--font-weight-medium-default);
+  --title-h2-font-size-default: var(--font-size-enormous-default);
+  --title-h2-font-weight-default: var(--font-weight-medium-default);
+  --title-h2-margin-default: 20px 0 10px 0;
+  --title-h3-font-size-default: var(--font-size-extra-big-default);
+  --title-h3-font-weight-default: var(--font-weight-bold-default);
+  --title-h4-font-size-default: var(--font-size-big-default);
+  --title-h4-font-weight-default: var(--font-weight-bold-default);
+  --title-h4-margin-default: 10px 0;
+  --title-h5-font-size-default: var(--font-size-medium-default);
+  --title-h5-font-weight-default: var(--font-weight-bold-default);
+  --title-h6-font-size-default: var(--font-size-text-default);
+  --title-h6-font-weight-default: var(--font-weight-bold-default);
+}
+
+.vzr-text {
+  --text-color-default: var(--color-auxiliary-gray-005-default);
+  --text-font-famiy-default: var(--font-family-primary-default);
+  --text-font-size-default: var(--font-size-text-default);
+  --text-font-weight-default: var(--font-weight-normal-default);
+  --text-font-weight-bold-default: var(--font-weight-bold-default);
+  --text-font-size-small-default: var(--font-size-text-small-default);
+}
+
+.vzr-logo {
+  --logo-url-white-default: url("./assets/svg/logo-white.svg");
+}
+
+.vzr-icon {
+  --icon-size-default: 20px;
+  --icon-background-user-default: url("./assets/icons/user.svg");
+  --icon-background-question-default: url("./assets/icons/question.svg");
+  --icon-background-log-out-default: url("./assets/icons/log-out.svg");
+  --icon-background-hamburger-menu-default: url("./assets/icons/hamburger-menu.svg");
+
+  /* --color-secondary-default */
+  --icon-filter-color-secondary-default: invert(56%) sepia(63%) saturate(2808%) hue-rotate(346deg) brightness(97%) contrast(96%);
+}
+
+.vzr-button {
+  --buttton-height-default: 44px;
+  --buttton-padding-default: 0 40px;
+  --button-font-family-default: var(--font-family-primary-default);
+  --button-font-size-default: var(--font-size-text-default);
+  --button-font-weight-default: var(--font-weight-medium-default);
+  --button-font-letter-spacing-default: 1px;
+  --button-border-radius-default: 3px;
+  --button-margin-vertical-default: var(--space-vertical-small-default);
+  --buttton-background-primary-default: var(--color-primary-default);
+  --buttton-color-primary-default: var(--color-quinary-default);
+  --buttton-background-primary-hover-default: var(--color-primary-001-default);
+  --button-width-big-default: 250px;
+  --button-width-medium-default: 180px;
+  --button-height-medium-default: 40px;
+  --button-padding-medium-default: 0 10px;
+  --button-width-small-default: 70px;
+  --button-height-small-default: 30px;
+  --button-padding-small-default: 0 5px;
+  --button-font-size-small-default: var(--font-size-text-small-default);
+  --button-icon-padding-default: 10px;
+  --button-icon-width-default: calc(var(--icon-size-default) + var(--button-icon-padding-default));
+}
+
+.vzr-table-wrapper {
+  --table-wrapper-border-radius-default: calc(var(--boder-radius-default) / 2);
+  --table-wrapper-box-shadow-default: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.vzr-table {
+  --table-min-width-default: 650px;
+  --table-tbody-first-row-padding-top-default: unset;
+  --table-tbody-first-column-padding-left-default: 16px;
+  --table-cell-font-family-default: var(--font-family-primary-default);
+  --table-cell-font-weight-default: var(--font-weight-normal-default);
+  --table-cell-font-size-default: var(--font-size-text-default);
+  --table-cell-font-color-default: var(--color-auxiliary-gray-004-default);
+  --table-cell-padding-default: 16px;
+  --table-cell-text-align-default: left;
+  --table-cell-border-bottom-default: 1px solid var(--color-auxiliary-gray-002-default);
+  --table-cell-border-bottom-last-child: unset;
+  --table-cell-font-weight-bold-default: var(--font-weight-bold-default);
+  --table-cell-head-font-size-default: var(--font-size-text-default);
+  --table-cell-head-font-weight-default: var(--font-weight-medium-default);
+  --table-cell-head-color-default: var(--app-color-default);
+  --table-cell-head-background-default: var(--color-auxiliary-gray-000-default);
+  --table-cell-head-border-bottom-default: unset;
+}
+
+.vzr-box {
+  --box-min-height-default: 100px;
+  --box-background-default: var(--color-quinary);
+  --box-box-shadow-default: 0 1px 5px 0 var(--color-auxiliary-gray-001);
+  --box-padding-default: 40px 30px 40px 30px;
+  --box-border-radius-with-radius-default: 20px;
+}
+
+.vzr-hamburger-menu {
+  --hamburger-menu-background-default: var(--color-auxiliary-gray-002-default);
+  --hamburger-menu-font-family-default: var(--font-family-primary-default);
+  --hamburger-menu-font-size-default: var(--font-size-text-default);
+  --hamburger-menu-item-color-default: var(--color-auxiliary-gray-005-default);
+  --hamburger-menu-item-hover-background-default: var(--color-auxiliary-gray-001-default);
+  --hamburger-menu-item-padding-horizontal-default: 20px;
+  --hamburger-menu-item-padding-vertical-default: calc(var(--hamburger-menu-item-padding-horizontal-default) / 2);
+  --hamburger-menu-icon-hover-background-default: var(--color-auxiliary-gray-003-default);
+}

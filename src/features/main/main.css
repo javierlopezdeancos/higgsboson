@@ -1,0 +1,6 @@
+.vzr-main {
+  @extend .vzr-flex--center-row;
+
+  width: 100%;
+  height: 100%;
+}

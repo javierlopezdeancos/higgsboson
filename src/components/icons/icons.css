@@ -1,0 +1,24 @@
+.vzr-icon {
+  width: var(--icon-size, --icon-size-default);
+  height: var(--icon-size, --icon-size-default);
+}
+
+.vzr-icon.vzr-icon--user {
+  background: var(--icon-background-user, --icon-background-user-default) no-repeat;
+}
+
+.vzr-icon.vzr-icon--question {
+  background: var(--icon-background-question, --icon-background-question-default) no-repeat;
+}
+
+.vzr-icon.vzr-icon--log-out {
+  background: var(--icon-background-log-out, --icon-background-log-out-default) no-repeat;
+}
+
+.vzr-icon.vzr-icon--hamburger-menu {
+  background: var(--icon-background-hamburger-menu, --icon-background-hamburger-menu-default) no-repeat;
+}
+
+.vzr-icon.vzr-icon--color-secondary {
+  filter: var(--icon-filter-color-secondary, --icon-filter-color-secondary-default);
+}

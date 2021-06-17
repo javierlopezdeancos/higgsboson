@@ -1,0 +1,67 @@
+.vzr-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--table-wrapper-border-radius, --table-wrapper-border-radius-default);
+  box-shadow: var(--table-wrapper-box-shadow, --table-wrapper-box-shadow-default);
+}
+
+.vzr-table-wrapper .vzr-table {
+  width: 100%;
+  min-width: var(--table-min-width, --table-min-width-default);
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.vzr-table-wrapper .vzr-table .vzr-table-head {
+  display: table-header-group;
+}
+
+%vzr-table-cell {
+  display: table-cell;
+  padding: var(--table-cell-padding, --table-cell-padding-default);
+  text-align: var(--table-cell-text-align, --table-cell-text-align-default);
+  font-family: var(--table-cell-font-family, --table-cell-font-family-default);
+  font-weight: var(--table-cell-font-weight, --table-cell-font-weight-default);
+  font-weight: var(--table-cell-font-size, --table-cell-font-size-default);
+  font-size: var(--table-cell-font-size, --table-cell-font-size-default);
+  color: var(--table-cell-font-color, --table-cell-font-color-default);
+  border-bottom: var(--table-cell-border-bottom, --table-cell-border-bottom-default);
+  vertical-align: inherit;
+}
+
+.vzr-table-wrapper .vzr-table .vzr-table-cell {
+  @extend %vzr-table-cell;
+}
+
+.vzr-table-wrapper .vzr-table tbody tr:first-child .vzr-table-cell {
+  padding-top: var(--table-tbody-first-row-padding-top, --table-tbody-first-row-padding-top-default);
+}
+
+.vzr-table-wrapper .vzr-table tbody tr .vzr-table-cell:first-child {
+  padding-left: var(--table-tbody-first-column-padding-left, --table-tbody-first-column-padding-left-default);
+}
+
+.vzr-table-wrapper .vzr-table tbody tr:last-child .vzr-table-cell {
+  border-bottom: var(--table-cell-border-bottom-last-child, --table-cell-border-bottom-last-child-default);
+}
+
+.vzr-table-wrapper .vzr-table .vzr-table-cell--head {
+  @extend %vzr-table-cell;
+
+  padding: var(--table-cell-head-padding);
+  color: var(--table-cell-head-color, --table-cell-head-color-default);
+  font-size: var(--table-cell-head-font-size, --table-cell-head-font-size-default);
+  font-weight: var(--table-cell-head-font-weight, --table-cell-head-font-weight-default);
+  background: var(--table-cell-head-background, --table-cell-head-background-default);
+  border-bottom: var(--table-cell-head-border-bottom, --table-cell-head-border-bottom-default);
+}
+
+.vzr-table-wrapper .vzr-table .vzr-table-cell.vzr-table-cell--capitalize,
+.vzr-table-wrapper .vzr-table .vzr-table-cell--head.vzr-table-cell--capitalize {
+  text-transform: capitalize;
+}
+
+.vzr-table-wrapper .vzr-table .vzr-table-cell.vzr-table-cell--bold {
+  font-weight: var(--table-cell-font-weight-bold, --table-cell-font-weight-bold-default);
+}

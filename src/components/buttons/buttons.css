@@ -1,0 +1,51 @@
+.vzr-button {
+  width: 100%;
+  border: unset;
+  text-align: center;
+  padding: var(--buttton-padding);
+  height: var(--buttton-height);
+  font-family: var(--button-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-font-letter-spacing);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  margin: var(--button-margin-vertical) 0;
+}
+
+.vzr-button.vzr-button--primary {
+  color: var(--buttton-color-primary);
+  background-color: var(--buttton-background-primary);
+}
+
+.vzr-button.vzr-button--primary:hover {
+  background-color: var(--buttton-background-primary-hover);
+}
+
+.vzr-button.vzr-button--big {
+  width: var(--button-width-big);
+}
+
+.vzr-button.vzr-button--medium {
+  width: var(--button-width-medium);
+  height: var(--button-height-medium);
+  padding: var(--button-padding-medium);
+}
+
+.vzr-button.vzr-button--small {
+  width: var(--button-width-small);
+  height: var(--button-height-small);
+  padding: var(--button-padding-small);
+  font-size: var(--button-font-size-small);
+}
+
+.vzr-button.vzr-button--icon {
+  width: var(--button-icon-width, --button-icon-width-default);
+  background: unset;
+  padding: var(--button-icon-padding, --button-icon-padding-default);
+  margin: 0;
+}
+
+.vzr-button.vzr-button--icon .vzr-icon {
+  display: block;
+}

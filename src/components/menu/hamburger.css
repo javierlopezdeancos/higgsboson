@@ -1,0 +1,51 @@
+.vzr-hamburger-menu {
+  @extend .vzr-flex--top-left-column;
+
+  width: 100%;
+  font-family: var(--hamburger-menu-font-family, --hamburger-menu-font-family-default);
+  font-size: var(--hamburger-menu-font-size, --hamburger-menu-font-size-default);
+}
+
+.vzr-hamburger-menu .vzr-hamburger-menu-icon {
+  @extend .vzr-flex--top-left-column;
+
+  background: var(--hamburger-menu-background, --hamburger-menu-background-default);
+}
+
+.vzr-hamburger-menu .vzr-hamburger-menu-icon:hover {
+  background: var(--hamburger-menu-icon-hover-background, --hamburger-menu-icon-hover-background-default);
+}
+
+.vzr-hamburger-menu .vzr-hamburger-menu-items {
+  @extend .vzr-flex--top-left-column;
+
+  background: var(--hamburger-menu-background, --hamburger-menu-background-default);
+  width: 0;
+  height: 0;
+}
+
+.vzr-hamburger-menu .vzr-hamburger-menu-items,
+.vzr-hamburger-menu .vzr-hamburger-menu-items .vzr-hamburger-menu-item {
+  opacity: 0;
+}
+
+.vzr-hamburger-menu .vzr-hamburger-menu-items.vzr-hamburger-menu-items--opened {
+  width: 100%;
+  height: auto;
+}
+
+.vzr-hamburger-menu .vzr-hamburger-menu-items .vzr-hamburger-menu-item {
+  width: 100%;
+  text-decoration: unset;
+  color: var(--hamburger-menu-item-color, --hamburger-menu-item-color-default);
+  padding: var(--hamburger-menu-item-padding-vertical) var(--hamburger-menu-item-padding-horizontal);
+}
+
+.vzr-hamburger-menu .vzr-hamburger-menu-items .vzr-hamburger-menu-item:hover {
+  background: var(--hamburger-menu-item-hover-background, --hamburger-menu-item-hover-background-default);
+}
+
+.vzr-hamburger-menu .vzr-hamburger-menu-items.vzr-hamburger-menu-items--opened,
+.vzr-hamburger-menu .vzr-hamburger-menu-items.vzr-hamburger-menu-items--opened .vzr-hamburger-menu-item {
+  opacity: 1;
+}

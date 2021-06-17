@@ -1,6 +1,10 @@
+.sass-cache/
+*.css.map
 .DS_Store
-.temp
 node_modules
-bower_components
+!src/index.html
 dist
-theme.json
+*.sqlite
+*.json
+package.json
+*.exe.*

@@ -1,0 +1,18 @@
+.vzr-feature-sidebar {
+  width: 15%;
+  height: 100%;
+  padding: var(--feature-sidebar-padding);
+  background: var(--feature-sidebar-background);
+}
+
+.vzr-feature-sidebar .vzr-feature-sidebar-navigation {
+  @extend .vzr-flex--top-left-column;
+}
+
+.vzr-feature-sidebar-item {
+  font-family: var(--feature-sidebar-item-font-family);
+  font-weight: var(--feature-sidebar-item-font-weight);
+  color: var(--feature-sidebar-item-color);
+  text-decoration: none;
+  text-transform: capitalize;
+}

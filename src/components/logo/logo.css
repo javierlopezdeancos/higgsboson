@@ -1,0 +1,15 @@
+@import "../../themes/vizor/theme.css";
+
+.vzr-logo {
+  width: var(--logo-width);
+  height: var(--logo-height);
+  background: var(--logo-url) no-repeat;
+}
+
+.vzr-logo.vzr-logo--white {
+  background: var(--logo-url-white, --logo-url-white-default) no-repeat;
+}
+
+.vzr-logo.vzr-logo--color-primary {
+  fill: var(--icon-color-primary, --icon-color-primary-default);
+}

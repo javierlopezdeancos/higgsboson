@@ -1,0 +1,11 @@
+#!/bin/sh
+echo "executing git pre-push hook ..."
+
+if [ "$(expr match $(uname -s) 'MINGW64_NT*')" == "10" ]; then
+  echo "You are commiting in Windows 10 OS"
+  exec powershell.exe -ExecutionPolicy RemoteSigned -File '.\.git\hooks\pre-push.ps1'
+else
+  echo "You are not commiting in Windows 10 OS"
+  cd "Frontend/Web/case-management-fe-app"
+  npm run lint
+fi

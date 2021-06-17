@@ -1,0 +1,94 @@
+@import "fonts.css";
+
+html {
+  --color-primary: #b21f2e;
+  --color-auxiliary-001: #9a0f1e;
+  --color-secondary: #ffdba9;
+  --color--secondary-001: #d9a55c;
+  --color--secondary-002: #936f01;
+  --color--secondary-003: #4c3500;
+  --color-tertiary: #fff;
+  --color-quaternary: #000;
+  --color-auxiliary-gray-001: #eee;
+  --color-auxiliary-gray-002: #c9c9c9;
+  --font-family-primary: 'Roboto', sans-serif;
+  --font-size-medium: 1.4rem;
+  --font-size-text: 14px;
+  --font-size-text-small: 12px;
+  --font-weight-medium: 500;
+  --font-weight-extra-bold: 900;
+  --boder-radius: 0;
+  --space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --space-vertical-small: calc(var(--space-vertical-medium) / 2);
+}
+
+/* Components */
+
+.vzr-app {
+  --app-background: var(--color-secondary);
+}
+
+.vzr-h1,
+.vzr-h2,
+.vzr-h3,
+.vzr-h4,
+.vzr-h5,
+.vzr-h6 {
+  --title-font-famiy: var(--font-family-primary);
+  --title-color: var(--color-primary);
+}
+
+.vzr-input {
+  --input-border: 1px solid var(--color--secondary-003);
+  --input-border-radius: var(--boder-radius);
+  --input-border-focus: 1px solid var(--color-primary);
+  --input-height: 45px;
+  --input-padding: 0 15px;
+  --input-color-placeholder: var(--color--secondary-002);
+}
+
+.vzr-form {
+  --form-input-space-vertical: var(--space-vertical-small);
+}
+
+.vzr-button {
+  --buttton-height: 64px;
+  --buttton-padding: 0 40px;
+  --button-font-family: var(--font-family-primary);
+  --button-font-size: var(--font-size-text);
+  --button-font-weight: var(--font-weight-medium);
+  --button-font-letter-spacing: 1px;
+  --button-border-radius: var(--boder-radius);
+  --button-margin-vertical: var(--space-vertical-medium);
+  --buttton-background-primary: var(--color-primary);
+  --buttton-color-primary: var(--color-tertiary);
+  --buttton-background-primary-hover: var(--color-auxiliary-001);
+  --button-width-big: 200px;
+  --button-width-medium: 120px;
+  --button-height-medium: 40px;
+  --button-padding-medium: 0 10px;
+  --button-width-small: 70px;
+  --button-height-small: 30px;
+  --button-padding-small: 0 5px;
+  --button-font-size-small: var(--font-size-text-small);
+}
+
+.vzr-link {
+  --link-font-family: var(--font-family-primary);
+  --link-font-weight: var(--font-weight-medium);
+  --link-color: var(--color-primary);
+  --link-color-hover: var(--color-auxiliary-001);
+}
+
+.vzr-logo {
+  --logo-url: url("./assets/svg/logo.svg");
+  --logo-width: 300px;
+  --logo-height: 102px;
+}
+
+/* Features */
+
+.vzr-login {
+  --login-logo-width: 150px;
+  --login-logo-height: 50px;
+}

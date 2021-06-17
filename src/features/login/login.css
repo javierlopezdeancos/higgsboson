@@ -1,0 +1,33 @@
+@import "../../components/logo/logo.css";
+@import "../../components/links/links.css";
+
+.vzr-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 100%;
+  margin: auto;
+}
+
+.vzr-login .vzr-login-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vzr-login .vzr-logo {
+  width: var(--login-logo-width);
+  height: var(--login-logo-height);
+}
+
+.vzr-login .vzr-login-body,
+.vzr-login .vzr-login-format {
+  width: 100%;
+}
+
+.vzr-login .vzr-link {
+  font-size: var(--font-size-text-small);
+}

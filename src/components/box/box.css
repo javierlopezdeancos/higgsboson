@@ -1,0 +1,12 @@
+.vzr-box {
+  width: 100%;
+  height: auto;
+  min-height: var(--box-min-height, --box-min-height-default);
+  background: var(--box-background, --box-background-default);
+  box-shadow: var(--box-box-shadow, --box-box-shadow-default);
+  padding: var(--box-padding, --box-padding-default);
+}
+
+.vzr-box.vzr-box--with-radius {
+  border-radius: var(--box-border-radius-with-radius, --box-border-radius-with-radius-default);
+}

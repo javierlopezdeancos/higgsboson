@@ -1,0 +1,11 @@
+.vzr-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vzr-form .vzr-input + .vzr-input {
+  margin-top: var(--form-input-space-vertical);
+}

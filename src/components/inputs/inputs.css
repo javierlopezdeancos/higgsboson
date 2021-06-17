@@ -1,0 +1,20 @@
+.vzr-input {
+  width: 100%;
+  height: var(--input-height);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  padding: var(--input-padding);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-text);
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.vzr-input::placeholder {
+  color: var(--input-color-placeholder);
+}
+
+.vzr-input:focus {
+  outline: none;
+  border: var(--input-border-focus);
+}

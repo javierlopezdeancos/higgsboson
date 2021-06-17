@@ -1,0 +1,18 @@
+.vzr-text {
+  color: var(--text-color, --text-color-default);
+  font-family: var(--text-font-famiy, --text-font-famiy-default);
+  font-size: var(--text-font-size, --text-font-size-default);
+  font-weight: var(--text-font-weight, --text-font-weight-default);
+}
+
+.vzr-text--bold {
+  font-weight: var(--text-font-weight-bold, --text-font-weight-bold-default);
+}
+
+.vzr-text--italic {
+  font-style: italic;
+}
+
+.vzr-text--small {
+  font-size: var(--text-font-size-small, --text-font-size-small-default);
+}
