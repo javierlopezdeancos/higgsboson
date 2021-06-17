@@ -16,7 +16,7 @@ You could install each [nodejs](https://nodejs.org/en/) version that you want on
 
 #### Git
 
-You should install and configure with your vizor credentials [git](https://git-scm.com) to manage this code in Azure Devops repository.
+You should install and configure it.
 
 ### Install
 
@@ -30,11 +30,11 @@ At first you should install dependencies after install nodejs and git.
 
 Build your css files into `./dist/{theme}.min.css`
 
-#### Example to Vizor theme
+#### Example to Captain-america theme
 
 `npm run build:captain-america`
 
-Build your vizor css files minified into `./dist/captain-america.min.css`
+Build your captain-america css files minified into `./dist/captain-america.min.css`
 
 ### Develop a theme
 
