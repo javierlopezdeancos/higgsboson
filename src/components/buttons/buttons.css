@@ -1,48 +1,48 @@
 .hggs-button {
   width: 100%;
+  height: var(--buttton-height, 44px);
   border: unset;
   text-align: center;
-  padding: var(--buttton-padding);
-  height: var(--buttton-height);
-  font-family: var(--button-font-family);
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  letter-spacing: var(--button-font-letter-spacing);
-  border-radius: var(--button-border-radius);
+  padding: var(--buttton-padding, 0 40px);
+  font-family: var(--font-family-primary-default);
+  font-size: var(--font-size-text-default);
+  font-weight: var(--font-weight-medium-default);
+  letter-spacing: var(--button-font-letter-spacing, --letter-spacing-default);
+  border-radius: var(--button-border-radius, --boder-radius-default);
   cursor: pointer;
-  margin: var(--button-margin-vertical) 0;
+  margin: var(--button-margin-vertical, --space-vertical-small-default) 0;
 }
 
 .hggs-button.hggs-button--primary {
-  color: var(--buttton-color-primary);
-  background-color: var(--buttton-background-primary);
+  color: var(--buttton-color-primary, --color-quinary-default);
+  background-color: var(--buttton-background-primary, --color-primary-default);
 }
 
 .hggs-button.hggs-button--primary:hover {
-  background-color: var(--buttton-background-primary-hover);
+  background-color: var(--buttton-background-primary-hover, --color-primary-001-default);
 }
 
 .hggs-button.hggs-button--big {
-  width: var(--button-width-big);
+  width: var(--button-width-big, 250px);
 }
 
 .hggs-button.hggs-button--medium {
-  width: var(--button-width-medium);
-  height: var(--button-height-medium);
-  padding: var(--button-padding-medium);
+  width: var(--button-width-medium, 180px);
+  height: var(--button-height-medium, 40px);
+  padding: var(--button-padding-medium, 0 10px);
 }
 
 .hggs-button.hggs-button--small {
-  width: var(--button-width-small);
-  height: var(--button-height-small);
-  padding: var(--button-padding-small);
-  font-size: var(--button-font-size-small);
+  width: var(--button-width-small, 70px);
+  height: var(--button-height-small, 30px);
+  padding: var(--button-padding-small, 10px);
+  font-size: var(--button-font-size-small, --font-size-text-small-default);
 }
 
 .hggs-button.hggs-button--icon {
-  width: var(--button-icon-width, --button-icon-width-default);
+  width: var(--button-icon-width, calc(20px + 10px));
   background: unset;
-  padding: var(--button-icon-padding, --button-icon-padding-default);
+  padding: var(--button-icon-padding, 10px);
   margin: 0;
 }
 

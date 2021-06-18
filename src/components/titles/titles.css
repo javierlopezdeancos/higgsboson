@@ -4,39 +4,39 @@
 .hggs-h4,
 .hggs-h5,
 .hggs-h6 {
-  color: var(--title-color);
-  font-family: var(--title-font-famiy);
+  color: var(--title-color, --app-color-default);
+  font-family: var(--title-font-famiy, --font-family-primary-default);
   margin-block: unset;
 }
 
 .hggs-h1 {
-  font-size: var(--title-h1-font-size, --title-h1-font-size-default);
-  font-weight: var(--title-h1-font-weight, --title-h1-font-weight-default);
+  font-size: var(--title-h1-font-size, --font-size-colossal-default);
+  font-weight: var(--title-h1-font-weight, --font-weight-medium-default);
 }
 
 .hggs-h2 {
-  font-size: var(--title-h2-font-size, --title-h2-font-size-default);
-  font-weight: var(--title-h2-font-weight, --title-h2-font-weight-default);
-  margin: var(--title-h2-margin, --title-h2-margin-default);
+  font-size: var(--title-h2-font-size, --font-size-enormous-default);
+  font-weight: var(--title-h2-font-weight, --font-weight-medium-default);
+  margin: var(--title-h2-margin, 20px 0 10px 0);
 }
 
 .hggs-h3 {
-  font-size: var(--title-h3-font-size, --title-h3-font-size-default);
-  font-weight: var(--title-h3-font-weight, --title-h3-font-weight-default);
+  font-size: var(--title-h3-font-size, --font-size-extra-big-default);
+  font-weight: var(--title-h3-font-weight, --font-weight-bold-default);
 }
 
 .hggs-h4 {
-  font-size: var(--title-h4-font-size, --title-h4-font-size-default);
-  font-weight: var(--title-h4-font-weight, --title-h4-font-weight-default);
-  margin: var(--title-h4-margin, --title-h4-margin-default);
+  font-size: var(--title-h4-font-size, --font-size-big-default);
+  font-weight: var(--title-h4-font-weight, --font-weight-bold-default);
+  margin: var(--title-h4-margin, 10px 0);
 }
 
 .hggs-h5 {
-  font-size: var(--title-h5-font-size, --title-h5-font-size-default);
-  font-weight: var(--title-h5-font-weight, --title-h5-font-weight-default);
+  font-size: var(--title-h5-font-size, --font-size-medium-default);
+  font-weight: var(--title-h5-font-weight, --font-weight-bold-default);
 }
 
 .hggs-h6 {
-  font-size: var(--title-h6-font-size, --title-h6-font-size-default);
-  font-weight: var(--title-h6-font-weight, --title-h6-font-weight-default);
+  font-size: var(--title-h6-font-size, --font-size-text-default);
+  font-weight: var(--title-h6-font-weight, --font-weight-bold-default);
 }

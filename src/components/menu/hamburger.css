@@ -2,24 +2,28 @@
   @extend .hggs-flex--top-left-column;
 
   width: 100%;
-  font-family: var(--hamburger-menu-font-family, --hamburger-menu-font-family-default);
-  font-size: var(--hamburger-menu-font-size, --hamburger-menu-font-size-default);
+  font-family:
+    var(
+      --hamburger-menu-font-family,
+      --font-family-primary-default
+    );
+  font-size: var(--hamburger-menu-font-size, --font-size-text-default);
 }
 
 .hggs-hamburger-menu .hggs-hamburger-menu-icon {
   @extend .hggs-flex--top-left-column;
 
-  background: var(--hamburger-menu-background, --hamburger-menu-background-default);
+  background: var(--hamburger-menu-background, --color-auxiliary-gray-002-default);
 }
 
 .hggs-hamburger-menu .hggs-hamburger-menu-icon:hover {
-  background: var(--hamburger-menu-icon-hover-background, --hamburger-menu-icon-hover-background-default);
+  background: var(--hamburger-menu-icon-hover-background, --color-auxiliary-gray-003-default);
 }
 
 .hggs-hamburger-menu .hggs-hamburger-menu-items {
   @extend .hggs-flex--top-left-column;
 
-  background: var(--hamburger-menu-background, --hamburger-menu-background-default);
+  background: var(--hamburger-menu-background, --color-auxiliary-gray-002-default);
   width: 0;
   height: 0;
 }
@@ -37,12 +41,12 @@
 .hggs-hamburger-menu .hggs-hamburger-menu-items .hggs-hamburger-menu-item {
   width: 100%;
   text-decoration: unset;
-  color: var(--hamburger-menu-item-color, --hamburger-menu-item-color-default);
-  padding: var(--hamburger-menu-item-padding-vertical) var(--hamburger-menu-item-padding-horizontal);
+  color: var(--hamburger-menu-item-color, --color-auxiliary-gray-005-default);
+  padding: (var(--hamburger-menu-item-padding-vertical) var(--hamburger-menu-item-padding-horizontal), calc(var(20px) / 2) var(20px));
 }
 
 .hggs-hamburger-menu .hggs-hamburger-menu-items .hggs-hamburger-menu-item:hover {
-  background: var(--hamburger-menu-item-hover-background, --hamburger-menu-item-hover-background-default);
+  background: var(--hamburger-menu-item-hover-background, --color-auxiliary-gray-001-default);
 }
 
 .hggs-hamburger-menu .hggs-hamburger-menu-items.hggs-hamburger-menu-items--opened,

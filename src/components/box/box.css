@@ -1,12 +1,12 @@
 .hggs-box {
   width: 100%;
   height: auto;
-  min-height: var(--box-min-height, --box-min-height-default);
-  background: var(--box-background, --box-background-default);
-  box-shadow: var(--box-box-shadow, --box-box-shadow-default);
-  padding: var(--box-padding, --box-padding-default);
+  min-height: var(--box-min-height, 100px);
+  background: var(--box-background, --color-quinary);
+  box-shadow: var(--box-box-shadow, 0 1px 5px 0 var(--color-auxiliary-gray-001));
+  padding: var(--box-padding, 40px 30px 40px 30px);
 }
 
 .hggs-box.hggs-box--with-radius {
-  border-radius: var(--box-border-radius-with-radius, --box-border-radius-with-radius-default);
+  border-radius: var(--box-border-radius-with-radius, 20px);
 }
