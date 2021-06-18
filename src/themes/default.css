@@ -1,4 +1,4 @@
-root {
+:root {
   --color-primary-default: #9c9c9c;
   --color-primary-001-default: #7d7d7d;
   --color-secondary-default: #c9c9c9;
@@ -15,9 +15,11 @@ root {
   --color-auxiliary-gray-007-default: #4e4b4b;
   --color-auxiliar-gray-008-default: #1b1d2a;
   --font-family-primary-default: sans-serif;
-  --font-size-medium-default: 1.4rem;
-  --font-size-big-small: 24px;
-  --font-size-medium-small: 18px;
+  --font-size-colossal-default: 38px;
+  --font-size-enormous-default: 32px;
+  --font-size-extra-big-default: 28px;
+  --font-size-big-small-default: 24px;
+  --font-size-medium-small-default: 18px;
   --font-size-text-normal-plus-default: 16px;
   --font-size-text-default: 14px;
   --font-size-text-small-default: 12px;

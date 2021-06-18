@@ -6,7 +6,6 @@
 .hggs-h6 {
   color: var(--title-color, --app-color-default);
   font-family: var(--title-font-famiy, --font-family-primary-default);
-  margin-block: unset;
 }
 
 .hggs-h1 {
