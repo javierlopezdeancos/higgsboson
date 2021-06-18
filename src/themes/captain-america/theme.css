@@ -31,6 +31,10 @@ html {
   --border: 1px solid var(--color-auxiliary-gray-001);
   --space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --space-vertical-small: calc(var(--space-vertical-medium) / 2);
+  --space-vertical-big: calc(var(--space-vertical-medium) * 2);
+  --space-horizontal-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --space-horizontal-big: calc(var(--space-horizontal-medium) * 2);
+  --space-horizontal-small: calc(var(--space-horizontal-medium) / 2);
   --layer-10: 10;
   --layer-0: 1;
 }
@@ -52,18 +56,22 @@ html {
   --title-color: var(--app-color);
   --title-h1-font-size: var(--font-size-colossal);
   --title-h1-font-weight: var(--font-weight-medium);
+  --title-h1-margin: var(--space-vertical-big) 0 var(--space-vertical-medium) 0;
   --title-h2-font-size: var(--font-size-enormous);
   --title-h2-font-weight: var(--font-weight-medium);
-  --title-h2-margin: 20px 0 10px 0;
+  --title-h2-margin: var(--space-vertical-big) 0 var(--space-vertical-medium) 0;
   --title-h3-font-size: var(--font-size-extra-big);
   --title-h3-font-weight: var(--font-weight-bold);
+  --title-h3-margin: var(--space-vertical-medium) 0 var(--space-vertical-small) 0;
   --title-h4-font-size: var(--font-size-big);
   --title-h4-font-weight: var(--font-weight-bold);
-  --title-h4-margin: 10px 0;
+  --title-h4-margin: var(--space-vertical-medium) 0 var(--space-vertical-small) 0;
   --title-h5-font-size: var(--font-size-medium);
   --title-h5-font-weight: var(--font-weight-bold);
+  --title-h5-margin: var(--space-vertical-small) 0 var(--space-vertical-small) 0;
   --title-h6-font-size: var(--font-size-text);
   --title-h6-font-weight: var(--font-weight-bold);
+  --title-h6-margin: var(--space-vertical-small) 0 var(--space-vertical-small) 0;
 }
 
 .hggs-text {

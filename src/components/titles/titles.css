@@ -11,6 +11,7 @@
 .hggs-h1 {
   font-size: var(--title-h1-font-size, --font-size-colossal-default);
   font-weight: var(--title-h1-font-weight, --font-weight-medium-default);
+  margin: var(--title-h1-margin, 20px 0 10px 0);
 }
 
 .hggs-h2 {
@@ -22,20 +23,23 @@
 .hggs-h3 {
   font-size: var(--title-h3-font-size, --font-size-extra-big-default);
   font-weight: var(--title-h3-font-weight, --font-weight-bold-default);
+  margin: var(--title-h3-margin, 10px 0 5px 0);
 }
 
 .hggs-h4 {
   font-size: var(--title-h4-font-size, --font-size-big-default);
   font-weight: var(--title-h4-font-weight, --font-weight-bold-default);
-  margin: var(--title-h4-margin, 10px 0);
+  margin: var(--title-h4-margin, 10px 0 5px 0);
 }
 
 .hggs-h5 {
   font-size: var(--title-h5-font-size, --font-size-medium-default);
   font-weight: var(--title-h5-font-weight, --font-weight-bold-default);
+  margin: var(--title-h5-margin, 5px 0 5px 0);
 }
 
 .hggs-h6 {
   font-size: var(--title-h6-font-size, --font-size-text-default);
   font-weight: var(--title-h6-font-weight, --font-weight-bold-default);
+  margin: var(--title-h6-margin, 5px 0 5px 0);
 }
