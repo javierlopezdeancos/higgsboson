@@ -1,0 +1,18 @@
+.vzr-label {
+  font-family: var(--label-font-family, --label-font-family-default);
+  font-weight: var(--label-font-weight, --label-font-weight-default);
+  font-size: var(--label-font-size, --label-font-size-default);
+  color: var(--label-color, --label-color-default);
+}
+
+.vzr-label:focus,
+.vzr-label.vzr-label--focus {
+  color: var(--label-color-focus, --label-color-focus-default);
+}
+
+.vzr-label:disabled,
+.vzr-label[disabled],
+.vzr-label.vzr-label--disabled {
+  color: var(--label-color-disabled, --label-color-disabled-default);
+  cursor: not-allowed;
+}

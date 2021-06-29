@@ -1,0 +1,28 @@
+.vzr-field {
+  width: 100%;
+}
+
+.vzr-field > .vzr-label {
+  display: block;
+  margin-bottom: var(--field-margin-bottom, --field-margin-bottom-default);
+}
+
+.vzr-field.vzr-field--focus > .vzr-label {
+  @extend .vzr-label.vzr-label--focus;
+}
+
+.vzr-field.vzr-field--focus > .vzr-input {
+  @extend .vzr-input.vzr-input--focus;
+}
+
+.vzr-field.vzr-field--disabled > .vzr-label {
+  @extend .vzr-label.vzr-label--disabled;
+}
+
+.vzr-field.vzr-field--disabled > .vzr-input {
+  @extend .vzr-input.vzr-input--disabled;
+}
+
+.vzr-field.vzr-field--error > .vzr-input {
+  @extend .vzr-input.vzr-input--error;
+}

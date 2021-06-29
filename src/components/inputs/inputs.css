@@ -1,20 +1,39 @@
-.hggs-input {
+.vzr-input {
   width: 100%;
-  height: var(--input-height);
-  border: var(--input-border);
-  border-radius: var(--input-border-radius);
-  padding: var(--input-padding);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-text);
+  height: var(--input-height, --input-height-default);
+  border: var(--input-border, --input-border-default);
+  border-radius: var(--input-border-radius, --input-border-radius-default);
+  padding: var(--input-padding, --input-padding-default);
+  font-family: var(--font-family-primary, --font-family-primary-default);
+  font-size: var(--font-size-text, --font-size-text-default);
   box-sizing: border-box;
   background: transparent;
 }
 
-.hggs-input::placeholder {
-  color: var(--input-color-placeholder);
+.vzr-input::placeholder {
+  color: var(--input-color-placeholder, --input-color-placeholder-default);
 }
 
-.hggs-input:focus {
+.vzr-input:focus,
+.vzr-input.vzr-input--focus {
   outline: none;
-  border: var(--input-border-focus);
+  border: var(--input-border-focus, --input-border-focus-default);
+}
+
+.vzr-input:disabled,
+.vzr-input[disabled],
+.vzr-input.vzr-input--disabled {
+  border: var(--input-border-disabled, --input-border-disabled-default);
+  cursor: not-allowed;
+}
+
+.vzr-input:invalid,
+.vzr-input[error],
+.vzr-input.vzr-input--error {
+  border: var(--input-border-invalid, --input-border-invalid-default);
+}
+
+.vzr-input.vzr-input--big {
+  height: var(--input-height-big, --input-height-big-default);
+  padding: var(--input-padding-big, --input-padding-big-default);
 }

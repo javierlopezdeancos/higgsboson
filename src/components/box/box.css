@@ -1,12 +1,43 @@
-.hggs-box {
+.vzr-box {
   width: 100%;
   height: auto;
-  min-height: var(--box-min-height, 100px);
-  background: var(--box-background, --color-quinary);
-  box-shadow: var(--box-box-shadow, 0 1px 5px 0 var(--color-auxiliary-gray-001));
-  padding: var(--box-padding, 40px 30px 40px 30px);
+  min-height: var(--box-min-height, --box-min-height-default);
+  background: var(--box-background, --box-background-default);
+  box-shadow: var(--box-box-shadow, --box-box-shadow-default);
+  padding: var(--box-padding, --box-padding-default);
 }
 
-.hggs-box.hggs-box--with-radius {
-  border-radius: var(--box-border-radius-with-radius, 20px);
+.vzr-box .vzr-box-header {
+  border-bottom: var(
+    --box-header-border-bottom,
+    --box-header-border-bottom-default
+  );
+  padding: var(--box-header-padding, --box-header-padding-default);
+}
+
+.vzr-box .vzr-box-title {
+  @extend .vzr-h4;
+
+  font-size: var(--box-title-font-size, --box-title-font-size-default);
+  margin-top: var(--box-title-margin-top, --box-title-margin-top-default);
+}
+
+.vzr-box .vzr-box-body {
+  padding: var(--box-title-body-padding, --box-title-body-padding-default);
+}
+
+.vzr-box.vzr-box--with-radius {
+  border-radius: var(
+    --box-border-radius-with-radius,
+    --box-border-radius-with-radius-default
+  );
+}
+
+.vzr-box.vzr-box--primary {
+  background: var(--box-background-primary, --box-background-primary--default);
+  border: var(--box-border-primary, --box-border-primary-default);
+}
+
+.vzr-box .vzr-box-title.vzr-box-title--primary {
+  color: var(--box-title-color-primary, --box-title-color-primary-default);
 }
