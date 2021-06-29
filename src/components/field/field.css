@@ -1,28 +1,28 @@
-.vzr-field {
+.hggs-field {
   width: 100%;
 }
 
-.vzr-field > .vzr-label {
+.hggs-field > .hggs-label {
   display: block;
   margin-bottom: var(--field-margin-bottom, --field-margin-bottom-default);
 }
 
-.vzr-field.vzr-field--focus > .vzr-label {
-  @extend .vzr-label.vzr-label--focus;
+.hggs-field.hggs-field--focus > .hggs-label {
+  @extend .hggs-label.hggs-label--focus;
 }
 
-.vzr-field.vzr-field--focus > .vzr-input {
-  @extend .vzr-input.vzr-input--focus;
+.hggs-field.hggs-field--focus > .hggs-input {
+  @extend .hggs-input.hggs-input--focus;
 }
 
-.vzr-field.vzr-field--disabled > .vzr-label {
-  @extend .vzr-label.vzr-label--disabled;
+.hggs-field.hggs-field--disabled > .hggs-label {
+  @extend .hggs-label.hggs-label--disabled;
 }
 
-.vzr-field.vzr-field--disabled > .vzr-input {
-  @extend .vzr-input.vzr-input--disabled;
+.hggs-field.hggs-field--disabled > .hggs-input {
+  @extend .hggs-input.hggs-input--disabled;
 }
 
-.vzr-field.vzr-field--error > .vzr-input {
-  @extend .vzr-input.vzr-input--error;
+.hggs-field.hggs-field--error > .hggs-input {
+  @extend .hggs-input.hggs-input--error;
 }

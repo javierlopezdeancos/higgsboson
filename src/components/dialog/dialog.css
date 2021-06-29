@@ -1,4 +1,4 @@
-.vzr-dialog {
+.hggs-dialog {
   position: relative;
   background-color: var(
     --dialog-background-color,
@@ -16,27 +16,27 @@
   max-width: var(--dialog-max-width, --dialog-max-width-default);
 }
 
-.vzr-dialog.vzr-dialog--big {
+.hggs-dialog.hggs-dialog--big {
   width: var(--dialog-width-big, --dialog-width-big-default);
 }
 
-.vzr-dialog.vzr-dialog--medium {
+.hggs-dialog.hggs-dialog--medium {
   width: var(--dialog-width-medium, --dialog-width-medium-default);
 }
 
-.vzr-dialog.vzr-dialog--small {
+.hggs-dialog.hggs-dialog--small {
   width: var(--dialog-width-small, --dialog-width-small-default);
 }
 
-.vzr-dialog[open] {
+.hggs-dialog[open] {
   animation: var(--dialog-anmimation-open, --dialog-anmimation-open-default);
 }
 
-.vzr-dialog::backdrop {
+.hggs-dialog::backdrop {
   background: linear-gradient(45deg, rgba(58, 58, 58, 0.6), rgba(8, 8, 8, 0.6));
 }
 
-.vzr-dialog-close {
+.hggs-dialog-close {
   position: absolute;
   top: 0;
   right: 10px;

@@ -1,4 +1,4 @@
-.vzr-input {
+.hggs-input {
   width: 100%;
   height: var(--input-height, --input-height-default);
   border: var(--input-border, --input-border-default);
@@ -10,30 +10,30 @@
   background: transparent;
 }
 
-.vzr-input::placeholder {
+.hggs-input::placeholder {
   color: var(--input-color-placeholder, --input-color-placeholder-default);
 }
 
-.vzr-input:focus,
-.vzr-input.vzr-input--focus {
+.hggs-input:focus,
+.hggs-input.hggs-input--focus {
   outline: none;
   border: var(--input-border-focus, --input-border-focus-default);
 }
 
-.vzr-input:disabled,
-.vzr-input[disabled],
-.vzr-input.vzr-input--disabled {
+.hggs-input:disabled,
+.hggs-input[disabled],
+.hggs-input.hggs-input--disabled {
   border: var(--input-border-disabled, --input-border-disabled-default);
   cursor: not-allowed;
 }
 
-.vzr-input:invalid,
-.vzr-input[error],
-.vzr-input.vzr-input--error {
+.hggs-input:invalid,
+.hggs-input[error],
+.hggs-input.hggs-input--error {
   border: var(--input-border-invalid, --input-border-invalid-default);
 }
 
-.vzr-input.vzr-input--big {
+.hggs-input.hggs-input--big {
   height: var(--input-height-big, --input-height-big-default);
   padding: var(--input-padding-big, --input-padding-big-default);
 }
