@@ -1,4 +1,4 @@
-html {
+:root {
   --color-primary: #b21f2e;
   --color-auxiliary-001: #9a0f1e;
   --color-secondary: #ffdba9;
@@ -9,7 +9,7 @@ html {
   --color-quaternary: #000;
   --color-auxiliary-gray-001: #eee;
   --color-auxiliary-gray-002: #c9c9c9;
-  --font-family-primary: 'Roboto', sans-serif;
+  --font-family-primary: "Roboto", sans-serif;
   --font-size-medium: 1.4rem;
   --font-size-text: 14px;
   --font-size-text-small: 12px;
@@ -18,12 +18,8 @@ html {
   --boder-radius: 0;
   --space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --space-vertical-small: calc(var(--space-vertical-medium) / 2);
-}
-
-/* Components */
-
-.hggs-app {
   --app-background: var(--color-secondary);
+  --app-color: var(--color-auxiliar-gray-008);
 }
 
 .hggs-h1,
@@ -82,11 +78,4 @@ html {
   --logo-url: url("./assets/svg/logo.svg");
   --logo-width: 300px;
   --logo-height: 102px;
-}
-
-/* Features */
-
-.hggs-login {
-  --login-logo-width: 150px;
-  --login-logo-height: 50px;
 }

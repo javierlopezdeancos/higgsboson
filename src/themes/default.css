@@ -14,6 +14,10 @@
   --color-auxiliary-gray-005-default: #7d7d7d;
   --color-auxiliary-gray-007-default: #4e4b4b;
   --color-auxiliar-gray-008-default: #1b1d2a;
+  --color-auxiliary-gray-alpha-002-default: rgba(0, 0, 0, 0.1);
+  --color-auxiliary-gray-alpha-004-default: rgba(0, 0, 0, 0.25);
+  --color-auxiliary-gray-alpha-007-default: rgba(58, 58, 58, 0.6);
+  --color-auxiliary-gray-alpha-008-default: rgba(8, 8, 8, 0.6);
   --font-family-primary-default: sans-serif;
   --font-size-colossal-default: 38px;
   --font-size-enormous-default: 32px;
