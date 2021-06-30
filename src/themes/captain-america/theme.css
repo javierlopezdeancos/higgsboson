@@ -6,6 +6,7 @@
   --color-quaternary: #000;
   --color-quinary: #fff;
   --color-senary: #39bfff;
+  --color-senary-000: #f0faff;
   --color-auxiliary-gray-000: #f6f7f9;
   --color-auxiliary-gray-001: #eee;
   --color-auxiliary-gray-002: #e0e0e0;
@@ -31,6 +32,7 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-weight-extra-bold: 900;
+  --boder-radius-big: 20px;
   --boder-radius: 8px;
   --border: 1px solid var(--color-auxiliary-gray-001);
   --space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
@@ -209,16 +211,16 @@
   --box-min-height: 100px;
   --box-background: var(--color-quinary);
   --box-box-shadow: 0 1px 5px 0 var(--color-auxiliary-gray-001);
-  --box-padding: 40px 30px 40px 30px;
-  --box-header-border-bottom: 1px solid var(--color-auxiliary);
-  --box-header-padding: 0 0 0 20px;
+  --box-padding: var(--space-vertical-big) var(--space-horizontal-medium);
+  --box-header-border-bottom: 1px solid var(--color-auxiliary-gray-002);
+  --box-header-padding: 0 0 0 0;
   --box-title-font-size: var(--font-size-text-normal-plus);
-  --box-title-margin-top: 20px;
-  --box-title-body-padding: 20px;
-  --box-border-radius-with-radius: 20px;
-  --box-background-primary: var(--color-septenary-000);
-  --box-border-primary: 1px solid var(--color-septenary);
-  --box-title-color-primary: var(--color-septenary);
+  --box-title-margin-top: 0;
+  --box-body-padding: var(--space-vertical-medium) 0 0 0;
+  --box-border-radius-with-radius: var(--boder-radius-big);
+  --box-background-primary: var(--color-senary-000);
+  --box-border-primary: 1px solid var(--color-senary);
+  --box-title-color-primary: var(--color-senary);
 }
 
 .hggs-hamburger-menu {
@@ -234,7 +236,7 @@
   --hamburger-menu-icon-hover-background: var(--color-auxiliary-gray-003);
 }
 
-@keyframes vzr-dialog-appear {
+@keyframes hggs-dialog-appear {
   from {
     opacity: 0;
     transform: translateX(-3rem);

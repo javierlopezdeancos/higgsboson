@@ -23,7 +23,7 @@
 }
 
 .hggs-box .hggs-box-body {
-  padding: var(--box-title-body-padding, --box-title-body-padding-default);
+  padding: var(--box-body-padding, --box-body-padding-default);
 }
 
 .hggs-box.hggs-box--with-radius {
