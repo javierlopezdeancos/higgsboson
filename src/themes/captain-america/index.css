@@ -5,6 +5,7 @@
 
 /* Components */
 @import "../../components/flex/flex.css";
+@import "../../components/grid/grid.css";
 @import "../../components/app/app.css";
 @import "../../components/logo/logo.css";
 @import "../../components/text/text.css";

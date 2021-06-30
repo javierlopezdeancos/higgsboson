@@ -3,7 +3,7 @@
   font-family: var(--text-font-famiy, --text-font-famiy-default);
   font-size: var(--text-font-size, --text-font-size-default);
   font-weight: var(--text-font-weight, --text-font-weight-default);
-  margin: var(--text-margin, --text-margin-default);
+  margin: var(--text-margin, var(--space-vertical-medium-default) 0);
 }
 
 .hggs-text--bold {

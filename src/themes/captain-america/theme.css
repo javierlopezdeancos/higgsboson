@@ -84,6 +84,7 @@
   --text-font-weight: var(--font-weight-normal);
   --text-font-weight-bold: var(--font-weight-bold);
   --text-font-size-small: var(--font-size-text-small);
+  --text-margin: var(--space-vertical-medium) 0;
 }
 
 .hggs-form {
