@@ -10,9 +10,11 @@
 @import "../../components/logo/logo.css";
 @import "../../components/text/text.css";
 @import "../../components/titles/titles.css";
-@import "../../components/inputs/inputs.css";
 @import "../../components/buttons/buttons.css";
 @import "../../components/form/form.css";
+@import "../../components/inputs/inputs.css";
+@import "../../components/label/label.css";
+@import "../../components/form/field.css";
 @import "../../components/links/links.css";
 @import "../../components/icons/icons.css";
 @import "../../components/dialog/dialog.css";
