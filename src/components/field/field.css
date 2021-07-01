@@ -9,10 +9,13 @@
 
 .hggs-field.hggs-field--required > .hggs-label:after {
   content: "*";
-  color: var(--field-label-after-color-required, --color-auxiliary-gray-004);
+  color: var(
+    --field-label-after-color-required,
+    --hggs-color-auxiliary-gray-004
+  );
   margin-left: var(
     --field-label-after-margin-left-required,
-    --space-horizontal-small
+    --hggs-space-horizontal-small
   );
 }
 

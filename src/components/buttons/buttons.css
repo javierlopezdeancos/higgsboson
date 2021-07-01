@@ -140,7 +140,7 @@
 }
 
 .hggs-button.hggs-button--circle:hover {
-  background: var(--color-auxiliary-gray-002);
+  background: var(--hggs-color-auxiliary-gray-002);
   border: unset;
   transition: var(--button-circle-transition-hover);
 }

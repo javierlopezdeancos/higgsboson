@@ -1,25 +1,25 @@
 :root {
-  --color-primary: #b21f2e;
-  --color-auxiliary-001: #9a0f1e;
-  --color-secondary: #ffdba9;
+  --hggs-color-primary: #b21f2e;
+  --hggs-color-auxiliary-001: #9a0f1e;
+  --hggs-color-secondary: #ffdba9;
   --color--secondary-001: #d9a55c;
   --color--secondary-002: #936f01;
   --color--secondary-003: #4c3500;
-  --color-tertiary: #fff;
-  --color-quaternary: #000;
-  --color-auxiliary-gray-001: #eee;
-  --color-auxiliary-gray-002: #c9c9c9;
-  --font-family-primary: "Roboto", sans-serif;
-  --font-size-medium: 1.4rem;
-  --font-size-text: 14px;
-  --font-size-text-small: 12px;
-  --font-weight-medium: 500;
-  --font-weight-extra-bold: 900;
-  --boder-radius: 0;
-  --space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
-  --space-vertical-small: calc(var(--space-vertical-medium) / 2);
-  --app-background: var(--color-secondary);
-  --app-color: var(--color-auxiliar-gray-008);
+  --hggs-color-tertiary: #fff;
+  --hggs-color-quaternary: #000;
+  --hggs-color-auxiliary-gray-001: #eee;
+  --hggs-color-auxiliary-gray-002: #c9c9c9;
+  --hggs-font-family-primary: "Roboto", sans-serif;
+  --hggs-font-size-medium: 1.4rem;
+  --hggs-font-size-text: 14px;
+  --hggs-font-size-text-small: 12px;
+  --hggs-font-weight-medium: 500;
+  --hggs-font-weight-extra-bold: 900;
+  --hggs-boder-radius: 0;
+  --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-vertical-small: calc(var(--hggs-space-vertical-medium) / 2);
+  --hggs-app-background: var(--hggs-color-secondary);
+  --hggs-app-color: var(--hggs-color-auxiliar-gray-008);
 }
 
 .hggs-h1,
@@ -28,35 +28,35 @@
 .hggs-h4,
 .hggs-h5,
 .hggs-h6 {
-  --title-font-famiy: var(--font-family-primary);
-  --title-color: var(--color-primary);
+  --title-font-famiy: var(--hggs-font-family-primary);
+  --title-color: var(--hggs-color-primary);
 }
 
 .hggs-input {
   --input-border: 1px solid var(--color--secondary-003);
-  --input-border-radius: var(--boder-radius);
-  --input-border-focus: 1px solid var(--color-primary);
+  --input-border-radius: var(--hggs-boder-radius);
+  --input-border-focus: 1px solid var(--hggs-color-primary);
   --input-height: 45px;
   --input-padding: 0 15px;
   --input-color-placeholder: var(--color--secondary-002);
 }
 
 .hggs-form {
-  --form-input-space-vertical: var(--space-vertical-small);
+  --form-input-space-vertical: var(--hggs-space-vertical-small);
 }
 
 .hggs-button {
   --buttton-height: 64px;
   --buttton-padding: 0 40px;
-  --button-font-family: var(--font-family-primary);
-  --button-font-size: var(--font-size-text);
-  --button-font-weight: var(--font-weight-medium);
+  --button-font-family: var(--hggs-font-family-primary);
+  --button-font-size: var(--hggs-font-size-text);
+  --button-font-weight: var(--hggs-font-weight-medium);
   --button-font-letter-spacing: 1px;
-  --button-border-radius: var(--boder-radius);
-  --button-margin-vertical: var(--space-vertical-medium);
-  --buttton-background-primary: var(--color-primary);
-  --buttton-color-primary: var(--color-tertiary);
-  --buttton-background-primary-hover: var(--color-auxiliary-001);
+  --button-border-radius: var(--hggs-boder-radius);
+  --button-margin-vertical: var(--hggs-space-vertical-medium);
+  --buttton-background-primary: var(--hggs-color-primary);
+  --buttton-color-primary: var(--hggs-color-tertiary);
+  --buttton-background-primary-hover: var(--hggs-color-auxiliary-001);
   --button-width-big: 200px;
   --button-width-medium: 120px;
   --button-height-medium: 40px;
@@ -64,14 +64,14 @@
   --button-width-small: 70px;
   --button-height-small: 30px;
   --button-padding-small: 0 5px;
-  --button-font-size-small: var(--font-size-text-small);
+  --button-font-size-small: var(--hggs-font-size-text-small);
 }
 
 .hggs-link {
-  --link-font-family: var(--font-family-primary);
-  --link-font-weight: var(--font-weight-medium);
-  --link-color: var(--color-primary);
-  --link-color-hover: var(--color-auxiliary-001);
+  --link-font-family: var(--hggs-font-family-primary);
+  --link-font-weight: var(--hggs-font-weight-medium);
+  --link-color: var(--hggs-color-primary);
+  --link-color-hover: var(--hggs-color-auxiliary-001);
 }
 
 .hggs-logo {

@@ -3,7 +3,7 @@
   overflow-x: auto;
   border-radius: var(
     --table-wrapper-border-radius,
-    calc(var(--boder-radius-default) / 2)
+    calc(var(--hggs-boder-radius-default) / 2)
   );
   box-shadow: var(
     --table-wrapper-box-shadow,
@@ -29,13 +29,16 @@
   display: table-cell;
   padding: var(--table-cell-padding, 16px);
   text-align: var(--table-cell-text-align, left);
-  font-family: var(--table-cell-font-family, --font-family-primary-default);
-  font-weight: var(--table-cell-font-weight, --font-weight-normal-default);
-  font-size: var(--table-cell-font-size, --font-size-text-default);
-  color: var(--table-cell-font-color, --color-auxiliary-gray-004-default);
+  font-family: var(
+    --table-cell-font-family,
+    --hggs-font-family-primary-default
+  );
+  font-weight: var(--table-cell-font-weight, --hggs-font-weight-normal-default);
+  font-size: var(--table-cell-font-size, --hggs-font-size-text-default);
+  color: var(--table-cell-font-color, --hggs-color-auxiliary-gray-004-default);
   border-bottom: var(
     --table-cell-border-bottom,
-    1px solid var(--color-auxiliary-gray-002-default)
+    1px solid var(--hggs-color-auxiliary-gray-002-default)
   );
   vertical-align: inherit;
 }
@@ -60,12 +63,15 @@
   @extend %hggs-table-cell;
 
   padding: var(--table-cell-head-padding, 30px 20px);
-  color: var(--table-cell-head-color, --app-color-default);
-  font-size: var(--table-cell-head-font-size, --font-size-text-default);
-  font-weight: var(--table-cell-head-font-weight, --font-weight-bold-default);
+  color: var(--table-cell-head-color, --hggs-app-color-default);
+  font-size: var(--table-cell-head-font-size, --hggs-font-size-text-default);
+  font-weight: var(
+    --table-cell-head-font-weight,
+    --hggs-font-weight-bold-default
+  );
   background: var(
     --table-cell-head-background,
-    --color-auxiliary-gray-000-default
+    --hggs-color-auxiliary-gray-000-default
   );
   border-bottom: var(--table-cell-head-border-bottom, unset);
 }
@@ -78,5 +84,8 @@
 }
 
 .hggs-table-wrapper .hggs-table .hggs-table-cell.hggs-table-cell--bold {
-  font-weight: var(--table-cell-font-weight-bold, --font-weight-bold-default);
+  font-weight: var(
+    --table-cell-font-weight-bold,
+    --hggs-font-weight-bold-default
+  );
 }

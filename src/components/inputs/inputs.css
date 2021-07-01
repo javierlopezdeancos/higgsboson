@@ -4,8 +4,11 @@
   border: var(--input-border, --input-border-default);
   border-radius: var(--input-border-radius, --input-border-radius-default);
   padding: var(--input-padding, --input-padding-default);
-  font-family: var(--font-family-primary, --font-family-primary-default);
-  font-size: var(--font-size-text, --font-size-text-default);
+  font-family: var(
+    --hggs-font-family-primary,
+    --hggs-font-family-primary-default
+  );
+  font-size: var(--hggs-font-size-text, --hggs-font-size-text-default);
   box-sizing: border-box;
   background: transparent;
 }

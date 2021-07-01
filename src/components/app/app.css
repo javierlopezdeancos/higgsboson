@@ -3,6 +3,6 @@
 
   width: 100%;
   height: 100%;
-  background: var(--app-background, --color-quinary-default);
-  color: var(--app-color, --color-auxiliar-gray-008-default);
+  background: var(--hggs-app-background, --hggs-color-quinary-default);
+  color: var(--hggs-app-color, --hggs-color-auxiliar-gray-008-default);
 }

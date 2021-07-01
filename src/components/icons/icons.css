@@ -39,7 +39,7 @@
     no-repeat;
 }
 
-.hggs-icon.hggs-icon--color-secondary {
+.hggs-icon.hggs-icon--hggs-color-secondary {
   filter: var(
     --icon-filter-color-secondary,
     --icon-filter-color-secondary-default

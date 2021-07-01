@@ -38,17 +38,17 @@
 }
 
 .hggs-box.hggs-box--primary {
-  background: var(--box-background-primary, --color-auxiliary-gray-000);
-  border: var(--box-border-primary, --color-auxiliary-gray-005);
+  background: var(--box-background-primary, --hggs-color-auxiliary-gray-000);
+  border: var(--box-border-primary, --hggs-color-auxiliary-gray-005);
 }
 
 .hggs-box.hggs-box--primary .hggs-box-header {
   border-bottom: var(
     --box-header-border-bottom-primary,
-    --color-auxiliary-gray-003
+    --hggs-color-auxiliary-gray-003
   );
 }
 
 .hggs-box.hggs-box--primary .hggs-box-header .hggs-box-title {
-  color: var(--box-title-color-primary, --color-auxiliary-gray-005);
+  color: var(--box-title-color-primary, --hggs-color-auxiliary-gray-005);
 }
