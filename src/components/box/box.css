@@ -38,10 +38,17 @@
 }
 
 .hggs-box.hggs-box--primary {
-  background: var(--box-background-primary, --box-background-primary--default);
-  border: var(--box-border-primary, --box-border-primary-default);
+  background: var(--box-background-primary, --color-auxiliary-gray-000);
+  border: var(--box-border-primary, --color-auxiliary-gray-005);
 }
 
-.hggs-box .hggs-box-title.hggs-box-title--primary {
-  color: var(--box-title-color-primary, --box-title-color-primary-default);
+.hggs-box.hggs-box--primary .hggs-box-header {
+  border-bottom: var(
+    --box-header-border-bottom-primary,
+    --color-auxiliary-gray-003
+  );
+}
+
+.hggs-box.hggs-box--primary .hggs-box-header .hggs-box-title {
+  color: var(--box-title-color-primary, --color-auxiliary-gray-005);
 }

@@ -6,6 +6,16 @@
   justify-content: center;
 }
 
-.hggs-form .hggs-input + .hggs-input {
-  margin-top: var(--form-input-space-vertical);
+.hggs-form .hggs-input,
+.hggs-form .hggs-field,
+.hggs-form .hggs-fieldset .hggs-field,
+.hggs-form .hggs-fieldset .hggs-input {
+  margin-bottom: var(--form-input-space-vertical);
+}
+
+.hggs-form .hggs-input:last-child,
+.hggs-form .hggs-field:last-child,
+.hggs-form .hgss-fieldset .hggs-input:last-child,
+.hggs-form .hgss-fieldset .hggs-field:last-child {
+  margin-bottom: unset;
 }

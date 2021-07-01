@@ -7,6 +7,15 @@
   margin-bottom: var(--field-margin-bottom, --field-margin-bottom-default);
 }
 
+.hggs-field.hggs-field--required > .hggs-label:after {
+  content: "*";
+  color: var(--field-label-after-color-required, --color-auxiliary-gray-004);
+  margin-left: var(
+    --field-label-after-margin-left-required,
+    --space-horizontal-small
+  );
+}
+
 .hggs-field.hggs-field--focus > .hggs-label {
   @extend .hggs-label.hggs-label--focus;
 }
