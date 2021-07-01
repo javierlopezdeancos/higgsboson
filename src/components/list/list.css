@@ -1,0 +1,24 @@
+.hggs-list .hggs-list-item,
+.hggs-list .hggs-list-item a {
+  font-family: var(--hggs-list-item-font-family, sans-serif);
+  font-weight: var(--hggs-list-item-font-weight, 500);
+  font-size: var(--hggs-list-item-font-size, 14px);
+  color: var(--hggs-list-item-color, #1b1d2a);
+  margin-bottom: var(--hggs-list-item-margin-bottom, 5px);
+}
+
+.hggs-list .hggs-list-item::marker {
+  content: var(--hggs-list-item-content-marker, counter(list-item) ".   ");
+  color: var(--hggs-list-item-color-marker, #1b1d2a);
+  font-size: var(--hggs-list-item-font-size-marker, 12px);
+  font-weight: var(--hggs-list-item-font-weight-marker, 600);
+}
+
+.hggs-list .hggs-list-item a {
+  text-decoration: none;
+}
+
+.hggs-list .hggs-list-item a:hover {
+  color: var(--hggs-color-auxiliary-gray-008, #1b1d2a);
+  text-decoration: underline;
+}

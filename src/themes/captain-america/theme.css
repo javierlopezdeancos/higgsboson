@@ -18,7 +18,7 @@
   --hggs-color-auxiliary-gray-004: #727272;
   --hggs-color-auxiliary-gray-005: #5f5f61;
   --hggs-color-auxiliary-gray-007: #4e4b4b;
-  --hggs-color-auxiliar-gray-008: #1b1d2a;
+  --hggs-color-auxiliary-gray-008: #1b1d2a;
   --hggs-color-auxiliary-gray-alpha-002: rgba(0, 0, 0, 0.1);
   --hggs-color-auxiliary-gray-alpha-004: rgba(0, 0, 0, 0.25);
   --hggs-color-auxiliary-gray-alpha-007: rgba(58, 58, 58, 0.6);
@@ -34,6 +34,7 @@
   --hggs-font-size-text-small: 12px;
   --hggs-font-weight-normal: 400;
   --hggs-font-weight-medium: 500;
+  --hggs-font-weight-medium-plus: 600;
   --hggs-font-weight-bold: 700;
   --hggs-font-weight-extra-bold: 900;
   --hggs-line-height: 20px;
@@ -44,6 +45,7 @@
   --hggs-boder: 1px solid var(--hggs-color-auxiliary-gray-001);
   --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --hggs-space-vertical-small: calc(var(--hggs-space-vertical-medium) / 2);
+  --hggs-space-vertical-micro: calc(var(--hggs-space-vertical-medium) / 4);
   --hggs-space-vertical-big: calc(var(--hggs-space-vertical-medium) * 2);
   --hggs-space-horizontal-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --hggs-space-horizontal-big: calc(var(--hggs-space-horizontal-medium) * 2);
@@ -52,7 +54,7 @@
   --hggs-layer-10: 10;
   --hggs-layer-0: 1;
   --hggs-app-background: var(--hggs-color-quinary);
-  --hggs-app-color: var(--hggs-color-auxiliar-gray-008);
+  --hggs-app-color: var(--hggs-color-auxiliary-gray-005);
 }
 
 .hggs-h1,
@@ -62,7 +64,7 @@
 .hggs-h5,
 .hggs-h6 {
   --title-font-famiy: var(--hggs-font-family-primary);
-  --title-color: var(--hggs-app-color);
+  --title-color: var(--hggs-color-auxiliary-gray-008);
   --title-h1-font-size: var(--hggs-font-size-colossal);
   --title-h1-font-weight: var(--hggs-font-weight-medium);
   --title-h1-margin: var(--hggs-space-vertical-big) 0
@@ -98,6 +100,18 @@
   --text-font-size-small: var(--hggs-font-size-text-small);
   --text-margin: var(--hggs-space-vertical-medium) 0;
   --text-line-height: var(--hggs-line-height);
+}
+
+.hggs-list {
+  --hggs-list-item-font-family: var(--hggs-font-family-primary);
+  --hggs-list-item-font-weight: var(--hggs-font-weight-normal);
+  --hggs-list-item-color: var(--hggs-app-color);
+  --hggs-list-item-font-size: var(--hggs-font-size-text);
+  --hggs-list-item-margin-bottom: var(--hggs-space-vertical-micro);
+  --hggs-list-item-content-marker: counter(list-item) " -   ";
+  --hggs-list-item-color-marker: var(--hggs-app-color);
+  --hggs-list-item-font-size-marker: var(--hggs-font-size-text-small);
+  --hggs-list-item-font-weight-marker: var(--hggs-font-weight-medium-plus);
 }
 
 .hggs-form {
