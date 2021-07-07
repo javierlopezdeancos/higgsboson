@@ -39,9 +39,20 @@
     no-repeat;
 }
 
+.hggs-icon.hggs-icon--hggs-color-primary {
+  filter: var(--icon-filter-color-primary, --icon-filter-color-primary-default);
+}
+
 .hggs-icon.hggs-icon--hggs-color-secondary {
   filter: var(
     --icon-filter-color-secondary,
     --icon-filter-color-secondary-default
+  );
+}
+
+.hggs-icon.hggs-icon--hggs-color-tertiary {
+  filter: var(
+    --icon-filter-color-tertiary,
+    --icon-filter-color-tertiary-default
   );
 }
