@@ -1,17 +1,26 @@
 .hggs-list .hggs-list-item,
 .hggs-list .hggs-list-item a {
-  font-family: var(--hggs-list-item-font-family, sans-serif);
-  font-weight: var(--hggs-list-item-font-weight, 500);
-  font-size: var(--hggs-list-item-font-size, 14px);
-  color: var(--hggs-list-item-color, #1b1d2a);
-  margin-bottom: var(--hggs-list-item-margin-bottom, 5px);
+  font-family: var(--list-item-font-family, --hggs-font-family-primary-default);
+  font-weight: var(--list-item-font-weight, --hggs-font-weight-medium-default);
+  font-size: var(--list-item-font-size, var(--hggs-font-size-text-default));
+  color: var(--list-item-color, var(--hggs-color-auxiliar-gray-008-default));
+  margin-bottom: var(
+    --list-item-margin-bottom,
+    --hggs-space-vertical-medium-default
+  );
 }
 
 .hggs-list .hggs-list-item::marker {
-  content: var(--hggs-list-item-content-marker, counter(list-item) ".   ");
-  color: var(--hggs-list-item-color-marker, #1b1d2a);
-  font-size: var(--hggs-list-item-font-size-marker, 12px);
-  font-weight: var(--hggs-list-item-font-weight-marker, 600);
+  content: var(--list-item-content-marker, counter(list-item) ".   ");
+  color: var(--list-item-color-marker, --hggs-color-auxiliar-gray-008-default);
+  font-size: var(
+    --list-item-font-size-marker,
+    --hggs-font-size-text-small-default
+  );
+  font-weight: var(
+    --list-item-font-weight-marker,
+    --hggs-font-weight-medium-default
+  );
 }
 
 .hggs-list .hggs-list-item a {
@@ -19,6 +28,9 @@
 }
 
 .hggs-list .hggs-list-item a:hover {
-  color: var(--hggs-color-auxiliary-gray-008, #1b1d2a);
+  color: var(
+    --hggs-color-auxiliary-gray-008,
+    --hggs-color-auxiliar-gray-008-default
+  );
   text-decoration: underline;
 }

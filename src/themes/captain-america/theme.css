@@ -103,15 +103,15 @@
 }
 
 .hggs-list {
-  --hggs-list-item-font-family: var(--hggs-font-family-primary);
-  --hggs-list-item-font-weight: var(--hggs-font-weight-normal);
-  --hggs-list-item-color: var(--hggs-app-color);
-  --hggs-list-item-font-size: var(--hggs-font-size-text);
-  --hggs-list-item-margin-bottom: var(--hggs-space-vertical-micro);
-  --hggs-list-item-content-marker: counter(list-item) " -   ";
-  --hggs-list-item-color-marker: var(--hggs-app-color);
-  --hggs-list-item-font-size-marker: var(--hggs-font-size-text-small);
-  --hggs-list-item-font-weight-marker: var(--hggs-font-weight-medium-plus);
+  --list-item-font-family: var(--hggs-font-family-primary);
+  --list-item-font-weight: var(--hggs-font-weight-normal);
+  --list-item-color: var(--hggs-app-color);
+  --list-item-font-size: var(--hggs-font-size-text);
+  --list-item-margin-bottom: var(--hggs-space-vertical-micro);
+  --list-item-content-marker: counter(list-item) " -   ";
+  --list-item-color-marker: var(--hggs-app-color);
+  --list-item-font-size-marker: var(--hggs-font-size-text-big);
+  --list-item-font-weight-marker: var(--hggs-font-weight-medium-plus);
 }
 
 .hggs-form {
@@ -154,8 +154,6 @@
   --icon-background-hamburger-menu: url("./assets/icons/hamburger-menu.svg");
   --icon-background-edit: url("./assets/icons/pencil.svg");
   --icon-background-close: url("./assets/icons/close.svg");
-
-  /* --hggs-color-secondary */
   --icon-filter-color-secondary: invert(56%) sepia(63%) saturate(2808%)
     hue-rotate(346deg) brightness(97%) contrast(96%);
 }
