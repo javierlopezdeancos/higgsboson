@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hggs-box</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../dist/captain-america.css"
+    />
+  </head>
+
+  <body
+    class="hggs-flex--top-left-column"
+    style="width: 100vw; height: 100vh; padding: 30px"
+  >
+    <!-- .hggs-dialog,hggs-dialog--big -->
+    <h3 class="hggs-h3" style="margin-bottom: 20px">
+      .hggs-dialog.hggs-dialog--big
+    </h3>
+
+    <dialog id="dialog-big" class="hggs-dialog hggs-dialog--big">
+      <button
+        id="close-dialog-btn-big"
+        class="
+          hggs-dialog-close
+          hggs-button
+          hggs-button--icon-labeled
+          hggs-button--circle
+        "
+      >
+        <span class="hggs-icon hggs-icon--close"></span>
+      </button>
+      <h5 class="hggs-h5">Template Created</h5>
+      <p class="hggs-text">
+        The case template has now been added to your list of available
+        templates. To create a case with this template select 'Create' and chose
+        'New case'. You can then select your new case template from the
+        available list.
+      </p>
+      <div class="actions">
+        <button
+          id="ok-dialog-btn-big"
+          class="hggs-button hggs-button--primary hggs-button--big"
+        >
+          Ok!
+        </button>
+      </div>
+    </dialog>
+
+    <button
+      id="open-dialog-btn-big"
+      class="hggs-button hggs-button--primary hggs-button--big"
+    >
+      Big
+    </button>
+
+    <!-- .hggs-dialog,hggs-dialog--medium -->
+    <h3 class="hggs-h3" style="margin-bottom: 20px">
+      .hggs-dialog.hggs-dialog--medium
+    </h3>
+
+    <dialog id="dialog-medium" class="hggs-dialog hggs-dialog--medium">
+      <button
+        id="close-dialog-btn-medium"
+        class="
+          hggs-dialog-close
+          hggs-button
+          hggs-button--icon-labeled
+          hggs-button--circle
+        "
+      >
+        <span class="hggs-icon hggs-icon--close"></span>
+      </button>
+      <h5 class="hggs-h5">Template Created</h5>
+      <p class="hggs-text">
+        The case template has now been added to your list of available
+        templates. To create a case with this template select 'Create' and chose
+        'New case'. You can then select your new case template from the
+        available list.
+      </p>
+      <div class="actions">
+        <button
+          id="ok-dialog-btn-medium"
+          class="hggs-button hggs-button--primary hggs-button--medium"
+        >
+          Ok!
+        </button>
+      </div>
+    </dialog>
+
+    <button
+      id="open-dialog-btn-medium"
+      class="hggs-button hggs-button--primary hggs-button--medium"
+    >
+      Medium
+    </button>
+
+    <!-- .hggs-dialog,hggs-dialog--small -->
+    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 20px">
+      .hggs-dialog.hggs-dialog--small
+    </h3>
+
+    <dialog id="dialog-small" class="hggs-dialog hggs-dialog--small">
+      <button
+        id="close-dialog-btn-small"
+        class="
+          hggs-dialog-close
+          hggs-button
+          hggs-button--icon-labeled
+          hggs-button--circle
+        "
+      >
+        <span class="hggs-icon hggs-icon--close"></span>
+      </button>
+      <h5 class="hggs-h5">Template Created</h5>
+      <p class="hggs-text">
+        The case template has now been added to your list of available
+        templates. To create a case with this template select 'Create' and chose
+        'New case'. You can then select your new case template from the
+        available list.
+      </p>
+      <div class="actions">
+        <button
+          id="ok-dialog-btn-small"
+          class="hggs-button hggs-button--primary hggs-button--medium"
+        >
+          Ok!
+        </button>
+      </div>
+    </dialog>
+
+    <button
+      id="open-dialog-btn-small"
+      class="hggs-button hggs-button--primary hggs-button--medium"
+    >
+      Small
+    </button>
+    <script>
+      const triggerBig = document.querySelector("#open-dialog-btn-big");
+      const closeBtnBig = document.querySelector("#close-dialog-btn-big");
+      const okBtnBig = document.querySelector("#ok-dialog-btn-big");
+      const modalBig = document.querySelector("#dialog-big");
+
+      triggerBig.addEventListener("click", () => {
+        modalBig.showModal();
+      });
+
+      closeBtnBig.addEventListener("click", () => {
+        modalBig.close();
+      });
+
+      okBtnBig.addEventListener("click", () => {
+        modalBig.close();
+      });
+
+      const triggerMedium = document.querySelector("#open-dialog-btn-medium");
+      const closeBtnMedium = document.querySelector("#close-dialog-btn-medium");
+      const okBtnMedium = document.querySelector("#ok-dialog-btn-medium");
+      const modalMedium = document.querySelector("#dialog-medium");
+
+      triggerMedium.addEventListener("click", () => {
+        modalMedium.showModal();
+      });
+
+      closeBtnMedium.addEventListener("click", () => {
+        modalMedium.close();
+      });
+
+      okBtnMedium.addEventListener("click", () => {
+        modalMedium.close();
+      });
+
+      const triggerSmall = document.querySelector("#open-dialog-btn-small");
+      const closeBtnSmall = document.querySelector("#close-dialog-btn-small");
+      const okBtnSmall = document.querySelector("#ok-dialog-btn-small");
+      const modalSmall = document.querySelector("#dialog-small");
+
+      triggerSmall.addEventListener("click", () => {
+        modalSmall.showModal();
+      });
+
+      closeBtnSmall.addEventListener("click", () => {
+        modalSmall.close();
+      });
+
+      okBtnSmall.addEventListener("click", () => {
+        modalSmall.close();
+      });
+    </script>
+  </body>
+</html>

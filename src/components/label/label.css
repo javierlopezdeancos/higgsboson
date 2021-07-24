@@ -1,0 +1,18 @@
+.hggs-label {
+  font-family: var(--label-font-family, --label-font-family-default);
+  font-weight: var(--label-font-weight, --label-font-weight-default);
+  font-size: var(--label-font-size, --label-font-size-default);
+  color: var(--label-color, --label-color-default);
+}
+
+.hggs-label:focus,
+.hggs-label.hggs-label--focus {
+  color: var(--label-color-focus, --label-color-focus-default);
+}
+
+.hggs-label:disabled,
+.hggs-label[disabled],
+.hggs-label.hggs-label--disabled {
+  color: var(--label-color-disabled, --label-color-disabled-default);
+  cursor: not-allowed;
+}

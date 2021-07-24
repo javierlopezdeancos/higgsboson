@@ -1,0 +1,43 @@
+.hggs-dialog {
+  position: relative;
+  background-color: var(
+    --dialog-background-color,
+    --dialog-background-color-default
+  );
+  color: var(--dialog-color, --dialog-color-default);
+  text-align: var(--dialog-text-align, --dialog-text-align-default);
+  border: none;
+  padding: var(--dialog-padding, --dialog-padding-default);
+  border-radius: var(--dialog-border-radius, --dialog-border-radius-default);
+  box-shadow: var(
+    --dialog-background-box-shadow,
+    --dialog-background-box-shadow-default
+  );
+  max-width: var(--dialog-max-width, --dialog-max-width-default);
+}
+
+.hggs-dialog.hggs-dialog--big {
+  width: var(--dialog-width-big, --dialog-width-big-default);
+}
+
+.hggs-dialog.hggs-dialog--medium {
+  width: var(--dialog-width-medium, --dialog-width-medium-default);
+}
+
+.hggs-dialog.hggs-dialog--small {
+  width: var(--dialog-width-small, --dialog-width-small-default);
+}
+
+.hggs-dialog[open] {
+  animation: var(--dialog-anmimation-open, --dialog-anmimation-open-default);
+}
+
+.hggs-dialog::backdrop {
+  background: linear-gradient(45deg, rgba(58, 58, 58, 0.6), rgba(8, 8, 8, 0.6));
+}
+
+.hggs-dialog-close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}

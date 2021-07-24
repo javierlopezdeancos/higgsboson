@@ -1,24 +1,58 @@
 .hggs-icon {
-  width: var(--icon-size, 20px);
-  height: var(--icon-size, 20px);
+  width: var(--icon-size, --icon-size-default);
+  height: var(--icon-size, --icon-size-default);
 }
 
 .hggs-icon.hggs-icon--user {
-  background: var(--icon-background-user, url("./assets/icons/user.svg")) no-repeat;
+  background: var(--icon-background-user, --icon-background-user-default)
+    no-repeat;
 }
 
 .hggs-icon.hggs-icon--question {
-  background: var(--icon-background-question, url("./assets/icons/question.svg")) no-repeat;
+  background: var(
+      --icon-background-question,
+      --icon-background-question-default
+    )
+    no-repeat;
 }
 
 .hggs-icon.hggs-icon--log-out {
-  background: var(--icon-background-log-out, url("./assets/icons/log-out.svg")) no-repeat;
+  background: var(--icon-background-log-out, --icon-background-log-out-default)
+    no-repeat;
 }
 
 .hggs-icon.hggs-icon--hamburger-menu {
-  background: var(--icon-background-hamburger-menu, url("./assets/icons/hamburger-menu.svg")) no-repeat;
+  background: var(
+      --icon-background-hamburger-menu,
+      --icon-background-hamburger-menu-default
+    )
+    no-repeat;
 }
 
-.hggs-icon.hggs-icon--color-secondary {
-  filter: var(--icon-filter-color-secondary, invert(56%) sepia(63%) saturate(2808%) hue-rotate(346deg) brightness(97%) contrast(96%));
+.hggs-icon.hggs-icon--edit {
+  background: var(--icon-background-edit, --icon-background-edit-default)
+    no-repeat;
+}
+
+.hggs-icon.hggs-icon--close {
+  background: var(--icon-background-close, --icon-background-close-default)
+    no-repeat;
+}
+
+.hggs-icon.hggs-icon--hggs-color-primary {
+  filter: var(--icon-filter-color-primary, --icon-filter-color-primary-default);
+}
+
+.hggs-icon.hggs-icon--hggs-color-secondary {
+  filter: var(
+    --icon-filter-color-secondary,
+    --icon-filter-color-secondary-default
+  );
+}
+
+.hggs-icon.hggs-icon--hggs-color-tertiary {
+  filter: var(
+    --icon-filter-color-tertiary,
+    --icon-filter-color-tertiary-default
+  );
 }

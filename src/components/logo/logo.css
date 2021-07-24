@@ -6,13 +6,15 @@
 }
 
 .hggs-logo.hggs-logo--white {
-  background: var(--logo-url-white, url("./assets/svg/logo-white.svg")) no-repeat;
+  background: var(--logo-url-white, url("./assets/svg/logo-white.svg"))
+    no-repeat;
 }
 
 .hggs-logo.hggs-logo--black {
-  background: var(--logo-url-black, url("./assets/svg/logo-black.svg")) no-repeat;
+  background: var(--logo-url-black, url("./assets/svg/logo-black.svg"))
+    no-repeat;
 }
 
-.hggs-logo.hggs-logo--color-primary {
+.hggs-logo.hggs-logo--hggs-color-primary {
   fill: var(--icon-color-primary, --icon-color-primary-default);
 }

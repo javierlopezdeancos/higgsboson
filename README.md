@@ -1,22 +1,14 @@
-
-
 ![alt text](images/logo.png "higgsboson")
 
 # Higgsboson
 
 Higgsboson class components is a set of classes to style core native components.
 
+## Components
+
+- [Titles (h1, h2, h3, h4, h5, h6)](/src/components/titles/titles.md)
+
 ## How to use
-
-### Requirements
-
-#### Node js
-
-You could install each [nodejs](https://nodejs.org/en/) version that you want on windows with [nvm-windows](https://github.com/coreybutler/nvm-windows) or in Mac/Linux with [nvm](https://github.com/nvm-sh/nvm).
-
-#### Git
-
-You should install and configure it.
 
 ### Install
 
@@ -59,7 +51,7 @@ This http server serve to you the `src/index.html` in order to set up your html 
 Then to develop purposes we need follow this steps
 
 1. In a console we should build and watch the css theme required `npm run develop:captain-america`.
-3. In other console we need to run up the http server to dev our css files and watch this changes in our browser `npm run develop:server`.
+2. In other console we need to run up the http server to dev our css files and watch this changes in our browser `npm run develop:server`.
 
 ### Lint
 
@@ -113,7 +105,6 @@ Make sure that you have `hooksPath` set in your `.git/config` file:
 	hooksPath = .git/hooks  // <----  set here your hooksPath folder
 ```
 
-
 #### Usage
 
 If you have permissions whe you run `git push origin {BRANCH}` the pre-push script should be run automatically running the frontend lint rules.
@@ -124,13 +115,14 @@ We are using [postcss](https://postcss.org) to transpile the css code into stand
 
 ### Plugins that we are using
 
-* [autoprefixer](https://github.com/postcss/autoprefixer)
-* [postcss-extend](https://github.com/travco/postcss-extend)
-* [postcss-import](https://github.com/postcss/postcss-import)
-* [postcss-preset-env](https://preset-env.cssdb.org/)
-* [postcss-copy-assets](https://github.com/shutterstock/postcss-copy-assets)
-* [cssnano](https://cssnano.co/)
-* [postcss-csso](https://github.com/lahmatiy/postcss-csso)
+- [autoprefixer](https://github.com/postcss/autoprefixer)
+- [postcss-extend](https://github.com/travco/postcss-extend)
+- [postcss-nesting](https://github.com/csstools/postcss-nesting)
+- [postcss-import](https://github.com/postcss/postcss-import)
+- [postcss-preset-env](https://preset-env.cssdb.org/)
+- [postcss-copy-assets](https://github.com/shutterstock/postcss-copy-assets)
+- [cssnano](https://cssnano.co/)
+- [postcss-csso](https://github.com/lahmatiy/postcss-csso)
 
 ## Tools that could help you to develop in this project
 
@@ -141,6 +133,7 @@ Discover a free, built on open source and runs everywhere IDE to frontend develo
 
 #### Visual Studio Code useful Extensions
 
-* [csstools.postcss](https://github.com/csstools/postcss-language)
-* [dbaeumer.vscode-eslint](https://github.com/Microsoft/vscode-eslint)
-* [stylelint.vscode-stylelint](https://github.com/stylelint/vscode-stylelint)
+- [csstools.postcss](https://github.com/csstools/postcss-language)
+- [dbaeumer.vscode-eslint](https://github.com/Microsoft/vscode-eslint)
+- [stylelint.vscode-stylelint](https://github.com/stylelint/vscode-stylelint)
+- [usernamehw.errorlens](https://github.com/usernamehw/vscode-error-lens)
