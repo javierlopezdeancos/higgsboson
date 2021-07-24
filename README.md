@@ -113,6 +113,7 @@ We are using [postcss](https://postcss.org) to transpile the css code into stand
 
 - [autoprefixer](https://github.com/postcss/autoprefixer)
 - [postcss-extend](https://github.com/travco/postcss-extend)
+- [postcss-nesting](https://github.com/csstools/postcss-nesting)
 - [postcss-import](https://github.com/postcss/postcss-import)
 - [postcss-preset-env](https://preset-env.cssdb.org/)
 - [postcss-copy-assets](https://github.com/shutterstock/postcss-copy-assets)
