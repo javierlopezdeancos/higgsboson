@@ -17,7 +17,8 @@
   --hggs-color-auxiliary-gray-003: #c9c9c9;
   --hggs-color-auxiliary-gray-004: #727272;
   --hggs-color-auxiliary-gray-005: #5f5f61;
-  --hggs-color-auxiliary-gray-007: #4e4b4b;
+  --hggs-color-auxiliary-gray-006: #4e4b4b;
+  --hggs-color-auxiliary-gray-007: #353535;
   --hggs-color-auxiliary-gray-008: #1b1d2a;
   --hggs-color-auxiliary-gray-alpha-002: rgba(0, 0, 0, 0.1);
   --hggs-color-auxiliary-gray-alpha-004: rgba(0, 0, 0, 0.25);
@@ -154,12 +155,21 @@
   --icon-background-hamburger-menu: url("./assets/icons/hamburger-menu.svg");
   --icon-background-edit: url("./assets/icons/pencil.svg");
   --icon-background-close: url("./assets/icons/close.svg");
+  --icon-background-plus: url("./assets/icons/plus.svg");
   --icon-filter-color-primary: invert(28%) sepia(40%) saturate(2699%)
     hue-rotate(212deg) brightness(93%) contrast(94%);
   --icon-filter-color-secondary: invert(32%) sepia(24%) saturate(3291%)
     hue-rotate(331deg) brightness(99%) contrast(95%);
   --icon-filter-color-tertiary: invert(78%) sepia(78%) saturate(612%)
     hue-rotate(3deg) brightness(105%) contrast(107%);
+
+  & + .hggs-icon-label {
+    --icon-label-font-family: var(--hggs-font-family-primary);
+    --icon-label-font-weigth: var(--hggs-font-weight-medium);
+    --icon-label-font-size: var(--hggs-font-size-text);
+    --icon-label-color: var(--hggs-color-auxiliary-007);
+    --icon-label-margin-left: var(--hggs-space-horizontal-small);
+  }
 }
 
 .hggs-button {
