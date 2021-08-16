@@ -19,10 +19,10 @@
     "set:theme:caramel": "cross-env-shell THEME=caramel",
     "develop:captain-america": "npm run set:theme:captain-america npm run develop",
     "develop:caramel": "npm run set:theme:caramel npm run develop",
-    "develop": "cross-env npx postcss ./src/themes/%THEME%/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-extend autoprefixer postcss-copy-assets --output ./dist/$THEME.css --watch",
+    "develop": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-extend autoprefixer postcss-copy-assets --output ./dist/$THEME.css --watch",
     "build:captain-america": "npm run set:theme:captain-america npm run build",
     "build:caramel": "npm run set:theme:caramel npm run build",
-    "build": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-extend postcss-csso  autoprefixer postcss-copy-assets --output ./dist/captain-america.min.css",
+    "build": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-extend postcss-csso  autoprefixer postcss-copy-assets --output ./dist/$THEME.min.css",
     "format": "npx stylelint --fix \"src/**/*.css\"",
     "lint": "npx stylelint \"src/**/*.css\"",
     "develop:server": "lite-server"
