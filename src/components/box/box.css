@@ -29,12 +29,24 @@
     }
   }
 
-  &.hggs-box--with-radius {
+  /************************************/
+  /*                                  */
+  /*   hggs-box--rounded              */
+  /*                                  */
+  /************************************/
+
+  &.hggs-box--rounded{
     border-radius: var(
       --box-border-radius-with-radius,
       --box-border-radius-with-radius-default
     );
   }
+
+  /************************************/
+  /*                                  */
+  /*   hggs-box--{variant}            */
+  /*                                  */
+  /************************************/
 
   &.hggs-box--primary {
     background: var(--box-background-primary, --hggs-color-auxiliary-gray-000);
