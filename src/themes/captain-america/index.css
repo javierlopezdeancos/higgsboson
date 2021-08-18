@@ -10,6 +10,7 @@
 @import "../../components/logo/logo.css";
 @import "../../components/text/text.css";
 @import "../../components/titles/titles.css";
+@import "../../components/icons/icons.css";
 @import "../../components/buttons/buttons.css";
 @import "../../components/list/list.css";
 @import "../../components/form/form.css";
@@ -17,7 +18,6 @@
 @import "../../components/label/label.css";
 @import "../../components/field/field.css";
 @import "../../components/links/links.css";
-@import "../../components/icons/icons.css";
 @import "../../components/dialog/dialog.css";
 @import "../../components/table/table.css";
 @import "../../components/box/box.css";
