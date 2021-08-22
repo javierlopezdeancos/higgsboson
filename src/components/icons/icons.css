@@ -26,6 +26,10 @@
    @extend %hggs-icon-label;
   }
 
+  & .hggs-icon.hggs-icon--quinary + .hggs-icon-label {
+   color: var(--icon-label-quinary-color, --hggs-color-quinary-default);
+  }
+
   /************************************/
   /*                                  */
   /*   hggs-icon--{geometric-piece}   */
@@ -129,6 +133,10 @@
     background: transparent;
     border: var(--icon-outline-border, 1px solid var(--hggs-color-quaternary-default));
 
+    & .hggs-icon {
+        filter: var(--icon-filter-gray, --hggs-filter-gray-default);
+    }
+
     /************************************/
     /*                                  */
     /*   hggs-icon--{variant}           */
@@ -159,6 +167,15 @@
 
       & .hggs-icon {
         filter: var(--icon-filter-tertiary, --hggs-filter-tertiary-default);
+      }
+    }
+
+    &.hggs-icon--quaternary {
+      background: transparent;
+      border: var(--icon-outline-border-quaternary, 1px solid var(--hggs-color-quaternary-default));
+
+      & .hggs-icon {
+        filter: var(--icon-filter-quaternary, --hggs-filter-quaternary-default);
       }
     }
 
@@ -195,6 +212,7 @@
   display: block;
   width: var(--icon-size, --icon-size-default);
   height: var(--icon-size, --icon-size-default);
+  filter: var(--icon-filter, --hggs-filter-color-auxiliary-004-default);
 
   /************************************/
   /*                                  */
@@ -260,20 +278,26 @@
     );
   }
 
+  &.hggs-icon--quaternary {
+    filter: var(
+      --icon-filter-quaternary,
+      --hggs-filter-quaternary-default
+    );
+  }
+
+  &.hggs-icon--quinary {
+    filter: var(
+      --icon-filter-quinary,
+      --hggs-filter-quinary-default
+    );
+  }
+
   &.hggs-icon--senary {
     filter: var(
       --icon-filter-senary,
       --hggs-filter-senary-default
     );
   }
-
-  &.hggs-icon--gray {
-    filter: var(
-      --icon-filter-gray,
-      --hggs-filter-gray-default
-    );
-  }
-
 
   /************************************/
   /*                                  */
