@@ -1,31 +1,31 @@
 %hggs-button-primary {
-  color: var(--buttton-color-primary, --hggs-color-quinary-default);
-  background-color: var(--buttton-background-primary, --hggs-color-auxiliary-gray-002-default);
+  color: var(--button-color-primary, --hggs-color-quinary-default);
+  background-color: var(--button-background-primary, --hggs-color-auxiliary-gray-002-default);
 }
 
 %hggs-button-secondary {
-  color: var(--buttton-color-secondary, --hggs-color-quinary-default);
-  background-color: var(--buttton-background-secondary, --hggs-color-auxiliary-gray-003-default);
+  color: var(--button-color-secondary, --hggs-color-quinary-default);
+  background-color: var(--button-background-secondary, --hggs-color-auxiliary-gray-003-default);
 }
 
 %hggs-button-tertiary {
-  color: var(--buttton-color-tertiary, --hggs-color-quinary-default);
-  background-color: var(--buttton-background-tertiary, --hggs-color-auxiliary-gray-004-default);
+  color: var(--button-color-tertiary, --hggs-color-quinary-default);
+  background-color: var(--button-background-tertiary, --hggs-color-auxiliary-gray-004-default);
 }
 
 %hggs-button-quaternary {
-  color: var(--buttton-color-quaternary, --hggs-color-quinary-default);
-  background-color: var(--buttton-background-quaternary, --hggs-color-quaternary-default);
+  color: var(--button-color-quaternary, --hggs-color-quinary-default);
+  background-color: var(--button-background-quaternary, --hggs-color-quaternary-default);
 }
 
 %hggs-button-quinary {
-  color: var(--buttton-color-quinary, --hggs-color-quinary-default);
-  background-color: var(--buttton-background-quinary, --hggs-color-quinary-default);
+  color: var(--button-color-quinary, --hggs-color-quinary-default);
+  background-color: var(--button-background-quinary, --hggs-color-quinary-default);
 }
 
 %hggs-button-senary {
-  color: var(--buttton-color-senary, --hggs-color-senary-default);
-  background-color: var(--buttton-background-senary, --hggs-color-auxiliary-gray-005-default);
+  color: var(--button-color-senary, --hggs-color-senary-default);
+  background-color: var(--button-background-senary, --hggs-color-auxiliary-gray-005-default);
 }
 
 %hggs-button-icon-hover {
@@ -67,36 +67,42 @@
   background-color: var(--button-background-primary-hover, --hggs-color-auxiliary-gray-003-default);
   box-shadow: var(--button-box-shadow-primary-hover, 0px 0px 0px 2px var(--hggs-color-auxiliary-gray-003-default));
   transition: var(--button-transition-primary-hover, all 200ms ease);
+  color: var(--button-color-primary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
 %hggs-button-hover-secondary {
   background-color: var(--button-background-secondary-hover, --hggs-color-auxiliary-gray-004-default);
   box-shadow: var(--button-box-shadow-secondary-hover, 0px 0px 0px 2px var(--hggs-color-auxiliary-gray-004-default));
-  transition: var(--button-transition-secondary-hover, all 200ms ease)
+  transition: var(--button-transition-secondary-hover, all 200ms ease);
+  color: var(--button-color-secondary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
 %hggs-button-hover-tertiary {
   background-color: var(--button-background-tertiary-hover, --hggs-color-auxiliary-gray-005-default);
   box-shadow: var(--button-box-shadow-tertiary-hover, 0px 0px 0px 2px var(--hggs-color-auxiliary-gray-005-default));
   transition: var(--button-transition-tertiary-hover, all 200ms ease);
+  color: var(--button-color-tertiary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
 %hggs-button-hover-quaternary{
-  background-color: var(--buttton-background-quaternary-hover, --hggs-color-quaternary-default);
+  background-color: var(--button-background-quaternary-hover, --hggs-color-quaternary-default);
   box-shadow: var(--button-box-shadow-quaternary-hover, 0px 0px 0px 2px var(--hggs-color-quaternary-default));
   transition: var(--button-transition-quaternary-hover, all 200ms ease);
+   color: var(--button-color-quaternary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
 %hggs-button-hover-quinary {
-  background-color: var(--buttton-background-quinary-hover, --hggs-color-quinary-default);
+  background-color: var(--button-background-quinary-hover, --hggs-color-quinary-default);
   box-shadow: var(--button-box-shadow-quinary-hover, 0px 0px 0px 2px var(--hggs-color-quinary-default));
   transition: var(--button-transition-quinary-hover, all 200ms ease);
+  color: var(--button-color-quinary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
 %hggs-button-hover-senary {
-  background-color: var(--buttton-background-senary-hover, --hggs-color-auxiliary-gray-006-default);
+  background-color: var(--button-background-senary-hover, --hggs-color-auxiliary-gray-006-default);
   box-shadow: var(--button-box-shadow-senary-hover, 0px 0px 0px 2px var(--hggs-color-auxiliary-gray-006-default));
   transition: var(--button-transition-senary-hover, all 200ms ease);
+  color: var(--button-color-senary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
 %hggs-button-outline {
@@ -218,7 +224,7 @@
   border: var(--button-border-outline-senary-hover, 1px solid transparent);
 }
 
-%hggs-button-outline-reset {
+%hggs-button-icon-reset {
   background: unset;
   background-color: unset;
 }

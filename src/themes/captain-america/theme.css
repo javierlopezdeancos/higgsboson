@@ -243,7 +243,7 @@
   --button-background-secondary-hover: var(--hggs-color-secondary-001);
   --button-box-shadow-secondary-hover: 0px 0px 0px 2px var(--hggs-color-secondary-001);
   --button-transition-secondary-hover: all 200ms ease;
-  --buttton-background-tertiary: var(--hggs-color-tertiary);
+  --button-background-tertiary: var(--hggs-color-tertiary);
   --button-color-tertiary: var(--hggs-color-quaternary);
   --button-background-tertiary-hover: var(--hggs-color-tertiary-001);
   --button-box-shadow-tertiary-hover: 0px 0px 0px 2px var(--hggs-color-tertiary-001);
