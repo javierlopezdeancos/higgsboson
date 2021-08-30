@@ -143,14 +143,14 @@
   --label-font-size: var(--hggs-font-size-text);
   --label-color: var(--hggs-color-auxiliary-gray-005);
   --label-color-focus: var(--hggs-color-auxiliary-gray-007);
-  --label-color-disabled: var(--hggs-color-auxiliary-gray-000);
+  --label-color-disabled: var(--hggs-color-auxiliary-gray-001);
 }
 
 .hggs-input {
   --input-border: 1px solid var(--hggs-color-auxiliary-gray-003);
   --input-border-radius: var(--hggs-boder-radius);
   --input-border-focus: 1px solid var(--hggs-color-primary);
-  --input-border-disabled: 1px solid var(--hggs-color-auxiliary-gray-000);
+  --input-border-disabled: 1px solid var(--hggs-color-auxiliary-gray-001);
   --input-border-invalid: 1px solid var(--hggs-color-error);
   --input-height: 38px;
   --input-padding: 8px 12px;
