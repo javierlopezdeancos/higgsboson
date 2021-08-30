@@ -4,9 +4,9 @@
   font-weight: var(--link-font-weight);
   font-size: var(--hggs-font-size-text);
   color: var(--link-color);
-}
 
-.hggs-link:hover {
-  text-decoration: underline;
-  color: var(--link-color-hover);
+  &:hover {
+    text-decoration: underline;
+    color: var(--link-color-hover);
+  }
 }
