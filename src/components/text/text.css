@@ -5,16 +5,16 @@
   font-weight: var(--text-font-weight, --text-font-weight-default);
   margin: var(--text-margin, var(--hggs-space-vertical-medium-default) 0);
   line-height: var(--text-line-height, normal);
-}
 
-.hggs-text--bold {
-  font-weight: var(--text-font-weight-bold, --text-font-weight-bold-default);
-}
+  &.hggs-text--bold {
+    font-weight: var(--text-font-weight-bold, --text-font-weight-bold-default);
+  }
 
-.hggs-text--italic {
-  font-style: italic;
-}
+  &.hggs-text--italic {
+    font-style: italic;
+  }
 
-.hggs-text--small {
-  font-size: var(--text-font-size-small, --text-font-size-small-default);
+  &.hggs-text--small {
+    font-size: var(--text-font-size-small, --text-font-size-small-default);
+  }
 }

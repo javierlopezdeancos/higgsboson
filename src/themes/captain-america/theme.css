@@ -1,15 +1,30 @@
 :root {
   --hggs-color-primary: #3753c4;
   --hggs-color-primary-001: #2f46a6;
+  --hggs-filter-primary: invert(28%) sepia(40%) saturate(2699%)
+    hue-rotate(212deg) brightness(93%) contrast(94%);
+  --hggs-filter-primary-001: invert(27%) sepia(11%) saturate(6768%) hue-rotate(204deg) brightness(99%) contrast(100%);
   --hggs-color-secondary: #ce4136;
-  --hggs-color-tertiary: #fbf300;
+  --hggs-color-secondary-001: #af362c;
+  --hggs-filter-secondary: invert(32%) sepia(24%) saturate(3291%)
+    hue-rotate(331deg) brightness(99%) contrast(95%);
+  --hggs-filter-secondary-001: invert(24%) sepia(62%) saturate(2295%) hue-rotate(348deg) brightness(91%) contrast(78%);
+  --hggs-color-tertiary: #FAD02C;
+  --hggs-color-tertiary-001: #f3c821;
+  --hggs-filter-tertiary: invert(90%) sepia(48%) saturate(3381%) hue-rotate(329deg) brightness(100%) contrast(97%);
+  --hggs-filter-tertiary-001: invert(88%) sepia(33%) saturate(2272%) hue-rotate(343deg) brightness(104%) contrast(91%);
   --hggs-color-quaternary: #000;
+  --hggs-filter-quaternary: invert(0%) sepia(54%) saturate(2989%) hue-rotate(174deg) brightness(108%) contrast(108%);
   --hggs-color-quinary: #fff;
+  --hggs-filter-quinary: invert(100%) sepia(100%) saturate(0%) hue-rotate(157deg) brightness(102%) contrast(102%);
   --hggs-color-senary: #39bfff;
+  --hggs-color-senary-001: #28b3f5;
   --hggs-color-auxiliary-senary-000: #f0faff;
   --hggs-color-auxiliary-senary-001: #e1f5ff;
   --hggs-color-auxiliary-senary-002: #c1ebff;
   --hggs-color-auxiliary-senary-003: #a4e1ff;
+  --hggs-filter-senary:  invert(58%) sepia(82%) saturate(1159%) hue-rotate(173deg) brightness(103%) contrast(101%);
+  --hggs-filter-senary-001: invert(53%) sepia(95%) saturate(387%) hue-rotate(155deg) brightness(96%) contrast(100%);
   --hggs-color-error: #ff0b0b;
   --hggs-color-auxiliary-gray-000: #f6f7f9;
   --hggs-color-auxiliary-gray-001: #eee;
@@ -17,8 +32,12 @@
   --hggs-color-auxiliary-gray-003: #c9c9c9;
   --hggs-color-auxiliary-gray-004: #727272;
   --hggs-color-auxiliary-gray-005: #5f5f61;
-  --hggs-color-auxiliary-gray-007: #4e4b4b;
+  --hggs-color-auxiliary-gray-006: #4e4b4b;
+  --hggs-color-auxiliary-gray-007: #353535;
   --hggs-color-auxiliary-gray-008: #1b1d2a;
+  --hggs-color-auxiliary-gray-009: #101119;
+  --hggs-filter-auxiliary-gray-002: invert(84%) sepia(0%) saturate(7497%) hue-rotate(107deg) brightness(105%) contrast(101%);
+  --hggs-filter-auxiliary-gray-004: invert(49%) sepia(0%) saturate(1%) hue-rotate(119deg) brightness(90%) contrast(89%);
   --hggs-color-auxiliary-gray-alpha-002: rgba(0, 0, 0, 0.1);
   --hggs-color-auxiliary-gray-alpha-004: rgba(0, 0, 0, 0.25);
   --hggs-color-auxiliary-gray-alpha-007: rgba(58, 58, 58, 0.6);
@@ -122,16 +141,16 @@
   --label-font-family: var(--hggs-font-family-primary);
   --label-font-weight: var(--hggs-font-weight-medium);
   --label-font-size: var(--hggs-font-size-text);
-  --label-color: var(--hggs-color-auxiliary-005);
-  --label-color-focus: var(--hggs-color-auxiliary-007);
-  --label-color-disabled: var(--hggs-color-auxiliary-gray-000);
+  --label-color: var(--hggs-color-auxiliary-gray-005);
+  --label-color-focus: var(--hggs-color-auxiliary-gray-007);
+  --label-color-disabled: var(--hggs-color-auxiliary-gray-001);
 }
 
 .hggs-input {
   --input-border: 1px solid var(--hggs-color-auxiliary-gray-003);
   --input-border-radius: var(--hggs-boder-radius);
   --input-border-focus: 1px solid var(--hggs-color-primary);
-  --input-border-disabled: 1px solid var(--hggs-color-auxiliary-gray-000);
+  --input-border-disabled: 1px solid var(--hggs-color-auxiliary-gray-001);
   --input-border-invalid: 1px solid var(--hggs-color-error);
   --input-height: 38px;
   --input-padding: 8px 12px;
@@ -146,57 +165,155 @@
   --field-label-after-margin-left-required: var(--hggs-space-horizontal-micro);
 }
 
-.hggs-icon {
+.hggs-icon-wrapper,
+.hggs-icon,
+.hggs-button {
   --icon-size: 20px;
-  --icon-background-user: url("./assets/icons/user.svg");
-  --icon-background-question: url("./assets/icons/question.svg");
-  --icon-background-log-out: url("./assets/icons/log-out.svg");
-  --icon-background-hamburger-menu: url("./assets/icons/hamburger-menu.svg");
-  --icon-background-edit: url("./assets/icons/pencil.svg");
-  --icon-background-close: url("./assets/icons/close.svg");
-  --icon-filter-color-primary: invert(28%) sepia(40%) saturate(2699%)
-    hue-rotate(212deg) brightness(93%) contrast(94%);
-  --icon-filter-color-secondary: invert(32%) sepia(24%) saturate(3291%)
-    hue-rotate(331deg) brightness(99%) contrast(95%);
-  --icon-filter-color-tertiary: invert(78%) sepia(78%) saturate(612%)
-    hue-rotate(3deg) brightness(105%) contrast(107%);
+  --icon-size-small: 12px;
+  --icon-size-micro: 10px;
+  --icon-user: url("./assets/icons/user.svg");
+  --icon-question: url("./assets/icons/question.svg");
+  --icon-log-out: url("./assets/icons/log-out.svg");
+  --icon-hamburger-menu: url("./assets/icons/hamburger-menu.svg");
+  --icon-edit: url("./assets/icons/pencil.svg");
+  --icon-close: url("./assets/icons/close.svg");
+  --icon-plus: url("./assets/icons/plus.svg");
+  --icon-filter: var(--hggs-filter-auxiliary-gray-004);
+  --icon-filter-primary: var(--hggs-filter-primary);
+  --icon-filter-secondary: var(--hggs-filter-secondary);
+  --icon-filter-tertiary: var(--hggs-filter-tertiary);
+  --icon-filter-quaternary: var( --hggs-filter-quaternary);
+  --icon-filter-quinary: var( --hggs-filter-quinary);
+  --icon-filter-senary: var( --hggs-filter-senary);
+  --icon-box-padding: var(--hggs-space-horizontal-small);
+  --icon-box-padding-micro: var(--hggs-space-horizontal-micro);
+  --icon-box-background: var(--hggs-color-auxiliary-gray-001);
+  --icon-box-background-primary: var(--hggs-color-primary);
+  --icon-box-background-secondary: var(--hggs-color-secondary);
+  --icon-box-background-tertiary: var(--hggs-color-tertiary);
+  --icon-box-background-quaternary: var(--hggs-color-quaternary);
+  --icon-box-background-quinary: var(--hggs-color-quinary);
+  --icon-box-background-senary: var(--hggs-color-senary);
+  --icon-outline-border: 1px solid var(--hggs-color-auxiliary-gray-004);
+  --icon-outline-border-primary: 1px solid var(--hggs-color-primary);
+  --icon-outline-border-secondary: 1px solid var(--hggs-color-secondary);
+  --icon-outline-border-tertiary: 1px solid var(--hggs-color-tertiary);
+  --icon-outline-border-quinary: 1px solid var(--hggs-color-quinary);
+  --icon-outline-border-senary: 1px solid var(--hggs-color-senary);
+  --icon-outline-border-quaternary:1px solid var(--hggs-color-quaternary);
+  --icon-label-font-family: var(--hggs-font-family-primary);
+  --icon-label-font-weigth: var(--hggs-font-weight-medium);
+  --icon-label-font-size: var(--hggs-font-size-text);
+  --icon-label-color: var(--hggs-color-auxiliary-gray-007);
+  --icon-label-quinary-color: var(--hggs-color-quinary);
+  --icon-label-margin-left: var(--hggs-space-horizontal-small);
 }
 
 .hggs-button {
-  --buttton-height: 44px;
-  --buttton-padding: 0 40px;
-  --button-font-family: var(--hggs-font-family-primary);
-  --button-font-size: var(--hggs-font-size-text);
-  --button-font-weight: var(--hggs-font-weight-medium);
-  --button-font-letter-spacing: 1px;
-  --button-border-radius: 3px;
-  --button-margin-vertical: var(--hggs-space-vertical-small);
-  --buttton-background-primary: var(--hggs-color-primary);
-  --buttton-color-primary: var(--hggs-color-quinary);
-  --buttton-background-primary-hover: var(--hggs-color-primary-001);
+  --button-height: 65px;
+  --button-padding: 0 40px;
   --button-width-big: 250px;
   --button-width-medium: 180px;
-  --button-height-medium: 40px;
+  --button-height-medium: 48px;
   --button-padding-medium: 0 10px;
   --button-width-small: 70px;
   --button-height-small: 30px;
   --button-padding-small: 0 5px;
+  --button-font-family: var(--hggs-font-family-primary);
+  --button-font-size: var(--hggs-font-size-text-normal-plus);
+  --button-font-size-medium: var(--hggs-font-size-text);
   --button-font-size-small: var(--hggs-font-size-text-small);
-  --button-icon-padding: 10px;
+  --button-font-weight: var(--hggs-font-weight-medium);
+  --button-font-letter-spacing: 1px;
+  --button-color: var(--hggs-color-auxiliary-gray-008);
+  --button-border-radius: 3px;
+  --button-margin-vertical: var(--hggs-space-vertical-small);
+  --button-background: var(--hggs-color-auxiliary-gray-001);
+  --button-background-hover: var(--hggs-color-auxiliary-gray-002);
+  --button-color-hover: var(--hggs-color-auxiliary-gray-009);
+  --button-box-shadow-hover:  0px 0px 0px 2px var(--hggs-color-auxiliary-gray-002);
+  --button-transition-hover: all 200ms ease;
+  --button-background-primary: var(--hggs-color-primary);
+  --button-color-primary: var(--hggs-color-quinary);
+  --button-background-primary-hover: var(--hggs-color-primary-001);
+  --button-box-shadow-primary-hover: 0px 0px 0px 2px var(--hggs-color-primary-001);
+  --button-transition-primary-hover: all 200ms ease;
+  --button-background-secondary: var(--hggs-color-secondary);
+  --button-color-secondary: var(--hggs-color-quinary);
+  --button-background-secondary-hover: var(--hggs-color-secondary-001);
+  --button-box-shadow-secondary-hover: 0px 0px 0px 2px var(--hggs-color-secondary-001);
+  --button-transition-secondary-hover: all 200ms ease;
+  --button-background-tertiary: var(--hggs-color-tertiary);
+  --button-color-tertiary: var(--hggs-color-quaternary);
+  --button-background-tertiary-hover: var(--hggs-color-tertiary-001);
+  --button-box-shadow-tertiary-hover: 0px 0px 0px 2px var(--hggs-color-tertiary-001);
+  --button-transition-tertiary-hover: all 200ms ease;
+  --button-background-quaternary: var(--hggs-color-quaternary);
+  --button-color-quaternary: var(--hggs-color-quinary);
+  --button-background-quaternary-hover: var(--hggs-color-quaternary);
+  --button-box-shadow-quaternary-hover: 0px 0px 0px 2px var(--hggs-color-quaternary);
+  --button-transition-quaternary-hover: all 200ms ease;
+  --button-background-quinary: var(--hggs-color-quinary);
+  --button-color-quinary: var(--hggs-color-quaternary);
+  --button-background-quinary-hover: var(--hggs-color-quinary);
+  --button-box-shadow-quinary-hover: 0px 0px 0px 2px var(--hggs-color--quinary);
+  --button-transition-quinary-hover: all 200ms ease;
+  --button-background-senary: var(--hggs-color-senary);
+  --button-color-senary: var(--hggs-color-quinary);
+  --button-background-senary-hover: var(--hggs-color-senary-001);
+  --button-box-shadow-senary-hover: 0px 0px 0px 2px var(--hggs-color-senary-001);
+  --button-transition-senary-hover: all 200ms ease;
+  --button-border-outline: 1px solid var(--hggs-color-auxiliary-gray-004);
+  --button-color-outline: var(--hggs-color-auxiliary-gray-004);
+  --button-box-shadow-outline-hover: 0px 0px 0px 2px var(--hggs-color-auxiliary-gray-005);
+  --button-border-outline-hover: 1px solid transparent;
+  --button-border-outline-primary: 1px solid var(--hggs-color-primary);
+  --button-color-outline-primary: var(--hggs-color-primary);
+  --button-box-shadow-outline-primary-hover: 0px 0px 0px 2px var(--hggs-color-primary-001);
+  --button-border-outline-primary-hover: 1px solid transparent;
+  --button-color-outline-primary-hover: var(--hggs-color-primary-001);
+  --button-border-outline-secondary: 1px solid var(--hggs-color-secondary);
+  --button-color-outline-secondary: var(--hggs-color-secondary);
+  --button-border-outline-secondary-hover: 1px solid transparent;
+  --button-box-shadow-outline-secondary-hover: 0px 0px 0px 2px var(--hggs-color-secondary-001);
+  --button-color-outline-secondary-hover: var(--hggs-color-secondary-001);
+  --button-border-outline-tertiary: 1px solid var(--hggs-color-tertiary);
+  --button-color-outline-tertiary: var(--hggs-color-tertiary);
+  --button-border-outline-tertiary-hover: 1px solid transparent;
+  --button-box-shadow-outline-tertiary-hover: 0px 0px 0px 2px  var(--hggs-color-tertiary-001);
+  --button-color-outline-tertiary-hover: var(--hggs-color-tertiary-001);
+  --button-border-outline-quaternary: 1px solid var(--hggs-color-quaternary);
+  --button-color-outline-quaternary: var(--hggs-color-quaternary);
+  --button-border-outline-quaternary-hover: 1px solid transparent;
+  --button-box-shadow-outline-quaternary-hover: 0px 0px 0px 2px var(--hggs-color-quaternary);
+  --button-color-outline-quaternary-hover: var(--hggs-color-quaternary);
+  --button-border-outline-quinary: 1px solid var(--hggs-color-quinary);;
+  --button-color-outline-quinary: var(--hggs-color-quinary);
+  --button-border-outline-quinary-hover: 1px solid transparent;
+  --button-box-shadow-outline-quinary-hover: 0px 0px 0px 2px var(--hggs-color-quinary);
+  --button-color-outline-quinary-hover: var(--hggs-color-quinary);
+  --button-border-outline-senary: 1px solid var(--hggs-color-senary);;
+  --button-color-outline-senary: var(--hggs-color-senary);
+  --button-border-outline-senary-hover: 1px solid transparent;
+  --button-box-shadow-outline-senary-hover: 0px 0px 0px 2px var(--hggs-color-senary-001);
+  --button-color-outline-senary-hover: var(--hggs-color-senary-001);
+  --button-icon-padding: 0;
   --button-icon-width: calc(var(--icon-size) + var(--button-icon-padding));
-  --button-icon-background-icon-labeled: transparent;
-  --button-icon-padding-icon-labeled: 8px;
-  --button-icon-size-icon-labeled: 18px;
-  --button-icon-border-icon-labeled: 1px solid var(--hggs-color-auxiliary-001);
-  --button-icon-box-shadow-icon-labeled: inset 0 -6px 12px 0 var(--hggs-color-auxiliary-gray-000);
-  --button-icon-border-icon-labeled-hover: 1px solid
-    var(--hggs-color-auxiliary-002);
-  --button-icon-background-icon-labeled-hover: var(--hggs-color-auxiliary-000);
-  --button-icon-transition-icon-labeled-hover: box-shadow 200ms ease,
-    background-color 200ms ease;
-  --button-circle-padding: var(--button-icon-padding-icon-labeled);
-  --button-circle-background: var(--hggs-color-auxiliary-gray-000);
-  --button-circle-transition-hover: background-color 200ms ease;
+  --button-icon-filter-hover: var(--hggs-color-auxiliary-gray-005);
+  --button-icon-filter-primary-hover: var(--hggs-filter-primary-001);
+  --button-icon-filter-secondary-hover: var(--hggs-filter-secondary-001);
+  --button-icon-filter-tertiary-hover: var(--hggs-filter-tertiary-001);
+  --button-icon-filter-quaternary-hover: var(--hggs-filter-quaternary-001);
+  --button-icon-filter-quinary-hover: var(--hggs-filter-quinary);
+  --button-icon-filter-senary-hover: var(--hggs-filter-senary-001);
+  --button-icon-label-color-quinary: var(--hggs-color-quinary);
+  --button-icon-label-color-hover: var(--hggs-color-auxiliary-gray-008);
+  --button-icon-label-color-primary-hover: var(--hggs-color-auxiliary-gray-008);
+  --button-icon-label-color-secondary-hover: var(--hggs-color-auxiliary-gray-008);
+  --button-icon-label-color-tertiary-hover: var(--hggs-color-auxiliary-gray-008);
+  --button-icon-label-color-quaternary-hover: var(--hggs-color-auxiliary-gray-008);
+  --button-icon-label-color-quinary-hover: var(--hggs-color-quinary);
+  --button-icon-label-color-senary-hover: var(--hggs-color-auxiliary-gray-008);
 }
 
 .hggs-link {

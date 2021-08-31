@@ -5,50 +5,62 @@
   background: var(--box-background, --box-background-default);
   box-shadow: var(--box-box-shadow, --box-box-shadow-default);
   padding: var(--box-padding, --box-padding-default);
-}
 
-.hggs-box .hggs-box-header {
-  border-bottom: var(
-    --box-header-border-bottom,
-    --box-header-border-bottom-default
-  );
-  padding: var(--box-header-padding, --box-header-padding-default);
-}
+  & .hggs-box-header {
+    border-bottom: var(
+      --box-header-border-bottom,
+      --box-header-border-bottom-default
+    );
+    padding: var(--box-header-padding, --box-header-padding-default);
+  }
 
-.hggs-box .hggs-box-title {
-  @extend .hggs-h4;
+  & .hggs-box-title {
+    @extend .hggs-h4;
 
-  font-size: var(--box-title-font-size, --box-title-font-size-default);
-  margin-top: var(--box-title-margin-top, --box-title-margin-top-default);
-}
+    font-size: var(--box-title-font-size, --box-title-font-size-default);
+    margin-top: var(--box-title-margin-top, --box-title-margin-top-default);
+  }
 
-.hggs-box .hggs-box-body {
-  padding: var(--box-body-padding, --box-body-padding-default);
-}
+  & .hggs-box-body {
+    padding: var(--box-body-padding, --box-body-padding-default);
 
-.hggs-box .hggs-box-body > *:first-child {
-  margin-top: unset;
-}
+    & > *:first-child {
+      margin-top: unset;
+    }
+  }
 
-.hggs-box.hggs-box--with-radius {
-  border-radius: var(
-    --box-border-radius-with-radius,
-    --box-border-radius-with-radius-default
-  );
-}
+  /************************************/
+  /*                                  */
+  /*   hggs-box--rounded              */
+  /*                                  */
+  /************************************/
 
-.hggs-box.hggs-box--primary {
-  background: var(--box-background-primary, --hggs-color-auxiliary-gray-000);
-  border: var(--box-border-primary, --hggs-color-auxiliary-gray-005);
-}
+  &.hggs-box--rounded{
+    border-radius: var(
+      --box-border-radius-with-radius,
+      --box-border-radius-with-radius-default
+    );
+  }
 
-.hggs-box.hggs-box--primary .hggs-box-header {
-  border-bottom: var(
-    --box-header-border-bottom-primary,
-    --hggs-color-auxiliary-gray-003
-  );
-}
+  /************************************/
+  /*                                  */
+  /*   hggs-box--{variant}            */
+  /*                                  */
+  /************************************/
 
-.hggs-box.hggs-box--primary .hggs-box-header .hggs-box-title {
-  color: var(--box-title-color-primary, --hggs-color-auxiliary-gray-005);
+  &.hggs-box--primary {
+    background: var(--box-background-primary, --hggs-color-auxiliary-gray-000);
+    border: var(--box-border-primary, --hggs-color-auxiliary-gray-005);
+
+    & .hggs-box-header {
+      border-bottom: var(
+        --box-header-border-bottom-primary,
+        --hggs-color-auxiliary-gray-003
+      );
+
+      & .hggs-box-title {
+        color: var(--box-title-color-primary, --hggs-color-auxiliary-gray-005);
+      }
+    }
+  }
 }

@@ -16,8 +16,8 @@ module.exports = (ctx) => ({
     atImport({
       from: "src/index.css",
     }),
-    simpleExtend(),
     postcssNesting(),
+    simpleExtend(),
     stylelint(),
     autoprefixer(),
     cssnano({ preset: "default" }),

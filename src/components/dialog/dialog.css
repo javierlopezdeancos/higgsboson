@@ -14,30 +14,32 @@
     --dialog-background-box-shadow-default
   );
   max-width: var(--dialog-max-width, --dialog-max-width-default);
+
+  &.hggs-dialog--big {
+    width: var(--dialog-width-big, --dialog-width-big-default);
+  }
+
+  &.hggs-dialog--medium {
+    width: var(--dialog-width-medium, --dialog-width-medium-default);
+  }
+
+  &.hggs-dialog--small {
+    width: var(--dialog-width-small, --dialog-width-small-default);
+  }
+
+  &[open] {
+    animation: var(--dialog-anmimation-open, --dialog-anmimation-open-default);
+  }
+
+  &::backdrop {
+    background: linear-gradient(45deg, rgba(58, 58, 58, 0.6), rgba(8, 8, 8, 0.6));
+  }
+
+  & .hggs-dialog-close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
 }
 
-.hggs-dialog.hggs-dialog--big {
-  width: var(--dialog-width-big, --dialog-width-big-default);
-}
 
-.hggs-dialog.hggs-dialog--medium {
-  width: var(--dialog-width-medium, --dialog-width-medium-default);
-}
-
-.hggs-dialog.hggs-dialog--small {
-  width: var(--dialog-width-small, --dialog-width-small-default);
-}
-
-.hggs-dialog[open] {
-  animation: var(--dialog-anmimation-open, --dialog-anmimation-open-default);
-}
-
-.hggs-dialog::backdrop {
-  background: linear-gradient(45deg, rgba(58, 58, 58, 0.6), rgba(8, 8, 8, 0.6));
-}
-
-.hggs-dialog-close {
-  position: absolute;
-  top: 0;
-  right: 10px;
-}
