@@ -1,0 +1,42 @@
+.hggs-tag {
+  width: fit-content;
+  font-family: var(--tag-font-family, --tag-font-family-default);
+  font-size: var(--tag-font-size, --tag-font-size-default);
+  font-weight: var(--tag-font-weight, --tag-font-weight-default);
+  background: var(--tag-background, --tag-background-default);
+  color: var(--tag-color, --tag-color-default);
+  padding: var(--tag-padding, --tag-padding-default);
+  text-transform: var(--tag-text-transform, --tag-text-transform-default);
+  text-align: var(--tag-text-align, --tag-text-align-default);
+  letter-spacing: var(--tag-letter-spacing, --tag-letter-spacing-default);
+
+  &.hggs-tag--primary {
+    background: var(--tag-background-primary, --tag-background-primary-default);
+    color: var(--tag-color-primary, --tag-color-primary-default);
+  }
+
+  &.hggs-tag--secondary {
+    background: var(--tag-background-secondary, --tag-background-secondary-default);
+    color: var(--tag-color-secondary, --tag-color-secondary-default);
+  }
+
+  &.hggs-tag--tertiary {
+    background: var(--tag-background-tertiary, --tag-background-tertiary-default);
+    color: var(--tag-color-tertiary, --tag-color-tertiary-default);
+  }
+
+  &.hggs-tag--quaternary {
+    background: var(--tag-background-quaternary, --tag-background-quaternary-default);
+    color: var(--tag-color-quaternary, --tag-color-quaternary-default);
+  }
+
+  &.hggs-tag--quinary {
+    background: var(--tag-background-quinary, --tag-background-quinary-default);
+    color: var(--tag-color-quinary, --tag-color-quinary-default);
+  }
+
+  &.hggs-tag--senary {
+    background: var(--tag-background-senary, --tag-background-senary-default);
+    color: var(--tag-color-senary, --tag-color-senary-default);
+  }
+}

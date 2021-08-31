@@ -1,16 +1,25 @@
 :root {
   --hggs-color-primary: #3753c4;
   --hggs-color-primary-001: #2f46a6;
+  --hggs-color-auxiliary-primary-000: #f0f2fb;
+  --hggs-color-auxiliary-primary-001: #dfe3f7;
+  --hggs-color-auxiliary-primary-002: #b9c2ee;
   --hggs-filter-primary: invert(28%) sepia(40%) saturate(2699%)
     hue-rotate(212deg) brightness(93%) contrast(94%);
   --hggs-filter-primary-001: invert(27%) sepia(11%) saturate(6768%) hue-rotate(204deg) brightness(99%) contrast(100%);
   --hggs-color-secondary: #ce4136;
   --hggs-color-secondary-001: #af362c;
+  --hggs-color-auxiliary-secondary-000: #f9e6e3;
+  --hggs-color-auxiliary-secondary-001: #edbeba;
+  --hggs-color-auxiliary-secondary-002: #de827a;
   --hggs-filter-secondary: invert(32%) sepia(24%) saturate(3291%)
     hue-rotate(331deg) brightness(99%) contrast(95%);
   --hggs-filter-secondary-001: invert(24%) sepia(62%) saturate(2295%) hue-rotate(348deg) brightness(91%) contrast(78%);
   --hggs-color-tertiary: #FAD02C;
   --hggs-color-tertiary-001: #f3c821;
+  --hggs-color-auxiliary-tertiary-000: #fef9e2;
+  --hggs-color-auxiliary-tertiary-001: #fdeeb0;
+  --hggs-color-auxiliary-tertiary-002: #fae067;
   --hggs-filter-tertiary: invert(90%) sepia(48%) saturate(3381%) hue-rotate(329deg) brightness(100%) contrast(97%);
   --hggs-filter-tertiary-001: invert(88%) sepia(33%) saturate(2272%) hue-rotate(343deg) brightness(104%) contrast(91%);
   --hggs-color-quaternary: #000;
@@ -51,6 +60,7 @@
   --hggs-font-size-text-normal-plus: 16px;
   --hggs-font-size-text: 14px;
   --hggs-font-size-text-small: 12px;
+  --hggs-font-size-text-micro: 10px;
   --hggs-font-weight-normal: 400;
   --hggs-font-weight-medium: 500;
   --hggs-font-weight-medium-plus: 600;
@@ -355,6 +365,30 @@
   --table-cell-head-background: var(--hggs-color-auxiliary-gray-000);
   --table-cell-head-padding: 30px 20px;
   --table-cell-head-border-bottom: unset;
+}
+
+.hggs-tag {
+  --tag-font-family: var(--hggs-font-family-primary);
+  --tag-font-size: var(--hggs-font-size-text-micro);
+  --tag-font-weight: var(--hggs-font-weight-bold);
+  --tag-letter-spacing: 0.2px;
+  --tag-text-transform: capitalize;
+  --tag-text-align: center;
+  --tag-background: var(--hggs-color-auxiliary-gray-002);
+  --tag-color: var(--hggs-color-auxiliary-gray-008);
+  --tag-padding: 5px 10px;
+  --tag-background-primary: var(--hggs-color-primary);
+  --tag-color-primary: var(--hggs-color-auxiliary-primary-000);
+  --tag-background-secondary: var(--hggs-color-secondary);
+  --tag-color-secondary: var(--hggs-color-auxiliary-secondary-000);
+  --tag-background-tertiary: var(--hggs-color-tertiary);
+  --tag-color-tertiary: var(--hggs-color-septenary);
+  --tag-background-quaternary: var(--hggs-color-quaternary);
+  --tag-color-quaternary: var(--hggs-color-quinary);
+  --tag-background-quinary: var(--hggs-color-quinary);
+  --tag-color-quinary: var(--hggs-color-quaternary);
+  --tag-background-senary: var(--hggs-color-senary);
+  --tag-color-senary: var(--hggs-color-auxiliary-senary-000);
 }
 
 .hggs-box {

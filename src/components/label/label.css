@@ -11,7 +11,7 @@
 
   &:disabled,
   &[disabled],
-  .hggs-label--disabled {
+  &.hggs-label--disabled {
     color: var(--label-color-disabled, --label-color-disabled-default);
     cursor: not-allowed;
   }

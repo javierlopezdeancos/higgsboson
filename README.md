@@ -6,6 +6,7 @@ Higgsboson class components is a set of classes to style core native components.
 
 ## Components
 
+- [Tag](/src/components/tag/tag.md)
 - [Titles (h1, h2, h3, h4, h5, h6)](/src/components/titles/titles.md)
 
 ## How to use
