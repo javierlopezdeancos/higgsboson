@@ -371,24 +371,39 @@
   --tag-font-family: var(--hggs-font-family-primary);
   --tag-font-size: var(--hggs-font-size-text-micro);
   --tag-font-weight: var(--hggs-font-weight-bold);
+  --tag-text-transform: uppercase;
   --tag-letter-spacing: 0.2px;
-  --tag-text-transform: capitalize;
   --tag-text-align: center;
   --tag-background: var(--hggs-color-auxiliary-gray-002);
   --tag-color: var(--hggs-color-auxiliary-gray-008);
   --tag-padding: 5px 10px;
+  --tag-border-radius: calc(var(--hggs-boder-radius)*2);
+  --tag-border-outline: 1px solid var(--hggs-color-auxiliary-gray-004);
+  --tag-color-outline: var(--hggs-color-auxiliary-gray-004);
   --tag-background-primary: var(--hggs-color-primary);
   --tag-color-primary: var(--hggs-color-auxiliary-primary-000);
+  --tag-border-outline-primary: 1px solid var(--hggs-color-primary);
+  --tag-color-outline-primary: var(--hggs-color-primary);
   --tag-background-secondary: var(--hggs-color-secondary);
   --tag-color-secondary: var(--hggs-color-auxiliary-secondary-000);
+  --tag-border-outline-secondary: 1px solid var(--hggs-color-secondary);
+  --tag-color-outline-secondary: var(--hggs-color-secondary);
   --tag-background-tertiary: var(--hggs-color-tertiary);
   --tag-color-tertiary: var(--hggs-color-septenary);
+  --tag-border-outline-tertiary: 1px solid var(--hggs-color-tertiary);
+  --tag-color-outline-tertiary: var(--hggs-color-tertiary);
   --tag-background-quaternary: var(--hggs-color-quaternary);
   --tag-color-quaternary: var(--hggs-color-quinary);
+  --tag-border-outline-quaternary: 1px solid var(--hggs-color-quaternary);
+  --tag-color-outline-quaternary: var(--hggs-color-quaternary);
   --tag-background-quinary: var(--hggs-color-quinary);
   --tag-color-quinary: var(--hggs-color-quaternary);
+  --tag-border-outline-quinary: 1px solid var(--hggs-color-quinary);
+  --tag-color-outline-quinary: var(--hggs-color-quinary);
   --tag-background-senary: var(--hggs-color-senary);
   --tag-color-senary: var(--hggs-color-auxiliary-senary-000);
+  --tag-border-outline-senary: 1px solid var(--hggs-color-senary);
+  --tag-color-outline-senary: var(--hggs-color-senary);
 }
 
 .hggs-box {
