@@ -4,6 +4,8 @@
   --hggs-color-auxiliary-primary-000: #f0f2fb;
   --hggs-color-auxiliary-primary-001: #dfe3f7;
   --hggs-color-auxiliary-primary-002: #b9c2ee;
+  --hggs-color-auxiliary-primary-003: #97A3E9;
+  --hggs-color-auxiliary-primary-004: #7787E7;
   --hggs-filter-primary: invert(28%) sepia(40%) saturate(2699%)
     hue-rotate(212deg) brightness(93%) contrast(94%);
   --hggs-filter-primary-001: invert(27%) sepia(11%) saturate(6768%) hue-rotate(204deg) brightness(99%) contrast(100%);
@@ -12,6 +14,8 @@
   --hggs-color-auxiliary-secondary-000: #f9e6e3;
   --hggs-color-auxiliary-secondary-001: #edbeba;
   --hggs-color-auxiliary-secondary-002: #de827a;
+  --hggs-color-auxiliary-secondary-003: #c46760;
+  --hggs-color-auxiliary-secondary-004: #b54840;
   --hggs-filter-secondary: invert(32%) sepia(24%) saturate(3291%)
     hue-rotate(331deg) brightness(99%) contrast(95%);
   --hggs-filter-secondary-001: invert(24%) sepia(62%) saturate(2295%) hue-rotate(348deg) brightness(91%) contrast(78%);
@@ -20,6 +24,9 @@
   --hggs-color-auxiliary-tertiary-000: #fef9e2;
   --hggs-color-auxiliary-tertiary-001: #fdeeb0;
   --hggs-color-auxiliary-tertiary-002: #fae067;
+  --hggs-color-auxiliary-tertiary-003: #f1d142;
+  --hggs-color-auxiliary-tertiary-004: #dbba25;
+  --hggs-color-auxiliary-tertiary-005: #bea014;
   --hggs-filter-tertiary: invert(90%) sepia(48%) saturate(3381%) hue-rotate(329deg) brightness(100%) contrast(97%);
   --hggs-filter-tertiary-001: invert(88%) sepia(33%) saturate(2272%) hue-rotate(343deg) brightness(104%) contrast(91%);
   --hggs-color-quaternary: #000;
@@ -404,6 +411,22 @@
   --tag-color-senary: var(--hggs-color-auxiliary-senary-000);
   --tag-border-outline-senary: 1px solid var(--hggs-color-senary);
   --tag-color-outline-senary: var(--hggs-color-senary);
+  --tag-background-subtle: var(--hggs-color-auxiliary-gray-001);
+  --tag-color-subtle: var(--hggs-color-auxiliary-gray-004);
+  --tag-background-subtle-primary: var(--hggs-color-auxiliary-primary-001);
+  --tag-color-subtle-primary: var(--hggs-color-auxiliary-primary-004);
+  --tag-background-subtle-secondary: var(--hggs-color-auxiliary-secondary-001);
+  --tag-color-subtle-secondary: var(--hggs-color-auxiliary-secondary-004);
+
+  --tag-background-subtle-tertiary: var(--hggs-color-auxiliary-tertiary-001);
+  --tag-color-subtle-tertiary: var(--hggs-color-auxiliary-tertiary-005);
+
+  --tag-background-subtle-quaternary: var(--hggs-color-primary);
+  --tag-color-subtle-quaternary: var(--hggs-color-auxiliary-primary-000);
+  --tag-background-subtle-quinary: var(--hggs-color-primary);
+  --tag-color-subtle-quinary: var(--hggs-color-auxiliary-primary-000);
+  --tag-background-subtle-senary: var(--hggs-color-primary);
+  --tag-color-subtle-senary: var(--hggs-color-auxiliary-primary-000);
 }
 
 .hggs-box {

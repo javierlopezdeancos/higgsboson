@@ -22,6 +22,11 @@
     color: var(--tag-color-outline);
   }
 
+  &.hggs-tag--subtle {
+    background: var(--tag-background-subtle, --hggs-color-auxiliary-gray-001-default);
+    color: var(--tag-color-subtle, --hggs-color-auxiliary-gray-004-default);
+  }
+
   &.hggs-tag--primary {
     background: var(--tag-background-primary, --tag-background-primary-default);
     color: var(--tag-color-primary, --tag-color-primary-default);
@@ -31,6 +36,11 @@
 
       border: var(--tag-border-outline-primary, 1px solid var(--hggs-color-primary-default));
       color: var(--tag-color-outline-primary);
+    }
+
+    &.hggs-tag--subtle {
+      background: var(--tag-background-subtle-primary, --hggs-color-auxiliary-gray-001-default);
+      color: var(--tag-color-subtle-primary, --hggs-color-auxiliary-gray-004-default);
     }
   }
 
@@ -44,6 +54,11 @@
       border: var(--tag-border-outline-secondary, 1px solid var(--hggs-color-secondary-default));
       color: var(--tag-color-outline-secondary);
     }
+
+    &.hggs-tag--subtle {
+      background: var(--tag-background-subtle-secondary, --hggs-color-auxiliary-gray-001-default);
+      color: var(--tag-color-subtle-secondary, --hggs-color-auxiliary-gray-004-default);
+    }
   }
 
   &.hggs-tag--tertiary {
@@ -55,6 +70,11 @@
 
       border: var(--tag-border-outline-tertiary, 1px solid var(--hggs-color-tertiary-default));
       color: var(--tag-color-outline-tertiary);
+    }
+
+    &.hggs-tag--subtle {
+      background: var(--tag-background-subtle-tertiary, --hggs-color-auxiliary-gray-001-default);
+      color: var(--tag-color-subtle-tertiary, --hggs-color-auxiliary-gray-004-default);
     }
   }
 
