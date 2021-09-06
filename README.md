@@ -5,7 +5,7 @@
 Higgsboson class components is a set of classes to style core native components.
 
 [![License](https://img.shields.io/github/license/javierlopezdeancos/higgsboson?style=flat-square)](LICENSE)
-https://img.shields.io/github/issues/javierlopezdeancos/higgsboson?style=flat-square
+!(https://img.shields.io/github/issues/javierlopezdeancos/higgsboson?style=flat-square)
 
 ## Components
 
