@@ -117,8 +117,8 @@
   background: transparent;
   outline: unset;
   outline-offset: 0;
-  box-shadow: var(--button-box-shadow-outline-hover,  0px 0px 0px 2px var(--hggs-color-primary-001-default));
-  color: var(--button-color-outline-hover, --hggs-color-primary-001-default);
+  box-shadow: var(--button-box-shadow-outline-hover,  0px 0px 0px 2px var(--hggs-color-auxiliary-senary-005-default));
+  color: var(--button-color-outline-hover, --hggs-color-auxiliary-senary-005-default);
   border: var(--button-border-outline-hover, 1px solid transparent);
 }
 
@@ -134,8 +134,8 @@
   background: transparent;
   outline: unset;
   outline-offset: 0;
-  box-shadow: var(--button-box-shadow-outline-primary-hover,  0px 0px 0px 2px var(--hggs-color-primary-001-default));
-  color: var(--button-color-outline-primary-hover, --hggs-color-primary-001-default);
+  box-shadow: var(--button-box-shadow-outline-primary-hover,  0px 0px 0px 2px var(--hggs-color-auxiliary-senary-005-default));
+  color: var(--button-color-outline-primary-hover, --hggs-color-auxiliary-senary-005-default);
   border: var(--button-border-outline-primary-hover, 1px solid transparent);
 }
 
@@ -151,8 +151,8 @@
   background: transparent;
   outline: unset;
   outline-offset: 0;
-  box-shadow: var(--button-box-shadow-outline-secondary-hover, 0px 0px 0px 2px var(--hggs-color-secondary-001-default));
-  color: var(--button-color-outline-secondary-hover, --hggs-color-secondary-001-default);
+  box-shadow: var(--button-box-shadow-outline-secondary-hover, 0px 0px 0px 2px var(--hggs-color-auxiliary-secondary-004-default));
+  color: var(--button-color-outline-secondary-hover, --hggs-color-auxiliary-secondary-004-default);
   border: var(--button-border-outline-secondary-hover, 1px solid transparent);
 }
 
@@ -168,8 +168,8 @@
   background: transparent;
   outline: unset;
   outline-offset: 0;
-  box-shadow: var(--button-box-shadow-outline-tertiary-hover, 0px 0px 0px 2px var(--hggs-color-tertiary-001-default));
-  color: var(--button-color-outline-tertiary-hover, --hggs-color-tertiary-001-default);
+  box-shadow: var(--button-box-shadow-outline-tertiary-hover, 0px 0px 0px 2px var(--hggs-color-auxiliary-tertiary-004-default));
+  color: var(--button-color-outline-tertiary-hover, --hggs-color-auxiliary-tertiary-004-default);
   border: var(--button-border-outline-tertiary-hover, 1px solid transparent);
 }
 
@@ -219,8 +219,8 @@
   background: transparent;
   outline: unset;
   outline-offset: 0;
-  box-shadow: var(--button-box-shadow-outline-senary-hover, 0px 0px 0px 2px var(--hggs-color-senary-001-default));
-  color: var(--button-color-outline-senary-hover, --hggs-color-senary-001-default);
+  box-shadow: var(--button-box-shadow-outline-senary-hover, 0px 0px 0px 2px var(--hggs-color-auxiliary-senary-005-default));
+  color: var(--button-color-outline-senary-hover, --hggs-color-auxiliary-senary-005-default);
   border: var(--button-border-outline-senary-hover, 1px solid transparent);
 }
 

@@ -25,6 +25,13 @@
   &.hggs-tag--subtle {
     background: var(--tag-background-subtle, --hggs-color-auxiliary-gray-001-default);
     color: var(--tag-color-subtle, --hggs-color-auxiliary-gray-004-default);
+
+    &.hggs-tag--outline {
+      @extend %hggs-tag-outline-reset;
+
+      border: var(--tag-border-outline-subtle, 1px solid var(--hggs-color-auxiliary-gray-004));
+      color: var(--tag-color-outline-subtle);
+    }
   }
 
   &.hggs-tag--primary {
@@ -41,6 +48,13 @@
     &.hggs-tag--subtle {
       background: var(--tag-background-subtle-primary, --hggs-color-auxiliary-gray-001-default);
       color: var(--tag-color-subtle-primary, --hggs-color-auxiliary-gray-004-default);
+
+      &.hggs-tag--outline {
+        @extend %hggs-tag-outline-reset;
+
+        border: var(--tag-border-outline-primary-subtle, 1px solid var(--hggs-color-primary-default));
+        color: var(--tag-color-outline-primary-subtle);
+      }
     }
   }
 
@@ -58,6 +72,13 @@
     &.hggs-tag--subtle {
       background: var(--tag-background-subtle-secondary, --hggs-color-auxiliary-gray-001-default);
       color: var(--tag-color-subtle-secondary, --hggs-color-auxiliary-gray-004-default);
+
+      &.hggs-tag--outline {
+        @extend %hggs-tag-outline-reset;
+
+        border: var(--tag-border-outline-secondary-subtle, 1px solid var(--hggs-color-primary-default));
+        color: var(--tag-color-outline-secondary-subtle);
+      }
     }
   }
 
@@ -75,6 +96,13 @@
     &.hggs-tag--subtle {
       background: var(--tag-background-subtle-tertiary, --hggs-color-auxiliary-gray-001-default);
       color: var(--tag-color-subtle-tertiary, --hggs-color-auxiliary-gray-004-default);
+
+      &.hggs-tag--outline {
+        @extend %hggs-tag-outline-reset;
+
+        border: var(--tag-border-outline-tertiary-subtle, 1px solid var(--hggs-color-primary-default));
+        color: var(--tag-color-outline-tertiary-subtle);
+      }
     }
   }
 
@@ -88,6 +116,18 @@
       border: var(--tag-border-outline-quaternary, 1px solid var(--hggs-color-quaternary-default));
       color: var(--tag-color-outline-quaternary);
     }
+
+    &.hggs-tag--subtle {
+      background: var(--tag-background-subtle-quaternary, --hggs-color-auxiliary-gray-001-default);
+      color: var(--tag-color-subtle-quaternary, --hggs-color-auxiliary-gray-004-default);
+
+      &.hggs-tag--outline {
+        @extend %hggs-tag-outline-reset;
+
+        border: var(--tag-border-outline-quaternary-subtle, 1px solid var(--hggs-color-primary-default));
+        color: var(--tag-color-outline-quaternary-subtle);
+      }
+    }
   }
 
   &.hggs-tag--quinary {
@@ -99,6 +139,18 @@
 
       border: var(--tag-border-outline-quinary, 1px solid var(--hggs-color-quinary-default));
       color: var(--tag-color-outline-quinary);
+    }
+
+    &.hggs-tag--subtle {
+      background: var(--tag-background-subtle-quinary, --hggs-color-auxiliary-gray-001-default);
+      color: var(--tag-color-subtle-quinary, --hggs-color-auxiliary-gray-004-default);
+
+      &.hggs-tag--outline {
+        @extend %hggs-tag-outline-reset;
+
+        border: var(--tag-border-outline-quinary-subtle, 1px solid var(--hggs-color-primary-default));
+        color: var(--tag-color-outline-quinary-subtle);
+      }
     }
   }
 
@@ -112,9 +164,26 @@
       border: var(--tag-border-outline-senary, 1px solid var(--hggs-color-senary-default));
       color: var(--tag-color-outline-senary);
     }
+
+    &.hggs-tag--subtle {
+      background: var(--tag-background-subtle-senary, --hggs-color-auxiliary-gray-001-default);
+      color: var(--tag-color-subtle-senary, --hggs-color-auxiliary-gray-004-default);
+
+      &.hggs-tag--outline {
+        @extend %hggs-tag-outline-reset;
+
+        border: var(--tag-border-outline-senary-subtle, 1px solid var(--hggs-color-primary-default));
+        color: var(--tag-color-outline-senary-subtle);
+      }
+    }
   }
 
   &.hggs-tag--rounded {
     border-radius: var(--tag-border-radius, --hggs-boder-radius-default);
+  }
+
+  &.hggs-tag--small {
+    font-size: var(--tag-font-size-small, 8px);
+    padding: var( --tag-padding-small, 5px 10px);
   }
 }

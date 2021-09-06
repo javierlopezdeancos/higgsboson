@@ -14,15 +14,15 @@
   --hggs-color-auxiliary-gray-alpha-007-default: rgba(58, 58, 58, 0.6);
   --hggs-color-auxiliary-gray-alpha-008-default: rgba(8, 8, 8, 0.6);
   --hggs-color-primary-default: var(--hggs-color-auxiliary-gray-004-default);
-  --hggs-color-primary-001-default: var(--hggs-color-auxiliary-gray-005-default);
+  --hggs-color-auxiliary-senary-005-default: var(--hggs-color-auxiliary-gray-005-default);
   --hggs-filter-primary-default: invert(66%) sepia(0%) saturate(5%) hue-rotate(192deg) brightness(93%) contrast(86%);
   --hggs-filter-primary-001-default: invert(51%) sepia(2%) saturate(0%) hue-rotate(173deg) brightness(95%) contrast(88%);
   --hggs-color-secondary-default: var(--hggs-color-auxiliary-gray-003-default);
-  --hggs-color-secondary-001-default: var(--hggs-color-auxiliary-gray-004-default);
+  --hggs-color-auxiliary-secondary-004-default: var(--hggs-color-auxiliary-gray-004-default);
   --hggs-filter-secondary-default: invert(91%) sepia(3%) saturate(17%) hue-rotate(315deg) brightness(92%) contrast(84%);
   --hggs-filter-secondary-001-default: invert(63%) sepia(9%) saturate(9%) hue-rotate(336deg) brightness(98%) contrast(83%);
   --hggs-color-tertiary-default: var(--hggs-color-auxiliary-gray-002-default);
-  --hggs-color-tertiary-001-default: var(--hggs-color-auxiliary-gray-003-default);
+  --hggs-color-auxiliary-tertiary-004-default: var(--hggs-color-auxiliary-gray-003-default);
   --hggs-filter-tertiary-default:  invert(91%) sepia(3%) saturate(17%) hue-rotate(315deg) brightness(92%) contrast(84%);
   --hggs-filter-tertiary-001-default: invert(97%) sepia(1%) saturate(0%) hue-rotate(144deg) brightness(85%) contrast(90%);
   --hggs-color-quaternary-default: #000;
