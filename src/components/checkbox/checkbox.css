@@ -1,0 +1,39 @@
+
+.hggs-checkbox {
+  appearance: none;
+  position: relative;
+  display:inline-block;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  background: var(--checkbox-background);
+  border: var(--checkbox-border);
+  border-radius: var(--checkbox-radius);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:checked {
+    &:after {
+      content:"";
+      position: absolute;
+      width: var(--checkbox-mark-width-after);
+      height: var(--checkbox-mark-height-after);
+      background-color: var(--checkbox-mark-background-color);
+      left: var(--checkbox-mark-left-after);
+      top: var(--checkbox-mark-top-after);
+      transform: var(--checkbox-mark-transform-after);
+    }
+
+    &:before {
+      content:"";
+      position: absolute;
+      width: var(--checkbox-mark-width-before);
+      height: var(--checkbox-mark-height-before);
+      background-color: var(--checkbox-mark-background-color);
+      left: var(--checkbox-mark-left-before);
+      top: var(--checkbox-mark-top-before);
+      transform: var(--checkbox-mark-transform-before);
+    }
+  }
+}

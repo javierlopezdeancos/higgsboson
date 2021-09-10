@@ -79,7 +79,9 @@
   --hggs-line-height-micro: 5px;
   --hggs-boder-radius-big: 20px;
   --hggs-boder-radius: 8px;
-  --hggs-boder: 1px solid var(--hggs-color-auxiliary-gray-001);
+  --hggs-border-size: 1px;
+  --hggs-border-type: solid;
+  --hggs-boder: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-auxiliary-gray-003);
   --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --hggs-space-vertical-big: calc(var(--hggs-space-vertical-medium) * 2);
   --hggs-space-vertical-small: calc(var(--hggs-space-vertical-medium) / 2);
@@ -167,11 +169,11 @@
 }
 
 .hggs-input {
-  --input-border: 1px solid var(--hggs-color-auxiliary-gray-003);
+  --input-border: var(--hggs-boder);
   --input-border-radius: var(--hggs-boder-radius);
-  --input-border-focus: 1px solid var(--hggs-color-primary);
-  --input-border-disabled: 1px solid var(--hggs-color-auxiliary-gray-001);
-  --input-border-invalid: 1px solid var(--hggs-color-error);
+  --input-border-focus: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-primary);
+  --input-border-disabled: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-auxiliary-gray-001);
+  --input-border-invalid: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-error);
   --input-height: 38px;
   --input-padding: 8px 12px;
   --input-height-big: 64px;
@@ -183,6 +185,24 @@
   --field-margin-bottom: var(--hggs-space-vertical-small);
   --field-label-after-color-required: var(--hggs-color-senary);
   --field-label-after-margin-left-required: var(--hggs-space-horizontal-micro);
+}
+
+.hgss-checkbox {
+  --checkbox-size: 22px;
+  --checkbox-background: transparent;
+  --checkbox-border: var(--hggs-boder);
+  --checkbox-border-radius: 0;
+  --checkbox-mark-background-color: var(--hggs-color-primary);
+  --checkbox-mark-transform-after: rotate(45deg);
+  --checkbox-mark-width-after: 3px;
+  --checkbox-mark-height-after: 10px;
+  --checkbox-mark-left-after: 11px;
+  --checkbox-mark-top-after: 6px;
+  --checkbox-mark-width-before: 8px;
+  --checkbox-mark-height-before: 3px;
+  --checkbox-mark-left-before: 4px;
+  --checkbox-mark-top-before: 10px;
+  --checkbox-mark-transform-before: rotate(45deg);
 }
 
 .hggs-icon-wrapper,
