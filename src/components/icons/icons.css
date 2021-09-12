@@ -286,6 +286,10 @@
     background: var(--icon-plus, url("./assets/icons/plus.svg")) no-repeat center;
   }
 
+  &.hggs-icon--chevron-down {
+    background: var(--icon-chevron-down, url("./assets/icons/chevron-down.svg")) no-repeat center;
+  }
+
   &.hggs-icon--primary {
     filter: var(--icon-filter-primary, --hggs-filter-primary-default);
   }

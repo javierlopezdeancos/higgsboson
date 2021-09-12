@@ -77,8 +77,8 @@
   --hggs-line-height: 20px;
   --hggs-line-height-small: 10px;
   --hggs-line-height-micro: 5px;
-  --hggs-boder-radius-big: 20px;
-  --hggs-boder-radius: 8px;
+  --hggs-border-radius-big: 20px;
+  --hggs-border-radius: 8px;
   --hggs-boder: 1px solid var(--hggs-color-auxiliary-gray-001);
   --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --hggs-space-vertical-big: calc(var(--hggs-space-vertical-medium) * 2);
@@ -168,7 +168,7 @@
 
 .hggs-input {
   --input-border: 1px solid var(--hggs-color-auxiliary-gray-003);
-  --input-border-radius: var(--hggs-boder-radius);
+  --input-border-radius: var(--hggs-border-radius);
   --input-border-focus: 1px solid var(--hggs-color-primary);
   --input-border-disabled: 1px solid var(--hggs-color-auxiliary-gray-001);
   --input-border-invalid: 1px solid var(--hggs-color-error);
@@ -198,6 +198,7 @@
   --icon-edit: url("./assets/icons/pencil.svg");
   --icon-close: url("./assets/icons/close.svg");
   --icon-plus: url("./assets/icons/plus.svg");
+  --icon-chevron-down: url("./assets/icons/chevron-down.svg");
   --icon-filter: var(--hggs-filter-auxiliary-gray-004);
   --icon-filter-primary: var(--hggs-filter-primary);
   --icon-filter-secondary: var(--hggs-filter-secondary);
@@ -389,7 +390,7 @@
   --tag-color: var(--hggs-color-auxiliary-gray-008);
   --tag-padding: 5px 10px;
   --tag-padding-small: var(--hggs-space-horizontal-micro) var(--hggs-space-vertical-nano);
-  --tag-border-radius: calc(var(--hggs-boder-radius)*2);
+  --tag-border-radius: calc(var(--hggs-border-radius)*2);
   --tag-border-outline: 1px solid var(--hggs-color-auxiliary-gray-004);
   --tag-color-outline: var(--hggs-color-auxiliary-gray-004);
   --tag-background-subtle: var(--hggs-color-auxiliary-gray-001);
@@ -457,7 +458,7 @@
   --box-title-font-size: var(--hggs-font-size-text-normal-plus);
   --box-title-margin-top: 0;
   --box-body-padding: var(--hggs-space-vertical-medium) 0 0 0;
-  --box-border-radius-with-radius: var(--hggs-boder-radius-big);
+  --box-border-radius-with-radius: var(--hggs-border-radius-big);
   --box-background-primary: var(--hggs-color-auxiliary-senary-000);
   --box-border-primary: 1px solid var(--hggs-color-senary);
   --box-title-color-primary: var(--hggs-color-senary);
