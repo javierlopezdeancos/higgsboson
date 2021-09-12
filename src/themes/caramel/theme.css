@@ -15,7 +15,7 @@
   --hggs-font-size-text-small: 12px;
   --hggs-font-weight-medium: 500;
   --hggs-font-weight-extra-bold: 900;
-  --hggs-boder-radius: 0;
+  --hggs-border-radius: 0;
   --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --hggs-space-vertical-small: calc(var(--hggs-space-vertical-medium) / 2);
   --hggs-app-background: var(--hggs-color-secondary);
@@ -34,7 +34,7 @@
 
 .hggs-input {
   --input-border: 1px solid var(--color--secondary-003);
-  --input-border-radius: var(--hggs-boder-radius);
+  --input-border-radius: var(--hggs-border-radius);
   --input-border-focus: 1px solid var(--hggs-color-primary);
   --input-height: 45px;
   --input-padding: 0 15px;
@@ -52,7 +52,7 @@
   --button-font-size: var(--hggs-font-size-text);
   --button-font-weight: var(--hggs-font-weight-medium);
   --button-font-letter-spacing: 1px;
-  --button-border-radius: var(--hggs-boder-radius);
+  --button-border-radius: var(--hggs-border-radius);
   --button-margin-vertical: var(--hggs-space-vertical-medium);
   --buttton-background-primary: var(--hggs-color-primary);
   --buttton-color-primary: var(--hggs-color-tertiary);
