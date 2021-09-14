@@ -181,6 +181,12 @@
   --input-font-size-big: var(--hggs-font-size-medium);
 }
 
+.hggs-option {
+  --option-color: var(--hggs-app-color);
+  --option-font-family: var(--hggs-font-family-primary);
+  --option-font-size: var(--hggs-font-size-text);
+}
+
 .hggs-select-wrapper,
 .hggs-select {
   --select-border-focus: 1px solid var(--hggs-color-primary);
