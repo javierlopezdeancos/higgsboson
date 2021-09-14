@@ -1,0 +1,43 @@
+%hggs-select-reset-styles {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+.hggs-select-wrapper {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  & .hggs-icon--chevron-down {
+    position: absolute;
+    top: 25%;
+    right: var(--select-open-icon-right, --hggs-space-horizontal-medium-default);
+  }
+}
+
+.hggs-select {
+  @extend %hggs-select-reset-styles;
+
+  font-family: var(--select-font-family, --hggs-font-family-primary-default);
+  font-size: var(--select-font-size, --hggs-font-size-text-default);
+  color: var(--select-color, --hggs-app-color);
+  border:  var(--select-border, 1px solid var(--hggs-color-auxiliary-gray-003));
+  border-radius: var(--select-border-radius, --hggs-border-radius-default);
+  height: var(--select-height, 38px);
+  padding-left: var(--select-padding-left, --hggs-space-horizontal-medium-default);
+  cursor: pointer;
+
+  &:focus {
+    border: var( --select-border-focus, 1px solid var(--hggs-color-primary));
+  }
+}
+

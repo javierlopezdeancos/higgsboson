@@ -181,6 +181,19 @@
   --input-font-size-big: var(--hggs-font-size-medium);
 }
 
+.hggs-select-wrapper,
+.hggs-select {
+  --select-border-focus: 1px solid var(--hggs-color-primary);
+  --select-border-radius: var(--hggs-border-radius);
+  --select-border: var(1px solid var(--hggs-color-auxiliary-gray-003));
+  --select-color: var(--hggs-app-color);
+  --select-font-family: var(--hggs-font-family-primary);
+  --select-font-size: var(--hggs-font-size-text);
+  --select-height: 38px;
+  --select-open-icon-right: var(--hggs-space-horizontal-medium);
+  --select-padding-left: var(--hggs-space-horizontal-medium);
+}
+
 .hggs-dropdown {
   --dropdown-border: 1px solid var(--hggs-color-auxiliary-gray-003);
   --dropdown-border-focus: 1px solid var(--hggs-color-primary);
@@ -204,10 +217,10 @@
   --dropdown-option-selected-font-family: var(--hggs-font-family-primary);
   --dropdown-option-selected-font-size: var(--hggs-font-size-text);
   --dropdown-option-selected-color: var(--hggs-app-color);
-  --dropdown-mark-border-focus: 3px solid var(--hggs-color-primary);
-  --dropdown-mark-border: 3px solid var(--hggs-color-auxiliary-gray-004);
-  --dropdown-mark-size: 6px;
-  --dropdown-mark-border-bottom-left-radius: 2px;
+  --dropdown-open-icon-border-focus: 3px solid var(--hggs-color-primary);
+  --dropdown-open-icon-border: 3px solid var(--hggs-color-auxiliary-gray-004);
+  --dropdown-open-icon-size: 6px;
+  --dropdown-open-icon-border-bottom-left-radius: 2px;
 }
 
 .hggs-field {
