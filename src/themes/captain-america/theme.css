@@ -238,7 +238,7 @@
   --field-label-after-margin-left-required: var(--hggs-space-horizontal-micro);
 }
 
-.hgss-checkbox {
+.hggs-checkbox {
   --checkbox-size: 22px;
   --checkbox-background: transparent;
   --checkbox-border: var(--hggs-boder);
