@@ -179,7 +179,7 @@
   }
 
   &.hggs-tag--rounded {
-    border-radius: var(--tag-border-radius, --hggs-boder-radius-default);
+    border-radius: var(--tag-border-radius, --hggs-border-radius-default);
   }
 
   &.hggs-tag--small {

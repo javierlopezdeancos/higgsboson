@@ -16,6 +16,9 @@
 @import "../../components/form/form.css";
 @import "../../components/checkbox/checkbox.css";
 @import "../../components/inputs/inputs.css";
+@import "../../components/option/option.css";
+@import "../../components/select/select.css";
+@import "../../components/dropdown/dropdown.css";
 @import "../../components/label/label.css";
 @import "../../components/field/field.css";
 @import "../../components/links/links.css";

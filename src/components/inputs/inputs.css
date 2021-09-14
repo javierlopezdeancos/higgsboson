@@ -12,6 +12,7 @@
   &.hggs-input--big {
     height: var(--input-height-big, --input-height-big-default);
     padding: var(--input-padding-big, --input-padding-big-default);
+    font-size: var(--input-font-size-big, 18px);
   }
 
   &::placeholder {

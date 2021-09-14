@@ -13,7 +13,7 @@
 .hggs-table-wrapper {
   width: 100%;
   overflow-x: auto;
-  border-radius: var(--table-wrapper-border-radius, calc(var(--hggs-boder-radius-default) / 2));
+  border-radius: var(--table-wrapper-border-radius, calc(var(--hggs-border-radius-default) / 2));
   box-shadow: var(--table-wrapper-box-shadow, 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%));
 
   & .hggs-table {
