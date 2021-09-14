@@ -17,23 +17,23 @@
     &:after {
       content:"";
       position: absolute;
-      width: var(--checkbox-mark-width-after);
-      height: var(--checkbox-mark-height-after);
-      background-color: var(--checkbox-mark-background-color);
-      left: var(--checkbox-mark-left-after);
-      top: var(--checkbox-mark-top-after);
-      transform: var(--checkbox-mark-transform-after);
+      width: var(--checkbox-ckeck-icon-width-after);
+      height: var(--checkbox-ckeck-icon-height-after);
+      background-color: var(--checkbox-ckeck-icon-background-color);
+      left: var(--checkbox-ckeck-icon-left-after);
+      top: var(--checkbox-ckeck-icon-top-after);
+      transform: var(--checkbox-ckeck-icon-transform-after);
     }
 
     &:before {
       content:"";
       position: absolute;
-      width: var(--checkbox-mark-width-before);
-      height: var(--checkbox-mark-height-before);
-      background-color: var(--checkbox-mark-background-color);
-      left: var(--checkbox-mark-left-before);
-      top: var(--checkbox-mark-top-before);
-      transform: var(--checkbox-mark-transform-before);
+      width: var(--checkbox-ckeck-icon-width-before);
+      height: var(--checkbox-ckeck-icon-height-before);
+      background-color: var(--checkbox-ckeck-icon-background-color);
+      left: var(--checkbox-ckeck-icon-left-before);
+      top: var(--checkbox-ckeck-icon-top-before);
+      transform: var(--checkbox-ckeck-icon-transform-before);
     }
   }
 }

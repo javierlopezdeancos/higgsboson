@@ -16,19 +16,19 @@
 
 ## Component variables
 ```
-  --checkbox-size
   --checkbox-background
   --checkbox-border
   --checkbox-border-radius
-  --checkbox-mark-background-color
-  --checkbox-mark-transform-after
-  --checkbox-mark-width-after
-  --checkbox-mark-height-after
-  --checkbox-mark-left-after
-  --checkbox-mark-top-after
-  --checkbox-mark-width-before
-  --checkbox-mark-height-before
-  --checkbox-mark-left-before
-  --checkbox-mark-top-before
-  --checkbox-mark-transform-before
+  --checkbox-ckeck-icon-background-color
+  --checkbox-ckeck-icon-height-after
+  --checkbox-ckeck-icon-height-before
+  --checkbox-ckeck-icon-left-after
+  --checkbox-ckeck-icon-left-before
+  --checkbox-ckeck-icon-top-after
+  --checkbox-ckeck-icon-top-before
+  --checkbox-ckeck-icon-transform-after
+  --checkbox-ckeck-icon-transform-before
+  --checkbox-ckeck-icon-width-after
+  --checkbox-ckeck-icon-width-before
+  --checkbox-size
 ```

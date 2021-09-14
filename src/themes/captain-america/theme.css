@@ -239,21 +239,21 @@
 }
 
 .hggs-checkbox {
-  --checkbox-size: 22px;
   --checkbox-background: transparent;
-  --checkbox-border: var(--hggs-boder);
   --checkbox-border-radius: 0;
-  --checkbox-mark-background-color: var(--hggs-color-primary);
-  --checkbox-mark-transform-after: rotate(45deg);
-  --checkbox-mark-width-after: 3px;
-  --checkbox-mark-height-after: 10px;
-  --checkbox-mark-left-after: 11px;
-  --checkbox-mark-top-after: 6px;
-  --checkbox-mark-width-before: 8px;
-  --checkbox-mark-height-before: 3px;
-  --checkbox-mark-left-before: 4px;
-  --checkbox-mark-top-before: 10px;
-  --checkbox-mark-transform-before: rotate(45deg);
+  --checkbox-border: var(--hggs-boder);
+  --checkbox-ckeck-icon-background-color: var(--hggs-color-primary);
+  --checkbox-ckeck-icon-height-after: 10px;
+  --checkbox-ckeck-icon-height-before: 3px;
+  --checkbox-ckeck-icon-left-after: 11px;
+  --checkbox-ckeck-icon-left-before: 4px;
+  --checkbox-ckeck-icon-top-after: 6px;
+  --checkbox-ckeck-icon-top-before: 10px;
+  --checkbox-ckeck-icon-transform-after: rotate(45deg);
+  --checkbox-ckeck-icon-transform-before: rotate(45deg);
+  --checkbox-ckeck-icon-width-after: 3px;
+  --checkbox-ckeck-icon-width-before: 8px;
+  --checkbox-size: 22px;
 }
 
 .hggs-icon-wrapper,
