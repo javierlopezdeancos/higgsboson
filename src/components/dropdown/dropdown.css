@@ -11,8 +11,8 @@
 
     & .hggs-dropdown-selected-options {
       &:after {
-        border-bottom: var(--dropdown-mark-border-focus, 3px solid var(--hggs-color-primary-default));
-        border-left: var(--dropdown-mark-border-focus, 3px solid var(--hggs-color-primary-default));
+        border-bottom: var(--dropdown-open-icon-border-focus, 3px solid var(--hggs-color-primary-default));
+        border-left: var(--dropdown-open-icon-border-focus, 3px solid var(--hggs-color-primary-default));
         transform: rotate(-45deg) translate(0%, 0%);
       }
     }
@@ -37,12 +37,12 @@
       top: 30%;
       content: '';
       display: inline-block;
-      width: var(--dropdown-mark-size, 10px);
-      height: var(--dropdown-mark-size, 6px);
+      width: var(--dropdown-open-icon-size, 10px);
+      height: var(--dropdown-open-icon-size, 6px);
       right: var(--hggs-space-vertical-medium);
-      border-bottom: var(--dropdown-mark-border, 3px solid var(--hggs-color-auxiliary-gray-004-default));
-      border-left: var(--dropdown-mark-border, 3px solid var(--hggs-color-auxiliary-gray-004-default));
-      border-bottom-left-radius: var(--dropdown-mark-border-bottom-left-radius, 2px);
+      border-bottom: var(--dropdown-open-icon-border, 3px solid var(--hggs-color-auxiliary-gray-004-default));
+      border-left: var(--dropdown-open-icon-border, 3px solid var(--hggs-color-auxiliary-gray-004-default));
+      border-bottom-left-radius: var(--dropdown-open-icon-border-bottom-left-radius, 2px);
       transform: rotate(45deg) translate(50%, 0%);
       transform-origin: center center;
       transition: transform ease-in-out 100ms;

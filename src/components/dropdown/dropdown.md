@@ -20,10 +20,10 @@
   --dropdown-border-focus
   --dropdown-border-radius
   --dropdown-height
-  --dropdown-mark-border
-  --dropdown-mark-border-bottom-left-radius
-  --dropdown-mark-border-focus
-  --dropdown-mark-size
+  --dropdown-open-icon-border
+  --dropdown-open-icon-border-bottom-left-radius
+  --dropdown-open-icon-border-focus
+  --dropdown-open-icon-size
   --dropdown-option-label-background-hover
   --dropdown-option-label-color
   --dropdown-option-label-font-family
