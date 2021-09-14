@@ -1,37 +1,37 @@
 :root {
-  --hggs-color-primary: #3753c4;
   --hggs-color-auxiliary-primary-000: #f0f2fb;
   --hggs-color-auxiliary-primary-001: #d8ddf3;
   --hggs-color-auxiliary-primary-002: #a3afe4;
   --hggs-color-auxiliary-primary-003: #6b81d6;
   --hggs-color-auxiliary-primary-004: #3e59c8;
   --hggs-color-auxiliary-primary-005: #3048a9;
+  --hggs-color-primary: #3753c4;
   --hggs-filter-primary: invert(28%) sepia(40%) saturate(2699%)
     hue-rotate(212deg) brightness(93%) contrast(94%);
-  --hggs-filter-primary-001: invert(27%) sepia(11%) saturate(6768%) hue-rotate(204deg) brightness(99%) contrast(100%);
-  --hggs-color-secondary: #ce4136;
   --hggs-color-auxiliary-secondary-000: #f9e6e3;
   --hggs-color-auxiliary-secondary-001: #edbeba;
   --hggs-color-auxiliary-secondary-002: #db756c;
   --hggs-color-auxiliary-secondary-003: #d15247;
   --hggs-color-auxiliary-secondary-004: #af362c;
   --hggs-color-auxiliary-secondary-005: #983e36;
+  --hggs-color-secondary: #ce4136;
+  --hggs-filter-primary-001: invert(27%) sepia(11%) saturate(6768%) hue-rotate(204deg) brightness(99%) contrast(100%);
   --hggs-filter-secondary: invert(32%) sepia(24%) saturate(3291%)
     hue-rotate(331deg) brightness(99%) contrast(95%);
-  --hggs-filter-secondary-001: invert(24%) sepia(62%) saturate(2295%) hue-rotate(348deg) brightness(91%) contrast(78%);
-  --hggs-color-tertiary: #FAD02C;
   --hggs-color-auxiliary-tertiary-000: #fef9e2;
   --hggs-color-auxiliary-tertiary-001: #fdeeb0;
   --hggs-color-auxiliary-tertiary-002: #f8dd74;
   --hggs-color-auxiliary-tertiary-003: #f4d040;
   --hggs-color-auxiliary-tertiary-004: #f2c50f;
   --hggs-color-auxiliary-tertiary-005: #bf9b0b;
-  --hggs-filter-tertiary: invert(90%) sepia(48%) saturate(3381%) hue-rotate(329deg) brightness(100%) contrast(97%);
-  --hggs-filter-tertiary-001: invert(88%) sepia(33%) saturate(2272%) hue-rotate(343deg) brightness(104%) contrast(91%);
   --hggs-color-quaternary: #000;
-  --hggs-filter-quaternary: invert(0%) sepia(54%) saturate(2989%) hue-rotate(174deg) brightness(108%) contrast(108%);
   --hggs-color-quinary: #fff;
+  --hggs-color-tertiary: #FAD02C;
+  --hggs-filter-quaternary: invert(0%) sepia(54%) saturate(2989%) hue-rotate(174deg) brightness(108%) contrast(108%);
   --hggs-filter-quinary: invert(100%) sepia(100%) saturate(0%) hue-rotate(157deg) brightness(102%) contrast(102%);
+  --hggs-filter-secondary-001: invert(24%) sepia(62%) saturate(2295%) hue-rotate(348deg) brightness(91%) contrast(78%);
+  --hggs-filter-tertiary-001: invert(88%) sepia(33%) saturate(2272%) hue-rotate(343deg) brightness(104%) contrast(91%);
+  --hggs-filter-tertiary: invert(90%) sepia(48%) saturate(3381%) hue-rotate(329deg) brightness(100%) contrast(97%);
   --hggs-color-senary: #39bfff;
   --hggs-color-auxiliary-senary-000: #f0faff;
   --hggs-color-auxiliary-senary-001: #e1f5ff;
@@ -39,9 +39,6 @@
   --hggs-color-auxiliary-senary-003: #a4e1ff;
   --hggs-color-auxiliary-senary-004: #77d2ff;
   --hggs-color-auxiliary-senary-005: #28b3f5;
-  --hggs-filter-senary:  invert(58%) sepia(82%) saturate(1159%) hue-rotate(173deg) brightness(103%) contrast(101%);
-  --hggs-filter-senary-001: invert(53%) sepia(95%) saturate(387%) hue-rotate(155deg) brightness(96%) contrast(100%);
-  --hggs-color-error: #ff0b0b;
   --hggs-color-auxiliary-gray-000: #f6f7f9;
   --hggs-color-auxiliary-gray-001: #eee;
   --hggs-color-auxiliary-gray-002: #e0e0e0;
@@ -52,49 +49,55 @@
   --hggs-color-auxiliary-gray-007: #353535;
   --hggs-color-auxiliary-gray-008: #1b1d2a;
   --hggs-color-auxiliary-gray-009: #101119;
+  --hggs-color-error: #ff0b0b;
+  --hggs-filter-senary-001: invert(53%) sepia(95%) saturate(387%) hue-rotate(155deg) brightness(96%) contrast(100%);
+  --hggs-filter-senary:  invert(58%) sepia(82%) saturate(1159%) hue-rotate(173deg) brightness(103%) contrast(101%);
   --hggs-filter-auxiliary-gray-002: invert(84%) sepia(0%) saturate(7497%) hue-rotate(107deg) brightness(105%) contrast(101%);
-  --hggs-filter-auxiliary-gray-004: invert(49%) sepia(0%) saturate(1%) hue-rotate(119deg) brightness(90%) contrast(89%);
+  --hggs-app-background: var(--hggs-color-quinary);
+  --hggs-app-color: var(--hggs-color-auxiliary-gray-005);
+  --hggs-boder: 1px solid var(--hggs-color-auxiliary-gray-001);
+  --hggs-boder: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-auxiliary-gray-003);
+  --hggs-border-radius-big: 20px;
+  --hggs-border-radius: 8px;
+  --hggs-border-size: 1px;
+  --hggs-border-type: solid;
   --hggs-color-auxiliary-gray-alpha-002: rgba(0, 0, 0, 0.1);
   --hggs-color-auxiliary-gray-alpha-004: rgba(0, 0, 0, 0.25);
   --hggs-color-auxiliary-gray-alpha-007: rgba(58, 58, 58, 0.6);
   --hggs-color-auxiliary-gray-alpha-008: rgba(8, 8, 8, 0.6);
+  --hggs-filter-auxiliary-gray-004: invert(49%) sepia(0%) saturate(1%) hue-rotate(119deg) brightness(90%) contrast(89%);
   --hggs-font-family-primary: "DM Sans", sans-serif;
+  --hggs-font-size-big: 24px;
   --hggs-font-size-colossal: 38px;
   --hggs-font-size-enormous: 32px;
   --hggs-font-size-extra-big: 28px;
-  --hggs-font-size-big: 24px;
   --hggs-font-size-medium: 18px;
-  --hggs-font-size-text-normal-plus: 16px;
-  --hggs-font-size-text: 14px;
-  --hggs-font-size-text-small: 12px;
   --hggs-font-size-text-micro: 10px;
   --hggs-font-size-text-nano: 8px;
-  --hggs-font-weight-normal: 400;
-  --hggs-font-weight-medium: 500;
-  --hggs-font-weight-medium-plus: 600;
+  --hggs-font-size-text-normal-plus: 16px;
+  --hggs-font-size-text-small: 12px;
+  --hggs-font-size-text: 14px;
   --hggs-font-weight-bold: 700;
   --hggs-font-weight-extra-bold: 900;
-  --hggs-line-height: 20px;
-  --hggs-line-height-small: 10px;
+  --hggs-font-weight-medium-plus: 600;
+  --hggs-font-weight-medium: 500;
+  --hggs-font-weight-normal: 400;
+  --hggs-layer-0: 1;
+  --hggs-layer-10: 10;
   --hggs-line-height-micro: 5px;
-  --hggs-border-radius-big: 20px;
-  --hggs-border-radius: 8px;
-  --hggs-boder: 1px solid var(--hggs-color-auxiliary-gray-001);
-  --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
-  --hggs-space-vertical-macro: calc(var(--hggs-space-vertical-medium) * 4);
-  --hggs-space-vertical-big: calc(var(--hggs-space-vertical-medium) * 2);
-  --hggs-space-vertical-small: calc(var(--hggs-space-vertical-medium) / 2);
-  --hggs-space-vertical-micro: calc(var(--hggs-space-vertical-medium) / 4);
-  --hggs-space-vertical-nano: calc(var(--hggs-space-vertical-medium) / 4);
-  --hggs-space-horizontal-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-line-height-small: 10px;
+  --hggs-line-height: 20px;
   --hggs-space-horizontal-big: calc(var(--hggs-space-horizontal-medium) * 2);
-  --hggs-space-horizontal-small: calc(var(--hggs-space-horizontal-medium) / 2);
+  --hggs-space-horizontal-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --hggs-space-horizontal-micro: calc(var(--hggs-space-horizontal-medium) / 4);
   --hggs-space-horizontal-nano: calc(var(--hggs-space-horizontal-medium) / 4);
-  --hggs-layer-10: 10;
-  --hggs-layer-0: 1;
-  --hggs-app-background: var(--hggs-color-quinary);
-  --hggs-app-color: var(--hggs-color-auxiliary-gray-005);
+  --hggs-space-horizontal-small: calc(var(--hggs-space-horizontal-medium) / 2);
+  --hggs-space-vertical-big: calc(var(--hggs-space-vertical-medium) * 2);
+  --hggs-space-vertical-macro: calc(var(--hggs-space-vertical-medium) * 4);
+  --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-vertical-micro: calc(var(--hggs-space-vertical-medium) / 4);
+  --hggs-space-vertical-nano: calc(var(--hggs-space-vertical-medium) / 4);
+  --hggs-space-vertical-small: calc(var(--hggs-space-vertical-medium) / 2);
 }
 
 .hggs-h1,
@@ -168,11 +171,11 @@
 }
 
 .hggs-input {
-  --input-border: 1px solid var(--hggs-color-auxiliary-gray-003);
-  --input-border-radius: var(--hggs-border-radius);
-  --input-border-focus: 1px solid var(--hggs-color-primary);
-  --input-border-disabled: 1px solid var(--hggs-color-auxiliary-gray-001);
-  --input-border-invalid: 1px solid var(--hggs-color-error);
+  --input-border: var(--hggs-boder);
+  --input-border-radius: var(--hggs-boder-radius);
+  --input-border-focus: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-primary);
+  --input-border-disabled: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-auxiliary-gray-001);
+  --input-border-invalid: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-error);
   --input-height: 38px;
   --input-padding: 8px 12px;
   --input-height-big: 64px;
@@ -233,6 +236,24 @@
   --field-margin-bottom: var(--hggs-space-vertical-small);
   --field-label-after-color-required: var(--hggs-color-senary);
   --field-label-after-margin-left-required: var(--hggs-space-horizontal-micro);
+}
+
+.hgss-checkbox {
+  --checkbox-size: 22px;
+  --checkbox-background: transparent;
+  --checkbox-border: var(--hggs-boder);
+  --checkbox-border-radius: 0;
+  --checkbox-mark-background-color: var(--hggs-color-primary);
+  --checkbox-mark-transform-after: rotate(45deg);
+  --checkbox-mark-width-after: 3px;
+  --checkbox-mark-height-after: 10px;
+  --checkbox-mark-left-after: 11px;
+  --checkbox-mark-top-after: 6px;
+  --checkbox-mark-width-before: 8px;
+  --checkbox-mark-height-before: 3px;
+  --checkbox-mark-left-before: 4px;
+  --checkbox-mark-top-before: 10px;
+  --checkbox-mark-transform-before: rotate(45deg);
 }
 
 .hggs-icon-wrapper,
