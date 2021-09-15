@@ -46,7 +46,7 @@
   --hggs-font-weight-extra-bold-default: 900;
   --letter-spacing-default: 1px;
   --hggs-border-radius-default: 8px;
-  --hggs-boder-default: 1px solid var(--hggs-color-auxiliary-gray-001-default);
+  --hggs-border-default: 1px solid var(--hggs-color-auxiliary-gray-001-default);
   --hggs-space-vertical-medium-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
   --hggs-space-vertical-small-default: calc(
     var(--hggs-space-vertical-medium) / 2
