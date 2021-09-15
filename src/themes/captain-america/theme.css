@@ -215,7 +215,7 @@
 }
 
 .hggs-dropdown {
-  --dropdown-border: 1px solid var(--hggs-color-auxiliary-gray-003);
+  --dropdown-border: var(--hggs-form-input-border);
   --dropdown-border-focus: var(--hggs-form-input-border-focus);
   --dropdown-border-radius: var(--hggs-form-input-border-radius);
   --dropdown-height: var(--hggs-form-input-height);;
