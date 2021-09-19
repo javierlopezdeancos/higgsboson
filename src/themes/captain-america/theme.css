@@ -75,7 +75,19 @@
   --hggs-border-size: 1px;
   --hggs-border-type: solid;
   --hggs-border-color: var(--hggs-color-auxiliary-gray-003);
+  --hggs-border-color-primary: var(--hggs-color-primary);
+  --hggs-border-color-secondary: var(--hggs-color-secondary);
+  --hggs-border-color-tertiary: var(--hggs-color-tertiary);
+  --hggs-border-color-quaternary: var(--hggs-color-quaternary);
+  --hggs-border-color-quinary: var(--hggs-color-quinary);
+  --hggs-border-color-senary: var(--hggs-color-senary);
   --hggs-border: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color);
+  --hggs-border-primary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-primary);
+  --hggs-border-secondary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-secondary);
+  --hggs-border-tertiary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-tertiary);
+  --hggs-border-quaternary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-quaternary);
+  --hggs-border-quinary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-quinary);
+  --hggs-border-senary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-senary);
   --hggs-border-focus: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-primary);
   --hggs-border-disabled: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-auxiliary-gray-001);
   --hggs-border-invalid: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-error);
@@ -270,6 +282,14 @@
 .hggs-icon-wrapper,
 .hggs-icon,
 .hggs-button {
+  --icon-chevron-down: url("./assets/icons/chevron-down.svg");
+  --icon-close: url("./assets/icons/close.svg");
+  --icon-edit: url("./assets/icons/pencil.svg");
+  --icon-hamburger-menu: url("./assets/icons/hamburger-menu.svg");
+  --icon-log-out: url("./assets/icons/log-out.svg");
+  --icon-plus: url("./assets/icons/plus.svg");
+  --icon-question: url("./assets/icons/question.svg");
+  --icon-user: url("./assets/icons/user.svg");
   --icon-box-background-primary: var(--hggs-color-primary);
   --icon-box-background-quaternary: var(--hggs-color-quaternary);
   --icon-box-background-quinary: var(--hggs-color-quinary);
@@ -279,9 +299,6 @@
   --icon-box-background: var(--hggs-color-auxiliary-gray-001);
   --icon-box-padding-micro: var(--hggs-space-horizontal-micro);
   --icon-box-padding: var(--hggs-space-horizontal-small);
-  --icon-chevron-down: url("./assets/icons/chevron-down.svg");
-  --icon-close: url("./assets/icons/close.svg");
-  --icon-edit: url("./assets/icons/pencil.svg");
   --icon-filter-primary: var(--hggs-filter-primary);
   --icon-filter-quaternary: var( --hggs-filter-quaternary);
   --icon-filter-quinary: var( --hggs-filter-quinary);
@@ -289,27 +306,22 @@
   --icon-filter-senary: var( --hggs-filter-senary);
   --icon-filter-tertiary: var(--hggs-filter-tertiary);
   --icon-filter: var(--hggs-filter-auxiliary-gray-004);
-  --icon-hamburger-menu: url("./assets/icons/hamburger-menu.svg");
   --icon-label-color: var(--hggs-color-auxiliary-gray-007);
   --icon-label-font-family: var(--hggs-font-family-primary);
   --icon-label-font-size: var(--hggs-font-size-text);
   --icon-label-font-weigth: var(--hggs-font-weight-medium);
   --icon-label-margin-left: var(--hggs-space-horizontal-small);
   --icon-label-quinary-color: var(--hggs-color-quinary);
-  --icon-log-out: url("./assets/icons/log-out.svg");
-  --icon-outline-border-primary: 1px solid var(--hggs-color-primary);
-  --icon-outline-border-quaternary:1px solid var(--hggs-color-quaternary);
-  --icon-outline-border-quinary: 1px solid var(--hggs-color-quinary);
-  --icon-outline-border-secondary: 1px solid var(--hggs-color-secondary);
-  --icon-outline-border-senary: 1px solid var(--hggs-color-senary);
-  --icon-outline-border-tertiary: 1px solid var(--hggs-color-tertiary);
+  --icon-outline-border-primary: var(--hggs-border-primary);
+  --icon-outline-border-quaternary: var(--hggs-border-quanternary);
+  --icon-outline-border-quinary: var(--hggs-border-quinary);
+  --icon-outline-border-secondary: var(--hggs-border-secondary);
+  --icon-outline-border-senary: var(--hggs-border-senary);
+  --icon-outline-border-tertiary: var(--hggs-border-tertiary);
   --icon-outline-border: 1px solid var(--hggs-color-auxiliary-gray-004);
-  --icon-plus: url("./assets/icons/plus.svg");
-  --icon-question: url("./assets/icons/question.svg");
   --icon-size-micro: 10px;
   --icon-size-small: 12px;
   --icon-size: 20px;
-  --icon-user: url("./assets/icons/user.svg");
 }
 
 .hggs-button {
@@ -481,7 +493,7 @@
   --tag-color-outline-subtle: var(--hggs-color-auxiliary-gray-005);
   --tag-background-primary: var(--hggs-color-primary);
   --tag-color-primary: var(--hggs-color-auxiliary-primary-000);
-  --tag-border-outline-primary: 1px solid var(--hggs-color-primary);
+  --tag-border-outline-primary: var(--hggs-border-primary);
   --tag-color-outline-primary: var(--hggs-color-primary);
   --tag-background-subtle-primary: var(--hggs-color-auxiliary-primary-001);
   --tag-color-subtle-primary: var(--hggs-color-auxiliary-primary-005);
@@ -489,7 +501,7 @@
   --tag-color-outline-primary-subtle: var(--hggs-color-auxiliary-primary-005);
   --tag-background-secondary: var(--hggs-color-secondary);
   --tag-color-secondary: var(--hggs-color-auxiliary-secondary-000);
-  --tag-border-outline-secondary: 1px solid var(--hggs-color-secondary);
+  --tag-border-outline-secondary: var(--hggs-border-secondary);
   --tag-color-outline-secondary: var(--hggs-color-secondary);
   --tag-background-subtle-secondary: var(--hggs-color-auxiliary-secondary-001);
   --tag-color-subtle-secondary: var(--hggs-color-auxiliary-secondary-005);
@@ -497,7 +509,7 @@
   --tag-color-outline-secondary-subtle: var(--hggs-color-auxiliary-secondary-005);
   --tag-background-tertiary: var(--hggs-color-tertiary);
   --tag-color-tertiary: var(--hggs-color-septenary);
-  --tag-border-outline-tertiary: 1px solid var(--hggs-color-tertiary);
+  --tag-border-outline-tertiary: var(--hggs-border-tertiary);
   --tag-color-outline-tertiary: var(--hggs-color-tertiary);
   --tag-background-subtle-tertiary: var(--hggs-color-auxiliary-tertiary-001);
   --tag-color-subtle-tertiary: var(--hggs-color-auxiliary-tertiary-005);
@@ -505,7 +517,7 @@
   --tag-color-outline-tertiary-subtle: var(--hggs-color-auxiliary-tertiary-005);
   --tag-background-quaternary: var(--hggs-color-quaternary);
   --tag-color-quaternary: var(--hggs-color-quinary);
-  --tag-border-outline-quaternary: 1px solid var(--hggs-color-quaternary);
+  --tag-border-outline-quaternary: var(--hggs-border-quaternary);
   --tag-color-outline-quaternary: var(--hggs-color-quaternary);
   --tag-background-subtle-quaternary: var(--hggs-color-auxiliary-gray-001);
   --tag-color-subtle-quaternary: var(--hggs-color-auxiliary-gray-005);
@@ -513,7 +525,7 @@
   --tag-color-outline-quaternary-subtle: var(--hggs-color-auxiliary-gray-005);
   --tag-background-quinary: var(--hggs-color-quinary);
   --tag-color-quinary: var(--hggs-color-quaternary);
-  --tag-border-outline-quinary: 1px solid var(--hggs-color-quinary);
+  --tag-border-outline-quinary: var(--hggs-border-quinary);
   --tag-color-outline-quinary: var(--hggs-color-quinary);
   --tag-background-subtle-quinary: var(--hggs-color-auxiliary-gray-005);
   --tag-color-subtle-quinary: var(--hggs-color-auxiliary-gray-001);
@@ -521,7 +533,7 @@
   --tag-color-outline-quinary-subtle: var(--hggs-color-auxiliary-gray-003);
   --tag-background-senary: var(--hggs-color-senary);
   --tag-color-senary: var(--hggs-color-auxiliary-senary-000);
-  --tag-border-outline-senary: 1px solid var(--hggs-color-senary);
+  --tag-border-outline-senary: var(--hggs-border-senary);
   --tag-color-outline-senary: var(--hggs-color-senary);
   --tag-background-subtle-senary: var(--hggs-color-auxiliary-senary-001);
   --tag-color-subtle-senary: var(--hggs-color-auxiliary-senary-005);
@@ -544,8 +556,7 @@
   --box-background-primary: var(--hggs-color-auxiliary-senary-000);
   --box-border-primary: 1px solid var(--hggs-color-senary);
   --box-title-color-primary: var(--hggs-color-senary);
-  --box-header-border-bottom-primary: 1px solid
-    var(--hggs-color-auxiliary-senary-002);
+  --box-header-border-bottom-primary: 1px solid var(--hggs-color-auxiliary-senary-002);
 }
 
 .hggs-hamburger-menu {
