@@ -113,7 +113,7 @@
     var(--hggs-color-auxiliary-gray-001);
   --hggs-border-invalid: var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-error);
-  --hggs-box-shadow-focus: 0 0 0 4px var(--hggs-color-auxiliary-senary-001);
+  --hggs-form-box-shadow-focus: 0 0 0 4px var(--hggs-color-auxiliary-senary-001);
   --hggs-form-input-height-big: 64px;
   --hggs-form-input-height: 38px;
   --hggs-form-input-height-small: 22px;
@@ -225,6 +225,7 @@
   --input-border: var(--hggs-form-input-border);
   --input-border-radius: var(--hggs-form-input-border-radius);
   --input-border-focus: var(--hggs-form-input-border-focus);
+  --input-outline-focus: none;
   --input-box-shadow-focus: var(--hggs-box-shadow-focus);
   --input-border-disabled: var(--hggs-form-input-border-disabled);
   --input-border-invalid: var(--hggs-form-input-border-invalid);
