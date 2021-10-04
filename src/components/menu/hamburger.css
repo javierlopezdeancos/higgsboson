@@ -2,34 +2,56 @@
   @extend .hggs-flex--top-left-column;
 
   width: 100%;
-  font-family: var(--hamburger-menu-font-family, --hggs-font-family-primary-default);
-  font-size: var(--hamburger-menu-font-size, --hggs-font-size-text-default);
+  font-family: var(
+    --hamburger-menu-font-family,
+    --hggs-font-family-primary-default
+  );
+  font-size: var(--hamburger-menu-font-size, --hggs-font-size-default);
 
   & .hggs-hamburger-menu-icon {
     @extend .hggs-flex--top-left-column;
 
-    background: var(--hamburger-menu-background, --hggs-color-auxiliary-gray-002-default);
+    background: var(
+      --hamburger-menu-background,
+      --hggs-color-auxiliary-gray-002-default
+    );
 
     &:hover {
-      background: var(--hamburger-menu-icon-hover-background,--hggs-color-auxiliary-gray-003-default);
+      background: var(
+        --hamburger-menu-icon-hover-background,
+        --hggs-color-auxiliary-gray-003-default
+      );
     }
   }
 
   & .hggs-hamburger-menu-items {
     @extend .hggs-flex--top-left-column;
 
-    background: var(--hamburger-menu-background, --hggs-color-auxiliary-gray-002-default);
+    background: var(
+      --hamburger-menu-background,
+      --hggs-color-auxiliary-gray-002-default
+    );
     width: 0;
     height: 0;
 
     & .hggs-hamburger-menu-item {
       width: 100%;
       text-decoration: unset;
-      color: var(--hamburger-menu-item-color, --hggs-color-auxiliary-gray-005-default);
-      padding: (var(--hamburger-menu-item-padding-vertical) var(--hamburger-menu-item-padding-horizontal), calc(var(20px) / 2) var(20px));
+      color: var(
+        --hamburger-menu-item-color,
+        --hggs-color-auxiliary-gray-005-default
+      );
+      padding: (
+        var(--hamburger-menu-item-padding-vertical)
+          var(--hamburger-menu-item-padding-horizontal),
+        calc(var(20px) / 2) var(20px)
+      );
 
       &:hover {
-        background: var(--hamburger-menu-item-hover-background, --hggs-color-auxiliary-gray-001-default);
+        background: var(
+          --hamburger-menu-item-hover-background,
+          --hggs-color-auxiliary-gray-001-default
+        );
       }
     }
 
@@ -45,7 +67,9 @@
   }
 
   & .hggs-hamburger-menu-items.hggs-hamburger-menu-items--opened,
-  & .hggs-hamburger-menu-items.hggs-hamburger-menu-items--opened .hggs-hamburger-menu-item {
+  &
+    .hggs-hamburger-menu-items.hggs-hamburger-menu-items--opened
+    .hggs-hamburger-menu-item {
     opacity: 1;
   }
 }

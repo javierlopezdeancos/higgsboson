@@ -11,8 +11,8 @@
   --hggs-color-auxiliary-gray-002: #c9c9c9;
   --hggs-font-family-primary: "Roboto", sans-serif;
   --hggs-font-size-medium: 1.4rem;
-  --hggs-font-size-text: 14px;
-  --hggs-font-size-text-small: 12px;
+  --hggs-font-size: 14px;
+  --hggs-font-size-small: 12px;
   --hggs-font-weight-medium: 500;
   --hggs-font-weight-extra-bold: 900;
   --hggs-border-radius: 0;
@@ -49,7 +49,7 @@
   --buttton-height: 64px;
   --buttton-padding: 0 40px;
   --button-font-family: var(--hggs-font-family-primary);
-  --button-font-size: var(--hggs-font-size-text);
+  --button-font-size: var(--hggs-font-size);
   --button-font-weight: var(--hggs-font-weight-medium);
   --button-font-letter-spacing: 1px;
   --button-border-radius: var(--hggs-border-radius);
@@ -64,7 +64,7 @@
   --button-width-small: 70px;
   --button-height-small: 30px;
   --button-padding-small: 0 5px;
-  --button-font-size-small: var(--hggs-font-size-text-small);
+  --button-font-size-small: var(--hggs-font-size-small);
 }
 
 .hggs-link {

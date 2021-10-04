@@ -1,40 +1,59 @@
 .hggs-input {
   width: 100%;
-  height: var(--input-height, --input-height-default);
-  border: var(--input-border, --input-border-default);
-  border-radius: var(--input-border-radius, --input-border-radius-default);
-  padding: var(--input-padding, --input-padding-default);
-  font-family: var(--hggs-font-family-primary, --hggs-font-family-primary-default);
-  font-size: var(--hggs-font-size-text, --hggs-font-size-text-default);
+  height: var(--input-height, --hggs-form-input-height-default);
+  border: var(--input-border, --hggs-form-input-border);
+  border-radius: var(
+    --input-border-radius,
+    --hggs-form-input-border-radius-default
+  );
+  padding: var(--input-padding, --hggs-form-input-padding-default);
+  font-family: var(--input-font-family, --hggs-font-family-primary-default);
+  font-size: var(--input-font-size, --hggs-font-size-default);
   box-sizing: border-box;
   background: transparent;
 
   &.hggs-input--big {
-    height: var(--input-height-big, --input-height-big-default);
-    padding: var(--input-padding-big, --input-padding-big-default);
-    font-size: var(--input-font-size-big, 18px);
+    height: var(--input-height-big, --hggs-form-input-height-big);
+    padding: var(--input-padding-big, --hggs-form-input-padding-big);
+    font-size: var(--input-font-size-big, --hggs-font-size-medium);
+  }
+
+  &.hggs-input--small {
+    height: var(--input-height-small, --hggs-form-input-height-small);
+    padding: var(--input-padding-small, --hggs-form-input-padding-small);
+    font-size: var(--input-font-size-small, --hggs-font-size-small);
   }
 
   &::placeholder {
-    color: var(--input-color-placeholder, --input-color-placeholder-default);
+    color: var(
+      --input-color-placeholder,
+      --hggs-color-auxiliary-gray-003-default
+    );
   }
 
   &:focus,
   &.hggs-input--focus {
     outline: none;
-    border: var(--input-border-focus, --input-border-focus-default);
+    border: var(--input-border-focus, --hggs-form-input-border-focus-default);
+    box-shadow: var(--input-box-shadow-focus, --hggs-box-shadow-focus-default);
   }
 
   &:disabled,
   &[disabled],
   &.hggs-input--disabled {
-    border: var(--input-border-disabled, --input-border-disabled-default);
+    border: var(
+      --input-border-disabled,
+      --hggs-form-input-border-disabled-default
+    );
     cursor: not-allowed;
   }
 
   &:invalid,
   &[error],
   &.hggs-input--error {
-    border: var(--input-border-invalid, --input-border-invalid-default);
+    border: var(
+      --input-border-invalid,
+      --hggs-form-input-border-invalid-default
+    );
   }
 }

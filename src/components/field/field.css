@@ -3,7 +3,7 @@
 
   & > .hggs-label {
     display: block;
-    margin-bottom: var(--field-margin-bottom, --field-margin-bottom-default);
+    margin-bottom: var(--field-label-margin-bottom, 10px);
   }
 
   &.hggs-field--required {
