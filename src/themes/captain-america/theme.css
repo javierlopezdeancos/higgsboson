@@ -252,6 +252,8 @@
 .hggs-select-wrapper,
 .hggs-select {
   --select-border-focus: var(--hggs-form-input-border-focus);
+  --select-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --select-outline-focus: var(--hggs-form-outline-focus);
   --select-border-radius: var(--hggs-form-input-border-radius);
   --select-border: var(--hggs-form-input-border);
   --select-color: var(--hggs-app-color);

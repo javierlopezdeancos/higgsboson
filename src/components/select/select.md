@@ -16,9 +16,12 @@
 ```
 
 ## Component variables
+
 ```
 --select-border
 --select-border-focus
+--select-box-shadow-focus
+--select-outline-focus
 --select-border-radius
 --select-color
 --select-font-family
