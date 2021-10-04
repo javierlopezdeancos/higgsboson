@@ -1,4 +1,4 @@
-  # Dropdown
+# Dropdown
 
 ## Root component class name
 
@@ -15,9 +15,11 @@
 ```
 
 ## Component variables
+
 ```
   --dropdown-border
   --dropdown-border-focus
+  --dropdown-box-shadow-focus
   --dropdown-border-radius
   --dropdown-height
   --dropdown-open-icon-border
@@ -42,4 +44,3 @@
   --dropdown-options-top
   --dropdown-padding
 ```
-

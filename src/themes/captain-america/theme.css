@@ -267,6 +267,7 @@
 .hggs-dropdown {
   --dropdown-border: var(--hggs-form-input-border);
   --dropdown-border-focus: var(--hggs-form-input-border-focus);
+  --dropdown-box-shadow-focus: var(--hggs-form-box-shadow-focus);
   --dropdown-border-radius: var(--hggs-form-input-border-radius);
   --dropdown-height: var(--hggs-form-input-height);
   --dropdown-padding: var(--hggs-form-input-padding);

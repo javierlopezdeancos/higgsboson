@@ -14,6 +14,10 @@
       1px solid var(--hggs-color-primary-default)
     );
     z-index: 1;
+    box-shadow: var(
+      --dropdown-box-shadow-focus,
+      --hggs-form-box-shadow-focus-default
+    );
 
     & .hggs-dropdown-selected-options {
       &:after {
