@@ -326,6 +326,7 @@
   --radio-border: var(--hggs-form-input-border);
   --radio-border-checked: 5px solid var(--hggs-color-primary);
   --radio-border-color-hover: var(--hggs-color-primary);
+  --radio-outline-focus: none;
   --radio-box-shadow-focus: var(--hggs-box-shadow-focus);
   --radio-label-margin-left: var(--hggs-space-horizontal-small);
   --radio-inside-background-color: var(--hggs-app-background);

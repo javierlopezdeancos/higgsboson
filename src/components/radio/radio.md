@@ -21,6 +21,7 @@
 --radio-border
 --radio-border-checked
 --radio-border-color-hover
+--radio-outline-focus
 --radio-box-shadow-focus
 --radio-label-margin-left
 --radio-inside-background-color

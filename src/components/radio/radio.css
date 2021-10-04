@@ -28,7 +28,7 @@
     }
 
     &:focus ~ span:before {
-      outline: none;
+      outline: var(--radio-outline-focus, none);
       box-shadow: var(
         --radio-box-shadow-focus,
         --hggs-box-shadow-focus-default
