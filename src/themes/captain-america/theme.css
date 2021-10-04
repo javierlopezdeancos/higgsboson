@@ -306,6 +306,7 @@
   --checkbox-background: transparent;
   --checkbox-border-radius: 0;
   --checkbox-border: var(--hggs-form-input-border);
+  --checkbox-outline-focus: none;
   --checkbox-box-shadow-focus: var(--hggs-box-shadow-focus);
   --checkbox-margin-left: var(--hggs-space-horizontal-small);
   --checkbox-ckeck-icon-background-color: var(--hggs-color-primary);

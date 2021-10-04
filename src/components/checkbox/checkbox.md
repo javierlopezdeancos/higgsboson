@@ -21,6 +21,7 @@
 --checkbox-background
 --checkbox-border-radius
 --checkbox-border
+--checkbox-outline-focus
 --checkbox-box-shadow-focus
 --checkbox-margin-left
 --checkbox-ckeck-icon-background-color
