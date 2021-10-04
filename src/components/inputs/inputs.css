@@ -33,7 +33,7 @@
 
   &:focus,
   &.hggs-input--focus {
-    outline: var(--input-outline-focus, none);
+    outline: var(--input-outline-focus, --hggs-form-outline-focus-default);
     border: var(--input-border-focus, --hggs-form-input-border-focus-default);
     box-shadow: var(
       --input-box-shadow-focus,

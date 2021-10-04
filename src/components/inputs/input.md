@@ -20,6 +20,7 @@
 --input-border
 --input-border-radius
 --input-border-focus
+--input-outline-focus
 --input-box-shadow-focus
 --input-border-disabled
 --input-border-invalid

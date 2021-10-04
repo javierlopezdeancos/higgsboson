@@ -28,10 +28,10 @@
     }
 
     &:focus ~ span:before {
-      outline: var(--radio-outline-focus, none);
+      outline: var(--radio-outline-focus, --hggs-form-outline-focus-default);
       box-shadow: var(
         --radio-box-shadow-focus,
-        --hggs-box-shadow-focus-default
+        --hggs-form-box-shadow-focus-default
       );
     }
   }

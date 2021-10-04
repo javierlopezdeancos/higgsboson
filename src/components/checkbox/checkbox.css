@@ -44,7 +44,7 @@
 
     &:focus {
       box-shadow: var(--checkbox-box-shadow-focus);
-      outline: var(--checkbox-outline-focus, none);
+      outline: var(--checkbox-outline-focus, --hggs-form-outline-focus-default);
     }
   }
 
