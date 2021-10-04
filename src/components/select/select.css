@@ -20,7 +20,10 @@
   & .hggs-icon--chevron-down {
     position: absolute;
     top: 25%;
-    right: var(--select-open-icon-right, --hggs-space-horizontal-medium-default);
+    right: var(
+      --select-open-icon-right,
+      --hggs-space-horizontal-medium-default
+    );
   }
 }
 
@@ -28,16 +31,18 @@
   @extend %hggs-select-reset-styles;
 
   font-family: var(--select-font-family, --hggs-font-family-primary-default);
-  font-size: var(--select-font-size, --hggs-font-size-text-default);
+  font-size: var(--select-font-size, --hggs-font-size-default);
   color: var(--select-color, --hggs-app-color);
-  border:  var(--select-border, 1px solid var(--hggs-color-auxiliary-gray-003));
+  border: var(--select-border, 1px solid var(--hggs-color-auxiliary-gray-003));
   border-radius: var(--select-border-radius, --hggs-border-radius-default);
   height: var(--select-height, 38px);
-  padding-left: var(--select-padding-left, --hggs-space-horizontal-medium-default);
+  padding-left: var(
+    --select-padding-left,
+    --hggs-space-horizontal-medium-default
+  );
   cursor: pointer;
 
   &:focus {
-    border: var( --select-border-focus, 1px solid var(--hggs-color-primary));
+    border: var(--select-border-focus, 1px solid var(--hggs-color-primary));
   }
 }
-

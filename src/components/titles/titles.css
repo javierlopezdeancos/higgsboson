@@ -39,7 +39,7 @@
 }
 
 .hggs-h6 {
-  font-size: var(--title-h6-font-size, --hggs-font-size-text-default);
+  font-size: var(--title-h6-font-size, --hggs-font-size-default);
   font-weight: var(--title-h6-font-weight, --hggs-font-weight-bold-default);
   margin: var(--title-h6-margin, 5px 0 5px 0);
 }
