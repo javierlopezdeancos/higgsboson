@@ -121,6 +121,13 @@
   color: var(--button-color-primary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
+%hggs-button-focus-primary {
+  box-shadow: var(
+    --button-box-shadow-primary-focus,
+    --hggs-form-box-shadow-focus-default
+  );
+}
+
 %hggs-button-hover-secondary {
   background-color: var(
     --button-background-secondary-hover,
@@ -132,6 +139,13 @@
   );
   transition: var(--button-transition-secondary-hover, all 200ms ease);
   color: var(--button-color-secondary, --hggs-color-auxiliary-gray-009-defaut);
+}
+
+%hggs-button-focus-secondary {
+  box-shadow: var(
+    --button-box-shadow-secondary-focus,
+    --hggs-form-box-shadow-secondary-focus-default
+  );
 }
 
 %hggs-button-hover-tertiary {
@@ -147,6 +161,13 @@
   color: var(--button-color-tertiary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
+%hggs-button-focus-tertiary {
+  box-shadow: var(
+    --button-box-shadow-tertiary-focus,
+    --hggs-form-box-shadow-tertiary-focus-default
+  );
+}
+
 %hggs-button-hover-quaternary {
   background-color: var(
     --button-background-quaternary-hover,
@@ -158,6 +179,13 @@
   );
   transition: var(--button-transition-quaternary-hover, all 200ms ease);
   color: var(--button-color-quaternary, --hggs-color-auxiliary-gray-009-defaut);
+}
+
+%hggs-button-focus-quaternary {
+  box-shadow: var(
+    --button-box-shadow-quaternary-focus,
+    --hggs-form-box-shadow-quaternary-focus-default
+  );
 }
 
 %hggs-button-hover-quinary {
@@ -173,6 +201,13 @@
   color: var(--button-color-quinary, --hggs-color-auxiliary-gray-009-defaut);
 }
 
+%hggs-button-focus-quinary {
+  box-shadow: var(
+    --button-box-shadow-quinary-focus,
+    --hggs-form-box-shadow-quinary-focus-default
+  );
+}
+
 %hggs-button-hover-senary {
   background-color: var(
     --button-background-senary-hover,
@@ -184,6 +219,13 @@
   );
   transition: var(--button-transition-senary-hover, all 200ms ease);
   color: var(--button-color-senary, --hggs-color-auxiliary-gray-009-defaut);
+}
+
+%hggs-button-focus-senary {
+  box-shadow: var(
+    --button-box-shadow-senary-focus,
+    --hggs-form-box-shadow-senary-focus-default
+  );
 }
 
 %hggs-button-outline {
@@ -513,6 +555,10 @@
       }
     }
 
+    &:focus {
+      @extend %hggs-button-focus-primary;
+    }
+
     &.hggs-button--outline {
       @extend %hggs-button-outline-primary;
 
@@ -526,6 +572,10 @@
         & .hggs-icon {
           @extend %hggs-button-icon-hover-primary;
         }
+      }
+
+      &:focus {
+        @extend %hggs-button-focus-primary;
       }
     }
   }
@@ -568,6 +618,10 @@
       }
     }
 
+    &:focus {
+      @extend %hggs-button-focus-secondary;
+    }
+
     &.hggs-button--outline {
       @extend %hggs-button-outline-secondary;
 
@@ -581,6 +635,10 @@
         & .hggs-icon {
           @extend %hggs-button-icon-hover-secondary;
         }
+      }
+
+      &:focus {
+        @extend %hggs-button-focus-secondary;
       }
     }
   }
@@ -623,6 +681,10 @@
       }
     }
 
+    &:focus {
+      @extend %hggs-button-focus-tertiary;
+    }
+
     &.hggs-button--outline {
       @extend %hggs-button-outline-tertiary;
 
@@ -636,6 +698,10 @@
         & .hggs-icon {
           @extend %hggs-button-icon-hover-tertiary;
         }
+      }
+
+      &:focus {
+        @extend %hggs-button-focus-tertiary;
       }
     }
   }
@@ -678,6 +744,10 @@
       }
     }
 
+    &:focus {
+      @extend %hggs-button-focus-quaternary;
+    }
+
     &.hggs-button--outline {
       @extend %hggs-button-outline-quaternary;
 
@@ -691,6 +761,10 @@
         & .hggs-icon {
           @extend %hggs-button-icon-hover-quaternary;
         }
+      }
+
+      &:focus {
+        @extend %hggs-button-focus-quaternary;
       }
     }
   }
@@ -737,6 +811,10 @@
       }
     }
 
+    &:focus {
+      @extend %hggs-button-focus-quinary;
+    }
+
     &.hggs-button--outline {
       @extend %hggs-button-outline-quinary;
 
@@ -750,6 +828,10 @@
         & .hggs-icon {
           @extend %hggs-button-icon-hover-quinary;
         }
+      }
+
+      &:focus {
+        @extend %hggs-button-focus-quinary;
       }
     }
   }
@@ -792,6 +874,10 @@
       }
     }
 
+    &:focus {
+      @extend %hggs-button-focus-senary;
+    }
+
     &.hggs-button--outline {
       @extend %hggs-button-outline-senary;
 
@@ -805,6 +891,10 @@
         & .hggs-icon {
           @extend %hggs-button-icon-hover-senary;
         }
+      }
+
+      &:focus {
+        @extend %hggs-button-focus-senary;
       }
     }
   }
