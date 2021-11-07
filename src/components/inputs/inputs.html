@@ -10,37 +10,100 @@
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script id="body_template" type="text/template">
+      <% _.each(data, function(d) { %>
+        <article style='margin-bottom: 30px; width: 100%'>
+          <h3 class="hggs-h3" style="margin-bottom: 20px">
+            <%= d.title %>
+          </h3>
+
+          <%
+            const inputClass = _.reduce(d.classes.input, function(acc, c) {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const isDisabled = d?.attributes?.input?.disabled ? d.attributes.input.disabled : false;
+            const hasError = d?.attributes?.input?.error ? d.attributes.input.error : false;
+
+            console.log(isDisabled)
+          %>
+
+          <% if(isDisabled) { %>
+            <input type="test" class="<%= inputClass %>" disabled/>
+          <% } else if(hasError) { %>
+            <input type="test" class="<%= inputClass %>" error/>
+          <% } else { %>
+            <input type="test" class="<%= inputClass %>" />
+          <% } %>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
     style="width: 100vw; height: 100vh; padding: 30px"
-  >
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-input.hggs-input--big
-      </h3>
-      <input type="test" class="hggs-input hggs-input--big" />
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-input</h3>
-      <input type="test" class="hggs-input" />
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-input.hggs-input--small
-      </h3>
-      <input type="test" class="hggs-input hggs-input--small" />
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-input [disabled]
-      </h3>
-      <input type="text" class="hggs-input" disabled />
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-input [error]</h3>
-      <input type="text" class="hggs-input" error />
-    </article>
-  </body>
+  ></body>
+
+  <script type="text/javascript">
+    const data = [
+      {
+        title: ".hggs-input.hggs-input--big",
+        classes: {
+          input: ["hggs-input", "hggs-input--big"],
+        },
+      },
+      {
+        title: ".hggs-input",
+        classes: {
+          input: ["hggs-input"],
+        },
+      },
+      {
+        title: ".hggs-input.hggs-input--small",
+        classes: {
+          input: ["hggs-input", "hggs-input--small"],
+        },
+      },
+      {
+        title: ".hggs-input[disabled]",
+        classes: {
+          input: ["hggs-input"],
+        },
+        attributes: {
+          input: {
+            disabled: true,
+          },
+        },
+      },
+      {
+        title: ".hggs-input[error]",
+        classes: {
+          input: ["hggs-input"],
+        },
+        attributes: {
+          input: {
+            error: true,
+          },
+        },
+      },
+    ];
+
+    const template = document.querySelector("#body_template");
+    const templateHTML = _.template(template.innerHTML);
+    const text = templateHTML(data);
+    const bodyNode = document.querySelector("#body");
+
+    bodyNode.innerHTML = text;
+  </script>
 </html>
