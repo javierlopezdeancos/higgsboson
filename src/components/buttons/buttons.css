@@ -124,7 +124,7 @@
 %hggs-button-focus-primary {
   box-shadow: var(
     --button-box-shadow-primary-focus,
-    --hggs-form-box-shadow-focus-default
+    --hggs-form-box-primary-focus-default
   );
 }
 
@@ -442,6 +442,14 @@
     & .hggs-icon {
       @extend %hggs-button-icon-hover;
     }
+  }
+
+  &:focus {
+    outline: var(--button-outline-focus, none);
+    box-shadow: var(
+      --button-box-shadow-focus,
+      0 0 7px 1px var(--hggs-color-auxiliary-gray-003-default)
+    );
   }
 
   &.hggs-button--square {

@@ -5,2414 +5,436 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-button</title>
-    <link rel="stylesheet" type="text/css" href="../../../dist/captain-america.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../dist/captain-america.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <style>
+      .hggs-h1,
+      .hggs-h3 {
+        margin-top: 0;
+      }
+    </style>
+
+    <script type="text/javascript" src="./buttons.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1"><%= data.title %></h1>
+
+      <!-- default buttons -->
+
+      <% _.each(data.default, function(b) { %>
+
+       <%
+          const articleButtonStyle = _.reduce(b?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerButtonStyle = _.reduce(b?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleButtonStyle %>">
+          <h3 class="hggs-h3" style="<%= headerButtonStyle %>">
+            <%= b.title %>
+          </h3>
+
+          <%
+            const buttonClass = _.reduce(b.classes.button, (acc, c) => {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const buttonIsDisabled = b?.attributes?.button?.disabled ? b.attributes.button.disabled : false;
+            const buttonHasErrors = b?.attributes?.button?.error ? b.attributes.button.error : false;
+          %>
+
+          <% if(buttonIsDisabled) { %>
+            <button class="<%= buttonClass %>" disabled/>Button</button>
+          <% } else if(buttonHasErrors) { %>
+            <button class="<%= buttonClass %>" error/>Button</button>
+          <% } else { %>
+            <button class="<%= buttonClass %>" />Button</button>
+          <% } %>
+        </article>
+      <% }); %>
+
+      <!-- icon buttons -->
+
+      <% _.each(data.icons, (i) => { %>
+        <%
+          const articleIconButtonStyle = _.reduce(i?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerIconButtonStyle = _.reduce(i?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const IconButtonStyle = _.reduce(i?.styles?.button, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleIconButtonStyle %>">
+          <h3 class="hggs-h3" style="<%= headerIconButtonStyle %>">
+            <%= i.title %>
+          </h3>
+
+          <div class="hggs-flex--top-left-row">
+            <%
+              const iconButtonClass = _.reduce(i.classes.button, (acc, bc) => {
+                if (!acc) {
+                  return bc;
+                }
+
+                return acc + ' ' + bc;
+              }, '');
+            %>
+
+            <% _.each(i.classes.span, (spanClasses, index) => { %>
+              <%
+                const iconSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                  if (!acc) {
+                    return spc;
+                  }
+
+                  return acc + ' ' + spc;
+                }, '');
+              %>
+
+              <button class="<%= iconButtonClass %>" style="<%= IconButtonStyle %>" />
+                <span class="<%= iconSpanClass %>"></span>
+              </button>
+            <% }); %>
+
+          </div>
+        </article>
+      <% }); %>
+
+
+      <!-- icon buttons with labels -->
+
+      <% _.each(data.iconsWithLabel, (iwl) => { %>
+        <%
+          const articleIconWithLabelButtonStyle = _.reduce(iwl?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerIconWithLabelButtonStyle = _.reduce(iwl?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const subHeaderIconWithLabelButtonStyle = _.reduce(iwl?.styles?.subheader, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const IconButtonWithLabelStyle = _.reduce(iwl?.styles?.button, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleIconWithLabelButtonStyle %>">
+          <h3 class="hggs-h3" style="<%= headerIconWithLabelButtonStyle %>">
+            <%= iwl.title %>
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= subHeaderIconWithLabelButtonStyle %>">
+            <%= iwl.subtitle %>
+          </h4>
+
+          <div class="hggs-flex--top-left-row">
+            <%
+              const iconButtonClass = _.reduce(iwl.classes.button, (acc, bc) => {
+                if (!acc) {
+                  return bc;
+                }
+
+                return acc + ' ' + bc;
+              }, '');
+            %>
+
+            <% _.each(iwl.classes.span, (spanClasses, index) => { %>
+              <%
+                const iconSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                  if (!acc) {
+                    return spc;
+                  }
+
+                  return acc + ' ' + spc;
+                }, '');
+              %>
+
+              <button class="<%= iconButtonClass %>" style="<%= IconButtonWithLabelStyle %>" />
+                <div class="hggs-icon-wrapper">
+                  <span class="<%= iconSpanClass %>"></span>
+                  <span class="hggs-icon-label">This is a button labeled</span>
+                </div>
+              </button>
+            <% }); %>
+
+          </div>
+        </article>
+      <% }); %>
+
+      <!-- square buttons -->
+
+      <% _.each(data.squareIcons, (s) => { %>
+        <%
+          const articleSquareButtonsStyle = _.reduce(s?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerSquareButtonsStyle = _.reduce(s?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const subHeaderSquareButtonsStyle = _.reduce(s?.styles?.subheader, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const buttonSquareStyle = _.reduce(s?.styles?.button, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleSquareButtonsStyle %>">
+          <h3 class="hggs-h3" style="<%= headerSquareButtonsStyle %>">
+            <%= s.title %>
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= subHeaderSquareButtonsStyle %>">
+            <%= s.subtitle %>
+          </h4>
+
+          <div class="hggs-flex--top-left-column">
+            <div class="hggs-flex--top-left-row">
+              <%
+                const squareButtonClass = _.reduce(s.classes.button, (acc, bc) => {
+                  if (!acc) {
+                    return bc;
+                  }
+
+                  return acc + ' ' + bc;
+                }, '');
+              %>
+
+              <% _.each(s.classes.span, (spanClasses, index) => { %>
+                <%
+                  const squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                    if (!acc) {
+                      return spc;
+                    }
+
+                    return acc + ' ' + spc;
+                  }, '');
+                %>
+
+                <button class="<%= squareButtonClass %>" style="<%= buttonSquareStyle %>" />
+                  <span class="<%= squareSpanClass %>"></span>
+                </button>
+              <% }); %>
+            </div>
+
+            <% _.each(s.extraClasses.button, (buttonExtraClasses, index) => { %>
+              <div class="hggs-flex--top-left-row">
+                <%
+                  const squareButtonExtraClass = squareButtonClass + ' ' + buttonExtraClasses
+                %>
+
+                <% _.each(s.classes.span, (spanClasses, index) => { %>
+                  <%
+                    const squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                      if (!acc) {
+                        return spc;
+                      }
+
+                      return acc + ' ' + spc;
+                    }, '');
+                  %>
+
+                  <button class="<%= squareButtonExtraClass %>" style="<%= buttonSquareStyle %>" />
+                    <span class="<%= squareSpanClass %>"></span>
+                  </button>
+                <% }); %>
+              </div>
+            <% }); %>
+          </div>
+        </article>
+      <% }); %>
+
+
+      <!-- circle buttons -->
+
+      <% _.each(data.circleIcons, (c) => { %>
+        <%
+          const articleCircleButtonsStyle = _.reduce(c?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerCircleButtonsStyle = _.reduce(c?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const subHeaderCircleButtonsStyle = _.reduce(c?.styles?.subheader, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const circleButtonsStyle = _.reduce(c?.styles?.button, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleCircleButtonsStyle %>">
+          <h3 class="hggs-h3" style="<%= headerCircleButtonsStyle %>">
+            <%= c.title %>
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= subHeaderCircleButtonsStyle %>">
+            <%= c.subtitle %>
+          </h4>
+
+          <div class="hggs-flex--top-left-column">
+            <div class="hggs-flex--top-left-row">
+              <%
+                const circleButtonClass = _.reduce(c.classes.button, (acc, bc) => {
+                  if (!acc) {
+                    return bc;
+                  }
+
+                  return acc + ' ' + bc;
+                }, '');
+              %>
+
+              <% _.each(c.classes.span, (spanClasses, index) => { %>
+                <%
+                  const circleSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                    if (!acc) {
+                      return spc;
+                    }
+
+                    return acc + ' ' + spc;
+                  }, '');
+                %>
+
+                <button class="<%= circleButtonClass %>" style="<%= circleButtonsStyle %>" />
+                  <span class="<%= circleSpanClass %>"></span>
+                </button>
+              <% }); %>
+            </div>
+
+            <% _.each(c.extraClasses.button, (buttonExtraClasses, index) => { %>
+              <div class="hggs-flex--top-left-row">
+                <%
+                  const circleButtonExtraClass = circleButtonClass + ' ' + buttonExtraClasses
+                %>
+
+                <% _.each(c.classes.span, (spanClasses, index) => { %>
+                  <%
+                    const circleSpanClass = _.reduce(spanClasses, (acc, cpc) => {
+                      if (!acc) {
+                        return cpc;
+                      }
+
+                      return acc + ' ' + cpc;
+                    }, '');
+                  %>
+
+                  <button class="<%= circleButtonExtraClass %>" style="<%= circleButtonsStyle %>" />
+                    <span class="<%= circleSpanClass %>"></span>
+                  </button>
+                <% }); %>
+              </div>
+            <% }); %>
+          </div>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
     style="width: 100%; height: 100%; padding: 30px"
-  >
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button</h3>
-      <button class="hggs-button"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--outline</h3>
-      <button class="hggs-button hggs-button--outline"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--outline.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--outline hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--outline.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--outline hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--outline.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--outline hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--primary</h3>
-      <button class="hggs-button hggs-button--primary"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--primary.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--primary hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--primary.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--primary hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--primary.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--primary hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--primary.hggs-button--outline</h3>
-      <button class="hggs-button hggs-button--primary hggs-button--outline"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--primary.hggs-button--outline.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--primary hggs-button--outline hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--primary.hggs-button--outline.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--primary hggs-button--outline hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--primary.hggs-button--outline.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--primary hggs-button--outline hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--secondary</h3>
-      <button class="hggs-button hggs-button--secondary"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--secondary.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--secondary hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--secondary.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--secondary hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--secondary.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--secondary hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--secondary.hggs-button--outline</h3>
-      <button class="hggs-button hggs-button--secondary hggs-button--outline"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--secondary.hggs-button--outline.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--secondary hggs-button--outline hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--secondary.hggs-button--outline.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--secondary hggs-button--outline hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--secondary.hggs-button--outline.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--secondary hggs-button--outline hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--tertiary</h3>
-      <button class="hggs-button hggs-button--tertiary"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--tertiary.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--tertiary hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--tertiary.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--tertiary hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--tertiary.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--tertiary hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--tertiary.hggs-button--outline</h3>
-      <button class="hggs-button hggs-button--tertiary hggs-button--outline"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--tertiary.hggs-button--outline.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--tertiary hggs-button--outline hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--tertiary.hggs-button--outline.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--tertiary hggs-button--outline hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--tertiary.hggs-button--outline.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--tertiary hggs-button--outline hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--senary</h3>
-      <button class="hggs-button hggs-button--senary"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--senary.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--senary hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--senary.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--senary hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--senary.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--senary hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--senary.hggs-button--outline</h3>
-      <button class="hggs-button hggs-button--senary hggs-button--outline"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--senary.hggs-button--outline.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--senary hggs-button--outline hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--senary.hggs-button--outline.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--senary hggs-button--outline hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--senary.hggs-button--outline.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--senary hggs-button--outline hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--quaternary</h3>
-      <button class="hggs-button hggs-button--quaternary"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--quaternary.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--quaternary hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--quaternary.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--quaternary hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--quaternary.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--quaternary hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--quaternary.hggs-button--outline</h3>
-      <button class="hggs-button hggs-button--quaternary hggs-button--outline"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--quaternary.hggs-button--outline.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--quaternary hggs-button--outline hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--quaternary.hggs-button--outline.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--quaternary hggs-button--outline hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--quaternary.hggs-button--outline.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--quaternary hggs-button--outline hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%; padding: 10px; background: black;">
-      <h3 class="hggs-h3" style="margin-bottom: 20px; color:white;">.hggs-button.hggs-button--quinary</h3>
-      <button class="hggs-button hggs-button--quinary"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%; padding: 10px; background: black;">
-      <h3 class="hggs-h3" style="margin-bottom: 20px; color:white;">.hggs-button.hggs-button--quinary.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--quinary hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%; padding: 10px; background: black;">
-      <h3 class="hggs-h3" style="margin-bottom: 20px; color:white;">.hggs-button.hggs-button--quinary.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--quinary hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%; padding: 10px; background: black;">
-      <h3 class="hggs-h3" style="margin-bottom: 20px; color:white;">.hggs-button.hggs-button--quinary.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--quinary hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%; padding: 10px; background: black;">
-      <h3 class="hggs-h3" style="margin-bottom: 20px; color:white;">.hggs-button.hggs-button--quinary.hggs-button--outline</h3>
-      <button class="hggs-button hggs-button--quinary hggs-button--outline"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%; padding: 10px; background: black;">
-      <h3 class="hggs-h3" style="margin-bottom: 20px; color:white;">.hggs-button.hggs-button--quinary.hggs-button--outline.hggs-button--big</h3>
-      <button class="hggs-button hggs-button--quinary hggs-button--outline hggs-button--big"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%; padding: 10px; background: black;">
-      <h3 class="hggs-h3" style="margin-bottom: 20px; color:white;">.hggs-button.hggs-button--quinary.hggs-button--outline.hggs-button--medium</h3>
-      <button class="hggs-button hggs-button--quinary hggs-button--outline hggs-button--medium"/>Button</button>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%; padding: 10px; background: black;">
-      <h3 class="hggs-h3" style="margin-bottom: 20px; color:white;">.hggs-button.hggs-button--quinary.hggs-button--outline.hggs-button--small</h3>
-      <button class="hggs-button hggs-button--quinary hggs-button--outline hggs-button--small"/>Button</button>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--icon</h3>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--plus"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--edit"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--question"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--user"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--close"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--icon.hggs-button--primary</h3>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--edit"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--question"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--user"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--primary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--close"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--icon.hggs-button--secondary</h3>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--edit"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--question"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--user"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--secondary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--close"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--icon.hggs-button--tertiary</h3>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--edit"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--question"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--user"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--tertiary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--close"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--icon.hggs-button--quaternary</h3>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--edit"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--question"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--user"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quaternary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--close"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--icon.hggs-button--quinary</h3>
-      <div class="hggs-flex--top-left-row" style="background: black; padding-left: 10px;">
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="background: black; padding-left: 10px;">
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--edit"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--question"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--user"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--quinary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--close"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--icon.hggs-button--senary</h3>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 20px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--edit"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--question"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--user"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-        <button class="hggs-button hggs-button--icon hggs-button--senary" style="margin-right: 40px"/>
-          <div class="hggs-icon-wrapper">
-            <span class="hggs-icon hggs-icon--close"></span>
-            <span class="hggs-icon-label">This is a button labeled</span>
-          </div>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--square</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-        <button class="hggs-button  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--primary.hggs-button--square</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--primary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--primary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--primary hggs-button--micro  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--secondary.hggs-button--square</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--secondary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--secondary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--tertiary.hggs-button--square</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--tertiary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--tertiary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--quaternary.hggs-button--square</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--quaternary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--quaternary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--quinary.hggs-button--square</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px; background: black; padding: 10px;">
-        <button class="hggs-button  hggs-button--quinary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px; background: black; padding: 10px;">
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--quinary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="background: black; padding: 10px;">
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--senary.hggs-button--square</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--senary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--senary hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--senary hggs-button--micro  hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--square.hggs-button--outline</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-        <button class="hggs-button hggs-button--square hggs-button--outline" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button hggs-button--small hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--small hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--small hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--small hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--small hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--small hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--micro hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--micro hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--micro hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--micro hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--micro hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--micro hggs-button--outline hggs-button--square" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--icon.hggs-button--square.hggs-button--outline.hggs-button--primary</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--primary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--square.hggs-button--outline.hggs-button--secondary</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button hggs-button--square hggs-button--outline hggs-button--secondary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--square.hggs-button--outline.hggs-button--tertiary</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--tertiary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--square.hggs-button--outline.hggs-button--quaternary</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quaternary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--square.hggs-button--outline.hggs-button--quinary</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px; background: black; padding: 5px;">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px; background: black; padding: 5px;">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="background: black; padding: 5px;">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--quinary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-button.hggs-button--square.hggs-button--outline.hggs-button--senary</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button-icon--small" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--square hggs-button--outline hggs-button--senary hggs-button--micro" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--micro  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--primary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--primary hggs-button--micro  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--primary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--secondary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--secondary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--tertiary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--tertiary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--quaternary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quaternary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--quinary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px; background: black; padding: 10px;">
-        <button class="hggs-button  hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px; background: black; padding: 10px;">
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="background: black; padding: 10px;">
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--quinary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--senary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--senary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--senary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--small hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--senary hggs-button--micro  hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--senary hggs-button--micro hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--outline.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--micro  hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--outline.hggs-button--primary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--micro  hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--primary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--outline.hggs-button--secondary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--micro  hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--secondary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--outline.hggs-button--tertiary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--micro  hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--tertiary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--outline.hggs-button--quaternary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row">
-        <button class="hggs-button  hggs-button--micro  hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--quaternary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3">.hggs-button.hggs-button--outline.hggs-button--quinary.hggs-button--circle</h3>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px; background: black; padding: 5px;">
-        <button class="hggs-button  hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="margin-bottom: 20px; background: black; padding: 5px;">
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--small hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-      <div class="hggs-flex--top-left-row" style="background: black; padding: 5px;">
-        <button class="hggs-button  hggs-button--micro  hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--edit"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--log-out"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--question"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--user"></span>
-        </button>
-        <button class="hggs-button  hggs-button--micro hggs-button--outline hggs-button--quinary hggs-button--circle" style="margin-right: 10px"/>
-          <span class="hggs-icon hggs-icon--close"></span>
-        </button>
-      </div>
-    </article>
-  </body>
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
