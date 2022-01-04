@@ -31,7 +31,7 @@
       outline: var(--radio-outline-focus, --hggs-form-outline-focus-default);
       box-shadow: var(
         --radio-box-shadow-focus,
-        --hggs-form-box-shadow-focus-default
+        --hggs-form-box-primary-focus-default
       );
     }
   }

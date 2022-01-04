@@ -114,7 +114,9 @@
   --hggs-border-invalid: var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-error);
   --hggs-form-outline-focus: none;
-  --hggs-form-box-shadow-focus: 0 0 0 4px var(--hggs-color-auxiliary-senary-001);
+  --hggs-form-box-focus: 0 0 7px 1px var(--hggs-color-auxiliary-gray-003);
+  --hggs-form-box-primary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-senary-001);
   --hggs-form-box-shadow-secondary-focus: 0 0 0 4px
     var(--hggs-color-auxiliary-secondary-000);
   --hggs-form-box-shadow-tertiary-focus: 0 0 0 4px
@@ -237,7 +239,7 @@
   --input-border-radius: var(--hggs-form-input-border-radius);
   --input-border-focus: var(--hggs-form-input-border-focus);
   --input-outline-focus: var(--hggs-form-outline-focus);
-  --input-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --input-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --input-border-disabled: var(--hggs-form-input-border-disabled);
   --input-border-invalid: var(--hggs-form-input-border-invalid);
   --input-height: var(--hggs-form-input-height);
@@ -262,7 +264,7 @@
 .hggs-select-wrapper,
 .hggs-select {
   --select-border-focus: var(--hggs-form-input-border-focus);
-  --select-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --select-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --select-outline-focus: var(--hggs-form-outline-focus);
   --select-border-radius: var(--hggs-form-input-border-radius);
   --select-border: var(--hggs-form-input-border);
@@ -277,7 +279,7 @@
 .hggs-dropdown {
   --dropdown-border: var(--hggs-form-input-border);
   --dropdown-border-focus: var(--hggs-form-input-border-focus);
-  --dropdown-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --dropdown-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --dropdown-border-radius: var(--hggs-form-input-border-radius);
   --dropdown-height: var(--hggs-form-input-height);
   --dropdown-padding: var(--hggs-form-input-padding);
@@ -322,7 +324,7 @@
   --checkbox-border-radius: 0;
   --checkbox-border: var(--hggs-form-input-border);
   --checkbox-outline-focus: var(--hggs-form-outline-focus);
-  --checkbox-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --checkbox-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --checkbox-margin-left: var(--hggs-space-horizontal-small);
   --checkbox-ckeck-icon-background-color: var(--hggs-color-primary);
   --checkbox-ckeck-icon-height-after: 10px;
@@ -343,7 +345,7 @@
   --radio-border-checked: 5px solid var(--hggs-color-primary);
   --radio-border-color-hover: var(--hggs-color-primary);
   --radio-outline-focus: var(--hggs-form-outline-focus);
-  --radio-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --radio-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --radio-label-margin-left: var(--hggs-space-horizontal-small);
   --radio-inside-background-color: var(--hggs-app-background);
   --radio-inside-border-bold: 2px solid var(--hggs-border-color-primary);
@@ -396,6 +398,8 @@
 }
 
 .hggs-button {
+  --button-outline-focus: var(--hggs-form-outline-focus);
+  --button-box-shadow-focus: var(--hggs-form-box-focus);
   --button-background-hover: var(--hggs-color-auxiliary-gray-002);
   --button-background-primary-hover: var(--hggs-color-auxiliary-primary-005);
   --button-background-primary: var(--hggs-color-primary);
@@ -445,7 +449,7 @@
     var(--hggs-color-auxiliary-tertiary-004);
   --button-box-shadow-primary-hover: 0px 0px 0px 2px
     var(--hggs-color-auxiliary-primary-005);
-  --button-box-shadow-primary-focus: var(--hggs-form-box-shadow-focus);
+  --button-box-shadow-primary-focus: var(--hggs-form-box-primary-focus);
   --button-box-shadow-quaternary-hover: 0px 0px 0px 2px
     var(--hggs-color-quaternary);
   --button-box-shadow-quaternary-focus: var(
