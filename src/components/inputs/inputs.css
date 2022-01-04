@@ -37,7 +37,7 @@
     border: var(--input-border-focus, --hggs-form-input-border-focus-default);
     box-shadow: var(
       --input-box-shadow-focus,
-      --hggs-form-box-shadow-focus-default
+      --hggs-form-box-primary-focus-default
     );
   }
 
