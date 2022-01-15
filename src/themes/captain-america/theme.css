@@ -147,21 +147,23 @@
   --hggs-font-size-enormous: 32px;
   --hggs-font-size-extra-big: 28px;
   --hggs-font-size-medium: 18px;
+  --hggs-font-size-normal-plus: 16px;
+  --hggs-font-size-normal: 14px;
+  --hggs-font-size-small: 12px;
   --hggs-font-size-micro: 10px;
   --hggs-font-size-nano: 8px;
-  --hggs-font-size-normal-plus: 16px;
-  --hggs-font-size-small: 12px;
-  --hggs-font-size: 14px;
+  --hggs-font-size: var(--hggs-font-size-medium);
   --hggs-font-weight-bold: 700;
   --hggs-font-weight-extra-bold: 900;
   --hggs-font-weight-medium-plus: 600;
   --hggs-font-weight-medium: 500;
   --hggs-font-weight-normal: 400;
-  --hggs-layer-0: 1;
-  --hggs-layer-10: 10;
+  --hggs-line-height-normal: 25px;
   --hggs-line-height-micro: 5px;
   --hggs-line-height-small: 10px;
-  --hggs-line-height: 20px;
+  --hggs-line-height: var(--hggs-line-height-normal);
+  --hggs-layer-0: 1;
+  --hggs-layer-10: 10;
 }
 
 .hggs-h1,
