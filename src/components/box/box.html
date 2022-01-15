@@ -10,105 +10,378 @@
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./box.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <!-- default box -->
+
+      <% _.each(data.default, function(b) { %>
+
+        <%
+          const articleBoxStyle = _.reduce(b?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerBoxStyle = _.reduce(b?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const boxHasSubtitle = !!b?.subtitle;
+          const boxHasSubtitles = !!b?.subtitles;
+
+          let headerSubtitleH4BoxStyle;
+          let headerSubtitleH5BoxStyle;
+          let headerSubtitleH4WithH5ChildBoxStyle;
+
+          if (boxHasSubtitle) {
+            headerSubtitleH4BoxStyle = _.reduce(b?.styles?.subHeaderH4, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+          }
+
+          if (boxHasSubtitles) {
+            headerSubtitleH4WithH5ChildBoxStyle = _.reduce(b?.styles?.subHeaderH4WithH5Child, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+
+            headerSubtitleH4BoxStyle = _.reduce(b?.styles?.subHeaderH4, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+
+            headerSubtitleH5BoxStyle = _.reduce(b?.styles?.subHeaderH5, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+          }
+        %>
+
+        <article style="<%= articleBoxStyle %>">
+          <h3 class="hggs-h3" style="<%= headerBoxStyle %>">
+            <%= b.title %>
+          </h3>
+
+          <% if(boxHasSubtitle) { %>
+            <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxStyle %>">
+              <%= b.subtitle %>
+            </h4>
+          <% } %>
+
+          <% if(boxHasSubtitles) { %>
+            <% _.each(b.subtitles, function(s) { %>
+
+              <% const subTitleHasSubtitle = !!s?.subtitle; %>
+
+              <% if(!subTitleHasSubtitle) { %>
+                <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxStyle %>">
+                  <%= s %>
+                </h4>
+              <% } else { %>
+                <h4 class="hggs-h4" style="<%= headerSubtitleH4WithH5ChildBoxStyle %>">
+                  <%= s.title %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= headerSubtitleH5BoxStyle %>">
+                   <%= s.subtitle %>
+                </h5>
+              <% } %>
+            <% }); %>
+          <% } %>
+
+          <%
+            const boxClass = _.reduce(b.classes.box, (acc, c) => {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const boxStyles = _.reduce(b.styles.box, (acc, c) => {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const boxHasHeader = b?.classes?.boxHeader ? true : false;
+            const boxHasHeaderTitle = b?.classes?.boxTitle ? true : false;
+            const boxHasBody = b?.classes?.boxBody ? true : false;
+
+            let boxHeaderClass, boxHeaderTitleClass;
+
+            if (boxHasHeader && boxHasHeaderTitle) {
+              boxHeaderClass = _.reduce(b.classes.boxHeader, (acc, c) => {
+                if (!acc) {
+                  return c;
+                }
+
+                return acc + ' ' + c;
+              }, '');
+
+              boxHeaderTitleClass = _.reduce(b.classes.boxTitle, (acc, c) => {
+                if (!acc) {
+                  return c;
+                }
+
+                return acc + ' ' + c;
+              }, '');
+            }
+
+            let boxBodyClass;
+
+            if (boxHasBody) {
+              boxBodyClass = _.reduce(b.classes.boxBody, (acc, c) => {
+                if (!acc) {
+                  return c;
+                }
+
+                return acc + ' ' + c;
+              }, '');
+            }
+          %>
+
+          <div class="<%= boxClass %>" style="<%= boxStyles %>" />
+
+          <% if(boxHasHeader && boxHasHeaderTitle) { %>
+            <header class="<%= boxHeaderClass %>">
+              <h3 class="<%= boxHeaderTitleClass %>">Title</h3>
+            </header>
+          <% } %>
+
+          <% if(boxHasBody) { %>
+            <section class="<%= boxBodyClass %>">
+              <p class="hggs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                euismod sapien eget turpis lobortis rutrum. Vivamus aliquet, odio
+                accumsan molestie lobortis, dui mi ornare lectus, ac pretium urna
+                nisi ut mi. Praesent quis turpis dolor. Curabitur viverra iaculis
+                risus, in aliquam orci rutrum sit amet. Maecenas efficitur ex non
+                eros vehicula dapibus. Fusce dignissim pretium quam ut venenatis. Ut
+                non scelerisque lectus.
+              </p>
+            </section>
+          <% } %>
+
+          </div>
+        </article>
+      <% }); %>
+
+      <!-- primary box -->
+
+      <% _.each(data.primary, function(b) { %>
+
+       <%
+          const articleBoxPrimaryStyle = _.reduce(b?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerBoxPrimaryStyle = _.reduce(b?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const boxPrimaryHasSubtitle = !!b?.subtitle;
+          const boxPrimaryHasSubtitles = !!b?.subtitles;
+
+          let headerSubtitleH4BoxPrimaryStyle;
+          let headerSubtitleH5BoxPrimaryStyle;
+          let headerSubtitleH4WithH5ChildBoxPrimaryStyle;
+
+          if (boxPrimaryHasSubtitle) {
+            headerSubtitleH4BoxPrimaryStyle = _.reduce(b?.styles?.subHeaderH4, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+          }
+
+          if (boxPrimaryHasSubtitles) {
+            headerSubtitleH4WithH5ChildBoxPrimaryStyle = _.reduce(b?.styles?.subHeaderH4WithH5Child, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+
+            headerSubtitleH4BoxPrimaryStyle = _.reduce(b?.styles?.subHeaderH4, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+
+            headerSubtitleH5BoxPrimaryStyle = _.reduce(b?.styles?.subHeaderH5, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+          }
+        %>
+
+        <article style="<%= articleBoxPrimaryStyle %>">
+          <h3 class="hggs-h3" style="<%= headerBoxPrimaryStyle %>">
+            <%= b.title %>
+          </h3>
+
+          <% if(boxPrimaryHasSubtitle) { %>
+            <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxPrimaryStyle %>">
+              <%= b.subtitle %>
+            </h4>
+          <% } %>
+
+          <% if(boxPrimaryHasSubtitles) { %>
+            <% _.each(b.subtitles, function(s) { %>
+
+              <% const subTitleHasSubtitle = !!s?.subtitle; %>
+
+              <% if(!subTitleHasSubtitle) { %>
+                <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxPrimaryStyle %>">
+                  <%= s %>
+                </h4>
+              <% } else { %>
+                <h4 class="hggs-h4" style="<%= headerSubtitleH4WithH5ChildBoxPrimaryStyle %>">
+                  <%= s.title %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= headerSubtitleH5BoxPrimaryStyle %>">
+                   <%= s.subtitle %>
+                </h5>
+              <% } %>
+            <% }); %>
+          <% } %>
+
+          <%
+            const boxPrimaryClass = _.reduce(b.classes.box, (acc, c) => {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const boxPrimaryStyles = _.reduce(b.styles.box, (acc, c) => {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+
+            const boxPrimaryHasHeader = b?.classes?.boxHeader ? true : false;
+            const boxPrimaryHasHeaderTitle = b?.classes?.boxTitle ? true : false;
+            const boxPrimaryHasBody = b?.classes?.boxBody ? true : false;
+
+            let boxPrimaryHeaderClass, boxPrimaryHeaderTitleClass;
+
+            if (boxPrimaryHasHeader && boxPrimaryHasHeaderTitle) {
+              boxPrimaryHeaderClass = _.reduce(b.classes.boxHeader, (acc, c) => {
+                if (!acc) {
+                  return c;
+                }
+
+                return acc + ' ' + c;
+              }, '');
+
+              boxPrimaryHeaderTitleClass = _.reduce(b.classes.boxTitle, (acc, c) => {
+                if (!acc) {
+                  return c;
+                }
+
+                return acc + ' ' + c;
+              }, '');
+            }
+
+            let boxPrimaryBodyClass;
+
+            if (boxPrimaryHasBody) {
+              boxPrimaryBodyClass = _.reduce(b.classes.boxBody, (acc, c) => {
+                if (!acc) {
+                  return c;
+                }
+
+                return acc + ' ' + c;
+              }, '');
+            }
+          %>
+
+          <div class="<%= boxPrimaryClass %>" style="<%= boxPrimaryStyles %>" />
+
+            <% if(boxPrimaryHasHeader && boxPrimaryHasHeaderTitle) { %>
+              <header class="<%= boxPrimaryHeaderClass %>">
+                <h3 class="<%= boxPrimaryHeaderTitleClass %>">Title</h3>
+              </header>
+            <% } %>
+
+            <% if(boxPrimaryHasBody) { %>
+              <section class="<%= boxPrimaryBodyClass %>">
+                <p class="hggs-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                  euismod sapien eget turpis lobortis rutrum. Vivamus aliquet, odio
+                  accumsan molestie lobortis, dui mi ornare lectus, ac pretium urna
+                  nisi ut mi. Praesent quis turpis dolor. Curabitur viverra iaculis
+                  risus, in aliquam orci rutrum sit amet. Maecenas efficitur ex non
+                  eros vehicula dapibus. Fusce dignissim pretium quam ut venenatis. Ut
+                  non scelerisque lectus.
+                </p>
+              </section>
+            <% } %>
+
+          </div>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
-    style="width: 100vw; height: 100vh; padding: 30px"
-  >
-    <div
-      class="hggs-flex--top-left-column"
-      style="width: 100%; padding: 30px; background: #f6f7f9"
-    >
-      <!-- .hggs-box-->
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-box</h3>
-      <div class="hggs-box"></div>
-
-      <!-- box with header and body -->
-      <h6 class="hggs-h6" style="margin-top: 30px">box with header and body</h6>
-      <div class="hggs-box">
-        <header class="hggs-box-header">
-          <h3 class="hggs-box-title">Title</h3>
-        </header>
-      </div>
-    </div>
-
-    <div
-      class="hggs-flex--top-left-column"
-      style="width: 100%; padding: 30px; background: #f6f7f9"
-    >
-      <!-- .hggs-box.hggs-box--primary -->
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-box.hggs-box--primary
-      </h3>
-      <div class="hggs-box hggs-box--primary"></div>
-
-      <!-- box primary with header and body -->
-      <h6 class="hggs-h6" style="margin-top: 30px">
-        box primary with header and body
-      </h6>
-      <div class="hggs-box hggs-box--primary">
-        <header class="hggs-box-header">
-          <h3 class="hggs-box-title">Title</h3>
-        </header>
-      </div>
-    </div>
-
-    <div
-      class="hggs-flex--top-left-column"
-      style="width: 100%; padding: 30px; background: #f6f7f9"
-    >
-      <!-- .hggs-box.hggs-box--hggs-border-radius -->
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-box.hggs-box--hggs-border-radius
-      </h3>
-      <div class="hggs-box hggs-box--rounded"></div>
-
-      <!-- box with header and body -->
-      <h6 class="hggs-h6" style="margin-top: 30px">box with header and body</h6>
-      <div class="hggs-box hggs-box--rounded">
-        <header class="hggs-box-header">
-          <h3 class="hggs-box-title">Title</h3>
-        </header>
-        <section class="hggs-box-body">
-          <p class="hggs-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            euismod sapien eget turpis lobortis rutrum. Vivamus aliquet, odio
-            accumsan molestie lobortis, dui mi ornare lectus, ac pretium urna
-            nisi ut mi. Praesent quis turpis dolor. Curabitur viverra iaculis
-            risus, in aliquam orci rutrum sit amet. Maecenas efficitur ex non
-            eros vehicula dapibus. Fusce dignissim pretium quam ut venenatis. Ut
-            non scelerisque lectus.
-          </p>
-        </section>
-      </div>
-
-      <!-- box primary with round borders-->
-      <h6 class="hggs-h6" style="margin-top: 30px">
-        box primary with round borders
-      </h6>
-      <div class="hggs-box hggs-box--rounded hggs-box--primary"></div>
-
-      <!-- box primary with round borders, header and body-->
-      <h6 class="hggs-h6" style="margin-top: 30px">
-        box primary with round borders, header and body
-      </h6>
-      <div class="hggs-box hggs-box--rounded hggs-box--primary">
-        <header class="hggs-box-header">
-          <h3 class="hggs-box-title hggs-box-title--primary">Title</h3>
-        </header>
-        <section class="hggs-box-body">
-          <p class="hggs-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            euismod sapien eget turpis lobortis rutrum. Vivamus aliquet, odio
-            accumsan molestie lobortis, dui mi ornare lectus, ac pretium urna
-            nisi ut mi. Praesent quis turpis dolor. Curabitur viverra iaculis
-            risus, in aliquam orci rutrum sit amet. Maecenas efficitur ex non
-            eros vehicula dapibus. Fusce dignissim pretium quam ut venenatis. Ut
-            non scelerisque lectus.
-          </p>
-        </section>
-      </div>
-    </div>
-  </body>
+    style="width: 100%; height: 100%; padding: 30px"
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
