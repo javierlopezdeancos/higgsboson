@@ -8,27 +8,15 @@ const iconsClasses = [
   ["hggs-icon", "hggs-icon--plus"],
 ];
 
-const headerStyles = ["margin-bottom: 20px"];
-
-const headerWithSubtitleStyles = ["margin-bottom: 0"];
-
 const headerWithSubtitleQuinaryStyles = ["margin-bottom: 0", "color: white"];
 
 const headerQuinaryStyles = ["margin-bottom: 20px", "color: white"];
-
-const subHeaderStyles = [
-  "margin-top: 0",
-  "margin-bottom: 20px",
-  "color: #565656",
-];
 
 const subHeaderQuinaryStyles = [
   "margin-top: 0",
   "margin-bottom: 20px",
   "color: white",
 ];
-
-const articleStyles = ["margin-bottom: 30px", "width: 100%"];
 
 const articleQuinaryStyles = [
   "margin-bottom: 30px",
