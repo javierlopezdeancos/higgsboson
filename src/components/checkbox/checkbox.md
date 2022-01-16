@@ -36,3 +36,16 @@
 --checkbox-ckeck-icon-width-after
 --checkbox-ckeck-icon-width-before
 ```
+
+## HTML Structure
+
+### Default
+
+#### Basic HTML structure
+
+```html
+<div class="hggs-checkbox">
+  <input type="checkbox" id="checkbox1" name="checkboxgroup" />
+  <label class="hggs-label" for="checkbox1">Option 1</label>
+</div>
+```
