@@ -480,6 +480,7 @@
 
   &.hggs-button--icon {
     width: var(--button-icon-width, --button-icon-width-default);
+    height: auto;
     background: unset;
     background-color: unset;
     padding: var(--button-icon-padding, 0);

@@ -22,7 +22,7 @@ const articleQuinaryStyles = [
   "margin-bottom: 30px",
   "width: 100%",
   "background: black",
-  "padding: 0 10px 0 10px",
+  "padding: 0 10px 20px 10px",
 ];
 
 const buttonStyles = ["margin-right: 20px"];
@@ -78,6 +78,16 @@ const data = {
       },
       classes: {
         button: ["hggs-button", "hggs-button--outline"],
+      },
+    },
+    {
+      title: "button --outline --big",
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+      },
+      classes: {
+        button: ["hggs-button", "hggs-button--outline", "hggs-button--big"],
       },
     },
     {
