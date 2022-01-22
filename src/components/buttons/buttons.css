@@ -910,6 +910,7 @@
 
   &.hggs-button--big {
     width: var(--button-width-big, 250px);
+    font-size: var(--button-font-size-big, 21px);
   }
 
   &.hggs-button--medium {
