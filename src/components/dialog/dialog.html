@@ -10,185 +10,190 @@
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./dialog.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <% _.each(data.default, function(d) { %>
+        <%
+          const articleBoxStyle = _.reduce(d?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerBoxStyle = _.reduce(d?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          dialogIds = _.reduce(d.ids.dialog, (acc, i) => {
+            if (!acc) {
+              return i;
+            }
+
+            return acc + ' ' + i;
+          }, '');
+
+          dialogClass = _.reduce(d.classes.dialog, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+
+          triggerButtonIds = _.reduce(d.ids.triggerButton, (acc, i) => {
+            if (!acc) {
+              return i;
+            }
+
+            return acc + ' ' + i;
+          }, '');
+
+          triggerButtonClass = _.reduce(d.classes.triggerButton, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+
+          triggerButtonLabel = d.label.triggerButton;
+
+          closeButtonIds = _.reduce(d.ids.closeButton, (acc, i) => {
+            if (!acc) {
+              return i;
+            }
+
+            return acc + ' ' + i;
+          }, '');
+
+          okButtonIds = _.reduce(d.ids.okButton, (acc, i) => {
+            if (!acc) {
+              return i;
+            }
+
+            return acc + ' ' + i;
+          }, '');
+        %>
+          <article style="<%= articleBoxStyle %>">
+            <h3 class="hggs-h3" style="<%= headerBoxStyle %>">
+              <%= d.title %>
+            </h3>
+            <dialog id="<%= dialogIds %>" class="<%= dialogClass %>">
+              <header>
+                <button
+                  id="<%= closeButtonIds %>"
+                  class="hggs-dialog-close hggs-button hggs-button--icon hggs-button--quaternary"
+                  style="margin-right: 20px"
+                >
+                  <span class="hggs-icon hggs-icon--close"></span>
+                </button>
+                <h4 class="hggs-h4">Template Created</h4>
+              </header>
+              <section>
+                <p class="hggs-text">
+                  The case template has now been added to your list of available
+                  templates. To create a case with this template select 'Create' and chose
+                  'New case'. You can then select your new case template from the
+                  available list.
+                </p>
+              </section>
+              <footer>
+                <div class="actions">
+                  <button
+                    id="<%= okButtonIds %>"
+                    class="hggs-button hggs-button--primary hggs-button--big"
+                  >
+                    OK
+                  </button>
+                </div>
+              </footer>
+            </dialog>
+
+            <button
+              id="<%= triggerButtonIds %>"
+              class="<%= triggerButtonClass %>"
+            >
+              <%= triggerButtonLabel %>
+            </button>
+          </article>
+      <% }) %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
-    style="width: 100vw; height: 100vh; padding: 30px"
-  >
-    <!-- .hggs-dialog,hggs-dialog--big -->
-    <h3 class="hggs-h3" style="margin-bottom: 20px">
-      .hggs-dialog.hggs-dialog--big
-    </h3>
+    style="width: 100%; height: 100%; padding: 30px"
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 
-    <dialog id="dialog-big" class="hggs-dialog hggs-dialog--big">
-      <button
-        id="close-dialog-btn-big"
-        class="
-          hggs-dialog-close
-          hggs-button
-          hggs-button--icon-labeled
-          hggs-button--circle
-        "
-      >
-        <span class="hggs-icon hggs-icon--close"></span>
-      </button>
-      <h5 class="hggs-h5">Template Created</h5>
-      <p class="hggs-text">
-        The case template has now been added to your list of available
-        templates. To create a case with this template select 'Create' and chose
-        'New case'. You can then select your new case template from the
-        available list.
-      </p>
-      <div class="actions">
-        <button
-          id="ok-dialog-btn-big"
-          class="hggs-button hggs-button--primary hggs-button--big"
-        >
-          Ok!
-        </button>
-      </div>
-    </dialog>
+  <script>
+    const triggerBig = document.querySelector("#open-dialog-btn-big");
+    const closeBtnBig = document.querySelector("#close-dialog-btn-big");
+    const okBtnBig = document.querySelector("#ok-dialog-btn-big");
+    const modalBig = document.querySelector("#dialog-big");
 
-    <button
-      id="open-dialog-btn-big"
-      class="hggs-button hggs-button--primary hggs-button--big"
-    >
-      Big
-    </button>
+    triggerBig.addEventListener("click", () => {
+      modalBig.showModal();
+    });
 
-    <!-- .hggs-dialog,hggs-dialog--medium -->
-    <h3 class="hggs-h3" style="margin-bottom: 20px">
-      .hggs-dialog.hggs-dialog--medium
-    </h3>
+    closeBtnBig.addEventListener("click", () => {
+      modalBig.close();
+    });
 
-    <dialog id="dialog-medium" class="hggs-dialog hggs-dialog--medium">
-      <button
-        id="close-dialog-btn-medium"
-        class="
-          hggs-dialog-close
-          hggs-button
-          hggs-button--icon-labeled
-          hggs-button--circle
-        "
-      >
-        <span class="hggs-icon hggs-icon--close"></span>
-      </button>
-      <h5 class="hggs-h5">Template Created</h5>
-      <p class="hggs-text">
-        The case template has now been added to your list of available
-        templates. To create a case with this template select 'Create' and chose
-        'New case'. You can then select your new case template from the
-        available list.
-      </p>
-      <div class="actions">
-        <button
-          id="ok-dialog-btn-medium"
-          class="hggs-button hggs-button--primary hggs-button--medium"
-        >
-          Ok!
-        </button>
-      </div>
-    </dialog>
+    okBtnBig.addEventListener("click", () => {
+      modalBig.close();
+    });
 
-    <button
-      id="open-dialog-btn-medium"
-      class="hggs-button hggs-button--primary hggs-button--medium"
-    >
-      Medium
-    </button>
+    const triggerMedium = document.querySelector("#open-dialog-btn-medium");
+    const closeBtnMedium = document.querySelector("#close-dialog-btn-medium");
+    const okBtnMedium = document.querySelector("#ok-dialog-btn-medium");
+    const modalMedium = document.querySelector("#dialog-medium");
 
-    <!-- .hggs-dialog,hggs-dialog--small -->
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 20px">
-      .hggs-dialog.hggs-dialog--small
-    </h3>
+    triggerMedium.addEventListener("click", () => {
+      modalMedium.showModal();
+    });
 
-    <dialog id="dialog-small" class="hggs-dialog hggs-dialog--small">
-      <button
-        id="close-dialog-btn-small"
-        class="
-          hggs-dialog-close
-          hggs-button
-          hggs-button--icon-labeled
-          hggs-button--circle
-        "
-      >
-        <span class="hggs-icon hggs-icon--close"></span>
-      </button>
-      <h5 class="hggs-h5">Template Created</h5>
-      <p class="hggs-text">
-        The case template has now been added to your list of available
-        templates. To create a case with this template select 'Create' and chose
-        'New case'. You can then select your new case template from the
-        available list.
-      </p>
-      <div class="actions">
-        <button
-          id="ok-dialog-btn-small"
-          class="hggs-button hggs-button--primary hggs-button--medium"
-        >
-          Ok!
-        </button>
-      </div>
-    </dialog>
+    closeBtnMedium.addEventListener("click", () => {
+      modalMedium.close();
+    });
 
-    <button
-      id="open-dialog-btn-small"
-      class="hggs-button hggs-button--primary hggs-button--medium"
-    >
-      Small
-    </button>
-    <script>
-      const triggerBig = document.querySelector("#open-dialog-btn-big");
-      const closeBtnBig = document.querySelector("#close-dialog-btn-big");
-      const okBtnBig = document.querySelector("#ok-dialog-btn-big");
-      const modalBig = document.querySelector("#dialog-big");
+    okBtnMedium.addEventListener("click", () => {
+      modalMedium.close();
+    });
 
-      triggerBig.addEventListener("click", () => {
-        modalBig.showModal();
-      });
+    const triggerSmall = document.querySelector("#open-dialog-btn-small");
+    const closeBtnSmall = document.querySelector("#close-dialog-btn-small");
+    const okBtnSmall = document.querySelector("#ok-dialog-btn-small");
+    const modalSmall = document.querySelector("#dialog-small");
 
-      closeBtnBig.addEventListener("click", () => {
-        modalBig.close();
-      });
+    triggerSmall.addEventListener("click", () => {
+      modalSmall.showModal();
+    });
 
-      okBtnBig.addEventListener("click", () => {
-        modalBig.close();
-      });
+    closeBtnSmall.addEventListener("click", () => {
+      modalSmall.close();
+    });
 
-      const triggerMedium = document.querySelector("#open-dialog-btn-medium");
-      const closeBtnMedium = document.querySelector("#close-dialog-btn-medium");
-      const okBtnMedium = document.querySelector("#ok-dialog-btn-medium");
-      const modalMedium = document.querySelector("#dialog-medium");
-
-      triggerMedium.addEventListener("click", () => {
-        modalMedium.showModal();
-      });
-
-      closeBtnMedium.addEventListener("click", () => {
-        modalMedium.close();
-      });
-
-      okBtnMedium.addEventListener("click", () => {
-        modalMedium.close();
-      });
-
-      const triggerSmall = document.querySelector("#open-dialog-btn-small");
-      const closeBtnSmall = document.querySelector("#close-dialog-btn-small");
-      const okBtnSmall = document.querySelector("#ok-dialog-btn-small");
-      const modalSmall = document.querySelector("#dialog-small");
-
-      triggerSmall.addEventListener("click", () => {
-        modalSmall.showModal();
-      });
-
-      closeBtnSmall.addEventListener("click", () => {
-        modalSmall.close();
-      });
-
-      okBtnSmall.addEventListener("click", () => {
-        modalSmall.close();
-      });
-    </script>
-  </body>
+    okBtnSmall.addEventListener("click", () => {
+      modalSmall.close();
+    });
+  </script>
 </html>
