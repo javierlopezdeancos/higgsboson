@@ -142,10 +142,11 @@
   --hggs-form-input-border-disabled: var(--hggs-border-disabled);
   --hggs-form-input-border-invalid: var(--hggs-border-invalid);
   --hggs-font-family-primary: "DM Sans", sans-serif;
-  --hggs-font-size-big: 24px;
   --hggs-font-size-colossal: 38px;
   --hggs-font-size-enormous: 32px;
   --hggs-font-size-extra-big: 28px;
+  --hggs-font-size-big: 24px;
+  --hggs-font-size-extra-medium: 21px;
   --hggs-font-size-medium: 18px;
   --hggs-font-size-normal-plus: 16px;
   --hggs-font-size-normal: 14px;
@@ -190,7 +191,7 @@
   --title-h4-font-weight: var(--hggs-font-weight-bold);
   --title-h4-margin: var(--hggs-space-vertical-medium) 0
     var(--hggs-space-vertical-small) 0;
-  --title-h5-font-size: var(--hggs-font-size-medium);
+  --title-h5-font-size: var(--hggs-font-size-extra-medium);
   --title-h5-font-weight: var(--hggs-font-weight-bold);
   --title-h5-margin: var(--hggs-space-vertical-small) 0
     var(--hggs-space-vertical-small) 0;
@@ -499,6 +500,7 @@
   --button-color: var(--hggs-color-auxiliary-gray-008);
   --button-font-family: var(--hggs-font-family-primary);
   --button-font-letter-spacing: 1px;
+  --button-font-size-big: var(--hggs-font-size-extra-medium);
   --button-font-size-medium: var(--hggs-font-size);
   --button-font-size-small: var(--hggs-font-size-small);
   --button-font-size: var(--hggs-font-size-normal-plus);
@@ -723,4 +725,7 @@
   --dialog-width-big: 80vw;
   --dialog-width-medium: 65vw;
   --dialog-width-small: 40vw;
+  --dialog-close-position: absolute;
+  --dialog-close-top: 20px;
+  --dialog-close-right: 10px;
 }

@@ -53,10 +53,13 @@
   --hggs-font-size-enormous-default: 32px;
   --hggs-font-size-extra-big-default: 28px;
   --hggs-font-size-big-small-default: 24px;
+  --hggs-font-size-extra-medium-default: 21px;
   --hggs-font-size-medium-small-default: 18px;
   --hggs-font-size-normal-plus-default: 16px;
   --hggs-font-size-default: 14px;
   --hggs-font-size-small-default: 12px;
+  --hggs-font-size-micro-default:: 10px;
+  --hggs-font-size-nano-default:: 8px;
   --hggs-font-weight-normal-default: 400;
   --hggs-font-weight-medium-default: 500;
   --hggs-font-weight-bold-default: 700;
