@@ -67,3 +67,30 @@
   </div>
 </dialog>
 ```
+
+#### Basic HTML structure with `big` modifier
+
+```html
+<dialog id="dialog-big" class="hggs-dialog hggs-dialog--big">
+  <!--
+  ... put here content ...
+--></dialog>
+```
+
+#### Basic HTML structure with `medium` modifier
+
+```html
+<dialog id="dialog-big" class="hggs-dialog hggs-dialog--medium">
+  <!--
+  ... put here content ...
+--></dialog>
+```
+
+#### Basic HTML structure with `small` modifier
+
+```html
+<dialog id="dialog-big" class="hggs-dialog hggs-dialog--small">
+  <!--
+  ... put here content ...
+--></dialog>
+```
