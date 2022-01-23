@@ -10,54 +10,60 @@
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./field.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <% _.each(data.default, function(f, index) { %>
+        <%
+          const articleFieldStyle = _.reduce(f?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerFieldStyle = _.reduce(f?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const fieldClass = _.reduce(f?.classes?.field, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+        %>
+        <article style="<%= articleFieldStyle %>">
+          <h3 class="hggs-h3" style="<%= headerFieldStyle %>"><%= f.title %></h3>
+          <div class="<%= fieldClass %>">
+            <label for="id-test-<%=index%>" class="hggs-label">Label</label>
+            <input id="id-test-<%=index%>" type="text" class="hggs-input" />
+          </div>
+        </article>
+      <% }) %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
     style="width: 100%; height: 100%; padding: 30px"
-  >
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-field</h3>
-      <div class="hggs-field">
-        <label for="id-test" class="hggs-label">Label</label>
-        <input type="text" class="hggs-input" />
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-field.hggs-field
-      </h3>
-      <div class="hggs-field hggs-field--required">
-        <label for="id-test" class="hggs-label">Label</label>
-        <input type="text" class="hggs-input" />
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-field [focus]</h3>
-      <div class="hggs-field hggs-field--focus">
-        <label for="id-test" class="hggs-label">Label</label>
-        <input type="text" class="hggs-input" />
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-field [disabled]
-      </h3>
-      <div class="hggs-field hggs-field--disabled">
-        <label for="id-test" class="hggs-label" disabled>Label</label>
-        <input type="text" class="hggs-input" />
-      </div>
-    </article>
-
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-field [error]</h3>
-      <div class="hggs-field hggs-field--error">
-        <label for="id-test" class="hggs-label" error>Label</label>
-        <input type="text" class="hggs-input" />
-      </div>
-    </article>
-  </body>
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
