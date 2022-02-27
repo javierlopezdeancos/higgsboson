@@ -386,6 +386,7 @@
   --icon-label-font-family: var(--hggs-font-family-primary);
   --icon-label-font-size: var(--hggs-font-size);
   --icon-label-font-weigth: var(--hggs-font-weight-medium);
+  --icon-label-text-align: left;
   --icon-label-margin-left: var(--hggs-space-horizontal-small);
   --icon-label-quinary-color: var(--hggs-color-quinary);
   --icon-outline-border-primary: var(--hggs-border-primary);

@@ -10,3165 +10,413 @@
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/classes.js"></script>
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./icons.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <!-- default icon labeled -->
+
+      <% _.each(data.default, function(i) { %>
+        <%
+          const articleIconStyle = _.reduce(i?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerIconStyle = _.reduce(i?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const iconStyle = _.reduce(i?.styles?.icon, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleIconStyle %>">
+          <h3 class="hggs-h3" style="<%= headerIconStyle %>">
+            <%= i.title %>
+          </h3>
+
+          <div class="hggs-flex--top-left-row">
+            <% _.each(i?.classes?.icon?.base, function(ibc) { %>
+              <%
+                let defaultIconClass = _.reduce(ibc, (acc, c) => {
+                  if (!acc) {
+                    return c;
+                  }
+
+                  return acc + ' ' + c;
+                }, '');
+
+                if (i?.classes?.icon?.modifier) {
+                  defaultIconClass = defaultIconClass + " " + i.classes.icon.modifier;
+                }
+              %>
+
+              <span class="<%= defaultIconClass %>" style="<%= iconStyle %>"></span>
+            <% }) %>
+          </div>
+
+          <% _.each(i?.classes?.icon?.sizes, function(isc) { %>
+            <div class="hggs-flex--top-left-row">
+              <% _.each(i?.classes?.icon?.base, function(ibc) { %>
+                <%
+                  let defaultIconClass = _.reduce(ibc, (acc, c) => {
+                    if (!acc) {
+                      return c;
+                    }
+
+                    return acc + ' ' + c;
+                  }, '');
+
+                  if (i?.classes?.icon?.modifier) {
+                    defaultIconClass = defaultIconClass + " " + i.classes.icon.modifier;
+                  }
+
+                  defaultIconClass = defaultIconClass + " " + isc;
+                %>
+
+                <span class="<%= defaultIconClass %>" style="<%= iconStyle %>"></span>
+              <% }) %>
+            </div>
+          <% }) %>
+        </article>
+      <% }) %>
+
+      <!-- icon labeled -->
+
+      <% _.each(data.default, function(i) { %>
+        <%
+          const articleIconStyle = _.reduce(i?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerIconStyle = _.reduce(i?.styles?.headerWithSubtitle, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const subHeaderIconWithLabelStyle = _.reduce(i?.styles?.subheader, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const iconLabeledStyle = _.reduce(i?.styles?.iconLabeled, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleIconStyle %>">
+          <h3 class="hggs-h3" style="<%= headerIconStyle %>">
+            icon-wrapper
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= subHeaderIconWithLabelStyle %>">
+            <%= i.subtitle %>
+          </h4>
+
+          <div class="hggs-flex--top-left-row">
+            <% _.each(i?.classes?.icon?.base, function(ibc) { %>
+              <%
+                let defaultIconClass = _.reduce(ibc, (acc, c) => {
+                  if (!acc) {
+                    return c;
+                  }
+
+                  return acc + ' ' + c;
+                }, '');
+
+                if (i?.classes?.icon?.modifier) {
+                  defaultIconClass = defaultIconClass + " " + i.classes.icon.modifier;
+                }
+              %>
+
+              <div class="hggs-icon-wrapper" style="<%= iconLabeledStyle %>">
+                <span class="<%= defaultIconClass %>"></span>
+                <span class="hggs-icon-label">This is a label</span>
+              </div>
+            <% }) %>
+          </div>
+        </article>
+      <% }) %>
+
+      <!-- icon circle -->
+
+       <% _.each(data.circleIcons, (c) => { %>
+        <%
+          const articleCircleIconsStyle = _.reduce(c?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerCircleIconsStyle = _.reduce(c?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const subHeaderCircleIconsStyle = _.reduce(c?.styles?.subheader, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const circleIconStyle = _.reduce(c?.styles?.circleIcon, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleCircleIconsStyle %>">
+          <h3 class="hggs-h3" style="<%= headerCircleIconsStyle %>">
+            <%= c.title %>
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= subHeaderCircleIconsStyle %>">
+            <%= c.subtitle %>
+          </h4>
+
+          <div class="hggs-flex--top-left-column">
+            <div class="hggs-flex--top-left-row">
+              <%
+                const circleWrapperClass = _.reduce(c.classes.wrapper, (acc, bc) => {
+                  if (!acc) {
+                    return bc;
+                  }
+
+                  return acc + ' ' + bc;
+                }, '');
+              %>
+
+              <% _.each(c.classes.span, (spanClasses, index) => { %>
+                <%
+                  const circleSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                    if (!acc) {
+                      return spc;
+                    }
+
+                    return acc + ' ' + spc;
+                  }, '');
+                %>
+
+                <div class="<%= circleWrapperClass %>" style="<%= circleIconStyle %>" />
+                  <span class="<%= circleSpanClass %>"></span>
+                </div>
+              <% }); %>
+            </div>
+
+            <% _.each(c.extraClasses.sizes, (iconSizesClass, index) => { %>
+              <div class="hggs-flex--top-left-row">
+                <%
+                  const circleWrapperClass = _.reduce(c.classes.wrapper, (acc, bc) => {
+                    if (!acc) {
+                      return bc;
+                    }
+
+                    return acc + ' ' + bc;
+                  }, '');
+
+                  const circleWrapperSizeClass = circleWrapperClass + ' ' + iconSizesClass;
+
+                  const circleIconStyle = _.reduce(c?.styles?.circleIcon, (acc, s) => {
+                    if (!acc) {
+                      return s;
+                    }
+
+                    return acc + '; ' + s;
+                  }, '');
+                %>
+
+                <% _.each(c.classes.span, (spanClasses, index) => { %>
+                  <%
+                    const circleSpanClass = _.reduce(spanClasses, (acc, cpc) => {
+                      if (!acc) {
+                        return cpc;
+                      }
+
+                      return acc + ' ' + cpc;
+                    }, '');
+                  %>
+
+                  <div class="<%= circleWrapperSizeClass %>" style="<%= circleIconStyle %>" />
+                    <span class="<%= circleSpanClass %>"></span>
+                  </div>
+                <% }); %>
+              </div>
+            <% }); %>
+          </div>
+        </article>
+      <% }); %>
+
+      <!-- icon square -->
+
+      <% _.each(data.squareIcons, (c) => { %>
+        <%
+          const articleSquareIconsStyle = _.reduce(c?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerSquareIconsStyle = _.reduce(c?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const subHeaderSquareIconsStyle = _.reduce(c?.styles?.subheader, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const squareIconStyle = _.reduce(c?.styles?.squareIcon, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleSquareIconsStyle %>">
+          <h3 class="hggs-h3" style="<%= headerSquareIconsStyle %>">
+            <%= c.title %>
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= subHeaderSquareIconsStyle %>">
+            <%= c.subtitle %>
+          </h4>
+
+          <div class="hggs-flex--top-left-column">
+            <div class="hggs-flex--top-left-row">
+              <%
+                const squareWrapperClass = _.reduce(c.classes.wrapper, (acc, bc) => {
+                  if (!acc) {
+                    return bc;
+                  }
+
+                  return acc + ' ' + bc;
+                }, '');
+              %>
+
+              <% _.each(c.classes.span, (spanClasses, index) => { %>
+                <%
+                  const squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                    if (!acc) {
+                      return spc;
+                    }
+
+                    return acc + ' ' + spc;
+                  }, '');
+                %>
+
+                <div class="<%= squareWrapperClass %>" style="<%= squareIconStyle %>" />
+                  <span class="<%= squareSpanClass %>"></span>
+                </div>
+              <% }); %>
+            </div>
+
+            <% _.each(c.extraClasses.sizes, (iconSizesClass, index) => { %>
+              <div class="hggs-flex--top-left-row">
+                <%
+                  const squareWrapperClass = _.reduce(c.classes.wrapper, (acc, bc) => {
+                    if (!acc) {
+                      return bc;
+                    }
+
+                    return acc + ' ' + bc;
+                  }, '');
+
+                  const squareWrapperSizeClass = squareWrapperClass + ' ' + iconSizesClass;
+
+                  const squareIconStyle = _.reduce(c?.styles?.squareIcon, (acc, s) => {
+                    if (!acc) {
+                      return s;
+                    }
+
+                    return acc + '; ' + s;
+                  }, '');
+                %>
+
+                <% _.each(c.classes.span, (spanClasses, index) => { %>
+                  <%
+                    const squareSpanClass = _.reduce(spanClasses, (acc, cpc) => {
+                      if (!acc) {
+                        return cpc;
+                      }
+
+                      return acc + ' ' + cpc;
+                    }, '');
+                  %>
+
+                  <div class="<%= squareWrapperSizeClass %>" style="<%= squareIconStyle %>" />
+                    <span class="<%= squareSpanClass %>"></span>
+                  </div>
+                <% }); %>
+              </div>
+            <% }); %>
+          </div>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
-  <body>
-    <div
-      class="hggs-flex--top-left-column"
-      style="height: 100%; padding: 0 30px 30px 30px"
-    >
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon</h3>
-
-        <h4 class="hggs-h4">.hggs-icon.hggs-icon--user</h4>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--user"></span>
-          <span
-            class="hggs-icon hggs-icon--user hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--user hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--user hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--user hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--user hggs-icon--quinary"></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--user hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-
-        <h4 class="hggs-h4">.hggs-icon.hggs-icon--question</h4>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--question"></span>
-          <span
-            class="hggs-icon hggs-icon--question hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--question hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--question hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--question hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--question hggs-icon--quinary"></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--question hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-
-        <h4 class="hggs-h4">.hggs-icon.hggs-icon--log-out</h4>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--log-out"></span>
-          <span
-            class="hggs-icon hggs-icon--log-out hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--log-out hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--log-out hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--log-out hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--log-out hggs-icon--quinary"></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--log-out hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-
-        <h4 class="hggs-h4">.hggs-icon.hggs-icon--hamburger-menu</h4>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          <span
-            class="hggs-icon hggs-icon--hamburger-menu hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--hamburger-menu hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--hamburger-menu hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--hamburger-menu hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--hamburger-menu hggs-icon--quinary"></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--hamburger-menu hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-
-        <h4 class="hggs-h4">.hggs-icon.hggs-icon--edit</h4>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--edit"></span>
-          <span
-            class="hggs-icon hggs-icon--edit hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--edit hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--edit hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--edit hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--edit hggs-icon--quinary"></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--edit hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-
-        <h4 class="hggs-h4">.hggs-icon.hggs-icon--close</h4>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--close"></span>
-          <span
-            class="hggs-icon hggs-icon--close hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--close hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--close hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--close hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--close hggs-icon--quinary"></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--close hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-
-        <h4 class="hggs-h4">.hggs-icon.hggs-icon--plus</h4>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--plus"></span>
-          <span
-            class="hggs-icon hggs-icon--plus hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--plus hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--plus hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--plus hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--plus hggs-icon--quinary"></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--plus hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-
-        <h4 class="hggs-h4">.hggs-icon.hggs-icon--chevron-down</h4>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--chevron-down"></span>
-          <span
-            class="hggs-icon hggs-icon--chevron-down hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--chevron-down hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--chevron-down hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--chevron-down hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--chevron-down hggs-icon--quinary"></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--chevron-down hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon.hggs-icon--small</h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--small hggs-icon--user"></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--user hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--user hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--user hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--user hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--user hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--user hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--small hggs-icon--question"></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--question hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--question hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--question hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--question hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--question hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--question hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--small hggs-icon--log-out"></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--log-out hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--log-out hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--log-out hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--log-out hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--log-out hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--log-out hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--small hggs-icon--hamburger-menu"></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--hamburger-menu hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--hamburger-menu hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--hamburger-menu hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--hamburger-menu hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--hamburger-menu hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--hamburger-menu hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--small hggs-icon--edit"></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--edit hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--edit hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--edit hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--edit hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--edit hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--edit hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--small hggs-icon--close"></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--close hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--close hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--close hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--close hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--close hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--close hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--small hggs-icon--plus"></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--plus hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--plus hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--plus hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--plus hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--plus hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--plus hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--small hggs-icon--chevron-down"></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--chevron-down hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--chevron-down hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--chevron-down hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--chevron-down hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--chevron-down hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--small hggs-icon--chevron-down hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon.hggs-icon--micro</h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--micro hggs-icon--user"></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--user hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--user hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--user hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--user hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--micro hggs-icon--user hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--user hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--micro hggs-icon--question"></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--question hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--question hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--question hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--question hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--micro hggs-icon--question hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--question hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--micro hggs-icon--log-out"></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--log-out hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--log-out hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--log-out hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--log-out hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--micro hggs-icon--log-out hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--log-out hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--micro hggs-icon--hamburger-menu"></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--hamburger-menu hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--hamburger-menu hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--hamburger-menu hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro  hggs-icon--hamburger-menu hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--micro hggs-icon--hamburger-menu hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--hamburger-menu hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--micro hggs-icon--edit"></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--edit hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--edit hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--edit hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--edit hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--micro hggs-icon--edit hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--edit hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--micro hggs-icon--close"></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--close hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--close hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--close hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--close hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--micro hggs-icon--close hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--close hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <span class="hggs-icon hggs-icon--micro hggs-icon--plus"></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--plus hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--plus hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--plus hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--plus hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--micro hggs-icon--plus hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--plus hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-        <div class="hggs-flex--top-left-row">
-          <span class="hggs-icon hggs-icon--micro hggs-icon--chevron-down"></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--chevron-down hggs-icon--primary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--chevron-down hggs-icon--secondary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--chevron-down hggs-icon--tertiary"
-            style="margin-left: 10px"
-          ></span>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--chevron-down hggs-icon--quaternary"
-            style="margin-left: 10px"
-          ></span>
-          <div style="padding: 1px; background: black; margin-left: 10px">
-            <span class="hggs-icon hggs-icon--micro hggs-icon--chevron-down hggs-icon--quinary"
-            ></span>
-          </div>
-          <span
-            class="hggs-icon hggs-icon--micro hggs-icon--chevron-down hggs-icon--senary"
-            style="margin-left: 10px"
-          ></span>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon.hggs-icon-label</h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span class="hggs-icon hggs-icon--user"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--user hggs-icon--primary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--user hggs-icon--secondary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--user hggs-icon--tertiary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--user hggs-icon--quaternary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-left: 10px; margin-right: 30px; padding: 1px; background: black;">
-            <span class="hggs-icon hggs-icon--user hggs-icon--quinary"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px;">
-            <span
-              class="hggs-icon hggs-icon--user hggs-icon--senary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span class="hggs-icon hggs-icon--question"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--question hggs-icon--primary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--question hggs-icon--secondary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--question hggs-icon--tertiary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--question hggs-icon--quaternary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-left: 10px; margin-right: 30px; padding: 1px; background: black;">
-            <span class="hggs-icon hggs-icon--question hggs-icon--quinary"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px;">
-            <span
-              class="hggs-icon hggs-icon--question hggs-icon--senary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--log-out hggs-icon--primary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--log-out hggs-icon--secondary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--log-out hggs-icon--tertiary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--log-out hggs-icon--quaternary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-left: 10px; margin-right: 30px; padding: 1px; background: black;">
-            <span class="hggs-icon hggs-icon--log-out hggs-icon--quinary"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px;">
-            <span
-              class="hggs-icon hggs-icon--log-out hggs-icon--senary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--hamburger-menu hggs-icon--primary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--hamburger-menu hggs-icon--secondary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--hamburger-menu hggs-icon--tertiary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--hamburger-menu hggs-icon--quaternary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-left: 10px; margin-right: 30px; padding: 1px; background: black;">
-            <span class="hggs-icon hggs-icon--hamburger-menu hggs-icon--quinary"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px;">
-            <span
-              class="hggs-icon hggs-icon--hamburger-menu hggs-icon--senary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--edit hggs-icon--primary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--edit hggs-icon--secondary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--edit hggs-icon--tertiary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--edit hggs-icon--quaternary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-left: 10px; margin-right: 30px; padding: 1px; background: black;">
-            <span class="hggs-icon hggs-icon--edit hggs-icon--quinary"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px;">
-            <span
-              class="hggs-icon hggs-icon--edit hggs-icon--senary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span class="hggs-icon hggs-icon--close"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--close hggs-icon--primary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--close hggs-icon--secondary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--close hggs-icon--tertiary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--close hggs-icon--quaternary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-left: 10px; margin-right: 30px; padding: 1px; background: black;">
-            <span class="hggs-icon hggs-icon--close hggs-icon--quinary"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px;">
-            <span
-              class="hggs-icon hggs-icon--close hggs-icon--senary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 10px;">
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--plus hggs-icon--primary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--plus hggs-icon--secondary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--plus hggs-icon--tertiary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--plus hggs-icon--quaternary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-left: 10px; margin-right: 30px; padding: 1px; background: black;">
-            <span class="hggs-icon hggs-icon--plus hggs-icon--quinary"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px;">
-            <span
-              class="hggs-icon hggs-icon--plus hggs-icon--senary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--chevron-down hggs-icon--primary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--chevron-down hggs-icon--secondary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--chevron-down hggs-icon--tertiary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px">
-            <span
-              class="hggs-icon hggs-icon--chevron-down hggs-icon--quaternary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-left: 10px; margin-right: 30px; padding: 1px; background: black;">
-            <span class="hggs-icon hggs-icon--chevron-down hggs-icon--quinary"></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-          <div class="hggs-icon-wrapper" style="margin-right: 30px;">
-            <span
-              class="hggs-icon hggs-icon--chevron-down hggs-icon--senary"
-              style="margin-left: 10px"
-            ></span>
-            <span class="hggs-icon-label">This is a label</span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon.hggs-icon--circle </h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--circle " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--outline.hggs-icon</h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--outline.hggs-icon--quaternary.hggs-icon</h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-         <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-         <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quaternary hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--outline.hggs-icon--primary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--primary hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--outline.hggs-icon--secondary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--secondary hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--outline.hggs-icon--tertiary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--tertiary hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--outline.hggs-icon--senary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--senary hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--outline.hggs-icon--quinary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quinary hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--primary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--secondary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--secondary hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--tertiary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--tertiary hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--senary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--senary hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--quaternary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quaternary hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--circle.hggs-icon--quinary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle   hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quinary hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--circle  hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon.hggs-icon--square </h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--small hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--small hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--micro hggs-icon--square  " style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--outline.hggs-icon</h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--outline.hggs-icon--quaternary.hggs-icon</h3>
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-         <div class="hggs-flex--top-left-row" style="margin-bottom: 20px;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-         <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quaternary hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--outline.hggs-icon--primary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--primary hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--outline.hggs-icon--secondary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--secondary hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--outline.hggs-icon--tertiary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--tertiary hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--outline.hggs-icon--senary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--senary hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--outline.hggs-icon--quinary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quinary hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--outline hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--primary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro hggs-icon--primary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--secondary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--secondary hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--secondary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--tertiary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--tertiary hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--tertiary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--senary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--senary hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--senary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--quaternary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="margin-bottom: 20px">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quaternary hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quaternary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-
-      <article style="margin-bottom: 20px">
-        <h3 class="hggs-h3">.hggs-icon-wrapper.hggs-icon--square.hggs-icon--quinary.hggs-icon</h3>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square    hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--small  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-
-        <div class="hggs-flex--top-left-row" style="padding: 10px; background: black;">
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quinary hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--user"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--log-out"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--hamburger-menu"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--edit"></span>
-          </div>
-           <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--close"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--plus"></span>
-          </div>
-          <div class="hggs-icon-wrapper hggs-icon--square   hggs-icon--micro  hggs-icon--quinary" style="margin-right: 20px">
-            <span class="hggs-icon hggs-icon--chevron-down"></span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </body>
+  <body
+    id="body"
+    class="hggs-flex--top-left-column"
+    style="width: 100%; height: 100%; padding: 30px"
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
