@@ -1,20 +1,3 @@
-const headerWithSubtitleQuinaryStyles = ["margin-bottom: 0", "color: white"];
-
-const headerQuinaryStyles = ["margin-bottom: 20px", "color: white"];
-
-const subHeaderQuinaryStyles = [
-  "margin-top: 0",
-  "margin-bottom: 20px",
-  "color: white",
-];
-
-const articleQuinaryStyles = [
-  "margin-bottom: 30px",
-  "width: 100%",
-  "background: black",
-  "padding: 0 10px 20px 10px",
-];
-
 const buttonStyles = ["margin-right: 20px"];
 
 const data = {
