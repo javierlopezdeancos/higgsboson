@@ -25,7 +25,6 @@
 
       <!-- default checkbox -->
       <% _.each(data.default, function(c) { %>
-
         <%
           const articleBoxStyle = _.reduce(c?.styles?.article, (acc, s) => {
             if (!acc) {
@@ -43,7 +42,7 @@
             return acc + '; ' + s;
           }, '');
 
-          checkboxWrapperClass = _.reduce(c.classes.wrapper, (acc, cls) => {
+          const checkboxWrapperClass = _.reduce(c.classes.wrapper, (acc, cls) => {
             if (!acc) {
               return cls;
             }
@@ -51,7 +50,7 @@
             return acc + ' ' + cls;
           }, '');
 
-          checkboxLabelClass = _.reduce(c.classes.label, (acc, cls) => {
+          const checkboxLabelClass = _.reduce(c.classes.label, (acc, cls) => {
             if (!acc) {
               return cls;
             }
@@ -90,6 +89,102 @@
           <label class="<%= checkboxLabelClass %>" for="checkbox1">Option 1</label>
         </div>
       </article>
+      <% }); %>
+
+      <!-- checkboxes -->
+      <% _.each(data.list, function(cs) { %>
+        <%
+          const articleCheckboxesStyle = _.reduce(cs?.styles?.article, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const headerCheckboxesStyle = _.reduce(cs?.styles?.header, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const headerSubtitleH4WithH5ChildBoxStyle = _.reduce(cs?.styles?.subHeaderH4WithH5Child, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const headerSubtitleH4BoxStyle = _.reduce(cs?.styles?.subHeaderH4, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const headerSubtitleH5BoxStyle = _.reduce(cs?.styles?.subHeaderH5, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const checkboxesListClass = cs.classes.list;
+
+          const checkboxWrapperClass = _.reduce(cs.classes.wrapper, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+
+          const checkboxLabelClass = _.reduce(cs.classes.label, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+        %>
+
+        <article style="<%= articleCheckboxesStyle %>">
+          <h3 class="hggs-h3" style="<%= headerCheckboxesStyle %>">
+            <%= cs.title %>
+          </h3>
+          <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxStyle %>">
+            <%= cs.subtitle %>
+          </h4>
+          <% _.each(cs.subtitles, function(s) { %>
+            <% const subTitleHasSubtitle = !!s?.subtitle; %>
+            <h4 class="hggs-h4" style="<%= headerSubtitleH4WithH5ChildBoxStyle %>">
+              <%= s.title %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= headerSubtitleH5BoxStyle %>">
+              <%= s.subtitle %>
+            </h5>
+
+            <div class="<%= checkboxesListClass %>">
+              <div class="<%= checkboxWrapperClass %>">
+                <input type="checkbox" id="checkbox1" name="checkboxgroup" />
+                <label class="<%= checkboxLabelClass %>" for="checkbox1">Option 1</label>
+              </div>
+              <div class="<%= checkboxWrapperClass %>">
+                <input type="checkbox" id="checkbox2" name="checkboxgroup" />
+                <label class="<%= checkboxLabelClass %>" for="checkbox2">Option 2</label>
+              </div>
+              <div class="<%= checkboxWrapperClass %>">
+                <input type="checkbox" id="checkbox3" name="checkboxgroup" />
+                <label class="<%= checkboxLabelClass %>" for="checkbox3">Option 3</label>
+              </div>
+            </div>
+          <% }); %>
+        </article>
       <% }); %>
     </script>
   </head>

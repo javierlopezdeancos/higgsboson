@@ -15,4 +15,27 @@ const data = {
       },
     },
   ],
+  list: [
+    {
+      title: "checkboxes",
+      subtitles: [
+        {
+          title: "checkbox",
+          subtitle: "label",
+        },
+      ],
+      styles: {
+        header: headerWithSubtitleStyles,
+        subHeaderH4: subHeaderWithChildStyles,
+        subHeaderH4WithH5Child: subHeaderWithChildStyles,
+        subHeaderH5: subHeaderChildStyles,
+        article: articleStyles,
+      },
+      classes: {
+        list: "hggs-checkboxes",
+        wrapper: ["hggs-checkbox"],
+        label: ["hggs-label"],
+      },
+    },
+  ],
 };

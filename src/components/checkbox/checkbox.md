@@ -49,3 +49,16 @@
   <label class="hggs-label" for="checkbox1">Option 1</label>
 </div>
 ```
+
+### Checkboxes list
+
+#### Basic HTML structure
+
+```html
+<div class="hggs-checkboxes">
+  <div class="hggs-checkbox">
+    <input type="checkbox" id="checkbox1" name="checkboxgroup" />
+    <label class="hggs-label" for="checkbox1">Option 1</label>
+  </div>
+</div>
+```
