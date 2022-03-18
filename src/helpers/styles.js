@@ -49,3 +49,27 @@ const subHeaderChildWithParentWithSiblingStyles = [
   "margin-left: 40px;",
   "color: #707070",
 ];
+
+const bigBoxStyles = [
+  "width: 100%",
+  "padding: 30px 30px 30px 30px",
+  "margin-bottom: 20px",
+  "background: #e3e2e2",
+];
+
+const bigBoxWithHeightStyles = [
+  "width: 100%",
+  "height: 600px",
+  "padding: 30px 30px 30px 30px",
+  "margin-bottom: 20px",
+  "background: #e3e2e2",
+];
+
+const boxStyles = [
+  "background: #adacac",
+  "font-size: 40px",
+  "min-width: 200px",
+  "text-align: center",
+  "font-family: sans-serif",
+  "padding: 40px",
+];

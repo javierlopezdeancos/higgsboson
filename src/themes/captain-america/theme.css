@@ -563,6 +563,15 @@
   --logo-url-black: url("./assets/svg/logo-black.svg");
 }
 
+.hggs-flex {
+  --hggs-flex-column-gap-small: var(--hggs-space-vertical-small);
+  --hggs-flex-column-gap-medium: var(--hggs-space-vertical-medium);
+  --hggs-flex-column-gap-big: var(--hggs-space-vertical-big);
+  --hggs-flex-row-gap-small: var(--hggs-space-horizontal-small);
+  --hggs-flex-row-gap-medium: var(--hggs-space-horizontal-medium);
+  --hggs-flex-row-gap-big: var(--hggs-space-horizontal-big);
+}
+
 .hggs-table-wrapper {
   --table-wrapper-border-radius: 0;
   --table-wrapper-box-shadow: unset;

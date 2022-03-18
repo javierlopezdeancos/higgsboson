@@ -67,10 +67,18 @@
   --letter-spacing-default: 1px;
   --hggs-border-radius-default: 8px;
   --hggs-border-default: 1px solid var(--hggs-color-auxiliary-gray-001-default);
-  --hggs-space-vertical-medium-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
-  --hggs-space-vertical-small-default: calc(
-    var(--hggs-space-vertical-medium) / 2
-  );
+  --hggs-space-horizontal-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-horizontal-macro: calc(var(--hggs-space-vertical-medium) * 4);
+  --hggs-space-horizontal-big: calc(var(--hggs-space-horizontal-medium) * 2);
+  --hggs-space-horizontal-small: calc(var(--hggs-space-horizontal-medium) / 2);
+  --hggs-space-horizontal-micro: calc(var(--hggs-space-horizontal-medium) / 4);
+  --hggs-space-horizontal-nano: calc(var(--hggs-space-horizontal-medium) / 6);
+  --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-vertical-macro: calc(var(--hggs-space-vertical-medium) * 4);
+  --hggs-space-vertical-big: calc(var(--hggs-space-vertical-medium) * 2);
+  --hggs-space-vertical-small: calc(var(--hggs-space-vertical-medium) / 2);
+  --hggs-space-vertical-micro: calc(var(--hggs-space-vertical-medium) / 4);
+  --hggs-space-vertical-nano: calc(var(--hggs-space-vertical-medium) / 6);
   --hggs-layer-10-default: 11;
   --hggs-layer-0-default: 1;
   --hggs-app-background-default: var(--hggs-color-quinary-default);
