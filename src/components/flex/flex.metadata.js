@@ -6,8 +6,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -22,8 +22,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxWithHeightStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxWithHeightStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -38,8 +38,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxWithHeightStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxWithHeightStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -54,8 +54,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxWithHeightStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxWithHeightStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -70,8 +70,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -86,8 +86,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxWithHeightStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxWithHeightStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -102,8 +102,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -118,8 +118,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -134,8 +134,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxWithHeightStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxWithHeightStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -150,8 +150,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxWithHeightStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxWithHeightStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [
@@ -166,8 +166,8 @@ const data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
-        flexWrapper: bigBoxStyles,
-        flexItem: boxStyles,
+        flexWrapper: bigGrayBoxStyles,
+        flexItem: grayBoxStyles,
       },
       classes: {
         flexWrapper: [

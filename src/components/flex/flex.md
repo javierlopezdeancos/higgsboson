@@ -32,12 +32,12 @@
 ## Component variables
 
 ```
-  --hggs-flex-column-gap-small
-  --hggs-flex-column-gap-medium
-  --hggs-flex-column-gap-big
-  --hggs-flex-row-gap-small
-  --hggs-flex-row-gap-medium
-  --hggs-flex-row-gap-big
+--hggs-flex-column-gap-small
+--hggs-flex-column-gap-medium
+--hggs-flex-column-gap-big
+--hggs-flex-row-gap-small
+--hggs-flex-row-gap-medium
+--hggs-flex-row-gap-big
 ```
 
 ## HTML Structure
