@@ -50,14 +50,14 @@ const subHeaderChildWithParentWithSiblingStyles = [
   "color: #707070",
 ];
 
-const bigBoxStyles = [
+const bigGrayBoxStyles = [
   "width: 100%",
   "padding: 30px 30px 30px 30px",
   "margin-bottom: 20px",
   "background: #e3e2e2",
 ];
 
-const bigBoxWithHeightStyles = [
+const bigGrayBoxWithHeightStyles = [
   "width: 100%",
   "height: 600px",
   "padding: 30px 30px 30px 30px",
@@ -65,7 +65,7 @@ const bigBoxWithHeightStyles = [
   "background: #e3e2e2",
 ];
 
-const boxStyles = [
+const grayBoxStyles = [
   "background: #adacac",
   "font-size: 40px",
   "min-width: 200px",
