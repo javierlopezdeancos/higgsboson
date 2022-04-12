@@ -17,9 +17,9 @@
 ## Component variables
 
 ```
-  --field-label-after-color-required
-  --field-label-after-margin-left-required
-  --field-label-margin-bottom
+--field-label-after-color-required
+--field-label-after-margin-left-required
+--field-label-margin-bottom
 ```
 
 ## HTML Structure
