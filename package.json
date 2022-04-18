@@ -22,28 +22,27 @@
     "develop": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-extend autoprefixer postcss-copy-assets --output ./dist/$THEME.css --watch",
     "build:captain-america": "npm run set:theme:captain-america npm run build",
     "build:caramel": "npm run set:theme:caramel npm run build",
-    "build": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-extend postcss-csso  autoprefixer postcss-copy-assets --output ./dist/$THEME.min.css",
+    "build": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-nesting postcss-csso  autoprefixer postcss-copy-assets --output ./dist/$THEME.min.css",
     "format": "npx stylelint --fix \"src/**/*.css\"",
     "lint": "npx stylelint \"src/**/*.css\"",
     "develop:server": "lite-server"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.4.4",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.0.2",
+    "cssnano": "^5.1.7",
     "lite-server": "^2.6.1",
     "postcss": "^8.2.14",
-    "postcss-cli": "^8.3.1",
+    "postcss-cli": "^9.1.0",
     "postcss-copy-assets": "^0.3.1",
-    "postcss-csso": "^5.0.1",
+    "postcss-csso": "^6.0.0",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^14.0.1",
     "postcss-nesting": "^8.0.1",
-    "postcss-preset-env": "^6.7.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0"
+    "postcss-preset-env": "^7.4.3",
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0"
   },
-  "dependencies": {},
   "optionalDependencies": {
     "fsevents": "*"
   }

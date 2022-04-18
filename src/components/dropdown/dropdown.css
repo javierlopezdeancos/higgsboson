@@ -16,7 +16,7 @@
     z-index: 1;
     box-shadow: var(
       --dropdown-box-shadow-focus,
-      --hggs-form-box-shadow-focus-default
+      --hggs-form-box-primary-focus-default
     );
 
     & .hggs-dropdown-selected-options {

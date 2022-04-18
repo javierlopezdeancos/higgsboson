@@ -5,42 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-input</title>
+
     <link
       rel="stylesheet"
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./input.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <% _.each(data.inputs, function(d) { %>
+        <%
+          const articleInputStyle = _.reduce(d?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerInputStyle = _.reduce(d?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+
+        <article style="<%= articleInputStyle %>">
+          <h3 class="hggs-h3" style="<%= headerInputStyle %>">
+            <%= d.title %>
+          </h3>
+
+          <%
+            const inputClass = _.reduce(d.classes.input, function(acc, c) {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const isDisabled = d?.attributes?.input?.disabled ? d.attributes.input.disabled : false;
+            const hasError = d?.attributes?.input?.error ? d.attributes.input.error : false;
+          %>
+
+          <% if(isDisabled) { %>
+            <input type="test" class="<%= inputClass %>" disabled/>
+          <% } else if(hasError) { %>
+            <input type="test" class="<%= inputClass %>" error/>
+          <% } else { %>
+            <input type="test" class="<%= inputClass %>" />
+          <% } %>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
-    style="width: 100vw; height: 100vh; padding: 30px"
-  >
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-input.hggs-input--big
-      </h3>
-      <input type="test" class="hggs-input hggs-input--big" />
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-input</h3>
-      <input type="test" class="hggs-input" />
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-input.hggs-input--small
-      </h3>
-      <input type="test" class="hggs-input hggs-input--small" />
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-input [disabled]
-      </h3>
-      <input type="text" class="hggs-input" disabled />
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-input [error]</h3>
-      <input type="text" class="hggs-input" error />
-    </article>
-  </body>
+    style="width: 100%; height: 100%; padding: 30px"
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>

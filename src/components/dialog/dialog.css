@@ -32,14 +32,16 @@
   }
 
   &::backdrop {
-    background: linear-gradient(45deg, rgba(58, 58, 58, 0.6), rgba(8, 8, 8, 0.6));
+    background: linear-gradient(
+      45deg,
+      rgba(58, 58, 58, 0.6),
+      rgba(8, 8, 8, 0.6)
+    );
   }
 
   & .hggs-dialog-close {
-    position: absolute;
-    top: 0;
-    right: 10px;
+    position: var(--dialog-close-position);
+    top: var(--dialog-close-top);
+    right: var(--dialog-close-right);
   }
 }
-
-

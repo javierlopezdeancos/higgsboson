@@ -47,7 +47,7 @@
     border: var(--select-border-focus, 1px solid var(--hggs-color-primary));
     box-shadow: var(
       --select-box-shadow-focus,
-      --hggs-form-box-shadow-focus-default
+      --hggs-form-box-primary-focus-default
     );
   }
 }

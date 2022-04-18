@@ -10,18 +10,189 @@
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./checkbox.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <!-- default checkbox -->
+      <% _.each(data.default, function(c) { %>
+        <%
+          const articleBoxStyle = _.reduce(c?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerBoxStyle = _.reduce(c?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const checkboxWrapperClass = _.reduce(c.classes.wrapper, (acc, cls) => {
+            if (!acc) {
+              return cls;
+            }
+
+            return acc + ' ' + cls;
+          }, '');
+
+          const checkboxLabelClass = _.reduce(c.classes.label, (acc, cls) => {
+            if (!acc) {
+              return cls;
+            }
+
+            return acc + ' ' + cls;
+          }, '');
+
+          const checkboxHasSubtitle = !!c?.subtitle;
+
+          let headerSubtitleH4CheckboxStyle;
+
+          if (checkboxHasSubtitle) {
+            headerSubtitleH4CheckboxStyle = _.reduce(c?.styles?.subHeaderH4, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+          }
+        %>
+
+      <article style="<%= articleBoxStyle %>">
+        <h3 class="hggs-h3" style="<%= headerBoxStyle %>">
+          <%= c.title %>
+        </h3>
+
+        <% if(checkboxHasSubtitle) { %>
+          <h4 class="hggs-h4" style="<%= headerSubtitleH4CheckboxStyle %>">
+            <%= c.subtitle %>
+          </h4>
+        <% } %>
+
+         <div class="<%= checkboxWrapperClass %>">
+          <input type="checkbox" id="checkbox1" name="checkboxgroup" />
+          <label class="<%= checkboxLabelClass %>" for="checkbox1">Option 1</label>
+        </div>
+      </article>
+      <% }); %>
+
+      <!-- checkboxes -->
+      <% _.each(data.list, function(cs) { %>
+        <%
+          const articleCheckboxesStyle = _.reduce(cs?.styles?.article, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const headerCheckboxesStyle = _.reduce(cs?.styles?.header, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const headerSubtitleH4WithH5ChildBoxStyle = _.reduce(cs?.styles?.subHeaderH4WithH5Child, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const headerSubtitleH4BoxStyle = _.reduce(cs?.styles?.subHeaderH4, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const headerSubtitleH5BoxStyle = _.reduce(cs?.styles?.subHeaderH5, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + '; ' + c;
+          }, '');
+
+          const checkboxesListClass = cs.classes.list;
+
+          const checkboxWrapperClass = _.reduce(cs.classes.wrapper, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+
+          const checkboxLabelClass = _.reduce(cs.classes.label, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+        %>
+
+        <article style="<%= articleCheckboxesStyle %>">
+          <h3 class="hggs-h3" style="<%= headerCheckboxesStyle %>">
+            <%= cs.title %>
+          </h3>
+          <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxStyle %>">
+            <%= cs.subtitle %>
+          </h4>
+          <% _.each(cs.subtitles, function(s) { %>
+            <% const subTitleHasSubtitle = !!s?.subtitle; %>
+            <h4 class="hggs-h4" style="<%= headerSubtitleH4WithH5ChildBoxStyle %>">
+              <%= s.title %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= headerSubtitleH5BoxStyle %>">
+              <%= s.subtitle %>
+            </h5>
+
+            <div class="<%= checkboxesListClass %>">
+              <div class="<%= checkboxWrapperClass %>">
+                <input type="checkbox" id="checkbox1" name="checkboxgroup" />
+                <label class="<%= checkboxLabelClass %>" for="checkbox1">Option 1</label>
+              </div>
+              <div class="<%= checkboxWrapperClass %>">
+                <input type="checkbox" id="checkbox2" name="checkboxgroup" />
+                <label class="<%= checkboxLabelClass %>" for="checkbox2">Option 2</label>
+              </div>
+              <div class="<%= checkboxWrapperClass %>">
+                <input type="checkbox" id="checkbox3" name="checkboxgroup" />
+                <label class="<%= checkboxLabelClass %>" for="checkbox3">Option 3</label>
+              </div>
+            </div>
+          <% }); %>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
     style="width: 100%; height: 100%; padding: 30px"
-  >
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-checkbox</h3>
-      <div class="hggs-checkbox">
-        <input type="checkbox" id="checkbox1" name="checkboxgroup" />
-        <label class="hggs-label" for="checkbox1">Option 1</label>
-      </div>
-    </article>
-  </body>
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>

@@ -114,7 +114,19 @@
   --hggs-border-invalid: var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-error);
   --hggs-form-outline-focus: none;
-  --hggs-form-box-shadow-focus: 0 0 0 4px var(--hggs-color-auxiliary-senary-001);
+  --hggs-form-box-focus: 0 0 7px 1px var(--hggs-color-auxiliary-gray-003);
+  --hggs-form-box-primary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-senary-001);
+  --hggs-form-box-shadow-secondary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-secondary-000);
+  --hggs-form-box-shadow-tertiary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-tertiary-001);
+  --hggs-form-box-shadow-quaternary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-gray-002);
+  --hggs-form-box-shadow-quinary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-gray-006);
+  --hggs-form-box-shadow-senary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-senary-001);
   --hggs-form-input-height-big: 64px;
   --hggs-form-input-height: 38px;
   --hggs-form-input-height-small: 22px;
@@ -130,26 +142,29 @@
   --hggs-form-input-border-disabled: var(--hggs-border-disabled);
   --hggs-form-input-border-invalid: var(--hggs-border-invalid);
   --hggs-font-family-primary: "DM Sans", sans-serif;
-  --hggs-font-size-big: 24px;
   --hggs-font-size-colossal: 38px;
   --hggs-font-size-enormous: 32px;
   --hggs-font-size-extra-big: 28px;
+  --hggs-font-size-big: 24px;
+  --hggs-font-size-extra-medium: 21px;
   --hggs-font-size-medium: 18px;
+  --hggs-font-size-normal-plus: 16px;
+  --hggs-font-size-normal: 14px;
+  --hggs-font-size-small: 12px;
   --hggs-font-size-micro: 10px;
   --hggs-font-size-nano: 8px;
-  --hggs-font-size-normal-plus: 16px;
-  --hggs-font-size-small: 12px;
-  --hggs-font-size: 14px;
+  --hggs-font-size: var(--hggs-font-size-medium);
   --hggs-font-weight-bold: 700;
   --hggs-font-weight-extra-bold: 900;
   --hggs-font-weight-medium-plus: 600;
   --hggs-font-weight-medium: 500;
   --hggs-font-weight-normal: 400;
-  --hggs-layer-0: 1;
-  --hggs-layer-10: 10;
+  --hggs-line-height-normal: 25px;
   --hggs-line-height-micro: 5px;
   --hggs-line-height-small: 10px;
-  --hggs-line-height: 20px;
+  --hggs-line-height: var(--hggs-line-height-normal);
+  --hggs-layer-0: 1;
+  --hggs-layer-10: 10;
 }
 
 .hggs-h1,
@@ -176,7 +191,7 @@
   --title-h4-font-weight: var(--hggs-font-weight-bold);
   --title-h4-margin: var(--hggs-space-vertical-medium) 0
     var(--hggs-space-vertical-small) 0;
-  --title-h5-font-size: var(--hggs-font-size-medium);
+  --title-h5-font-size: var(--hggs-font-size-extra-medium);
   --title-h5-font-weight: var(--hggs-font-weight-bold);
   --title-h5-margin: var(--hggs-space-vertical-small) 0
     var(--hggs-space-vertical-small) 0;
@@ -227,7 +242,7 @@
   --input-border-radius: var(--hggs-form-input-border-radius);
   --input-border-focus: var(--hggs-form-input-border-focus);
   --input-outline-focus: var(--hggs-form-outline-focus);
-  --input-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --input-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --input-border-disabled: var(--hggs-form-input-border-disabled);
   --input-border-invalid: var(--hggs-form-input-border-invalid);
   --input-height: var(--hggs-form-input-height);
@@ -252,7 +267,7 @@
 .hggs-select-wrapper,
 .hggs-select {
   --select-border-focus: var(--hggs-form-input-border-focus);
-  --select-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --select-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --select-outline-focus: var(--hggs-form-outline-focus);
   --select-border-radius: var(--hggs-form-input-border-radius);
   --select-border: var(--hggs-form-input-border);
@@ -267,7 +282,7 @@
 .hggs-dropdown {
   --dropdown-border: var(--hggs-form-input-border);
   --dropdown-border-focus: var(--hggs-form-input-border-focus);
-  --dropdown-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --dropdown-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --dropdown-border-radius: var(--hggs-form-input-border-radius);
   --dropdown-height: var(--hggs-form-input-height);
   --dropdown-padding: var(--hggs-form-input-padding);
@@ -312,7 +327,7 @@
   --checkbox-border-radius: 0;
   --checkbox-border: var(--hggs-form-input-border);
   --checkbox-outline-focus: var(--hggs-form-outline-focus);
-  --checkbox-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --checkbox-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --checkbox-margin-left: var(--hggs-space-horizontal-small);
   --checkbox-ckeck-icon-background-color: var(--hggs-color-primary);
   --checkbox-ckeck-icon-height-after: 10px;
@@ -333,7 +348,7 @@
   --radio-border-checked: 5px solid var(--hggs-color-primary);
   --radio-border-color-hover: var(--hggs-color-primary);
   --radio-outline-focus: var(--hggs-form-outline-focus);
-  --radio-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --radio-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --radio-label-margin-left: var(--hggs-space-horizontal-small);
   --radio-inside-background-color: var(--hggs-app-background);
   --radio-inside-border-bold: 2px solid var(--hggs-border-color-primary);
@@ -371,6 +386,7 @@
   --icon-label-font-family: var(--hggs-font-family-primary);
   --icon-label-font-size: var(--hggs-font-size);
   --icon-label-font-weigth: var(--hggs-font-weight-medium);
+  --icon-label-text-align: left;
   --icon-label-margin-left: var(--hggs-space-horizontal-small);
   --icon-label-quinary-color: var(--hggs-color-quinary);
   --icon-outline-border-primary: var(--hggs-border-primary);
@@ -386,6 +402,8 @@
 }
 
 .hggs-button {
+  --button-outline-focus: var(--hggs-form-outline-focus);
+  --button-box-shadow-focus: var(--hggs-form-box-focus);
   --button-background-hover: var(--hggs-color-auxiliary-gray-002);
   --button-background-primary-hover: var(--hggs-color-auxiliary-primary-005);
   --button-background-primary: var(--hggs-color-primary);
@@ -404,17 +422,17 @@
   --button-background: var(--hggs-color-auxiliary-gray-001);
   --button-border-outline-hover: 1px solid transparent;
   --button-border-outline-primary-hover: 1px solid transparent;
-  --button-border-outline-primary: 1px solid var(--hggs-color-primary);
+  --button-border-outline-primary: var(--hggs-border-primary);
   --button-border-outline-quaternary-hover: 1px solid transparent;
-  --button-border-outline-quaternary: 1px solid var(--hggs-color-quaternary);
+  --button-border-outline-quaternary: var(--hggs-border-quaternary);
   --button-border-outline-quinary-hover: 1px solid transparent;
-  --button-border-outline-quinary: 1px solid var(--hggs-color-quinary);
+  --button-border-outline-quinary: var(--hggs-border-quinary);
   --button-border-outline-secondary-hover: 1px solid transparent;
-  --button-border-outline-secondary: 1px solid var(--hggs-color-secondary);
+  --button-border-outline-secondary: var(--hggs-border-secondary);
   --button-border-outline-senary-hover: 1px solid transparent;
-  --button-border-outline-senary: 1px solid var(--hggs-color-senary);
+  --button-border-outline-senary: var(--hggs-border-senary);
   --button-border-outline-tertiary-hover: 1px solid transparent;
-  --button-border-outline-tertiary: 1px solid var(--hggs-color-tertiary);
+  --button-border-outline-tertiary: var(--hggs-border-tertiary);
   --button-border-outline: 1px solid var(--hggs-color-auxiliary-gray-004);
   --button-border-radius: 3px;
   --button-box-shadow-hover: 0px 0px 0px 2px
@@ -435,11 +453,23 @@
     var(--hggs-color-auxiliary-tertiary-004);
   --button-box-shadow-primary-hover: 0px 0px 0px 2px
     var(--hggs-color-auxiliary-primary-005);
+  --button-box-shadow-primary-focus: var(--hggs-form-box-primary-focus);
   --button-box-shadow-quaternary-hover: 0px 0px 0px 2px
     var(--hggs-color-quaternary);
+  --button-box-shadow-quaternary-focus: var(
+    --hggs-form-box-shadow-quaternary-focus
+  );
   --button-box-shadow-quinary-hover: 0px 0px 0px 2px var(--hggs-color--quinary);
+  --button-box-shadow-quinary-focus: var(--hggs-form-box-shadow-quinary-focus);
   --button-box-shadow-secondary-hover: 0px 0px 0px 2px
     var(--hggs-color-auxiliary-secondary-004);
+  --button-box-shadow-secondary-focus: var(
+    --hggs-form-box-shadow-secondary-focus
+  );
+  --button-box-shadow-tertiary-focus: var(
+    --hggs-form-box-shadow-tertiary-focus
+  );
+  --button-box-shadow-senary-focus: var(--hggs-form-box-shadow-senary-focus);
   --button-box-shadow-senary-hover: 0px 0px 0px 2px
     var(--hggs-color-auxiliary-senary-005);
   --button-box-shadow-tertiary-hover: 0px 0px 0px 2px
@@ -471,6 +501,7 @@
   --button-color: var(--hggs-color-auxiliary-gray-008);
   --button-font-family: var(--hggs-font-family-primary);
   --button-font-letter-spacing: 1px;
+  --button-font-size-big: var(--hggs-font-size-extra-medium);
   --button-font-size-medium: var(--hggs-font-size);
   --button-font-size-small: var(--hggs-font-size-small);
   --button-font-size: var(--hggs-font-size-normal-plus);
@@ -530,6 +561,15 @@
   --logo-height: 300px;
   --logo-url-white: url("./assets/svg/logo-white.svg");
   --logo-url-black: url("./assets/svg/logo-black.svg");
+}
+
+.hggs-flex {
+  --hggs-flex-column-gap-small: var(--hggs-space-vertical-small);
+  --hggs-flex-column-gap-medium: var(--hggs-space-vertical-medium);
+  --hggs-flex-column-gap-big: var(--hggs-space-vertical-big);
+  --hggs-flex-row-gap-small: var(--hggs-space-horizontal-small);
+  --hggs-flex-row-gap-medium: var(--hggs-space-horizontal-medium);
+  --hggs-flex-row-gap-big: var(--hggs-space-horizontal-big);
 }
 
 .hggs-table-wrapper {
@@ -695,4 +735,7 @@
   --dialog-width-big: 80vw;
   --dialog-width-medium: 65vw;
   --dialog-width-small: 40vw;
+  --dialog-close-position: absolute;
+  --dialog-close-top: 20px;
+  --dialog-close-right: 10px;
 }

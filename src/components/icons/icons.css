@@ -181,6 +181,7 @@
     );
     font-size: var(--icon-label-font-size, --hggs-font-size-default);
     color: var(--icon-label-color, --hggs-color-auxiliary-gray-007-default);
+    text-align: var(--icon-label-text-align, left);
     margin-left: var(
       --icon-label-margin-left,
       --hggs-space-vertical-small-default
