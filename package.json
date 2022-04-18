@@ -28,20 +28,20 @@
     "develop:server": "lite-server"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.4.4",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.0.2",
+    "cssnano": "^5.1.7",
     "lite-server": "^2.6.1",
     "postcss": "^8.2.14",
-    "postcss-cli": "^8.3.1",
+    "postcss-cli": "^9.1.0",
     "postcss-copy-assets": "^0.3.1",
-    "postcss-csso": "^5.0.1",
+    "postcss-csso": "^6.0.0",
     "postcss-extend": "^1.0.5",
-    "postcss-import": "^14.0.1",
-    "postcss-nesting": "^8.0.1",
-    "postcss-preset-env": "^6.7.0",
-    "stylelint": "^14.0.1",
-    "stylelint-config-standard": "^23.0.0"
+    "postcss-import": "^14.1.0",
+    "postcss-nesting": "^10.1.4",
+    "postcss-preset-env": "^7.4.3",
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0"
   },
   "optionalDependencies": {
     "fsevents": "*"
