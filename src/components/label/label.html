@@ -5,28 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-label</title>
-    <link rel="stylesheet" type="text/css" href="../../../dist/vizor.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../dist/captain-america.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./label.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <!-- default label -->
+
+      <% _.each(data.default, function(l) { %>
+        <%
+          const articleLabelStyle = _.reduce(l?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerLabelStyle = _.reduce(l?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const labelClass = _.reduce(l.classes.label, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+        %>
+
+        <article style="<%= articleLabelStyle %>">
+          <h3 class="hggs-h3" style="<%= headerLabelStyle %>">
+            <%= l.title %>
+          </h3>
+          <label for="id-test" class="<%= labelClass %>">Label</label>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
     style="width: 100vw; height: 100vh; padding: 30px"
-  >
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-label</h3>
-      <label for="id-test" class="hggs-label">Label</label>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-label [focus]</h3>
-      <label for="id-test" class="hggs-label hggs-label--focus">Label</label>
-    </article>
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">
-        .hggs-label [disabled]
-      </h3>
-      <label for="id-test" class="hggs-label hggs-label--disabled" disabled
-        >Label</label
-      >
-    </article>
-  </body>
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
