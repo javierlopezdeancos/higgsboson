@@ -159,9 +159,10 @@
   --hggs-font-weight-medium-plus: 600;
   --hggs-font-weight-medium: 500;
   --hggs-font-weight-normal: 400;
+  --hggs-font-letter-spacing: 1px;
   --hggs-line-height-normal: 25px;
-  --hggs-line-height-micro: 5px;
-  --hggs-line-height-small: 10px;
+  --hggs-line-height-micro: 10px;
+  --hggs-line-height-small: 15px;
   --hggs-line-height: var(--hggs-line-height-normal);
   --hggs-layer-0: 1;
   --hggs-layer-10: 10;
@@ -210,6 +211,7 @@
   --text-font-size-small: var(--hggs-font-size-small);
   --text-margin: var(--hggs-space-vertical-medium) 0;
   --text-line-height: var(--hggs-line-height);
+  --text-line-height-small: var(--hggs-line-height-small);
 }
 
 .hggs-list {
@@ -500,7 +502,7 @@
   --button-color-tertiary: var(--hggs-color-quaternary);
   --button-color: var(--hggs-color-auxiliary-gray-008);
   --button-font-family: var(--hggs-font-family-primary);
-  --button-font-letter-spacing: 1px;
+  --button-font-letter-spacing: var(--hggs-font-letter-spacing);
   --button-font-size-big: var(--hggs-font-size-extra-medium);
   --button-font-size-medium: var(--hggs-font-size);
   --button-font-size-small: var(--hggs-font-size-small);
