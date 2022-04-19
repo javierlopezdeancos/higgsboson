@@ -64,7 +64,11 @@
   --hggs-font-weight-medium-default: 500;
   --hggs-font-weight-bold-default: 700;
   --hggs-font-weight-extra-bold-default: 900;
-  --letter-spacing-default: 1px;
+  --hggs-font-letter-spacing-default: 1px;
+  --hggs-line-height-norma-defaultl: 25px;
+  --hggs-line-height-micro-default: 10px;
+  --hggs-line-height-small-default: 15px;
+  --hggs-line-height-default: var(--hggs-line-height-normal-default);
   --hggs-border-radius-default: 8px;
   --hggs-border-default: 1px solid var(--hggs-color-auxiliary-gray-001-default);
   --hggs-space-horizontal-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);

@@ -16,5 +16,9 @@
 
   &.hggs-text--small {
     font-size: var(--text-font-size-small, --text-font-size-small-default);
+    line-height: var(
+      --text-line-height-small,
+      --text-line-height-small-default
+    );
   }
 }
