@@ -73,3 +73,5 @@ const grayBoxStyles = [
   "font-family: sans-serif",
   "padding: 40px",
 ];
+
+const inlineMarginLeftStyles = ["margin-left: 10px", "margin-bottom: 10px"];

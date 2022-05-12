@@ -1,198 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-    <script
-      type="text/javascript">WebFont.load({ google: { families: ["DM Sans:regular,italic,500,500italic,700,700italic"] } });</script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-tag</title>
-    <link rel="stylesheet" type="text/css" href="../../../dist/captain-america.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../dist/captain-america.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./tag.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <% _.each(data.default, function(t) { %>
+
+        <%
+          const articleTagStyle = _.reduce(t?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerTagStyle = _.reduce(t?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const tagClass = _.reduce(t.classes.tag, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+        %>
+
+        <article style="<%= articleTagStyle %>">
+          <h3 class="hggs-h3" style="<%= headerTagStyle %>">
+            <%= t.title %>
+          </h3>
+          <div class="<%= tagClass %>"><%= t.label %></div>
+        </article>
+      <% }); %>
+
+      <article style="<%= articleStyles %>">
+        <%
+          const headerTagStyle = _.reduce(data.small[0].styles.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+        <h3 class="hggs-h3" style="<%= headerTagStyle %>">
+          <%= data.small[0].title %>
+        </h3>
+        <div class="hggs-flex hggs-flex--top-left-row hggs-flex--row-wrap">
+          <% _.each(data.small, function(ts) { %>
+          <%
+            let tagSmallClass = _.reduce(ts.classes.tag, (acc, c) => {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const tagStyle = _.reduce(ts?.styles?.tag, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+          %>
+
+            <div
+              class="<%= tagSmallClass %>"
+              style="<%= tagStyle %>"
+            >
+              <%= ts.label %>
+            </div>
+          <% }); %>
+        </div>
+      </article>
+    </script>
   </head>
 
-  <body class="hggs-flex--top-left-column" style="width: 100%; height: 100%; padding: 0 30px 30px 30px;">
-    <h3 class="hggs-h3" style="margin-bottom: 10px">.hggs-tag</h3>
-    <div class="hggs-tag">default</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--primary</h3>
-    <div class="hggs-tag hggs-tag--primary">primary</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--secondary</h3>
-    <div class="hggs-tag hggs-tag--secondary">secondary</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--tertiary</h3>
-    <div class="hggs-tag hggs-tag--tertiary">tertiary</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--quaternary</h3>
-    <div class="hggs-tag hggs-tag--quaternary">quaternary</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--quinary</h3>
-    <div  style="background: black; padding: 10px;">
-        <div class="hggs-tag hggs-tag--quinary">quinary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--senary</h3>
-    <div class="hggs-tag hggs-tag--senary">senary</div>
-
-    <h3 class="hggs-h3" style="margin-bottom: 10px">.hggs-tag.hggs-tag--rounded</h3>
-    <div class="hggs-tag hggs-tag--rounded">default</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--primary.hggs-tag--rounded</h3>
-    <div class="hggs-tag hggs-tag--primary hggs-tag--rounded">primary</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--secondary.hggs-tag--rounded</h3>
-    <div class="hggs-tag hggs-tag--secondary hggs-tag--rounded">secondary</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--tertiary.hggs-tag--rounded</h3>
-    <div class="hggs-tag hggs-tag--tertiary hggs-tag--rounded">tertiary</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--quaternary.hggs-tag--rounded</h3>
-    <div class="hggs-tag hggs-tag--quaternary hggs-tag--rounded">quaternary</div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--quinary.hggs-tag--rounded</h3>
-    <div  style="background: black; padding: 10px;">
-        <div class="hggs-tag hggs-tag--quinary hggs-tag--rounded">quinary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--senary.hggs-tag--rounded</h3>
-    <div class="hggs-tag hggs-tag--senary hggs-tag--rounded">senary</div>
-
-    <h3 class="hggs-h3" style="margin-bottom: 10px">.hggs-tag.hggs-tag--outline</h3>
-    <div class="hggs-flex--center-left-row ">
-      <div class="hggs-tag hggs-tag--outline" style="margin-right: 10px;">default</div>
-      <div class="hggs-tag hggs-tag--rounded hggs-tag--outline">default</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--primary.hggs-tag--outline</h3>
-    <div class="hggs-flex--center-left-row ">
-      <div class="hggs-tag hggs-tag--primary hggs-tag--outline" style="margin-right: 10px;">primary</div>
-      <div class="hggs-tag hggs-tag--primary hggs-tag--rounded hggs-tag--outline">primary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--secondary.hggs-tag--rounded</h3>
-    <div class="hggs-flex--center-left-row ">
-      <div class="hggs-tag hggs-tag--secondary hggs-tag--outline" style="margin-right: 10px;">secondary</div>
-      <div class="hggs-tag hggs-tag--secondary hggs-tag--rounded hggs-tag--outline">secondary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--tertiary.hggs-tag--outline</h3>
-    <div class="hggs-flex--center-left-row ">
-      <div class="hggs-tag hggs-tag--tertiary hggs-tag--outline" style="margin-right: 10px;">tertiary</div>
-      <div class="hggs-tag hggs-tag--tertiary hggs-tag--rounded hggs-tag--outline">tertiary</div>
-    </div>
-
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--quaternary.hggs-tag--outline</h3>
-    <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--quaternary hggs-tag--outline" style="margin-right: 10px;">quaternary</div>
-      <div class="hggs-tag hggs-tag--quaternary hggs-tag--rounded hggs-tag--outline">quaternary</div>
-    </div>
-
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--quinary.hggs-tag--outline</h3>
-    <div class="hggs-flex--center-left-row" style="background: black; padding: 10px;">
-      <div class="hggs-tag hggs-tag--quinary hggs-tag--outline" style="margin-right: 10px;">quinary</div>
-      <div class="hggs-tag hggs-tag--quinary hggs-tag--rounded hggs-tag--outline">quinary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--senary.hggs-tag--outline</h3>
-    <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--senary hggs-tag--outline" style="margin-right: 10px;">senary</div>
-      <div class="hggs-tag hggs-tag--senary hggs-tag--rounded hggs-tag--outline">senary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--subtle</h3>
-     <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--subtle" style="margin-right: 10px;">default</div>
-      <div class="hggs-tag hggs-tag--rounded hggs-tag--subtle" style="margin-right: 10px;">default</div>
-      <div class="hggs-tag hggs-tag--outline hggs-tag--subtle" style="margin-right: 10px;">default</div>
-      <div class="hggs-tag hggs-tag--rounded hggs-tag--outline hggs-tag--subtle">default</div>
-     </div>
-
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--subtle.hggs-tag--primary</h3>
-    <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--primary" style="margin-right: 10px;">primary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--primary" style="margin-right: 10px;">
-      primary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--primary" style="margin-right: 10px;">
-      primary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--outline hggs-tag--primary">primary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--subtle.hggs-tag--secondary</h3>
-    <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--secondary" style="margin-right: 10px;">secondary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--secondary" style="margin-right: 10px;">secondary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--secondary" style="margin-right: 10px;">secondary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--outline hggs-tag--secondary">secondary</div>
-    </div>
-
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--subtle.hggs-tag--tertiary</h3>
-    <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--tertiary" style="margin-right: 10px;">tertiary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--tertiary" style="margin-right: 10px;">tertiary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--tertiary" style="margin-right: 10px;">tertiary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--outline hggs-tag--tertiary" style="margin-right: 10px;">tertiary</div>
-    </div>
-
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--subtle.hggs-tag--quaternary</h3>
-    <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--quaternary" style="margin-right: 10px;">quaternary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--quaternary" style="margin-right: 10px;">quaternary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--quaternary" style="margin-right: 10px;">quaternary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--outline hggs-tag--quaternary" style="margin-right: 10px;">quaternary</div>
-    </div>
-
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--subtle.hggs-tag--quinary</h3>
-    <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--quinary" style="margin-right: 10px;">quinary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--quinary" style="margin-right: 10px;">
-      quinary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--quinary" style="margin-right: 10px;"
-      >quinary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--outline hggs-tag--quinary">quinary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--subtle.hggs-tag--senary</h3>
-    <div class="hggs-flex--center-left-row">
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--senary" style="margin-right: 10px;">senary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--senary" style="margin-right: 10px;">senary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--senary" style="margin-right: 10px;">senary</div>
-      <div class="hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--outline hggs-tag--senary">senary</div>
-    </div>
-
-    <h3 class="hggs-h3" style="margin-top: 40px; margin-bottom: 10px">.hggs-tag.hggs-tag--small</h3>
-    <div class="hggs-flex--center-left-row" style="flex-wrap: wrap;gap: 5px;">
-      <div class="hggs-tag hggs-tag--small hggs-tag--primary">primary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--secondary">secondary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--senary">senary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--rounded hggs-tag--primary">primary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--rounded hggs-tag--secondary">secondary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--rounded hggs-tag--subtle hggs-tag--senary">senary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--outline hggs-tag--primary">primary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--outline hggs-tag--secondary">secondary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--outline hggs-tag--subtle hggs-tag--senary">senary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--outline hggs-tag--rounded hggs-tag--primary">primary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--outline  hggs-tag--rounded hggs-tag--secondary">secondary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--outline  hggs-tag--rounded hggs-tag--subtle hggs-tag--senary">senary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--primary">primary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--secondary">secondary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--senary">senary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--rounded hggs-tag--primary">primary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--rounded hggs-tag--secondary">secondary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--rounded hggs-tag--subtle hggs-tag--senary">senary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--outline hggs-tag--primary">primary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--outline hggs-tag--secondary">secondary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--outline hggs-tag--subtle hggs-tag--senary">senary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--primary">primary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--outline  hggs-tag--rounded hggs-tag--secondary">secondary</div>
-      <div class="hggs-tag hggs-tag--small hggs-tag--subtle hggs-tag--outline  hggs-tag--rounded hggs-tag--subtle hggs-tag--senary">senary</div>
-    </div>
-  </body>
+  <body
+    id="body"
+    class="hggs-flex--top-left-column"
+    style="width: 100%; height: 100%; padding: 30px"
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
-

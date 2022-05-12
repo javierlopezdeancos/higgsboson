@@ -612,7 +612,7 @@
   --tag-color: var(--hggs-color-auxiliary-gray-008);
   --tag-padding: 5px 10px;
   --tag-padding-small: var(--hggs-space-horizontal-micro)
-    var(--hggs-space-vertical-nano);
+    var(--hggs-space-vertical-small);
   --tag-border-radius: calc(var(--hggs-border-radius) * 2);
   --tag-border-outline: 1px solid var(--hggs-color-auxiliary-gray-004);
   --tag-color-outline: var(--hggs-color-auxiliary-gray-004);

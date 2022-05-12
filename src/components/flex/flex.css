@@ -89,6 +89,10 @@
     &.hggs-flex-item--flex-1 {
       flex: 1;
     }
+
+    &.hggs-flex--row-wrap {
+      flex-wrap: wrap;
+    }
   }
 
   &.hggs-flex--center-column,
