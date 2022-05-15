@@ -75,3 +75,16 @@ const grayBoxStyles = [
 ];
 
 const inlineMarginLeftStyles = ["margin-left: 10px", "margin-bottom: 10px"];
+
+const inlineMarginLeftWrapQuinaryStyles = [
+  "margin-left: 10px",
+  "margin-bottom: 10px",
+  "background: #000",
+  "padding: 10px",
+];
+
+const wrapperQuinaryStyles = [
+  "display: inline-block",
+  "background: #000",
+  "padding: 10px",
+];

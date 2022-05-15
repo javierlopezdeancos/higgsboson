@@ -49,19 +49,8 @@
 
             return acc + ' ' + c;
           }, '');
-        %>
 
-        <article style="<%= articleTagStyle %>">
-          <h3 class="hggs-h3" style="<%= headerTagStyle %>">
-            <%= t.title %>
-          </h3>
-          <div class="<%= tagClass %>"><%= t.label %></div>
-        </article>
-      <% }); %>
-
-      <article style="<%= articleStyles %>">
-        <%
-          const headerTagStyle = _.reduce(data.small[0].styles.header, (acc, s) => {
+          const tagWrapStyle = _.reduce(t?.styles?.wrap, (acc, s) => {
             if (!acc) {
               return s;
             }
@@ -69,7 +58,165 @@
             return acc + '; ' + s;
           }, '');
         %>
-        <h3 class="hggs-h3" style="<%= headerTagStyle %>">
+
+        <article style="<%= articleTagStyle %>">
+          <h3 class="hggs-h3" style="<%= headerTagStyle %>">
+            <%= t.title %>
+          </h3>
+
+          <% if (t?.styles?.wrap) { %>
+            <div style="<%= tagWrapStyle %>">
+              <div class="<%= tagClass %>">
+                <%= t.label %>
+              </div>
+            </div>
+          <% } else { %>
+            <div class="<%= tagClass %>">
+              <%= t.label %>
+            </div>
+          <% } %>
+        </article>
+      <% }); %>
+
+      <!-- Rounded -->
+      <article style="<%= articleStyles %>">
+        <%
+          const headerOutlineTagStyle = _.reduce(data.outline[0].styles.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+        <h3 class="hggs-h3" style="<%= headerOutlineTagStyle %>">
+          <%= data.outline[0].title %>
+        </h3>
+        <div class="hggs-flex hggs-flex--top-left-row hggs-flex--row-wrap">
+          <% _.each(data.outline, function(ts, ti) { %>
+          <%
+            let tagOutlineClass = _.reduce(ts.classes.tag, (acc, c) => {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const tagWrapStyle = _.reduce(ts?.styles?.wrap, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+
+            const tagStyle = _.reduce(ts?.styles?.tag, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+          %>
+
+          <% if (ts?.styles?.wrap) { %>
+            <div style="<%= tagWrapStyle %>">
+              <div class="<%= tagOutlineClass %>">
+                <%= ts.label %>
+              </div>
+            </div>
+          <% } else { %>
+           <div
+              class="<%= tagOutlineClass %>"
+              style="<%= tagStyle %>"
+            >
+              <%= ts.label %>
+            </div>
+          <% } %>
+
+            <div
+              class="<%= tagOutlineClass %>"
+              style="<%= tagStyle %>"
+            >
+              <%= ts.label %>
+            </div>
+          <% }); %>
+        </div>
+      </article>
+
+      <!-- Rounded -->
+      <article style="<%= articleStyles %>">
+        <%
+          const headerRoundedTagStyle = _.reduce(data.rounded[0].styles.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+        <h3 class="hggs-h3" style="<%= headerRoundedTagStyle %>">
+          <%= data.rounded[0].title %>
+        </h3>
+        <div class="hggs-flex hggs-flex--top-left-row hggs-flex--row-wrap">
+          <% _.each(data.rounded, function(ts) { %>
+          <%
+            let tagRoundedClass = _.reduce(ts.classes.tag, (acc, c) => {
+              if (!acc) {
+                return c;
+              }
+
+              return acc + ' ' + c;
+            }, '');
+
+            const tagWrapStyle = _.reduce(ts?.styles?.wrap, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+
+            const tagStyle = _.reduce(ts?.styles?.tag, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+          %>
+
+          <% if (ts?.styles?.wrap) { %>
+            <div style="<%= tagWrapStyle %>">
+              <div class="<%= tagRoundedClass %>">
+                <%= ts.label %>
+              </div>
+            </div>
+          <% } else { %>
+            <div
+              class="<%= tagRoundedClass %>"
+              style="<%= tagStyle %>"
+            >
+              <%= ts.label %>
+            </div>
+          <% } %>
+          <% }); %>
+        </div>
+      </article>
+
+      <!-- Small -->
+      <article style="<%= articleStyles %>">
+        <%
+          const headerSmallTagStyle = _.reduce(data.small[0].styles.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+        %>
+        <h3 class="hggs-h3" style="<%= headerSmallTagStyle %>">
           <%= data.small[0].title %>
         </h3>
         <div class="hggs-flex hggs-flex--top-left-row hggs-flex--row-wrap">
@@ -83,6 +230,14 @@
               return acc + ' ' + c;
             }, '');
 
+            const tagWrapStyle = _.reduce(ts?.styles?.wrap, (acc, s) => {
+              if (!acc) {
+                return s;
+              }
+
+              return acc + '; ' + s;
+            }, '');
+
             const tagStyle = _.reduce(ts?.styles?.tag, (acc, s) => {
               if (!acc) {
                 return s;
@@ -92,12 +247,20 @@
             }, '');
           %>
 
+          <% if (ts?.styles?.wrap) { %>
+            <div style="<%= tagWrapStyle %>">
+              <div class="<%= tagSmallClass %>">
+                <%= ts.label %>
+              </div>
+            </div>
+          <% } else { %>
             <div
               class="<%= tagSmallClass %>"
               style="<%= tagStyle %>"
             >
               <%= ts.label %>
             </div>
+          <% } %>
           <% }); %>
         </div>
       </article>

@@ -160,9 +160,11 @@
   --hggs-font-weight-medium: 500;
   --hggs-font-weight-normal: 400;
   --hggs-font-letter-spacing: 1px;
+  --hggs-font-letter-spacing-small: 0.6px;
+  --hggs-font-letter-spacing-micro: 0.3px;
   --hggs-line-height-normal: 25px;
-  --hggs-line-height-micro: 10px;
   --hggs-line-height-small: 15px;
+  --hggs-line-height-micro: 10px;
   --hggs-line-height: var(--hggs-line-height-normal);
   --hggs-layer-0: 1;
   --hggs-layer-10: 10;
@@ -602,15 +604,16 @@
 
 .hggs-tag {
   --tag-font-family: var(--hggs-font-family-primary);
-  --tag-font-size: var(--hggs-font-size-micro);
+  --tag-font-size: var(--hggs-font-size-small);
   --tag-font-size-small: var(--hggs-font-size-nano);
   --tag-font-weight: var(--hggs-font-weight-bold);
   --tag-text-transform: uppercase;
-  --tag-letter-spacing: 0.2px;
+  --tag-letter-spacing: var(--hggs-font-letter-spacing-small);
   --tag-text-align: center;
   --tag-background: var(--hggs-color-auxiliary-gray-002);
   --tag-color: var(--hggs-color-auxiliary-gray-008);
-  --tag-padding: 5px 10px;
+  --tag-padding: var(--hggs-space-horizontal-small)
+    var(--hggs-space-vertical-medium);
   --tag-padding-small: var(--hggs-space-horizontal-micro)
     var(--hggs-space-vertical-small);
   --tag-border-radius: calc(var(--hggs-border-radius) * 2);
