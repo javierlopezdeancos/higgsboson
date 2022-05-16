@@ -1,4 +1,9 @@
 .hggs-list {
+  padding-left: var(
+    --list-padding-left,
+    var(--hggs-space-horizontal-macro-default)
+  );
+
   & .hggs-list-item,
   & .hggs-list-item a {
     font-family: var(
