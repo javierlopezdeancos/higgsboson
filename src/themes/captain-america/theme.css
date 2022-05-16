@@ -68,10 +68,10 @@
   --hggs-filter-auxiliary-gray-004: invert(49%) sepia(0%) saturate(1%)
     hue-rotate(119deg) brightness(90%) contrast(89%);
   --hggs-color-error: #ff0b0b;
-  --hggs-app-background: var(--hggs-color-quinary);
-  --hggs-app-color: var(--hggs-color-auxiliary-gray-005);
+  --hggs-background: var(--hggs-color-quinary);
+  --hggs-color: var(--hggs-color-auxiliary-gray-005);
   --hggs-space-horizontal-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
-  --hggs-space-horizontal-macro: calc(var(--hggs-space-vertical-medium) * 4);
+  --hggs-space-horizontal-macro: calc(var(--hggs-space-horizontal-medium) * 4);
   --hggs-space-horizontal-big: calc(var(--hggs-space-horizontal-medium) * 2);
   --hggs-space-horizontal-small: calc(var(--hggs-space-horizontal-medium) / 2);
   --hggs-space-horizontal-micro: calc(var(--hggs-space-horizontal-medium) / 4);
@@ -170,6 +170,14 @@
   --hggs-layer-10: 10;
 }
 
+.hggs-app {
+  --app-color: var(--hggs-color);
+  --app-background: var(--hggs-background);
+  --app-padding: var(--hggs-space-vertical-big)
+    var(--hggs-space-horizontal-small);
+  --app-footer-padding-top: var(--hggs-space-vertical-medium);
+}
+
 .hggs-h1,
 .hggs-h2,
 .hggs-h3,
@@ -219,11 +227,12 @@
 .hggs-list {
   --list-item-font-family: var(--hggs-font-family-primary);
   --list-item-font-weight: var(--hggs-font-weight-normal);
-  --list-item-color: var(--hggs-app-color);
+  --list-item-color: var(--hggs-color);
   --list-item-font-size: var(--hggs-font-size);
   --list-item-margin-bottom: var(--hggs-space-vertical-micro);
+  --list-padding-left: var(--hggs-space-horizontal-macro);
   --list-item-content-marker: counter(list-item) " -   ";
-  --list-item-color-marker: var(--hggs-app-color);
+  --list-item-color-marker: var(--hggs-color);
   --list-item-font-size-marker: var(--hggs-font-size-big);
   --list-item-font-weight-marker: var(--hggs-font-weight-medium-plus);
 }
@@ -263,7 +272,7 @@
 }
 
 .hggs-option {
-  --option-color: var(--hggs-app-color);
+  --option-color: var(--hggs-color);
   --option-font-family: var(--hggs-font-family-primary);
   --option-font-size: var(--hggs-font-size);
 }
@@ -275,7 +284,7 @@
   --select-outline-focus: var(--hggs-form-outline-focus);
   --select-border-radius: var(--hggs-form-input-border-radius);
   --select-border: var(--hggs-form-input-border);
-  --select-color: var(--hggs-app-color);
+  --select-color: var(--hggs-color);
   --select-font-family: var(--hggs-font-family-primary);
   --select-font-size: var(--hggs-font-size);
   --select-height: var(--hggs-form-input-height);
@@ -301,7 +310,7 @@
   --dropdown-options-max-height: calc(var(--hggs-space-vertical-big) * 10);
   --dropdown-option-label-font-family: var(--hggs-font-family-primary);
   --dropdown-option-label-font-size: var(--hggs-font-size);
-  --dropdown-option-label-color: var(--hggs-app-color);
+  --dropdown-option-label-color: var(--hggs-color);
   --dropdown-option-label-padding: calc(var(--hggs-space-vertical-medium) / 2) 0
     calc(var(--hggs-space-vertical-medium) / 2)
     var(--hggs-space-horizontal-medium);
@@ -312,7 +321,7 @@
   --dropdown-options-selected-padding-left: var(--hggs-space-horizontal-medium);
   --dropdown-option-selected-font-family: var(--hggs-font-family-primary);
   --dropdown-option-selected-font-size: var(--hggs-font-size);
-  --dropdown-option-selected-color: var(--hggs-app-color);
+  --dropdown-option-selected-color: var(--hggs-color);
   --dropdown-open-icon-border-focus: 3px solid var(--hggs-color-primary);
   --dropdown-open-icon-border: 3px solid var(--hggs-color-auxiliary-gray-004);
   --dropdown-open-icon-size: 6px;
@@ -354,7 +363,7 @@
   --radio-outline-focus: var(--hggs-form-outline-focus);
   --radio-box-shadow-focus: var(--hggs-form-box-primary-focus);
   --radio-label-margin-left: var(--hggs-space-horizontal-small);
-  --radio-inside-background-color: var(--hggs-app-background);
+  --radio-inside-background-color: var(--hggs-background);
   --radio-inside-border-bold: 2px solid var(--hggs-border-color-primary);
   --radio-inside-transition: box-shadow 0.3s ease;
 }
@@ -596,7 +605,7 @@
   --table-cell-font-weight-bold: var(--hggs-font-weight-bold);
   --table-cell-head-font-weight: var(--hggs-font-weight-medium);
   --table-cell-head-font-size: var(--hggs-font-size);
-  --table-cell-head-color: var(--hggs-app-color);
+  --table-cell-head-color: var(--hggs-color);
   --table-cell-head-background: var(--hggs-color-auxiliary-gray-000);
   --table-cell-head-padding: 30px 20px;
   --table-cell-head-border-bottom: unset;
@@ -726,8 +735,8 @@
 }
 
 .hggs-dialog {
-  --dialog-background-color: var(--hggs-app-background);
-  --dialog-color: var(--hggs-app-color);
+  --dialog-background-color: var(--hggs-background);
+  --dialog-color: var(--hggs-color);
   --dialog-text-align: center;
   --dialog-padding: 50px 30px 50px 30px;
   --dialog-border-radius: 6px;

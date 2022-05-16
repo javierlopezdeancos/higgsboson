@@ -5,8 +5,10 @@
   font-size: var(--hggs-font-size);
   color: var(--link-color);
 
-  &:hover {
+  &:hover,
+  &.hggs-link--hover {
     text-decoration: underline;
     color: var(--link-color-hover);
+    cursor: pointer;
   }
 }

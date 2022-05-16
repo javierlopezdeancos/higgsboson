@@ -3,6 +3,17 @@
 
   width: 100%;
   height: 100%;
-  background: var(--hggs-app-background, --hggs-color-quinary-default);
-  color: var(--hggs-app-color, --hggs-color-auxiliar-gray-008-default);
+  background: var(--app-background, --hggs-color-quinary-default);
+  color: var(--app-color, --hggs-color-auxiliar-gray-008-default);
+  padding: var(--app-padding, 0);
+
+  & > header {
+    & > .hggs-h1:first-child {
+      margin-top: 0px;
+    }
+  }
+
+  & > footer {
+    padding-top: var(--app-footer-padding-top, 0);
+  }
 }
