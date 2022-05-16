@@ -92,9 +92,7 @@
 #### Basic HTML structure
 
 ```html
-<div class="hggs-tag">
-  <!-- Set here your box elements -->
-</div>
+<div class="hggs-tag"></div>
 ```
 
 ### Primary
@@ -102,9 +100,7 @@
 #### Basic HTML structure with `primary` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--primary">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--primary"></div>
 ```
 
 ### Secondary
@@ -112,9 +108,7 @@
 #### Basic HTML structure with `secondary` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--secondary">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--secondary"></div>
 ```
 
 ### Tertiary
@@ -122,9 +116,7 @@
 #### Basic HTML structure with `tertiary` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--tertiary">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--tertiary"></div>
 ```
 
 ### Quaternary
@@ -132,9 +124,7 @@
 #### Basic HTML structure with `quaternary` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--quaternary">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--quaternary"></div>
 ```
 
 ### Quinary
@@ -142,9 +132,7 @@
 #### Basic HTML structure with `quinary` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--quinary">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--quinary"></div>
 ```
 
 ### Senary
@@ -152,9 +140,7 @@
 #### Basic HTML structure with `senary` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--senary">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--senary"></div>
 ```
 
 ### Rounded
@@ -162,9 +148,7 @@
 #### Basic HTML structure with `rounded` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--rounded">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--rounded"></div>
 ```
 
 ### Subtle
@@ -172,9 +156,7 @@
 #### Basic HTML structure with `subtle` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--subtle">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--subtle"></div>
 ```
 
 ### Small
@@ -182,7 +164,5 @@
 #### Basic HTML structure with `small` modifier
 
 ```html
-<div class="hggs-tag hggs-tag--small">
-  <!-- Set here your box body elements -->
-</div>
+<div class="hggs-tag hggs-tag--small"></div>
 ```
