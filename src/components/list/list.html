@@ -10,23 +10,86 @@
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+
+    <script type="text/javascript" src="./list.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <% _.each(data.default, function(l) { %>
+        <%
+          const articleTitleStyle = _.reduce(l?.styles?.article, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const headerTitleStyle = _.reduce(l?.styles?.header, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          headerSubtitleH4Style = _.reduce(l?.styles?.subHeaderH4, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
+          const listClass = _.reduce(l?.classes?.list, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+
+          const listItemClass = _.reduce(l?.classes?.item, (acc, c) => {
+            if (!acc) {
+              return c;
+            }
+
+            return acc + ' ' + c;
+          }, '');
+        %>
+
+        <article style="<%= articleTitleStyle %>">
+          <h3 class="hggs-h3" style="<%= headerTitleStyle %>">
+            <%= l.title %>
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= headerSubtitleH4Style %>">
+            <%= l.subtitle %>
+          </h4>
+          <ul class="<%= listClass %>">
+            <% _.each(l.labels.items, function(i) { %>
+              <li class="<%= listItemClass %>">
+                <%= i %>
+              </li>
+            <% }); %>
+          </ul>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
-    style="width: 100vw; height: 100vh; padding: 30px"
-  >
-    <article style="margin-bottom: 30px; width: 100%">
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-list</h3>
-      <ul class="hggs-list">
-        <li class="hggs-list-item">First item on the list.</li>
-        <li class="hggs-list-item">Second item on the list.</li>
-        <li class="hggs-list-item">Third term on the list.</li>
-        <li class="hggs-list-item">Fourth term on the list.</li>
-        <li class="hggs-list-item">Fifth term on the list.</li>
-        <li class="hggs-list-item">Sixth term on the list.</li>
-        <li class="hggs-list-item">Seventh term on the list.</li>
-      </ul>
-    </article>
-  </body>
+    style="width: 100%; height: 100%; padding: 30px"
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
