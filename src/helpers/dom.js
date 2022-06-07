@@ -23,3 +23,6 @@ const getClasses = (classes) =>
     },
     ""
   );
+
+const getClassesIf = (condition, className, classes) =>
+  condition ? classes + " " + className : classes;

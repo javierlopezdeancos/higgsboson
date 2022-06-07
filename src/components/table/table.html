@@ -4,91 +4,91 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
-      type="text/javascript"
-    ></script>
-    <script type="text/javascript">
-      WebFont.load({
-        google: {
-          families: ["DM Sans:regular,italic,500,500italic,700,700italic"],
-        },
-      });
-    </script>
-    <title>hggs-table</title>
+    <title>hggs-select</title>
+
     <link
       rel="stylesheet"
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+    <script type="text/javascript" src="../../helpers/dom.js"></script>
+
+    <script type="text/javascript" src="./table.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <% _.each(data.default, function(t) { %>
+        <%
+          const articleTableStyle = getStyles(t?.styles?.article);
+          const headerTableStyle = getStyles(t?.styles?.header);
+          const headerTableSubtitleStyle = getStyles(t?.styles?.subHeaderH4);
+          const tableWrapperClass = getClasses(t?.classes?.wrapper);
+          const tableClass = getClasses(t?.classes?.table);
+          const tableHeadClass = getClasses(t?.classes?.head);
+          const tableHeadCellClass = getClasses(t?.classes?.headCell);
+        %>
+
+        <article style="<%= articleTableStyle %>">
+          <h3 class="hggs-h3" style="<%= headerTableStyle %>">
+            <%= t.title %>
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= headerTableSubtitleStyle %>">
+            <%= t.subtitle %>
+          </h4>
+
+          <div class="<%= tableWrapperClass %>">
+            <table class="<%= tableClass %>">
+              <thead class="<%= tableHeadClass %>">
+                <tr>
+                  <% _.each(t.data.headers, function(h) { %>
+                    <%
+                      let tableHeaderClass = getClassesIf(h.isCapitalized, t.classes.capitalize,tableHeadCellClass);
+                    %>
+                    <th class="<%= tableHeaderClass %>"><%= h.label %></th>
+                  <% }); %>
+                </tr>
+              </thead>
+              <tbody>
+                <% _.each(t.data.rows, function(r) { %>
+                  <tr>
+                    <% _.each(r, function(cell) { %>
+                      <%
+                        let tableCellClass = getClasses(t?.classes?.cell);
+                        tableCellClass = getClassesIf(cell.isBold, t.classes.bold, tableCellClass);
+                        tableCellClass = getClassesIf(cell.isCapitalized, t.classes.capitalize, tableCellClass);
+                      %>
+                      <td class="<%= tableCellClass %>">
+                        <% if (cell.state) { %>
+                          <% const tagClass = getClasses(t?.classes[cell.state]); %>
+                          <div  class="<%= tagClass %>"><%= cell.label %></div>
+                        <% } else { %>
+                          <%= cell?.label %>
+                        <% } %>
+                      </td>
+                    <% }); %>
+                  </tr>
+                <% }); %>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
-  <body>
-    <div
-      class="hggs-flex--top-left-column"
-      style="height: 100vh; padding: 30px"
-    >
-      <h3 class="hggs-h3">.hggs-table-wrapper .hggs-table</h3>
-      <div class="hggs-table-wrapper">
-        <table class="hggs-table">
-          <thead class="hggs-table-head">
-            <tr>
-              <th class="hggs-table-cell--head">Name</th>
-              <th class="hggs-table-cell--head hggs-table-cell--capitalize">
-                ID
-              </th>
-              <th class="hggs-table-cell--head">Country</th>
-              <th class="hggs-table-cell--head">Phase</th>
-              <th class="hggs-table-cell--head">Days Left</th>
-              <th class="hggs-table-cell--head">Progress</th>
-              <th class="hggs-table-cell--head">Due Date</th>
-              <th class="hggs-table-cell--head">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="hggs-table-cell">GRIF_114_3 VAL CS11721</td>
-              <td class="hggs-table-cell">124536845136</td>
-              <td class="hggs-table-cell hggs-table-cell--bold">USA</td>
-              <td class="hggs-table-cell">Preparation</td>
-              <td class="hggs-table-cell">10</td>
-              <td class="hggs-table-cell">20%</td>
-              <td class="hggs-table-cell">31.12.2021</td>
-              <td class="hggs-table-cell">...</td>
-            </tr>
-            <tr>
-              <td class="hggs-table-cell">GRIF_114_3 VAL CS11721</td>
-              <td class="hggs-table-cell">124536845136</td>
-              <td class="hggs-table-cell hggs-table-cell--bold">Germany</td>
-              <td class="hggs-table-cell">Pending</td>
-              <td class="hggs-table-cell">2</td>
-              <td class="hggs-table-cell">20%</td>
-              <td class="hggs-table-cell">31.12.2021</td>
-              <td class="hggs-table-cell">...</td>
-            </tr>
-            <tr>
-              <td class="hggs-table-cell">GRIF_114_3 VAL CS11721</td>
-              <td class="hggs-table-cell">124536845136</td>
-              <td class="hggs-table-cell hggs-table-cell--bold">Spain</td>
-              <td class="hggs-table-cell">Complete</td>
-              <td class="hggs-table-cell">0</td>
-              <td class="hggs-table-cell">100%</td>
-              <td class="hggs-table-cell">31.12.2021</td>
-              <td class="hggs-table-cell">...</td>
-            </tr>
-            <tr>
-              <td class="hggs-table-cell">GRIF_114_3 VAL CS11721</td>
-              <td class="hggs-table-cell">124536845136</td>
-              <td class="hggs-table-cell hggs-table-cell--bold">USA</td>
-              <td class="hggs-table-cell">Complete</td>
-              <td class="hggs-table-cell">0</td>
-              <td class="hggs-table-cell">100%</td>
-              <td class="hggs-table-cell">31.12.2021</td>
-              <td class="hggs-table-cell">...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </body>
+  <body
+    id="body"
+    class="hggs-flex--top-left-column"
+    style="width: 100%; height: 100%; padding: 30px"
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
