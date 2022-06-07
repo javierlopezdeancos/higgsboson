@@ -2,7 +2,7 @@
 
 ## Root component class name
 
-`hggs-checkbox`
+`hggs-radio`
 
 ## Theme selector
 
@@ -27,4 +27,18 @@
 --radio-inside-background-color
 --radio-inside-border-bold
 --radio-inside-transition
+```
+
+## HTML Structure
+
+### Default
+
+#### Basic HTML structure
+
+```html
+<div class="hggs-radio">
+  <input type="radio" id="radio1" name="radiogroup" />
+  <span></span>
+  <label class="hggs-label" for="radio1">Option 1</label>
+</div>
 ```
