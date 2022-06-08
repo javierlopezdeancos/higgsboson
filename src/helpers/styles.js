@@ -54,7 +54,7 @@ const bigGrayBoxStyles = [
   "width: 100%",
   "padding: 30px 30px 30px 30px",
   "margin-bottom: 20px",
-  "background: #e3e2e2",
+  "background: #fbfbfb",
 ];
 
 const bigGrayBoxWithHeightStyles = [
@@ -62,11 +62,26 @@ const bigGrayBoxWithHeightStyles = [
   "height: 600px",
   "padding: 30px 30px 30px 30px",
   "margin-bottom: 20px",
-  "background: #e3e2e2",
+  "background: #fbfbfb",
+];
+
+const smallLightGrayBoxWithHeightStyles = [
+  "height: 60px",
+  "background: #fbfbfb",
+];
+
+const smallDarkGrayBoxWithHeightStyles = [
+  "height: 60px",
+  "background: #c3c3c3",
+];
+
+const smallDarkerGrayBoxWithHeightStyles = [
+  "height: 60px",
+  "background: #afafaf",
 ];
 
 const grayBoxStyles = [
-  "background: #adacac",
+  "background: #e4e4e4",
   "font-size: 40px",
   "min-width: 200px",
   "text-align: center",

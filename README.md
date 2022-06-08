@@ -16,6 +16,7 @@ Higgsboson class components is a set of classes to style core native components.
 - [Dropdown](/src/components/dropdown/dropdown.md)
 - [Field](/src/components/field/field.md)
 - [Flex](/src/components/flex/flex.md)
+- [Grid](/src/components/grid/grid.md)
 - [Icon](/src/components/icons/icons.md)
 - [Input](/src/components/inputs/input.md)
 - [Label](/src/components/label/label.md)
@@ -26,8 +27,8 @@ Higgsboson class components is a set of classes to style core native components.
 - [Select](/src/components/select/select.md)
 - [Table](/src/components/table/table.md)
 - [Tag](/src/components/tag/tag.md)
-- [Titles (h1, h2, h3, h4, h5, h6)](/src/components/titles/titles.md)
 - [Text](/src/components/text/text.md)
+- [Titles (h1, h2, h3, h4, h5, h6)](/src/components/titles/titles.md)
 
 ## How to use
 
