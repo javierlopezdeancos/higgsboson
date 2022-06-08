@@ -10,236 +10,76 @@
       type="text/css"
       href="../../../dist/captain-america.css"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+    <script type="text/javascript" src="../../helpers/dom.js"></script>
+
+    <script type="text/javascript" src="./grid.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <% _.each(data.default, function(g) { %>
+        <%
+          const articleGridStyle = getStyles(g?.styles?.article);
+          const headerGridStyle = getStyles(g?.styles?.header);
+          const subHeaderGridStyle = getStyles(g?.styles?.subHeaderH4);
+          const sectionGridStyle = getStyles(g?.styles?.section);
+          const gridClass = getClasses(g?.classes?.grid);
+        %>
+
+        <article style="<%= articleGridStyle %>">
+          <h3 class="hggs-h3" style="<%= headerGridStyle %>">
+            <%= g.title %>
+          </h3>
+
+          <h4 class="hggs-h4" style="<%= subHeaderGridStyle %>">
+            <%= g.subtitle %>
+          </h4>
+
+          <section style="<%= sectionGridStyle %>">
+             <div class="<%= gridClass %>">
+              <% if(!g?.classes?.cells) { %>
+                  <%
+                    const gridCellClass = getClasses(g?.classes?.cell);
+                    const gridCellStyles = getStyles(smallLightGrayBoxWithHeightStyles);
+                  %>
+
+                  <div class="<%= gridCellClass %>" style="<%= gridCellStyles %>"></div>
+              <% } else if (g?.classes?.cells) { %>
+                  <% _.each(g.classes.cells, function(c, i) { %>
+                    <%
+                      const gridCellClass = getClasses(c);
+                      let gridCellStyles = getStyles(smallLightGrayBoxWithHeightStyles);
+                    %>
+
+                    <%
+                      if (i === 1 || i === 3) {
+                        gridCellStyles = getStyles(smallDarkGrayBoxWithHeightStyles);
+                      } else if (i === 2 || i === 4) {
+                        gridCellStyles = getStyles(smallDarkerGrayBoxWithHeightStyles);
+                      }
+                    %>
+
+                    <div class="<%= gridCellClass %>" style="<%= gridCellStyles %>"></div>
+                  <% }); %>
+              <% } %>
+            </div>
+          </section>
+        </article>
+      <% }); %>
+    </script>
   </head>
 
   <body
+    id="body"
     class="hggs-flex--top-left-column"
-    style="width: 100vw; height: 100vh; padding: 30px"
-  >
-    <div
-      class="hggs-flex--top-left-column"
-      style="
-        width: 100%;
-        padding: 0 30px 30px 30px;
-        margin-bottom: 20px;
-        background: #fbfbfb;
-      "
-    >
-      <!-- .hggs-grid -->
-      <h3 class="hggs-h3" style="margin-bottom: 20px">.hggs-grid</h3>
-      <!-- .hggs-cell.hggs-cell--4of12 -->
-      <h6 class="hggs-h6" style="margin-bottom: 15px">
-        .hggs-cell.hggs-cell--4of12
-      </h6>
-      <div class="hggs-grid">
-        <div
-          class="hggs-cell hggs-cell--4of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-      </div>
-    </div>
-
-    <div
-      class="hggs-flex--top-left-column"
-      style="
-        width: 100%;
-        padding: 0 30px 30px 30px;
-        margin-bottom: 20px;
-        background: #fbfbfb;
-      "
-    >
-      <!-- .hggs-grid.hggs-grid--center -->
-      <h3 class="hggs-h3" style="margin-bottom: 20px; margin-top: 20px">
-        .hggs-grid.hggs-grid--center
-      </h3>
-
-      <!-- .hggs-cell.hggs-cell--4of12 -->
-      <h6 class="hggs-h6" style="margin-bottom: 15px">
-        .hggs-cell.hggs-cell--6of12
-      </h6>
-      <div class="hggs-grid hggs-grid--center">
-        <div
-          class="hggs-cell hggs-cell--6of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-      </div>
-
-      <!-- .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12 -->
-      <h6 class="hggs-h6" style="margin-bottom: 15px; margin-top: 20px">
-        .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12
-      </h6>
-      <div class="hggs-grid hggs-grid--center">
-        <div
-          class="hggs-cell hggs-cell--6of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--2of12"
-          style="background: #c3c3c3; height: 60px"
-        ></div>
-      </div>
-
-      <!-- .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12 + hggs-cell--4of12 -->
-      <h6 class="hggs-h6" style="margin-bottom: 15px; margin-top: 20px">
-        .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12 +
-        hggs-cell--4of12
-      </h6>
-      <div class="hggs-grid hggs-grid--center">
-        <div
-          class="hggs-cell hggs-cell--6of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--2of12"
-          style="background: #c3c3c3; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--4of12"
-          style="background: #afafaf; height: 60px"
-        ></div>
-      </div>
-    </div>
-
-    <div
-      class="hggs-flex--top-left-column"
-      style="
-        width: 100%;
-        padding: 0 30px 30px 30px;
-        margin-bottom: 20px;
-        background: #fbfbfb;
-      "
-    >
-      <!-- .hggs-grid.hggs-grid--right-->
-      <h3 class="hggs-h3" style="margin-bottom: 20px; margin-top: 20px">
-        .hggs-grid.hggs-grid--right
-      </h3>
-
-      <!-- .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12 -->
-      <h6 class="hggs-h6" style="margin-bottom: 15px; margin-top: 20px">
-        .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12
-      </h6>
-      <div class="hggs-grid hggs-grid--right">
-        <div
-          class="hggs-cell hggs-cell--6of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--2of12"
-          style="background: #c3c3c3; height: 60px"
-        ></div>
-      </div>
-    </div>
-
-    <div
-      class="hggs-flex--top-left-column"
-      style="
-        width: 100%;
-        padding: 0 30px 30px 30px;
-        margin-bottom: 20px;
-        background: #fbfbfb;
-      "
-    >
-      <!-- .hggs-grid.hggs-grid--left-->
-      <h3 class="hggs-h3" style="margin-bottom: 20px; margin-top: 20px">
-        .hggs-grid.hggs-grid--left
-      </h3>
-
-      <!-- .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12 -->
-      <h6 class="hggs-h6" style="margin-bottom: 15px; margin-top: 20px">
-        .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12
-      </h6>
-      <div class="hggs-grid hggs-grid--left">
-        <div
-          class="hggs-cell hggs-cell--6of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--2of12"
-          style="background: #c3c3c3; height: 60px"
-        ></div>
-      </div>
-    </div>
-
-    <div
-      class="hggs-flex--top-left-column"
-      style="
-        width: 100%;
-        padding: 0 30px 30px 30px;
-        margin-bottom: 20px;
-        background: #fbfbfb;
-      "
-    >
-      <!-- .hggs-grid.hggs-grid--between-->
-      <h3 class="hggs-h3" style="margin-bottom: 20px; margin-top: 20px">
-        .hggs-grid.hggs-grid--between
-      </h3>
-
-      <!-- .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12 -->
-      <h6 class="hggs-h6" style="margin-bottom: 15px; margin-top: 20px">
-        .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12
-      </h6>
-      <div class="hggs-grid hggs-grid--between">
-        <div
-          class="hggs-cell hggs-cell--6of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--2of12"
-          style="background: #c3c3c3; height: 60px"
-        ></div>
-      </div>
-    </div>
-
-    <div
-      class="hggs-flex--top-left-column"
-      style="
-        width: 100%;
-        padding: 0 30px 30px 30px;
-        margin-bottom: 20px;
-        background: #fbfbfb;
-      "
-    >
-      <!-- .hggs-grid.hggs-grid--between-->
-      <h3 class="hggs-h3" style="margin-bottom: 20px; margin-top: 20px">
-        .hggs-grid
-      </h3>
-
-      <!-- .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12 -->
-      <h6 class="hggs-h6" style="margin-bottom: 5px; margin-top: 20px">
-        .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--2of12 +
-        hggs-cell--4of12
-      </h6>
-      <h6 class="hggs-h6" style="margin-bottom: 15px">
-        .hggs-cell.hggs-cell--4of12 + .hggs-cell.hggs-cell--3of12 +
-        hggs-cell--5of12
-      </h6>
-      <div class="hggs-grid">
-        <div
-          class="hggs-cell hggs-cell--6of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--2of12"
-          style="background: #c3c3c3; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--4of12"
-          style="background: #afafaf; height: 60px"
-        ></div>
-
-        <div
-          class="hggs-cell hggs-cell--4of12"
-          style="background: #c3c3c3; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--3of12"
-          style="background: #afafaf; height: 60px"
-        ></div>
-        <div
-          class="hggs-cell hggs-cell--5of12"
-          style="background: #e4e4e4; height: 60px"
-        ></div>
-      </div>
-    </div>
-  </body>
+    style="width: 100%; height: 100%; padding: 30px"
+  ></body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>
