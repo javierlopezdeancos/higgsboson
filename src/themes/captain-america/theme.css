@@ -334,7 +334,9 @@
   --field-label-margin-bottom: var(--hggs-space-vertical-small);
 }
 
+.hggs-checkboxes,
 .hggs-checkbox {
+  --hggs-checkboxes-gap: var(--hggs-space-vertical-small);
   --checkbox-size: var(--hggs-form-input-height-small);
   --checkbox-background: transparent;
   --checkbox-border-radius: 0;
