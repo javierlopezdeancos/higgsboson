@@ -1,4 +1,5 @@
 .hggs-app {
+  --app-font-size: var(--hggs-font-size-normal, 1.5rem);
   --app-color: var(--hggs-color);
   --app-background: var(--hggs-background);
   --app-padding: var(--hggs-space-vertical-big)

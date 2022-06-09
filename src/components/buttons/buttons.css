@@ -919,7 +919,7 @@
     padding: var(--button-padding-medium, 0 10px);
     font-size: var(
       --button-font-size-medium,
-      --hggs-font-size-normal-plus-default
+      --hggs-font-size-extra-normal-default
     );
   }
 

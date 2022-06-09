@@ -6,6 +6,7 @@
   background: var(--app-background, --hggs-color-quinary-default);
   color: var(--app-color, --hggs-color-auxiliar-gray-008-default);
   padding: var(--app-padding, 0);
+  font-size: var(--app-font-size, 14px);
 
   & > header {
     & > .hggs-h1:first-child {
