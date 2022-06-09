@@ -6,7 +6,7 @@
     var(--hggs-space-horizontal-medium);
   --box-header-border-bottom: 1px solid var(--hggs-color-auxiliary-gray-002);
   --box-header-padding: 0 0 0 0;
-  --box-title-font-size: var(--hggs-font-size-normal-plus);
+  --box-title-font-size: var(--hggs-font-size-extra-normal);
   --box-title-margin-top: 0;
   --box-body-padding: var(--hggs-space-vertical-medium) 0 0 0;
   --box-border-radius-with-radius: var(--hggs-border-radius-big);
@@ -16,4 +16,3 @@
   --box-header-border-bottom-primary: 1px solid
     var(--hggs-color-auxiliary-senary-002);
 }
-

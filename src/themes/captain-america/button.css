@@ -101,7 +101,7 @@
   --button-font-size-big: var(--hggs-font-size-extra-medium);
   --button-font-size-medium: var(--hggs-font-size);
   --button-font-size-small: var(--hggs-font-size-small);
-  --button-font-size: var(--hggs-font-size-normal-plus);
+  --button-font-size: var(--hggs-font-size-extra-normal);
   --button-font-weight: var(--hggs-font-weight-medium);
   --button-height-medium: 48px;
   --button-height-small: 30px;
