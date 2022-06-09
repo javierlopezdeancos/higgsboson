@@ -1,0 +1,25 @@
+.hggs-table-wrapper {
+  --table-wrapper-border-radius: 0;
+  --table-wrapper-box-shadow: unset;
+}
+
+.hggs-table {
+  --table-min-width: 650px;
+  --table-tbody-first-row-padding-top: 40px;
+  --table-tbody-first-column-padding-left: unset;
+  --table-cell-font-family: var(--hggs-font-family-primary);
+  --table-cell-font-weight: var(--hggs-font-weight-normal);
+  --table-cell-font-size: var(--hggs-font-size-small);
+  --table-cell-font-color: var(--hggs-color-auxiliary-gray-004);
+  --table-cell-padding: 16px;
+  --table-cell-text-align: left;
+  --table-cell-border-bottom: var(--hggs-border);
+  --table-cell-border-bottom-last-child: var(--hggs-border);
+  --table-cell-font-weight-bold: var(--hggs-font-weight-bold);
+  --table-cell-head-font-weight: var(--hggs-font-weight-medium);
+  --table-cell-head-font-size: var(--hggs-font-size);
+  --table-cell-head-color: var(--hggs-color);
+  --table-cell-head-background: var(--hggs-color-auxiliary-gray-000);
+  --table-cell-head-padding: 30px 20px;
+  --table-cell-head-border-bottom: unset;
+}

@@ -1,0 +1,7 @@
+.hggs-logo {
+  --logo-url: url("./assets/svg/logo.svg");
+  --logo-width: 300px;
+  --logo-height: 300px;
+  --logo-url-white: url("./assets/svg/logo-white.svg");
+  --logo-url-black: url("./assets/svg/logo-black.svg");
+}

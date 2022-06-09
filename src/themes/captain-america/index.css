@@ -1,7 +1,31 @@
+/* Theme */
 @import "resets.css";
 @import "../default.css";
 @import "fonts.css";
-@import "./theme.css";
+
+/* Variables */
+@import "./vars.css";
+@import "./app.css";
+@import "./titles.css";
+@import "./text.css";
+@import "./list.css";
+@import "./form.css";
+@import "./label.css";
+@import "./input.css";
+@import "./field.css";
+@import "./option.css";
+@import "./select.css";
+@import "./dropdown.css";
+@import "./checkbox.css";
+@import "./radio.css";
+@import "./icon.css";
+@import "./button.css";
+@import "./logo.css";
+@import "./flex.css";
+@import "./table.css";
+@import "./tag.css";
+@import "./box.css";
+@import "./dialog.css";
 
 /* Components */
 @import "../../components/flex/flex.css";
@@ -27,4 +51,3 @@
 @import "../../components/dialog/dialog.css";
 @import "../../components/table/table.css";
 @import "../../components/box/box.css";
-

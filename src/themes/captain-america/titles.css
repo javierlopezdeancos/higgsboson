@@ -1,0 +1,33 @@
+.hggs-h1,
+.hggs-h2,
+.hggs-h3,
+.hggs-h4,
+.hggs-h5,
+.hggs-h6 {
+  --title-font-famiy: var(--hggs-font-family-primary);
+  --title-color: var(--hggs-color-auxiliary-gray-008);
+  --title-h1-font-size: var(--hggs-font-size-colossal);
+  --title-h1-font-weight: var(--hggs-font-weight-medium);
+  --title-h1-margin: var(--hggs-space-vertical-big) 0
+    var(--hggs-space-vertical-medium) 0;
+  --title-h2-font-size: var(--hggs-font-size-enormous);
+  --title-h2-font-weight: var(--hggs-font-weight-medium);
+  --title-h2-margin: var(--hggs-space-vertical-big) 0
+    var(--hggs-space-vertical-medium) 0;
+  --title-h3-font-size: var(--hggs-font-size-extra-big);
+  --title-h3-font-weight: var(--hggs-font-weight-bold);
+  --title-h3-margin: var(--hggs-space-vertical-medium) 0
+    var(--hggs-space-vertical-small) 0;
+  --title-h4-font-size: var(--hggs-font-size-big);
+  --title-h4-font-weight: var(--hggs-font-weight-bold);
+  --title-h4-margin: var(--hggs-space-vertical-medium) 0
+    var(--hggs-space-vertical-small) 0;
+  --title-h5-font-size: var(--hggs-font-size-extra-medium);
+  --title-h5-font-weight: var(--hggs-font-weight-bold);
+  --title-h5-margin: var(--hggs-space-vertical-small) 0
+    var(--hggs-space-vertical-small) 0;
+  --title-h6-font-size: var(--hggs-font-size);
+  --title-h6-font-weight: var(--hggs-font-weight-bold);
+  --title-h6-margin: var(--hggs-space-vertical-small) 0
+    var(--hggs-space-vertical-small) 0;
+}
