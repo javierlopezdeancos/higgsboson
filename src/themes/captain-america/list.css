@@ -5,9 +5,9 @@
   --list-item-font-size: var(--hggs-font-size);
   --list-item-margin-bottom: var(--hggs-space-vertical-micro);
   --list-padding-left: var(--hggs-space-horizontal-macro);
+  --list-marging-left: var(--hggs-space-horizontal-small);
   --list-item-content-marker: counter(list-item) " -   ";
   --list-item-color-marker: var(--hggs-color);
   --list-item-font-size-marker: var(--hggs-font-size-medium);
   --list-item-font-weight-marker: var(--hggs-font-weight-medium-plus);
 }
-

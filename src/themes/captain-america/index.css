@@ -1,9 +1,11 @@
 /* Theme */
-@import "resets.css";
+/* @import "resets.css"; */
+@import "../resets.css";
 @import "../default.css";
 @import "fonts.css";
 
 /* Variables */
+/*
 @import "./vars.css";
 @import "./app.css";
 @import "./titles.css";
@@ -27,6 +29,7 @@
 @import "./tag.css";
 @import "./box.css";
 @import "./dialog.css";
+*/
 
 /* Components */
 @import "../../components/flex/flex.css";

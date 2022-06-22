@@ -19,13 +19,14 @@
 ```
 --dropdown-border
 --dropdown-border-focus
---dropdown-box-shadow-focus
 --dropdown-border-radius
+--dropdown-box-shadow-focus
 --dropdown-height
 --dropdown-open-icon-border
 --dropdown-open-icon-border-bottom-left-radius
 --dropdown-open-icon-border-focus
 --dropdown-open-icon-size
+--dropdown-open-icon-top
 --dropdown-option-label-background-hover
 --dropdown-option-label-color
 --dropdown-option-label-font-family

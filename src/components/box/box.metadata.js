@@ -1,4 +1,4 @@
-const boxStyles = ["height: 300%"];
+const boxStyles = ["height: 200px"];
 
 const data = {
   title: "Box",

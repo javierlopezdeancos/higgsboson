@@ -6,9 +6,9 @@
 
   & input[type="radio"] {
     position: absolute;
-    width: var(--radio-size, --hggs-form-input-height-small-default);
-    height: var(--radio-size, --hggs-form-input-height-small-default);
-    border: var(--radio-border, --hggs-form-input-border-default);
+    width: var(--radio-size, var(--hggs-space-horizontal-medium-default));
+    height: var(--radio-size, var(--hggs-space-vertical-medium-default));
+    border: var(--radio-border, var(--hggs-border-default));
     cursor: pointer;
     opacity: 0;
     order: 1;
@@ -16,44 +16,47 @@
     &:checked ~ span:before {
       border: var(
         --radio-border-checked,
-        5px solid var(--hggs-color-primary-default)
+        var(--hggs-border-quinary-colossal-default)
       );
     }
 
     &:hover ~ span:before {
       border-color: var(
         --radio-border-color-hover,
-        --hggs-color-primary-default
+        var(--hggs-color-primary-default)
       );
     }
 
     &:focus ~ span:before {
       outline: var(--radio-outline-focus, --hggs-form-outline-focus-default);
-      box-shadow: var(
-        --radio-box-shadow-focus,
-        --hggs-form-box-primary-focus-default
-      );
+      box-shadow: var(--radio-box-shadow-focus, var(--hggs-shadow-default));
     }
   }
 
   & .hggs-label {
-    margin-left: var(--radio-label-margin-left, 10px);
+    margin-left: var(
+      --radio-label-margin-left,
+      var(--hggs-space-horizontal-small-default)
+    );
     cursor: pointer;
     order: 2;
   }
 
   & span:before {
     display: inline-block;
-    width: var(--radio-size, --hggs-form-input-height-small-default);
-    height: var(--radio-size, --hggs-form-input-height-small-default);
+    width: var(--radio-size, var(--hggs-space-horizontal-medium-default));
+    height: var(--radio-size, var(--hggs-space-horizontal-medium-default));
     content: "";
-    background-color: var(--radio-inside-background-color, transparent);
-    border: var(
-      --radio-inside-border-bold,
-      2px solid var(--hggs-border-color-primary-default)
+    background-color: var(
+      --radio-inside-background-color,
+      var(--hgss-background-default)
     );
+    border: var(--radio-inside-border-bold, var(--hggs-border-default));
     border-radius: 100%;
     box-sizing: border-box;
-    transition: var(--radio-inside-transition, box-shadow 0.3s ease);
+    transition: var(
+      --radio-inside-transition,
+      box-shadow var(--hggs-transition-ease-default)
+    );
   }
 }

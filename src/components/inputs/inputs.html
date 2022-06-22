@@ -62,11 +62,11 @@
           %>
 
           <% if(isDisabled) { %>
-            <input type="test" class="<%= inputClass %>" disabled/>
+            <input type="test" class="<%= inputClass %>" disabled value="I'm disable"/>
           <% } else if(hasError) { %>
-            <input type="test" class="<%= inputClass %>" error/>
+            <input type="test" class="<%= inputClass %>" error value="I have errors"/>
           <% } else { %>
-            <input type="test" class="<%= inputClass %>" />
+            <input type="test" class="<%= inputClass %>" placeholder="write here some text..." />
           <% } %>
         </article>
       <% }); %>

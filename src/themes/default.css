@@ -1,90 +1,195 @@
 :root {
-  --hggs-color-auxiliary-gray-000-default: #f6f7f9;
-  --hggs-color-auxiliary-gray-001-default: #eee;
-  --hggs-color-auxiliary-gray-002-default: #e0e0e0;
-  --hggs-color-auxiliary-gray-003-default: #c9c9c9;
-  --hggs-color-auxiliary-gray-004-default: #9c9c9c;
-  --hggs-color-auxiliary-gray-005-default: #7d7d7d;
-  --hggs-color-auxiliary-gray-007-default: #4e4b4b;
-  --hggs-color-auxiliar-gray-008-default: #1b1d2a;
-  --hggs-filter-auxiliary-gray-002-default: invert(84%) sepia(0%)
-    saturate(7497%) hue-rotate(107deg) brightness(105%) contrast(101%);
-  --hggs-filter-auxiliary-gray-004-default: invert(49%) sepia(0%) saturate(1%)
-    hue-rotate(119deg) brightness(90%) contrast(89%);
-  --hggs-color-auxiliary-gray-alpha-002-default: rgba(0, 0, 0, 0.1);
-  --hggs-color-auxiliary-gray-alpha-004-default: rgba(0, 0, 0, 0.25);
-  --hggs-color-auxiliary-gray-alpha-007-default: rgba(58, 58, 58, 0.6);
-  --hggs-color-auxiliary-gray-alpha-008-default: rgba(8, 8, 8, 0.6);
-  --hggs-color-primary-default: var(--hggs-color-auxiliary-gray-004-default);
-  --hggs-color-auxiliary-senary-005-default: var(
-    --hggs-color-auxiliary-gray-005-default
-  );
-  --hggs-filter-primary-default: invert(66%) sepia(0%) saturate(5%)
-    hue-rotate(192deg) brightness(93%) contrast(86%);
-  --hggs-filter-primary-001-default: invert(51%) sepia(2%) saturate(0%)
-    hue-rotate(173deg) brightness(95%) contrast(88%);
-  --hggs-color-secondary-default: var(--hggs-color-auxiliary-gray-003-default);
-  --hggs-color-auxiliary-secondary-004-default: var(
-    --hggs-color-auxiliary-gray-004-default
-  );
-  --hggs-filter-secondary-default: invert(91%) sepia(3%) saturate(17%)
-    hue-rotate(315deg) brightness(92%) contrast(84%);
-  --hggs-filter-secondary-001-default: invert(63%) sepia(9%) saturate(9%)
-    hue-rotate(336deg) brightness(98%) contrast(83%);
-  --hggs-color-tertiary-default: var(--hggs-color-auxiliary-gray-002-default);
-  --hggs-color-auxiliary-tertiary-004-default: var(
+  --hggs-color-white-default: #ffffff;
+  --hggs-color-black-default: #000000;
+  --hggs-color-auxiliary-gray-001-default: #fffff2;
+  --hggs-color-auxiliary-gray-002-default: #f2f2f2;
+  --hggs-color-auxiliary-gray-003-default: #e6e6e6;
+  --hggs-color-auxiliary-gray-004-default: #d9d9d9;
+  --hggs-color-auxiliary-gray-005-default: #cccccc;
+  --hggs-color-auxiliary-gray-006-default: #bfbfbf;
+  --hggs-color-auxiliary-gray-007-default: #b3b3b3;
+  --hggs-color-auxiliary-gray-008-default: #a6a6a6;
+  --hggs-color-auxiliary-gray-009-default: #999999;
+  --hggs-color-auxiliary-gray-010-default: #8c8c8c;
+  --hggs-color-auxiliary-gray-011-default: #808080;
+  --hggs-color-auxiliary-gray-012-default: #737373;
+  --hggs-color-auxiliary-gray-013-default: #666666;
+  --hggs-color-auxiliary-gray-014-default: #595959;
+  --hggs-color-auxiliary-gray-015-default: #4d4d4d;
+  --hggs-color-auxiliary-gray-016-default: #404040;
+  --hggs-color-auxiliary-gray-017-default: #333333;
+  --hggs-color-auxiliary-gray-018-default: #262626;
+  --hggs-color-auxiliary-gray-019-default: #1a1a1a;
+  --hggs-color-auxiliary-gray-020-default: #0d0d0d;
+  --hggs-color-primary-default: var(--hggs-color-auxiliary-gray-020-default);
+  --hggs-color-secondary-default: var(--hggs-color-auxiliary-gray-017-default);
+  --hggs-color-tertiary-default: var(--hggs-color-auxiliary-gray-014-default);
+  --hggs-color-quaternary-default: var(--hggs-color-black-default);
+  --hggs-color-quinary-default: var(--hggs-color-white-default);
+  --hggs-color-senary-default: var(--hggs-color-auxiliary-gray-011-default);
+  --hggs-color-default: var(--hggs-color-quaternary-default);
+  --hggs-color-error-default: #ff0b0b;
+  --hggs-color-disabled-default: var(--hggs-color-auxiliary-gray-004-default);
+  --hgss-background-default: var(--hggs-color-quinary-default);
+  --hggs-color-background-selected-default: var(
     --hggs-color-auxiliary-gray-003-default
   );
-  --hggs-filter-tertiary-default: invert(91%) sepia(3%) saturate(17%)
-    hue-rotate(315deg) brightness(92%) contrast(84%);
-  --hggs-filter-tertiary-001-default: invert(97%) sepia(1%) saturate(0%)
-    hue-rotate(144deg) brightness(85%) contrast(90%);
-  --hggs-color-quaternary-default: #000;
-  --hggs-filter-quaternary-default: invert(0%) sepia(54%) saturate(2989%)
-    hue-rotate(174deg) brightness(108%) contrast(108%);
-  --hggs-color-quinary-default: #fff;
-  --hggs-filter-quinary-default: invert(100%) sepia(100%) saturate(0%)
-    hue-rotate(157deg) brightness(102%) contrast(102%);
-  --hggs-color-senary-default: #f6f7f9;
-  --hggs-filter-senary-default: invert(95%) sepia(9%) saturate(175%)
-    hue-rotate(118deg) brightness(106%) contrast(94%);
+  --hggs-shadow-default: 0 1px 5px 0
+    var(--hggs-color-auxiliary-gray-006-default);
+  --hggs-shadow-primary-default: 0 0 7px 1px
+    var(--hggs-color-auxiliary-gray-007-default);
+  --hggs-filter-auxiliary-gray-008-default: brightness(0) saturate(100%)
+    invert(8%) sepia(18%) saturate(1214%) hue-rotate(194deg) brightness(95%)
+    contrast(91%);
+  --hggs-filter-primary-default: brightness(0) saturate(100%) invert(0%)
+    sepia(83%) saturate(3548%) hue-rotate(60deg) brightness(84%) contrast(90%);
+  --hggs-filter-secondary-default: brightness(0) saturate(100%) invert(12%)
+    sepia(0%) saturate(140%) hue-rotate(162deg) brightness(98%) contrast(78%);
+  --hggs-filter-tertiary-default: brightness(0) saturate(100%) invert(36%)
+    sepia(45%) saturate(0%) hue-rotate(253deg) brightness(93%) contrast(113%);
+  --hggs-filter-quaternary-default: brightness(0) saturate(100%) invert(0%)
+    sepia(0%) saturate(7500%) hue-rotate(272deg) brightness(96%) contrast(108%);
+  --hggs-filter-quinary-default: brightness(0) saturate(100%) invert(100%)
+    sepia(5%) saturate(19%) hue-rotate(127deg) brightness(106%) contrast(106%);
+  --hggs-filter-senary-default: brightness(0) saturate(100%) invert(57%)
+    sepia(0%) saturate(366%) hue-rotate(176deg) brightness(88%) contrast(95%);
+  --hggs-filter-default: var(--hggs-filter-quaternary-default);
   --hggs-font-family-primary-default: sans-serif;
   --hggs-font-size-colossal-default: 38px;
   --hggs-font-size-enormous-default: 32px;
-  --hggs-font-size-extra-big-default: 28px;
-  --hggs-font-size-big-small-default: 24px;
-  --hggs-font-size-extra-medium-default: 21px;
-  --hggs-font-size-medium-small-default: 18px;
-  --hggs-font-size-extra-normal-default: 16px;
+  --hggs-font-size-tera-default: 28px;
+  --hggs-font-size-mega-default: 24px;
+  --hggs-font-size-pico-default: 21px;
+  --hggs-font-size-big-default: 18px;
+  --hggs-font-size-medium-default: 16px;
   --hggs-font-size-default: 14px;
   --hggs-font-size-small-default: 12px;
-  --hggs-font-size-micro-default:: 10px;
-  --hggs-font-size-nano-default:: 8px;
-  --hggs-font-weight-normal-default: 400;
+  --hggs-font-size-micro-default: 10px;
+  --hggs-font-size-nano-default: 8px;
+  --hggs-font-weight-default: 400;
   --hggs-font-weight-medium-default: 500;
   --hggs-font-weight-bold-default: 700;
-  --hggs-font-weight-extra-bold-default: 900;
+  --hggs-font-weight-very-bold-default: 900;
   --hggs-font-letter-spacing-default: 1px;
-  --hggs-line-height-norma-defaultl: 25px;
-  --hggs-line-height-micro-default: 10px;
+  --hggs-font-letter-spacing-small-default: 0.6px;
+  --hggs-line-height-default: 20px;
   --hggs-line-height-small-default: 15px;
-  --hggs-line-height-default: var(--hggs-line-height-normal-default);
-  --hggs-border-radius-default: 8px;
-  --hggs-border-default: 1px solid var(--hggs-color-auxiliary-gray-001-default);
-  --hggs-space-horizontal-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
-  --hggs-space-horizontal-macro: calc(var(--hggs-space-vertical-medium) * 4);
-  --hggs-space-horizontal-big: calc(var(--hggs-space-horizontal-medium) * 2);
-  --hggs-space-horizontal-small: calc(var(--hggs-space-horizontal-medium) / 2);
-  --hggs-space-horizontal-micro: calc(var(--hggs-space-horizontal-medium) / 4);
-  --hggs-space-horizontal-nano: calc(var(--hggs-space-horizontal-medium) / 6);
-  --hggs-space-vertical-medium: clamp(0.75rem, 4vw - 1rem, 1.5rem);
-  --hggs-space-vertical-macro: calc(var(--hggs-space-vertical-medium) * 4);
-  --hggs-space-vertical-big: calc(var(--hggs-space-vertical-medium) * 2);
-  --hggs-space-vertical-small: calc(var(--hggs-space-vertical-medium) / 2);
-  --hggs-space-vertical-micro: calc(var(--hggs-space-vertical-medium) / 4);
-  --hggs-space-vertical-nano: calc(var(--hggs-space-vertical-medium) / 6);
+  --hggs-line-height-micro-default: 10px;
+  --hggs-border-radius-big-default: 0px;
+  --hggs-border-radius-default: 0px;
+  --hggs-border-size-default: 1px;
+  --hggs-border-size-medium-default: 2px;
+  --hggs-border-size-big-default: 3px;
+  --hggs-border-size-colossal-default: 8px;
+  --hggs-border-type-default: solid;
+  --hggs-border-color-default: var(--hggs-color-default);
+  --hggs-border-color-primary-default: var(
+    --hggs-color-auxiliary-gray-020-default
+  );
+  --hggs-border-color-secondary-default: var(
+    --hggs-color-auxiliary-gray-015-default
+  );
+  --hggs-border-color-tertiary-default: var(
+    --hggs-color-auxiliary-gray-010-default
+  );
+  --hggs-border-color-quaternary-default: white;
+  --hggs-border-color-quinary-default: black;
+  --hggs-border-color-senary-default: var(
+    --hggs-color-auxiliary-gray-007-default
+  );
+  --hggs-border-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-default);
+  --hggs-border-error-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-error-default);
+  --hggs-border-auxiliary-gray-006-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-006-default);
+  --hggs-border-auxiliary-gray-008-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-008-default);
+  --hggs-border-auxiliary-gray-009-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-009-default);
+  --hggs-border-auxiliary-gray-010-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-010-default);
+  --hggs-border-auxiliary-gray-012-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-012-default);
+  --hggs-border-auxiliary-gray-013-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-013-default);
+  --hggs-border-auxiliary-gray-015-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-015-default);
+  --hggs-border-primary-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-primary-default);
+  --hggs-border-primary-big-default: var(--hggs-border-size-big-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-primary-default);
+  --hggs-border-secondary-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-secondary-default);
+  --hggs-border-secondary-gross-default: var(--hggs-border-size-big-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-secondary-default);
+  --hggs-border-tertiary-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-tertiary-default);
+  --hggs-border-quaternary-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-quinary-default);
+  --hggs-border-quinary-colossal-default: var(
+      --hggs-border-size-colossal-default
+    )
+    var(--hggs-border-type-default) var(--hggs-border-color-quinary-default);
+  --hggs-border-quinary-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-quaternary-default);
+  --hggs-border-senary-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-border-color-senary-default);
+  --hggs-border-focus-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-primary-default);
+  --hggs-border-disabled-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-005-default);
+  --hggs-border-invalid-default: var(--hggs-border-size-default)
+    var(--hggs-border-type-default) var(--hggs-color-error-default);
+  --hggs-space-horizontal-medium-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-horizontal-macro-default: calc(
+    var(--hggs-space-vertical-medium-default) * 4
+  );
+  --hggs-space-horizontal-big-default: calc(
+    var(--hggs-space-horizontal-medium-default) * 2
+  );
+  --hggs-space-horizontal-small-default: calc(
+    var(--hggs-space-horizontal-medium-default) / 2
+  );
+  --hggs-space-horizontal-micro-default: calc(
+    var(--hggs-space-horizontal-medium-default) / 4
+  );
+  --hggs-space-horizontal-nano-default: calc(
+    var(--hggs-space-horizontal-medium-default) / 6
+  );
+  --hggs-space-vertical-medium-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-vertical-macro-default: calc(
+    var(--hggs-space-vertical-medium-default) * 4
+  );
+  --hggs-space-vertical-big-default: calc(
+    var(--hggs-space-vertical-medium-default) * 2
+  );
+  --hggs-space-vertical-small-default: calc(
+    var(--hggs-space-vertical-medium-default) / 2
+  );
+  --hggs-space-vertical-micro-default: calc(
+    var(--hggs-space-vertical-medium-default) / 4
+  );
+  --hggs-space-vertical-nano-default: calc(
+    var(--hggs-space-vertical-medium-default) / 6
+  );
   --hggs-layer-10-default: 11;
   --hggs-layer-0-default: 1;
-  --hggs-app-background-default: var(--hggs-color-quinary-default);
-  --hggs-app-color-default: var(--hggs-color-auxiliar-gray-008-default);
+  --hggs-animation-ease-default: 200ms ease;
+  --hggs-animation-ease-all-default: all var(--hggs-animation-ease-default);
+  --hggs-transform-escale-default: scale(1.05);
+  --hggs-transform-escale-small-default: scale(1.01);
+  --hggs-transform-rotate-translate-default: rotate(-45deg) translate(0%, 0%);
+  --hggs-transition-ease-default: 0.3s ease;
+  --hggs-icon-size-micro-default: 15px;
+  --hggs-icon-size-small-default: 20px;
+  --hggs-icon-size-default: 25px;
+  --hggs-icon-chevron-down-default: url("./assets/icons/chevron-down.svg");
+  --hggs-icon-close-default: url("./assets/icons/close.svg");
+  --hggs-icon-edit-default: url("./assets/icons/pencil.svg");
+  --hggs-icon-hamburger-menu-default: url("./assets/icons/hamburger-menu.svg");
+  --hggs-icon-log-out-default: url("./assets/icons/log-out.svg");
+  --hggs-icon-plus-default: url("./assets/icons/plus.svg");
+  --hggs-icon-question-default: url("./assets/icons/question.svg");
+  --hggs-icon-user-default: url("./assets/icons/user.svg");
 }

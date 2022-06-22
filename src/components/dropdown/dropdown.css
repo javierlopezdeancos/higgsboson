@@ -1,35 +1,41 @@
 .hggs-dropdown {
   position: relative;
   width: 100%;
-  border: var(
-    --dropdown-border,
-    1px solid var(--hggs-color-auxiliary-gray-003-default)
+  border: var(--dropdown-border, var(--hggs-border-default));
+  border-radius: var(
+    --dropdown-border-radius,
+    var(--hggs-border-radius-default)
   );
-  border-radius: var(--dropdown-border-radius, --hggs-border-radius-default);
-  height: var(--dropdown-height, 38px);
+
+  height: var(--dropdown-height, var(--hggs-space-vertical-big-default));
+  padding: var(
+    --dropdown-padding,
+    var(--hggs-space-vertical-small-default)
+      var(--hggs-space-horizontal-small-default)
+  );
+
+  &:focus {
+    outline: none;
+    border: var(--dropdown-border-focus, var(--hggs-border-focus-default));
+    box-shadow: var(--dropdown-box-shadow-focus, var(--hggs-shadow-default));
+  }
 
   &[open] {
-    border: var(
-      --dropdown-border-focus,
-      1px solid var(--hggs-color-primary-default)
-    );
+    border: var(--dropdown-border-focus, var(--hggs-border-focus-default));
     z-index: 1;
-    box-shadow: var(
-      --dropdown-box-shadow-focus,
-      --hggs-form-box-primary-focus-default
-    );
+    box-shadow: var(--dropdown-box-shadow-focus, var(--hggs-shadow-default));
 
     & .hggs-dropdown-selected-options {
       &:after {
         border-bottom: var(
           --dropdown-open-icon-border-focus,
-          3px solid var(--hggs-color-primary-default)
+          var(--hggs-border-primary-big-default)
         );
         border-left: var(
           --dropdown-open-icon-border-focus,
-          3px solid var(--hggs-color-primary-default)
+          var(--hggs-border-primary-big-default)
         );
-        transform: rotate(-45deg) translate(0%, 0%);
+        transform: var(--hggs-transform-rotate-translate-default);
       }
     }
   }
@@ -41,10 +47,13 @@
     list-style: none;
     counter-reset: radios;
     cursor: pointer;
-    background-color: var(--dropdown-options-selected-background, transparent);
+    background-color: var(
+      --dropdown-options-selected-background,
+      var(--hgss-background-default)
+    );
     padding-left: var(
       --dropdown-options-selected-padding-left,
-      --hggs-space-horizontal-medium-default
+      var(--hggs-space-horizontal-micro-default)
     );
 
     &::-webkit-details-marker {
@@ -56,16 +65,16 @@
       top: 30%;
       content: "";
       display: inline-block;
-      width: var(--dropdown-open-icon-size, 10px);
+      width: var(--dropdown-open-icon-size, 6px);
       height: var(--dropdown-open-icon-size, 6px);
-      right: var(--hggs-space-vertical-medium);
+      right: var(--hggs-space-vertical-medium, 15px);
       border-bottom: var(
         --dropdown-open-icon-border,
-        3px solid var(--hggs-color-auxiliary-gray-004-default)
+        var(--hggs-border-secondary-gross-default)
       );
       border-left: var(
         --dropdown-open-icon-border,
-        3px solid var(--hggs-color-auxiliary-gray-004-default)
+        var(--hggs-border-secondary-gross-default)
       );
       border-bottom-left-radius: var(
         --dropdown-open-icon-border-bottom-left-radius,
@@ -97,13 +106,13 @@
         display: inline;
         font-family: var(
           --dropdown-option-selected-font-family,
-          --hggs-font-family-primary-default
+          var(--hggs-font-family-primary-default)
         );
         font-size: var(
           --dropdown-option-selected-font-size,
-          --hggs-font-size-default
+          var(--hggs-font-size-medium-default)
         );
-        color: var(--dropdown-option-selected-color, --hggs-app-color-default);
+        color: var(--dropdown-option-selected-color, var(--hggs-color-default));
       }
     }
   }
@@ -113,30 +122,26 @@
     width: 100%;
     top: var(
       --dropdown-options-top,
-      calc(100% + var(--hggs-space-vertical-micro))
+      calc(100% + var(--hggs-space-vertical-micro-default))
     );
     left: 0;
     margin: 0;
     padding: 0;
-    background-color: var(--dropdown-options-background, transparent);
-    box-sizing: border-box;
-    border: var(
-      --dropdown-options-border,
-      1px solid var(--hggs-color-auxiliary-gray-002)
+    background-color: var(
+      --dropdown-options-background,
+      var(--hgss-background-default)
     );
+    box-sizing: border-box;
+    border: var(--dropdown-options-border, var(--hggs-border-tertiary-default));
     border-radius: var(
       --dropdown-options-border-radius,
-      --hggs-border-radius-default
+      var(--hggs-border-radius-default)
     );
     max-height: var(--dropdown-options-max-height, 200px);
     overflow-y: auto;
     counter-reset: labels;
     list-style: none;
-    box-shadow: var(
-      --dropdown-options-box-shadow,
-      0 5.1px 3.3px -49px rgba(0, 0, 0, 0.03),
-      0 41px 26px -49px rgba(0, 0, 0, 0.06)
-    );
+    box-shadow: var(--dropdown-options-box-shadow, var(--hggs-shadow-default));
 
     & .hggs-dropdown-option {
       margin: 0;
@@ -148,25 +153,26 @@
         cursor: pointer;
         font-family: var(
           --dropdown-option-label-font-family,
-          --hggs-font-family-primary-default
+          var(--hggs-font-family-primary-default)
         );
         font-size: var(
           --dropdown-option-label-font-size,
-          --hggs-font-size-default
+          var(--hggs-font-size-default)
         );
-        color: var(--dropdown-option-label-color, --hggs-app-color-default);
+        color: var(--dropdown-option-label-color, var(--hggs-color-default));
         padding: var(
           --dropdown-option-label-padding,
-          calc(var(--hggs-space-vertical-medium-default) / 2) 0
-            calc(var(--hggs-space-vertical-medium-default) / 2)
-            var(--hggs-space-horizontal-medium-default)
+          var(--hggs-space-vertical-micro-default)
+            var(--hggs-space-horizontal-small-default)
+            var(--hggs-space-vertical-micro-default)
+            var(--hggs-space-horizontal-small-default)
         );
       }
 
       &:hover {
         background-color: var(
           --dropdown-option-label-background-hover,
-          --hggs-color-auxiliary-gray-002
+          var(--hggs-color-background-selected-default)
         );
       }
     }

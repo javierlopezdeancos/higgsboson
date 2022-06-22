@@ -17,9 +17,12 @@
 ## Component variables
 
 ```
---link-font-family
---link-font-weight
 --link-color-hover
+--link-font-family
+--link-font-style
+--link-font-weight
+--link-text-decoration
+--link-text-decoration-hover
 ```
 
 ## HTML Structure

@@ -1,4 +1,5 @@
 .hggs-button {
+  --button-cursor: default;
   --button-outline-focus: var(--hggs-form-outline-focus);
   --button-box-shadow-focus: var(--hggs-form-box-focus);
   --button-background-hover: var(--hggs-color-auxiliary-gray-002);
@@ -103,6 +104,7 @@
   --button-font-size-small: var(--hggs-font-size-small);
   --button-font-size: var(--hggs-font-size-extra-normal);
   --button-font-weight: var(--hggs-font-weight-medium);
+  --button-height-big: 65px;
   --button-height-medium: 48px;
   --button-height-small: 30px;
   --button-height: 65px;
@@ -133,13 +135,17 @@
   --button-padding-medium: 0 10px;
   --button-padding-small: 0 5px;
   --button-padding: 0 40px;
-  --button-transition-hover: all 200ms ease;
-  --button-transition-primary-hover: all 200ms ease;
-  --button-transition-quaternary-hover: all 200ms ease;
-  --button-transition-quinary-hover: all 200ms ease;
-  --button-transition-secondary-hover: all 200ms ease;
-  --button-transition-senary-hover: all 200ms ease;
-  --button-transition-tertiary-hover: all 200ms ease;
+  --button-transition-hover: var(--hggs-animation-ease);
+  --button-transition-primary-hover: var(--button-transition-hover);
+  --button-transition-quaternary-hover: var(--button-transition-hover);
+  --button-transition-quinary-hover: var(--button-transition-hover);
+  --button-transition-secondary-hover: var(--button-transition-hover);
+  --button-transition-senary-hover: var(--button-transition-hover);
+  --button-transition-tertiary-hover: var(--button-transition-hover);
+  --button-transform-hover: scale(1.05);
+  --button-icon-transition-hover: var(--hggs-animation-ease);
+  --button-icon-transform-hover: unset;
+  --button-icon-shadow-hover: unset;
   --button-width-big: 250px;
   --button-width-medium: 180px;
   --button-width-small: 70px;

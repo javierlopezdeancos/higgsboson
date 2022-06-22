@@ -67,7 +67,7 @@ const bigGrayBoxWithHeightStyles = [
 
 const smallLightGrayBoxWithHeightStyles = [
   "height: 60px",
-  "background: #fbfbfb",
+  "background: #e3e3e3",
 ];
 
 const smallDarkGrayBoxWithHeightStyles = [

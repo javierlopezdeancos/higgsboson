@@ -18,17 +18,18 @@
 ## Component variables
 
 ```
---select-border-focus
---select-box-shadow-focus
---select-outline-focus
---select-border-radius
 --select-border
+--select-border-focus
+--select-border-radius
+--select-box-shadow-focus
 --select-color
 --select-font-family
 --select-font-size
 --select-height
 --select-open-icon-right
---select-padding-left
+--select-open-icon-top
+--select-outline-focus
+--select-padding
 ```
 
 ## HTML Structure

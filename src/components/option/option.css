@@ -1,5 +1,8 @@
 .hggs-option {
-  font-family: var(--option-font-family, --hggs-font-family-primary-default);
-  font-size: var(--option-font-size, --hggs-font-size-default);
-  color: var(--option-color, --hggs-app-color-default);
+  font-family: var(
+    --option-font-family,
+    var(--hggs-font-family-primary-default)
+  );
+  font-size: var(--option-font-size, var(--hggs-font-size-default));
+  color: var(--option-color, var(--hggs-color-default));
 }

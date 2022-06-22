@@ -1,5 +1,7 @@
 const buttonStyles = ["margin-right: 20px"];
 
+const buttonStylesWithMarginBottom = [...buttonStyles, "margin-bottom: 10px"];
+
 const data = {
   title: "Buttons",
   default: [
@@ -11,6 +13,16 @@ const data = {
       },
       classes: {
         button: ["hggs-button"],
+      },
+    },
+    {
+      title: "button --full-width",
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+      },
+      classes: {
+        button: ["hggs-button", "hggs-button--full-width"],
       },
     },
     {
@@ -431,12 +443,7 @@ const data = {
       title: "button --quinary",
       styles: {
         header: headerQuinaryStyles,
-        article: [
-          "margin-bottom: 30px",
-          "width: 100%",
-          "background: black",
-          "padding: 0 10px 0 10px",
-        ],
+        article: articleQuinaryStyles,
       },
       classes: {
         button: ["hggs-button", "hggs-button--quinary"],
@@ -787,7 +794,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--square"],
@@ -804,7 +811,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--square hggs-button--primary"],
@@ -821,7 +828,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--square hggs-button--secondary"],
@@ -838,7 +845,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--square hggs-button--tertiary"],
@@ -855,7 +862,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--square hggs-button--quaternary"],
@@ -872,7 +879,7 @@ const data = {
         article: articleQuinaryStyles,
         header: headerWithSubtitleQuinaryStyles,
         subheader: subHeaderQuinaryStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--square hggs-button--quinary"],
@@ -889,7 +896,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--square hggs-button--senary"],
@@ -906,7 +913,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--square hggs-button--outline"],
@@ -917,13 +924,13 @@ const data = {
       },
     },
     {
-      title: "button --square s--primary --outline --{size}",
+      title: "button --square --primary --outline --{size}",
       subtitle: "icon --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -943,7 +950,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -963,7 +970,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -983,7 +990,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -1003,7 +1010,7 @@ const data = {
         article: articleQuinaryStyles,
         header: headerWithSubtitleQuinaryStyles,
         subheader: subHeaderQuinaryStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -1023,7 +1030,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -1045,7 +1052,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--circle"],
@@ -1062,7 +1069,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--circle hggs-button--primary"],
@@ -1079,7 +1086,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--circle hggs-button--secondary"],
@@ -1096,7 +1103,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--circle hggs-button--tertiary"],
@@ -1113,7 +1120,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--circle hggs-button--quaternary"],
@@ -1130,7 +1137,7 @@ const data = {
         article: articleQuinaryStyles,
         header: headerWithSubtitleQuinaryStyles,
         subheader: subHeaderQuinaryStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--circle hggs-button--quinary"],
@@ -1147,7 +1154,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--circle hggs-button--senary"],
@@ -1164,7 +1171,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: ["hggs-button", "hggs-button--circle hggs-button--outline"],
@@ -1181,7 +1188,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -1201,7 +1208,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -1221,7 +1228,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -1241,7 +1248,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -1261,7 +1268,7 @@ const data = {
         article: articleQuinaryStyles,
         header: headerWithSubtitleQuinaryStyles,
         subheader: subHeaderQuinaryStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [
@@ -1281,7 +1288,7 @@ const data = {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStyles,
+        button: buttonStylesWithMarginBottom,
       },
       classes: {
         button: [

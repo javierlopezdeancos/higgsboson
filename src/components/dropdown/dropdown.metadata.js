@@ -2,7 +2,7 @@ const data = {
   title: "Dropdown",
   default: [
     {
-      title: "dropdown --big",
+      title: "dropdown",
       styles: {
         header: headerStyles,
         article: articleStyles,

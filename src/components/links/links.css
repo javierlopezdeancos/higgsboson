@@ -1,14 +1,15 @@
 .hggs-link {
-  text-decoration: none;
-  font-family: var(--link-font-family);
-  font-weight: var(--link-font-weight);
-  font-size: var(--hggs-font-size);
-  color: var(--link-color);
+  text-decoration: var(--link-text-decoration, underline);
+  font-family: var(--link-font-family, var(--hggs-font-family-primary-default));
+  font-weight: var(--link-font-weight, var(--hggs-font-weight-default));
+  font-size: var(--hggs-font-size, var(--hggs-font-size-default));
+  font-style: var(--hggs-font-weight-medium, italic);
+  color: var(--link-color, var(--hggs-color-default));
 
   &:hover,
   &.hggs-link--hover {
-    text-decoration: underline;
-    color: var(--link-color-hover);
+    text-decoration: var(--link-text-decoration-hover, underline);
+    color: var(--link-color-hover), var(--hggs-color-default);
     cursor: pointer;
   }
 }
