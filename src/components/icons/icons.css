@@ -1,77 +1,117 @@
+%hggs-icon-default {
+  filter: var(--icon-filter, var(--hggs-filter-default));
+}
+
 %hggs-icon-primary {
-  filter: var(--icon-filter-quinary, --hggs-filter-quinary-default);
+  filter: var(--icon-filter-primary, var(--hggs-filter-primary-default));
 }
 
 %hggs-icon-secondary {
-  filter: var(--icon-filter-quinary, --hggs-filter-quinary-default);
+  filter: var(--icon-filter-secondary, var(--hggs-filter-secondary-default));
 }
 
 %hggs-icon-tertiary {
-  filter: var(--icon-filter-quinary, --hggs-filter-quinary-default);
+  filter: var(--icon-filter-tertiary, var(--hggs-filter-tertiary-default));
 }
 
 %hggs-icon-quaternary {
-  filter: var(--icon-filter-quinary, --hggs-filter-quinary-default);
+  filter: var(--icon-filter-quaternary, var(--hggs-filter-quaternary-default));
 }
 
 %hggs-icon-quinary {
-  filter: var(--icon-filter-quaternary, --hggs-filter-quaternary-default);
+  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-senary {
-  filter: var(--icon-filter-quinary, --hggs-filter-quinary-default);
+  filter: var(--icon-filter-senary, var(--hggs-filter-senary-default));
 }
 
-%hggs-icon-outline {
-  filter: var(--icon-filter, --hggs-filter-default);
+%hggs-icon-box-default {
+  filter: var(--icon-filter-quaternary, var(--hggs-filter-quinary-default));
+}
+
+%hggs-icon-box-primary {
+  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+}
+
+%hggs-icon-box-secondary {
+  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+}
+
+%hggs-icon-box-tertiary {
+  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+}
+
+%hggs-icon-box-quaternary {
+  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+}
+
+%hggs-icon-box-quinary {
+  filter: var(--icon-filter-quaternary, var(--hggs-filter-quaternary-default));
+}
+
+%hggs-icon-box-senary {
+  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+}
+
+%hggs-icon-outline-default {
+  filter: var(--icon-filter, var(--hggs-filter-quaternary-default));
 }
 
 %hggs-icon-outline-primary {
-  filter: var(--icon-filter-primary, --hggs-filter-primary-default);
+  filter: var(--icon-filter-primary, var(--hggs-filter-primary-default));
 }
 
 %hggs-icon-outline-secondary {
-  filter: var(--icon-filter-secondary, --hggs-filter-secondary-default);
+  filter: var(--icon-filter-secondary, var(--hggs-filter-secondary-default));
 }
 
 %hggs-icon-outline-tertiary {
-  filter: var(--icon-filter-tertiary, --hggs-filter-tertiary-default);
+  filter: var(--icon-filter-tertiary, var(--hggs-filter-tertiary-default));
 }
 
 %hggs-icon-outline-quaternary {
-  filter: var(--icon-filter-quaternary, --hggs-filter-quaternary-default);
+  filter: var(--icon-filter-quaternary, var(--hggs-filter-quaternary-default));
 }
 
 %hggs-icon-outline-quinary {
-  filter: var(--icon-filter-quinary, --hggs-filter-quinary-default);
+  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-outline-senary {
-  filter: var(--icon-filter-senary, --hggs-filter-senary-default);
+  filter: var(--icon-filter-senary, var(--hggs-filter-senary-default));
 }
 
 %hggs-icon-label-quinary {
-  color: var(--icon-label-quinary-color, --hggs-color-quinary-default);
+  color: var(--icon-label-quinary-color, var(--hggs-color-quinary-default));
 }
 
 %hggs-icon-small {
-  width: var(--icon-size-small, 12px);
-  height: var(--icon-size-small, 12px);
+  width: var(--icon-size-small, var(--hggs-icon-size-small-default));
+  height: var(--icon-size-small, var(--hggs-icon-size-small-default));
 }
 
 %hggs-icon-micro {
-  width: var(--icon-size-micro, 10px);
-  height: var(--icon-size-micro, 10px);
+  width: var(--icon-size-micro, var(--hggs-icon-size-micro-default));
+  height: var(--icon-size-micro, var(--hggs-icon-size-micro-default));
 }
 
 %hggs-icon-box-small {
+  padding: var(
+    --icon-box-padding-small,
+    calc(var(--hggs-space-vertical-small-default) * 1.25)
+  );
+
   & .hggs-icon {
     @extend %hggs-icon-small;
   }
 }
 
 %hggs-icon-box-micro {
-  padding: var(--icon-box-padding-micro, 10px);
+  padding: var(
+    --icon-box-padding-micro,
+    calc(var(--hggs-space-vertical-micro-default) * 1.5)
+  );
 
   & .hggs-icon {
     @extend %hggs-icon-micro;
@@ -86,10 +126,95 @@
   border-radius: 50%;
 }
 
+%hggs-icon-box-outline {
+  background: transparent;
+  border: var(--icon-outline-border, var(--hggs-border-primary-default));
+
+  & .hggs-icon {
+    @extend %hggs-icon-outline-default;
+  }
+
+  &.hggs-icon--primary {
+    background: transparent;
+    border: var(
+      --icon-outline-border-primary,
+      var(--hggs-border-primary-default)
+    );
+
+    & .hggs-icon {
+      @extend %hggs-icon-outline-primary;
+    }
+  }
+
+  &.hggs-icon--secondary {
+    background: transparent;
+    border: var(
+      --icon-outline-border-secondary,
+      var(--hggs-border-secondary-default)
+    );
+
+    & .hggs-icon {
+      @extend %hggs-icon-outline-secondary;
+    }
+  }
+
+  &.hggs-icon--tertiary {
+    background: transparent;
+    border: var(
+      --icon-outline-border-tertiary,
+      var(--hggs-border-tertiary-default)
+    );
+
+    & .hggs-icon {
+      @extend %hggs-icon-outline-tertiary;
+    }
+  }
+
+  &.hggs-icon--quaternary {
+    background: transparent;
+    border: var(
+      --icon-outline-border-quaternary,
+      var(--hggs-border-quaternary-default)
+    );
+
+    & .hggs-icon {
+      @extend %hggs-icon-outline-quaternary;
+    }
+  }
+
+  &.hggs-icon--quinary {
+    background: transparent;
+    border: var(
+      --icon-outline-border-quinary,
+      var(--hggs-border-quinary-default)
+    );
+
+    & .hggs-icon {
+      @extend %hggs-icon-outline-quinary;
+    }
+  }
+
+  &.hggs-icon--senary {
+    background: transparent;
+    border: var(
+      --icon-outline-border-senary,
+      var(--hggs-border-senary-default)
+    );
+
+    & .hggs-icon {
+      @extend %hggs-icon-outline-senary;
+    }
+  }
+}
+
 %hggs-icon-box {
   width: auto;
   height: auto;
-  padding: var(--icon-box-padding, 20px);
+  padding: var(--icon-box-padding, var(--hggs-space-vertical-medium-default));
+
+  & .hggs-icon {
+    @extend %hggs-icon-box-default;
+  }
 
   &.hggs-icon--small {
     @extend %hggs-icon-box-small;
@@ -102,66 +227,66 @@
   &.hggs-icon--primary {
     background: var(
       --icon-box-background-primary,
-      --hggs-color-primary-default
+      var(--hggs-color-primary-default)
     );
 
     & .hggs-icon {
-      @extend %hggs-icon-primary;
+      @extend %hggs-icon-box-primary;
     }
   }
 
   &.hggs-icon--secondary {
     background: var(
       --icon-box-background-secondary,
-      --hggs-color-secondary-default
+      var(--hggs-color-secondary-default)
     );
 
     & .hggs-icon {
-      @extend %hggs-icon-secondary;
+      @extend %hggs-icon-box-secondary;
     }
   }
 
   &.hggs-icon--tertiary {
     background: var(
       --icon-box-background-tertiary,
-      --hggs-color-tertiary-default
+      var(--hggs-color-tertiary-default)
     );
 
     & .hggs-icon {
-      @extend %hggs-icon-tertiary;
+      @extend %hggs-icon-box-tertiary;
     }
   }
 
   &.hggs-icon--quaternary {
     background: var(
       --icon-box-background-quaternary,
-      --hggs-color-quaternary-default
+      var(--hggs-color-quaternary-default)
     );
 
     & .hggs-icon {
-      @extend %hggs-icon-quaternary;
+      @extend %hggs-icon-box-quaternary;
     }
   }
 
   &.hggs-icon--quinary {
     background: var(
       --icon-box-background-quinary,
-      --hggs-color-quinary-default
+      var(--hggs-color-quinary-default)
     );
 
     & .hggs-icon {
-      @extend %hggs-icon-quinary;
+      @extend %hggs-icon-box-quinary;
     }
   }
 
   &.hggs-icon--senary {
     background: var(
       --icon-box-background-senary,
-      --hggs-color-tertiary-default
+      var(--hggs-color-senary-default)
     );
 
     & .hggs-icon {
-      @extend %hggs-icon-senary;
+      @extend %hggs-icon-box-senary;
     }
   }
 }
@@ -171,20 +296,17 @@
 
   & .hggs-icon + .hggs-icon-label {
     flex: 1;
-    font-family: var(
-      --icon-label-font-family,
-      --hggs-font-family-primary-default
-    );
+    font-family: var(--icon-label-font-family, var(--hggs-font-family-default));
     font-weight: var(
       --icon-label-font-weigth,
-      --hggs-font-weight-medium-default
+      var(--hggs-font-weight-medium-default)
     );
-    font-size: var(--icon-label-font-size, --hggs-font-size-default);
-    color: var(--icon-label-color, --hggs-color-auxiliary-gray-007-default);
+    font-size: var(--icon-label-font-size, var(--hggs-font-size-default));
+    color: var(--icon-label-color, var(--hggs-color-quaternary-default));
     text-align: var(--icon-label-text-align, left);
     margin-left: var(
       --icon-label-margin-left,
-      --hggs-space-vertical-small-default
+      var(--hggs-space-vertical-small-default)
     );
     margin-top: auto;
     margin-bottom: auto;
@@ -200,9 +322,13 @@
 
     background: var(
       --icon-box-background,
-      --hggs-color-auxiliary-gray-001-default
+      var(--hggs-color-quaternary-default)
     );
     border: unset;
+
+    &.hggs-icon--outline {
+      @extend %hggs-icon-box-outline;
+    }
   }
 
   &.hggs-icon--square {
@@ -211,167 +337,85 @@
 
     background: var(
       --icon-box-background,
-      --hggs-color-auxiliary-gray-001-default
+      var(--hggs-color-quaternary-default)
     );
     border: unset;
-  }
 
-  &.hggs-icon--outline {
-    background: transparent;
-    border: var(
-      --icon-outline-border,
-      1px solid var(--hggs-color-auxiliary-gray-004-default)
-    );
-
-    & .hggs-icon {
-      @extend %hggs-icon-outline;
-    }
-
-    &.hggs-icon--primary {
-      background: transparent;
-      border: var(
-        --icon-outline-border-primary,
-        1px solid var(--hggs-color-primary-default)
-      );
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-primary;
-      }
-    }
-
-    &.hggs-icon--secondary {
-      background: transparent;
-      border: var(
-        --icon-outline-border-secondary,
-        1px solid var(--hggs-color-secondary-default)
-      );
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-secondary;
-      }
-    }
-
-    &.hggs-icon--tertiary {
-      background: transparent;
-      border: var(
-        --icon-outline-border-tertiary,
-        1px solid var(--hggs-color-tertiary-default)
-      );
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-tertiary;
-      }
-    }
-
-    &.hggs-icon--quaternary {
-      background: transparent;
-      border: var(
-        --icon-outline-border-quaternary,
-        1px solid var(--hggs-color-quaternary-default)
-      );
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-quaternary;
-      }
-    }
-
-    &.hggs-icon--quinary {
-      background: transparent;
-      border: var(
-        --icon-outline-border-quinary,
-        1px solid var(--hggs-color-quinary-default)
-      );
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-quinary;
-      }
-    }
-
-    &.hggs-icon--senary {
-      background: transparent;
-      border: var(
-        --icon-outline-border-senary,
-        1px solid var(--hggs-color-senary-default)
-      );
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-senary;
-      }
+    &.hggs-icon--outline {
+      @extend %hggs-icon-box-outline;
     }
   }
 }
 
 .hggs-icon {
+  @extend %hggs-icon-default;
+
   display: block;
-  width: var(--icon-size, --icon-size-default);
-  height: var(--icon-size, --icon-size-default);
-  filter: var(--icon-filter, --hggs-filter-color-auxiliary-004-default);
+  width: var(--icon-size, var(--hggs-icon-size-default));
+  height: var(--icon-size, var(--hggs-icon-size-default));
 
   &.hggs-icon--user {
-    background: var(--icon-user, url("./assets/icons/user.svg")) no-repeat
-      center;
+    background: var(--icon-user, var(--hggs-icon-user-default)) no-repeat center;
   }
 
   &.hggs-icon--question {
-    background: var(--icon-question, url("./assets/icons/question.svg"))
+    background: var(--icon-question, var(--hggs-icon-question-default))
       no-repeat center;
   }
 
   &.hggs-icon--log-out {
-    background: var(--icon-log-out, url("./assets/icons/log-out.svg")) no-repeat
+    background: var(--icon-log-out, var(--hggs-icon-log-out-default)) no-repeat
       center;
   }
 
   &.hggs-icon--hamburger-menu {
     background: var(
         --icon-hamburger-menu,
-        url("./assets/icons/hamburger-menu.svg")
+        var(--hggs-icon-hamburger-menu-default)
       )
       no-repeat center;
   }
 
   &.hggs-icon--edit {
-    background: var(--icon-edit, url("./assets/icons/pencil.svg")) no-repeat
-      center;
+    background: var(--icon-edit, var(--hggs-icon-edit-default)) no-repeat center;
   }
 
   &.hggs-icon--close {
-    background: var(--icon-close, url("./assets/icons/close.svg")) no-repeat
+    background: var(--icon-close, var(--hggs-icon-close-default)) no-repeat
       center;
   }
 
   &.hggs-icon--plus {
-    background: var(--icon-plus, url("./assets/icons/plus.svg")) no-repeat
-      center;
+    background: var(--icon-plus, var(--hggs-icon-plus-default)) no-repeat center;
   }
 
   &.hggs-icon--chevron-down {
-    background: var(--icon-chevron-down, url("./assets/icons/chevron-down.svg"))
+    background: var(--icon-chevron-down, var(--hggs-icon-chevron-down-default))
       no-repeat center;
   }
 
   &.hggs-icon--primary {
-    filter: var(--icon-filter-primary, --hggs-filter-primary-default);
+    @extend %hggs-icon-primary;
   }
 
   &.hggs-icon--secondary {
-    filter: var(--icon-filter-secondary, --hggs-filter-secondary-default);
+    @extend %hggs-icon-secondary;
   }
 
   &.hggs-icon--tertiary {
-    filter: var(--icon-filter-tertiary, --hggs-filter-tertiary-default);
+    @extend %hggs-icon-tertiary;
   }
 
   &.hggs-icon--quaternary {
-    filter: var(--icon-filter-quaternary, --hggs-filter-quaternary-default);
+    @extend %hggs-icon-quaternary;
   }
 
   &.hggs-icon--quinary {
-    filter: var(--icon-filter-quinary, --hggs-filter-quinary-default);
+    @extend %hggs-icon-quinary;
   }
 
   &.hggs-icon--senary {
-    filter: var(--icon-filter-senary, --hggs-filter-senary-default);
+    @extend %hggs-icon-senary;
   }
 
   &.hggs-icon--small {

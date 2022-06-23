@@ -5,76 +5,89 @@
 
 .hggs-tag {
   width: fit-content;
-  font-family: var(--tag-font-family, --tag-font-family-default);
-  font-size: var(--tag-font-size, --tag-font-size-default);
-  font-weight: var(--tag-font-weight, --tag-font-weight-default);
-  background: var(--tag-background, --tag-background-default);
-  color: var(--tag-color, --tag-color-default);
-  padding: var(--tag-padding, --tag-padding-default);
-  text-align: var(--tag-text-align, --tag-text-align-default);
+  font-family: var(--tag-font-family, var(--hggs-font-family-default));
+  font-size: var(--tag-font-size, var(--hggs-font-size-small-default));
+  font-weight: var(--tag-font-weight, var(--hgss-font-weight-default));
+  background: var(--tag-background, var(--hggs-color-quaternary-default));
+  color: var(--tag-color, var(--hggs-color-quinary-default));
+  padding: var(
+    --tag-padding,
+    var(--hggs-space-vertical-small-default)
+      var(--hggs-space-horizontal-medium-default)
+  );
+  text-align: var(--tag-text-align, center);
   text-transform: var(--tag-text-transform, uppercase);
-  letter-spacing: var(--tag-letter-spacing, --tag-letter-spacing-default);
+  letter-spacing: var(
+    --tag-letter-spacing,
+    var(--hggs-font-letter-spacing-small)
+  );
 
   &.hggs-tag--outline {
     @extend %hggs-tag-outline-reset;
 
-    border: var(
-      --tag-border-outline,
-      1px solid var(--hggs-color-auxiliary-gray-004)
-    );
-    color: var(--tag-color-outline);
+    border: var(--tag-border-outline, var(--hggs-border-default));
+    color: var(--tag-color-outline, var(--hggs-color-default));
   }
 
   &.hggs-tag--subtle {
     background: var(
       --tag-background-subtle,
-      --hggs-color-auxiliary-gray-001-default
+      var(--hggs-color-auxiliary-gray-015-default)
     );
-    color: var(--tag-color-subtle, --hggs-color-auxiliary-gray-004-default);
+    color: var(--tag-color-subtle, var(--hggs-color-quinary-default));
 
     &.hggs-tag--outline {
       @extend %hggs-tag-outline-reset;
 
       border: var(
         --tag-border-outline-subtle,
-        1px solid var(--hggs-color-auxiliary-gray-004)
+        var(--hggs-border-auxiliary-gray-015-default)
       );
-      color: var(--tag-color-outline-subtle);
+      color: var(
+        --tag-color-outline-subtle,
+        var(--hggs-color-auxiliary-gray-015-default)
+      );
     }
   }
 
   &.hggs-tag--primary {
-    background: var(--tag-background-primary, --tag-background-primary-default);
-    color: var(--tag-color-primary, --tag-color-primary-default);
+    background: var(
+      --tag-background-primary,
+      var(--hggs-color-primary-default)
+    );
+    color: var(--tag-color-primary, var(--hggs-color-quinary-default));
 
     &.hggs-tag--outline {
       @extend %hggs-tag-outline-reset;
 
       border: var(
         --tag-border-outline-primary,
-        1px solid var(--hggs-color-primary-default)
+        var(--hggs-border-primary-default)
       );
-      color: var(--tag-color-outline-primary);
+      color: var(
+        --tag-color-outline-primary,
+        var(--hggs-color-primary-default)
+      );
     }
 
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-primary,
-        --hggs-color-auxiliary-gray-001-default
+        var(--hggs-color-auxiliary-gray-013-default)
       );
-      color: var(
-        --tag-color-subtle-primary,
-        --hggs-color-auxiliary-gray-004-default
-      );
+      color: var(--tag-color-subtle-primary, var(--hggs-color-quinary-default));
 
       &.hggs-tag--outline {
         @extend %hggs-tag-outline-reset;
 
         border: var(
           --tag-border-outline-primary-subtle,
-          1px solid var(--hggs-color-primary-default)
+          var(--hggs-border-auxiliary-gray-013-default)
         );
-        color: var(--tag-color-outline-primary-subtle);
+        color: var(
+          --tag-color-outline-primary-subtle,
+          var(--hggs-color-auxiliary-gray-013-default)
+        );
       }
     }
   }
@@ -82,16 +95,16 @@
   &.hggs-tag--secondary {
     background: var(
       --tag-background-secondary,
-      --tag-background-secondary-default
+      var(--hggs-color-secondary-default)
     );
-    color: var(--tag-color-secondary, --tag-color-secondary-default);
+    color: var(--tag-color-secondary, var(--hggs-color-quinary-default));
 
     &.hggs-tag--outline {
       @extend %hggs-tag-outline-reset;
 
       border: var(
         --tag-border-outline-secondary,
-        1px solid var(--hggs-color-secondary-default)
+        var(--hggs-border-secondary-default)
       );
       color: var(--tag-color-outline-secondary);
     }
@@ -99,11 +112,11 @@
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-secondary,
-        --hggs-color-auxiliary-gray-001-default
+        var(--hggs-color-auxiliary-gray-012-default)
       );
       color: var(
         --tag-color-subtle-secondary,
-        --hggs-color-auxiliary-gray-004-default
+        var(--hggs-color-quinary-default)
       );
 
       &.hggs-tag--outline {
@@ -111,9 +124,9 @@
 
         border: var(
           --tag-border-outline-secondary-subtle,
-          1px solid var(--hggs-color-primary-default)
+          var(--hggs-border-auxiliary-gray-012-default)
         );
-        color: var(--tag-color-outline-secondary-subtle);
+        color: var(--hggs-color-auxiliary-gray-012-default);
       }
     }
   }
@@ -121,28 +134,31 @@
   &.hggs-tag--tertiary {
     background: var(
       --tag-background-tertiary,
-      --tag-background-tertiary-default
+      var(--hggs-color-secondary-default)
     );
-    color: var(--tag-color-tertiary, --tag-color-tertiary-default);
+    color: var(--tag-color-tertiary, var(--hggs-color-quinary-default));
 
     &.hggs-tag--outline {
       @extend %hggs-tag-outline-reset;
 
       border: var(
         --tag-border-outline-tertiary,
-        1px solid var(--hggs-color-tertiary-default)
+        var(--hggs-border-tertiary-default)
       );
-      color: var(--tag-color-outline-tertiary);
+      color: var(
+        --tag-color-outline-tertiary,
+        var(--hggs-color-tertiary-default)
+      );
     }
 
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-tertiary,
-        --hggs-color-auxiliary-gray-001-default
+        var(--hggs-color-auxiliary-gray-010-default)
       );
       color: var(
         --tag-color-subtle-tertiary,
-        --hggs-color-auxiliary-gray-004-default
+        var(--hggs-color-quinary-default)
       );
 
       &.hggs-tag--outline {
@@ -150,9 +166,12 @@
 
         border: var(
           --tag-border-outline-tertiary-subtle,
-          1px solid var(--hggs-color-primary-default)
+          var(--hggs-border-auxiliary-gray-010-default)
         );
-        color: var(--tag-color-outline-tertiary-subtle);
+        color: var(
+          --tag-color-outline-tertiary-subtle,
+          var(--hggs-color-auxiliary-gray-010-default)
+        );
       }
     }
   }
@@ -160,28 +179,31 @@
   &.hggs-tag--quaternary {
     background: var(
       --tag-background-quaternary,
-      --tag-background-quaternary-default
+      var(--hggs-color-quaternary-default)
     );
-    color: var(--tag-color-quaternary, --tag-color-quaternary-default);
+    color: var(--tag-color-quaternary, var(--hggs-color-quinary-default));
 
     &.hggs-tag--outline {
       @extend %hggs-tag-outline-reset;
 
       border: var(
         --tag-border-outline-quaternary,
-        1px solid var(--hggs-color-quaternary-default)
+        var(--hggs-border-quaternary-default)
       );
-      color: var(--tag-color-outline-quaternary);
+      color: var(
+        --tag-color-outline-quaternary,
+        var(--hggs-color-quaternary-default)
+      );
     }
 
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-quaternary,
-        --hggs-color-auxiliary-gray-001-default
+        var(--hggs-color-auxiliary-gray-009-default)
       );
       color: var(
         --tag-color-subtle-quaternary,
-        --hggs-color-auxiliary-gray-004-default
+        var(--hggs-color-quaternary-default)
       );
 
       &.hggs-tag--outline {
@@ -197,27 +219,33 @@
   }
 
   &.hggs-tag--quinary {
-    background: var(--tag-background-quinary, --tag-background-quinary-default);
-    color: var(--tag-color-quinary, --tag-color-quinary-default);
+    background: var(
+      --tag-background-quinary,
+      var(--hggs-color-quinary-default)
+    );
+    color: var(--tag-color-quinary, var(--hggs-color-quaternary-default));
 
     &.hggs-tag--outline {
       @extend %hggs-tag-outline-reset;
 
       border: var(
         --tag-border-outline-quinary,
-        1px solid var(--hggs-color-quinary-default)
+        var(--hggs-border-quinary-default)
       );
-      color: var(--tag-color-outline-quinary);
+      color: var(
+        --tag-color-outline-quinary,
+        var(--hggs-color-quinary-default)
+      );
     }
 
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-quinary,
-        --hggs-color-auxiliary-gray-001-default
+        var(--hggs-color-auxiliary-gray-008-default)
       );
       color: var(
         --tag-color-subtle-quinary,
-        --hggs-color-auxiliary-gray-004-default
+        var(--hggs-color-quaternary-default)
       );
 
       &.hggs-tag--outline {
@@ -225,35 +253,38 @@
 
         border: var(
           --tag-border-outline-quinary-subtle,
-          1px solid var(--hggs-color-primary-default)
+          var(--hggs-border-auxiliary-gray-008-default)
         );
-        color: var(--tag-color-outline-quinary-subtle);
+        color: var(
+          --tag-color-outline-quinary-subtle,
+          var(--hggs-color-auxiliary-gray-008-default)
+        );
       }
     }
   }
 
   &.hggs-tag--senary {
-    background: var(--tag-background-senary, --tag-background-senary-default);
-    color: var(--tag-color-senary, --tag-color-senary-default);
+    background: var(--tag-background-senary, var(--hggs-color-senary-default));
+    color: var(--tag-color-senary, var(--hggs-color-quinary-default));
 
     &.hggs-tag--outline {
       @extend %hggs-tag-outline-reset;
 
       border: var(
         --tag-border-outline-senary,
-        1px solid var(--hggs-color-senary-default)
+        var(--hggs-border-senary-default)
       );
-      color: var(--tag-color-outline-senary);
+      color: var(--tag-color-outline-senary, var(--hggs-color-senary-default));
     }
 
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-senary,
-        --hggs-color-auxiliary-gray-001-default
+        var(--hggs-color-auxiliary-gray-006-default)
       );
       color: var(
         --tag-color-subtle-senary,
-        --hggs-color-auxiliary-gray-004-default
+        var(--hggs-color-quaternary-default)
       );
 
       &.hggs-tag--outline {
@@ -261,20 +292,26 @@
 
         border: var(
           --tag-border-outline-senary-subtle,
-          1px solid var(--hggs-color-primary-default)
+          var(--hggs-border-auxiliary-gray-006-default)
         );
-        color: var(--tag-color-outline-senary-subtle);
+        color: var(
+          --tag-color-outline-senary-subtle,
+          var(--hggs-color-auxiliary-gray-006-default)
+        );
       }
     }
   }
 
   &.hggs-tag--rounded {
-    border-radius: var(--tag-border-radius, --hggs-border-radius-default);
+    border-radius: var(--tag-border-radius, 20px);
   }
 
   &.hggs-tag--small {
-    font-size: var(--tag-font-size-small, 8px);
-    padding: var(--tag-padding-small, 5px 10px);
+    font-size: var(--tag-font-size-small, var(--hggs-font-size-micro-default));
+    padding: var(
+      --tag-padding-small,
+      var(--hggs-space-vertical-micro-default)
+        var(--hggs-space-horizontal-small-default)
+    );
   }
 }
-

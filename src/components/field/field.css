@@ -3,7 +3,10 @@
 
   & > .hggs-label {
     display: block;
-    margin-bottom: var(--field-label-margin-bottom, 10px);
+    margin-bottom: var(
+      --field-label-margin-bottom,
+      var(--hggs-space-vertical-small-default)
+    );
   }
 
   &.hggs-field--required {
@@ -11,11 +14,11 @@
       content: "*";
       color: var(
         --field-label-after-color-required,
-        --hggs-color-auxiliary-gray-004
+        var(--hggs-color-error-default)
       );
       margin-left: var(
         --field-label-after-margin-left-required,
-        --hggs-space-horizontal-small
+        var(--hggs-space-horizontal-nano-default)
       );
     }
   }

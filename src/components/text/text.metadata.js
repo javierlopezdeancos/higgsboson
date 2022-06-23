@@ -12,7 +12,7 @@ const data = {
       },
     },
     {
-      title: "label --italic",
+      title: "text --italic",
       classes: {
         label: ["hggs-text", "hggs-text--italic"],
       },
@@ -22,7 +22,7 @@ const data = {
       },
     },
     {
-      title: "label --small",
+      title: "text --small",
       classes: {
         label: ["hggs-text", "hggs-text--small"],
       },
@@ -32,7 +32,7 @@ const data = {
       },
     },
     {
-      title: "label --bold",
+      title: "text --bold",
       classes: {
         label: ["hggs-text", "hggs-text--bold"],
       },

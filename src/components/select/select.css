@@ -19,10 +19,10 @@
 
   & .hggs-icon--chevron-down {
     position: absolute;
-    top: 25%;
+    top: var(--select-open-icon-top, 25%);
     right: var(
       --select-open-icon-right,
-      --hggs-space-horizontal-medium-default
+      var(--hggs-space-horizontal-small-default)
     );
   }
 }
@@ -30,24 +30,22 @@
 .hggs-select {
   @extend %hggs-select-reset-styles;
 
-  font-family: var(--select-font-family, --hggs-font-family-primary-default);
-  font-size: var(--select-font-size, --hggs-font-size-default);
-  color: var(--select-color, --hggs-app-color);
-  border: var(--select-border, 1px solid var(--hggs-color-auxiliary-gray-003));
-  border-radius: var(--select-border-radius, --hggs-border-radius-default);
-  height: var(--select-height, 38px);
-  padding-left: var(
-    --select-padding-left,
-    --hggs-space-horizontal-medium-default
-  );
   cursor: pointer;
+  font-family: var(--select-font-family, var(--hggs-font-family-default));
+  font-size: var(--select-font-size, var(--hggs-font-size-big-default));
+  color: var(--select-color, var(--hggs-color-default));
+  border: var(--select-border, var(--hggs-border-default));
+  border-radius: var(--select-border-radius, var(--hggs-border-radius-default));
+  height: var(--select-height, var(--hggs-space-vertical-big-default));
+  padding: var(
+    --select-padding-left,
+    var(--hggs-space-vertical-small-default)
+      var(--hggs-space-horizontal-small-default)
+  );
 
   &:focus {
-    outline: var(--select-outline-focus, --hggs-form-outline-focus-default);
-    border: var(--select-border-focus, 1px solid var(--hggs-color-primary));
-    box-shadow: var(
-      --select-box-shadow-focus,
-      --hggs-form-box-primary-focus-default
-    );
+    outline: var(--select-outline-focus, none);
+    border: var(--select-border-focus, var(--hggs-border-focus-default));
+    box-shadow: var(--select-box-shadow-focus, var(--hggs-shadow-default));
   }
 }

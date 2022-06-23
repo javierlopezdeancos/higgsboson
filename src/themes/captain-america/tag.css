@@ -1,5 +1,5 @@
 .hggs-tag {
-  --tag-font-family: var(--hggs-font-family-primary);
+  --tag-font-family: var(--hggs-font-family);
   --tag-font-size: var(--hggs-font-size-small);
   --tag-font-size-small: var(--hggs-font-size-nano);
   --tag-font-weight: var(--hggs-font-weight-bold);

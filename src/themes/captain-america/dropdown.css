@@ -14,7 +14,7 @@
     0 41px 26px -49px rgba(0, 0, 0, 0.06)
   );
   --dropdown-options-max-height: calc(var(--hggs-space-vertical-big) * 10);
-  --dropdown-option-label-font-family: var(--hggs-font-family-primary);
+  --dropdown-option-label-font-family: var(--hggs-font-family);
   --dropdown-option-label-font-size: var(--hggs-font-size);
   --dropdown-option-label-color: var(--hggs-color);
   --dropdown-option-label-padding: calc(var(--hggs-space-vertical-medium) / 2) 0
@@ -24,12 +24,13 @@
     --hggs-color-auxiliary-gray-001
   );
   --dropdown-options-selected-background: transparent;
-  --dropdown-options-selected-padding-left: var(--hggs-space-horizontal-medium);
-  --dropdown-option-selected-font-family: var(--hggs-font-family-primary);
+  --dropdown-options-selected-padding-left: 0;
+  --dropdown-option-selected-font-family: var(--hggs-font-family);
   --dropdown-option-selected-font-size: var(--hggs-font-size);
   --dropdown-option-selected-color: var(--hggs-color);
   --dropdown-open-icon-border-focus: 3px solid var(--hggs-color-primary);
   --dropdown-open-icon-border: 3px solid var(--hggs-color-auxiliary-gray-004);
+  --dropdown-open-icon-top: 30%;
   --dropdown-open-icon-size: 6px;
   --dropdown-open-icon-border-bottom-left-radius: 2px;
 }

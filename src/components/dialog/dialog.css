@@ -1,34 +1,43 @@
+@keyframes hggs-dialog-appear-default {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .hggs-dialog {
   position: relative;
   background-color: var(
     --dialog-background-color,
-    --dialog-background-color-default
+    var(--hgss-background-default)
   );
-  color: var(--dialog-color, --dialog-color-default);
-  text-align: var(--dialog-text-align, --dialog-text-align-default);
+  color: var(--dialog-color, var(--hggs-color-default));
+  text-align: var(--dialog-text-align, left);
   border: none;
-  padding: var(--dialog-padding, --dialog-padding-default);
-  border-radius: var(--dialog-border-radius, --dialog-border-radius-default);
-  box-shadow: var(
-    --dialog-background-box-shadow,
-    --dialog-background-box-shadow-default
-  );
-  max-width: var(--dialog-max-width, --dialog-max-width-default);
+  padding: var(--dialog-padding, var(--hggs-space-horizontal-small-default));
+  border-radius: var(--dialog-border-radius, var(--hggs-border-default));
+  box-shadow: var(--dialog-background-box-shadow, none);
+  max-width: var(--dialog-max-width, 100vw);
 
   &.hggs-dialog--big {
-    width: var(--dialog-width-big, --dialog-width-big-default);
+    width: var(--dialog-width-big, 90vw);
   }
 
   &.hggs-dialog--medium {
-    width: var(--dialog-width-medium, --dialog-width-medium-default);
+    width: var(--dialog-width-medium, 75vw);
   }
 
   &.hggs-dialog--small {
-    width: var(--dialog-width-small, --dialog-width-small-default);
+    width: var(--dialog-width-small, 55vw);
   }
 
   &[open] {
-    animation: var(--dialog-anmimation-open, --dialog-anmimation-open-default);
+    animation: var(--dialog-anmimation-open, hggs-dialog-appear-default 0.15s);
   }
 
   &::backdrop {
@@ -40,8 +49,8 @@
   }
 
   & .hggs-dialog-close {
-    position: var(--dialog-close-position);
-    top: var(--dialog-close-top);
-    right: var(--dialog-close-right);
+    position: var(--dialog-close-position, absolute);
+    top: var(--dialog-close-top, 0);
+    right: var(--dialog-close-right, 1px);
   }
 }

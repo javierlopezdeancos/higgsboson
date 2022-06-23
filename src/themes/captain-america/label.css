@@ -1,8 +1,8 @@
 .hggs-label {
-  --label-font-family: var(--hggs-font-family-primary);
+  --label-font-family: var(--hggs-font-family);
   --label-font-weight: var(--hggs-font-weight-medium);
   --label-font-size: var(--hggs-font-size);
   --label-color: var(--hggs-color-auxiliary-gray-005);
   --label-color-focus: var(--hggs-color-auxiliary-gray-007);
-  --label-color-disabled: var(--hggs-color-auxiliary-gray-001);
+  --label-color-disabled: var(--hggs-color-disabled);
 }

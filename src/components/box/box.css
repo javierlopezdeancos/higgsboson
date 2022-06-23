@@ -1,65 +1,72 @@
 .hggs-box {
   width: 100%;
   height: auto;
-  min-height: var(--box-min-height, --box-min-height-default);
-  background: var(--box-background, --box-background-default);
-  box-shadow: var(--box-box-shadow, --box-box-shadow-default);
-  padding: var(--box-padding, --box-padding-default);
+  min-height: var(--box-min-height, 100px);
+  background: var(--box-background, var(--hggs-color-white-default));
+  box-shadow: var(--box-box-shadow, var(--hggs-shadow-default));
+  padding: var(
+    --box-padding,
+    var(
+      var(--hggs-space-vertical-big-default)
+        var(--hggs-space-horizontal-medium-default)
+    )
+  );
 
   & .hggs-box-header {
     border-bottom: var(
       --box-header-border-bottom,
-      --box-header-border-bottom-default
+      var(--hggs-border-auxiliary-gray-006-default)
     );
-    padding: var(--box-header-padding, --box-header-padding-default);
+    padding: var(--box-header-padding, 0 0 0 0);
   }
 
   & .hggs-box-title {
     @extend .hggs-h4;
 
-    font-size: var(--box-title-font-size, --box-title-font-size-default);
-    margin-top: var(--box-title-margin-top, --box-title-margin-top-default);
+    font-size: var(--box-title-font-size, var(--hggs-font-size-big-default));
+    margin-top: var(--box-title-margin-top, 0);
   }
 
   & .hggs-box-body {
-    padding: var(--box-body-padding, --box-body-padding-default);
+    padding: var(
+      --box-body-padding,
+      var(--hggs-space-vertical-medium-default) 0 0 0
+    );
 
     & > *:first-child {
       margin-top: unset;
     }
   }
 
-  /************************************/
-  /*                                  */
-  /*   hggs-box--rounded              */
-  /*                                  */
-  /************************************/
-
-  &.hggs-box--rounded{
+  &.hggs-box--rounded {
     border-radius: var(
       --box-border-radius-with-radius,
-      --box-border-radius-with-radius-default
+      var(--hggs-border-radius-big-default)
     );
   }
 
-  /************************************/
-  /*                                  */
-  /*   hggs-box--{variant}            */
-  /*                                  */
-  /************************************/
-
   &.hggs-box--primary {
-    background: var(--box-background-primary, --hggs-color-auxiliary-gray-000);
-    border: var(--box-border-primary, --hggs-color-auxiliary-gray-005);
+    background: var(
+      --box-background-primary,
+      var(--hggs-color-auxiliary-gray-004-default)
+    );
+    border: var(
+      --box-border-primary,
+      var(--hggs-border-auxiliary-gray-006-default)
+    );
+    box-shadow: none;
 
     & .hggs-box-header {
       border-bottom: var(
         --box-header-border-bottom-primary,
-        --hggs-color-auxiliary-gray-003
+        var(--hggs-border-auxiliary-gray-008-default)
       );
 
       & .hggs-box-title {
-        color: var(--box-title-color-primary, --hggs-color-auxiliary-gray-005);
+        color: var(
+          --box-title-color-primary,
+          var(--hggs-color-auxiliary-gray-020-default)
+        );
       }
     }
   }

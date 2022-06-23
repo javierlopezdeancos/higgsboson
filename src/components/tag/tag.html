@@ -78,7 +78,7 @@
         </article>
       <% }); %>
 
-      <!-- Rounded -->
+      <!-- Outline -->
       <article style="<%= articleStyles %>">
         <%
           const headerOutlineTagStyle = _.reduce(data.outline[0].styles.header, (acc, s) => {
@@ -94,53 +94,46 @@
         </h3>
         <div class="hggs-flex hggs-flex--top-left-row hggs-flex--row-wrap">
           <% _.each(data.outline, function(ts, ti) { %>
-          <%
-            let tagOutlineClass = _.reduce(ts.classes.tag, (acc, c) => {
-              if (!acc) {
-                return c;
-              }
+            <%
+              let tagOutlineClass = _.reduce(ts.classes.tag, (acc, c) => {
+                if (!acc) {
+                  return c;
+                }
 
-              return acc + ' ' + c;
-            }, '');
+                return acc + ' ' + c;
+              }, '');
 
-            const tagWrapStyle = _.reduce(ts?.styles?.wrap, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
+              const tagWrapStyle = _.reduce(ts?.styles?.wrap, (acc, s) => {
+                if (!acc) {
+                  return s;
+                }
 
-              return acc + '; ' + s;
-            }, '');
+                return acc + '; ' + s;
+              }, '');
 
-            const tagStyle = _.reduce(ts?.styles?.tag, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
+              const tagStyle = _.reduce(ts?.styles?.tag, (acc, s) => {
+                if (!acc) {
+                  return s;
+                }
 
-              return acc + '; ' + s;
-            }, '');
-          %>
+                return acc + '; ' + s;
+              }, '');
+            %>
 
-          <% if (ts?.styles?.wrap) { %>
-            <div style="<%= tagWrapStyle %>">
-              <div class="<%= tagOutlineClass %>">
+            <% if (ts?.styles?.wrap) { %>
+              <div style="<%= tagWrapStyle %>">
+                <div class="<%= tagOutlineClass %>">
+                  <%= ts.label %>
+                </div>
+              </div>
+            <% } else { %>
+              <div
+                class="<%= tagOutlineClass %>"
+                style="<%= tagStyle %>"
+              >
                 <%= ts.label %>
               </div>
-            </div>
-          <% } else { %>
-           <div
-              class="<%= tagOutlineClass %>"
-              style="<%= tagStyle %>"
-            >
-              <%= ts.label %>
-            </div>
-          <% } %>
-
-            <div
-              class="<%= tagOutlineClass %>"
-              style="<%= tagStyle %>"
-            >
-              <%= ts.label %>
-            </div>
+            <% } %>
           <% }); %>
         </div>
       </article>

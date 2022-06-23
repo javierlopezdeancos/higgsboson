@@ -17,16 +17,17 @@
 ## Component variables
 
 ```
---list-item-font-family
---list-item-font-weight
 --list-item-color
---list-item-font-size
---list-item-margin-bottom
---list-padding-left
---list-item-content-marker
 --list-item-color-marker
+--list-item-content-marker
+--list-item-font-family
+--list-item-font-size
 --list-item-font-size-marker
+--list-item-font-weight
 --list-item-font-weight-marker
+--list-item-margin-bottom
+--list-marging-left
+--list-padding-left
 ```
 
 ## HTML Structure

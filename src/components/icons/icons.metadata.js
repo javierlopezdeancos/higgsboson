@@ -262,7 +262,7 @@ const data = {
       },
     },
     {
-      title: "icon-wrapper --circle  --senary --{size}",
+      title: "icon-wrapper --circle --senary --{size}",
       subtitle: "icon --{type-of-icon}",
       styles: {
         article: articleStyles,
@@ -326,7 +326,7 @@ const data = {
       },
     },
     {
-      title: "icon-wrapper --circle  --secondary --outline --{size}",
+      title: "icon-wrapper --circle --secondary --outline --{size}",
       subtitle: "icon --{type-of-icon}",
       styles: {
         article: articleStyles,
@@ -476,7 +476,7 @@ const data = {
       },
     },
     {
-      title: "icon-wrapper --circle --secondary --{size}",
+      title: "icon-wrapper --square --secondary --{size}",
       subtitle: "icon --{type-of-icon}",
       styles: {
         article: articleStyles,

@@ -17,6 +17,7 @@
   --icon-box-background-tertiary: var(--hggs-color-tertiary);
   --icon-box-background: var(--hggs-color-auxiliary-gray-001);
   --icon-box-padding-micro: var(--hggs-space-horizontal-micro);
+  --icon-box-padding-small: var(--hggs-space-horizontal-small);
   --icon-box-padding: var(--hggs-space-horizontal-small);
   --icon-filter-primary: var(--hggs-filter-primary);
   --icon-filter-quaternary: var(--hggs-filter-quaternary);
@@ -26,7 +27,7 @@
   --icon-filter-tertiary: var(--hggs-filter-tertiary);
   --icon-filter: var(--hggs-filter-auxiliary-gray-004);
   --icon-label-color: var(--hggs-color-auxiliary-gray-007);
-  --icon-label-font-family: var(--hggs-font-family-primary);
+  --icon-label-font-family: var(--hggs-font-family);
   --icon-label-font-size: var(--hggs-font-size);
   --icon-label-font-weigth: var(--hggs-font-weight-medium);
   --icon-label-text-align: left;
@@ -43,4 +44,3 @@
   --icon-size-small: 12px;
   --icon-size: 20px;
 }
-

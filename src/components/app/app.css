@@ -3,18 +3,35 @@
 
   width: 100%;
   height: 100%;
-  background: var(--app-background, --hggs-color-quinary-default);
-  color: var(--app-color, --hggs-color-auxiliar-gray-008-default);
-  padding: var(--app-padding, 0);
-  font-size: var(--app-font-size, 14px);
+  background: var(--app-background, var(--hggs-background-default));
+  color: var(--app-color, var(--hggs-color-default));
+  padding: var(
+    --app-padding,
+    var(--hggs-space-horizontal-medium-default)
+      var(--hggs-space-vertical-medium-default)
+  );
+  font-size: var(--app-font-size, 1.5rem);
+  font-family: var(--hggs-font-family, var(--hggs-font-family-default));
 
+  /* TODO: Extract all of this into a container component*/
   & > header {
     & > .hggs-h1:first-child {
       margin-top: 0px;
     }
   }
 
+  & > main {
+    flex: 1;
+  }
+
   & > footer {
     padding-top: var(--app-footer-padding-top, 0);
+  }
+
+  & > header,
+  & > main,
+  & > footer {
+    @extend .hggs-flex--top-center-column;
+    width: 100%;
   }
 }

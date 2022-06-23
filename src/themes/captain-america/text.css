@@ -1,12 +1,11 @@
 .hggs-text {
   --text-color: var(--hggs-color-auxiliary-gray-005);
-  --text-font-famiy: var(--hggs-font-family-primary);
+  --text-font-famiy: var(--hggs-font-family);
   --text-font-size: var(--hggs-font-size);
-  --text-font-weight: var(--hggs-font-weight-normal);
+  --text-font-weight: var(--hggs-font-weight);
   --text-font-weight-bold: var(--hggs-font-weight-bold);
   --text-font-size-small: var(--hggs-font-size-small);
   --text-margin: var(--hggs-space-vertical-medium) 0;
   --text-line-height: var(--hggs-line-height);
   --text-line-height-small: var(--hggs-line-height-small);
 }
-
