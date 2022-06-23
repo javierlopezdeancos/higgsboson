@@ -11,11 +11,9 @@
       var(--hggs-space-vertical-medium-default)
   );
   font-size: var(--app-font-size, 1.5rem);
-  font-family: var(
-    --hggs-font-family-primary,
-    var(--hggs-font-family-primary-default)
-  );
+  font-family: var(--hggs-font-family, var(--hggs-font-family-default));
 
+  /* TODO: Extract all of this into a container component*/
   & > header {
     & > .hggs-h1:first-child {
       margin-top: 0px;
@@ -28,5 +26,12 @@
 
   & > footer {
     padding-top: var(--app-footer-padding-top, 0);
+  }
+
+  & > header,
+  & > main,
+  & > footer {
+    @extend .hggs-flex--top-center-column;
+    width: 100%;
   }
 }

@@ -534,7 +534,6 @@
 %hggs-button-icon-reset {
   background: unset;
   background-color: unset;
-  box-shadow: unset;
 }
 
 %hggs-button-icon-hover-reset {
@@ -546,7 +545,7 @@
   );
   transform: var(
     --button-icon-transform-hover,
-    /*var(--hggs-transform-escale-default)*/
+    var(--hggs-transform-escale-default)
   );
 }
 
@@ -605,7 +604,6 @@
 }
 
 .hggs-button {
-  /* width: 100%; */
   border: unset;
   text-align: center;
   padding: var(
@@ -615,17 +613,12 @@
   );
   font-size: var(
     --button-font-size-medium,
-    var(--hggs-font-size-big-default)
+    var(--hggs-font-size-mega-default)
   );
-  /*height: var(
-    --button-height,
-    calc(var(--hggs-space-vertical-medium-default) * 3)
-  );*/
-  font-family: var(--button-font-family, var(--hggs-font-family-primary));
-  /*font-size: var(--button-font-size);*/
+  font-family: var(--button-font-family, var(--hggs-font-family));
   font-weight: var(
     --button-font-weight,
-    var(--hggs-font-weight-normal-default)
+    var(--hggs-font-weight-default)
   );
   color: var(--button-color, var(--hggs-color-quinary-default));
   letter-spacing: var(--button-font-letter-spacing);
@@ -1121,16 +1114,8 @@
   }
 
   &.hggs-button--big {
-    /*width: var(
-      --button-width-big,
-      calc(var(--hggs-space-horizontal-big-default) * 7)
-    );
-    height: var(
-      --button-height-big,
-      calc(var(--hggs-space-vertical-medium-default) * 3.5)
-    );*/
     padding: var(
-      --button-padding-medium,
+      --button-padding-big,
       calc(var(--hggs-space-vertical-medium-default))
         var(--hggs-space-horizontal-macro-default)
     );
@@ -1141,14 +1126,6 @@
   }
 
   &.hggs-button--medium {
-    /*width: var(
-      --button-width-medium,
-      calc(var(--hggs-space-horizontal-big-default) * 4)
-    );
-    height: var(
-      --button-height-medium,
-      calc(var(--hggs-space-vertical-medium-default) * 3)
-    );*/
     padding: var(
       --button-padding-medium,
       calc(var(--hggs-space-vertical-medium-default) / 1.2)
@@ -1156,19 +1133,11 @@
     );
     font-size: var(
       --button-font-size-medium,
-      var(--hggs-font-size-big-default)
+      var(--hggs-font-size-mega-default)
     );
   }
 
   &.hggs-button--small:not(.hggs-button--circle):not(.hggs-button--square) {
-    /*width: var(
-      --button-width-small,
-      calc(var(--hggs-space-horizontal-big-default) * 2.5)
-    );
-    height: var(
-      --button-height-small,
-      calc(var(--hggs-space-vertical-small-default) * 4)
-    );**/
     padding: var(
       --button-padding-small,
       var(--hggs-space-vertical-micro-default)

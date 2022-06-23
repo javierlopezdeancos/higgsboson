@@ -28,7 +28,7 @@
 .hggs-h4,
 .hggs-h5,
 .hggs-h6 {
-  --title-font-famiy: var(--hggs-font-family-primary);
+  --title-font-famiy: var(--hggs-font-family);
   --title-color: var(--hggs-color-primary);
 }
 
@@ -48,7 +48,7 @@
 .hggs-button {
   --buttton-height: 64px;
   --buttton-padding: 0 40px;
-  --button-font-family: var(--hggs-font-family-primary);
+  --button-font-family: var(--hggs-font-family);
   --button-font-size: var(--hggs-font-size);
   --button-font-weight: var(--hggs-font-weight-medium);
   --button-font-letter-spacing: 1px;
@@ -68,7 +68,7 @@
 }
 
 .hggs-link {
-  --link-font-family: var(--hggs-font-family-primary);
+  --link-font-family: var(--hggs-font-family);
   --link-font-weight: var(--hggs-font-weight-medium);
   --link-color: var(--hggs-color-primary);
   --link-color-hover: var(--hggs-color-auxiliary-001);
@@ -79,3 +79,4 @@
   --logo-width: 300px;
   --logo-height: 102px;
 }
+

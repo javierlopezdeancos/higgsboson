@@ -13,9 +13,9 @@
   --input-padding-big: var(--hggs-form-input-padding-big);
   --input-padding-small: var(--hggs-form-input-padding-small);
   --input-color-placeholder: var(--hggs-color-auxiliary-gray-003);
-  --input-font-family: var(--hggs-font-family-primary);
+  --input-font-family: var(--hggs-font-family);
   --input-font-size: var(--hggs-font-size);
-  --input-font-size-big: var(--hggs-font-size-medium);
+  --input-font-size-big: var(--hggs-font-size-big);
   --input-font-size-small: var(--hggs-font-size-small);
   --input-color-disabled: var(--hggs-color-disabled);
 }

@@ -23,7 +23,7 @@
   & .hggs-box-title {
     @extend .hggs-h4;
 
-    font-size: var(--box-title-font-size, var(--hggs-font-size-medium-default));
+    font-size: var(--box-title-font-size, var(--hggs-font-size-big-default));
     margin-top: var(--box-title-margin-top, 0);
   }
 

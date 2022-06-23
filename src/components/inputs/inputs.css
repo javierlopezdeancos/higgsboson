@@ -8,11 +8,8 @@
     var(--hggs-space-vertical-small-default)
       var(--hggs-space-horizontal-small-default)
   );
-  font-family: var(
-    --input-font-family,
-    var(--hggs-font-family-primary-default)
-  );
-  font-size: var(--input-font-size, var(--hggs-font-size-medium-default));
+  font-family: var(--input-font-family, var(--hggs-font-family-default));
+  font-size: var(--input-font-size, var(--hggs-font-size-big-default));
   box-sizing: border-box;
   background: transparent;
 

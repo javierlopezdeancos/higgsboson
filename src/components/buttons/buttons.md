@@ -95,9 +95,6 @@
 --button-font-size-medium
 --button-font-size-small
 --button-font-weight
---button-height
---button-height-medium
---button-height-small
 --button-icon-filter-hover
 --button-icon-filter-primary-hover
 --button-icon-filter-quaternary-hover
@@ -120,7 +117,7 @@
 --button-icon-width
 --button-margin-vertical
 --button-outline-focus
---button-padding
+--button-padding-big
 --button-padding-medium
 --button-padding-small
 --button-transform-hover
@@ -131,9 +128,6 @@
 --button-transition-secondary-hover
 --button-transition-senary-hover
 --button-transition-tertiary-hover
---button-width-big
---button-width-medium
---button-width-small
 ```
 
 ## HTML Structure

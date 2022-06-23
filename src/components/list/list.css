@@ -1,19 +1,16 @@
 .hggs-list {
   margin-left: var(
-    --list-padding-left,
+    --list-margin-left,
     var(--hggs-space-horizontal-small-default)
   );
   padding-left: var(
-    --list-margin-left,
+    --list-padding-left,
     var(--hggs-space-horizontal-small-default)
   );
 
   & .hggs-list-item,
   & .hggs-list-item a {
-    font-family: var(
-      --list-item-font-family,
-      var(--hggs-font-family-primary-default)
-    );
+    font-family: var(--list-item-font-family, var(--hggs-font-family-default));
     font-weight: var(--list-item-font-weight, var(--hggs-font-weight-default));
     font-size: var(--list-item-font-size, var(--hggs-font-size-default));
     color: var(--list-item-color, var(--hggs-color-default));

@@ -27,7 +27,7 @@
   --icon-filter-tertiary: var(--hggs-filter-tertiary);
   --icon-filter: var(--hggs-filter-auxiliary-gray-004);
   --icon-label-color: var(--hggs-color-auxiliary-gray-007);
-  --icon-label-font-family: var(--hggs-font-family-primary);
+  --icon-label-font-family: var(--hggs-font-family);
   --icon-label-font-size: var(--hggs-font-size);
   --icon-label-font-weigth: var(--hggs-font-weight-medium);
   --icon-label-text-align: left;

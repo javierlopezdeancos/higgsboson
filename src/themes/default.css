@@ -54,7 +54,7 @@
   --hggs-filter-senary-default: brightness(0) saturate(100%) invert(57%)
     sepia(0%) saturate(366%) hue-rotate(176deg) brightness(88%) contrast(95%);
   --hggs-filter-default: var(--hggs-filter-quaternary-default);
-  --hggs-font-family-primary-default: sans-serif;
+  --hggs-font-family-default: sans-serif;
   --hggs-font-size-colossal-default: 38px;
   --hggs-font-size-enormous-default: 32px;
   --hggs-font-size-tera-default: 28px;

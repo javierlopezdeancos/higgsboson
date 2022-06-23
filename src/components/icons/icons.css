@@ -27,7 +27,7 @@
 }
 
 %hggs-icon-box-default {
-  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+  filter: var(--icon-filter-quaternary, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-box-primary {
@@ -296,10 +296,7 @@
 
   & .hggs-icon + .hggs-icon-label {
     flex: 1;
-    font-family: var(
-      --icon-label-font-family,
-      var(--hggs-font-family-primary-default)
-    );
+    font-family: var(--icon-label-font-family, var(--hggs-font-family-default));
     font-weight: var(
       --icon-label-font-weigth,
       var(--hggs-font-weight-medium-default)

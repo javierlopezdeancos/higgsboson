@@ -6,7 +6,7 @@
   --select-border-radius: var(--hggs-form-input-border-radius);
   --select-border: var(--hggs-form-input-border);
   --select-color: var(--hggs-color);
-  --select-font-family: var(--hggs-font-family-primary);
+  --select-font-family: var(--hggs-font-family);
   --select-font-size: var(--hggs-font-size);
   --select-height: var(--hggs-form-input-height);
   --select-open-icon-top: 25%;

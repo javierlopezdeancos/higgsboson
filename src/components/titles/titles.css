@@ -5,7 +5,7 @@
 .hggs-h5,
 .hggs-h6 {
   color: var(--title-color, var(--hggs-color-black-default));
-  font-family: var(--title-font-famiy, var(--hggs-font-family-primary-default));
+  font-family: var(--title-font-famiy, var(--hggs-font-family-default));
 }
 
 .hggs-h1 {

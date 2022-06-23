@@ -1,4 +1,4 @@
-const boxStyles = ["height: 200px"];
+const boxStyles = [""];
 
 const data = {
   title: "Box",

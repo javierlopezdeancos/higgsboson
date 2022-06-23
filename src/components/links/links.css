@@ -1,6 +1,6 @@
 .hggs-link {
   text-decoration: var(--link-text-decoration, underline);
-  font-family: var(--link-font-family, var(--hggs-font-family-primary-default));
+  font-family: var(--link-font-family, var(--hggs-font-family-default));
   font-weight: var(--link-font-weight, var(--hggs-font-weight-default));
   font-size: var(--hggs-font-size, var(--hggs-font-size-default));
   font-style: var(--hggs-font-weight-medium, italic);

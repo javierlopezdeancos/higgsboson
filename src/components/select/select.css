@@ -31,11 +31,8 @@
   @extend %hggs-select-reset-styles;
 
   cursor: pointer;
-  font-family: var(
-    --select-font-family,
-    var(--hggs-font-family-primary-default)
-  );
-  font-size: var(--select-font-size, var(--hggs-font-size-medium-default));
+  font-family: var(--select-font-family, var(--hggs-font-family-default));
+  font-size: var(--select-font-size, var(--hggs-font-size-big-default));
   color: var(--select-color, var(--hggs-color-default));
   border: var(--select-border, var(--hggs-border-default));
   border-radius: var(--select-border-radius, var(--hggs-border-radius-default));

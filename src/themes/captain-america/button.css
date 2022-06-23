@@ -97,17 +97,13 @@
   --button-color-senary: var(--hggs-color-quinary);
   --button-color-tertiary: var(--hggs-color-quaternary);
   --button-color: var(--hggs-color-auxiliary-gray-008);
-  --button-font-family: var(--hggs-font-family-primary);
+  --button-font-family: var(--hggs-font-family);
   --button-font-letter-spacing: var(--hggs-font-letter-spacing);
-  --button-font-size-big: var(--hggs-font-size-extra-medium);
+  --button-font-size-big: var(--hggs-font-size-pico);
   --button-font-size-medium: var(--hggs-font-size);
   --button-font-size-small: var(--hggs-font-size-small);
-  --button-font-size: var(--hggs-font-size-extra-normal);
+  --button-font-size: var(--hggs-font-size-big);
   --button-font-weight: var(--hggs-font-weight-medium);
-  --button-height-big: 65px;
-  --button-height-medium: 48px;
-  --button-height-small: 30px;
-  --button-height: 65px;
   --button-icon-filter-hover: var(--hggs-color-auxiliary-gray-005);
   --button-icon-filter-primary-hover: var(--hggs-filter-primary-001);
   --button-icon-filter-quaternary-hover: var(--hggs-filter-quaternary-001);
@@ -132,9 +128,12 @@
   --button-icon-padding: 0;
   --button-icon-width: calc(var(--icon-size) + var(--button-icon-padding));
   --button-margin-vertical: var(--hggs-space-vertical-small);
-  --button-padding-medium: 0 10px;
-  --button-padding-small: 0 5px;
-  --button-padding: 0 40px;
+  --button-padding-big: var(--hggs-space-horizontal-medium)
+    var(--hggs-space-vertical-big);
+  --button-padding-medium: var(--hggs-space-horizontal-small)
+    var(--hggs-space-vertical-medium);
+  --button-padding-small: var(--hggs-space-horizontal-micro)
+    var(--hggs-space-vertical-small);
   --button-transition-hover: var(--hggs-animation-ease);
   --button-transition-primary-hover: var(--button-transition-hover);
   --button-transition-quaternary-hover: var(--button-transition-hover);
@@ -146,7 +145,4 @@
   --button-icon-transition-hover: var(--hggs-animation-ease);
   --button-icon-transform-hover: unset;
   --button-icon-shadow-hover: unset;
-  --button-width-big: 250px;
-  --button-width-medium: 180px;
-  --button-width-small: 70px;
 }
