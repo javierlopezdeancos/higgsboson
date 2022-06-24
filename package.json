@@ -1,8 +1,8 @@
 {
   "name": "higgsboson",
   "version": "0.1.1",
-  "description": "Higgsboson class components is a set of classes to style core native components.",
-  "main": "dist/captain-america-st-core-design.min.css",
+  "description": "Native css classes to style native components.",
+  "main": "dist/higgsboson.min.css",
   "engines": {
     "node": ">=14.16.1",
     "npm": ">=6.14.12"
@@ -15,21 +15,14 @@
   ],
   "arch": "any",
   "scripts": {
-    "set:theme:captain-america": "cross-env-shell THEME=captain-america",
-    "set:theme:caramel": "cross-env-shell THEME=caramel",
-    "build:watch:captain-america": "npm run set:theme:captain-america npm run build:watch",
-    "build:watch:caramel": "npm run set:theme:caramel npm run build:watch",
-    "build:watch": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-extend autoprefixer postcss-copy-assets --output ./dist/$THEME.css --watch",
-    "build:captain-america": "npm run set:theme:captain-america npm run build",
-    "build:caramel": "npm run set:theme:caramel npm run build",
-    "build": "cross-env npx postcss ./src/themes/$THEME/index.css --use postcss-preset-env postcss-import postcss-nesting postcss-nesting postcss-csso  autoprefixer postcss-copy-assets --output ./dist/$THEME.min.css",
+    "build:watch": "npx postcss ./src/theme/index.css --use postcss-import postcss-copy-assets postcss-nesting postcss-extend autoprefixer --output ./dist/higgsboson.css --watch",
+    "build": "npx postcss ./src/theme/index.css --use postcss-import postcss-copy-assets postcss-nesting  postcss-extend postcss-csso  autoprefixer --output ./dist/higgsboson.min.css",
     "format": "npx stylelint --fix \"src/**/*.css\"",
     "lint": "npx stylelint \"src/**/*.css\"",
     "start": "lite-server"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.4",
-    "cross-env": "^7.0.3",
     "cssnano": "^5.1.7",
     "lite-server": "^2.6.1",
     "postcss": "^8.2.14",
