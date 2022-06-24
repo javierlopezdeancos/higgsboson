@@ -6,6 +6,22 @@ Higgsboson class components is a set of classes to style core native components.
 
 [![License](https://img.shields.io/github/license/javierlopezdeancos/higgsboson?style=flat-square)](LICENSE)
 [![Issues](https://img.shields.io/github/issues/javierlopezdeancos/higgsboson?style=flat-square)](https://github.com/javierlopezdeancos/higgsboson/issues)
+[![Stage - Alpha](https://img.shields.io/badge/Stage-Alpha-f9f504)](https://)
+![maintained - yes](https://img.shields.io/badge/maintained-yes-blue)
+
+## Why Higgsboson?
+
+There are many motivations to see this project as a simple research and development of a system that allows not to reinvent the wheel over and over again.
+
+Now, I know that we have multiple techniques and tools in the ecosystem to solve the same problem, many of them on top of the wave, but my intention is to solve the problem from several points of view:
+
+- The most standard way possible, use the web.
+- Minimum coupling between internal parts.
+- Oriented to his main responsibility, styling pieces on the screen.
+- Fully customizable injectable themes.
+- Fast propagation of changes.
+- Easily articulated in a design system.
+- Independent but easily implementable in any library or front end framework.
 
 ## Components
 
@@ -31,6 +47,55 @@ Higgsboson class components is a set of classes to style core native components.
 - [Text](/src/components/text/text.md)
 - [Titles (h1, h2, h3, h4, h5, h6)](/src/components/titles/titles.md)
 
+## Sources structure
+
+```text
+Higgsboson
+ ├─ src
+      ├─ components
+      ├─ helpers
+      ├─ theme
+```
+
+### Components
+
+All available core components defined from their selectors, properties and values in the form of variables connected to the theme variables or own variables for this component.
+
+#### Component files structure
+
+```text
+components
+   ├─ componentA
+        ├─ componentA.css
+        ├─ componentA.html
+        ├─ componentA.md
+        ├─ componentA.metadata.js
+```
+
+##### componentA.css
+
+Selectors, rules, properties and values **connected with the theme API** across component variables and default theme variables.
+
+##### componentA.html
+
+Html markup generated from [underscore](https://underscorejs.org/) + [our custom helpers](./src/helpers/) + metadata.js component model file.
+
+##### componentA.md
+
+Complete documentation about **component theme API variables** and markup component use cases.
+
+##### componentA.metadata.js
+
+Data model to render with underscore and our custom helpers all component use cases.
+
+### Helpers
+
+Javascript helpers used to automate the rendering of components in dev mode
+
+### Theme
+
+Area where everything related to theming is managed, either using the default theme or injecting previously installed themes via npm.
+
 ## How to use
 
 ### Install
@@ -41,40 +106,18 @@ At first you should install dependencies after install nodejs and git.
 
 ### Build
 
-`npm run build:{theme}`
+`npm run build`
 
-Build your css files into `./dist/{theme}.min.css`
+Build your css files into `./dist/higgsboson.min.css`
 
-#### Example to Captain-america theme
-
-`npm run build:captain-america`
-
-Build your captain-america css files minified into `./dist/captain-america.min.css`
-
-### Develop a theme
-
-`npm develop:{theme}`
-
-build and watch changes in your css files into `./dist/{theme}.css`
-
-#### Example to Captain-america theme
-
-`npm develop:captain-america`
-
-build and watch changes in your css files into `./dist/captain-america.css`
-
-### Develop running an http server
-
-`npm develop:server`
-
-This http server serve to you the `src/index.html` in order to set up your html markup to develop purposes.
-
-#### Example to Captain-america theme
+### Development
 
 Then to develop purposes we need follow this steps
 
-1. In a console we should build and watch the css theme required `npm run develop:captain-america`.
-2. In other console we need to run up the http server to dev our css files and watch this changes in our browser `npm run develop:server`.
+1. In a console we should build and watch the css theme required `npm run build:watch`.
+2. In other console we need to run up the http server to dev our css files and watch this changes in our browser `npm start`.
+
+This http server serve to you the `src/index.html` in order to set up your html markup to develop purposes.
 
 ### Lint
 
