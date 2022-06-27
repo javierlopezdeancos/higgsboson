@@ -1,4 +1,7 @@
-![alt text](images/logo.png "higgsboson")
+![[Higgsboson]](images/logo-light.png#gh-light-mode-only)
+![[Higgsboson]](images/logo-dark.png#gh-dark-mode-only)
+
+An declarative s
 
 # Higgsboson
 
