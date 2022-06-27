@@ -1,8 +1,6 @@
 ![[Higgsboson]](images/logo-light.png#gh-light-mode-only)
 ![[Higgsboson]](images/logo-dark.png#gh-dark-mode-only)
 
-An declarative s
-
 # Higgsboson
 
 Higgsboson class components is a set of classes to style core native components.
