@@ -5,28 +5,28 @@
 @import "./fonts.css";
 
 /* Theme Variables */
-@import "./variables/vars.css";
+@import "./vars.css";
 
 /* Components Variables */
-@import "./variables/components/flex.css";
-@import "./variables/components/app.css";
-@import "./variables/components/titles.css";
-@import "./variables/components/text.css";
-@import "./variables/components/link.css";
-@import "./variables/components/list.css";
-@import "./variables/components/form.css";
-@import "./variables/components/label.css";
-@import "./variables/components/input.css";
-@import "./variables/components/field.css";
-@import "./variables/components/option.css";
-@import "./variables/components/select.css";
-@import "./variables/components/dropdown.css";
-@import "./variables/components/checkbox.css";
-@import "./variables/components/radio.css";
-@import "./variables/components/icon.css";
-@import "./variables/components/button.css";
-@import "./variables/components/logo.css";
-@import "./variables/components/table.css";
-@import "./variables/components/tag.css";
-@import "./variables/components/box.css";
-@import "./variables/components/dialog.css";
+@import "./components/flex.css";
+@import "./components/app.css";
+@import "./components/titles.css";
+@import "./components/text.css";
+@import "./components/link.css";
+@import "./components/list.css";
+@import "./components/form.css";
+@import "./components/label.css";
+@import "./components/input.css";
+@import "./components/field.css";
+@import "./components/option.css";
+@import "./components/select.css";
+@import "./components/dropdown.css";
+@import "./components/checkbox.css";
+@import "./components/radio.css";
+@import "./components/icon.css";
+@import "./components/button.css";
+@import "./components/logo.css";
+@import "./components/table.css";
+@import "./components/tag.css";
+@import "./components/box.css";
+@import "./components/dialog.css";
