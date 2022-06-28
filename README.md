@@ -310,32 +310,30 @@ The default theme not need any custom rule scoped by selector to any component.
 ```text
 themeA
  │ ├─ assets
- │ ├─ variables
- │     ├─ components
- │     │     ├─ app.css
- │     │     ├─ box.css
- │     │     ├─ button.css
- │     │     ├─ checkbox.css
- │     │     ├─ dialog.css
- │     │     ├─ field.css
- │     │     ├─ flex.css
- │     │     ├─ form.css
- │     │     ├─ icon.css
- │     │     ├─ input.css
- │     │     ├─ label.css
- │     │     ├─ link.css
- │     │     ├─ list.css
- │     │     ├─ logo.css
- │     │     ├─ option.css
- │     │     ├─ radio.css
- │     │     ├─ select.css
- │     │     ├─ table.css
- │     │     ├─ tag.css
- │     │     ├─ text.css
- │     │     ├─ titles.css
- │     │
- │     ├─ vars.css
+ │ ├─ components
+ │       ├─ app.css
+ │       ├─ box.css
+ │       ├─ button.css
+ │       ├─ checkbox.css
+ │       ├─ dialog.css
+ │       ├─ field.css
+ │       ├─ flex.css
+ │       ├─ form.css
+ │       ├─ icon.css
+ │       ├─ input.css
+ │       ├─ label.css
+ │       ├─ link.css
+ │       ├─ list.css
+ │       ├─ logo.css
+ │       ├─ option.css
+ │       ├─ radio.css
+ │       ├─ select.css
+ │       ├─ table.css
+ │       ├─ tag.css
+ │       ├─ text.css
+ │       ├─ titles.css
  │
+ ├─ vars.css
  ├─ fonts.css
  ├─ index.css
  ├─ resets.css
