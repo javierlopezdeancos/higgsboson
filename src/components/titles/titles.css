@@ -1,9 +1,12 @@
-.hggs-h1,
-.hggs-h2,
-.hggs-h3,
-.hggs-h4,
-.hggs-h5,
-.hggs-h6 {
+@custom-selector :--heading
+  .hggs-h1,
+  .hggs-h2,
+  .hggs-h3,
+  .hggs-h4,
+  .hggs-h5,
+  .hggs-h6;
+
+:--heading {
   color: var(--title-color, var(--hggs-color-black-default));
   font-family: var(--title-font-famiy, var(--hggs-font-family-default));
 }
