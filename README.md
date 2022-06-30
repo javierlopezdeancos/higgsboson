@@ -429,7 +429,7 @@ Higgsboson
 Please make executable the `pre-push` file with
 
 ```shell
-sudo chmod +x .git/hooks/pre-push
+sudo chmod u+x .git/hooks/pre-push
 ```
 
 **If you are using powershell**
