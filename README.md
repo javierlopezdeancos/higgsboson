@@ -424,7 +424,17 @@ Higgsboson
 
 #### Configure
 
-If you are using powershell you need give permissions to execute powershell scripts unsigned into your machine.
+**If you are using unix**
+
+Please make executable the `pre-push` file with
+
+```shell
+sudo chmod +x .git/hooks/pre-push
+```
+
+**If you are using powershell**
+
+You need give permissions to execute powershell scripts unsigned into your machine.
 
 You can allow the powershell executions in so many ways but one of them is executing
 
@@ -451,7 +461,8 @@ If you have permissions whe you run `git push origin {BRANCH}` the pre-push scri
 
 ## Postcss
 
-We are using [postcss](https://postcss.org) to transpile the css code into standard css code
+We are using [postcss](https://postcss.org) to transpile the css code into standar
+d css code
 
 ### Plugins that we are using
 
