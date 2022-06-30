@@ -5,6 +5,7 @@ const atImport = require("postcss-import");
 const extend = require("postcss-extend");
 const stylelint = require("stylelint");
 const copyAssets = require("postcss-copy-assets");
+const minify = require("cssnano");
 
 module.exports = (ctx) => ({
   map: ctx.options.map,
@@ -21,7 +22,9 @@ module.exports = (ctx) => ({
           extend(),
           stylelint(),
           autoprefixer(),
-          // minify(),
+          minify({
+            preset: "advanced",
+          }),
         ]
       : [
           presetEnv({ stage: 0 }),
