@@ -22,11 +22,13 @@
 --dropdown-border-radius
 --dropdown-box-shadow-focus
 --dropdown-height
+--dropdown-icon-right
+--dropdown-icon-top
 --dropdown-open-icon-border
 --dropdown-open-icon-border-bottom-left-radius
 --dropdown-open-icon-border-focus
---dropdown-open-icon-size
 --dropdown-open-icon-top
+--dropdown-open-size
 --dropdown-option-label-background-hover
 --dropdown-option-label-color
 --dropdown-option-label-font-family

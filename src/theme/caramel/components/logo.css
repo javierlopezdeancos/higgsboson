@@ -1,0 +1,9 @@
+.hggs-logo {
+  --logo-url: url("./caramel/assets/svg/logo.svg");
+  --logo-width: calc(var(--hggs-space-lg) * 10);
+  --logo-height: var(--logo-width);
+  --logo-width-small: calc(var(--hggs-space-xs) * 10);
+  --logo-height-small: var(--logo-width-small);
+  --logo-url-white: url("./caramel/assets/svg/logo-dark.svg");
+  --logo-url-black: url("./caramel/assets/svg/logo-light.svg");
+}

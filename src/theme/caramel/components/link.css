@@ -1,0 +1,10 @@
+.hggs-link {
+  --link-font-family: var(--hggs-font-family);
+  --link-font-size: var(--hggs-font-size);
+  --link-font-weight: var(--hggs-font-weight-md);
+  --link-font-style: normal;
+  --link-color: var(--hggs-color-primary);
+  --link-text-decoration: underline;
+  --link-text-decoration-hover: underline;
+  --link-color-hover: var(--hggs-color-primary);
+}

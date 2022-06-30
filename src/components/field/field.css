@@ -5,8 +5,12 @@
     display: block;
     margin-bottom: var(
       --field-label-margin-bottom,
-      var(--hggs-space-vertical-small-default)
+      var(--hggs-space-vertical-sm-default)
     );
+
+    &:has(+ .hggs-input:focus) {
+      @extend .hggs-label.hggs-label--focus;
+    }
   }
 
   &.hggs-field--required {
@@ -18,11 +22,12 @@
       );
       margin-left: var(
         --field-label-after-margin-left-required,
-        var(--hggs-space-horizontal-nano-default)
+        var(--hggs-space-horizontal-xxs-default)
       );
     }
   }
 
+  &:focus,
   &.hggs-field--focus {
     & > .hggs-label {
       @extend .hggs-label.hggs-label--focus;

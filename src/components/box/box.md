@@ -17,20 +17,22 @@
 ## Component variables
 
 ```
---box-min-height
 --box-background
+--box-background-primary
+--box-body-padding
+--box-border
+--box-border-primary
+--box-border-radius-with-radius
 --box-box-shadow
---box-padding
 --box-header-border-bottom
+--box-header-border-bottom-primary
 --box-header-padding
+--box-margin
+--box-min-height
+--box-padding
+--box-title-color-primary
 --box-title-font-size
 --box-title-margin-top
---box-body-padding
---box-border-radius-with-radius
---box-background-primary
---box-border-primary
---box-title-color-primary
---box-header-border-bottom-primary
 ```
 
 ## HTML Structure

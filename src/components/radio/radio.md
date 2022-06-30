@@ -17,16 +17,22 @@
 ## Component variables
 
 ```
---radio-size
 --radio-border
 --radio-border-checked
---radio-border-color-hover
---radio-outline-focus
---radio-box-shadow-focus
---radio-label-margin-left
 --radio-inside-background-color
 --radio-inside-border-bold
+--radio-inside-border-checked
+--radio-inside-border-hover
+--radio-inside-box-shadow-focus
+--radio-inside-outline-focus
 --radio-inside-transition
+--radio-label-color
+--radio-label-font-family
+--radio-label-font-size
+--radio-label-font-style
+--radio-label-font-weight
+--radio-label-margin-left
+--radio-size
 ```
 
 ## HTML Structure

@@ -8,6 +8,7 @@
   --list-marging-left: var(--hggs-space-horizontal-small);
   --list-item-content-marker: counter(list-item) " - ";
   --list-item-color-marker: var(--hggs-color);
+  --list-item-font-family-marker: var(--hggs-font-family);
   --list-item-font-size-marker: var(--hggs-font-size-big);
   --list-item-font-weight-marker: var(--hggs-font-weight-low-bold);
 }

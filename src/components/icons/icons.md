@@ -24,6 +24,13 @@
 --icon-box-background-secondary
 --icon-box-background-senary
 --icon-box-background-tertiary
+--icon-box-filter
+--icon-box-filter-primary
+--icon-box-filter-quaternary
+--icon-box-filter-quinary
+--icon-box-filter-secondary
+--icon-box-filter-senary
+--icon-box-filter-tertiary
 --icon-box-padding
 --icon-box-padding-micro
 --icon-box-padding-small

@@ -1,0 +1,265 @@
+:root {
+  /* COLORS */
+  /* Color generics */
+  --hggs-color-black: #000;
+  --hggs-color-white: #fff;
+
+  /* Color primary */
+  --hggs-color-primary: #b21f2e;
+  --hggs-color-auxiliary-primary-000: #f9dadd;
+  --hggs-color-auxiliary-primary-001: #f2b6bc;
+  --hggs-color-auxiliary-primary-002: #ec919a;
+  --hggs-color-auxiliary-primary-003: #e56d79;
+  --hggs-color-auxiliary-primary-004: #df4857;
+  --hggs-color-auxiliary-primary-005: #d72537;
+  --hggs-color-auxiliary-primary-006: #a01c29;
+  --hggs-color-auxiliary-primary-007: #8e1925;
+  --hggs-color-auxiliary-primary-008: #7d1620;
+  --hggs-color-auxiliary-primary-009: #6b131c;
+
+  --hggs-filter-primary: brightness(0) saturate(100%) invert(16%) sepia(40%)
+    saturate(6861%) hue-rotate(343deg) brightness(86%) contrast(90%);
+  --hggs-filter-primary-000: brightness(0) saturate(100%) invert(77%) sepia(28%)
+    saturate(249%) hue-rotate(308deg) brightness(113%) contrast(95%);
+  --hggs-filter-primary-001: brightness(0) saturate(100%) invert(75%) sepia(9%)
+    saturate(1188%) hue-rotate(306deg) brightness(106%) contrast(90%);
+  --hggs-filter-primary-002: brightness(0) saturate(100%) invert(62%) sepia(9%)
+    saturate(2074%) hue-rotate(305deg) brightness(109%) contrast(85%);
+  --hggs-filter-primary-003: brightness(0) saturate(100%) invert(65%) sepia(16%)
+    saturate(5968%) hue-rotate(311deg) brightness(95%) contrast(88%);
+  --hggs-filter-primary-004: brightness(0) saturate(100%) invert(40%) sepia(64%)
+    saturate(2909%) hue-rotate(328deg) brightness(92%) contrast(89%);
+  --hggs-filter-primary-005: brightness(0) saturate(100%) invert(23%) sepia(88%)
+    saturate(3087%) hue-rotate(341deg) brightness(86%) contrast(95%);
+  --hggs-filter-primary-006: brightness(0) saturate(100%) invert(17%) sepia(55%) saturate(4033%) hue-rotate(339deg) brightness(84%) contrast(95%);
+  --hggs-filter-primary-007: filter: brightness(0) saturate(100%) invert(14%) sepia(31%) saturate(5451%) hue-rotate(335deg) brightness(103%) contrast(100%);
+  --hggs-filter-primary-008: brightness(0) saturate(100%) invert(16%) sepia(20%) saturate(7475%) hue-rotate(333deg) brightness(88%) contrast(102%);
+  --hggs-filter-primary-009: brightness(0) saturate(100%) invert(10%) sepia(58%) saturate(3579%) hue-rotate(338deg) brightness(97%) contrast(97%);
+
+  /* Color secondary */
+  --hggs-color-secondary: #ffdba9;
+  --hggs-color-auxiliary-secondary-000: #fffaf3;
+  --hggs-color-auxiliary-secondary-001: #fff5e6;
+  --hggs-color-auxiliary-secondary-002: #fff0da;
+  --hggs-color-auxiliary-secondary-003: #ffeace;
+  --hggs-color-auxiliary-secondary-004: #ffe5c2;
+  --hggs-color-auxiliary-secondary-005: #ffe0b5;
+  --hggs-color-auxiliary-secondary-006: #ffce89;
+  --hggs-color-auxiliary-secondary-007: #ffbb5e;
+  --hggs-color-auxiliary-secondary-008: #ffa932;
+  --hggs-color-auxiliary-secondary-009: #ff9707;
+
+  --hggs-filter-secondary: brightness(0) saturate(100%) invert(97%) sepia(98%)
+    saturate(722%) hue-rotate(307deg) brightness(101%) contrast(101%);
+  --hggs-filter-secondary-000: brightness(0) saturate(100%) invert(89%)
+    sepia(6%) saturate(782%) hue-rotate(321deg) brightness(110%) contrast(103%);
+  --hggs-filter-secondary-001: brightness(0) saturate(100%) invert(98%)
+    sepia(40%) saturate(439%) hue-rotate(305deg) brightness(100%) contrast(102%);
+  --hggs-filter-secondary-002: brightness(0) saturate(100%) invert(83%)
+    sepia(16%) saturate(457%) hue-rotate(330deg) brightness(109%) contrast(110%);
+  --hggs-filter-secondary-003: brightness(0) saturate(100%) invert(93%)
+    sepia(54%) saturate(3868%) hue-rotate(294deg) brightness(131%)
+    contrast(101%);
+  --hggs-filter-secondary-004: brightness(0) saturate(100%) invert(88%)
+    sepia(3%) saturate(2657%) hue-rotate(345deg) brightness(99%) contrast(112%);
+  --hggs-filter-secondary-005: brightness(0) saturate(100%) invert(83%)
+    sepia(53%) saturate(302%) hue-rotate(324deg) brightness(104%) contrast(103%);
+  --hggs-filter-secondary-006: brightness(0) saturate(100%) invert(91%) sepia(17%) saturate(6962%) hue-rotate(312deg) brightness(130%) contrast(103%);
+  --hggs-filter-secondary-007: brightness(0) saturate(100%) invert(79%) sepia(89%) saturate(802%) hue-rotate(314deg) brightness(104%) contrast(101%);
+  --hggs-filter-secondary-008: brightness(0) saturate(100%) invert(70%) sepia(96%) saturate(942%) hue-rotate(333deg) brightness(102%) contrast(101%);
+  --hggs-filter-secondary-009: filter: brightness(0) saturate(100%) invert(60%) sepia(16%) saturate(2812%) hue-rotate(354deg) brightness(105%) contrast(103%);
+
+  /* Color tertiary */
+  --hggs-color-tertiary: #a9cdff;
+  --hggs-color-auxiliary-tertiary-000: #f3f8ff;
+  --hggs-color-auxiliary-tertiary-001: #e6f1ff;
+  --hggs-color-auxiliary-tertiary-002: #daeaff;
+  --hggs-color-auxiliary-tertiary-003: #cee2ff;
+  --hggs-color-auxiliary-tertiary-004: #c2dbff;
+  --hggs-color-auxiliary-tertiary-005: #b5d4ff;
+
+  --hggs-filter-tertiary: brightness(0) saturate(100%) invert(76%) sepia(18%)
+    saturate(1057%) hue-rotate(188deg) brightness(102%) contrast(101%);
+  --hggs-filter-tertiary-000: brightness(0) saturate(100%) invert(87%) sepia(5%)
+    saturate(428%) hue-rotate(188deg) brightness(109%) contrast(103%);
+  --hggs-filter-tertiary-001: brightness(0) saturate(100%) invert(88%)
+    sepia(20%) saturate(472%) hue-rotate(189deg) brightness(103%) contrast(104%);
+  --hggs-filter-tertiary-002: brightness(0) saturate(100%) invert(87%) sepia(4%)
+    saturate(2152%) hue-rotate(190deg) brightness(103%) contrast(104%);
+  --hggs-filter-tertiary-003: brightness(0) saturate(100%) invert(82%)
+    sepia(20%) saturate(444%) hue-rotate(187deg) brightness(101%) contrast(107%);
+  --hggs-filter-tertiary-004: brightness(0) saturate(100%) invert(77%)
+    sepia(29%) saturate(492%) hue-rotate(190deg) brightness(105%) contrast(102%);
+  --hggs-filter-tertiary-005: brightness(0) saturate(100%) invert(74%)
+    sepia(25%) saturate(576%) hue-rotate(186deg) brightness(105%) contrast(104%);
+
+  /* Color quaternary */
+  --hggs-color-quaternary: var(--hggs-color-black);
+
+  /* Color quinary */
+  --hggs-color-quinary: var(--hggs-color-white);
+
+  /* Color senary */
+  --hggs-color-senary: #231302;
+  --hggs-color-auxiliary-senary-000: #633606;
+  --hggs-color-auxiliary-senary-001: #a35809;
+  --hggs-color-auxiliary-senary-002: #e37b0d;
+  --hggs-color-auxiliary-senary-003: #f49c3f;
+  --hggs-color-auxiliary-senary-004: #f8bd7f;
+  --hggs-color-auxiliary-senary-005: #fbdebf;
+
+  --hggs-filter-senary: brightness(0) saturate(100%) invert(23%) sepia(53%)
+    saturate(709%) hue-rotate(147deg) brightness(91%) contrast(99%);
+  --hggs-filter-senary-000: brightness(0) saturate(100%) invert(18%) sepia(29%)
+    saturate(2730%) hue-rotate(160deg) brightness(88%) contrast(95%);
+  --hggs-filter-senary-001: brightness(0) saturate(100%) invert(14%) sepia(93%)
+    saturate(421%) hue-rotate(147deg) brightness(99%) contrast(101%);
+  --hggs-filter-senary-002: brightness(0) saturate(100%) invert(15%) sepia(35%)
+    saturate(971%) hue-rotate(147deg) brightness(88%) contrast(102%);
+  --hggs-filter-senary-003: brightness(0) saturate(100%) invert(9%) sepia(96%)
+    saturate(380%) hue-rotate(147deg) brightness(95%) contrast(102%);
+  --hggs-filter-senary-004: brightness(0) saturate(100%) invert(6%) sepia(11%)
+    saturate(4647%) hue-rotate(151deg) brightness(96%) contrast(98%);
+  --hggs-filter-senary-005: brightness(0) saturate(100%) invert(5%) sepia(43%)
+    saturate(579%) hue-rotate(149deg) brightness(94%) contrast(103%);
+
+  /* Color Gray */
+  --hggs-color-auxiliary-gray-000: #e8e8e8;
+  --hggs-color-auxiliary-gray-001: #d1d1d1;
+  --hggs-color-auxiliary-gray-002: #b9b9b9;
+  --hggs-color-auxiliary-gray-003: #c9c9c9;
+  --hggs-color-auxiliary-gray-004: #a2a2a2;
+  --hggs-color-auxiliary-gray-005: #8b8b8b;
+  --hggs-color-auxiliary-gray-006: #747474;
+  --hggs-color-auxiliary-gray-007: #5d5d5d;
+  --hggs-color-auxiliary-gray-008: #464646;
+  --hggs-color-auxiliary-gray-009: #2e2e2e;
+  --hggs-color-auxiliary-gray-010: #171717;
+
+  --hggs-filter-auxiliary-gray-006: brightness(0) saturate(100%) invert(47%)
+    sepia(0%) saturate(0%) hue-rotate(117deg) brightness(95%) contrast(87%);
+
+  --hggs-color-auxiliary-gray-alpha-002: rgba(0, 0, 0, 0.1);
+  --hggs-color-auxiliary-gray-alpha-004: rgba(0, 0, 0, 0.25);
+  --hggs-color-auxiliary-gray-alpha-007: rgba(58, 58, 58, 0.6);
+  --hggs-color-auxiliary-gray-alpha-008: rgba(8, 8, 8, 0.6);
+
+  /* Color globals */
+  --hggs-color: var(--hggs-color-quaternary);
+  --hggs-color-error: #ff0b0b;
+  --hggs-color-disabled: var(--hggs-color-auxiliary-gray-001);
+  --hggs-color-border: var(--hggs-color-senary);
+  --hggs-color-shadow: var(--hgss-color-auxiliary-secondary-007);
+
+  /* BACKGROUNDS */
+  --hggs-background: var(--hggs-color-secondary);
+
+  /* SHADOWS */
+  --hggs-shadow: 0 1px 5px 0 var(--hggs-color-border);
+
+  /* SPACES */
+  --hggs-space-xs: clamp(0.91rem, calc(0.89rem + 0.1vw), 0.96rem);
+  --hggs-space-sm: clamp(1.09rem, calc(1.05rem + 0.21vw), 1.2rem);
+  --hggs-space-base: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.5rem);
+  --hggs-space-md: clamp(1.58rem, calc(1.46rem + 0.59vw), 1.88rem);
+  --hggs-space-lg: clamp(1.89rem, calc(1.71rem + 0.89vw), 2.34rem);
+  --hggs-space-xl: clamp(2.27rem, calc(2.01rem + 1.29vw), 2.93rem);
+  --hggs-space-xxl: clamp(2.72rem, calc(2.36rem + 1.83vw), 3.66rem);
+  --hggs-space-xxxl: clamp(3.27rem, calc(2.75rem + 2.56vw), 4.58rem);
+  --hggs-space: var(--hggs-space-base);
+
+  /* BORDERS */
+  --hggs-border-radius-big: 40px;
+  --hggs-border-radius: 15px;
+  --hggs-border-radius-small: 8px;
+  --hggs-border-size: 1px;
+  --hggs-border-type: solid;
+  --hggs-border-color: var(--hggs-color-border);
+  --hggs-border-color-primary: var(--hggs-color-primary);
+  --hggs-border-color-secondary: var(--hggs-color-secondary);
+  --hggs-border-color-tertiary: var(--hggs-color-tertiary);
+  --hggs-border-color-quaternary: var(--hggs-color-quaternary);
+  --hggs-border-color-quinary: var(--hggs-color-quinary);
+  --hggs-border-color-senary: var(--hggs-color-senary);
+  --hggs-border: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-border-color);
+  --hggs-border-primary: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-border-color-primary);
+  --hggs-border-secondary: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-border-color-secondary);
+  --hggs-border-tertiary: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-border-color-tertiary);
+  --hggs-border-quaternary: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-border-color-quaternary);
+  --hggs-border-quinary: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-border-color-quinary);
+  --hggs-border-senary: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-border-color-senary);
+  --hggs-border-focus: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-color-primary);
+  --hggs-border-disabled: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-color-auxiliary-gray-001);
+  --hggs-border-error: var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-color-error);
+
+  /* FORM */
+  --hggs-form-outline-focus: none;
+  --hggs-form-box-shadow-focus: 0 0 7px 1px var(--hggs-color-auxiliary-gray-003);
+  --hggs-form-box-shadow-primary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-senary-001);
+  --hggs-form-box-shadow-secondary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-secondary-000);
+  --hggs-form-box-shadow-tertiary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-tertiary-001);
+  --hggs-form-box-shadow-quaternary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-gray-002);
+  --hggs-form-box-shadow-quinary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-gray-006);
+  --hggs-form-box-shadow-senary-focus: 0 0 0 4px
+    var(--hggs-color-auxiliary-gray-001);
+  --hggs-form-input-height-big: var(--hggs-space-xxl);
+  --hggs-form-input-height: var(--hggs-space-md);
+  --hggs-form-input-height-small: var(--hggs-space-xs);
+  --hggs-form-input-border-radius: var(--hggs-border-radius-small);
+  --hggs-form-input-padding: var(--hggs-space-sm) var(--hggs-space);
+  --hggs-form-input-padding-big: var(--hggs-space-xs) var(--hggs-space);
+  --hggs-form-input-padding-small: var(--hggs-space-xs) var(--hggs-space);
+  --hggs-form-input-border: var(--hggs-border);
+  --hggs-form-input-border-focus: var(--hggs-border-focus);
+  --hggs-form-input-border-disabled: var(--hggs-border-disabled);
+  --hggs-form-input-border-error: var(--hggs-border-error);
+
+  /* FONT */
+  --hggs-font-family: "Finlandica", sans-serif;
+
+  /* Font sizes */
+  --hggs-font-size-sm: clamp(0.8rem, 0.08vw + 0.78rem, 0.84rem);
+  --hggs-font-size-base: clamp(1rem, 0.23vw + 0.94rem, 1.13rem);
+  --hggs-font-size-md: clamp(1.25rem, 0.45vw + 1.14rem, 1.5rem);
+  --hggs-font-size-lg: clamp(1.56rem, 0.79vw + 1.36rem, 2rem);
+  --hggs-font-size-xl: clamp(1.95rem, 1.29vw + 1.63rem, 2.66rem);
+  --hggs-font-size-xxl: clamp(2.44rem, 2.02vw + 1.94rem, 3.55rem);
+  --hggs-font-size-xxxl: clamp(3.05rem, 3.06vw + 2.29rem, 4.73rem);
+  --hggs-font-size: var(--hggs-font-size-base);
+
+  /* Font weights */
+  --hggs-font-weight-very-bold: 900;
+  --hggs-font-weight-bold: 700;
+  --hggs-font-weight-low-bold: 600;
+  --hggs-font-weight-medium: 500;
+  --hggs-font-weight: 400;
+
+  /* Font letter spacings */
+  --hggs-font-letter-spacing: 1px;
+  --hggs-font-letter-spacing-small: 0.6px;
+  --hggs-font-letter-spacing-micro: 0.3px;
+
+  /* Font line heights */
+  --hggs-line-height: 1.5;
+  --hggs-line-height-small: 1.3;
+  --hggs-line-height-micro: 1.1;
+
+  /* LAYERS */
+  --hggs-layer-0: 1;
+  --hggs-layer-10: 10;
+}

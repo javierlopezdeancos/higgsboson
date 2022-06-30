@@ -17,11 +17,13 @@
 ## Component variables
 
 ```
---logo-url
---logo-width
 --logo-height
---logo-url-white
+--logo-height-small
+--logo-url
 --logo-url-black
+--logo-url-white
+--logo-width
+--logo-width-small
 ```
 
 ## HTML Structure

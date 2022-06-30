@@ -1,4 +1,5 @@
 .hggs-table-wrapper {
+  --table-wrapper-border: none;
   --table-wrapper-border-radius: 0;
   --table-wrapper-box-shadow: unset;
 }

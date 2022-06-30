@@ -105,7 +105,6 @@
 --button-icon-label-color-hover
 --button-icon-label-color-primary-hover
 --button-icon-label-color-quaternary-hover
---button-icon-label-color-quinary
 --button-icon-label-color-quinary-hover
 --button-icon-label-color-secondary-hover
 --button-icon-label-color-senary-hover

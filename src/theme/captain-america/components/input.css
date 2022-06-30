@@ -12,7 +12,8 @@
   --input-padding: var(--hggs-form-input-padding);
   --input-padding-big: var(--hggs-form-input-padding-big);
   --input-padding-small: var(--hggs-form-input-padding-small);
-  --input-color-placeholder: var(--hggs-color-auxiliary-gray-003);
+  --input-placeholder-color: var(--hggs-color-auxiliary-gray-003);
+  --input-placeholder-font-style: var(--hggs-form-input-placeholder-font-style);
   --input-font-family: var(--hggs-font-family);
   --input-font-size: var(--hggs-font-size);
   --input-font-size-big: var(--hggs-font-size-big);

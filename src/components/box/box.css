@@ -4,11 +4,13 @@
   min-height: var(--box-min-height, 100px);
   background: var(--box-background, var(--hggs-color-white-default));
   box-shadow: var(--box-box-shadow, var(--hggs-shadow-default));
+  border: var(--box-border, none);
+  margin: var(--box-margin, var(--hggs-space-vertical-default) 0);
   padding: var(
     --box-padding,
     var(
-      var(--hggs-space-vertical-big-default)
-        var(--hggs-space-horizontal-medium-default)
+      var(--hggs-space-vertical-md-default)
+        var(--hggs-space-horizontal-md-default)
     )
   );
 
@@ -23,15 +25,12 @@
   & .hggs-box-title {
     @extend .hggs-h4;
 
-    font-size: var(--box-title-font-size, var(--hggs-font-size-big-default));
+    font-size: var(--box-title-font-size, var(--hggs-font-size-lg-default));
     margin-top: var(--box-title-margin-top, 0);
   }
 
   & .hggs-box-body {
-    padding: var(
-      --box-body-padding,
-      var(--hggs-space-vertical-medium-default) 0 0 0
-    );
+    padding: var(--box-body-padding, var(--hggs-space-vertical-default) 0 0 0);
 
     & > *:first-child {
       margin-top: unset;

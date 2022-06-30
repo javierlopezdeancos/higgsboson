@@ -1,0 +1,22 @@
+.hggs-checkboxes,
+.hggs-checkbox {
+  --hggs-checkboxes-gap: var(--hggs-space-vertical-small);
+  --checkbox-size: var(--hggs-form-input-height-small);
+  --checkbox-background: transparent;
+  --checkbox-border-radius: 0;
+  --checkbox-border: var(--hggs-form-input-border);
+  --checkbox-outline-focus: var(--hggs-form-outline-focus);
+  --checkbox-box-shadow-focus: var(--hggs-form-box-primary-focus);
+  --checkbox-margin-left: var(--hggs-space-horizontal-small);
+  --checkbox-ckeck-icon-background-color: var(--hggs-color-primary);
+  --checkbox-ckeck-icon-height-after: 10px;
+  --checkbox-ckeck-icon-height-before: 3px;
+  --checkbox-ckeck-icon-left-after: 12px;
+  --checkbox-ckeck-icon-left-before: 4px;
+  --checkbox-ckeck-icon-top-after: 4px;
+  --checkbox-ckeck-icon-top-before: 10px;
+  --checkbox-ckeck-icon-transform-after: rotate(45deg);
+  --checkbox-ckeck-icon-transform-before: rotate(45deg);
+  --checkbox-ckeck-icon-width-after: 3px;
+  --checkbox-ckeck-icon-width-before: 8px;
+}

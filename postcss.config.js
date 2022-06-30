@@ -13,9 +13,7 @@ module.exports = (ctx) => ({
   plugins:
     process.env.NODE_ENV === "production"
       ? [
-          presetEnv({
-            stage: 0,
-          }),
+          presetEnv(),
           atImport(),
           copyAssets({ base: "dist" }),
           nesting(),
@@ -27,7 +25,7 @@ module.exports = (ctx) => ({
           }),
         ]
       : [
-          presetEnv({ stage: 0 }),
+          presetEnv(),
           atImport(),
           copyAssets({ base: "dist" }),
           nesting(),

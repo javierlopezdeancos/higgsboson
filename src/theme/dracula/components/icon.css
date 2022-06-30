@@ -1,0 +1,46 @@
+.hggs-icon-wrapper,
+.hggs-icon,
+.hggs-button {
+  --icon-chevron-down: url("./captain-america/assets/icons/chevron-down.svg");
+  --icon-close: url("./captain-america/assets/icons/close.svg");
+  --icon-edit: url("./captain-america/assets/icons/pencil.svg");
+  --icon-hamburger-menu: url("./captain-america/assets/icons/hamburger-menu.svg");
+  --icon-log-out: url("./captain-america/assets/icons/log-out.svg");
+  --icon-plus: url("./captain-america/assets/icons/plus.svg");
+  --icon-question: url("./captain-america/assets/icons/question.svg");
+  --icon-user: url("./captain-america/assets/icons/user.svg");
+  --icon-box-background-primary: var(--hggs-color-primary);
+  --icon-box-background-quaternary: var(--hggs-color-quaternary);
+  --icon-box-background-quinary: var(--hggs-color-quinary);
+  --icon-box-background-secondary: var(--hggs-color-secondary);
+  --icon-box-background-senary: var(--hggs-color-senary);
+  --icon-box-background-tertiary: var(--hggs-color-tertiary);
+  --icon-box-background: var(--hggs-color-auxiliary-gray-001);
+  --icon-box-padding-micro: var(--hggs-space-horizontal-micro);
+  --icon-box-padding-small: var(--hggs-space-horizontal-small);
+  --icon-box-padding: var(--hggs-space-horizontal-small);
+  --icon-filter-primary: var(--hggs-filter-primary);
+  --icon-filter-quaternary: var(--hggs-filter-quaternary);
+  --icon-filter-quinary: var(--hggs-filter-quinary);
+  --icon-filter-secondary: var(--hggs-filter-secondary);
+  --icon-filter-senary: var(--hggs-filter-senary);
+  --icon-filter-tertiary: var(--hggs-filter-tertiary);
+  --icon-filter: var(--hggs-filter-auxiliary-gray-004);
+  --icon-label-color: var(--hggs-color-auxiliary-gray-007);
+  --icon-label-font-family: var(--hggs-font-family);
+  --icon-label-font-size: var(--hggs-font-size);
+  --icon-label-font-weigth: var(--hggs-font-weight-medium);
+  --icon-label-text-align: left;
+  --icon-label-margin-left: var(--hggs-space-horizontal-small);
+  --icon-label-quinary-color: var(--hggs-color-quinary);
+  --icon-outline-border-primary: var(--hggs-border-primary);
+  --icon-outline-border-quaternary: var(--hggs-border-quanternary);
+  --icon-outline-border-quinary: var(--hggs-border-quinary);
+  --icon-outline-border-secondary: var(--hggs-border-secondary);
+  --icon-outline-border-senary: var(--hggs-border-senary);
+  --icon-outline-border-tertiary: var(--hggs-border-tertiary);
+  --icon-outline-border: 1px solid var(--hggs-color-auxiliary-gray-004);
+  --icon-size-micro: 10px;
+  --icon-size-small: 12px;
+  --icon-size: 20px;
+}

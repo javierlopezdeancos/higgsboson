@@ -22,7 +22,7 @@
     top: var(--select-open-icon-top, 25%);
     right: var(
       --select-open-icon-right,
-      var(--hggs-space-horizontal-small-default)
+      var(--hggs-space-horizontal-sm-default)
     );
   }
 }
@@ -32,15 +32,15 @@
 
   cursor: pointer;
   font-family: var(--select-font-family, var(--hggs-font-family-default));
-  font-size: var(--select-font-size, var(--hggs-font-size-big-default));
+  font-size: var(--select-font-size, var(--hggs-font-size-lg-default));
   color: var(--select-color, var(--hggs-color-default));
   border: var(--select-border, var(--hggs-border-default));
   border-radius: var(--select-border-radius, var(--hggs-border-radius-default));
-  height: var(--select-height, var(--hggs-space-vertical-big-default));
+  height: var(--select-height, var(--hggs-space-vertical-md-default));
   padding: var(
     --select-padding-left,
-    var(--hggs-space-vertical-small-default)
-      var(--hggs-space-horizontal-small-default)
+    var(--hggs-space-vertical-sm-default)
+      var(--hggs-space-horizontal-sm-default)
   );
 
   &:focus {

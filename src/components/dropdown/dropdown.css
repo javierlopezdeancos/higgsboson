@@ -7,11 +7,11 @@
     var(--hggs-border-radius-default)
   );
 
-  height: var(--dropdown-height, var(--hggs-space-vertical-big-default));
+  height: var(--dropdown-height, var(--hggs-space-vertical-md-default));
   padding: var(
     --dropdown-padding,
-    var(--hggs-space-vertical-small-default)
-      var(--hggs-space-horizontal-small-default)
+    var(--hggs-space-vertical-sm-default)
+      var(--hggs-space-horizontal-sm-default)
   );
 
   &:focus {
@@ -27,6 +27,7 @@
 
     & .hggs-dropdown-selected-options {
       &:after {
+        top: var(--dropdown-open-icon-top);
         border-bottom: var(
           --dropdown-open-icon-border-focus,
           var(--hggs-border-primary-big-default)
@@ -49,11 +50,11 @@
     cursor: pointer;
     background-color: var(
       --dropdown-options-selected-background,
-      var(--hgss-background-default)
+      var(--hgss-color-background-default)
     );
     padding-left: var(
       --dropdown-options-selected-padding-left,
-      var(--hggs-space-horizontal-micro-default)
+      var(--hggs-space-horizontal-xs-default)
     );
 
     &::-webkit-details-marker {
@@ -62,22 +63,22 @@
 
     &:after {
       position: absolute;
-      top: 30%;
+      top: var(--dropdown-icon-top);
+      right: var(--dropdown-icon-right, 15px);
       content: "";
       display: inline-block;
-      width: var(--dropdown-open-icon-size, 6px);
-      height: var(--dropdown-open-icon-size, 6px);
-      right: var(--hggs-space-vertical-medium, 15px);
+      width: var(--dropdown-icon-size, 6px);
+      height: var(--dropdown-icon-size, 6px);
       border-bottom: var(
-        --dropdown-open-icon-border,
+        --dropdown-icon-border,
         var(--hggs-border-secondary-gross-default)
       );
       border-left: var(
-        --dropdown-open-icon-border,
+        --dropdown-icon-border,
         var(--hggs-border-secondary-gross-default)
       );
       border-bottom-left-radius: var(
-        --dropdown-open-icon-border-bottom-left-radius,
+        --dropdown-icon-border-bottom-left-radius,
         2px
       );
       transform: rotate(45deg) translate(50%, 0%);
@@ -110,7 +111,7 @@
         );
         font-size: var(
           --dropdown-option-selected-font-size,
-          var(--hggs-font-size-big-default)
+          var(--hggs-font-size-lg-default)
         );
         color: var(--dropdown-option-selected-color, var(--hggs-color-default));
       }
@@ -122,14 +123,14 @@
     width: 100%;
     top: var(
       --dropdown-options-top,
-      calc(100% + var(--hggs-space-vertical-micro-default))
+      calc(100% + var(--hggs-space-vertical-xs-default))
     );
     left: 0;
     margin: 0;
     padding: 0;
     background-color: var(
       --dropdown-options-background,
-      var(--hgss-background-default)
+      var(--hgss-color-background-default)
     );
     box-sizing: border-box;
     border: var(--dropdown-options-border, var(--hggs-border-tertiary-default));
@@ -162,17 +163,17 @@
         color: var(--dropdown-option-label-color, var(--hggs-color-default));
         padding: var(
           --dropdown-option-label-padding,
-          var(--hggs-space-vertical-micro-default)
-            var(--hggs-space-horizontal-small-default)
-            var(--hggs-space-vertical-micro-default)
-            var(--hggs-space-horizontal-small-default)
+          var(--hggs-space-vertical-xs-default)
+            var(--hggs-space-horizontal-sm-default)
+            var(--hggs-space-vertical-xs-default)
+            var(--hggs-space-horizontal-sm-default)
         );
       }
 
       &:hover {
         background-color: var(
           --dropdown-option-label-background-hover,
-          var(--hggs-color-background-selected-default)
+          var(--hggs-color-background-hover-default)
         );
       }
     }

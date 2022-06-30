@@ -1,0 +1,5 @@
+.hggs-option {
+  --option-color: var(--hggs-color);
+  --option-font-family: var(--hggs-font-family);
+  --option-font-size: var(--hggs-font-size);
+}

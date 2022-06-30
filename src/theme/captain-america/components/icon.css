@@ -1,14 +1,14 @@
 .hggs-icon-wrapper,
 .hggs-icon,
 .hggs-button {
-  --icon-chevron-down: url("./assets/icons/chevron-down.svg");
-  --icon-close: url("./assets/icons/close.svg");
-  --icon-edit: url("./assets/icons/pencil.svg");
-  --icon-hamburger-menu: url("./assets/icons/hamburger-menu.svg");
-  --icon-log-out: url("./assets/icons/log-out.svg");
-  --icon-plus: url("./assets/icons/plus.svg");
-  --icon-question: url("./assets/icons/question.svg");
-  --icon-user: url("./assets/icons/user.svg");
+  --icon-chevron-down: url("./captain-america/assets/icons/chevron-down.svg");
+  --icon-close: url("./captain-america/assets/icons/close.svg");
+  --icon-edit: url("./captain-america/assets/icons/pencil.svg");
+  --icon-hamburger-menu: url("./captain-america/assets/icons/hamburger-menu.svg");
+  --icon-log-out: url("./captain-america/assets/icons/log-out.svg");
+  --icon-plus: url("./captain-america/assets/icons/plus.svg");
+  --icon-question: url("./captain-america/assets/icons/question.svg");
+  --icon-user: url("./captain-america/assets/icons/user.svg");
   --icon-box-background-primary: var(--hggs-color-primary);
   --icon-box-background-quaternary: var(--hggs-color-quaternary);
   --icon-box-background-quinary: var(--hggs-color-quinary);
@@ -26,6 +26,13 @@
   --icon-filter-senary: var(--hggs-filter-senary);
   --icon-filter-tertiary: var(--hggs-filter-tertiary);
   --icon-filter: var(--hggs-filter-auxiliary-gray-004);
+  --icon-box-filter: var(--icon-filter-quaternary);
+  --icon-box-filter-primary: var(--icon-filter-quinary);
+  --icon-box-filter-secondary: var(--icon-filter-quinary);
+  --icon-box-filter-tertiary: var(--icon-filter-quinary);
+  --icon-box-filter-quaternary: var(--icon-filter-quinary);
+  --icon-box-filter-quinary: var(--icon-filter-quaternary);
+  --icon-box-filter-senary: var(--icon-filter-quinary);
   --icon-label-color: var(--hggs-color-auxiliary-gray-007);
   --icon-label-font-family: var(--hggs-font-family);
   --icon-label-font-size: var(--hggs-font-size);

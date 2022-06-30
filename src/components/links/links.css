@@ -2,14 +2,14 @@
   text-decoration: var(--link-text-decoration, underline);
   font-family: var(--link-font-family, var(--hggs-font-family-default));
   font-weight: var(--link-font-weight, var(--hggs-font-weight-default));
-  font-size: var(--hggs-font-size, var(--hggs-font-size-default));
-  font-style: var(--hggs-font-weight-medium, italic);
+  font-size: var(--link-font-size, var(--hggs-font-size-default));
+  font-style: var(--link-font-style, italic);
   color: var(--link-color, var(--hggs-color-default));
 
   &:hover,
   &.hggs-link--hover {
     text-decoration: var(--link-text-decoration-hover, underline);
-    color: var(--link-color-hover), var(--hggs-color-default);
+    color: var(--link-color-hover, var(--hggs-color-default));
     cursor: pointer;
   }
 }

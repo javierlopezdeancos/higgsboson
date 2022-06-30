@@ -29,8 +29,10 @@
   --dropdown-option-selected-font-size: var(--hggs-font-size);
   --dropdown-option-selected-color: var(--hggs-color);
   --dropdown-open-icon-border-focus: 3px solid var(--hggs-color-primary);
-  --dropdown-open-icon-border: 3px solid var(--hggs-color-auxiliary-gray-004);
+  --dropdown-icon-border: 3px solid var(--hggs-color-auxiliary-gray-004);
   --dropdown-open-icon-top: 30%;
-  --dropdown-open-icon-size: 6px;
-  --dropdown-open-icon-border-bottom-left-radius: 2px;
+  --dropdown-icon-top: 30%;
+  --dropdown-icon-right: var(--hggs-space-vertical-medium);
+  --dropdown-icon-size: 6px;
+  --dropdown-icon-border-bottom-left-radius: 2px;
 }

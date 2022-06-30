@@ -17,6 +17,7 @@
 ## Component variables
 
 ```
+--link-font-size
 --link-color-hover
 --link-font-family
 --link-font-style

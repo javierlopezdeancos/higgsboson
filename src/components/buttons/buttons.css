@@ -608,12 +608,12 @@
   text-align: center;
   padding: var(
     --button-padding-medium,
-    calc(var(--hggs-space-vertical-medium-default) / 1.2)
-      var(--hggs-space-horizontal-big-default)
+    calc(var(--hggs-space-vertical-default) / 1.2)
+      var(--hggs-space-horizontal-md-default)
   );
   font-size: var(
     --button-font-size-medium,
-    var(--hggs-font-size-mega-default)
+    var(--hggs-font-size-xxl-default)
   );
   font-family: var(--button-font-family, var(--hggs-font-family));
   font-weight: var(
@@ -676,7 +676,7 @@
     &:not( > .hggs-icon-wrapper) {
       width: var(
         --button-icon-width,
-        calc(var(--hggs-icon-size-default) + var(--hggs-space-vertical-small-default))
+        calc(var(--hggs-icon-size-default) + var(--hggs-space-vertical-sm-default))
       );
     }
 
@@ -684,7 +684,7 @@
     height: auto;
     background: unset;
     background-color: unset;
-    padding: var(--button-icon-padding, var(--hggs-space-vertical-micro-default));
+    padding: var(--button-icon-padding, var(--hggs-space-vertical-xs-default));
     margin: 0;
 
     &.hggs-icon {
@@ -1116,36 +1116,36 @@
   &.hggs-button--big {
     padding: var(
       --button-padding-big,
-      calc(var(--hggs-space-vertical-medium-default))
-        var(--hggs-space-horizontal-macro-default)
+      calc(var(--hggs-space-vertical-default))
+        var(--hggs-space-horizontal-lg-default)
     );
     font-size: var(
       --button-font-size-extra-medium,
-      var(--hggs-font-size-mega-default)
+      var(--hggs-font-size-xxl-default)
     );
   }
 
   &.hggs-button--medium {
     padding: var(
       --button-padding-medium,
-      calc(var(--hggs-space-vertical-medium-default) / 1.2)
-        var(--hggs-space-horizontal-big-default)
+      calc(var(--hggs-space-vertical-default) / 1.2)
+        var(--hggs-space-horizontal-md-default)
     );
     font-size: var(
       --button-font-size-medium,
-      var(--hggs-font-size-mega-default)
+      var(--hggs-font-size-xxl-default)
     );
   }
 
   &.hggs-button--small:not(.hggs-button--circle):not(.hggs-button--square) {
     padding: var(
       --button-padding-small,
-      var(--hggs-space-vertical-micro-default)
-        var(--hggs-space-horizontal-small-default)
+      var(--hggs-space-vertical-xs-default)
+        var(--hggs-space-horizontal-sm-default)
     );
     font-size: var(
       --button-font-size-small,
-      var(--hggs-font-size-small-default)
+      var(--hggs-font-size-sm-default)
     );
   }
 }

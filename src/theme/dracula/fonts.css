@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Finlandica";
+  src: url("./caramel/assets/fonts/Finlandica-VariableFont_wght.ttf")
+      format("truetype"),
+    url("./caramel/assets/fonts/Finlandica-Italic-VariableFont_wght.ttf")
+      format("truetype");
+}

@@ -17,6 +17,7 @@
 ## Component variables
 
 ```
+--table-wrapper-border
 --table-wrapper-border-radius
 --table-wrapper-box-shadow
 
