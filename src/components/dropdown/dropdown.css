@@ -27,7 +27,7 @@
 
     & .hggs-dropdown-selected-options {
       &:after {
-        top: var(--dropdown-open-icon-top);
+        top: var(--dropdown-open-icon-top, 16px);
         border-bottom: var(
           --dropdown-open-icon-border-focus,
           var(--hggs-border-primary-big-default)
@@ -63,7 +63,7 @@
 
     &:after {
       position: absolute;
-      top: var(--dropdown-icon-top);
+      top: var(--dropdown-icon-top, 16px);
       right: var(--dropdown-icon-right, 15px);
       content: "";
       display: inline-block;

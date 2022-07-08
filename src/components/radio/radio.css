@@ -6,8 +6,8 @@
 
   & input[type="radio"] {
     position: absolute;
-    width: var(--radio-size, var(--hggs-space-horizontal-md-default));
-    height: var(--radio-size, var(--hggs-space-vertical-default));
+    width: var(--radio-size, var(--hggs-space-horizontal-default));
+    height: var(--radio-size, var(--hggs-space-horizontal-default));
     border: var(--radio-border, var(--hggs-border-default));
     cursor: pointer;
     opacity: 0;
@@ -62,8 +62,8 @@
 
   & span:before {
     display: inline-block;
-    width: var(--radio-size, var(--hggs-space-horizontal-md-default));
-    height: var(--radio-size, var(--hggs-space-horizontal-md-default));
+    width: var(--radio-size, var(--hggs-space-horizontal-default));
+    height: var(--radio-size, var(--hggs-space-horizontal-default));
     content: "";
     background-color: var(
       --radio-inside-background-color,

@@ -14,8 +14,8 @@
     appearance: none;
     position: relative;
     display: inline-block;
-    width: var(--checkbox-size, var(--hggs-space-horizontal-md-default));
-    height: var(--checkbox-size, var(--hggs-space-horizontal-md-default));
+    width: var(--checkbox-size, var(--hggs-space-horizontal-default));
+    height: var(--checkbox-size, var(--hggs-space-horizontal-default));
     background: var(--checkbox-background, transparent);
     border: var(--checkbox-border, var(--hggs-border-default));
     border-radius: var(
