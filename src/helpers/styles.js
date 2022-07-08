@@ -19,7 +19,6 @@ const subHeaderStyles = [
   "margin-top: 0",
   "margin-bottom: 20px",
   "margin-left: 20px;",
-  "color: #565656",
 ];
 
 const subHeaderQuinaryStyles = [
@@ -33,21 +32,18 @@ const subHeaderWithChildStyles = [
   "margin-top: 0",
   "margin-bottom: 0",
   "margin-left: 20px;",
-  "color: #565656",
 ];
 
 const subHeaderChildStyles = [
   "margin-top: 0",
   "margin-bottom: 20px",
   "margin-left: 40px;",
-  "color: #707070",
 ];
 
 const subHeaderChildWithParentWithSiblingStyles = [
   "margin-top: 0",
   "margin-bottom: 0",
   "margin-left: 40px;",
-  "color: #707070",
 ];
 
 const bigGrayBoxStyles = [

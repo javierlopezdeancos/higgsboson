@@ -1,0 +1,21 @@
+.hggs-input {
+  --input-border: var(--hggs-form-input-border);
+  --input-border-radius: var(--hggs-form-input-border-radius);
+  --input-border-focus: var(--hggs-form-input-border-focus);
+  --input-outline-focus: var(--hggs-form-outline-focus);
+  --input-box-shadow-focus: var(--hggs-form-box-primary-focus);
+  --input-border-disabled: var(--hggs-form-input-border-disabled);
+  --input-border-invalid: var(--hggs-form-input-border-invalid);
+  --input-height: var(--hggs-form-input-height);
+  --input-height-big: var(--hggs-form-input-height-big);
+  --input-height-small: var(--hggs-form-input-height-small);
+  --input-padding: var(--hggs-form-input-padding);
+  --input-padding-big: var(--hggs-form-input-padding-big);
+  --input-padding-small: var(--hggs-form-input-padding-small);
+  --input-color-placeholder: var(--hggs-color-auxiliary-gray-003);
+  --input-font-family: var(--hggs-font-family);
+  --input-font-size: var(--hggs-font-size);
+  --input-font-size-big: var(--hggs-font-size-big);
+  --input-font-size-small: var(--hggs-font-size-small);
+  --input-color-disabled: var(--hggs-color-disabled);
+}

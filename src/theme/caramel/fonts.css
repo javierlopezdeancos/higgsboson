@@ -1,1 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url("./caramel/assets/fonts/Poppins-ExtraBold.ttf") format("truetype"),
+    url("./caramel/assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("./caramel/assets/fonts/Poppins-Bold.ttf") format("truetype"),
+    url("./caramel/assets/fonts/Poppins-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("./caramel/assets/fonts/Poppins-Light.ttf") format("truetype"),
+    url("./caramel/assets/fonts/Poppins-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("./caramel/assets/fonts/Poppins-Medium.ttf") format("truetype"),
+    url("./caramel/assets/fonts/Poppins-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./caramel/assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("./caramel/assets/fonts/Poppins-SemiBold.ttf") format("truetype"),
+    url("./caramel/assets/fonts/Poppins-SemiBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Thin";
+  src: url("./caramel/assets/fonts/Poppins-Thin.ttf") format("truetype"),
+    url("./caramel/assets/fonts/Poppins-ThinItalic.ttf") format("truetype");
+}

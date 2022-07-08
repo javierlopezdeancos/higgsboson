@@ -6,14 +6,14 @@
 .hggs-tag {
   width: fit-content;
   font-family: var(--tag-font-family, var(--hggs-font-family-default));
-  font-size: var(--tag-font-size, var(--hggs-font-size-small-default));
+  font-size: var(--tag-font-size, var(--hggs-font-size-sm-default));
   font-weight: var(--tag-font-weight, var(--hgss-font-weight-default));
   background: var(--tag-background, var(--hggs-color-quaternary-default));
   color: var(--tag-color, var(--hggs-color-quinary-default));
   padding: var(
     --tag-padding,
-    var(--hggs-space-vertical-small-default)
-      var(--hggs-space-horizontal-medium-default)
+    var(--hggs-space-vertical-sm-default)
+      var(--hggs-space-horizontal-md-default)
   );
   text-align: var(--tag-text-align, center);
   text-transform: var(--tag-text-transform, uppercase);
@@ -126,7 +126,10 @@
           --tag-border-outline-secondary-subtle,
           var(--hggs-border-auxiliary-gray-012-default)
         );
-        color: var(--hggs-color-auxiliary-gray-012-default);
+        color: var(
+          --tag-color-outline-secondary-subtle,
+          var(--hggs-color-auxiliary-gray-012-default)
+        );
       }
     }
   }
@@ -307,11 +310,11 @@
   }
 
   &.hggs-tag--small {
-    font-size: var(--tag-font-size-small, var(--hggs-font-size-micro-default));
+    font-size: var(--tag-font-size-small, var(--hggs-font-size-xs-default));
     padding: var(
       --tag-padding-small,
-      var(--hggs-space-vertical-micro-default)
-        var(--hggs-space-horizontal-small-default)
+      var(--hggs-space-vertical-xs-default)
+        var(--hggs-space-horizontal-sm-default)
     );
   }
 }

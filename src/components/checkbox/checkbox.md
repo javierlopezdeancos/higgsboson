@@ -17,13 +17,15 @@
 ## Component variables
 
 ```
---checkbox-size:
+--checkbox--label-color
+--checkbox--label-font-family
+--checkbox--label-font-size
+--checkbox--label-font-style
+--checkbox--label-font-weight
 --checkbox-background
---checkbox-border-radius
 --checkbox-border
---checkbox-outline-focus
+--checkbox-border-radius
 --checkbox-box-shadow-focus
---checkbox-margin-left
 --checkbox-ckeck-icon-background-color
 --checkbox-ckeck-icon-height-after
 --checkbox-ckeck-icon-height-before
@@ -35,6 +37,10 @@
 --checkbox-ckeck-icon-transform-before
 --checkbox-ckeck-icon-width-after
 --checkbox-ckeck-icon-width-before
+--checkbox-margin-left
+--checkbox-outline-focus
+--checkbox-size
+--checkboxes-gap
 ```
 
 ## HTML Structure

@@ -1,0 +1,32 @@
+.hggs-dropdown {
+  --dropdown-border: var(--hggs-form-input-border);
+  --dropdown-border-focus: var(--hggs-form-input-border-focus);
+  --dropdown-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --dropdown-border-radius: var(--hggs-form-input-border-radius);
+  --dropdown-height: var(--hggs-form-input-height);
+  --dropdown-padding: var(--hggs-form-input-padding);
+  --dropdown-options-top: calc(100% + var(--hggs-space-xxxs));
+  --dropdown-options-background: transparent;
+  --dropdown-options-border: var(--hggs-form-input-border);
+  --dropdown-options-border-radius: var(--hggs-form-input-border-radius);
+  --dropdown-options-box-shadow: none;
+  --dropdown-options-max-height: calc(var(--hggs-space-xxxl) * 10);
+  --dropdown-option-label-font-family: var(--hggs-font-family);
+  --dropdown-option-label-font-size: var(--hggs-font-size);
+  --dropdown-option-label-color: var(--hggs-color);
+  --dropdown-option-label-padding: var(--hggs-space-xxs) 0 var(--hggs-space-xxs)
+    var(--hggs-space);
+  --dropdown-option-label-background-hover: var(--hggs-color-background-hover);
+  --dropdown-options-selected-background: transparent;
+  --dropdown-options-selected-padding-left: 0;
+  --dropdown-option-selected-font-family: var(--hggs-font-family);
+  --dropdown-option-selected-font-size: var(--hggs-font-size);
+  --dropdown-option-selected-color: var(--hggs-color);
+  --dropdown-open-icon-border-focus: 3px solid var(--hggs-color-primary);
+  --dropdown-open-icon-border: 3px solid var(--hggs-color);
+  --dropdown-icon-top: 30%;
+  --dropdown-icon-right: var(--hggs-space-sm);
+  --dropdown-open-icon-top: 37%;
+  --dropdown-open-size: 6px;
+  --dropdown-open-icon-border-bottom-left-radius: 2px;
+}

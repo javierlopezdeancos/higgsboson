@@ -2,6 +2,8 @@
   --box-min-height: 100px;
   --box-background: var(--hggs-color-quinary);
   --box-box-shadow: 0 1px 5px 0 var(--hggs-color-auxiliary-gray-001);
+  --box-border: none;
+  --box-margin: var(--hggs-space-vertical-medium) 0;
   --box-padding: var(--hggs-space-vertical-big)
     var(--hggs-space-horizontal-medium);
   --box-header-border-bottom: var(--hggs-border-dark);

@@ -6,37 +6,55 @@
 
   & input[type="radio"] {
     position: absolute;
-    width: var(--radio-size, var(--hggs-space-horizontal-medium-default));
-    height: var(--radio-size, var(--hggs-space-vertical-medium-default));
+    width: var(--radio-size, var(--hggs-space-horizontal-md-default));
+    height: var(--radio-size, var(--hggs-space-vertical-default));
     border: var(--radio-border, var(--hggs-border-default));
     cursor: pointer;
     opacity: 0;
     order: 1;
 
-    &:checked ~ span:before {
-      border: var(
-        --radio-border-checked,
-        var(--hggs-border-quinary-colossal-default)
-      );
+    &:checked {
+      border: var(--radio-border-checked, var(--hggs-border-default));
+
+      & ~ span:before {
+        border: var(
+          --radio-inside-border-checked,
+          var(--hggs-border-quinary-colossal-default)
+        );
+      }
     }
 
     &:hover ~ span:before {
-      border-color: var(
-        --radio-border-color-hover,
-        var(--hggs-color-primary-default)
-      );
+      border: var(--radio-inside-border-hover, var(--hggs-border-default));
     }
 
     &:focus ~ span:before {
-      outline: var(--radio-outline-focus, --hggs-form-outline-focus-default);
-      box-shadow: var(--radio-box-shadow-focus, var(--hggs-shadow-default));
+      outline: var(
+        --radio-inside-outline-focus,
+        var(--hggs-form-outline-focus-default)
+      );
+      box-shadow: var(
+        --radio-inside-box-shadow-focus,
+        var(--hggs-shadow-default)
+      );
     }
   }
 
   & .hggs-label {
+    font-family: var(
+      --radio--label-font-family,
+      var(--hggs-font-family-default)
+    );
+    font-size: var(--radio--label-font-size, var(--hggs-font-size-default));
+    font-weight: var(
+      --radio--label-font-weight,
+      var(--hggs-font-weight-default)
+    );
+    font-style: var(--radio--label-font-style, normal);
+    color: var(--radio--label-color, var(--hggs-color-default));
     margin-left: var(
       --radio-label-margin-left,
-      var(--hggs-space-horizontal-small-default)
+      var(--hggs-space-horizontal-sm-default)
     );
     cursor: pointer;
     order: 2;
@@ -44,12 +62,12 @@
 
   & span:before {
     display: inline-block;
-    width: var(--radio-size, var(--hggs-space-horizontal-medium-default));
-    height: var(--radio-size, var(--hggs-space-horizontal-medium-default));
+    width: var(--radio-size, var(--hggs-space-horizontal-md-default));
+    height: var(--radio-size, var(--hggs-space-horizontal-md-default));
     content: "";
     background-color: var(
       --radio-inside-background-color,
-      var(--hgss-background-default)
+      var(--hgss-color-background-default)
     );
     border: var(--radio-inside-border-bold, var(--hggs-border-default));
     border-radius: 100%;

@@ -1,0 +1,18 @@
+.hggs-box {
+  --box-min-height: var(--hggs-space-lg);
+  --box-background: var(--hggs-color-secondary);
+  --box-box-shadow: none;
+  --box-border: var(--hggs-border);
+  --box-margin: var(--hggs-space-lg) 0;
+  --box-padding: var(--hggs-space-xxl) var(--hggs-space);
+  --box-header-border-bottom: var(--hggs-border);
+  --box-header-padding: 0 0 0 0;
+  --box-title-font-size: var(--hggs-font-size-md);
+  --box-title-margin-top: 0;
+  --box-body-padding: var(--hggs-space-lg) 0 0 0;
+  --box-border-radius-with-radius: var(--hggs-border-radius-big);
+  --box-background-primary: var(--hggs-color-auxiliary-secondary-004);
+  --box-border-primary: var(--hggs-border);
+  --box-title-color-primary: var(--hggs-color-senary);
+  --box-header-border-bottom-primary: var(--hggs-border);
+}

@@ -1,6 +1,6 @@
 .hggs-checkboxes,
 .hggs-checkbox {
-  --hggs-checkboxes-gap: var(--hggs-space-vertical-small);
+  --checkboxes-gap: var(--hggs-space-vertical-small);
   --checkbox-size: var(--hggs-form-input-height-small);
   --checkbox-background: transparent;
   --checkbox-border-radius: 0;
@@ -19,4 +19,9 @@
   --checkbox-ckeck-icon-transform-before: rotate(45deg);
   --checkbox-ckeck-icon-width-after: 3px;
   --checkbox-ckeck-icon-width-before: 8px;
+  --checkbox--label-font-family: var(--hggs-font-family);
+  --checkbox--label-font-size: var(--hggs-font-size);
+  --checkbox--label-font-weight: var(--hggs-font-weight);
+  --checkbox--label-font-style: normal;
+  --checkbox--label-color: var(--hggs-color);
 }

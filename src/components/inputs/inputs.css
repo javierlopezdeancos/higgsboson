@@ -1,47 +1,45 @@
 .hggs-input {
   width: 100%;
-  height: var(--input-height, var(--hggs-space-vertical-big-default));
+  height: var(--input-height, var(--hggs-space-vertical-md-default));
   border: var(--input-border, var(--hggs-border-default));
   border-radius: var(--input-border-radius, var(--hggs-border-radius-default));
   padding: var(
     --input-padding,
-    var(--hggs-space-vertical-small-default)
-      var(--hggs-space-horizontal-small-default)
+    var(--hggs-space-vertical-sm-default)
+      var(--hggs-space-horizontal-sm-default)
   );
   font-family: var(--input-font-family, var(--hggs-font-family-default));
-  font-size: var(--input-font-size, var(--hggs-font-size-big-default));
+  font-size: var(--input-font-size, var(--hggs-font-size-lg-default));
   box-sizing: border-box;
   background: transparent;
 
   &.hggs-input--big {
     height: var(
       --input-height-big,
-      calc(var(--hggs-space-vertical-macro-default) / 1.5)
+      calc(var(--hggs-space-vertical-lg-default) / 1.5)
     );
     padding: var(
       --input-padding-big,
-      var(--hggs-space-vertical-small-default)
-        var(--hggs-space-horizontal-small-default)
+      var(--hggs-space-vertical-sm-default)
+        var(--hggs-space-horizontal-sm-default)
     );
-    font-size: var(--input-font-size-big, var(--hggs-font-size-pico-default));
+    font-size: var(--input-font-size-big, var(--hggs-font-size-xl-default));
   }
 
   &.hggs-input--small {
-    height: var(
-      --input-height-small,
-      var(--hggs-space-vertical-medium-default)
-    );
+    height: var(--input-height-small, var(--hggs-space-vertical-default));
     padding: var(
       --input-padding-small,
-      var(--hggs-space-vertical-nano-default)
-        var(--hggs-space-horizontal-small-default)
+      var(--hggs-space-vertical-xxs-default)
+        var(--hggs-space-horizontal-sm-default)
     );
     font-size: var(--input-font-size-small, var(--hggs-font-size-default));
   }
 
   &::placeholder {
+    font-style: var(--input-placeholder-font-style, normal);
     color: var(
-      --input-color-placeholder,
+      --input-placeholder-color,
       var(--hggs-color-auxiliary-gray-004-default)
     );
   }

@@ -1,7 +1,7 @@
 .hggs-checkboxes {
   @extend .hggs-flex--center-column;
 
-  gap: var(--hggs-checkboxes-gap, var(--hggs-space-vertical-micro-default));
+  gap: var(--checkboxes-gap, var(--hggs-space-vertical-xs-default));
 }
 
 .hggs-checkbox {
@@ -14,11 +14,14 @@
     appearance: none;
     position: relative;
     display: inline-block;
-    width: var(--checkbox-size, var(--hggs-space-horizontal-medium-default));
-    height: var(--checkbox-size, var(--hggs-space-horizontal-medium-default));
+    width: var(--checkbox-size, var(--hggs-space-horizontal-md-default));
+    height: var(--checkbox-size, var(--hggs-space-horizontal-md-default));
     background: var(--checkbox-background, transparent);
     border: var(--checkbox-border, var(--hggs-border-default));
-    border-radius: var(--checkbox-radius, var(--hggs-border-radius-default));
+    border-radius: var(
+      --checkbox-border-radius,
+      var(--hggs-border-radius-default)
+    );
 
     &:hover {
       cursor: pointer;
@@ -61,9 +64,20 @@
   }
 
   & .hggs-label {
+    font-family: var(
+      --checkbox--label-font-family,
+      var(--hggs-font-family-default)
+    );
+    font-size: var(--checkbox--label-font-size, var(--hggs-font-size-default));
+    font-weight: var(
+      --checkbox--label-font-weight,
+      var(--hggs-font-weight-default)
+    );
+    font-style: var(--checkbox--label-font-style, normal);
+    color: var(--checkbox--label-color, var(--hggs-color-default));
     margin-left: var(
       --checkbox-margin-left,
-      var(--hggs-space-horizontal-small-default)
+      var(--hggs-space-horizontal-sm-default)
     );
     cursor: pointer;
     order: 2;

@@ -27,31 +27,31 @@
 }
 
 %hggs-icon-box-default {
-  filter: var(--icon-filter-quaternary, var(--hggs-filter-quinary-default));
+  filter: var(--icon-box-filter, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-box-primary {
-  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+  filter: var(--icon-box-filter-primary, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-box-secondary {
-  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+  filter: var(--icon-box-filter-secondary, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-box-tertiary {
-  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+  filter: var(--icon-box-filter-tertiary, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-box-quaternary {
-  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+  filter: var(--icon-box-filter-quaternary, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-box-quinary {
-  filter: var(--icon-filter-quaternary, var(--hggs-filter-quaternary-default));
+  filter: var(--icon-box-filter-quinary var(--hggs-filter-quaternary-default));
 }
 
 %hggs-icon-box-senary {
-  filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+  filter: var(--icon-box-filter-senary, var(--hggs-filter-quinary-default));
 }
 
 %hggs-icon-outline-default {
@@ -99,7 +99,7 @@
 %hggs-icon-box-small {
   padding: var(
     --icon-box-padding-small,
-    calc(var(--hggs-space-vertical-small-default) * 1.25)
+    calc(var(--hggs-space-vertical-sm-default) * 1.25)
   );
 
   & .hggs-icon {
@@ -110,7 +110,7 @@
 %hggs-icon-box-micro {
   padding: var(
     --icon-box-padding-micro,
-    calc(var(--hggs-space-vertical-micro-default) * 1.5)
+    calc(var(--hggs-space-vertical-xs-default) * 1.5)
   );
 
   & .hggs-icon {
@@ -210,7 +210,7 @@
 %hggs-icon-box {
   width: auto;
   height: auto;
-  padding: var(--icon-box-padding, var(--hggs-space-vertical-medium-default));
+  padding: var(--icon-box-padding, var(--hggs-space-vertical-default));
 
   & .hggs-icon {
     @extend %hggs-icon-box-default;
@@ -299,14 +299,14 @@
     font-family: var(--icon-label-font-family, var(--hggs-font-family-default));
     font-weight: var(
       --icon-label-font-weigth,
-      var(--hggs-font-weight-medium-default)
+      var(--hggs-font-weight-md-default)
     );
     font-size: var(--icon-label-font-size, var(--hggs-font-size-default));
     color: var(--icon-label-color, var(--hggs-color-quaternary-default));
     text-align: var(--icon-label-text-align, left);
     margin-left: var(
       --icon-label-margin-left,
-      var(--hggs-space-vertical-small-default)
+      var(--hggs-space-vertical-sm-default)
     );
     margin-top: auto;
     margin-bottom: auto;

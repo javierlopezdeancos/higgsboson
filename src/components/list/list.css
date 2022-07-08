@@ -1,11 +1,8 @@
 .hggs-list {
-  margin-left: var(
-    --list-margin-left,
-    var(--hggs-space-horizontal-small-default)
-  );
+  margin-left: var(--list-margin-left, var(--hggs-space-horizontal-sm-default));
   padding-left: var(
     --list-padding-left,
-    var(--hggs-space-horizontal-small-default)
+    var(--hggs-space-horizontal-sm-default)
   );
 
   & .hggs-list-item,
@@ -16,7 +13,7 @@
     color: var(--list-item-color, var(--hggs-color-default));
     margin-bottom: var(
       --list-item-margin-bottom,
-      var(--hggs-space-vertical-small-default)
+      var(--hggs-space-vertical-sm-default)
     );
   }
 
@@ -28,6 +25,10 @@
         counter(list-item)
       );
       color: var(--list-item-color-marker, var(--hggs-color-default));
+      font-family: var(
+        --list-item-font-family-marker,
+        var(--hggs-font-family-default)
+      );
       font-size: var(
         --list-item-font-size-marker,
         var(--hggs-font-size-default)

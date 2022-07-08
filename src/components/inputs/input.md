@@ -24,7 +24,6 @@
 --input-border-radius
 --input-box-shadow-focus
 --input-color-disabled
---input-color-placeholder
 --input-font-family
 --input-font-size
 --input-font-size-big
@@ -36,4 +35,6 @@
 --input-padding
 --input-padding-big
 --input-padding-small
+--input-placeholder-color
+--input-placeholder-font-style
 ```

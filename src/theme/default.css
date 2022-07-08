@@ -1,6 +1,10 @@
 :root {
+  /* COLORS */
+  /* Color generics */
   --hggs-color-white-default: #ffffff;
   --hggs-color-black-default: #000000;
+
+  /* Color Gray */
   --hggs-color-auxiliary-gray-001-default: #fffff2;
   --hggs-color-auxiliary-gray-002-default: #f2f2f2;
   --hggs-color-auxiliary-gray-003-default: #e6e6e6;
@@ -21,26 +25,18 @@
   --hggs-color-auxiliary-gray-018-default: #262626;
   --hggs-color-auxiliary-gray-019-default: #1a1a1a;
   --hggs-color-auxiliary-gray-020-default: #0d0d0d;
+
+  --hggs-filter-auxiliary-gray-008-default: brightness(0) saturate(100%)
+    invert(8%) sepia(18%) saturate(1214%) hue-rotate(194deg) brightness(95%)
+    contrast(91%);
+
   --hggs-color-primary-default: var(--hggs-color-auxiliary-gray-020-default);
   --hggs-color-secondary-default: var(--hggs-color-auxiliary-gray-017-default);
   --hggs-color-tertiary-default: var(--hggs-color-auxiliary-gray-014-default);
   --hggs-color-quaternary-default: var(--hggs-color-black-default);
   --hggs-color-quinary-default: var(--hggs-color-white-default);
   --hggs-color-senary-default: var(--hggs-color-auxiliary-gray-011-default);
-  --hggs-color-default: var(--hggs-color-quaternary-default);
-  --hggs-color-error-default: #ff0b0b;
-  --hggs-color-disabled-default: var(--hggs-color-auxiliary-gray-004-default);
-  --hgss-background-default: var(--hggs-color-quinary-default);
-  --hggs-color-background-selected-default: var(
-    --hggs-color-auxiliary-gray-003-default
-  );
-  --hggs-shadow-default: 0 1px 5px 0
-    var(--hggs-color-auxiliary-gray-006-default);
-  --hggs-shadow-primary-default: 0 0 7px 1px
-    var(--hggs-color-auxiliary-gray-007-default);
-  --hggs-filter-auxiliary-gray-008-default: brightness(0) saturate(100%)
-    invert(8%) sepia(18%) saturate(1214%) hue-rotate(194deg) brightness(95%)
-    contrast(91%);
+
   --hggs-filter-primary-default: brightness(0) saturate(100%) invert(0%)
     sepia(83%) saturate(3548%) hue-rotate(60deg) brightness(84%) contrast(90%);
   --hggs-filter-secondary-default: brightness(0) saturate(100%) invert(12%)
@@ -54,27 +50,54 @@
   --hggs-filter-senary-default: brightness(0) saturate(100%) invert(57%)
     sepia(0%) saturate(366%) hue-rotate(176deg) brightness(88%) contrast(95%);
   --hggs-filter-default: var(--hggs-filter-quaternary-default);
+
+  /* Color globals */
+  --hggs-color-default: var(--hggs-color-quaternary-default);
+  --hggs-color-error-default: #ff0b0b;
+  --hggs-color-disabled-default: var(--hggs-color-auxiliary-gray-004-default);
+  --hgss-color-background-default: var(--hggs-color-quinary-default);
+  --hggs-color-background-hover-default: var(
+    --hggs-color-auxiliary-gray-003-default
+  );
+
+  /* SHADOWS */
+  --hggs-shadow-default: 0 1px 5px 0
+    var(--hggs-color-auxiliary-gray-006-default);
+  --hggs-shadow-primary-default: 0 0 7px 1px
+    var(--hggs-color-auxiliary-gray-007-default);
+
+  /* FONT */
   --hggs-font-family-default: sans-serif;
-  --hggs-font-size-colossal-default: 38px;
-  --hggs-font-size-enormous-default: 32px;
-  --hggs-font-size-tera-default: 28px;
-  --hggs-font-size-mega-default: 24px;
-  --hggs-font-size-pico-default: 21px;
-  --hggs-font-size-big-default: 18px;
-  --hggs-font-size-medium-default: 16px;
+
+  /* Font sizes */
+  --hggs-font-size-xxxxxl-default: 38px;
+  --hggs-font-size-xxxxl-default: 32px;
+  --hggs-font-size-xxxl-default: 28px;
+  --hggs-font-size-xxl-default: 24px;
+  --hggs-font-size-xl-default: 21px;
+  --hggs-font-size-lg-default: 18px;
+  --hggs-font-size-md-default: 16px;
   --hggs-font-size-default: 14px;
-  --hggs-font-size-small-default: 12px;
-  --hggs-font-size-micro-default: 10px;
-  --hggs-font-size-nano-default: 8px;
+  --hggs-font-size-sm-default: 12px;
+  --hggs-font-size-xs-default: 10px;
+  --hggs-font-size-xxs-default: 8px;
+
+  /* Font weights */
   --hggs-font-weight-default: 400;
-  --hggs-font-weight-medium-default: 500;
-  --hggs-font-weight-bold-default: 700;
-  --hggs-font-weight-very-bold-default: 900;
+  --hggs-font-weight-md-default: 500;
+  --hggs-font-weight-lg-default: 700;
+  --hggs-font-weight-xl-default: 900;
+
+  /* Font letter spacings */
   --hggs-font-letter-spacing-default: 1px;
   --hggs-font-letter-spacing-small-default: 0.6px;
+
+  /* Font line heights */
   --hggs-line-height-default: 20px;
-  --hggs-line-height-small-default: 15px;
-  --hggs-line-height-micro-default: 10px;
+  --hggs-line-height-sm-default: 15px;
+  --hggs-line-height-xs-default: 10px;
+
+  /* BORDERS */
   --hggs-border-radius-big-default: 0px;
   --hggs-border-radius-default: 0px;
   --hggs-border-size-default: 1px;
@@ -141,46 +164,61 @@
     var(--hggs-border-type-default) var(--hggs-color-auxiliary-gray-005-default);
   --hggs-border-invalid-default: var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-error-default);
-  --hggs-space-horizontal-medium-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
-  --hggs-space-horizontal-macro-default: calc(
-    var(--hggs-space-vertical-medium-default) * 4
+
+  /* SPACES */
+  /* Horizontal */
+  --hggs-space-horizontal-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-horizontal-lg-default: calc(
+    var(--hggs-space-horizontal-default) * 4
   );
-  --hggs-space-horizontal-big-default: calc(
-    var(--hggs-space-horizontal-medium-default) * 2
+  --hggs-space-horizontal-md-default: calc(
+    var(--hggs-space-horizontal-default) * 2
   );
-  --hggs-space-horizontal-small-default: calc(
-    var(--hggs-space-horizontal-medium-default) / 2
+  --hggs-space-horizontal-sm-default: calc(
+    var(--hggs-space-horizontal-default) / 2
   );
-  --hggs-space-horizontal-micro-default: calc(
-    var(--hggs-space-horizontal-medium-default) / 4
+  --hggs-space-horizontal-xs-default: calc(
+    var(--hggs-space-horizontal-default) / 4
   );
-  --hggs-space-horizontal-nano-default: calc(
-    var(--hggs-space-horizontal-medium-default) / 6
+  --hggs-space-horizontal-xxs-default: calc(
+    var(--hggs-space-horizontal-default) / 6
   );
-  --hggs-space-vertical-medium-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
-  --hggs-space-vertical-macro-default: calc(
-    var(--hggs-space-vertical-medium-default) * 4
+
+  /* Vertical */
+  --hggs-space-vertical-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-vertical-lg-default: calc(
+    var(--hggs-space-vertical-default) * 4
   );
-  --hggs-space-vertical-big-default: calc(
-    var(--hggs-space-vertical-medium-default) * 2
+  --hggs-space-vertical-md-default: calc(
+    var(--hggs-space-vertical-default) * 2
   );
-  --hggs-space-vertical-small-default: calc(
-    var(--hggs-space-vertical-medium-default) / 2
+  --hggs-space-vertical-sm-default: calc(
+    var(--hggs-space-vertical-default) / 2
   );
-  --hggs-space-vertical-micro-default: calc(
-    var(--hggs-space-vertical-medium-default) / 4
+  --hggs-space-vertical-xs-default: calc(
+    var(--hggs-space-vertical-default) / 4
   );
-  --hggs-space-vertical-nano-default: calc(
-    var(--hggs-space-vertical-medium-default) / 6
+  --hggs-space-vertical-xxs-default: calc(
+    var(--hggs-space-vertical-default) / 6
   );
+
+  /* LAYERS */
   --hggs-layer-10-default: 11;
   --hggs-layer-0-default: 1;
+
+  /* ANIMATIONS */
   --hggs-animation-ease-default: 200ms ease;
   --hggs-animation-ease-all-default: all var(--hggs-animation-ease-default);
+
+  /* TRANSFORMS */
   --hggs-transform-escale-default: scale(1.05);
   --hggs-transform-escale-small-default: scale(1.01);
   --hggs-transform-rotate-translate-default: rotate(-45deg) translate(0%, 0%);
+
+  /* TRANSITIONS */
   --hggs-transition-ease-default: 0.3s ease;
+
+  /* ICONS */
   --hggs-icon-size-micro-default: 15px;
   --hggs-icon-size-small-default: 20px;
   --hggs-icon-size-default: 25px;

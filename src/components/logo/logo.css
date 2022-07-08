@@ -11,10 +11,16 @@
 
   &.hggs-logo--black {
     background: var(--logo-url-black, url("./assets/svg/logo-black.svg"))
-    no-repeat;
+      no-repeat;
   }
 
   &.hggs-logo--hggs-color-primary {
     fill: var(--icon-color-primary, --icon-color-primary-default);
   }
+
+  &.hggs-logo--small {
+    width: var(--logo-width-small, 100px);
+    height: var(--logo-height-small, 100px);
+  }
 }
+

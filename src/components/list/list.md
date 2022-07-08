@@ -21,6 +21,7 @@
 --list-item-color-marker
 --list-item-content-marker
 --list-item-font-family
+--list-item-font-family-marker
 --list-item-font-size
 --list-item-font-size-marker
 --list-item-font-weight
