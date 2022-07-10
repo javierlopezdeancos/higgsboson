@@ -50,7 +50,7 @@
     cursor: pointer;
     background-color: var(
       --dropdown-options-selected-background,
-      var(--hgss-color-background-default)
+      var(--hggs-color-background-default)
     );
     padding-left: var(
       --dropdown-options-selected-padding-left,
@@ -130,7 +130,7 @@
     padding: 0;
     background-color: var(
       --dropdown-options-background,
-      var(--hgss-color-background-default)
+      var(--hggs-color-background-default)
     );
     box-sizing: border-box;
     border: var(--dropdown-options-border, var(--hggs-border-tertiary-default));

@@ -127,14 +127,22 @@
   --hggs-color-senary-005: #633606;
   --hggs-color-senary-006: #190d01;
 
-  --hggs-filter-senary: brightness(0) saturate(100%) invert(6%) sepia(14%) saturate(5969%) hue-rotate(10deg) brightness(111%) contrast(98%);
-  --hggs-filter-senary-006: brightness(0) saturate(100%) invert(7%) sepia(86%) saturate(349%) hue-rotate(349deg) brightness(98%) contrast(106%);
-  --hggs-filter-senary-005: brightness(0) saturate(100%) invert(21%) sepia(21%) saturate(2482%) hue-rotate(356deg) brightness(102%) contrast(97%);
-  --hggs-filter-senary-004: brightness(0) saturate(100%) invert(33%) sepia(72%) saturate(785%) hue-rotate(356deg) brightness(96%) contrast(96%);
-  --hggs-filter-senary-003: brightness(0) saturate(100%) invert(63%) sepia(90%) saturate(2879%) hue-rotate(355deg) brightness(91%) contrast(96%);
-  --hggs-filter-senary-002:brightness(0) saturate(100%) invert(78%) sepia(38%) saturate(3433%) hue-rotate(332deg) brightness(103%) contrast(91%);
-  --hggs-filter-senary-001: brightness(0) saturate(100%) invert(84%) sepia(48%) saturate(755%) hue-rotate(311deg) brightness(109%) contrast(94%);
-  --hggs-filter-senary-000: brightness(0) saturate(100%) invert(82%) sepia(29%) saturate(350%) hue-rotate(335deg) brightness(107%) contrast(97%);
+  --hggs-filter-senary: brightness(0) saturate(100%) invert(6%) sepia(14%) saturate(5969%) hue-rotate(10deg)
+    brightness(111%) contrast(98%);
+  --hggs-filter-senary-006: brightness(0) saturate(100%) invert(7%) sepia(86%) saturate(349%) hue-rotate(349deg)
+    brightness(98%) contrast(106%);
+  --hggs-filter-senary-005: brightness(0) saturate(100%) invert(21%) sepia(21%) saturate(2482%) hue-rotate(356deg)
+    brightness(102%) contrast(97%);
+  --hggs-filter-senary-004: brightness(0) saturate(100%) invert(33%) sepia(72%) saturate(785%) hue-rotate(356deg)
+    brightness(96%) contrast(96%);
+  --hggs-filter-senary-003: brightness(0) saturate(100%) invert(63%) sepia(90%) saturate(2879%) hue-rotate(355deg)
+    brightness(91%) contrast(96%);
+  --hggs-filter-senary-002:brightness(0) saturate(100%) invert(78%) sepia(38%) saturate(3433%) hue-rotate(332deg)
+    brightness(103%) contrast(91%);
+  --hggs-filter-senary-001: brightness(0) saturate(100%) invert(84%) sepia(48%) saturate(755%) hue-rotate(311deg)
+    brightness(109%) contrast(94%);
+  --hggs-filter-senary-000: brightness(0) saturate(100%) invert(82%) sepia(29%) saturate(350%) hue-rotate(335deg)
+    brightness(107%) contrast(97%);
 
   /* Color globals */
   --hggs-color: var(--hggs-color-senary);

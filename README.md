@@ -171,42 +171,12 @@ Default theme API. Theme default variables as fallback to each theme component A
 ###### Default theme variables API
 
 ```
---hggs-animation-ease-all-default
---hggs-animation-ease-default
---hggs-border-auxiliary-gray-006-default
---hggs-border-auxiliary-gray-008-default
---hggs-border-auxiliary-gray-009-default
---hggs-border-auxiliary-gray-010-default
---hggs-border-auxiliary-gray-012-default
---hggs-border-auxiliary-gray-013-default
---hggs-border-auxiliary-gray-015-default
---hggs-border-color-default
---hggs-border-color-primary-default
---hggs-border-color-quaternary-default
---hggs-border-color-quinary-default
---hggs-border-color-secondary-default
---hggs-border-color-senary-default
---hggs-border-color-tertiary-default
---hggs-border-default
---hggs-border-disabled-default
---hggs-border-error-default
---hggs-border-invalid-default
---hggs-border-primary-big-default
---hggs-border-primary-default
---hggs-border-quaternary-default
---hggs-border-quinary-colossal-default
---hggs-border-quinary-default
---hggs-border-radius-big-default
---hggs-border-radius-default
---hggs-border-secondary-default
---hggs-border-secondary-gross-default
---hggs-border-senary-default
---hggs-border-size-big-default
---hggs-border-size-colossal-default
---hggs-border-size-default
---hggs-border-size-medium-default
---hggs-border-tertiary-default
---hggs-border-type-default
+/* COLORS */
+/* Generic colors */
+--hggs-color-white-default
+--hggs-color-black-default
+
+/* Gray colors */
 --hggs-color-auxiliary-gray-001-default
 --hggs-color-auxiliary-gray-002-default
 --hggs-color-auxiliary-gray-003-default
@@ -227,43 +197,147 @@ Default theme API. Theme default variables as fallback to each theme component A
 --hggs-color-auxiliary-gray-018-default
 --hggs-color-auxiliary-gray-019-default
 --hggs-color-auxiliary-gray-020-default
---hggs-color-background-hover-default
---hggs-color-black-default
---hggs-color-default
---hggs-color-disabled-default
---hggs-color-primary-default
---hggs-color-quaternary-default
---hggs-color-quinary-default
---hggs-color-secondary-default
---hggs-color-senary-default
---hggs-color-tertiary-default
---hggs-color-white-default
+
 --hggs-filter-auxiliary-gray-008-default
---hggs-filter-default
+
+/* Main colors */
+--hggs-color-primary-default
+--hggs-color-primary-hover-default
+--hggs-color-secondary-default
+--hggs-color-secondary-hover-default
+--hggs-color-tertiary-default
+--hggs-color-tertiary-hover-default
+--hggs-color-quaternary-default
+--hggs-color-quaternary-hover-default
+--hggs-color-quinary-default
+--hggs-color-quinary-hover-default
+--hggs-color-senary-default
+--hggs-color-senary-hover-default
+
 --hggs-filter-primary-default
+--hggs-filter-secondary-default
+--hggs-filter-tertiary-default
 --hggs-filter-quaternary-default
 --hggs-filter-quinary-default
---hggs-filter-secondary-default
 --hggs-filter-senary-default
---hggs-filter-tertiary-default
+--hggs-filter-default
+
+/* General colors */
+--hggs-color-default
+--hggs-color-error-default
+--hggs-color-disabled-default
+--hggs-color-background-default
+--hggs-color-background-hover-default
+
+/* SHADOWS */
+--hggs-shadow-default
+--hggs-shadow-primary-default
+
+/* FONT */
 --hggs-font-family-default
---hggs-font-letter-spacing-default
---hggs-font-letter-spacing-small-default
---hggs-font-size-lg-default
+
+/* Font sizes */
 --hggs-font-size-xxxxxl-default
---hggs-font-size-default
 --hggs-font-size-xxxxl-default
---hggs-font-size-md-default
+--hggs-font-size-xxxl-default
 --hggs-font-size-xxl-default
+--hggs-font-size-xl-default
+--hggs-font-size-lg-default
+--hggs-font-size-md-default
+--hggs-font-size-default
+--hggs-font-size-sm-default
 --hggs-font-size-xs-default
 --hggs-font-size-xxs-default
---hggs-font-size-xl-default
---hggs-font-size-sm-default
---hggs-font-size-xxxl-default
---hggs-font-weight-lg-default
+
+/* Font weights */
 --hggs-font-weight-default
 --hggs-font-weight-md-default
+--hggs-font-weight-lg-default
 --hggs-font-weight-xl-default
+
+/* Font letter spacings */
+--hggs-font-letter-spacing-default
+--hggs-font-letter-spacing-small-default
+
+/* Font line heights */
+--hggs-line-height-default
+--hggs-line-height-sm-default
+--hggs-line-height-xs-default
+
+/* BORDERS */
+--hggs-border-radius-big-default
+--hggs-border-radius-default
+--hggs-border-size-default
+--hggs-border-size-md-default
+--hggs-border-size-lg-default
+--hggs-border-size-xl-default
+--hggs-border-type-default
+--hggs-border-color-default
+--hggs-border-color-primary-default:
+--hggs-border-color-secondary-default
+--hggs-border-color-tertiary-default
+--hggs-border-color-quaternary-default
+--hggs-border-color-quinary-default
+--hggs-border-color-senary-default
+--hggs-border-default
+--hggs-border-error-default
+--hggs-border-auxiliary-gray-006-default
+--hggs-border-auxiliary-gray-008-default
+--hggs-border-auxiliary-gray-009-default
+--hggs-border-auxiliary-gray-010-default
+--hggs-border-auxiliary-gray-012-default
+--hggs-border-auxiliary-gray-013-default
+--hggs-border-auxiliary-gray-015-default
+--hggs-border-primary-default
+--hggs-border-primary-big-default
+--hggs-border-secondary-default
+--hggs-border-secondary-gross-default
+--hggs-border-tertiary-default
+--hggs-border-quaternary-default
+--hggs-border-quaternary-xl-default
+--hggs-border-quinary-default
+--hggs-border-senary-default
+--hggs-border-focus-default
+--hggs-border-disabled-default
+--hggs-border-invalid-default
+
+/* SPACES */
+/* Horizontal */
+--hggs-space-horizontal-default
+--hggs-space-horizontal-lg-default
+--hggs-space-horizontal-md-default
+--hggs-space-horizontal-sm-default
+--hggs-space-horizontal-xs-default
+--hggs-space-horizontal-xxs-default
+
+/* Vertical */
+--hggs-space-vertical-default
+--hggs-space-vertical-lg-default
+--hggs-space-vertical-md-default
+--hggs-space-vertical-sm-default
+--hggs-space-vertical-xs-default
+--hggs-space-vertical-xxs-default
+
+/* LAYERS */
+--hggs-layer-10-default
+--hggs-layer-0-default
+
+/* ANIMATIONS */
+--hggs-animation-ease-default
+--hggs-animation-ease-all-default
+
+/* TRANSFORMS */
+--hggs-transform-escale-default
+--hggs-transform-escale-small-default
+--hggs-transform-rotate-translate-default
+
+/* TRANSITIONS */
+--hggs-transition-ease-default
+
+/* ICONS */
+--hggs-icon-size-micro-default
+--hggs-icon-size-small-default
+--hggs-icon-size-default
 --hggs-icon-chevron-down-default
 --hggs-icon-close-default
 --hggs-icon-edit-default
@@ -271,34 +345,12 @@ Default theme API. Theme default variables as fallback to each theme component A
 --hggs-icon-log-out-default
 --hggs-icon-plus-default
 --hggs-icon-question-default
---hggs-icon-size-default
---hggs-icon-size-micro-default
---hggs-icon-size-small-default
 --hggs-icon-user-default
---hggs-layer-0-default
---hggs-layer-10-default
---hggs-line-height-default
---hggs-line-height-xs-default
---hggs-line-height-sm-default
---hggs-shadow-default
---hggs-shadow-primary-default
---hggs-space-horizontal-md-default
---hggs-space-horizontal-lg-default
---hggs-space-horizontal-md-default
---hggs-space-horizontal-xs-default
---hggs-space-horizontal-xxs-default
---hggs-space-horizontal-sm-default
---hggs-space-vertical-md-default
---hggs-space-vertical-lg-default
---hggs-space-vertical-default
---hggs-space-vertical-xs-default
---hggs-space-vertical-xxs-default
---hggs-space-vertical-sm-default
---hggs-transform-escale-default
---hggs-transform-escale-small-default
---hggs-transform-rotate-translate-default
---hggs-transition-ease-default
---hgss-color-background-default
+
+/* LOGO */
+--hggs-logo-default
+--hggs-logo-dark-default
+--hggs-logo-light-default
 ```
 
 The default theme not need any custom rule scoped by selector to any component.

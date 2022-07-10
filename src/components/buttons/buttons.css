@@ -152,7 +152,7 @@
 %hggs-button-hover-primary {
   background-color: var(
     --button-background-primary-hover,
-    var(--hggs-color-default)
+    var(--hggs-color-primary-hover-default)
   );
   box-shadow: var(
    --button-box-shadow-primary-hover,
@@ -180,7 +180,7 @@
 %hggs-button-hover-secondary {
   background-color: var(
     --button-background-secondary-hover,
-    var(--hggs-color-primary-default)
+    var(--hggs-color-secondary-hover-default)
   );
   box-shadow: var(
     --button-box-shadow-secondary-hover,
@@ -208,7 +208,7 @@
 %hggs-button-hover-tertiary {
   background-color: var(
     --button-background-tertiary-hover,
-    var(--hggs-color-secondary-default)
+    var(--hggs-color-tertiary-hover-default)
   );
   box-shadow: var(
     --button-box-shadow-tertiary-hover,
@@ -232,7 +232,7 @@
 %hggs-button-hover-quaternary {
   background-color: var(
     --button-background-quaternary-hover,
-    var(--hggs-color-quaternary-default)
+    var(--hggs-color-quaternary-hover-default)
   );
   box-shadow: var(
     --button-box-shadow-quaternary-hover,
@@ -256,7 +256,7 @@
 %hggs-button-hover-quinary {
   background-color: var(
     --button-background-quinary-hover,
-    var(--hggs-color-quinary-default)
+    var(--hggs-color-quinary-hover-default)
   );
   box-shadow: var(
     --button-box-shadow-quinary-hover,
@@ -283,7 +283,7 @@
 %hggs-button-hover-senary {
   background-color: var(
     --button-background-senary-hover,
-    var(--hggs-color-tertiary-default)
+    var(--hggs-color-senary-hover-default)
   );
   box-shadow: var(
     --button-box-shadow-senary-hover,
@@ -1116,9 +1116,7 @@
   &.hggs-button--big {
     padding: var(
       --button-padding-big,
-      calc(var(--hggs-space-vertical-default))
-        var(--hggs-space-horizontal-lg-default)
-    );
+      calc(var(--hggs-space-vertical-default) * 1.5) calc(var(--hggs-space-horizontal-lg-default) * 2));
     font-size: var(
       --button-font-size-extra-medium,
       var(--hggs-font-size-xxl-default)
