@@ -19,7 +19,7 @@
       & ~ span:before {
         border: var(
           --radio-inside-border-checked,
-          var(--hggs-border-quinary-colossal-default)
+          var(--hggs-border-quaternary-xl-default)
         );
       }
     }
@@ -67,7 +67,7 @@
     content: "";
     background-color: var(
       --radio-inside-background-color,
-      var(--hgss-color-background-default)
+      var(--hggs-color-background-default)
     );
     border: var(--radio-inside-border-bold, var(--hggs-border-default));
     border-radius: 100%;

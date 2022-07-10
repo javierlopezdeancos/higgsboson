@@ -14,7 +14,7 @@
   position: relative;
   background-color: var(
     --dialog-background-color,
-    var(--hgss-color-background-default)
+    var(--hggs-color-background-default)
   );
   color: var(--dialog-color, var(--hggs-color-default));
   text-align: var(--dialog-text-align, left);

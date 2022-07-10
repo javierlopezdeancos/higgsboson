@@ -26,3 +26,6 @@ const getClasses = (classes) =>
 
 const getClassesIf = (condition, className, classes) =>
   condition ? classes + " " + className : classes;
+
+const isDarkTheme = () =>
+  window.matchMedia("(prefers-color-scheme: dark)").matches;

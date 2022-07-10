@@ -1,19 +1,27 @@
+const darkTheme = isDarkTheme(); // we need inject the dom script before
+
 const articleStyles = ["width: 100%", "margin-bottom: 30px"];
 
 const articleQuinaryStyles = [
   "margin-bottom: 30px",
   "width: 100%",
-  "background: black",
+  `background: ${darkTheme ? "rgba(100,100,100,0.8)" : "dark"}`,
   "padding: 0 10px 20px 10px",
 ];
 
 const headerStyles = ["margin-bottom: 20px", "margin-top: 0"];
 
-const headerQuinaryStyles = ["margin-bottom: 20px", "color: white"];
+const headerQuinaryStyles = [
+  "margin-bottom: 20px",
+  "color: var(--hggs-color-background, var(--hggs-color-background-default))",
+];
 
 const headerWithSubtitleStyles = ["margin-bottom: 0", "margin-top: 0"];
 
-const headerWithSubtitleQuinaryStyles = ["margin-bottom: 0", "color: white"];
+const headerWithSubtitleQuinaryStyles = [
+  "margin-bottom: 0",
+  "color: var(--hggs-color-background, var(--hggs-color-background-default))",
+];
 
 const subHeaderStyles = [
   "margin-top: 0",
@@ -25,7 +33,7 @@ const subHeaderQuinaryStyles = [
   "margin-top: 0",
   "margin-bottom: 20px",
   "margin-left: 20px;",
-  "color: white",
+  "color: var(--hggs-color-background, var(--hggs-color-background-default))",
 ];
 
 const subHeaderWithChildStyles = [
@@ -50,7 +58,7 @@ const bigGrayBoxStyles = [
   "width: 100%",
   "padding: 30px 30px 30px 30px",
   "margin-bottom: 20px",
-  "background: #fbfbfb",
+  "background: rgba(100,100,100,0.2)",
 ];
 
 const bigGrayBoxWithHeightStyles = [
@@ -58,26 +66,26 @@ const bigGrayBoxWithHeightStyles = [
   "height: 600px",
   "padding: 30px 30px 30px 30px",
   "margin-bottom: 20px",
-  "background: #fbfbfb",
+  "background: rgba(100,100,100,0.2)",
 ];
 
 const smallLightGrayBoxWithHeightStyles = [
   "height: 60px",
-  "background: #e3e3e3",
+  "background: rgba(100,100,100,0.8)",
 ];
 
 const smallDarkGrayBoxWithHeightStyles = [
   "height: 60px",
-  "background: #c3c3c3",
+  "background: rgba(100,100,100,0.6)",
 ];
 
 const smallDarkerGrayBoxWithHeightStyles = [
   "height: 60px",
-  "background: #afafaf",
+  "background: rgba(100,100,100,0.4)",
 ];
 
 const grayBoxStyles = [
-  "background: #e4e4e4",
+  "background: rgba(100,100,100,0.2)",
   "font-size: 40px",
   "min-width: 200px",
   "text-align: center",
@@ -96,6 +104,6 @@ const inlineMarginLeftWrapQuinaryStyles = [
 
 const wrapperQuinaryStyles = [
   "display: inline-block",
-  "background: #000",
+  `background: ${darkTheme ? "rgba(100,100,100,0.8)" : "dark"}`,
   "padding: 10px",
 ];

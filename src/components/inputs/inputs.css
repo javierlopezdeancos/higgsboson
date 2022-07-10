@@ -10,6 +10,7 @@
   );
   font-family: var(--input-font-family, var(--hggs-font-family-default));
   font-size: var(--input-font-size, var(--hggs-font-size-lg-default));
+  color: var(--input-color, var(--hggs-color-default));
   box-sizing: border-box;
   background: transparent;
 

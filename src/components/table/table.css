@@ -16,12 +16,12 @@
 .hggs-table-wrapper {
   width: 100%;
   overflow-x: auto;
-  border: var(--table-wrapper-border, none);
+  border: var(--table-wrapper-border, var(--hggs-border-default));
   border-radius: var(
     --table-wrapper-border-radius,
     calc(var(--hggs-border-radius-default) / 2)
   );
-  box-shadow: var(--table-wrapper-box-shadow, var(--hggs-shadow-default));
+  box-shadow: var(--table-wrapper-box-shadow, none);
 
   & .hggs-table {
     width: 100%;

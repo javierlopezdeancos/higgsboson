@@ -2,9 +2,9 @@
   width: 100%;
   height: auto;
   min-height: var(--box-min-height, 100px);
-  background: var(--box-background, var(--hggs-color-white-default));
-  box-shadow: var(--box-box-shadow, var(--hggs-shadow-default));
-  border: var(--box-border, none);
+  background: var(--box-background, var(--hggs-color-background-default));
+  box-shadow: var(--box-box-shadow, none);
+  border: var(--box-border, var(--hggs-border-default));
   margin: var(--box-margin, var(--hggs-space-vertical-default) 0);
   padding: var(
     --box-padding,
@@ -47,7 +47,7 @@
   &.hggs-box--primary {
     background: var(
       --box-background-primary,
-      var(--hggs-color-auxiliary-gray-004-default)
+      var(--hggs-color-auxiliary-gray-002-default)
     );
     border: var(
       --box-border-primary,
