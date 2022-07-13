@@ -5,7 +5,7 @@ const articleStyles = ["width: 100%", "margin-bottom: 30px"];
 const articleQuinaryStyles = [
   "margin-bottom: 30px",
   "width: 100%",
-  `background: ${darkTheme ? "rgba(100,100,100,0.8)" : "dark"}`,
+  `background: ${darkTheme ? "rgba(100,100,100,0.8)" : "black"}`,
   "padding: 0 10px 20px 10px",
 ];
 
