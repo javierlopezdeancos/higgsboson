@@ -177,28 +177,28 @@ Default theme API. Theme default variables as fallback to each theme component A
 --hggs-color-black-default
 
 /* Gray colors */
---hggs-color-auxiliary-gray-001-default
---hggs-color-auxiliary-gray-002-default
---hggs-color-auxiliary-gray-003-default
---hggs-color-auxiliary-gray-004-default
---hggs-color-auxiliary-gray-005-default
---hggs-color-auxiliary-gray-006-default
---hggs-color-auxiliary-gray-007-default
---hggs-color-auxiliary-gray-008-default
---hggs-color-auxiliary-gray-009-default
---hggs-color-auxiliary-gray-010-default
---hggs-color-auxiliary-gray-011-default
---hggs-color-auxiliary-gray-012-default
---hggs-color-auxiliary-gray-013-default
---hggs-color-auxiliary-gray-014-default
---hggs-color-auxiliary-gray-015-default
---hggs-color-auxiliary-gray-016-default
---hggs-color-auxiliary-gray-017-default
---hggs-color-auxiliary-gray-018-default
---hggs-color-auxiliary-gray-019-default
---hggs-color-auxiliary-gray-020-default
+--hggs-color-gray-001-default
+--hggs-color-gray-002-default
+--hggs-color-gray-003-default
+--hggs-color-gray-004-default
+--hggs-color-gray-005-default
+--hggs-color-gray-006-default
+--hggs-color-gray-007-default
+--hggs-color-gray-008-default
+--hggs-color-gray-009-default
+--hggs-color-gray-010-default
+--hggs-color-gray-011-default
+--hggs-color-gray-012-default
+--hggs-color-gray-013-default
+--hggs-color-gray-014-default
+--hggs-color-gray-015-default
+--hggs-color-gray-016-default
+--hggs-color-gray-017-default
+--hggs-color-gray-018-default
+--hggs-color-gray-019-default
+--hggs-color-gray-020-default
 
---hggs-filter-auxiliary-gray-008-default
+--hggs-filter-gray-008-default
 
 /* Main colors */
 --hggs-color-primary-default
@@ -234,20 +234,24 @@ Default theme API. Theme default variables as fallback to each theme component A
 --hggs-shadow-primary-default
 
 /* FONT */
+/* Font families */
 --hggs-font-family-default
 
+/* Font colors */
+--hggs-font-color
+
 /* Font sizes */
---hggs-font-size-xxxxxl-default
---hggs-font-size-xxxxl-default
---hggs-font-size-xxxl-default
---hggs-font-size-xxl-default
+--hggs-font-size-5xl-default
+--hggs-font-size-4xl-default
+--hggs-font-size-3xl-default
+--hggs-font-size-2xl-default
 --hggs-font-size-xl-default
 --hggs-font-size-lg-default
 --hggs-font-size-md-default
 --hggs-font-size-default
 --hggs-font-size-sm-default
 --hggs-font-size-xs-default
---hggs-font-size-xxs-default
+--hggs-font-size-2xs-default
 
 /* Font weights */
 --hggs-font-weight-default
@@ -257,7 +261,7 @@ Default theme API. Theme default variables as fallback to each theme component A
 
 /* Font letter spacings */
 --hggs-font-letter-spacing-default
---hggs-font-letter-spacing-small-default
+--hggs-font-letter-spacing-sm-default
 
 /* Font line heights */
 --hggs-line-height-default
@@ -268,17 +272,17 @@ Default theme API. Theme default variables as fallback to each theme component A
 --hggs-border-radius-big-default
 --hggs-border-radius-default
 --hggs-border-size-default
---hggs-border-size-md-default
+--hggs-border-size-lg-default
 --hggs-border-size-lg-default
 --hggs-border-size-xl-default
 --hggs-border-type-default
 --hggs-border-color-default
---hggs-border-color-primary-default:
---hggs-border-color-secondary-default
---hggs-border-color-tertiary-default
---hggs-border-color-quaternary-default
---hggs-border-color-quinary-default
---hggs-border-color-senary-default
+--hggs-color-border-primary-default:
+--hggs-color-border-secondary-default
+--hggs-color-border-tertiary-default
+--hggs-color-border-quaternary-default
+--hggs-color-border-quinary-default
+--hggs-color-border-senary-default
 --hggs-border-default
 --hggs-border-error-default
 --hggs-border-auxiliary-gray-006-default
@@ -303,20 +307,20 @@ Default theme API. Theme default variables as fallback to each theme component A
 
 /* SPACES */
 /* Horizontal */
---hggs-space-horizontal-default
---hggs-space-horizontal-lg-default
---hggs-space-horizontal-md-default
---hggs-space-horizontal-sm-default
---hggs-space-horizontal-xs-default
---hggs-space-horizontal-xxs-default
+--hggs-space-default
+--hggs-space-lg-default
+--hggs-space-md-default
+--hggs-space-sm-default
+--hggs-space-xs-default
+--hggs-space-2xs-default
 
 /* Vertical */
---hggs-space-vertical-default
---hggs-space-vertical-lg-default
---hggs-space-vertical-md-default
---hggs-space-vertical-sm-default
---hggs-space-vertical-xs-default
---hggs-space-vertical-xxs-default
+--hggs-space-default
+--hggs-space-lg-default
+--hggs-space-md-default
+--hggs-space-sm-default
+--hggs-space-xs-default
+--hggs-space-2xs-default
 
 /* LAYERS */
 --hggs-layer-10-default

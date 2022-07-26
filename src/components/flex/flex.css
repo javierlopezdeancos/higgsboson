@@ -100,15 +100,15 @@
   &.hggs-flex--top-left-column,
   &.hggs-flex--top-right-column {
     &.hggs-flex--gap-small {
-      gap: var(--hggs-flex-column-gap-small, --hggs-space-vertical-small);
+      gap: var(--hggs-flex-column-gap-small, --hggs-space-vertical-sm);
     }
 
     &.hggs-flex--gap-medium {
-      gap: var(--hggs-flex-column-gap-medium, --hggs-space-vertical-medium);
+      gap: var(--hggs-flex-column-gap-medium, --hggs-space-vertical);
     }
 
     &.hggs-flex--gap-big {
-      gap: var(--hggs-flex-column-gap-big, --hggs-space-vertical-big);
+      gap: var(--hggs-flex-column-gap-big, --hggs-space-vertical-md);
     }
   }
 
@@ -120,15 +120,15 @@
   &.hggs-flex--top-left-row,
   &.hggs-flex--space-between-center-row {
     &.hggs-flex--gap-small {
-      gap: var(--hggs-flex-row-gap-small, --hggs-space-horizontal-small);
+      gap: var(--hggs-flex-row-gap-small, --hggs-space-horizontal-sm);
     }
 
     &.hggs-flex--gap-medium {
-      gap: var(--hggs-flex-row-gap-medium, --hggs-space-horizontal-medium);
+      gap: var(--hggs-flex-row-gap-medium, --hggs-space-horizontal);
     }
 
     &.hggs-flex--gap-big {
-      gap: var(--hggs-flex-row-gap-big, --hggs-space-horizontal-big);
+      gap: var(--hggs-flex-row-gap-big, --hggs-space-horizontal-md);
     }
   }
 }

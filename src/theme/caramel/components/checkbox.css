@@ -1,7 +1,7 @@
 .hggs-checkboxes,
 .hggs-checkbox {
   --checkboxes-gap: var(--hggs-form-space-base);
-  --checkbox-size: var(--hggs-form-input-height-small);
+  --checkbox-size: var(--hggs-form-input-height-sm);
   --checkbox-background: transparent;
   --checkbox-border-radius: 0;
   --checkbox-border: var(--hggs-form-input-border);

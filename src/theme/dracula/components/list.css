@@ -3,11 +3,11 @@
   --list-item-font-weight: var(--hggs-font-weight);
   --list-item-color: var(--hggs-color);
   --list-item-font-size: var(--hggs-font-size);
-  --list-item-margin-bottom: var(--hggs-space-vertical-micro);
-  --list-padding-left: var(--hggs-space-horizontal-big);
-  --list-marging-left: var(--hggs-space-horizontal-small);
+  --list-item-margin-bottom: var(--hggs-space-vertical-xs);
+  --list-padding-left: var(--hggs-space-horizontal-md);
+  --list-marging-left: var(--hggs-space-horizontal-sm);
   --list-item-content-marker: counter(list-item) " - ";
   --list-item-color-marker: var(--hggs-color);
   --list-item-font-size-marker: var(--hggs-font-size-big);
-  --list-item-font-weight-marker: var(--hggs-font-weight-low-bold);
+  --list-item-font-weight-marker: var(--hggs-font-weight-lg);
 }

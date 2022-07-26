@@ -1,6 +1,6 @@
 %hggs-table-cell {
   display: table-cell;
-  padding: var(--table-cell-padding, var(--hggs-space-vertical-sm-default));
+  padding: var(--table-cell-padding, var(--hggs-space-sm-default));
   text-align: var(--table-cell-text-align, left);
   font-family: var(--table-cell-font-family, var(--hggs-font-family-default));
   font-weight: var(--table-cell-font-weight, var(--hggs-font-weight-default));
@@ -54,7 +54,7 @@
 
       padding: var(
         --table-cell-head-padding,
-        var(--hggs-space-vertical-default) var(--hggs-space-vertical-default)
+        var(--hggs-space-default) var(--hggs-space-default)
       );
       color: var(--table-cell-head-color, var(--hggs-app-color-default));
       font-size: var(
@@ -67,7 +67,7 @@
       );
       background: var(
         --table-cell-head-background,
-        --hggs-color-auxiliary-gray-000-default
+        --hggs-color-gray-000-default
       );
       border-bottom: var(
         --table-cell-head-border-bottom,
@@ -83,7 +83,7 @@
       &:first-child .hggs-table-cell {
         padding-top: var(
           --table-tbody-first-row-padding-top,
-          var(--hggs-space-vertical-sm-default)
+          var(--hggs-space-sm-default)
         );
       }
 
@@ -94,7 +94,7 @@
       & .hggs-table-cell:first-child {
         padding-left: var(
           --table-tbody-first-column-padding-left,
-          var(--hggs-space-vertical-default)
+          var(--hggs-space-default)
         );
       }
     }

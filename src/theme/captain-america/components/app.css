@@ -1,8 +1,7 @@
 .hggs-app {
   --app-font-size: var(--hggs-font-size);
   --app-color: var(--hggs-color);
-  --app-background: var(--hggs-background);
-  --app-padding: var(--hggs-space-vertical-big)
-    var(--hggs-space-horizontal-small);
-  --app-footer-padding-top: var(--hggs-space-vertical-medium);
+  --app-background: var(--hggs-color-background);
+  --app-padding: var(--hggs-space-vertical-md) var(--hggs-space-horizontal-sm);
+  --app-footer-padding-top: var(--hggs-space-vertical);
 }

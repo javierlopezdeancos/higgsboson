@@ -20,8 +20,8 @@
 --logo-height
 --logo-height-small
 --logo-url
---logo-url-black
---logo-url-white
+--logo-url-dark
+--logo-url-light
 --logo-width
 --logo-width-small
 ```

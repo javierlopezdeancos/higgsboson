@@ -11,7 +11,7 @@
   & .hggs-fieldset .hggs-input {
     margin-bottom: var(
       --form-input-space-vertical,
-      var(--hggs-space-vertical-sm-default)
+      var(--hggs-space-sm-default)
     );
   }
 

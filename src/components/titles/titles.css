@@ -10,32 +10,31 @@
 
 .hggs-h1 {
   font-family: var(--title-h1-font-family, var(--hggs-font-family-default));
-  font-size: var(--title-h1-font-size, var(--hggs-font-size-xxxxxl-default));
+  font-size: var(--title-h1-font-size, var(--hggs-font-size-5xl-default));
   font-weight: var(--title-h1-font-weight, var(--hggs-font-weight-md-default));
   margin: var(
     --title-h1-margin,
-    var(--hggs-space-vertical-default) 0 var(--hggs-space-vertical-default) 0
+    var(--hggs-space-default) 0 var(--hggs-space-default) 0
   );
 }
 
 .hggs-h2 {
   font-family: var(--title-h2-font-family, var(--hggs-font-family-default));
-  font-size: var(--title-h2-font-size, var(--hggs-font-size-xxxxl-default));
+  font-size: var(--title-h2-font-size, var(--hggs-font-size-4xl-default));
   font-weight: var(--title-h2-font-weight, var(--hggs-font-weight-md-default));
   margin: var(
     --title-h2-margin,
-    var(--hggs-space-vertical-default) 0 var(--hggs-space-vertical-default) 0
+    var(--hggs-space-default) 0 var(--hggs-space-default) 0
   );
 }
 
 .hggs-h3 {
   font-family: var(--title-h3-font-family, var(--hggs-font-family-default));
-  font-size: var(--title-h3-font-size, var(--hggs-font-size-xxxl-default));
+  font-size: var(--title-h3-font-size, var(--hggs-font-size-3xl-default));
   font-weight: var(--title-h3-font-weight, var(--hggs-font-weight-lg-default));
   margin: var(
     --title-h3-margin,
-    var(--hggs-space-vertical-default) 0
-      calc(var(--hggs-space-vertical-default) / 2) 0
+    var(--hggs-space-default) 0 calc(var(--hggs-space-default) / 2) 0
   );
 }
 
@@ -43,24 +42,22 @@
   font-family: var(--title-h4-font-family, var(--hggs-font-family-default));
   font-size: var(
     --title-h4-font-size,
-    calc(var(--hggs-font-size-xxxl-default) - 2px)
+    calc(var(--hggs-font-size-3xl-default) - 2px)
   );
   font-weight: var(--title-h4-font-weight, var(--hggs-font-weight-lg-default));
   margin: var(
     --title-h4-margin,
-    calc(var(--hggs-space-vertical-default) / 2) 0
-      calc(var(--hggs-space-vertical-default) / 2) 0
+    calc(var(--hggs-space-default) / 2) 0 calc(var(--hggs-space-default) / 2) 0
   );
 }
 
 .hggs-h5 {
   font-family: var(--title-h5-font-family, var(--hggs-font-family-default));
-  font-size: var(--title-h5-font-size, var(--hggs-font-size-xxl-default));
+  font-size: var(--title-h5-font-size, var(--hggs-font-size-2xl-default));
   font-weight: var(--title-h5-font-weight, var(--hggs-font-weight-lg-default));
   margin: var(
     --title-h5-margin,
-    calc(var(--hggs-space-vertical-default) / 2) 0
-      calc(var(--hggs-space-vertical-default) / 2) 0
+    calc(var(--hggs-space-default) / 2) 0 calc(var(--hggs-space-default) / 2) 0
   );
 }
 
@@ -68,12 +65,11 @@
   font-family: var(--title-h6-font-family, var(--hggs-font-family-default));
   font-size: var(
     --title-h6-font-size,
-    calc(var(--hggs-font-size-xxl-default) - 2px)
+    calc(var(--hggs-font-size-2xl-default) - 2px)
   );
   font-weight: var(--title-h6-font-weight, var(--hggs-font-weight-lg-default));
   margin: var(
     --title-h6-margin,
-    var(--hggs-space-vertical-sm-default) 0
-      var(--hggs-space-vertical-sm-default) 0
+    var(--hggs-space-sm-default) 0 var(--hggs-space-sm-default) 0
   );
 }

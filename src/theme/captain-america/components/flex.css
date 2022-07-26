@@ -1,8 +1,8 @@
 .hggs-flex {
-  --hggs-flex-column-gap-small: var(--hggs-space-vertical-small);
-  --hggs-flex-column-gap-medium: var(--hggs-space-vertical-medium);
-  --hggs-flex-column-gap-big: var(--hggs-space-vertical-big);
-  --hggs-flex-row-gap-small: var(--hggs-space-horizontal-small);
-  --hggs-flex-row-gap-medium: var(--hggs-space-horizontal-medium);
-  --hggs-flex-row-gap-big: var(--hggs-space-horizontal-big);
+  --hggs-flex-column-gap-small: var(--hggs-space-vertical-sm);
+  --hggs-flex-column-gap-medium: var(--hggs-space-vertical);
+  --hggs-flex-column-gap-big: var(--hggs-space-vertical-md);
+  --hggs-flex-row-gap-small: var(--hggs-space-horizontal-sm);
+  --hggs-flex-row-gap-medium: var(--hggs-space-horizontal);
+  --hggs-flex-row-gap-big: var(--hggs-space-horizontal-md);
 }

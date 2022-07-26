@@ -7,11 +7,10 @@
     var(--hggs-border-radius-default)
   );
 
-  height: var(--dropdown-height, var(--hggs-space-vertical-md-default));
+  height: var(--dropdown-height, var(--hggs-space-md-default));
   padding: var(
     --dropdown-padding,
-    var(--hggs-space-vertical-sm-default)
-      var(--hggs-space-horizontal-sm-default)
+    var(--hggs-space-sm-default) var(--hggs-space-sm-default)
   );
 
   &:focus {
@@ -54,7 +53,7 @@
     );
     padding-left: var(
       --dropdown-options-selected-padding-left,
-      var(--hggs-space-horizontal-xs-default)
+      var(--hggs-space-xs-default)
     );
 
     &::-webkit-details-marker {
@@ -121,10 +120,7 @@
   & .hggs-dropdown-options {
     position: absolute;
     width: 100%;
-    top: var(
-      --dropdown-options-top,
-      calc(100% + var(--hggs-space-vertical-xs-default))
-    );
+    top: var(--dropdown-options-top, calc(100% + var(--hggs-space-xs-default)));
     left: 0;
     margin: 0;
     padding: 0;
@@ -163,10 +159,8 @@
         color: var(--dropdown-option-label-color, var(--hggs-color-default));
         padding: var(
           --dropdown-option-label-padding,
-          var(--hggs-space-vertical-xs-default)
-            var(--hggs-space-horizontal-sm-default)
-            var(--hggs-space-vertical-xs-default)
-            var(--hggs-space-horizontal-sm-default)
+          var(--hggs-space-xs-default) var(--hggs-space-sm-default)
+            var(--hggs-space-xs-default) var(--hggs-space-sm-default)
         );
       }
 

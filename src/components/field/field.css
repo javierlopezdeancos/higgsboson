@@ -5,7 +5,7 @@
     display: block;
     margin-bottom: var(
       --field-label-margin-bottom,
-      var(--hggs-space-vertical-sm-default)
+      var(--hggs-space-sm-default)
     );
 
     &:has(+ .hggs-input:focus) {
@@ -22,7 +22,7 @@
       );
       margin-left: var(
         --field-label-after-margin-left-required,
-        var(--hggs-space-horizontal-xxs-default)
+        var(--hggs-space-2xs-default)
       );
     }
   }

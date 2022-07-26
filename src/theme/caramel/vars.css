@@ -109,7 +109,7 @@
   --hggs-color-gray-009: #2e2e2e;
   --hggs-color-gray-010: #171717;
 
-  --hggs-filter-auxiliary-gray-006: brightness(0) saturate(100%) invert(47%)
+  --hggs-filter-gray-006: brightness(0) saturate(100%) invert(47%)
     sepia(0%) saturate(0%) hue-rotate(117deg) brightness(95%) contrast(87%);
 
   --hggs-color-gray-alpha-002: rgba(0, 0, 0, 0.1);
@@ -158,17 +158,17 @@
   --hggs-shadow: 0 0 6px 2px var(--hggs-color-secondary-009);
 
   /* SPACES */
-  --hggs-space-xxxs: calc(var(--hggs-space-xs) / 3);
-  --hggs-space-xxs: calc(var(--hggs-space-xs) / 2);
+  --hggs-space-3xs: calc(var(--hggs-space-xs) / 3);
+  --hggs-space-2xs: calc(var(--hggs-space-xs) / 2);
   --hggs-space-xs: clamp(0.91rem, calc(0.89rem + 0.1vw), 0.96rem);
   --hggs-space-sm: clamp(1.09rem, calc(1.05rem + 0.21vw), 1.2rem);
   --hggs-space-base: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.5rem);
   --hggs-space-md: clamp(1.58rem, calc(1.46rem + 0.59vw), 1.88rem);
   --hggs-space-lg: clamp(1.89rem, calc(1.71rem + 0.89vw), 2.34rem);
   --hggs-space-xl: clamp(2.27rem, calc(2.01rem + 1.29vw), 2.93rem);
-  --hggs-space-xxl: clamp(2.72rem, calc(2.36rem + 1.83vw), 3.66rem);
-  --hggs-space-xxxl: clamp(3.27rem, calc(2.75rem + 2.56vw), 4.58rem);
-  --hggs-space-xxxxl: calc(var(--hggs-space-xxxl) * 2);
+  --hggs-space-2xl: clamp(2.72rem, calc(2.36rem + 1.83vw), 3.66rem);
+  --hggs-space-3xl: clamp(3.27rem, calc(2.75rem + 2.56vw), 4.58rem);
+  --hggs-space-4xl: calc(var(--hggs-space-xxxl) * 2);
   --hggs-space: var(--hggs-space-base);
 
   /* BORDERS */
@@ -178,20 +178,20 @@
   --hggs-border-radius-sm: 10px;
   --hggs-border-size: 1px;
   --hggs-border-type: solid;
-  --hggs-border-color: var(--hggs-color-senary);
-  --hggs-border-color-primary: var(--hggs-color-primary);
-  --hggs-border-color-secondary: var(--hggs-color-secondary-010);
-  --hggs-border-color-tertiary: var(--hggs-color-tertiary);
-  --hggs-border-color-quaternary: var(--hggs-color-quaternary);
-  --hggs-border-color-quinary: var(--hggs-color-quinary);
-  --hggs-border-color-senary: var(--hggs-color-senary);
+  --hggs-color-border: var(--hggs-color-senary);
+  --hggs-color-border-primary: var(--hggs-color-primary);
+  --hggs-color-border-secondary: var(--hggs-color-secondary-010);
+  --hggs-color-border-tertiary: var(--hggs-color-tertiary);
+  --hggs-color-border-quaternary: var(--hggs-color-quaternary);
+  --hggs-color-border-quinary: var(--hggs-color-quinary);
+  --hggs-color-border-senary: var(--hggs-color-senary);
   --hggs-border: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color);
-  --hggs-border-primary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-primary);
-  --hggs-border-secondary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-secondary);
-  --hggs-border-tertiary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-tertiary);
-  --hggs-border-quaternary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-quaternary);
-  --hggs-border-quinary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-quinary);
-  --hggs-border-senary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-border-color-senary);
+  --hggs-border-primary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-border-primary);
+  --hggs-border-secondary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-border-secondary);
+  --hggs-border-tertiary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-border-tertiary);
+  --hggs-border-quaternary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-border-quaternary);
+  --hggs-border-quinary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-border-quinary);
+  --hggs-border-senary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-border-senary);
   --hggs-border-focus: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-primary);
   --hggs-border-disabled: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-disabled);
   --hggs-border-error: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-error);
@@ -202,15 +202,15 @@
   --hggs-form-space-base: var(--hggs-space-xs);
   --hggs-form-space-sm: var(--hggs-space-xxs);
   --hggs-form-box-shadow-focus: var(--hggs-shadow);
-  --hggs-form-input-height-big: var(--hggs-space-xxl);
+  --hggs-form-input-height-md: var(--hggs-space-xxl);
   --hggs-form-input-height: var(--hggs-space-md);
-  --hggs-form-input-height-small: var(--hggs-space-sm);
+  --hggs-form-input-height-sm: var(--hggs-space-sm);
   --hggs-form-input-border-radius: var(--hggs-border-radius);
   --hggs-form-input-placeholder-color: var(--hggs-color-senary-004);
   --hggs-form-input-placeholder-font-style: italic;
   --hggs-form-input-padding: var(--hggs-space-sm) var(--hggs-space-sm);
-  --hggs-form-input-padding-big: var(--hggs-space-xs) var(--hggs-space-sm);
-  --hggs-form-input-padding-small: var(--hggs-space-xs) var(--hggs-space-sm);
+  --hggs-form-input-padding-md: var(--hggs-space-xs) var(--hggs-space-sm);
+  --hggs-form-input-padding-sm: var(--hggs-space-xs) var(--hggs-space-sm);
   --hggs-form-input-border: var(--hggs-border);
   --hggs-form-input-border-focus: var(--hggs-border-focus);
   --hggs-form-input-border-hover: var(--hggs-border);
@@ -219,6 +219,7 @@
   --hggs-form-input-border-error: var(--hggs-border-error);
 
   /* FONT */
+  /* Font familes */
   --hggs-font-family-primary: "Poppins-Regular", sans-serif;
   --hggs-font-family-secondary: "Poppins-Medium", sans-serif;
   --hggs-font-family-tertiary: "Poppins-SemiBold", sans-serif;
@@ -228,20 +229,23 @@
   --hggs-font-family-septenary: "Poppins-Thin", sans-serif;
   --hggs-font-family: var(--hggs-font-family-primary);
 
+  /* Font colors */
+  --hggs-font-color: var(--hggs-color);
+
   /* Font sizes */
-  --hggs-font-size-xxs: calc(var(--hggs-font-size-sm) / 1.6);
+  --hggs-font-size-2xs: calc(var(--hggs-font-size-sm) / 1.6);
   --hggs-font-size-xs: calc(var(--hggs-font-size-sm) / 1.3);
   --hggs-font-size-sm: clamp(0.8rem, 0.08vw + 0.78rem, 0.84rem);
   --hggs-font-size-base: clamp(1rem, 0.23vw + 0.94rem, 1.13rem);
   --hggs-font-size-md: clamp(1.25rem, 0.45vw + 1.14rem, 1.5rem);
   --hggs-font-size-lg: clamp(1.56rem, 0.79vw + 1.36rem, 2rem);
   --hggs-font-size-xl: clamp(1.95rem, 1.29vw + 1.63rem, 2.66rem);
-  --hggs-font-size-xxl: clamp(2.44rem, 2.02vw + 1.94rem, 3.55rem);
-  --hggs-font-size-xxxl: clamp(3.05rem, 3.06vw + 2.29rem, 4.73rem);
+  --hggs-font-size-2xl: clamp(2.44rem, 2.02vw + 1.94rem, 3.55rem);
+  --hggs-font-size-3xl: clamp(3.05rem, 3.06vw + 2.29rem, 4.73rem);
   --hggs-font-size: var(--hggs-font-size-base);
 
   /* Font weights */
-  --hggs-font-weight-xxl: 900;
+  --hggs-font-weight-2xl: 900;
   --hggs-font-weight-xl: 700;
   --hggs-font-weight-lg: 600;
   --hggs-font-weight-md: 500;
@@ -255,8 +259,8 @@
 
   /* Font line heights */
   --hggs-line-height: 1.5;
-  --hggs-line-height-small: 1.3;
-  --hggs-line-height-micro: 1.1;
+  --hggs-line-height-sm: 1.3;
+  --hggs-line-height-xs: 1.1;
 
   /* LAYERS */
   --hggs-layer-0: 1;

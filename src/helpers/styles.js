@@ -98,12 +98,12 @@ const inlineMarginLeftStyles = ["margin-left: 10px", "margin-bottom: 10px"];
 const inlineMarginLeftWrapQuinaryStyles = [
   "margin-left: 10px",
   "margin-bottom: 10px",
-  "background: #000",
+  `background: ${darkTheme ? "rgba(100,100,100,0.8)" : "black"}`,
   "padding: 10px",
 ];
 
 const wrapperQuinaryStyles = [
   "display: inline-block",
-  `background: ${darkTheme ? "rgba(100,100,100,0.8)" : "dark"}`,
+  `background: ${darkTheme ? "rgba(100,100,100,0.8)" : "black"}`,
   "padding: 10px",
 ];
