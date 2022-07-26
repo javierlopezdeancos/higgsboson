@@ -22,6 +22,7 @@
 --box-body-padding
 --box-border
 --box-border-primary
+--box-border-radius
 --box-border-radius-with-radius
 --box-box-shadow
 --box-header-border-bottom

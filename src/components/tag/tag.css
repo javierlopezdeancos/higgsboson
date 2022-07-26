@@ -12,15 +12,11 @@
   color: var(--tag-color, var(--hggs-color-quinary-default));
   padding: var(
     --tag-padding,
-    var(--hggs-space-vertical-sm-default)
-      var(--hggs-space-horizontal-md-default)
+    var(--hggs-space-sm-default) var(--hggs-space-md-default)
   );
   text-align: var(--tag-text-align, center);
   text-transform: var(--tag-text-transform, uppercase);
-  letter-spacing: var(
-    --tag-letter-spacing,
-    var(--hggs-font-letter-spacing-small)
-  );
+  letter-spacing: var(--tag-letter-spacing, var(--hggs-font-letter-spacing-sm));
 
   &.hggs-tag--outline {
     @extend %hggs-tag-outline-reset;
@@ -32,7 +28,7 @@
   &.hggs-tag--subtle {
     background: var(
       --tag-background-subtle,
-      var(--hggs-color-auxiliary-gray-015-default)
+      var(--hggs-color-gray-015-default)
     );
     color: var(--tag-color-subtle, var(--hggs-color-quinary-default));
 
@@ -45,7 +41,7 @@
       );
       color: var(
         --tag-color-outline-subtle,
-        var(--hggs-color-auxiliary-gray-015-default)
+        var(--hggs-color-gray-015-default)
       );
     }
   }
@@ -73,7 +69,7 @@
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-primary,
-        var(--hggs-color-auxiliary-gray-013-default)
+        var(--hggs-color-gray-013-default)
       );
       color: var(--tag-color-subtle-primary, var(--hggs-color-quinary-default));
 
@@ -86,7 +82,7 @@
         );
         color: var(
           --tag-color-outline-primary-subtle,
-          var(--hggs-color-auxiliary-gray-013-default)
+          var(--hggs-color-gray-013-default)
         );
       }
     }
@@ -112,7 +108,7 @@
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-secondary,
-        var(--hggs-color-auxiliary-gray-012-default)
+        var(--hggs-color-gray-012-default)
       );
       color: var(
         --tag-color-subtle-secondary,
@@ -128,7 +124,7 @@
         );
         color: var(
           --tag-color-outline-secondary-subtle,
-          var(--hggs-color-auxiliary-gray-012-default)
+          var(--hggs-color-gray-012-default)
         );
       }
     }
@@ -157,7 +153,7 @@
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-tertiary,
-        var(--hggs-color-auxiliary-gray-010-default)
+        var(--hggs-color-gray-010-default)
       );
       color: var(
         --tag-color-subtle-tertiary,
@@ -173,7 +169,7 @@
         );
         color: var(
           --tag-color-outline-tertiary-subtle,
-          var(--hggs-color-auxiliary-gray-010-default)
+          var(--hggs-color-gray-010-default)
         );
       }
     }
@@ -202,7 +198,7 @@
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-quaternary,
-        var(--hggs-color-auxiliary-gray-009-default)
+        var(--hggs-color-gray-009-default)
       );
       color: var(
         --tag-color-subtle-quaternary,
@@ -244,7 +240,7 @@
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-quinary,
-        var(--hggs-color-auxiliary-gray-008-default)
+        var(--hggs-color-gray-008-default)
       );
       color: var(
         --tag-color-subtle-quinary,
@@ -260,7 +256,7 @@
         );
         color: var(
           --tag-color-outline-quinary-subtle,
-          var(--hggs-color-auxiliary-gray-008-default)
+          var(--hggs-color-gray-008-default)
         );
       }
     }
@@ -283,7 +279,7 @@
     &.hggs-tag--subtle {
       background: var(
         --tag-background-subtle-senary,
-        var(--hggs-color-auxiliary-gray-006-default)
+        var(--hggs-color-gray-006-default)
       );
       color: var(
         --tag-color-subtle-senary,
@@ -299,7 +295,7 @@
         );
         color: var(
           --tag-color-outline-senary-subtle,
-          var(--hggs-color-auxiliary-gray-006-default)
+          var(--hggs-color-gray-006-default)
         );
       }
     }
@@ -313,8 +309,7 @@
     font-size: var(--tag-font-size-small, var(--hggs-font-size-xs-default));
     padding: var(
       --tag-padding-small,
-      var(--hggs-space-vertical-xs-default)
-        var(--hggs-space-horizontal-sm-default)
+      var(--hggs-space-xs-default) var(--hggs-space-sm-default)
     );
   }
 }

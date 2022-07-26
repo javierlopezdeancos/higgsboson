@@ -1,13 +1,13 @@
 .hggs-checkboxes,
 .hggs-checkbox {
-  --checkboxes-gap: var(--hggs-space-vertical-small);
-  --checkbox-size: var(--hggs-form-input-height-small);
+  --checkboxes-gap: var(--hggs-space-vertical-sm);
+  --checkbox-size: var(--hggs-form-input-height-xs);
   --checkbox-background: transparent;
   --checkbox-border-radius: 0;
   --checkbox-border: var(--hggs-form-input-border);
   --checkbox-outline-focus: var(--hggs-form-outline-focus);
-  --checkbox-box-shadow-focus: var(--hggs-form-box-primary-focus);
-  --checkbox-margin-left: var(--hggs-space-horizontal-small);
+  --checkbox-box-shadow-focus: var(--hggs-form-input-box-shadow-focus);
+  --checkbox-margin-left: var(--hggs-space-horizontal-sm);
   --checkbox-ckeck-icon-background-color: var(--hggs-color-primary);
   --checkbox-ckeck-icon-height-after: 10px;
   --checkbox-ckeck-icon-height-before: 3px;

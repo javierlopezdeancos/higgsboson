@@ -6,7 +6,7 @@
   --dropdown-height: var(--hggs-form-input-height);
   --dropdown-padding: var(--hggs-form-input-padding);
   --dropdown-options-top: calc(100% + var(--hggs-space-xxxs));
-  --dropdown-options-background: transparent;
+  --dropdown-options-background: var(--hggs-background);
   --dropdown-options-border: var(--hggs-form-input-border);
   --dropdown-options-border-radius: var(--hggs-form-input-border-radius);
   --dropdown-options-box-shadow: none;

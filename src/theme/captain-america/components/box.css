@@ -1,20 +1,19 @@
 .hggs-box {
   --box-min-height: 100px;
   --box-background: var(--hggs-color-quinary);
-  --box-box-shadow: 0 1px 5px 0 var(--hggs-color-auxiliary-gray-001);
+  --box-box-shadow: var(--hggs-shadow);
   --box-border: none;
-  --box-margin: var(--hggs-space-vertical-medium) 0;
-  --box-padding: var(--hggs-space-vertical-big)
-    var(--hggs-space-horizontal-medium);
-  --box-header-border-bottom: var(--hggs-border-dark);
+  --box-border-radius: var(--hggs-border-radius);
+  --box-margin: var(--hggs-space-vertical) 0;
+  --box-padding: var(--hggs-space-vertical-md) var(--hggs-space-horizontal);
+  --box-header-border-bottom: var(--hggs-border-gray-001);
   --box-header-padding: 0 0 0 0;
-  --box-title-font-size: var(--hggs-font-size-medium);
+  --box-title-font-size: var(--hggs-font-size-md);
   --box-title-margin-top: 0;
-  --box-body-padding: var(--hggs-space-vertical-medium) 0 0 0;
-  --box-border-radius-with-radius: var(--hggs-border-radius-big);
-  --box-background-primary: var(--hggs-color-auxiliary-senary-000);
-  --box-border-primary: 1px solid var(--hggs-color-senary);
+  --box-body-padding: var(--hggs-space-vertical) 0 0 0;
+  --box-border-radius-with-radius: var(--hggs-border-radius-md);
+  --box-background-primary: var(--hggs-color-senary-000);
+  --box-border-primary: var(--hggs-border-senary);
   --box-title-color-primary: var(--hggs-color-senary);
-  --box-header-border-bottom-primary: 1px solid
-    var(--hggs-color-auxiliary-senary-002);
+  --box-header-border-bottom-primary: var(--hggs-border-senary-001);
 }

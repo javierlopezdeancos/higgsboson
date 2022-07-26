@@ -22,6 +22,7 @@
 --radio-inside-background-color
 --radio-inside-border-bold
 --radio-inside-border-checked
+--radio-inside-border-checked-hover
 --radio-inside-border-hover
 --radio-inside-box-shadow-focus
 --radio-inside-outline-focus

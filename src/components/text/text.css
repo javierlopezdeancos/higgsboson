@@ -1,9 +1,9 @@
 .hggs-text {
-  color: var(--text-color, var(--hggs-color-default));
+  color: var(--text-color, var(--hggs-font-color-default));
   font-family: var(--text-font-famiy, var(--hggs-font-famiy-default));
   font-size: var(--text-font-size, var(--hggs-font-size-default));
   font-weight: var(--text-font-weight, var(--text-font-weight-default));
-  margin: var(--text-margin, var(--hggs-space-vertical-default) 0);
+  margin: var(--text-margin, var(--hggs-space-default) 0);
   line-height: var(--text-line-height, var(--hggs-line-height-default));
 
   &.hggs-text--bold {

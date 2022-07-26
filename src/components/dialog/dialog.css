@@ -19,7 +19,7 @@
   color: var(--dialog-color, var(--hggs-color-default));
   text-align: var(--dialog-text-align, left);
   border: none;
-  padding: var(--dialog-padding, var(--hggs-space-horizontal-sm-default));
+  padding: var(--dialog-padding, var(--hggs-space-sm-default));
   border-radius: var(--dialog-border-radius, var(--hggs-border-default));
   box-shadow: var(--dialog-background-box-shadow, none);
   max-width: var(--dialog-max-width, 100vw);

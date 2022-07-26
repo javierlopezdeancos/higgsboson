@@ -16,9 +16,9 @@
   --icon-box-background-senary: var(--hggs-color-senary);
   --icon-box-background-tertiary: var(--hggs-color-tertiary);
   --icon-box-background: var(--hggs-color-senary);
-  --icon-box-padding-micro: var(--hggs-space-horizontal-micro);
-  --icon-box-padding-small: var(--hggs-space-horizontal-small);
-  --icon-box-padding: var(--hggs-space-horizontal-small);
+  --icon-box-padding-micro: var(--hggs-space-horizontal-xs);
+  --icon-box-padding-small: var(--hggs-space-horizontal-sm);
+  --icon-box-padding: var(--hggs-space-horizontal-sm);
   --icon-filter-primary: var(--hggs-filter-primary);
   --icon-filter-quaternary: var(--hggs-filter-quaternary);
   --icon-filter-quinary: var(--hggs-color-background-filter);

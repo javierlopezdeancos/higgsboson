@@ -5,13 +5,11 @@
   background: var(--box-background, var(--hggs-color-background-default));
   box-shadow: var(--box-box-shadow, none);
   border: var(--box-border, var(--hggs-border-default));
-  margin: var(--box-margin, var(--hggs-space-vertical-default) 0);
+  border-radius: var(--box-border-radius, --hggs-border-radius-default);
+  margin: var(--box-margin, var(--hggs-space-default) 0);
   padding: var(
     --box-padding,
-    var(
-      var(--hggs-space-vertical-md-default)
-        var(--hggs-space-horizontal-md-default)
-    )
+    var(var(--hggs-space-md-default) var(--hggs-space-md-default))
   );
 
   & .hggs-box-header {
@@ -30,7 +28,7 @@
   }
 
   & .hggs-box-body {
-    padding: var(--box-body-padding, var(--hggs-space-vertical-default) 0 0 0);
+    padding: var(--box-body-padding, var(--hggs-space-default) 0 0 0);
 
     & > *:first-child {
       margin-top: unset;
@@ -47,7 +45,7 @@
   &.hggs-box--primary {
     background: var(
       --box-background-primary,
-      var(--hggs-color-auxiliary-gray-002-default)
+      var(--hggs-color-gray-002-default)
     );
     border: var(
       --box-border-primary,
@@ -64,7 +62,7 @@
       & .hggs-box-title {
         color: var(
           --box-title-color-primary,
-          var(--hggs-color-auxiliary-gray-020-default)
+          var(--hggs-color-gray-020-default)
         );
       }
     }
