@@ -119,26 +119,33 @@
     saturate(0%) hue-rotate(49deg) brightness(96%) contrast(93%);
   --hggs-filter-gray-007: brightness(0) saturate(100%) invert(28%) sepia(0%)
     saturate(0%) hue-rotate(99deg) brightness(94%) contrast(96%);
+
   --hggs-filter-primary: invert(28%) sepia(40%) saturate(2699%)
     hue-rotate(212deg) brightness(93%) contrast(94%);
   --hggs-filter-primary-001: invert(27%) sepia(11%) saturate(6768%)
     hue-rotate(204deg) brightness(99%) contrast(100%);
+
   --hggs-filter-secondary: invert(32%) sepia(24%) saturate(3291%)
     hue-rotate(331deg) brightness(99%) contrast(95%);
   --hggs-filter-secondary-001: invert(24%) sepia(62%) saturate(2295%)
     hue-rotate(348deg) brightness(91%) contrast(78%);
+
   --hggs-filter-tertiary: invert(90%) sepia(48%) saturate(3381%)
     hue-rotate(329deg) brightness(100%) contrast(97%);
   --hggs-filter-tertiary-001: invert(88%) sepia(33%) saturate(2272%)
     hue-rotate(343deg) brightness(104%) contrast(91%);
+
   --hggs-filter-quaternary: invert(0%) sepia(54%) saturate(2989%)
     hue-rotate(174deg) brightness(108%) contrast(108%);
+
   --hggs-filter-quinary: invert(100%) sepia(100%) saturate(0%)
     hue-rotate(157deg) brightness(102%) contrast(102%);
+
   --hggs-filter-senary: invert(58%) sepia(82%) saturate(1159%)
     hue-rotate(173deg) brightness(103%) contrast(101%);
   --hggs-filter-senary-001: invert(53%) sepia(95%) saturate(387%)
     hue-rotate(155deg) brightness(96%) contrast(100%);
+
   --hggs-filter-background: var(--hggs-filter-quaternary);
   --hggs-filter: var(--hggs-filter-gray);
   --hggs-filter-hover: var(--hggs-filter-gray-007);
