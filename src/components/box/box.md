@@ -25,6 +25,9 @@
 --box-border-radius
 --box-border-radius-with-radius
 --box-box-shadow
+--box-box-shadow-primary
+--box-color
+--box-color-primary
 --box-header-border-bottom
 --box-header-border-bottom-primary
 --box-header-padding
