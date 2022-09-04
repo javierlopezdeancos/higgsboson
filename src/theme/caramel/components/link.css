@@ -3,8 +3,8 @@
   --link-font-size: var(--hggs-font-size);
   --link-font-weight: var(--hggs-font-weight-md);
   --link-font-style: normal;
-  --link-color: var(--hggs-color-primary);
+  --link-color: var(--hggs-color);
   --link-text-decoration: underline;
   --link-text-decoration-hover: underline;
-  --link-color-hover: var(--hggs-color-primary);
+  --link-color-hover: var(--hggs-color-hover);
 }

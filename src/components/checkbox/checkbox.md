@@ -2,11 +2,13 @@
 
 ## Root component class name
 
+`hggs-checkboxes`
 `hggs-checkbox`
 
 ## Theme selector
 
 ```css
+.hggs-checkboxes,
 .hggs-checkbox {
   /*
   ... put here variables ...
@@ -58,7 +60,7 @@
 
 ### Checkboxes list
 
-#### Basic HTML structure
+#### Basic vertical HTML structure
 
 ```html
 <div class="hggs-checkboxes">

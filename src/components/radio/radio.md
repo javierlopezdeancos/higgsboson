@@ -2,11 +2,13 @@
 
 ## Root component class name
 
+`hggs-radios`
 `hggs-radio`
 
 ## Theme selector
 
 ```css
+.hggs-radios,
 .hggs-radio {
   /*
   ... put here variables ...
@@ -34,6 +36,7 @@
 --radio-label-font-weight
 --radio-label-margin-left
 --radio-size
+--radios-gap
 ```
 
 ## HTML Structure
@@ -47,5 +50,23 @@
   <input type="radio" id="radio1" name="radiogroup" />
   <span></span>
   <label class="hggs-label" for="radio1">Option 1</label>
+</div>
+```
+
+### Radios list
+#### Basic vertical HTML structure
+
+```html
+<div class="hggs-radios">
+  <div class="hggs-radio">
+    <input type="radio" id="radio1" name="radiogroup" />
+    <span></span>
+    <label class="hggs-label" for="radio1">Option 1</label>
+  </div>
+  <div class="hggs-radio">
+    <input type="radio" id="radio2" name="radiogroup" />
+    <span></span>
+    <label class="hggs-label" for="radio2">Option 2</label>
+  </div>
 </div>
 ```

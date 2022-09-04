@@ -1,8 +1,10 @@
+.hggs-radios,
 .hggs-radio {
-  --radio-size: var(--hggs-form-input-height-sm);
+  --radio-size: var(--hggs-form-input-height-xs);
   --radio-border: var(--hggs-form-input-border);
   --radio-border-checked: var(--hggs-form-input-border-checked);
-  --radio-inside-border-checked: 5px solid var(--hggs-color-primary);
+  --radio-inside-border-checked: 8px solid var(--hggs-form-color-accent);
+  --radio-inside-border-checked-hover: 8px solid var(--hggs-form-color-accent);
   --radio-inside-border-hover: var(--hggs-form-input-border-hover);
   --radio-inside-outline-focus: var(--hggs-form-outline-focus);
   --radio-inside-box-shadow-focus: var(--hggs-form-box-shadow-focus);
@@ -15,4 +17,5 @@
   --radio--label-font-weight: var(--hggs-font-weight);
   --radio--label-font-style: normal;
   --radio--label-color: var(--hggs-color);
+  --radios-gap: var(--hggs-form-space-base);
 }

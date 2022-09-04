@@ -136,7 +136,7 @@
   --hggs-color-gray-009: #2e2e2e;
   --hggs-color-gray-010: #171717;
 
-  --hggs-filter-gray-006: brightness(0) saturate(100%) invert(47%)
+  --hggs-filter-gray: brightness(0) saturate(100%) invert(47%)
     sepia(0%) saturate(0%) hue-rotate(117deg) brightness(95%) contrast(87%);
 
   --hggs-color-gray-alpha-002: rgba(0, 0, 0, 0.1);
