@@ -29,6 +29,7 @@
         <%
           const articleRadioStyle = getStyles(r?.styles?.article);
           const headerRadioStyle = getStyles(r?.styles?.header);
+          const radiosClass = getClasses(r?.classes?.options);
           const radioClass = getClasses(r?.classes?.option);
           const labelClass = getClasses(r?.classes?.label);
         %>
@@ -37,14 +38,15 @@
           <h3 class="hggs-h3" style="<%= headerRadioStyle %>">
             <%= r.title %>
           </h3>
-
-          <% _.each(r.options, function(o) { %>
-            <div class="<%= radioClass %>">
-              <input type="radio" id="<%= o.id %>" name="radiogroup" />
-              <span></span>
-              <label class="<%= labelClass %>" for="<%= o.id %>"><%= o.label %></label>
-            </div>
-          <% }); %>
+          <div class="<%= radiosClass %>">
+            <% _.each(r.options, function(o) { %>
+              <div class="<%= radioClass %>">
+                <input type="radio" id="<%= o.id %>" name="radiogroup" />
+                <span></span>
+                <label class="<%= labelClass %>" for="<%= o.id %>"><%= o.label %></label>
+              </div>
+            <% }); %>
+          </div>
         </article>
       <% }); %>
     </script>

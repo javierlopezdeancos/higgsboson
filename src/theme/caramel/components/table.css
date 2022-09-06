@@ -20,7 +20,7 @@
   --table-cell-head-font-weight: var(--hggs-font-weight-md);
   --table-cell-head-font-size: var(--hggs-font-size);
   --table-cell-head-color: var(--hggs-color);
-  --table-cell-head-background: var(--hggs-color-secondary-008);
+  --table-cell-head-background: var(--hggs-color-background-000);
   --table-cell-head-padding: var(--hggs-space) var(--hggs-space-sm);
-  --table-cell-head-border-bottom: unset;
+  --table-cell-head-border-bottom: var(--hggs-border);
 }

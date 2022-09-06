@@ -1,5 +1,5 @@
 .hggs-text {
-  --text-color: var(--hggs-color);
+  --text-color: var(--hggs-font-color);
   --text-font-famiy: var(--hggs-font-family);
   --text-font-size: var(--hggs-font-size);
   --text-font-weight: var(--hggs-font-weight);

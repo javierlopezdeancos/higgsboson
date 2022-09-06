@@ -1,24 +1,24 @@
 .hggs-checkboxes,
 .hggs-checkbox {
   --checkboxes-gap: var(--hggs-form-space-base);
-  --checkbox-size: var(--hggs-form-input-height-sm);
+  --checkbox-size: var(--hggs-form-input-height-xs);
   --checkbox-background: transparent;
   --checkbox-border-radius: 0;
   --checkbox-border: var(--hggs-form-input-border);
   --checkbox-outline-focus: var(--hggs-form-outline-focus);
   --checkbox-box-shadow-focus: var(--hggs-form-box-shadow-focus);
-  --checkbox-margin-left: var(--hggs-form-space-sm);
-  --checkbox-ckeck-icon-background-color: var(--hggs-color-primary);
-  --checkbox-ckeck-icon-height-after: 15px;
-  --checkbox-ckeck-icon-height-before: 3px;
-  --checkbox-ckeck-icon-left-after: 11px;
+  --checkbox-margin-left: var(--hggs-form-space-2xs);
+  --checkbox-ckeck-icon-background-color: var(--hggs-form-color-accent);
+  --checkbox-ckeck-icon-height-after: 20px;
+  --checkbox-ckeck-icon-height-before: 5px;
+  --checkbox-ckeck-icon-left-after: 15px;
   --checkbox-ckeck-icon-left-before: 2px;
-  --checkbox-ckeck-icon-top-after: 0px;
-  --checkbox-ckeck-icon-top-before: 9px;
+  --checkbox-ckeck-icon-top-after: 5px;
+  --checkbox-ckeck-icon-top-before: 14px;
   --checkbox-ckeck-icon-transform-after: rotate(45deg);
   --checkbox-ckeck-icon-transform-before: rotate(45deg);
-  --checkbox-ckeck-icon-width-after: 3px;
-  --checkbox-ckeck-icon-width-before: 8px;
+  --checkbox-ckeck-icon-width-after: 5px;
+  --checkbox-ckeck-icon-width-before: 12px;
   --checkbox--label-font-family: var(--hggs-font-family-secondary);
   --checkbox--label-font-size: var(--hggs-font-size);
   --checkbox--label-font-weight: var(--hggs-font-weight);

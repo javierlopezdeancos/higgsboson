@@ -38,6 +38,30 @@ const data = {
         boxBody: ["hggs-box-body"],
       },
     },
+    {
+      title: "box",
+      subtitles: [
+        {
+          title: "box-header",
+          subtitle: "box-title",
+        },
+        "box-body",
+      ],
+      styles: {
+        header: headerWithSubtitleStyles,
+        subHeaderH4: subHeaderStyles,
+        subHeaderH4WithH5Child: subHeaderWithChildStyles,
+        subHeaderH5: subHeaderChildWithParentWithSiblingStyles,
+        article: articleStyles,
+        box: boxStyles,
+      },
+      classes: {
+        box: ["hggs-box", "hggs-box--rounded"],
+        boxHeader: ["hggs-box-header"],
+        boxTitle: ["hggs-box-title"],
+        boxBody: ["hggs-box-body"],
+      },
+    },
   ],
   primary: [
     {
@@ -70,6 +94,30 @@ const data = {
       },
       classes: {
         box: ["hggs-box", "hggs-box--primary"],
+        boxHeader: ["hggs-box-header"],
+        boxTitle: ["hggs-box-title"],
+        boxBody: ["hggs-box-body"],
+      },
+    },
+    {
+      title: "box --primary",
+      subtitles: [
+        {
+          title: "box-header",
+          subtitle: "box-title",
+        },
+        "box-body",
+      ],
+      styles: {
+        header: headerWithSubtitleStyles,
+        subHeaderH4WithH5Child: subHeaderWithChildStyles,
+        subHeaderH5: subHeaderChildWithParentWithSiblingStyles,
+        subHeaderH4: subHeaderStyles,
+        article: articleStyles,
+        box: boxStyles,
+      },
+      classes: {
+        box: ["hggs-box", "hggs-box--primary", "hggs-box--rounded"],
         boxHeader: ["hggs-box-header"],
         boxTitle: ["hggs-box-title"],
         boxBody: ["hggs-box-body"],

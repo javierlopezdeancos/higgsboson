@@ -8,6 +8,7 @@ const data = {
         article: articleStyles,
       },
       classes: {
+        options: ["hggs-radios"],
         option: ["hggs-radio"],
         label: ["hggs-label"],
       },
