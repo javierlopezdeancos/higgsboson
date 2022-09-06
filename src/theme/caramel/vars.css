@@ -142,6 +142,8 @@
   --hggs-color-background-tertiary: var(--hggs-color-tertiary-009);
   --hggs-color-background-tertiary-hover: var(--hggs-color-tertiary-010);
   --hggs-color-background-tertiary-subtle: var(--hggs-color-tertiary-001);
+  --hggs-color-tertiary-outline: var(--hggs-color-background-tertiary);
+  --hggs-color-tertiary-outline-hover: var(--hggs-color-background-tertiary-hover);
   --hggs-color-tertiary-outline-subtle: var(--hggs-color-tertiary-007);
   --hggs-color-tertiary-outline-subtle-hover: var(--hggs-color-tertiary-007);
 
@@ -369,7 +371,7 @@
   --hggs-border-tertiary-hover:  var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-background-tertiary-hover);
   --hggs-border-tertiary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-tertiary-outline);
-  --hggs-border-tertiray-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-tertiary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-tertiary-outline-hover);
   --hggs-border-tertiary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-tertiary-outline-subtle);
@@ -493,6 +495,8 @@
     --hggs-color-tertiary-hover: var(--hggs-color-tertiary-010);
     --hggs-color-background-tertiary: var(--hggs-color-tertiary-005);
     --hggs-color-background-tertiary-hover: var(--hggs-color-tertiary-006);
+    --hggs-color-tertiary-outline: var(--hggs-color-background-tertiary);
+    --hggs-color-tertiary-outline-hover: var(--hggs-color-background-tertiary-hover);
 
     /* Tertiary filters */
     --hggs-filter-tertiary: var(--hggs-filter-tertiary-006);

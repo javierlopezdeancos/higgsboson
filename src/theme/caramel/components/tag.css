@@ -1,7 +1,7 @@
 .hggs-tag {
   --tag-font-family: var(--hggs-font-family-secondary);
   --tag-font-size: var(--hggs-font-size-xs);
-  --tag-font-size-small: var(--hggs-font-size-xxs);
+  --tag-font-size-small: var(--hggs-font-size-2xs);
   --tag-font-weight: var(--hggs-font-weight);
   --tag-text-transform: uppercase;
   --tag-letter-spacing: var(--hggs-font-letter-spacing-sm);

@@ -217,7 +217,7 @@
     var(--hggs-color-gray-006);
   --hggs-form-box-shadow-senary-focus: 0 0 0 4px
     var(--hggs-color-gray-001);
-  --hggs-form-input-height-md: var(--hggs-space-xxl);
+  --hggs-form-input-height-md: var(--hggs-space-2xl);
   --hggs-form-input-height: var(--hggs-space-md);
   --hggs-form-input-height-sm: var(--hggs-space-xs);
   --hggs-form-input-border-radius: var(--hggs-border-radius-small);

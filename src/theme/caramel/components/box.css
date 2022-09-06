@@ -5,7 +5,7 @@
   --box-box-shadow: none;
   --box-border: var(--hggs-border);
   --box-margin: var(--hggs-space-lg) 0;
-  --box-padding: var(--hggs-space-xxl) var(--hggs-space);
+  --box-padding: var(--hggs-space-2xl) var(--hggs-space);
   --box-header-border-bottom: var(--hggs-border);
   --box-header-padding: 0 0 0 0;
   --box-title-font-size: var(--hggs-font-size-md);
