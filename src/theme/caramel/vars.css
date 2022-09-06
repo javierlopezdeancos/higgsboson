@@ -495,14 +495,14 @@
     --hggs-color-tertiary-hover: var(--hggs-color-tertiary-010);
     --hggs-color-background-tertiary: var(--hggs-color-tertiary-005);
     --hggs-color-background-tertiary-hover: var(--hggs-color-tertiary-006);
+    --hggs-color-tertiary-outline-subtle: var(--hggs-color-tertiary-009);
+    --hggs-color-tertiary-outline-subtle-hover: var(--hggs-color-tertiary-010);
     --hggs-color-tertiary-outline: var(--hggs-color-background-tertiary);
     --hggs-color-tertiary-outline-hover: var(--hggs-color-background-tertiary-hover);
 
     /* Tertiary filters */
     --hggs-filter-tertiary: var(--hggs-filter-tertiary-006);
     --hggs-filter-tertiary-hover: var(--hggs-filter-tertiary-007);
-    --hggs-color-tertiary-outline-subtle: var(--hggs-color-tertiary-009);
-    --hggs-color-tertiary-outline-subtle-hover: var(--hggs-color-tertiary-010);
 
     /* Quaternry Colors */
     --hggs-color-quaternary: var(--hggs-color-white);
