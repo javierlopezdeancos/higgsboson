@@ -114,6 +114,7 @@
 --button-icon-transform-hover
 --button-icon-transition-hover
 --button-icon-width
+--button-margin-horizontal
 --button-margin-vertical
 --button-outline-focus
 --button-padding-big
@@ -139,285 +140,148 @@
 <button class="hggs-button">Button</button>
 ```
 
-#### Basic HTML structure with `big` modifier
+##### Default
+```html
+<button class="hggs-button hggs-button--primary">Button</button>
+```
 
+##### Primary
+```html
+<button class="hggs-button hggs-button--secondary">Button</button>
+```
+
+##### Secondary
+```html
+<button class="hggs-button hggs-button--tertiary">Button</button>
+```
+
+##### Tertiary
+```html
+<button class="hggs-button hggs-button--quaternary">Button</button>
+```
+
+##### Quaternary
+```html
+<button class="hggs-button hggs-button--quinary">Button</button>
+```
+
+##### Quinary
+```html
+<button class="hggs-button hggs-button--senary">Button</button>
+```
+
+#### Basic HTML structure with `size` modifier
+
+##### Big
 ```html
 <button class="hggs-button hggs-button--big">Button</button>
 ```
 
-#### Basic HTML structure with `medium` modifier
-
+##### Medium
 ```html
-<button class="hggs-button hggs-button--medium">Button</button>
+<button class="hggs-button">Button</button>
 ```
 
-#### Basic HTML structure with `small` modifier
-
+##### Small
 ```html
 <button class="hggs-button hggs-button--small">Button</button>
 ```
 
 #### Basic HTML structure with `outline` modifier
 
+##### Default
 ```html
 <button class="hggs-button hggs-button--outline">Button</button>
 ```
 
-### Primary
-
-#### Primary HTML structure
-
+##### Primary
 ```html
-<button class="hggs-button hggs--primary">Button</button>
+<button class="hggs-button hggs-button--outline hggs-button--primary">Button</button>
 ```
 
-#### Primary HTML structure with `big` modifier
-
+##### Secondary
 ```html
-<button class="hggs-button hggs--primary hggs-button--big">Button</button>
+<button class="hggs-button hggs-button--outline hggs-button--secondary">Button</button>
 ```
 
-#### Primary HTML structure with `medium` modifier
-
+##### Tertiary
 ```html
-<button class="hggs-button hggs--primary hggs-button--medium">Button</button>
+<button class="hggs-button hggs-button--outline hggs-button--tertiary">Button</button>
 ```
 
-#### Primary HTML structure with `small` modifier
-
+##### Quaternary
 ```html
-<button class="hggs-button hggs--primary hggs-button--small">Button</button>
+<button class="hggs-button hggs-button--outline hggs-button--quaternary">Button</button>
 ```
 
-#### Primary HTML structure with `outline` modifier
-
+##### Quinary
 ```html
-<button class="hggs-button hggs--primary hggs-button--outline">Button</button>
+<button class="hggs-button hggs-button--outline hggs-button--quinary">Button</button>
 ```
 
-### Secondary
-
-#### Secondary HTML structure
-
+##### Senary
 ```html
-<button class="hggs-button hggs--secondary">Button</button>
-```
-
-#### Secondary HTML structure with `big` modifier
-
-```html
-<button class="hggs-button hggs--secondary hggs-button--big">Button</button>
-```
-
-#### Secondary HTML structure with `medium` modifier
-
-```html
-<button class="hggs-button hggs--secondary hggs-button--medium">Button</button>
-```
-
-#### Secondary HTML structure with `small` modifier
-
-```html
-<button class="hggs-button hggs--secondary hggs-button--small">Button</button>
-```
-
-#### Secondary HTML structure with `outline` modifier
-
-```html
-<button class="hggs-button hggs--secondary hggs-button--outline">Button</button>
-```
-
-### Tertiary
-
-#### Tertiary HTML structure
-
-```html
-<button class="hggs-button hggs--tertiary">Button</button>
-```
-
-#### Tertiary HTML structure with `big` modifier
-
-```html
-<button class="hggs-button hggs--tertiary hggs-button--big">Button</button>
-```
-
-#### Tertiary HTML structure with `medium` modifier
-
-```html
-<button class="hggs-button hggs--tertiary hggs-button--medium">Button</button>
-```
-
-#### Tertiary HTML structure with `small` modifier
-
-```html
-<button class="hggs-button hggs--tertiary hggs-button--small">Button</button>
-```
-
-#### Tertiary HTML structure with `outline` modifier
-
-```html
-<button class="hggs-button hggs--tertiary hggs-button--outline">Button</button>
-```
-
-### Quaternary
-
-#### Quaternary HTML structure
-
-```html
-<button class="hggs-button hggs--quaternary">Button</button>
-```
-
-#### Quaternary HTML structure with `big` modifier
-
-```html
-<button class="hggs-button hggs--quaternary hggs-button--big">Button</button>
-```
-
-#### Quaternary HTML structure with `medium` modifier
-
-```html
-<button class="hggs-button hggs--quaternary hggs-button--medium">Button</button>
-```
-
-#### Quaternary HTML structure with `small` modifier
-
-```html
-<button class="hggs-button hggs--quaternary hggs-button--small">Button</button>
-```
-
-#### Quaternary HTML structure with `outline` modifier
-
-```html
-<button class="hggs-button hggs--quaternary hggs-button--outline">
-  Button
-</button>
-```
-
-### Quinary
-
-#### Quinary HTML structure
-
-```html
-<button class="hggs-button hggs--quinary">Button</button>
-```
-
-#### Quinary HTML structure with `big` modifier
-
-```html
-<button class="hggs-button hggs--quinary hggs-button--big">Button</button>
-```
-
-#### Quinary HTML structure with `medium` modifier
-
-```html
-<button class="hggs-button hggs--quinary hggs-button--medium">Button</button>
-```
-
-#### Quinary HTML structure with `small` modifier
-
-```html
-<button class="hggs-button hggs--quinary hggs-button--small">Button</button>
-```
-
-#### Quinary HTML structure with `outline` modifier
-
-```html
-<button class="hggs-button hggs--quinary hggs-button--outline">Button</button>
-```
-
-### Senary
-
-#### Senary HTML structure
-
-```html
-<button class="hggs-button hggs--senary">Button</button>
-```
-
-#### Senary HTML structure with `big` modifier
-
-```html
-<button class="hggs-button hggs--senary hggs-button--big">Button</button>
-```
-
-#### Senary HTML structure with `medium` modifier
-
-```html
-<button class="hggs-button hggs--senary hggs-button--medium">Button</button>
-```
-
-#### Senary HTML structure with `small` modifier
-
-```html
-<button class="hggs-button hggs--senary hggs-button--small">Button</button>
-```
-
-#### Senary HTML structure with `outline` modifier
-
-```html
-<button class="hggs-button hggs--senary hggs-button--outline">Button</button>
+<button class="hggs-button hggs-button--outline hggs-button--senary">Button</button>
 ```
 
 ### Icon
 
 #### Icon Button HTML structure
 
+##### Default
 ```html
-<button class="hggs-button hggs-button--icon">
+<button class="hggs-button">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Primary Icon Button HTML structure
-
+##### Primary
 ```html
-<button class="hggs-button hggs-button--icon hggs-button--primary">
-  <span class="hggs-icon hggs-icon--edit"></span>
+<button class="hggs-button">
+  <span class="hggs-icon hggs-icon--primary hggs-icon--edit"></span>
 </button>
 ```
 
-#### Secondary Icon Button HTML structure
-
+##### Secondary
 ```html
-<button class="hggs-button hggs-button--icon hggs-button--secondary">
-  <span class="hggs-icon hggs-icon--edit"></span>
+<button class="hggs-button">
+  <span class="hggs-icon hggs-icon--secondary hggs-icon--edit"></span>
+</button>
+```
+##### Tertiary
+```html
+<button class="hggs-button">
+  <span class="hggs-icon hggs-icon--tertiary hggs-icon--edit"></span>
 </button>
 ```
 
-#### Tertiary Icon Button HTML structure
-
-````html
-<button class="hggs-button hggs-button--icon hggs-button--tertiary">
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-
-#### Quaternary Icon button HTML structure ```html
-<button class="hggs-button hggs-button--icon hggs-button--quaternary">
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-````
-
-#### Quinary Icon Button HTML structure
-
+##### Quaternary
 ```html
-<button class="hggs-button hggs-button--icon hggs-button--quinary">
-  <span class="hggs-icon hggs-icon--edit"></span>
+<button class="hggs-button">
+  <span class="hggs-icon hggs-icon--quaternary hggs-icon--edit"></span>
 </button>
 ```
 
-#### Senary Icon Button HTML structure
-
+##### Quinary
 ```html
-<button class="hggs-button hggs-button--icon hggs-button--senary">
-  <span class="hggs-icon hggs-icon--edit"></span>
+<button class="hggs-button">
+  <span class="hggs-icon hggs-icon--quinary hggs-icon--edit"></span>
 </button>
 ```
-
+##### Senary
+```html
+<button class="hggs-button">
+  <span class="hggs-icon hggs-icon--senary hggs-icon--edit"></span>
+</button>
+```
 ### Icon Labeled
 
 #### Icon Labeled Button HTML structure
 
+##### Default
+
 ```html
-<button class="hggs-button hggs-button--icon">
+<button class="hggs-button">
   <div class="hggs-icon-wrapper">
     <span class="hggs-icon hggs-icon--edit"></span>
     <span class="hggs-icon-label">This is a button labeled</span>
@@ -425,67 +289,67 @@
 </button>
 ```
 
-#### Primary Icon Labeled button HTML structure
+##### Primary
 
 ```html
-<button class="hggs-button hggs-button--primary hggs-button--icon">
+<button class="hggs-button">
   <div class="hggs-icon-wrapper">
-    <span class="hggs-icon hggs-icon--edit"></span>
+    <span class="hggs-icon hggs-icon--primary hggs-icon--edit"></span>
     <span class="hggs-icon-label">This is a button labeled</span>
   </div>
 </button>
 ```
 
-#### Secondary Icon Labeled button HTML structure
+##### Secondary
 
 ```html
-<button class="hggs-button hggs-button--secondary hggs-button--icon">
+<button class="hggs-button">
   <div class="hggs-icon-wrapper">
-    <span class="hggs-icon hggs-icon--edit"></span>
+    <span class="hggs-icon hggs-icon--secondary hggs-icon--edit"></span>
     <span class="hggs-icon-label">This is a button labeled</span>
   </div>
 </button>
 ```
 
-#### Tertiary Icon Labeled button HTML structure
+##### Tertiary
 
 ```html
-<button class="hggs-button hggs-button--tertiary hggs-button--icon">
+<button class="hggs-button">
   <div class="hggs-icon-wrapper">
-    <span class="hggs-icon hggs-icon--edit"></span>
+    <span class="hggs-icon hggs-icon--tertiary hggs-icon--edit"></span>
     <span class="hggs-icon-label">This is a button labeled</span>
   </div>
 </button>
 ```
 
-#### Quaternary Icon Labeled button HTML structure
+##### Quaternary
 
 ```html
-<button class="hggs-button hggs-button--quaternary hggs-button--icon">
+<button class="hggs-button">
   <div class="hggs-icon-wrapper">
-    <span class="hggs-icon hggs-icon--edit"></span>
+    <span class="hggs-icon hggs-icon--quaternary hggs-icon--edit"></span>
     <span class="hggs-icon-label">This is a button labeled</span>
   </div>
 </button>
 ```
 
-#### Quinary Icon Labeled button HTML structure
+##### Quinary
 
 ```html
-<button class="hggs-button hggs-button--quinary hggs-button--icon">
+<button class="hggs-button">
   <div class="hggs-icon-wrapper">
-    <span class="hggs-icon hggs-icon--edit"></span>
+    <span class="hggs-icon hggs-icon--quinary hggs-icon--edit"></span>
     <span class="hggs-icon-label">This is a button labeled</span>
   </div>
 </button>
 ```
 
-#### Senary Icon Labeled button HTML structure
+##### Senary
 
 ```html
-<button class="hggs-button hggs-button--senary hggs-button--icon">
+<button class="hggs-button">
   <div class="hggs-icon-wrapper">
-    <span class="hggs-icon hggs-icon--edit"></span>
+    <span class="hggs-icon hggs-icon--senary hggs-icon--edit"></span>
     <span class="hggs-icon-label">This is a button labeled</span>
   </div>
 </button>
@@ -495,546 +359,406 @@
 
 #### Button Square HTML structure
 
+##### Default
 ```html
-<button class="hggs-button hggs-button--square">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square " style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button class="hggs-button hggs-button--square hggs-button--big">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button class="hggs-button hggs-button--square hggs-button--medium">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button class="hggs-button hggs-button--square hggs-button--small">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+##### Primary
 ```html
-<button class="hggs-button hggs-button--square hggs-button-outline">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--primary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Primary Button Square HTML structure
-
+###### Big
 ```html
-<button class="hggs-button hggs-button--primary hggs-button--square">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--primary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--primary hggs-button--square hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--primary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--primary hggs-button--square hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--primary hggs-icon--square hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+##### Secondary
 ```html
-<button
-  class="hggs-button hggs-button--primary hggs-button--square hggs-button--small"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--secondary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button
-  class="hggs-button hggs-button--primary hggs-button--square hggs-button-outline"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--secondary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Secondary Button Square HTML structure
-
+###### Small
 ```html
-<button class="hggs-button hggs-button--secondary hggs-button--square">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--secondary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--secondary hggs-button--square hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--secondary hggs-icon--square hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+##### Tertiary
 ```html
-<button
-  class="hggs-button hggs-button--secondary hggs-button--square hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--tertiary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button
-  class="hggs-button hggs-button--secondary hggs-button--square hggs-button--small"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--tertiary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--secondary hggs-button--square hggs-button-outline"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--tertiary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Tertiary Button Square HTML structure
-
+###### Outline
 ```html
-<button class="hggs-button hggs-button--tertiary hggs-button--square">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--tertiary hggs-icon--square hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+
+##### Quaternary
 ```html
-<button
-  class="hggs-button hggs-button--tertiary hggs-button--square hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--quaternary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button
-  class="hggs-button hggs-button--tertiary hggs-button--square hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--quaternary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--tertiary hggs-button--square hggs-button--small"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--quaternary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--tertiary hggs-button--square hggs-button-outline"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--quaternary hggs-icon--square hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Quaternary Button Square HTML structure
-
+##### Quinary
 ```html
-<button class="hggs-button hggs-button--quaternary hggs-button--square">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--quinary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button
-  class="hggs-button hggs-button--quaternary hggs-button--square hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--quinary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--quaternary hggs-button--square hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--quinary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--quaternary hggs-button--square hggs-button--small"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--quinary hggs-icon--square hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+
+##### Senary
 ```html
-<button
-  class="hggs-button hggs-button--quaternary hggs-button--square hggs-button-outline"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--senary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Quinary Button Square HTML structure
-
+###### Big
 ```html
-<button class="hggs-button hggs-button--quinary hggs-button--square">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--senary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--quinary hggs-button--square hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--square hggs-icon--senary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--quinary hggs-button--square hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--senary hggs-icon--square hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-```html
-<button
-  class="hggs-button hggs-button--quinary hggs-button--square hggs-button--small"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
 
-```html
-<button
-  class="hggs-button hggs-button--quinary hggs-button--square hggs-button-outline"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
 
-#### Senary Button Square HTML structure
-
-```html
-<button class="hggs-button hggs-button--senary hggs-button--square">
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--senary hggs-button--square hggs-button--big"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--senary hggs-button--square hggs-button--medium"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--senary hggs-button--square hggs-button--small"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--senary hggs-button--square hggs-button-outline"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
 
 ### Button Circle
 
 #### Button Circle HTML structure
 
+##### Default
 ```html
-<button class="hggs-button hggs-button--circle">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button class="hggs-button hggs-button--circle hggs-button--big">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button class="hggs-button hggs-button--circle hggs-button--medium">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button class="hggs-button hggs-button--circle hggs-button--small">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+##### Primary
 ```html
-<button class="hggs-button hggs-button--circle hggs-button-outline">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--primary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Primary Button Circle HTML structure
-
+###### Big
 ```html
-<button class="hggs-button hggs-button--primary hggs-button--circle">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--primary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--primary hggs-button--circle hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--primary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--primary hggs-button--circle hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--primary hggs-icon--circle hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+##### Secondary
 ```html
-<button
-  class="hggs-button hggs-button--primary hggs-button--circle hggs-button--small"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--secondary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button
-  class="hggs-button hggs-button--primary hggs-button--circle hggs-button-outline"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--secondary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Secondary Button Circle HTML structure
-
+###### Small
 ```html
-<button class="hggs-button hggs-button--secondary hggs-button--circle">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--secondary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--secondary hggs-button--circle hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--secondary hggs-icon--circle hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+##### Tertiary
 ```html
-<button
-  class="hggs-button hggs-button--secondary hggs-button--circle hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--tertiary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button
-  class="hggs-button hggs-button--secondary hggs-button--circle hggs-button--small"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--tertiary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--secondary hggs-button--circle hggs-button-outline"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--tertiary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Tertiary Button Circle HTML structure
-
+###### Outline
 ```html
-<button class="hggs-button hggs-button--tertiary hggs-button--circle">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--tertiary hggs-icon--circle hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+
+##### Quaternary
 ```html
-<button
-  class="hggs-button hggs-button--tertiary hggs-button--circle hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--quaternary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button
-  class="hggs-button hggs-button--tertiary hggs-button--circle hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--quaternary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--tertiary hggs-button--circle hggs-button--small"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle  hggs-icon--quaternary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--tertiary hggs-button--circle hggs-button-outline"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--quaternary hggs-icon--circle hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Quaternary Button Circle HTML structure
-
+##### Quinary
 ```html
-<button class="hggs-button hggs-button--quaternary hggs-button--circle">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--quinary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Big
 ```html
-<button
-  class="hggs-button hggs-button--quaternary hggs-button--circle hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--quinary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--quaternary hggs-button--circle hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--quinary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--quaternary hggs-button--circle hggs-button--small"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--quinary hggs-icon--circle hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+
+##### Senary
 ```html
-<button
-  class="hggs-button hggs-button--quaternary hggs-button--circle hggs-button-outline"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--senary" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-#### Quinary Button Circle HTML structure
-
+###### Big
 ```html
-<button class="hggs-button hggs-button--quinary hggs-button--circle">
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--senary hggs-icon--big" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Small
 ```html
-<button
-  class="hggs-button hggs-button--quinary hggs-button--circle hggs-button--big"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--circle hggs-icon--senary hggs-icon--small" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
+###### Outline
 ```html
-<button
-  class="hggs-button hggs-button--quinary hggs-button--circle hggs-button--medium"
->
+<button class="hggs-button hggs-icon-wrapper hggs-icon--senary hggs-icon--circle hggs-icon--outline" style="">
   <span class="hggs-icon hggs-icon--edit"></span>
 </button>
 ```
 
-```html
-<button
-  class="hggs-button hggs-button--quinary hggs-button--circle hggs-button--small"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--quinary hggs-button--circle hggs-button-outline"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-#### Senary Button Circle HTML structure
-
-```html
-<button class="hggs-button hggs-button--senary hggs-button--circle">
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--senary hggs-button--circle hggs-button--big"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--senary hggs-button--circle hggs-button--medium"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--senary hggs-button--circle hggs-button--small"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```
-
-```html
-<button
-  class="hggs-button hggs-button--senary hggs-button--circle hggs-button-outline"
->
-  <span class="hggs-icon hggs-icon--edit"></span>
-</button>
-```

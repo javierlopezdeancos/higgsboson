@@ -53,6 +53,9 @@
 --icon-label-quinary-color
 --icon-label-text-align
 --icon-log-out
+--icon-margin
+--icon-margin-micro
+--icon-margin-small
 --icon-outline-border
 --icon-outline-border-primary
 --icon-outline-border-quaternary

@@ -1,4 +1,6 @@
-const buttonStyles = ["margin-right: 20px"];
+const buttonStyles = [""];
+
+const buttonIconStyles = [""];
 
 const buttonStylesWithMarginBottom = [...buttonStyles, "margin-bottom: 10px"];
 
@@ -602,93 +604,114 @@ const data = {
   ],
   icons: [
     {
-      title: "button --icon",
+      title: "button",
+      subtitle: "icon --{type}",
       styles: {
         article: articleStyles,
         header: headerStyles,
+        subheader: subHeaderStyles,
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--icon"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "",
       },
     },
     {
-      title: "button --icon --primary",
+      title: "button",
+      subtitle: "icon icon--primary --{type}",
       styles: {
         article: articleStyles,
         header: headerStyles,
+        subheader: subHeaderStyles,
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--icon", "hggs-button--primary"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--primary",
       },
     },
     {
-      title: "button --icon --secondary",
+      title: "button",
+      subtitle: "icon icon--secondary --{type}",
       styles: {
         article: articleStyles,
         header: headerStyles,
+        subheader: subHeaderStyles,
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--icon", "hggs-button--secondary"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--secondary",
       },
     },
     {
-      title: "button --icon --tertiary",
+      title: "button",
+      subtitle: "icon icon--tertiary --{type}",
       styles: {
         article: articleStyles,
         header: headerStyles,
+        subheader: subHeaderStyles,
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--icon", "hggs-button--tertiary"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--tertiary",
       },
     },
     {
-      title: "button --icon --quaternary",
+      title: "button",
+      subtitle: "icon icon--quaternary --{type}",
       styles: {
         article: articleStyles,
         header: headerStyles,
+        subheader: subHeaderStyles,
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--icon", "hggs-button--quaternary"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--quaternary",
       },
     },
     {
-      title: "button --icon --quinary",
+      title: "button",
+      subtitle: "icon icon--quinary --{type}",
       styles: {
         article: articleQuinaryStyles,
         header: headerQuinaryStyles,
+        subheader: subHeaderQuinaryStyles,
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--icon", "hggs-button--quinary"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--quinary",
       },
     },
     {
-      title: "button --icon --senary",
+      title: "button",
+      subtitle: "icon icon--senary --{type}",
       styles: {
         article: articleStyles,
         header: headerStyles,
+        subheader: subHeaderStyles,
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--icon", "hggs-button--senary"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--senary",
       },
     },
   ],
   iconsWithLabel: [
     {
-      title: "button --icon",
+      title: "button",
       subtitle: "icon-wrapper",
       styles: {
         article: articleStyles,
@@ -697,12 +720,13 @@ const data = {
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--icon"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "",
       },
     },
     {
-      title: "button --primary  --icon",
+      title: "button",
       subtitle: "icon-wrapper",
       styles: {
         article: articleStyles,
@@ -711,12 +735,13 @@ const data = {
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--primary", "hggs-button--icon"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--primary",
       },
     },
     {
-      title: "button --secondary  --icon",
+      title: "button",
       subtitle: "icon-wrapper",
       styles: {
         article: articleStyles,
@@ -725,12 +750,13 @@ const data = {
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--secondary", "hggs-button--icon"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--secondary",
       },
     },
     {
-      title: "button --tertiary  --icon",
+      title: "button",
       subtitle: "icon-wrapper",
       styles: {
         article: articleStyles,
@@ -739,12 +765,13 @@ const data = {
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--tertiary", "hggs-button--icon"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--tertiary",
       },
     },
     {
-      title: "button --quaternary  --icon",
+      title: "button",
       subtitle: "icon-wrapper",
       styles: {
         article: articleStyles,
@@ -753,12 +780,13 @@ const data = {
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--quaternary", "hggs-button--icon"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--quaternary",
       },
     },
     {
-      title: "button --quinary  --icon",
+      title: "button",
       subtitle: "icon-wrapper",
       styles: {
         article: articleQuinaryStyles,
@@ -767,12 +795,13 @@ const data = {
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--quinary", "hggs-button--icon"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--quinary",
       },
     },
     {
-      title: "button --senary  --icon",
+      title: "button",
       subtitle: "icon-wrapper",
       styles: {
         article: articleStyles,
@@ -781,151 +810,33 @@ const data = {
         button: buttonStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--senary", "hggs-button--icon"],
-        span: iconsClasses,
+        button: ["hggs-button"],
+        spanCommon: iconsClasses,
+        span: "hggs-icon--senary",
       },
     },
   ],
   squareIcons: [
     {
-      title: "button --square --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--square",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
         subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
+        button: buttonIconStyles,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--square"],
+        button: ["hggs-button", "hggs-icon-wrapper", "hggs-icon--square"],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --square --primary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--square hggs-button--primary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --square  --secondary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--square hggs-button--secondary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --square  --tertiary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--square hggs-button--tertiary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --square  --quaternary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--square hggs-button--quaternary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --square  --quinary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleQuinaryStyles,
-        header: headerWithSubtitleQuinaryStyles,
-        subheader: subHeaderQuinaryStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--square hggs-button--quinary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --square  --senary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--square hggs-button--senary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --square --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--square hggs-button--outline"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --square --primary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--square icon--primary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -935,17 +846,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--square hggs-button--outline hggs-button--primary",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--primary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --square  --secondary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--square icon--secondary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -955,17 +868,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--square hggs-button--outline hggs-button--secondary",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--secondary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --square --outline --tertiary --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--square icon--tertiary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -975,17 +890,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--square hggs-button--outline hggs-button--tertiary",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--tertiary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --square  --quaternary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--square icon--quaternary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -995,17 +912,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--square hggs-button--outline hggs-button--quaternary",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--quaternary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --square  --quinary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--square icon--quinary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleQuinaryStyles,
         header: headerWithSubtitleQuinaryStyles,
@@ -1015,17 +934,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--square hggs-button--outline hggs-button--quinary",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--quinary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --square  --senary ---outline -{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--square icon--senary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -1035,19 +956,181 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--square hggs-button--outline hggs-button--senary",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--senary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--square icon--outline",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--outline",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--square icon--outline icon--primary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--outline",
+          "hggs-icon--primary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--square icon--outline icon--secondary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--outline",
+          "hggs-icon--secondary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--square icon--outline icon--tertiary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--outline",
+          "hggs-icon--tertiary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--square icon--outline icon--quaternary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--outline",
+          "hggs-icon--quaternary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--square icon--outline icon--quinary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleQuinaryStyles,
+        header: headerWithSubtitleQuinaryStyles,
+        subheader: subHeaderQuinaryStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--outline",
+          "hggs-icon--quinary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--square icon--outline icon--senary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--square",
+          "hggs-icon--outline",
+          "hggs-icon--senary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["", "hggs-icon--small", "hggs-icon--micro"],
       },
     },
   ],
   circleIcons: [
     {
-      title: "button --circle --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--circle",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -1055,135 +1138,16 @@ const data = {
         button: buttonStylesWithMarginBottom,
       },
       classes: {
-        button: ["hggs-button", "hggs-button--circle"],
+        button: ["hggs-button", "hggs-icon-wrapper", "hggs-icon--circle"],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --circle --primary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--circle hggs-button--primary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --circle  --secondary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--circle hggs-button--secondary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --circle  --tertiary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--circle hggs-button--tertiary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --circle  --quaternary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--circle hggs-button--quaternary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --circle  --quinary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleQuinaryStyles,
-        header: headerWithSubtitleQuinaryStyles,
-        subheader: subHeaderQuinaryStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--circle hggs-button--quinary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --circle  --senary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--circle hggs-button--senary"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --circle --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        button: buttonStylesWithMarginBottom,
-      },
-      classes: {
-        button: ["hggs-button", "hggs-button--circle hggs-button--outline"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
-      },
-    },
-    {
-      title: "button --circle s--primary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--circle icon--primary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -1193,17 +1157,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--circle hggs-button--outline hggs-button--primary",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--primary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --circle  --secondary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--circle icon--secondary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -1213,17 +1179,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--circle hggs-button--outline hggs-button--secondary",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--secondary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --circle --outline --tertiary --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--circle icon--tertiary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -1233,17 +1201,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--circle hggs-button--outline hggs-button--tertiary",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--tertiary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --circle  --quaternary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--circle icon--quaternary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -1253,17 +1223,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--circle hggs-button--outline hggs-button--quaternary",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--quaternary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --circle  --quinary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--circle icon--quinary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleQuinaryStyles,
         header: headerWithSubtitleQuinaryStyles,
@@ -1273,17 +1245,19 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--circle hggs-button--outline hggs-button--quinary",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--quinary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["hggs-icon--small", "hggs-icon--micro"],
       },
     },
     {
-      title: "button --circle  --senary ---outline -{size}",
-      subtitle: "icon --{type-of-icon}",
+      title: "button icon-wrapper icon--circle icon--senary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
       styles: {
         article: articleStyles,
         header: headerWithSubtitleStyles,
@@ -1293,12 +1267,174 @@ const data = {
       classes: {
         button: [
           "hggs-button",
-          "hggs-button--circle hggs-button--outline hggs-button--senary",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--senary",
         ],
         span: iconsClasses,
       },
       extraClasses: {
-        button: ["hggs-button--small", "hggs-button--micro"],
+        button: ["hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--circle icon--outline",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--outline",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--circle icon--outline icon--primary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--outline",
+          "hggs-icon--primary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--circle icon--outline icon--secondary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--outline",
+          "hggs-icon--secondary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--circle icon--outline icon--tertiary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--outline",
+          "hggs-icon--tertiary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--circle icon--outline icon--quaternary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--outline",
+          "hggs-icon--quaternary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--circle icon--outline icon--quinary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleQuinaryStyles,
+        header: headerWithSubtitleQuinaryStyles,
+        subheader: subHeaderQuinaryStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--outline",
+          "hggs-icon--quinary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["hggs-icon--small", "hggs-icon--micro"],
+      },
+    },
+    {
+      title: "button icon-wrapper icon--circle icon--outline icon--senary",
+      subtitle: "icon --{size-of-icon} --{type-of-icon}",
+      styles: {
+        article: articleStyles,
+        header: headerWithSubtitleStyles,
+        subheader: subHeaderStyles,
+        button: buttonStylesWithMarginBottom,
+      },
+      classes: {
+        button: [
+          "hggs-button",
+          "hggs-icon-wrapper",
+          "hggs-icon--circle",
+          "hggs-icon--outline",
+          "hggs-icon--senary",
+        ],
+        span: iconsClasses,
+      },
+      extraClasses: {
+        button: ["hggs-icon--small", "hggs-icon--micro"],
       },
     },
   ],

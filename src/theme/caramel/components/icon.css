@@ -13,8 +13,8 @@
   --icon-box-background-quaternary: var(--hggs-color-background-quaternary);
   --icon-box-background-quinary: var(--hggs-color-background-quinary);
   --icon-box-background-secondary: var(--hggs-color-background-secondary);
-  --icon-box-background-senary: var(--hggs-color-background-senary-007);
-  --icon-box-background-tertiary: var(--hggs-color-background-tertiary-009);
+  --icon-box-background-senary: var(--hggs-color-background-senary);
+  --icon-box-background-tertiary: var(--hggs-color-background-tertiary);
   --icon-box-background: var(--hggs-color-background-gray);
   --icon-box-padding-micro: var(--hggs-space-horizontal-xs);
   --icon-box-padding-small: var(--hggs-space-horizontal-sm);
@@ -50,4 +50,7 @@
   --icon-size-micro: 10px;
   --icon-size-small: 15px;
   --icon-size: 20px;
+  --icon-margin: var(--hggs-space-xs);
+  --icon-margin-small: var(--hggs-space-xs);
+  --icon-margin-micro: var(--hggs-space-2xs);
 }

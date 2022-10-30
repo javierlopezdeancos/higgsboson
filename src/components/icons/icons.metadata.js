@@ -1,6 +1,6 @@
-const iconStyles = ["margin-right: 10px", "margin-bottom: 10px"];
+const iconStyles = [""];
 
-const iconLabeledStyles = ["margin-right: 20px", "margin-bottom: 10px"];
+const iconLabeledStyles = [""];
 
 const data = {
   title: "Icons",
