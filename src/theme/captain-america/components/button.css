@@ -97,6 +97,7 @@
   --button-icon-padding: 0;
   --button-icon-width: calc(var(--icon-size) + var(--button-icon-padding));
   --button-margin-vertical: var(--hggs-space-vertical-sm);
+  --button-margin-horizontal: var(--hggs-space-vertical-xs);
   --button-padding-big: var(--hggs-space-horizontal)
     var(--hggs-space-vertical-md);
   --button-padding-medium: var(--hggs-space-horizontal-sm)

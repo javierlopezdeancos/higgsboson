@@ -50,4 +50,7 @@
   --icon-size-micro: 10px;
   --icon-size-small: 12px;
   --icon-size: 20px;
+  --icon-margin: var(--hggs-space-horizontal-xs);
+  --icon-margin-small: var(--hggs-space-horizontal-xs);
+  --icon-margin-micro: var(--hggs-space-horizontal-2xs);
 }

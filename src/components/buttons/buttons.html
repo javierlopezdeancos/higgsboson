@@ -66,11 +66,11 @@
           %>
 
           <% if(buttonIsDisabled) { %>
-            <button class="<%= buttonClass %>" disabled/>Button</button>
+            <button class="<%= buttonClass %>" disabled>Button</button>
           <% } else if(buttonHasErrors) { %>
-            <button class="<%= buttonClass %>" error/>Button</button>
+            <button class="<%= buttonClass %>" error>Button</button>
           <% } else { %>
-            <button class="<%= buttonClass %>" />Button</button>
+            <button class="<%= buttonClass %>">Button</button>
           <% } %>
         </article>
       <% }); %>
@@ -95,6 +95,14 @@
             return acc + '; ' + s;
           }, '');
 
+          const subHeaderIconButtonStyle = _.reduce(i?.styles?.subheader, (acc, s) => {
+            if (!acc) {
+              return s;
+            }
+
+            return acc + '; ' + s;
+          }, '');
+
           const IconButtonStyle = _.reduce(i?.styles?.button, (acc, s) => {
             if (!acc) {
               return s;
@@ -109,6 +117,10 @@
             <%= i.title %>
           </h3>
 
+          <h4 class="hggs-h4" style="<%= subHeaderIconButtonStyle %>">
+            <%= i.subtitle %>
+          </h4>
+
           <div class="hggs-flex--top-left-row">
             <%
               const iconButtonClass = _.reduce(i.classes.button, (acc, bc) => {
@@ -120,18 +132,18 @@
               }, '');
             %>
 
-            <% _.each(i.classes.span, (spanClasses, index) => { %>
+            <% _.each(i.classes.spanCommon, (spanClass, index) => { %>
               <%
-                const iconSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                const iconSpanClass = _.reduce(spanClass, (acc, spc) => {
                   if (!acc) {
-                    return spc;
+                    return spc + ' ' + i?.classes?.span;
                   }
 
                   return acc + ' ' + spc;
                 }, '');
               %>
 
-              <button class="<%= iconButtonClass %>" style="<%= IconButtonStyle %>" />
+              <button class="<%= iconButtonClass %>" style="<%= IconButtonStyle %>">
                 <span class="<%= iconSpanClass %>"></span>
               </button>
             <% }); %>
@@ -198,18 +210,20 @@
               }, '');
             %>
 
-            <% _.each(iwl.classes.span, (spanClasses, index) => { %>
+            <% _.each(iwl.classes.spanCommon, (spanClasses, index) => { %>
               <%
                 const iconSpanClass = _.reduce(spanClasses, (acc, spc) => {
                   if (!acc) {
-                    return spc;
+                    return spc + ' ' + iwl?.classes?.span;
                   }
 
                   return acc + ' ' + spc;
                 }, '');
+
+
               %>
 
-              <button class="<%= iconButtonClass %>" style="<%= IconButtonWithLabelStyle %>" />
+              <button class="<%= iconButtonClass %>" style="<%= IconButtonWithLabelStyle %>">
                 <div class="hggs-icon-wrapper">
                   <span class="<%= iconSpanClass %>"></span>
                   <span class="hggs-icon-label"> Button label</span>
@@ -279,7 +293,7 @@
                 }, '');
               %>
 
-              <% _.each(s.classes.span, (spanClasses, index) => { %>
+              <% _.each(s?.classes?.spanCommon, (spanClasses, index) => { %>
                 <%
                   const squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
                     if (!acc) {
@@ -290,7 +304,7 @@
                   }, '');
                 %>
 
-                <button class="<%= squareButtonClass %>" style="<%= buttonSquareStyle %>" />
+                <button class="<%= squareButtonClass %>" style="<%= buttonSquareStyle %>">
                   <span class="<%= squareSpanClass %>"></span>
                 </button>
               <% }); %>
@@ -302,9 +316,17 @@
                   const squareButtonExtraClass = squareButtonClass + ' ' + buttonExtraClasses
                 %>
 
-                <% _.each(s.classes.span, (spanClasses, index) => { %>
+                <% let squareSpanClass='', squareSpanExtraClass=''; %>
+
+                <% _.each(s?.extraClasses?.span, (spanExtraClasses, index) => { %>
                   <%
-                    const squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
+                    squareSpanExtraClass = squareSpanExtraClass + ' ' + spanExtraClasses;
+                  %>
+                <% }); %>
+
+                <% _.each(s?.classes?.span, (spanClasses, index) => { %>
+                  <%
+                    squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
                       if (!acc) {
                         return spc;
                       }
@@ -313,7 +335,9 @@
                     }, '');
                   %>
 
-                  <button class="<%= squareButtonExtraClass %>" style="<%= buttonSquareStyle %>" />
+                  <% squareSpanClass = squareSpanClass + squareSpanExtraClass; %>
+
+                  <button class="<%= squareButtonExtraClass %>" style="<%= buttonSquareStyle %>">
                     <span class="<%= squareSpanClass %>"></span>
                   </button>
                 <% }); %>
@@ -393,7 +417,7 @@
                   }, '');
                 %>
 
-                <button class="<%= circleButtonClass %>" style="<%= circleButtonsStyle %>" />
+                <button class="<%= circleButtonClass %>" style="<%= circleButtonsStyle %>">
                   <span class="<%= circleSpanClass %>"></span>
                 </button>
               <% }); %>
@@ -416,7 +440,7 @@
                     }, '');
                   %>
 
-                  <button class="<%= circleButtonExtraClass %>" style="<%= circleButtonsStyle %>" />
+                  <button class="<%= circleButtonExtraClass %>" style="<%= circleButtonsStyle %>">
                     <span class="<%= circleSpanClass %>"></span>
                   </button>
                 <% }); %>

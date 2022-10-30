@@ -1,608 +1,3 @@
-%hggs-button-primary {
-  color: var(--button-color-primary, var(--hggs-color-quinary-default));
-  background-color: var(
-    --button-background-primary,
-    var(--hggs-color-primary-default)
-  );
-}
-
-%hggs-button-secondary {
-  color: var(--button-color-secondary, var(--hggs-color-quinary-default));
-  background-color: var(
-    --button-background-secondary,
-    var(--hggs-color-secondary-default)
-  );
-}
-
-%hggs-button-tertiary {
-  color: var(--button-color-tertiary, var(--hggs-color-quinary-default));
-  background-color: var(
-    --button-background-tertiary,
-    var(--hggs-color-tertiary-default)
-  );
-}
-
-%hggs-button-quaternary {
-  color: var(--button-color-quaternary, var(--hggs-color-quinary-default));
-  background-color: var(
-    --button-background-quaternary,
-    var(--hggs-color-quaternary-default)
-  );
-}
-
-%hggs-button-quinary {
-  color: var(--button-color-quinary, var(--hggs-color-quaternary-default));
-  background-color: var(
-    --button-background-quinary,
-    var(--hggs-color-quinary-default)
-  );
-}
-
-%hggs-button-senary {
-  color: var(--button-color-senary, var(--hggs-color-quinary-default));
-  background-color: var(
-    --button-background-senary,
-    var(--hggs-color-senary-default)
-  );
-}
-
-%hggs-button-icon-hover {
-  filter: var(
-    --button-icon-filter-hover,
-    var(--hggs-filter-quaternary-default)
-  );
-  transition: var(
-    --button-transition-hover,
-    filter var(--hggs-animation-ease-default)
-  );
-}
-
-%hggs-button-icon-hover-primary {
-  filter: var(
-    --button-icon-filter-primary-hover,
-    var(--hggs-filter-default)
-  );
-  transition: var(
-    --button-transition-hover,
-    filter var(--hggs-animation-ease-default)
-  );
-}
-
-%hggs-button-icon-hover-secondary {
-  filter: var(
-    --button-icon-filter-secondary-hover,
-    var(--hggs-filter-primary-default)
-  );
-  transition: var(
-    --button-transition-hover,
-    filter var(--hggs-animation-ease-default)
-  );
-}
-
-%hggs-button-icon-hover-tertiary {
-  filter: var(
-    --button-icon-filter-tertiary-hover,
-    var(--hggs-filter-secondary-default)
-  );
-  transition: var(
-    --button-transition-hover,
-    filter var(--hggs-animation-ease-default)
-  );
-}
-
-%hggs-button-icon-hover-quaternary {
-  filter: var(
-    --button-icon-filter-quaternary-hover,
-    var(--hggs-filter-quaternary-default)
-  );
-  transition: var(
-    --button-transition-hover,
-    filter var(--hggs-animation-ease-default)
-  );
-}
-
-%hggs-button-icon-hover-quinary {
-  filter: var(
-    --button-icon-filter-quinary-hover,
-    var(--hggs-filter-quinary-default)
-  );
-  transition: var(
-    --button-transition-hover,
-    filter var(--hggs-animation-ease-default)
-  );
-}
-
-%hggs-button-icon-hover-senary {
-  filter: var(
-    --button-icon-filter-senary-hover,
-    var(--hggs-filter-tertiary-default)
-  );
-  transition: var(
-    --button-transition-hover,
-    filter var(--hggs-animation-ease-default)
-  );
-}
-
-%hggs-button-hover {
-  background-color: var(
-    --button-background-hover,
-    var(--hggs-color-default)
-  );
-  box-shadow: var(
-    --button-box-shadow-hover,
-    var(--hggs-shadow-default)
-  );
-  transition: var(
-    --button-transition-hover,
-    width var(--hggs-animation-ease-default),
-    height var(--hggs-animation-ease-default)
-  );
-  transform: var(
-    --button-transform-hover,
-    var(--hggs-transform-escale-default)
-  );
-  color: var(--button-color-hover, var(--hggs-color-quinary-default));
-}
-
-%hggs-button-focus {
-  outline: var(--button-outline-focus, none);
-  box-shadow: var(--button-box-shadow-focus, var(--hggs-shadow-primary-default));
-}
-
-%hggs-button-hover-primary {
-  background-color: var(
-    --button-background-primary-hover,
-    var(--hggs-color-primary-hover-default)
-  );
-  box-shadow: var(
-   --button-box-shadow-primary-hover,
-    var(--hggs-shadow-default)
-  );
-  transition: var(
-    --button-transition-primary-hover,
-    width var(--hggs-animation-ease-default),
-    height var(--hggs-animation-ease-default)
-  );
-  transform: var(
-    --button-transform-primary-hover,
-    var(--hggs-transform-escale-default)
-  );
-  color: var(--button-color-primary, var(--hggs-color-quinary-default));
-}
-
-%hggs-button-focus-primary {
-  box-shadow: var(
-    --button-box-shadow-primary-focus,
-    --hggs-form-box-primary-focus-default
-  );
-}
-
-%hggs-button-hover-secondary {
-  background-color: var(
-    --button-background-secondary-hover,
-    var(--hggs-color-secondary-hover-default)
-  );
-  box-shadow: var(
-    --button-box-shadow-secondary-hover,
-     var(--hggs-shadow-default)
-  );
-   transition: var(
-    --button-transition-secondary-hover,
-    width var(--hggs-animation-ease-default),
-    height var(--hggs-animation-ease-default)
-  );
-  transform: var(
-    --button-transform-secondary-hover,
-    var(--hggs-transform-escale-default)
-  );
-  color: var(--button-color-secondary, var(--hggs-color-quinary-default));
-}
-
-%hggs-button-focus-secondary {
-  box-shadow: var(
-    --button-box-shadow-secondary-focus,
-    --hggs-form-box-shadow-secondary-focus-default
-  );
-}
-
-%hggs-button-hover-tertiary {
-  background-color: var(
-    --button-background-tertiary-hover,
-    var(--hggs-color-tertiary-hover-default)
-  );
-  box-shadow: var(
-    --button-box-shadow-tertiary-hover,
-    var(--hggs-shadow-default)
-  );
-  transition: var(
-    --button-transition-tertiary-hover,
-    width var(--hggs-animation-ease-default),
-    height var(--hggs-animation-ease-default)
-  );
-  color: var(--button-color-tertiary, var(--hggs-color-quinary-default));
-}
-
-%hggs-button-focus-tertiary {
-  box-shadow: var(
-    --button-box-shadow-tertiary-focus,
-    --hggs-form-box-shadow-tertiary-focus-default
-  );
-}
-
-%hggs-button-hover-quaternary {
-  background-color: var(
-    --button-background-quaternary-hover,
-    var(--hggs-color-quaternary-hover-default)
-  );
-  box-shadow: var(
-    --button-box-shadow-quaternary-hover,
-    var(--hggs-shadow-default)
-  );
-  transition: var(
-    --button-transition-quaternary-hover,
-    width var(--hggs-animation-ease-default),
-    height var(--hggs-animation-ease-default)
-  );
-  color: var(--button-color-quaternary, var(--hggs-color-quinary-default));
-}
-
-%hggs-button-focus-quaternary {
-  box-shadow: var(
-    --button-box-shadow-quaternary-focus,
-    --hggs-form-box-shadow-quaternary-focus-default
-  );
-}
-
-%hggs-button-hover-quinary {
-  background-color: var(
-    --button-background-quinary-hover,
-    var(--hggs-color-quinary-hover-default)
-  );
-  box-shadow: var(
-    --button-box-shadow-quinary-hover,
-    var(--hggs-shadow-default)
-  );
-  transition: var(
-    --button-transition-quinary-hover,
-    width var(--hggs-animation-ease-default),
-    height var(--hggs-animation-ease-default)
-  );
-  color: var(
-    --button-color-quinary,
-    var(--hggs-color-quaternary-default)
-  );
-}
-
-%hggs-button-focus-quinary {
-  box-shadow: var(
-    --button-box-shadow-quinary-focus,
-    --hggs-form-box-shadow-quinary-focus-default
-  );
-}
-
-%hggs-button-hover-senary {
-  background-color: var(
-    --button-background-senary-hover,
-    var(--hggs-color-senary-hover-default)
-  );
-  box-shadow: var(
-    --button-box-shadow-senary-hover,
-    var(--hggs-shadow-default)
-  );
-  transition: var(
-    --button-transition-senary-hover,
-    width var(--hggs-animation-ease-default),
-    height var(--hggs-animation-ease-default)
-  );
-  color: var(
-    --button-color-senary,
-    var(--hggs-color-quinary-default)
-  );
-}
-
-%hggs-button-focus-senary {
-  box-shadow: var(
-    --button-box-shadow-senary-focus,
-    --hggs-form-box-shadow-senary-focus-default
-  );
-}
-
-%hggs-button-outline {
-  background-color: transparent;
-  background: transparent;
-  color: var(
-    --button-color-outline,
-    var(--hggs-color-default)
-  );
-  border: var(
-    --button-border-outline,
-    var(--hggs-border-default)
-  );
-}
-
-
-%hggs-button-outline-hover {
-  background-color: transparent;
-  background: transparent;
-  outline: unset;
-  outline-offset: 0;
-  box-shadow: var(
-    --button-box-shadow-outline-hover,
-    unset
-  );
-  color: var(
-    --button-color-outline-hover,
-    var(--hggs-color-default)
-  );
-  border: var(
-    --button-border-outline-hover,
-    var(--hggs-border-default)
-  );
-}
-
-%hggs-button-outline-primary {
-  background-color: transparent;
-  background: transparent;
-  color: var(
-    --button-color-outline-primary,
-    var(--hggs-color-primary-default)
-  );
-  border: var(
-    --button-border-outline-primary,
-    var(--hggs-border-primary-default)
-  );
-}
-
-%hggs-button-outline-hover-primary {
-  background-color: transparent;
-  background: transparent;
-  outline: unset;
-  outline-offset: 0;
-  box-shadow: var(
-    --button-box-shadow-outline-primary-hover,
-    unset
-  );
-  color: var(
-    --button-color-outline-primary-hover,
-    var(--hggs-color-default))
-  );
-  border: var(
-    --button-border-outline-primary-hover,
-    var(--hggs-border-default)
-  );
-}
-
-%hggs-button-outline-secondary {
-  background-color: transparent;
-  background: transparent;
-  color: var(
-    --button-color-outline-secondary,
-    var(--hggs-color-quaternary-default));
-  border: var(
-    --button-border-outline-secondary,
-    var(--hggs-border-secondary-default)
-  );
-}
-
-%hggs-button-outline-hover-secondary {
-  background-color: transparent;
-  background: transparent;
-  outline: unset;
-  outline-offset: 0;
-  box-shadow: var(
-    --button-box-shadow-outline-secondary-hover,
-    unset
-  );
-  color: var(
-    --button-color-outline-secondary-hover,
-    var(--hggs-color-primary-default))
-  );
-  border: var(
-    --button-border-outline-secondary-hover,
-    var(--hggs-border-primary-default)
-  );
-}
-
-%hggs-button-outline-tertiary {
-  background-color: transparent;
-  background: transparent;
-  color: var(
-    --button-color-outline-tertiary,
-    var(--hggs-color-tertiary-default)
-  );
-  border: var(
-    --button-border-outline-tertiary,
-    var(--hggs-border-tertiary-default)
-  );
-}
-
-%hggs-button-outline-hover-tertiary {
-  background-color: transparent;
-  background: transparent;
-  outline: unset;
-  outline-offset: 0;
-  box-shadow: var(
-    --button-box-shadow-outline-tertiary-hover,
-    unset
-  );
-  color: var(
-    --button-color-outline-tertiary-hover,
-    var(--hggs-color-secondary-default)
-  );
-  border: var(
-    --button-border-outline-tertiary-hover,
-    var(--hggs-border-secondary-default)
-  );
-}
-
-%hggs-button-outline-quaternary {
-  background-color: transparent;
-  background: transparent;
-  color: var(
-    --button-color-outline-quaternary,
-    var(--hggs-color-quaternary-default)
-  );
-  border: var(
-    --button-border-outline-quaternary,
-    var(--hggs-border-quaternary-default)
-  );
-}
-
-%hggs-button-outline-hover-quaternary {
-  background-color: transparent;
-  background: transparent;
-  outline: unset;
-  outline-offset: 0;
-  box-shadow: var(
-    --button-box-shadow-outline-quaternary-hover,
-    unset
-  );
-  color: var(
-    --button-color-outline-quaternary-hover,
-    var(--hggs-color-quaternary-default)
-  );
-  border: var(
-    --button-border-outline-quaternary-hover,
-    var(--hggs-border-quaternary-default)
-  );
-}
-
-%hggs-button-outline-quinary {
-  background-color: transparent;
-  background: transparent;
-  color: var(
-    --button-color-outline-quinary,
-    var(--hggs-color-quinary-default)
-  );
-  border: var(
-    --button-border-outline-quinary,
-    var(--hggs-border-quinary-default)
-  );
-}
-
-%hggs-button-outline-hover-quinary {
-  background-color: transparent;
-  background: transparent;
-  outline: unset;
-  outline-offset: 0;
-  box-shadow: var(
-    --button-box-shadow-outline-quinary-hover,
-    unset
-  );
-  color: var(
-    --button-color-outline-quinary-hover,
-    var(--hggs-color-quinary-default)
-  );
-  border: var(
-    --button-border-outline-quinary-hover,
-    var(--hggs-border-quinary-default)
-  );
-}
-
-%hggs-button-outline-senary {
-  background-color: transparent;
-  background: transparent;
-  color: var(
-    --button-color-outline-senary,
-    var(--hggs-color-senary-default)
-  );
-  border: var(
-    --button-border-outline-senary,
-    var(--hggs-border-senary-default)
-  );
-}
-
-%hggs-button-outline-hover-senary {
-  background-color: transparent;
-  background: transparent;
-  outline: unset;
-  outline-offset: 0;
-  box-shadow: var(
-    --button-box-shadow-outline-senary-hover,
-   unset
-  );
-  color: var(
-    --button-color-outline-senary-hover,
-    var(--hggs-color-tertiary-default)
-  );
-  border: var(
-    --button-border-outline-senary-hover,
-    var(--hggs-border-tertiary-default)
-  );
-}
-
-%hggs-button-icon-reset {
-  background: unset;
-  background-color: unset;
-}
-
-%hggs-button-icon-hover-reset {
-  background-color: unset;
-  box-shadow: unset;
-  box-shadow: var(
-    --button-icon-shadow-hover,
-    unset
-  );
-  transform: var(
-    --button-icon-transform-hover,
-    var(--hggs-transform-escale-default)
-  );
-}
-
-%hggs-button-box {
-  &:hover .hggs-icon {
-    @extend %hggs-icon-box-default;
-  }
-
-  &.hggs-button--primary {
-    & .hggs-icon {
-      @extend %hggs-icon-box-primary;
-    }
-
-    &:hover .hggs-icon {
-      @extend %hggs-icon-box-quaternary
-    }
-  }
-
-  &.hggs-button--secondary {
-    & .hggs-icon {
-      @extend %hggs-icon-box-secondary;
-    }
-
-    &:hover .hggs-icon {
-      @extend %hggs-icon-box-tertiary;
-    }
-  }
-
-  &.hggs-button--tertiary {
-    & .hggs-icon {
-      @extend %hggs-icon-box-tertiary;
-    }
-
-    &:hover .hggs-icon {
-      @extend %hggs-icon-box-quaternary;
-    }
-  }
-
-  &.hggs-button--quaternary {
-    & .hggs-icon {
-      @extend %hggs-icon-box-quaternary;
-    }
-  }
-
-  &.hggs-button--quinary {
-    & .hggs-icon {
-      @extend %hggs-icon-box-quinary;
-    }
-  }
-
-  &.hggs-button--senary {
-    & .hggs-icon {
-      @extend %hggs-icon-box-senary;
-    }
-  }
-}
-
 .hggs-button {
   border: unset;
   text-align: center;
@@ -611,64 +6,307 @@
     calc(var(--hggs-space-default) / 1.2)
       var(--hggs-space-md-default)
   );
-  font-size: var(
-    --button-font-size-medium,
-    var(--hggs-font-size-2xl-default)
-  );
+  margin: var(--button-margin-vertical, var(--hggs-space-default)) var(--button-margin-horizontal, var(--hggs-space-xs-default));
+  font-size: var(--button-font-size-medium, var(--hggs-font-size-2xl-default));
   font-family: var(--button-font-family, var(--hggs-font-family));
-  font-weight: var(
-    --button-font-weight,
-    var(--hggs-font-weight-default)
-  );
+  font-weight: var(--button-font-weight, var(--hggs-font-weight-default));
   color: var(--button-color, var(--hggs-color-quinary-default));
   letter-spacing: var(--button-font-letter-spacing);
   border-radius: var(--button-border-radius);
   cursor: var(--button-cursor, default);
-  margin: var(--button-margin-vertical) 0;
   background: var(--button-background, var(--hggs-color-default));
 
   &:hover {
-    @extend %hggs-button-hover;
-
-    & .hggs-icon {
-      @extend %hggs-button-icon-hover;
-    }
+    background-color: var(--button-background-hover, var(--hggs-color-default));
+    box-shadow: var(--button-box-shadow-hover, var(--hggs-shadow-default));
+    transition: var(
+      --button-transition-hover,
+      width var(--hggs-animation-ease-default),
+      height var(--hggs-animation-ease-default)
+    );
+    transform: var(--button-transform-hover, var(--hggs-transform-escale-default));
+    color: var(--button-color-hover, var(--hggs-color-quinary-default));
   }
 
   &:focus {
-    @extend %hggs-button-focus;
+    outline: var(--button-outline-focus, none);
+    box-shadow: var(--button-box-shadow-focus, var(--hggs-shadow-primary-default));
   }
 
-  &.hggs-button--square {
-    @extend %hggs-icon-box;
-    @extend %hggs-icon-box-square;
-    @extend %hggs-button-box;
+  &.hggs-button--primary {
+    color: var(--button-color-primary, var(--hggs-color-quinary-default));
+    background-color: var(--button-background-primary, var(--hggs-color-primary-default));
+  }
 
-    &.hggs-button--small {
-      @extend %hggs-icon-box-small;
+  &.hggs-button--primary,
+  &.hggs-icon--primary {
+    &:hover {
+      background-color: var(--button-background-primary-hover, var(--hggs-color-primary-hover-default));
+      box-shadow: var(--button-box-shadow-primary-hover, var(--hggs-shadow-default));
+      transition: var(
+        --button-transition-primary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
+      transform: var(--button-transform-primary-hover, var(--hggs-transform-escale-default));
+      color: var(--button-color-primary, var(--hggs-color-quinary-default));
     }
 
-    &.hggs-button--micro {
-      @extend %hggs-icon-box-micro;
+    &:focus {
+      box-shadow: var(--button-box-shadow-primary-focus, --hggs-form-box-primary-focus-default);
     }
   }
 
-  &.hggs-button--circle {
-    @extend %hggs-icon-box;
-    @extend %hggs-icon-box-circle;
-    @extend %hggs-button-box;
+  &.hggs-button--secondary {
+    color: var(--button-color-secondary, var(--hggs-color-quinary-default));
+    background-color: var(--button-background-secondary, var(--hggs-color-secondary-default));
+  }
 
-    &.hggs-button--small {
-      @extend %hggs-icon-box-small;
+  &.hggs-button--secondary,
+  &.hggs-icon--secondary {
+    &:hover {
+      background-color: var(--button-background-secondary-hover, var(--hggs-color-secondary-hover-default));
+      box-shadow: var(--button-box-shadow-secondary-hover, var(--hggs-shadow-default));
+      transition: var(
+        --button-transition-secondary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
+      transform: var(--button-transform-secondary-hover, var(--hggs-transform-escale-default));
+      color: var(--button-color-secondary, var(--hggs-color-quinary-default));
     }
 
-    &.hggs-button--micro {
-      @extend %hggs-icon-box-micro;
+    &:focus {
+      box-shadow: var(--button-box-shadow-secondary-focus, --hggs-form-box-shadow-secondary-focus-default);
+    }
+  }
+
+  &.hggs-button--tertiary {
+    color: var(--button-color-tertiary, var(--hggs-color-quinary-default));
+    background-color: var(--button-background-tertiary, var(--hggs-color-tertiary-default)
+  );
+  }
+
+  &.hggs-button--tertiary,
+  &.hggs-icon--tertiary {
+    &:hover {
+      background-color: var(--button-background-tertiary-hover, var(--hggs-color-tertiary-hover-default));
+      box-shadow: var(--button-box-shadow-tertiary-hover, var(--hggs-shadow-default));
+      transition: var(
+        --button-transition-tertiary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
+      color: var(--button-color-tertiary, var(--hggs-color-quinary-default));
     }
 
+    &:focus {
+      box-shadow: var(--button-box-shadow-tertiary-focus, --hggs-form-box-shadow-tertiary-focus-default);
+    }
+  }
+
+  &.hggs-button--quaternary {
+    color: var(--button-color-quaternary, var(--hggs-color-quinary-default));
+    background-color: var(--button-background-quaternary, var(--hggs-color-quaternary-default));
+  }
+
+  &.hggs-button--quaternary,
+  &.hggs-icon--quaternary {
+    &:hover {
+      background-color: var(--button-background-quaternary-hover, var(--hggs-color-quaternary-hover-default));
+      box-shadow: var(--button-box-shadow-quaternary-hover, var(--hggs-shadow-default));
+      transition: var(
+        --button-transition-quaternary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
+      color: var(--button-color-quaternary, var(--hggs-color-quinary-default));
+    }
+
+    &:focus {
+      box-shadow: var(--button-box-shadow-quaternary-focus, --hggs-form-box-shadow-quaternary-focus-default);
+    }
+  }
+
+  &.hggs-button--quinary {
+    color: var(--button-color-quinary, var(--hggs-color-quaternary-default));
+    background-color: var(--button-background-quinary, var(--hggs-color-quinary-default));
+  }
+
+  &.hggs-button--quinary,
+  &.hggs-icon--quinary {
+    &:hover {
+      background-color: var(--button-background-quinary-hover, var(--hggs-color-quinary-hover-default));
+      box-shadow: var(--button-box-shadow-quinary-hover, var(--hggs-shadow-default));
+      transition: var(
+        --button-transition-quinary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
+      color: var(--button-color-quinary, var(--hggs-color-quaternary-default));
+    }
+
+    &:focus {
+      box-shadow: var(--button-box-shadow-quinary-focus, --hggs-form-box-shadow-quinary-focus-default);
+    }
+  }
+
+  &.hggs-button--senary {
+    color: var(--button-color-senary, var(--hggs-color-quinary-default));
+    background-color: var(--button-background-senary, var(--hggs-color-senary-default));
+  }
+
+  &.hggs-button--senary,
+  &.hggs-icon--senary {
+    &:hover {
+      background-color: var(--button-background-senary-hover, var(--hggs-color-senary-hover-default));
+      box-shadow: var(--button-box-shadow-senary-hover, var(--hggs-shadow-default));
+      transition: var(
+        --button-transition-senary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
+      color: var(--button-color-senary, var(--hggs-color-quinary-default));
+    }
+
+    &:focus {
+      box-shadow: var(--button-box-shadow-senary-focus, --hggs-form-box-shadow-senary-focus-default);
+    }
+  }
+
+  &:has( .hggs-icon):not( .hggs-icon-wrapper) {
+    background: unset;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.hggs-button--outline {
+    background-color: transparent;
+    background: transparent;
+    color: var(--button-color-outline, var(--hggs-color-default));
+    border: var( --button-border-outline, var(--hggs-border-default));
+
+    &:hover {
+      background-color: transparent;
+      background: transparent;
+      outline: unset;
+      outline-offset: 0;
+      box-shadow: var(--button-box-shadow-outline-hover, unset);
+      color: var(--button-color-outline-hover, var(--hggs-color-default));
+      border: var(--button-border-outline-hover, var(--hggs-border-default));
+    }
+
+    &.hggs-button--primary {
+      background-color: transparent;
+      background: transparent;
+      color: var(--button-color-outline-primary, var(--hggs-color-primary-default));
+      border: var(--button-border-outline-primary, var(--hggs-border-primary-default));
+
+      &:hover {
+        background-color: transparent;
+        background: transparent;
+        outline: unset;
+        outline-offset: 0;
+        box-shadow: var(--button-box-shadow-outline-primary-hover, unset);
+        color: var(--button-color-outline-primary-hover, var(--hggs-color-default));
+        border: var(--button-border-outline-primary-hover, var(--hggs-border-default));
+      }
+    }
+
+    &.hggs-button--secondary {
+      background-color: transparent;
+      background: transparent;
+      color: var(--button-color-outline-secondary, var(--hggs-color-quaternary-default));
+      border: var(--button-border-outline-secondary, var(--hggs-border-secondary-default));
+
+      &:hover {
+        background-color: transparent;
+        background: transparent;
+        outline: unset;
+        outline-offset: 0;
+        box-shadow: var(--button-box-shadow-outline-secondary-hover, unset);
+        color: var(--button-color-outline-secondary-hover, var(--hggs-color-primary-default));
+        border: var(--button-border-outline-secondary-hover, var(--hggs-border-primary-default));
+      }
+    }
+
+    &.hggs-button--tertiary {
+      background-color: transparent;
+      background: transparent;
+      color: var(--button-color-outline-tertiary,var(--hggs-color-tertiary-default));
+      border: var(--button-border-outline-tertiary,var(--hggs-border-tertiary-default));
+
+      &:hover {
+        background-color: transparent;
+        background: transparent;
+        outline: unset;
+        outline-offset: 0;
+        box-shadow: var(--button-box-shadow-outline-tertiary-hover, unset);
+        color: var(--button-color-outline-tertiary-hover, var(--hggs-color-secondary-default));
+        border: var(--button-border-outline-tertiary-hover, var(--hggs-border-secondary-default));
+      }
+    }
+
+    &.hggs-button--quaternary {
+      background-color: transparent;
+      background: transparent;
+      color: var(--button-color-outline-quaternary, var(--hggs-color-quaternary-default));
+      border: var(--button-border-outline-quaternary, var(--hggs-border-quaternary-default));
+
+      &:hover {
+        background-color: transparent;
+        background: transparent;
+        outline: unset;
+        outline-offset: 0;
+        box-shadow: var(--button-box-shadow-outline-quaternary-hover, unset);
+        color: var(--button-color-outline-quaternary-hover, var(--hggs-color-quaternary-default));
+        border: var(--button-border-outline-quaternary-hover, var(--hggs-border-quaternary-default));
+      }
+    }
+
+    &.hggs-button--quinary {
+      background-color: transparent;
+      background: transparent;
+      color: var(--button-color-outline-quinary, var(--hggs-color-quinary-default));
+      border: var(--button-border-outline-quinary, var(--hggs-border-quinary-default));
+
+      &:hover {
+        background-color: transparent;
+        background: transparent;
+        outline: unset;
+        outline-offset: 0;
+        box-shadow: var(--button-box-shadow-outline-quinary-hover, unset);
+        color: var(--button-color-outline-quinary-hover, var(--hggs-color-quinary-default));
+        border: var(--button-border-outline-quinary-hover, var(--hggs-border-quinary-default));
+      }
+    }
+
+    &.hggs-button--senary {
+      background-color: transparent;
+      background: transparent;
+      color: var(--button-color-outline-senary, var(--hggs-color-senary-default));
+      border: var(--button-border-outline-senary, var(--hggs-border-senary-default));
+
+      &:hover {
+        background-color: transparent;
+        background: transparent;
+        outline: unset;
+        outline-offset: 0;
+        box-shadow: var(--button-box-shadow-outline-senary-hover, unset);
+        color: var(--button-color-outline-senary-hover, var(--hggs-color-tertiary-default));
+        border: var(--button-border-outline-senary-hover, var(--hggs-border-tertiary-default));
+      }
+    }
   }
 
   &.hggs-button--icon {
+    width: auto;
+    height: auto;
+    background: unset;
+    background-color: unset;
+    padding: var(--button-icon-padding, var(--hggs-space-xs-default));
+    margin: 0;
+
     &:not(.hggs-icon-wrapper) {
       @extend .hggs-flex--center-row;
     }
@@ -680,427 +318,74 @@
       );
     }
 
-    width: auto;
-    height: auto;
-    background: unset;
-    background-color: unset;
-    padding: var(--button-icon-padding, var(--hggs-space-xs-default));
-    margin: 0;
-
-    &.hggs-icon {
-      display: block;
-    }
-
     &:hover {
-      @extend %hggs-button-icon-hover-reset;
+      background-color: unset;
+      box-shadow: unset;
+      box-shadow: var(--button-icon-shadow-hover, unset);
+      transform: var(--button-icon-transform-hover, var(--hggs-transform-escale-default));
 
       & .hggs-icon {
-        @extend %hggs-button-icon-hover;
+        filter: var(--button-icon-filter-hover, var(--hggs-filter-quaternary-default));
+        transition: var(--button-transition-hover, filter var(--hggs-animation-ease-default));
       }
 
       & .hggs-icon-label {
-        color: var(
-          --button-icon-label-color-hover,
-          var(--hggs-color-quaternary-default)
-        );
-      }
-    }
-  }
-
-  &.hggs-button--outline {
-    @extend %hggs-button-outline;
-
-    &:hover {
-      @extend %hggs-button-outline-hover;
-    }
-
-    & .hggs-icon {
-      @extend %hggs-icon-outline-default;
-    }
-
-    &:hover .hggs-icon {
-      @extend %hggs-icon-outline-default;
-    }
-  }
-
-  &.hggs-button--primary {
-    @extend %hggs-button-primary;
-
-    & .hggs-icon {
-      @extend %hggs-icon-primary;
-    }
-
-    &.hggs-button--icon {
-      @extend %hggs-button-icon-reset;
-
-      & .hggs-icon {
-        @extend %hggs-icon-primary;
+        color: var(--button-icon-label-color-hover, var(--hggs-color-quaternary-default));
       }
 
-      &:hover {
-        @extend %hggs-button-icon-hover-reset;
+      & .hggs-icon--primary {
+        filter: var(--button-icon-filter-primary-hover, var(--hggs-filter-default));
+        transition: var(--button-transition-hover, filter var(--hggs-animation-ease-default));
 
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-primary;
-        }
-
-        & .hggs-icon-label {
-          color: var(
-            --button-icon-label-color-primary-hover,
-            var(--hggs-color-quaternary-default)
-          );
-        }
-      }
-    }
-
-    &:hover {
-      @extend %hggs-button-hover-primary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-primary;
-      }
-    }
-
-    &:focus {
-      @extend %hggs-button-focus-primary;
-    }
-
-    &.hggs-button--outline {
-      @extend %hggs-button-outline-primary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-primary;
-      }
-
-      &:hover {
-        @extend %hggs-button-outline-hover-primary;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-primary;
+        & + .hggs-icon-label {
+          color: var(--button-icon-label-color-primary-hover, var(--hggs-color-primary-default)
+          )
         }
       }
 
-      &:focus {
-        @extend %hggs-button-focus-primary;
-      }
-    }
-  }
+      & .hggs-icon--secondary {
+        filter: var(--button-icon-filter-secondary-hover, var(--hggs-filter-primary-default));
+        transition: var(--button-transition-hover, filter var(--hggs-animation-ease-default));
 
-  &.hggs-button--secondary {
-    @extend %hggs-button-secondary;
-
-    & .hggs-icon {
-      @extend %hggs-icon-secondary;
-    }
-
-    &.hggs-button--icon {
-      @extend %hggs-button-icon-reset;
-
-      & .hggs-icon {
-        @extend %hggs-icon-secondary;
-      }
-
-      &:hover {
-        @extend %hggs-button-icon-hover-reset;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-secondary;
-        }
-
-        & .hggs-icon-label {
-          color: var(
-            --button-icon-label-color-secondary-hover,
-            var(--hggs-color-quaternary-default)
-          );
-        }
-      }
-    }
-
-    &:hover {
-      @extend %hggs-button-hover-secondary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-secondary;
-      }
-    }
-
-    &:focus {
-      @extend %hggs-button-focus-secondary;
-    }
-
-    &.hggs-button--outline {
-      @extend %hggs-button-outline-secondary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-secondary;
-      }
-
-      &:hover {
-        @extend %hggs-button-outline-hover-secondary;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-secondary;
+        & + .hggs-icon-label {
+          color: var(--button-icon-label-color-secondary-hover, var(--hggs-color-secondary-default))
         }
       }
 
-      &:focus {
-        @extend %hggs-button-focus-secondary;
-      }
-    }
-  }
+      & .hggs-icon--tertiary {
+          filter: var(--button-icon-filter-tertiary-hover, var(--hggs-filter-secondary-default));
+          transition: var(--button-transition-hover, filter var(--hggs-animation-ease-default));
 
-  &.hggs-button--tertiary {
-    @extend %hggs-button-tertiary;
-
-    & .hggs-icon {
-      @extend %hggs-icon-tertiary;
-    }
-
-    &.hggs-button--icon {
-      @extend %hggs-button-icon-reset;
-
-      & .hggs-icon {
-        @extend %hggs-icon-tertiary;
-      }
-
-      &:hover {
-        @extend %hggs-button-icon-hover-reset;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-tertiary;
-        }
-
-        & .hggs-icon-label {
-          color: var(
-            --button-icon-label-color-tertiary-hover,
-            var(--hggs-color-quaternary-default)
-          );
-        }
-      }
-    }
-
-    &:hover {
-      @extend %hggs-button-hover-tertiary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-tertiary;
-      }
-    }
-
-    &:focus {
-      @extend %hggs-button-focus-tertiary;
-    }
-
-    &.hggs-button--outline {
-      @extend %hggs-button-outline-tertiary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-tertiary;
-      }
-
-      &:hover {
-        @extend %hggs-button-outline-hover-tertiary;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-tertiary;
+        & + .hggs-icon-label {
+          color: var(--button-icon-label-color-tertiary-hover, var(--hggs-color-quaternary-default))
         }
       }
 
-      &:focus {
-        @extend %hggs-button-focus-tertiary;
-      }
-    }
-  }
+      & .hggs-icon--quaternary {
+        filter: var(--button-icon-filter-quaternary-hover, var(--hggs-filter-quaternary-default));
+        transition: var(--button-transition-hover, filter var(--hggs-animation-ease-default));
 
-  &.hggs-button--quaternary {
-    @extend %hggs-button-quaternary;
-
-    & .hggs-icon {
-      @extend %hggs-icon-quaternary;
-    }
-
-    &.hggs-button--icon {
-      @extend %hggs-button-icon-reset;
-
-      & .hggs-icon {
-        @extend %hggs-icon-quaternary;
-      }
-
-      &:hover {
-        @extend %hggs-button-icon-hover-reset;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-quaternary;
-        }
-
-        & .hggs-icon-label {
-          color: var(
-            --button-icon-label-color-quaternary-hover,
-            var(--hggs-color-quaternary-default)
-          );
-        }
-      }
-    }
-
-    &:hover {
-      @extend %hggs-button-hover-quaternary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-quaternary;
-      }
-    }
-
-    &:focus {
-      @extend %hggs-button-focus-quaternary;
-    }
-
-    &.hggs-button--outline {
-      @extend %hggs-button-outline-quaternary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-quaternary;
-      }
-
-      &:hover {
-        @extend %hggs-button-outline-hover-quaternary;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-quaternary;
+        & + .hggs-icon-label {
+          color: var(--button-icon-label-color-quaternary-hover, var(--hggs-color-quaternary-default))
         }
       }
 
-      &:focus {
-        @extend %hggs-button-focus-quaternary;
-      }
-    }
-  }
+      & .hggs-icon--quinary {
+         filter: var(--button-icon-filter-quinary-hover, var(--hggs-filter-quinary-default));
+         transition: var(--button-transition-hover, filter var(--hggs-animation-ease-default));
 
-  &.hggs-button--quinary {
-    @extend %hggs-button-quinary;
-
-    & .hggs-icon {
-      @extend %hggs-icon-quinary;
-    }
-
-    &.hggs-button--icon {
-      @extend %hggs-button-icon-reset;
-
-      & .hggs-icon {
-        @extend %hggs-icon-quinary;
-      }
-
-      & .hggs-icon-label {
-        @extend %hggs-icon-label-quinary;
-      }
-
-      &:hover {
-        @extend %hggs-button-icon-hover-reset;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-quinary;
-        }
-
-        & .hggs-icon-label {
-          color: var(
-            --button-icon-label-color-quinary-hover,
-            var(--hggs-color-quinary-default)
-          );
-        }
-      }
-    }
-
-    &:hover {
-      @extend %hggs-button-hover-quinary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-quinary;
-      }
-    }
-
-    &:focus {
-      @extend %hggs-button-focus-quinary;
-    }
-
-    &.hggs-button--outline {
-      @extend %hggs-button-outline-quinary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-quinary;
-      }
-
-      &:hover {
-        @extend %hggs-button-outline-hover-quinary;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-quinary;
+        & + .hggs-icon-label {
+          color: var(--button-icon-label-color-quinary-hover, var(--hggs-color-quinary-default))
         }
       }
 
-      &:focus {
-        @extend %hggs-button-focus-quinary;
-      }
-    }
-  }
+      & .hggs-icon--senary {
+          filter: var(--button-icon-filter-senary-hover, var(--hggs-filter-tertiary-default));
+          transition: var(--button-transition-hover, filter var(--hggs-animation-ease-default));
 
-  &.hggs-button--senary {
-    @extend %hggs-button-senary;
-
-    & .hggs-icon {
-      @extend %hggs-icon-senary;
-    }
-
-    &.hggs-button--icon {
-      @extend %hggs-button-icon-reset;
-
-      & .hggs-icon {
-        @extend %hggs-icon-senary;
-      }
-
-      &:hover {
-        @extend %hggs-button-icon-hover-reset;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-senary;
+        & + .hggs-icon-label {
+          color: var(--button-icon-label-color-senary-hover, var(--hggs-color-senary-default))
         }
-
-        & .hggs-icon-label {
-          color: var(
-            --button-icon-label-color-senary-hover,
-            var(--hggs-color-quaternary-default)
-          );
-        }
-      }
-    }
-
-    &:hover {
-      @extend %hggs-button-hover-senary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-senary;
-      }
-    }
-
-    &:focus {
-      @extend %hggs-button-focus-senary;
-    }
-
-    &.hggs-button--outline {
-      @extend %hggs-button-outline-senary;
-
-      & .hggs-icon {
-        @extend %hggs-icon-outline-senary;
-      }
-
-      &:hover {
-        @extend %hggs-button-outline-hover-senary;
-
-        & .hggs-icon {
-          @extend %hggs-button-icon-hover-senary;
-        }
-      }
-
-      &:focus {
-        @extend %hggs-button-focus-senary;
       }
     }
   }
