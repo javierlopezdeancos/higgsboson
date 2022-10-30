@@ -178,6 +178,10 @@
     background: unset;
     margin: 0;
     padding: 0;
+
+    &:focus {
+      box-shadow: unset;
+    }
   }
 
   &.hggs-button--outline {
