@@ -108,7 +108,6 @@
   --hggs-border-radius-md-default: 0px;
   --hggs-border-radius-default: 0px;
   --hggs-border-size-default: 1px;
-  --hggs-border-size-lg-default: 2px;
   --hggs-border-size-lg-default: 3px;
   --hggs-border-size-xl-default: 8px;
   --hggs-border-type-default: solid;
@@ -171,6 +170,7 @@
   --hggs-space-2xs-default: calc(var(--hggs-space-default) / 6);
 
   /* LAYERS */
+  --hggs-layer-20-default: 20;
   --hggs-layer-10-default: 11;
   --hggs-layer-0-default: 1;
 
