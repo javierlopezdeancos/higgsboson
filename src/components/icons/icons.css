@@ -13,7 +13,7 @@
 }
 
 .hggs-icon-wrapper {
-  @extend .hggs-flex--center-left-row;
+  @extend .hggs-flex--row-left-center;
   @extend %hggs-icon-margin;
 
   & .hggs-icon {

@@ -2,7 +2,7 @@ const data = {
   title: "Flex",
   default: [
     {
-      title: "flex--center-column",
+      title: "flex--column-center",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -18,7 +18,7 @@ const data = {
       },
     },
     {
-      title: "flex--top-center-column ",
+      title: "flex--column-top-center ",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -28,13 +28,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--top-center-column",
+          "hggs-flex--column-top-center",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--top-left-column",
+      title: "flex--column-top-left",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -44,13 +44,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--top-left-column",
+          "hggs-flex--column-top-left",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--top-right-column",
+      title: "flex--column-top-right",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -60,13 +60,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--top-right-column",
+          "hggs-flex--column-top-right",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--center-row",
+      title: "flex--row-center",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -76,13 +76,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--center-row",
+          "hggs-flex--row-center",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--top-center-row",
+      title: "flex--row-top-center",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -92,13 +92,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--top-center-row",
+          "hggs-flex--row-top-center",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--center-left-row ",
+      title: "flex--row-left-center",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -108,13 +108,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--center-left-row",
+          "hggs-flex--row-left-center",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--center-right-row",
+      title: "flex--row-right-center",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -124,13 +124,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--center-right-row",
+          "hggs-flex--row-right-center",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--stretch-left-row",
+      title: "flex--row-left-stretch",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -140,13 +140,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--stretch-left-row",
+          "hggs-flex--row-left-stretch",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--top-left-row",
+      title: "flex--row-top-left",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -156,13 +156,13 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--top-left-row",
+          "hggs-flex--row-top-left",
           "hggs-flex--gap-small",
         ],
       },
     },
     {
-      title: "flex--space-between-center-row",
+      title: "flex--row-space-between-center",
       styles: {
         header: headerStyles,
         article: articleStyles,
@@ -172,7 +172,7 @@ const data = {
       classes: {
         flexWrapper: [
           "hggs-flex",
-          "hggs-flex--space-between-center-row",
+          "hggs-flex--row-space-between-center",
           "hggs-flex--gap-small",
         ],
       },
