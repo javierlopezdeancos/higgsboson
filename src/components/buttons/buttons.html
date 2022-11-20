@@ -121,7 +121,7 @@
             <%= i.subtitle %>
           </h4>
 
-          <div class="hggs-flex--top-left-row">
+          <div class="hggs-flex--row-top-left">
             <%
               const iconButtonClass = _.reduce(i.classes.button, (acc, bc) => {
                 if (!acc) {
@@ -199,7 +199,7 @@
             <%= iwl.subtitle %>
           </h4>
 
-          <div class="hggs-flex--top-left-row">
+          <div class="hggs-flex--row-top-left">
             <%
               const iconButtonClass = _.reduce(iwl.classes.button, (acc, bc) => {
                 if (!acc) {
@@ -281,8 +281,8 @@
             <%= s.subtitle %>
           </h4>
 
-          <div class="hggs-flex--top-left-column">
-            <div class="hggs-flex--top-left-row">
+          <div class="hggs-flex--column-top-left">
+            <div class="hggs-flex--row-top-left">
               <%
                 const squareButtonClass = _.reduce(s.classes.button, (acc, bc) => {
                   if (!acc) {
@@ -311,7 +311,7 @@
             </div>
 
             <% _.each(s.extraClasses.button, (buttonExtraClasses, index) => { %>
-              <div class="hggs-flex--top-left-row">
+              <div class="hggs-flex--row-top-left">
                 <%
                   const squareButtonExtraClass = squareButtonClass + ' ' + buttonExtraClasses
                 %>
@@ -394,8 +394,8 @@
             <%= c.subtitle %>
           </h4>
 
-          <div class="hggs-flex--top-left-column">
-            <div class="hggs-flex--top-left-row">
+          <div class="hggs-flex--column-top-left">
+            <div class="hggs-flex--row-top-left">
               <%
                 const circleButtonClass = _.reduce(c.classes.button, (acc, bc) => {
                   if (!acc) {
@@ -424,7 +424,7 @@
             </div>
 
             <% _.each(c.extraClasses.button, (buttonExtraClasses, index) => { %>
-              <div class="hggs-flex--top-left-row">
+              <div class="hggs-flex--row-top-left">
                 <%
                   const circleButtonExtraClass = circleButtonClass + ' ' + buttonExtraClasses
                 %>
@@ -455,7 +455,7 @@
   <body>
     <div
       id="body"
-      class="hggs-app hggs-flex--top-left-column"
+      class="hggs-app hggs-flex--column-top-left"
       style="width: 100%; height: 100%; padding: 30px"
     ></div>
   </body>

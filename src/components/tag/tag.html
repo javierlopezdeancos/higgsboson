@@ -93,7 +93,7 @@
         <h3 class="hggs-h3" style="<%= headerOutlineTagStyle %>">
           <%= data.outline[0].title %>
         </h3>
-        <div class="hggs-flex hggs-flex--top-left-row hggs-flex--row-wrap">
+        <div class="hggs-flex hggs-flex--row-top-left hggs-flex--row-wrap">
           <% _.each(data.outline, function(ts, ti) { %>
             <%
               let tagOutlineClass = _.reduce(ts.classes.tag, (acc, c) => {
@@ -153,7 +153,7 @@
         <h3 class="hggs-h3" style="<%= headerRoundedTagStyle %>">
           <%= data.rounded[0].title %>
         </h3>
-        <div class="hggs-flex hggs-flex--top-left-row hggs-flex--row-wrap">
+        <div class="hggs-flex hggs-flex--row-top-left hggs-flex--row-wrap">
           <% _.each(data.rounded, function(ts) { %>
           <%
             let tagRoundedClass = _.reduce(ts.classes.tag, (acc, c) => {
@@ -213,7 +213,7 @@
         <h3 class="hggs-h3" style="<%= headerSmallTagStyle %>">
           <%= data.small[0].title %>
         </h3>
-        <div class="hggs-flex hggs-flex--top-left-row hggs-flex--row-wrap">
+        <div class="hggs-flex hggs-flex--row-top-left hggs-flex--row-wrap">
           <% _.each(data.small, function(ts) { %>
           <%
             let tagSmallClass = _.reduce(ts.classes.tag, (acc, c) => {
@@ -264,7 +264,7 @@
   <body>
     <div
       id="body"
-      class="hggs-app hggs-flex--top-left-column"
+      class="hggs-app hggs-flex--column-top-left"
       style="width: 100%; height: 100%; padding: 30px"
     ></div>
   </body>

@@ -59,7 +59,7 @@
   <div>item</div>
 </div>
 
-<div class="hggs-flex hggs-flex--top-left-column">
+<div class="hggs-flex hggs-flex--column-top-left">
   <div>item</div>
   <div>item</div>
   <div>item</div>
@@ -89,7 +89,7 @@
   <div>item</div>
 </div>
 
-<div class="hggs-flex hggs-flex--top-left-row">
+<div class="hggs-flex hggs-flex--row-top-left">
   <div>item</div>
   <div>item</div>
   <div>item</div>
@@ -117,7 +117,7 @@
   <div>item</div>
 </div>
 
-<div class="hggs-flex hggs-flex--top-left-column hggs-flex--gap-big">
+<div class="hggs-flex hggs-flex--column-top-left hggs-flex--gap-big">
   <div>item</div>
   <div>item</div>
   <div>item</div>
