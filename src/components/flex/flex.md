@@ -7,16 +7,16 @@
 ## First utility classes
 
 ```
-.hggs-flex--center-column
-.hggs-flex--top-center-column
-.hggs-flex--top-left-column
-.hggs-flex--top-right-column
-.hggs-flex--center-row
-.hggs-flex--top-center-row
-.hggs-flex--center-left-row
-.hggs-flex--stretch-left-row
-.hggs-flex--top-left-row
-.hggs-flex--space-between-center-row
+.hggs-flex--column-center
+.hggs-flex--column-top-center
+.hggs-flex--column-top-left
+.hggs-flex--column-top-right
+.hggs-flex--row-center
+.hggs-flex--row-top-center
+.hggs-flex--row-left-center
+.hggs-flex--row-left-stretch
+.hggs-flex--row-top-left
+.hggs-flex--row-space-between-center
 ```
 
 ## Theme selector

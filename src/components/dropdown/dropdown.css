@@ -41,7 +41,7 @@
   }
 
   & .hggs-dropdown-selected-options {
-    @extend .hggs-flex--center-left-row;
+    @extend .hggs-flex--row-left-center;
 
     height: 100%;
     list-style: none;

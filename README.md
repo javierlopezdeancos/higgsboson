@@ -10,6 +10,12 @@ Higgsboson class components is a set of classes to style core native components.
 [![Stage - Alpha](https://img.shields.io/badge/Stage-Alpha-f9f504)](https://)
 ![maintained - yes](https://img.shields.io/badge/maintained-yes-blue)
 
+## What is next
+
+Take a look into the active [project board](https://github.com/users/javierlopezdeancos/projects/3/views/2)
+or more deeper view in [issues](https://github.com/javierlopezdeancos/higgsboson/issues).
+
+
 ## Why Higgsboson?
 
 There are many motivations to see this project as a simple research and development of a system that allows not to reinvent the wheel over and over again.
