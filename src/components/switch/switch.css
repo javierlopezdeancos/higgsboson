@@ -1,0 +1,50 @@
+.hggs-switch {
+  @extend .hggs-flex--row-left-center;
+
+  & input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+
+    &:checked + label {
+      background: grey;
+
+      &:after {
+        left: calc(100% - 0px);
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  & > input + label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 20px;
+    background: black;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    border: 1px solid white;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 90px;
+      transition: 0.3s;
+    }
+
+    &:active:after {
+      width: 40px;
+    }
+  }
+
+  & > input + label + label {
+    margin-left: 20px;
+  }
+}

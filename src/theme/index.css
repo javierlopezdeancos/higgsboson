@@ -18,6 +18,7 @@
 @import "../components/list/list.css";
 @import "../components/form/form.css";
 @import "../components/checkbox/checkbox.css";
+@import "../components/switch/switch.css";
 @import "../components/radio/radio.css";
 @import "../components/inputs/inputs.css";
 @import "../components/option/option.css";
