@@ -1,0 +1,24 @@
+.hggs-tooltip {
+  --tooltip-box-background: var(--hggs-color-background-senary);
+  --tooltip-box-border-radius: var(--hggs-border-radius-sm);
+  --tooltip-box-color: var(--hggs-font-color-gray);
+  --tooltip-box-font-size: var(--hggs-font-size-sm);
+  --tooltip-box-min-width: 100px;
+  --tooltip-box-padding: var(--hggs-space-horizontal-xs);
+  --tooltip-box-width: 80%;
+  --tooltip-box-z-index: var(--hggs-layer-10);
+  --tooltip-color: var(--hggs-font-color);
+  --tooltip-font-family: var(--hggs-font-size);
+  --tooltip-font-size: var(--hggs-font-size);
+  --tooltip-font-weight: var(--hggs-font-weight);
+  --tooltip-line-height: var(--hggs-line-height);
+  --tooltip-margin: var(--hggs-space);
+  --tooltip-opacity: .9;
+  --tooltip-triangle-border-color: var(--hggs-color-background-senary) transparent transparent transparent;
+  --tooltip-triangle-border-style: solid;
+  --tooltip-triangle-border-width: 4px 6px 0 6px;
+  --tooltip-triangle-down-margin-top: 8px;
+  --tooltip-triangle-left-margin-left: -12px;
+  --tooltip-triangle-right-margin-left: 1px;
+  --tooltip-triangle-z-index: var(--hggs-layer-10);
+}

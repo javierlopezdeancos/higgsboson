@@ -268,6 +268,7 @@
 
   /* Font colors */
   --hggs-font-color: var(--hggs-color);
+  --hggs-font-color-gray: var(--hggs-color-gray);
 
   /* Font sizes */
   --hggs-font-size-2xs: calc(var(--hggs-font-size-sm) / 1.6);

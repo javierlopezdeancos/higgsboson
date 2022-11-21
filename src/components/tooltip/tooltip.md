@@ -19,16 +19,19 @@
 ```
 --tooltip-box-background
 --tooltip-box-border-radius
+--tooltip-box-color
 --tooltip-box-font-size
 --tooltip-box-min-width
 --tooltip-box-padding
 --tooltip-box-width
 --tooltip-box-z-index
 --tooltip-color
+--tooltip-font-family
 --tooltip-font-size
 --tooltip-font-weight
 --tooltip-line-height
 --tooltip-margin
+--tooltip-opacity
 --tooltip-triangle-border-color
 --tooltip-triangle-border-style
 --tooltip-triangle-border-width
@@ -36,7 +39,6 @@
 --tooltip-triangle-left-margin-left
 --tooltip-triangle-right-margin-left
 --tooltip-triangle-z-index
--tooltip-font-famiy
 ```
 
 ## HTML Structure
