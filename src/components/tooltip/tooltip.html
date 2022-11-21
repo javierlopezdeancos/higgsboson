@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hggs-tooltip</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../dist/higgsboson.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
+    ></script>
+
+    <script type="text/javascript" src="../../helpers/dom.js"></script>
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+    <script type="text/javascript" src="../../helpers/dom.js"></script>
+
+    <script type="text/javascript" src="./tooltip.metadata.js"></script>
+
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <% _.each(data.default, function(d) { %>
+        <%
+          const articleStyle = getStyles(d?.styles?.article);
+          const headerStyle = getStyles(d?.styles?.header);
+          const tooltipStyles = getClasses(d?.styles?.tooltip);
+          const tooltipClass = getClasses(d?.classes?.tooltip);
+        %>
+
+        <article style="<%= articleStyle %>">
+          <h3 class="hggs-h3" style="<%= headerStyle %>">
+            <%= d.title %>
+          </h3>
+          <span class="<%= tooltipClass %>" style="<%= tooltipStyles %>" data-tooltip="I’m the tooltip text">
+            Hover me to see the tooltip
+          </span>
+        </article>
+      <% }); %>
+    </script>
+  </head>
+
+  <body>
+    <div
+      id="body"
+      class="hggs-app hggs-flex--column-top-left"
+      style="width: 100%; height: 100%; padding: 30px"
+    ></div>
+  </body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
+</html>
