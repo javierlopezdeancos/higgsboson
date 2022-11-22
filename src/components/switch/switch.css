@@ -7,11 +7,11 @@
     visibility: hidden;
 
     &:checked + label {
-      background: grey;
+      background: var(--hggs-switch-background-checked, var(--hggs-color-gray-005-default));
 
       &:after {
-        left: calc(100% - 0px);
-        transform: translateX(-100%);
+        left: var(--hggs-switch-circle-left-checked, calc(100% - 0px));
+        transform: var(--hggs-switch-circle-transform-checked, translateX(-100%));
       }
     }
   }
@@ -19,32 +19,45 @@
   & > input + label {
     cursor: pointer;
     text-indent: -9999px;
-    width: 40px;
-    height: 20px;
-    background: black;
+    width: var(--hggs-switch-width, 40px);
+    height: var(--hggs-switch-height,20px);
+    background: var(--hggs-switch-background, transparent);
     display: block;
-    border-radius: 100px;
+    border-radius: var(--hggs-switch-border-radius, 100px);
     position: relative;
-    border: 1px solid white;
+    border: var(--hggs-switch-border, 1px solid white);
 
     &:after {
       content: '';
       position: absolute;
       top: -1px;
       left: 0;
-      width: 20px;
-      height: 20px;
-      background: #fff;
-      border-radius: 90px;
-      transition: 0.3s;
+      width: var(--hggs-switch-circle-width, 20px);
+      height: var(--hggs-switch-circle-height, 20px);
+      background:var(--hggs-switch-circle-background,  #fff);
+      border-radius: var(--hggs-switch-circle-border-radius, 90px);
+      transition: var(--hggs-switch-circle-transition, 0.3s);
     }
 
     &:active:after {
-      width: 40px;
+      width: var(--hggs-switch-circle-width-active, 40px);
     }
   }
 
   & > input + label + label {
-    margin-left: 20px;
+    font-family: var(
+      --switch-label-font-family,
+      var(--hggs-font-family-default)
+    );
+    font-size: var(--switch-label-font-size, var(--hggs-font-size-default));
+    font-weight: var(
+      --switch-label-font-weight,
+      var(--hggs-font-weight-default)
+    );
+    font-style: var(--switch-label-font-style, normal);
+    color: var(--switch-label-color, var(--hggs-color-default));
+    margin-left: var(--switch-margin-left, var(--hggs-space-sm-default));
+    cursor: pointer;
+    order: 2;
   }
 }
