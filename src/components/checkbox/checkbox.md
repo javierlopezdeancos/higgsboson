@@ -19,11 +19,11 @@
 ## Component variables
 
 ```
---checkbox--label-color
---checkbox--label-font-family
---checkbox--label-font-size
---checkbox--label-font-style
---checkbox--label-font-weight
+--checkbox-label-color
+--checkbox-label-font-family
+--checkbox-label-font-size
+--checkbox-label-font-style
+--checkbox-label-font-weight
 --checkbox-background
 --checkbox-border
 --checkbox-border-radius

@@ -19,9 +19,9 @@
   --checkbox-ckeck-icon-transform-before: rotate(45deg);
   --checkbox-ckeck-icon-width-after: 3px;
   --checkbox-ckeck-icon-width-before: 8px;
-  --checkbox--label-font-family: var(--hggs-font-family);
-  --checkbox--label-font-size: var(--hggs-font-size);
-  --checkbox--label-font-weight: var(--hggs-font-weight);
-  --checkbox--label-font-style: normal;
-  --checkbox--label-color: var(--hggs-color);
+  --checkbox-label-font-family: var(--hggs-font-family);
+  --checkbox-label-font-size: var(--hggs-font-size);
+  --checkbox-label-font-weight: var(--hggs-font-weight);
+  --checkbox-label-font-style: normal;
+  --checkbox-label-color: var(--hggs-color);
 }
