@@ -1,5 +1,4 @@
 .hggs-switch {
-  --switch-circle-border-checked: unset;
   --switch-background-checked: var(--hggs-color-background-000);
   --switch-background: transparent;
   --switch-border-radius: var(--hggs-form-input-border-radius);
@@ -8,6 +7,7 @@
   --switch-box-shadow: unset;
   --switch-circle-background-checked: var(--hggs-color-background-primary);
   --switch-circle-background: var(--hggs-color-background-primary);
+  --switch-circle-border-checked: none;
   --switch-circle-border-radius: 100px;
   --switch-circle-border: unset;
   --switch-circle-box-shadow: unset;
