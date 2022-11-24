@@ -15,8 +15,7 @@
 
       &:after {
         background:var(--switch-circle-background-checked,  var(--hggs-color-quaternary-default));
-        /*border: var(--switch-circle-border-checked, var(--hggs-border-quaternary-default));*/
-        border: unset;
+        border: var(--switch-circle-border-checked, var(--hggs-border-quaternary-default));
         left: var(--switch-circle-left-checked, calc(100% - 0px));
         transform: var(--switch-circle-transform-checked, translateX(-100%));
       }
