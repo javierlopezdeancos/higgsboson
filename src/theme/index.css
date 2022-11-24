@@ -4,7 +4,7 @@
 
 /* THEME */
 /*@import "./captain-america/index.css";*/
-/*@import "./caramel/index.css*/
+/*@import "./caramel/index.css";*/
 
 /* COMPONENTS */
 @import "../components/flex/flex.css";
@@ -32,3 +32,4 @@
 @import "../components/table/table.css";
 @import "../components/box/box.css";
 @import "../components/tooltip/tooltip.css";
+@import "../components/divider/divider.css";

@@ -1,0 +1,5 @@
+.hggs-divider {
+  border: 0;
+  border-top: var(--divider-border-top, 1px solid var(--hggs-color-quaternary-default));
+  margin: var(--divider-margin, var(--hggs-space-default) 0);
+}
