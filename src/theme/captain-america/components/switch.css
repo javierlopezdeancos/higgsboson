@@ -1,0 +1,30 @@
+.hggs-switch {
+  --switch-background-checked: var(--hggs-form-input-control-background-checked);
+  --switch-background: var(--hggs-form-input-control-background);
+  --switch-border-radius: 0;
+  --switch-border: var(--hggs-form-input-border);
+  --switch-box-shadow-focus: var(--hggs-shadow);
+  --switch-box-shadow: unset;
+  --switch-circle-background-checked: var(--hggs-form-input-control-button-background-checked);
+  --switch-circle-background: var(--hggs-form-input-control-button-background);
+  --switch-circle-border-checked: var(--hggs-border-primary);
+  --switch-circle-border-radius: 0;
+  --switch-circle-border: var(--hggs-form-input-border);
+  --switch-circle-box-shadow: 0 0 40px var(--hggs-color-gray-alpha-002), 0 0 10px var(--hggs-color-gray-alpha-004);
+  --switch-circle-height: var(--hggs-form-input-height-xs);
+  --switch-circle-left-checked: calc(100% + 2px);
+  --switch-circle-left: calc(0% - 1px);
+  --switch-circle-top: -2px;
+  --switch-circle-transform-checked: translateX(-100%);
+  --switch-circle-transition: 0.3s;
+  --switch-circle-width-active: 15px;
+  --switch-circle-width: var(--hggs-form-input-height-xs);
+  --switch-height: var(--hggs-form-input-height-xs);
+  --switch-label-color: var(--hggs-color);
+  --switch-label-font-family: var(--hggs-font-family);
+  --switch-label-font-size: var(--hggs-font-size);
+  --switch-label-font-style: normal;
+  --switch-label-font-weight: var(--hggs-font-weight);
+  --switch-margin-left: var(--hggs-space-horizontal-sm);
+  --switch-width: 70px;
+}

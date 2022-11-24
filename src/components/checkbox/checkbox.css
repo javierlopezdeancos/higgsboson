@@ -65,16 +65,16 @@
 
   & .hggs-label {
     font-family: var(
-      --checkbox--label-font-family,
+      --checkbox-label-font-family,
       var(--hggs-font-family-default)
     );
-    font-size: var(--checkbox--label-font-size, var(--hggs-font-size-default));
+    font-size: var(--checkbox-label-font-size, var(--hggs-font-size-default));
     font-weight: var(
-      --checkbox--label-font-weight,
+      --checkbox-label-font-weight,
       var(--hggs-font-weight-default)
     );
-    font-style: var(--checkbox--label-font-style, normal);
-    color: var(--checkbox--label-color, var(--hggs-color-default));
+    font-style: var(--checkbox-label-font-style, normal);
+    color: var(--checkbox-label-color, var(--hggs-color-default));
     margin-left: var(--checkbox-margin-left, var(--hggs-space-sm-default));
     cursor: pointer;
     order: 2;
