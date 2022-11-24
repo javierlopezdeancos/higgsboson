@@ -309,6 +309,10 @@
   --hggs-form-input-box-shadow: var(--hggs-form-box-shadow);
   --hggs-form-input-box-shadow-hover: var(--hggs-form-box-shadow-hover);
   --hggs-form-input-box-shadow-focus: var(--hggs-form-box-shadow-focus);
+  --hggs-form-input-control-background: var(--hggs-color-gray-001);
+  --hggs-form-input-control-background-checked: var(--hggs-color-gray-003);
+  --hggs-form-input-control-button-background: var(--hggs-color-quinary);
+  --hggs-form-input-control-button-background-checked: var(--hggs-color-primary);
 
   /* LAYERS */
   --hggs-layer-0: 1;

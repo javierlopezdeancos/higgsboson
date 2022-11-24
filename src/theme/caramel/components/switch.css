@@ -1,0 +1,30 @@
+.hggs-switch {
+  --switch-circle-border-checked: unset;
+  --switch-background-checked: var(--hggs-color-background-000);
+  --switch-background: transparent;
+  --switch-border-radius: var(--hggs-form-input-border-radius);
+  --switch-border: var(--hggs-form-input-border);
+  --switch-box-shadow-focus: unset;
+  --switch-box-shadow: unset;
+  --switch-circle-background-checked: var(--hggs-color-background-primary);
+  --switch-circle-background: var(--hggs-color-background-primary);
+  --switch-circle-border-radius: 100px;
+  --switch-circle-border: unset;
+  --switch-circle-box-shadow: unset;
+  --switch-circle-height: calc(var(--hggs-form-input-height-xs) - 5px);
+  --switch-circle-left-checked: calc(100% - 2px);
+  --switch-circle-left: 2px;
+  --switch-circle-top: 1px;
+  --switch-circle-transform-checked: translateX(-100%);
+  --switch-circle-transition: 0.3s;
+  --switch-circle-width-active: var(--hggs-form-input-height-xs);
+  --switch-circle-width: calc(var(--hggs-form-input-height-xs) - 5px);
+  --switch-height: var(--hggs-form-input-height-xs);
+  --switch-label-color: var(--hggs-color);
+  --switch-label-font-family: var(--hggs-font-family);
+  --switch-label-font-size: var(--hggs-font-size);
+  --switch-label-font-style: normal;
+  --switch-label-font-weight: var(--hggs-font-weight);
+  --switch-margin-left: var(--hggs-space-horizontal-sm);
+  --switch-width: 70px;
+}
