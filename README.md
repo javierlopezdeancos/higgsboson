@@ -44,6 +44,7 @@ Now, I know that we have multiple techniques and tools in the ecosystem to solve
       - [Button](/src/components/buttons/buttons.md)
       - [Checkbox](/src/components/checkbox/checkbox.md)
       - [Dialog](/src/components/dialog/dialog.md)
+      - [Divider](/src/components/dialog/divider.md)
       - [Dropdown](/src/components/dropdown/dropdown.md)
       - [Field](/src/components/field/field.md)
       - [Flex](/src/components/flex/flex.md)
