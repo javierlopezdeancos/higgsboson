@@ -75,6 +75,8 @@
 
   /* Font colors */
   --hggs-font-color-default: var(--hggs-color-default);
+  --hggs-font-color-001-default: var(--hggs-color-gray-004-default);
+  --hggs-font-color-002-default: var(--hggs-color-gray-010-default);
 
   /* Font sizes */
   --hggs-font-size-5xl-default: 38px;
@@ -190,6 +192,7 @@
   --hggs-icon-size-micro-default: 15px;
   --hggs-icon-size-small-default: 20px;
   --hggs-icon-size-default: 25px;
+  --hggs-icon-check-default: url("./assets/icons/check.svg");
   --hggs-icon-chevron-down-default: url("./assets/icons/chevron-down.svg");
   --hggs-icon-close-default: url("./assets/icons/close.svg");
   --hggs-icon-edit-default: url("./assets/icons/pencil.svg");
