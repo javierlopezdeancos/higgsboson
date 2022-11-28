@@ -34,6 +34,7 @@
 --icon-box-padding
 --icon-box-padding-micro
 --icon-box-padding-small
+--icon-check
 --icon-chevron-down
 --icon-close
 --icon-edit

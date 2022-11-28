@@ -299,6 +299,10 @@
       no-repeat center;
   }
 
+  &.hggs-icon--check {
+    background: var(--icon-check, var(--hggs-icon-check-default)) no-repeat center;
+  }
+
   &.hggs-icon--primary {
     filter: var(--icon-filter-primary, var(--hggs-filter-primary-default));
   }
