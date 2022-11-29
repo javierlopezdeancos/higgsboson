@@ -86,7 +86,7 @@ const data = {
       classes: {
         step: ["hggs-step", "hggs-step--complete"],
         side: ["hggs-step-side"],
-        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--quinary"],
+        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--primary"],
         main: ["hggs-step-main"],
         title: ["hggs-step-title"],
         description: ["hggs-step-description"],
@@ -101,7 +101,7 @@ const data = {
       classes: {
         step: ["hggs-step", "hggs-step--small", "hggs-step--complete"],
         side: ["hggs-step-side"],
-        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--quinary"],
+        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--primary"],
         main: ["hggs-step-main"],
         title: ["hggs-step-title"],
         description: ["hggs-step-description"],
@@ -121,7 +121,7 @@ const data = {
           "hggs-step--no-description",
         ],
         side: ["hggs-step-side"],
-        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--quinary"],
+        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--primary"],
         main: ["hggs-step-main"],
         title: ["hggs-step-title"],
         description: ["hggs-step-description"],
@@ -136,7 +136,6 @@ const data = {
       classes: {
         step: ["hggs-step", "hggs-step--dot", "hggs-step--complete"],
         side: ["hggs-step-side"],
-        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--quinary"],
         main: ["hggs-step-main"],
         title: ["hggs-step-title"],
         description: ["hggs-step-description"],
@@ -156,7 +155,6 @@ const data = {
           "hggs-step--complete",
         ],
         side: ["hggs-step-side"],
-        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--quinary"],
         main: ["hggs-step-main"],
         title: ["hggs-step-title"],
         description: ["hggs-step-description"],

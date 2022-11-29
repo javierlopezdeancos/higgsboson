@@ -38,13 +38,13 @@
     &> .hggs-step-side {
       width: var(--step-side-size-small, calc(var(--hggs-space-md-default) / 2));
       height: var(--step-side-size-small, calc(var(--hggs-space-md-default) / 2));
-      font-size: var(--step-title-font-size-small, var(--hggs-font-size-sm-default));
+      font-size: var(--step-side-font-size-small, var(--hggs-font-size-sm-default));
     }
 
     &> .hggs-step-main {
       &> .hggs-step-title {
         font-size: var(--step-title-font-size-small, var(--hggs-font-size-sm-default));
-        margin: var(--step-title-margin-small, calc(calc(var(--hggs-space-md-default) / 12)) 0 var(--hggs-space-2xs-default) 0);
+        margin: var(--step-title-margin-small, calc(var(--hggs-space-md-default) / 8) 0 var(--hggs-space-2xs-default) 0);
       }
 
       &> .hggs-step-description {
@@ -55,7 +55,7 @@
     &.hggs-step--no-description {
       &> .hggs-step-main {
         &> .hggs-step-title {
-          margin: var(--step-title-margin-small, calc(calc(var(--hggs-space-md-default) / 16))) 0 0 0;
+          margin: var(--step-title-margin-small-no-description, calc(calc(var(--hggs-space-md-default) / 8)) 0 0 0);
         }
 
         &> .hggs-step-description {
@@ -76,13 +76,13 @@
     }
 
     &> .hggs-step-main {
-      &> .hggs-step-description {
-        font-size: var(--step-description-font-size-dot, var(--hggs-font-size-xs-default));
-      }
-
       &> .hggs-step-title {
         font-size: var(--step-title-font-size-dot, var(--hggs-font-size-sm-default));
-        margin: var(--step-title-margin-dot, 0 0 var(--hggs-space-2xs-default) 0);
+        margin: var(--step-title-margin-dot, calc(var(--hggs-space-2xs-default) / 4) 0 0 0);
+      }
+
+      &> .hggs-step-description {
+        font-size: var(--step-description-font-size-dot, var(--hggs-font-size-xs-default));
       }
     }
 
@@ -90,7 +90,7 @@
     &.hggs-step--no-description {
       &> .hggs-step-main {
         &> .hggs-step-title {
-          margin: var(--step-title-margin-dot, 0 0 0 0);
+          margin: var(--step-title-margin-dot, calc(var(--hggs-space-2xs-default) / 2) 0  0 0);
         }
 
         &> .hggs-step-description {
@@ -102,7 +102,7 @@
 
   &.hggs-step--complete {
     &> .hggs-step-side {
-      background: var(--step-side-background-complete, var(--hggs-color-gray-012-default));
+      background: var(--step-side-background-complete, var(--hggs-color-gray-010-default));
     }
   }
 
@@ -117,23 +117,24 @@
       }
 
       &> .hggs-step-description {
-        color: var(--step-descrption-color-error, var(--hggs-font-color-002-default));
+        color: var(--step-description-color-error, var(--hggs-font-color-002-default));
       }
     }
   }
 
   &.hggs-step--waiting {
     &> .hggs-step-side {
+      color: var(--step-side-color-waiting, var(--hggs-color-gray-010-default));
       background: var(--step-side-background-waiting, var(--hggs-color-gray-004-default));
     }
 
     &> .hggs-step-main {
-      &> .hggs-step-description {
+      &> .hggs-step-title {
         color: var(--step-title-color-waiting, var(--hggs-font-color-002-default));
       }
 
-      &> .hggs-step-title {
-        color: var(--step-title-color-waiting, var(--hggs-font-color-002-default));
+      &> .hggs-step-description {
+        color: var(--step-description-color-waiting, var(--hggs-font-color-002-default));
       }
     }
 
