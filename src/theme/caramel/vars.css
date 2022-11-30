@@ -268,6 +268,7 @@
 
   /* Font colors */
   --hggs-font-color: var(--hggs-color);
+  --hggs-font-color-light: var(--hggs-color-tertiary-010);
   --hggs-font-color-gray: var(--hggs-color-gray);
 
   /* Font sizes */
@@ -544,6 +545,9 @@
     --hgss-color-placeholder: var(--hggs-color-tertiary-009);
     --hggs-color-border: var(--hggs-color-tertiary);
     --hggs-color-border-focus: var(--hggs-color-secondary);
+
+    /* Font colors */
+    --hggs-font-color-light: var(--hggs-color-primary-003);
 
     /* General filters */
     --hggs-filter-background: var(--hggs-filter-primary-009);

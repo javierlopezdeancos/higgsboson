@@ -23,7 +23,7 @@
       font-size: var(--step-title-font-size, var(--hggs-font-size-default));
       font-weight: var(--step-title-font-weight, var(--hggs-font-weight-default));
       color: var(--step-title-color, var(--hggs-font-color-default));
-      margin: var(--step-title-margin, calc(var(--hggs-space-md-default) / 8) 0 var(--hggs-space-xs-default)) 0;
+      margin: var(--step-title-margin, calc(var(--hggs-space-md-default) / 8) 0 var(--hggs-space-xs-default) 0);
     }
 
     &> .hggs-step-description {
@@ -96,6 +96,16 @@
         &> .hggs-step-description {
           display: none;
         }
+      }
+    }
+  }
+
+  &.hggs-step--complete,
+  &.hggs-step--error,
+  &.hggs-step--waiting {
+    &> .hggs-step-side {
+      &> .hggs-icon {
+        margin: 0;
       }
     }
   }
