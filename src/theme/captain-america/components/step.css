@@ -1,0 +1,37 @@
+.hggs-step {
+  --step-description-color-error: var(--hggs-color-error);
+  --step-description-color-waiting: var(--hggs-color-disabled);
+  --step-description-color: var(--hggs-font-color-light);
+  --step-description-font-family: var(--hggs-font-family);
+  --step-description-font-size-dot: var(--hggs-font-size-xs);
+  --step-description-font-size-small: var(--hggs-font-size-xs);
+  --step-description-font-size: var(--hggs-font-size-sm);
+  --step-description-font-weight: var(--hggs-font-weight);
+  --step-side-background-complete: var(--hggs-color-background-primary-subtle);
+  --step-side-background-error: var(--hggs-color-error);
+  --step-side-background-waiting: var(--hggs-color-disabled);
+  --step-side-background: var(--hggs-color-primary);
+  --step-side-border-radius: 100px;
+  --step-side-color-waiting: var(--hggs-font-color-primary-light);
+  --step-side-color: var(--hggs-font-color-primary-light);
+  --step-side-font-family: var(--hggs-font-family);
+  --step-side-font-size-small: var(--hggs-font-size-sm);
+  --step-side-font-size: var(--hggs-font-size);
+  --step-side-font-weight: var(--hggs-font-weight);
+  --step-side-margin-right: calc(var(--hggs-space-horizontal-sm) / 2);
+  --step-side-size-dot: calc(var(--hggs-space-horizontal) / 1.4);
+  --step-side-size-small: calc(var(--hggs-space-horizontal));
+  --step-side-size: calc(var(--hggs-space-horizontal) * 1.2);
+  --step-title-color-error: var(--hggs-color-error);
+  --step-title-color-waiting: var(--hggs-color-disabled);
+  --step-title-color: var(--hggs-font-color);
+  --step-title-font-family: var(--hggs-font-family);
+  --step-title-font-size-dot: var(--hggs-font-size-sm);
+  --step-title-font-size-small: var(--hggs-font-size-sm);
+  --step-title-font-size: var(--hggs-font-size);
+  --step-title-font-weight: var(--hggs-font-weight);
+  --step-title-margin-dot: var();
+  --step-title-margin-small-no-description: calc(var(--hggs-space-horizontal) / 4) 0 0 0;
+  --step-title-margin-small: calc(var(--hggs-space-horizontal) / 4) 0 0 0;
+  --step-title-margin: calc(var(--hggs-space-horizontal) / 4) 0 calc(var(--hggs-space-horizontal) / 8) 0;
+}

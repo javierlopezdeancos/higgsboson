@@ -7,6 +7,7 @@ const iconsClasses = [
   ["hggs-icon", "hggs-icon--close"],
   ["hggs-icon", "hggs-icon--plus"],
   ["hggs-icon", "hggs-icon--chevron-down"],
+  ["hggs-icon", "hggs-icon--check"],
 ];
 
 const iconSizesClases = ["hggs-icon--small", "hggs-icon--micro"];

@@ -36,7 +36,7 @@
   justify-content: flex-start;
 }
 
-.hggs-flex--row-center{
+.hggs-flex--row-center {
   @extend %hggs-flex-row;
   @extend %hggs-flex-center;
 }

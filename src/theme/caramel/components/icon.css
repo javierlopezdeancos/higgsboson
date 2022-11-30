@@ -1,14 +1,15 @@
 .hggs-icon-wrapper,
 .hggs-icon,
 .hggs-button {
-  --icon-chevron-down: url("./captain-america/assets/icons/chevron-down.svg");
-  --icon-close: url("./captain-america/assets/icons/close.svg");
-  --icon-edit: url("./captain-america/assets/icons/pencil.svg");
-  --icon-hamburger-menu: url("./captain-america/assets/icons/hamburger-menu.svg");
-  --icon-log-out: url("./captain-america/assets/icons/log-out.svg");
-  --icon-plus: url("./captain-america/assets/icons/plus.svg");
-  --icon-question: url("./captain-america/assets/icons/question.svg");
-  --icon-user: url("./captain-america/assets/icons/user.svg");
+  --icon-chevron-down: url("./caramel/assets/icons/chevron-down.svg");
+  --icon-close: url("./caramel/assets/icons/close.svg");
+  --icon-edit: url("./caramel/assets/icons/pencil.svg");
+  --icon-hamburger-menu: url("./caramel/assets/icons/hamburger-menu.svg");
+  --icon-log-out: url("./caramel/assets/icons/log-out.svg");
+  --icon-plus: url("./caramel/assets/icons/plus.svg");
+  --icon-question: url("./caramel/assets/icons/question.svg");
+  --icon-user: url("./caramel/assets/icons/user.svg");
+  --icon-check: url("./caramel/assets/icons/check.svg");
   --icon-box-background-primary: var(--hggs-color-background-primary);
   --icon-box-background-quaternary: var(--hggs-color-background-quaternary);
   --icon-box-background-quinary: var(--hggs-color-background-quinary);
