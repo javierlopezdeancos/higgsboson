@@ -58,6 +58,7 @@ Now, I know that we have multiple techniques and tools in the ecosystem to solve
       - [Option](/src/components/option/option.md)
       - [Radio](/src/components/radio/radio.md)
       - [Select](/src/components/select/select.md)
+      - [Step](/src/components/step/step.md)
       - [Switch](/src/components/switch/switch.md)
       - [Table](/src/components/table/table.md)
       - [Tag](/src/components/tag/tag.md)
