@@ -1,29 +1,31 @@
 {
   "name": "higgsboson",
-  "version": "0.1.1",
-  "description": "Native css classes to style native components.",
+  "version": "0.1.0",
+  "description": "Css classes to style native components.",
   "main": "dist/higgsboson.min.css",
   "scripts": {
     "build": "cross-env NODE_ENV=production npx postcss ./src/theme/index.css --config ./postcss.config.js --output ./dist/higgsboson.min.css",
     "build:watch": "npx postcss ./src/theme/index.css --config ./postcss.dev.js --output ./dist/higgsboson.css --verbose --watch",
     "format": "npx stylelint --fix \"src/**/*.css\"",
-    "lint": "npx stylelint \"src/**/*.css\"",
+    "lint:check": "npx stylelint \"src/**/*.css\"",
+    "lint": "npx stylelint \"src/**/*.css\" --fix",
     "start": "lite-server"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.13",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.1.12",
-    "cssnano-preset-advanced": "^5.3.8",
+    "cssnano": "^5.1.14",
+    "cssnano-preset-advanced": "^5.3.9",
     "lite-server": "^2.6.1",
-    "postcss": "^8.4.14",
-    "postcss-cli": "^9.1.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
     "postcss-copy-assets": "^0.3.1",
     "postcss-extend": "^1.0.5",
-    "postcss-import": "^14.0.1",
-    "postcss-nesting": "^8.0.1",
-    "postcss-preset-env": "^7.7.2",
-    "stylelint": "^14.9.1",
-    "stylelint-config-standard": "^26.0.0"
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^10.2.0",
+    "postcss-preset-env": "^7.8.3",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-use-nesting": "^4.0.0"
   }
 }

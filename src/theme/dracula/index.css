@@ -1,20 +1,20 @@
 /* Resets */
-@import "./resets.css";
+@import url("./resets.css");
 
 /* Fonts */
-@import "./fonts.css";
+@import url("./fonts.css");
 
 /* Theme Variables */
-@import "./vars.css";
+@import url("./vars.css");
 
 /* Components Variables */
-@import "./components/flex.css";
-@import "./components/app.css";
-@import "./components/titles.css";
-@import "./components/text.css";
-@import "./components/link.css";
+@import url("./components/flex.css");
+@import url("./components/app.css");
+@import url("./components/titles.css");
+@import url("./components/text.css");
+@import url("./components/link.css");
+@import url("./components/list.css");
 
-@import "./components/list.css";
 /*
 @import "./components/form.css";
 @import "./components/label.css";
@@ -29,13 +29,14 @@
 @import "./components/button.css";
 
 */
-@import "./components/logo.css";
+@import url("./components/logo.css");
 
 /*
 @import "./components/table.css";
 @import "./components/tag.css";
 */
-@import "./components/box.css";
+@import url("./components/box.css");
+
 /*
 @import "./components/dialog.css";
 */

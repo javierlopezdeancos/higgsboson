@@ -1,7 +1,7 @@
 .hggs-switch {
   @extend .hggs-flex--row-left-center;
 
-  & input[type=checkbox] {
+  & input[type="checkbox"] {
     height: 0;
     width: 0;
     visibility: hidden;
@@ -13,8 +13,8 @@
     &:checked + label {
       background: var(--switch-background-checked, var(--hggs-color-gray-005-default));
 
-      &:after {
-        background:var(--switch-circle-background-checked,  var(--hggs-color-quaternary-default));
+      &::after {
+        background: var(--switch-circle-background-checked, var(--hggs-color-quaternary-default));
         border: var(--switch-circle-border-checked, var(--hggs-border-quaternary-default));
         left: var(--switch-circle-left-checked, calc(100% - 0px));
         transform: var(--switch-circle-transform-checked, translateX(-100%));
@@ -26,7 +26,7 @@
     cursor: pointer;
     text-indent: -9999px;
     width: var(--switch-width, 40px);
-    height: var(--switch-height,20px);
+    height: var(--switch-height, 20px);
     background: var(--switch-background, transparent);
     display: block;
     border-radius: var(--switch-border-radius, 100px);
@@ -34,35 +34,37 @@
     border: var(--switch-border, var(--hggs-border-quaternary-default));
     box-shadow: var(--switch-box-shadow, unset);
 
-    &:after {
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       top: var(--switch-circle-top, -1px);
       left: var(--switch-circle-left, 0);
       width: var(--switch-circle-width, 20px);
       height: var(--switch-circle-height, 20px);
-      background: var(--switch-circle-background,  var(--hggs-color-quaternary-default));
+      background: var(--switch-circle-background, var(--hggs-color-quaternary-default));
       border: var(--switch-circle-border, --hggs-border-quaternary-default);
       border-radius: var(--switch-circle-border-radius, 90px);
       transition: var(--switch-circle-transition, 0.3s);
       box-shadow: var(--switch-circle-box-shadow, unset);
     }
 
-    &:active:after {
+    &:active::after {
       width: var(--switch-circle-width-active, 40px);
     }
   }
 
   & > input + label + label {
-    font-family: var(
-      --switch-label-font-family,
-      var(--hggs-font-family-default)
-    );
+    font-family:
+      var(
+        --switch-label-font-family,
+        var(--hggs-font-family-default)
+      );
     font-size: var(--switch-label-font-size, var(--hggs-font-size-default));
-    font-weight: var(
-      --switch-label-font-weight,
-      var(--hggs-font-weight-default)
-    );
+    font-weight:
+      var(
+        --switch-label-font-weight,
+        var(--hggs-font-weight-default)
+      );
     font-style: var(--switch-label-font-style, normal);
     color: var(--switch-label-color, var(--hggs-color-default));
     margin-left: var(--switch-margin-left, var(--hggs-space-sm-default));

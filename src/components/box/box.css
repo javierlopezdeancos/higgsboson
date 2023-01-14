@@ -8,16 +8,18 @@
   border: var(--box-border, var(--hggs-border-default));
   border-radius: var(--box-border-radius, --hggs-border-radius-default);
   margin: var(--box-margin, var(--hggs-space-default) 0);
-  padding: var(
-    --box-padding,
-    var(var(--hggs-space-md-default) var(--hggs-space-md-default))
-  );
+  padding:
+    var(
+      --box-padding,
+      var(var(--hggs-space-md-default) var(--hggs-space-md-default))
+    );
 
   & .hggs-box-header {
-    border-bottom: var(
-      --box-header-border-bottom,
-      var(--hggs-border-auxiliary-gray-006-default)
-    );
+    border-bottom:
+      var(
+        --box-header-border-bottom,
+        var(--hggs-border-auxiliary-gray-006-default)
+      );
     padding: var(--box-header-padding, 0 0 0 0);
   }
 
@@ -41,41 +43,46 @@
   }
 
   &.hggs-box--rounded {
-    border-radius: var(
-      --box-border-radius-with-radius,
-      var(--hggs-border-radius-big-default)
-    );
+    border-radius:
+      var(
+        --box-border-radius-with-radius,
+        var(--hggs-border-radius-big-default)
+      );
   }
 
   &.hggs-box--primary {
     color: var(--box-color-primary, var(--hggs-font-color-default));
-    background: var(
-      --box-background-primary,
-      var(--hggs-color-gray-002-default)
-    );
-    border: var(
-      --box-border-primary,
-      var(--hggs-border-auxiliary-gray-006-default)
-    );
+    background:
+      var(
+        --box-background-primary,
+        var(--hggs-color-gray-002-default)
+      );
+    border:
+      var(
+        --box-border-primary,
+        var(--hggs-border-auxiliary-gray-006-default)
+      );
     box-shadow: var(--box-box-shadow-primary, none);
 
     & .hggs-box-header {
-      border-bottom: var(
-        --box-header-border-bottom-primary,
-        var(--hggs-border-auxiliary-gray-008-default)
-      );
+      border-bottom:
+        var(
+          --box-header-border-bottom-primary,
+          var(--hggs-border-auxiliary-gray-008-default)
+        );
 
       & .hggs-box-title {
-        color: var(
-          --box-title-color-primary,
-          var(--hggs-color-gray-020-default)
-        );
+        color:
+          var(
+            --box-title-color-primary,
+            var(--hggs-color-gray-020-default)
+          );
       }
     }
 
     & .hggs-box-body {
       & .hggs-text {
-          color: var(--box-color-primary, var(--hggs-font-color-default));
+        color: var(--box-color-primary, var(--hggs-font-color-default));
       }
     }
   }

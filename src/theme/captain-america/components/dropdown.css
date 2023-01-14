@@ -14,7 +14,8 @@
   --dropdown-option-label-font-family: var(--hggs-font-family);
   --dropdown-option-label-font-size: var(--hggs-font-size);
   --dropdown-option-label-color: var(--hggs-color);
-  --dropdown-option-label-padding: calc(var(--hggs-space-vertical) / 2) 0
+  --dropdown-option-label-padding:
+    calc(var(--hggs-space-vertical) / 2) 0
     calc(var(--hggs-space-vertical) / 2) var(--hggs-space-horizontal);
   --dropdown-option-label-background-hover: var(--hggs-color-background-hover);
   --dropdown-options-selected-background: transparent;

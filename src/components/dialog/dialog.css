@@ -12,10 +12,11 @@
 
 .hggs-dialog {
   position: relative;
-  background-color: var(
-    --dialog-background-color,
-    var(--hggs-color-background-default)
-  );
+  background-color:
+    var(
+      --dialog-background-color,
+      var(--hggs-color-background-default)
+    );
   color: var(--dialog-color, var(--hggs-color-default));
   text-align: var(--dialog-text-align, left);
   border: none;
@@ -50,11 +51,12 @@
   }
 
   &::backdrop {
-    background: linear-gradient(
-      45deg,
-      rgba(58, 58, 58, 0.6),
-      rgba(8, 8, 8, 0.6)
-    );
+    background:
+      linear-gradient(
+        45deg,
+        rgb(58 58 58 / 60%),
+        rgb(8 8 8 / 60%)
+      );
   }
 
   & .hggs-dialog-close {

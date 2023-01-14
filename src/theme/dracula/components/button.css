@@ -31,41 +31,54 @@
   --button-border-outline-tertiary: var(--hggs-border-tertiary);
   --button-border-outline: 1px solid var(--hggs-color-gray-004);
   --button-border-radius: 3px;
-  --button-box-shadow-hover: 0px 0px 0px 2px var(--hggs-color-gray-002);
-  --button-box-shadow-outline-hover: 0px 0px 0px 2px var(--hggs-color-gray-005);
-  --button-box-shadow-outline-primary-hover: 0px 0px 0px 2px
+  --button-box-shadow-hover: 0 0 0 2px var(--hggs-color-gray-002);
+  --button-box-shadow-outline-hover: 0 0 0 2px var(--hggs-color-gray-005);
+  --button-box-shadow-outline-primary-hover:
+    0 0 0 2px
     var(--hggs-color-primary-005);
-  --button-box-shadow-outline-quaternary-hover: 0px 0px 0px 2px
+  --button-box-shadow-outline-quaternary-hover:
+    0 0 0 2px
     var(--hggs-color-quaternary);
-  --button-box-shadow-outline-quinary-hover: 0px 0px 0px 2px
+  --button-box-shadow-outline-quinary-hover:
+    0 0 0 2px
     var(--hggs-color-quinary);
-  --button-box-shadow-outline-secondary-hover: 0px 0px 0px 2px
+  --button-box-shadow-outline-secondary-hover:
+    0 0 0 2px
     var(--hggs-color-secondary-004);
-  --button-box-shadow-outline-senary-hover: 0px 0px 0px 2px
+  --button-box-shadow-outline-senary-hover:
+    0 0 0 2px
     var(--hggs-color-senary-005);
-  --button-box-shadow-outline-tertiary-hover: 0px 0px 0px 2px
+  --button-box-shadow-outline-tertiary-hover:
+    0 0 0 2px
     var(--hggs-color-tertiary-004);
-  --button-box-shadow-primary-hover: 0px 0px 0px 2px
+  --button-box-shadow-primary-hover:
+    0 0 0 2px
     var(--hggs-color-primary-005);
   --button-box-shadow-primary-focus: var(--hggs-form-box-primary-focus);
-  --button-box-shadow-quaternary-hover: 0px 0px 0px 2px
+  --button-box-shadow-quaternary-hover:
+    0 0 0 2px
     var(--hggs-color-quaternary);
-  --button-box-shadow-quaternary-focus: var(
-    --hggs-form-box-shadow-quaternary-focus
-  );
-  --button-box-shadow-quinary-hover: 0px 0px 0px 2px var(--hggs-color--quinary);
+  --button-box-shadow-quaternary-focus:
+    var(
+      --hggs-form-box-shadow-quaternary-focus
+    );
+  --button-box-shadow-quinary-hover: 0 0 0 2px var(--hggs-color--quinary);
   --button-box-shadow-quinary-focus: var(--hggs-form-box-shadow-quinary-focus);
-  --button-box-shadow-secondary-hover: 0px 0px 0px 2px
+  --button-box-shadow-secondary-hover:
+    0 0 0 2px
     var(--hggs-color-secondary-004);
-  --button-box-shadow-secondary-focus: var(
-    --hggs-form-box-shadow-secondary-focus
-  );
-  --button-box-shadow-tertiary-focus: var(
-    --hggs-form-box-shadow-tertiary-focus
-  );
+  --button-box-shadow-secondary-focus:
+    var(
+      --hggs-form-box-shadow-secondary-focus
+    );
+  --button-box-shadow-tertiary-focus:
+    var(
+      --hggs-form-box-shadow-tertiary-focus
+    );
   --button-box-shadow-senary-focus: var(--hggs-form-box-shadow-senary-focus);
-  --button-box-shadow-senary-hover: 0px 0px 0px 2px var(--hggs-color-senary-005);
-  --button-box-shadow-tertiary-hover: 0px 0px 0px 2px
+  --button-box-shadow-senary-hover: 0 0 0 2px var(--hggs-color-senary-005);
+  --button-box-shadow-tertiary-hover:
+    0 0 0 2px
     var(--hggs-color-tertiary-004);
   --button-color-hover: var(--hggs-color-gray-009);
   --button-color-outline-primary-hover: var(--hggs-color-primary-005);
@@ -113,11 +126,14 @@
   --button-icon-padding: 0;
   --button-icon-width: calc(var(--icon-size) + var(--button-icon-padding));
   --button-margin-vertical: var(--hggs-space-vertical-sm);
-  --button-padding-big: var(--hggs-space-horizontal)
+  --button-padding-big:
+    var(--hggs-space-horizontal)
     var(--hggs-space-vertical-md);
-  --button-padding-medium: var(--hggs-space-horizontal-sm)
+  --button-padding-medium:
+    var(--hggs-space-horizontal-sm)
     var(--hggs-space-vertical);
-  --button-padding-small: var(--hggs-space-horizontal-xs)
+  --button-padding-small:
+    var(--hggs-space-horizontal-xs)
     var(--hggs-space-vertical-sm);
   --button-transition-hover: var(--hggs-animation-ease);
   --button-transition-primary-hover: var(--button-transition-hover);

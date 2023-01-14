@@ -1,5 +1,6 @@
 :root {
   /* COLORS */
+
   /* Generics colors */
   --hggs-color-black: #000;
   --hggs-color-white: #fff;
@@ -29,10 +30,10 @@
   --hggs-color-gray-outline-subtle-hover: var(--hggs-color-gray-005);
 
   /* Gray alphas */
-  --hggs-color-gray-alpha-002: rgba(0, 0, 0, 0.1);
-  --hggs-color-gray-alpha-004: rgba(0, 0, 0, 0.25);
-  --hggs-color-gray-alpha-007: rgba(58, 58, 58, 0.6);
-  --hggs-color-gray-alpha-008: rgba(8, 8, 8, 0.6);
+  --hggs-color-gray-alpha-002: rgb(0 0 0 / 10%);
+  --hggs-color-gray-alpha-004: rgb(0 0 0 / 25%);
+  --hggs-color-gray-alpha-007: rgb(58 58 58 / 60%);
+  --hggs-color-gray-alpha-008: rgb(8 8 8 / 60%);
 
   /* Gray filters */
   --hggs-filter-gray-004: invert(72%) sepia(0%) saturate(0%) hue-rotate(320deg) brightness(91%) contrast(89%);
@@ -44,6 +45,7 @@
   --hggs-filter-gray-hover: var(--hggs-filter-gray-008);
 
   /* Main colors */
+
   /* Primary colors */
   --hggs-color-primary-000: #ae9e97;
   --hggs-color-primary-001: #9d8b82;
@@ -234,7 +236,7 @@
   --hggs-color-error: #ff0b0b;
   --hggs-color-disabled: var(--hggs-color-tertiary-006);
   --hggs-color-required: var(--hggs-color-secondary);
-  --hggs-color-focus: var( --hggs-color);
+  --hggs-color-focus: var(--hggs-color);
   --hggs-color-shadow: var(--hgss-color-auxiliary-secondary-007);
   --hggs-color-background: var(--hggs-color-tertiary-005);
   --hggs-color-background-000: var(--hggs-color-tertiary-006);
@@ -256,6 +258,7 @@
   --hggs-shadow: 0 0 6px 2px var(--hggs-color-tertiary-006);
 
   /* FONT */
+
   /* Font familes */
   --hggs-font-family-primary: "Poppins-Regular", sans-serif;
   --hggs-font-family-secondary: "Poppins-Medium", sans-serif;
@@ -306,7 +309,8 @@
   --hggs-border-radius-base: 30px;
   --hggs-border-radius: var(--hggs-border-radius-base);
   --hggs-border-radius-sm: 10px;
-  --hggs-border-size: 1px; --hggs-color-disabled: var(--hggs-color-tertiary-006);
+  --hggs-border-size: 1px;
+  --hggs-color-disabled: var(--hggs-color-tertiary-006);
   --hggs-border-type: solid;
   --hggs-color-border: var(--hggs-color-background-primary);
   --hggs-border: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-border);
@@ -316,7 +320,7 @@
   --hggs-border-background: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-secondary);
 
   /* Gray borders */
-  --hggs-border-gray-alpha: var(--hggs-border-size) var(--hggs-border-type) var( --hggs-color-gray-alpha);
+  --hggs-border-gray-alpha: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-gray-alpha);
   --hggs-border-gray-004: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-gray-004);
   --hggs-border-gray-005: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-gray-005);
   --hggs-border-gray-007: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-gray-007);
@@ -325,11 +329,14 @@
   --hggs-border-gray: var(--hggs-border-background-gray);
   --hggs-border-gray-hover: var(--hggs-border-gray-008);
   --hggs-border-gray-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-gray-outline);
-  --hggs-border-gray-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-gray-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-gray-outline-hover);
-  --hggs-border-gray-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-gray-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-gray-outline-subtle);
-  --hggs-border-gray-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-gray-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-gray-outline-subtle-hover);
 
   /* Primary borders */
@@ -340,13 +347,17 @@
   --hggs-border-primary-009: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-primary-009);
   --hggs-border-primary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-primary);
   --hggs-border-primary-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-primary-hover);
-  --hggs-border-primary-outline: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-primary-outline:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-primary-outline);
-  --hggs-border-primary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-primary-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-primary-outline-hover);
-  --hggs-border-primary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-primary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-primary-outline-subtle);
-  --hggs-border-primary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-primary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-primary-outline-subtle-hover);
 
   /* Secondary borders */
@@ -354,15 +365,20 @@
   --hggs-border-secondary-007: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-secondary-007);
   --hggs-border-secondary-010: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-secondary-010);
   --hggs-border-secondary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-secondary);
-  --hggs-border-secondary-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-background-secondary-hover);
-  --hggs-border-secondary-outline: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-outline:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-secondary-outline);
-  --hggs-border-secondary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-secondary-outline-hover);
-  --hggs-border-secondary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-secondary-outline-subtle);
-  --hggs-border-secondary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-secondary-outline-subtle-hover);
 
   /* Tertiary borders */
@@ -370,14 +386,18 @@
   --hggs-border-tertiary-009: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-tertiary-009);
   --hggs-border-tertiary-010: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-tertiary-010);
   --hggs-border-tertiary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-tertiary);
-  --hggs-border-tertiary-hover:  var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-tertiary-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-background-tertiary-hover);
   --hggs-border-tertiary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-tertiary-outline);
-  --hggs-border-tertiary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-tertiary-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-tertiary-outline-hover);
-  --hggs-border-tertiary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-tertiary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-tertiary-outline-subtle);
-  --hggs-border-tertiary-outline-hover-subtle: var(--hggs-border-size)
+  --hggs-border-tertiary-outline-hover-subtle:
+    var(--hggs-border-size)
     var(--hggs-border-type) var(--hggs-color-tertiary-outline-subtle-hover);
 
   /* Quaternary borders */
@@ -385,9 +405,11 @@
   --hggs-border-quaternary-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quaternary);
   --hggs-border-quaternary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quaternary);
   --hggs-border-quaternary-outline-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quaternary);
-  --hggs-border-quaternary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-quaternary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-quaternary-outline-subtle);
-  --hggs-border-quaternary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-quaternary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(---hggs-color-quaternary-outline-subtle-hover);
 
   /* Quinary borders */
@@ -395,9 +417,11 @@
   --hggs-border-quinary-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quinary);
   --hggs-border-quinary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quinary);
   --hggs-border-quinary-outline-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quinary);
-  --hggs-border-quinary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-quinary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-quinary-outline-subtle);
-  --hggs-border-quinary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-quinary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-quinary-outline-subtle);
 
   /* Senary borders */
@@ -408,11 +432,14 @@
   --hggs-border-senary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-senary);
   --hggs-border-senary-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-senary-hover);
   --hggs-border-senary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-senary-outline);
-  --hggs-border-senary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-senary-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-senary-outline-hover);
-  --hggs-border-senary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-senary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-senary-outline-subtle);
-  --hggs-border-senary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-senary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-senary-outline-subtle-hover);
 
   /* SPACES */
@@ -462,6 +489,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* COLORS */
+
     /* Gray Colors */
     --hggs-color-gray: var(--hggs-color-gray-009);
     --hggs-color-gray-hover: var(--hggs-color-gray-005);
@@ -563,7 +591,7 @@
     --hggs-border-senary-hover: var(--hggs-border-senary-005);
 
     /* SHADOWS */
-    --hggs-shadow: 0px 0px 1px 6px var(--hggs-color-primary-007);
+    --hggs-shadow: 0 0 1px 6px var(--hggs-color-primary-007);
 
     /* LOGO */
     --hggs-logo-default: url("./assets/svg/logo-dark.svg");

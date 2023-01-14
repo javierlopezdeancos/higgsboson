@@ -1,28 +1,29 @@
 /* LIGHT MODE */
 :root {
   /* COLORS */
+
   /* Generic colors */
-  --hggs-color-white-default: #ffffff;
-  --hggs-color-black-default: #000000;
+  --hggs-color-white-default: #fff;
+  --hggs-color-black-default: #000;
 
   /* Gray colors */
   --hggs-color-gray-001-default: #f3f3f3;
   --hggs-color-gray-002-default: #f2f2f2;
   --hggs-color-gray-003-default: #e6e6e6;
   --hggs-color-gray-004-default: #d9d9d9;
-  --hggs-color-gray-005-default: #cccccc;
+  --hggs-color-gray-005-default: #ccc;
   --hggs-color-gray-006-default: #bfbfbf;
   --hggs-color-gray-007-default: #b3b3b3;
   --hggs-color-gray-008-default: #a6a6a6;
-  --hggs-color-gray-009-default: #999999;
+  --hggs-color-gray-009-default: #999;
   --hggs-color-gray-010-default: #8c8c8c;
   --hggs-color-gray-011-default: #808080;
   --hggs-color-gray-012-default: #737373;
-  --hggs-color-gray-013-default: #666666;
+  --hggs-color-gray-013-default: #666;
   --hggs-color-gray-014-default: #595959;
   --hggs-color-gray-015-default: #4d4d4d;
   --hggs-color-gray-016-default: #404040;
-  --hggs-color-gray-017-default: #333333;
+  --hggs-color-gray-017-default: #333;
   --hggs-color-gray-018-default: #262626;
   --hggs-color-gray-019-default: #1a1a1a;
   --hggs-color-gray-020-default: #0d0d0d;
@@ -42,19 +43,26 @@
   --hggs-color-senary-hover-default: var(--hggs-color-tertiary-default);
 
   /* Filters colors */
-  --hggs-filter-gray-008-default: brightness(0) saturate(100%) invert(8%)
+  --hggs-filter-gray-008-default:
+    brightness(0) saturate(100%) invert(8%)
     sepia(18%) saturate(1214%) hue-rotate(194deg) brightness(95%) contrast(91%);
-  --hggs-filter-primary-default: brightness(0) saturate(100%) invert(0%)
+  --hggs-filter-primary-default:
+    brightness(0) saturate(100%) invert(0%)
     sepia(83%) saturate(3548%) hue-rotate(60deg) brightness(84%) contrast(90%);
-  --hggs-filter-secondary-default: brightness(0) saturate(100%) invert(12%)
+  --hggs-filter-secondary-default:
+    brightness(0) saturate(100%) invert(12%)
     sepia(0%) saturate(140%) hue-rotate(162deg) brightness(98%) contrast(78%);
-  --hggs-filter-tertiary-default: brightness(0) saturate(100%) invert(36%)
+  --hggs-filter-tertiary-default:
+    brightness(0) saturate(100%) invert(36%)
     sepia(45%) saturate(0%) hue-rotate(253deg) brightness(93%) contrast(113%);
-  --hggs-filter-quaternary-default: brightness(0) saturate(100%) invert(0%)
+  --hggs-filter-quaternary-default:
+    brightness(0) saturate(100%) invert(0%)
     sepia(0%) saturate(7500%) hue-rotate(272deg) brightness(96%) contrast(108%);
-  --hggs-filter-quinary-default: brightness(0) saturate(100%) invert(100%)
+  --hggs-filter-quinary-default:
+    brightness(0) saturate(100%) invert(100%)
     sepia(5%) saturate(19%) hue-rotate(127deg) brightness(106%) contrast(106%);
-  --hggs-filter-senary-default: brightness(0) saturate(100%) invert(57%)
+  --hggs-filter-senary-default:
+    brightness(0) saturate(100%) invert(57%)
     sepia(0%) saturate(366%) hue-rotate(176deg) brightness(88%) contrast(95%);
   --hggs-filter-default: var(--hggs-filter-quaternary-default);
 
@@ -70,6 +78,7 @@
   --hggs-shadow-primary-default: 0 0 7px 1px var(--hggs-color-gray-007-default);
 
   /* FONT */
+
   /* Font familes */
   --hggs-font-family-default: sans-serif;
 
@@ -107,8 +116,8 @@
   --hggs-line-height-xs-default: 10px;
 
   /* BORDERS */
-  --hggs-border-radius-md-default: 0px;
-  --hggs-border-radius-default: 0px;
+  --hggs-border-radius-md-default: 0;
+  --hggs-border-radius-default: 0;
   --hggs-border-size-default: 1px;
   --hggs-border-size-lg-default: 3px;
   --hggs-border-size-xl-default: 8px;
@@ -120,47 +129,68 @@
   --hggs-color-border-quaternary-default: var(--hggs-color-quaternary-default);
   --hggs-color-border-quinary-default: var(--hggs-color-quinary-default);
   --hggs-color-border-senary-default: var(--hggs-color-gray-007-default);
-  --hggs-border-default: var(--hggs-border-size-default)
+  --hggs-border-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-border-color-default);
-  --hggs-border-error-default: var(--hggs-border-size-default)
+  --hggs-border-error-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-error-default);
-  --hggs-border-auxiliary-gray-006-default: var(--hggs-border-size-default)
+  --hggs-border-auxiliary-gray-006-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-gray-006-default);
-  --hggs-border-auxiliary-gray-008-default: var(--hggs-border-size-default)
+  --hggs-border-auxiliary-gray-008-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-gray-008-default);
-  --hggs-border-auxiliary-gray-009-default: var(--hggs-border-size-default)
+  --hggs-border-auxiliary-gray-009-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-gray-009-default);
-  --hggs-border-auxiliary-gray-010-default: var(--hggs-border-size-default)
+  --hggs-border-auxiliary-gray-010-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-gray-010-default);
-  --hggs-border-auxiliary-gray-012-default: var(--hggs-border-size-default)
+  --hggs-border-auxiliary-gray-012-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-gray-012-default);
-  --hggs-border-auxiliary-gray-013-default: var(--hggs-border-size-default)
+  --hggs-border-auxiliary-gray-013-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-gray-013-default);
-  --hggs-border-auxiliary-gray-015-default: var(--hggs-border-size-default)
+  --hggs-border-auxiliary-gray-015-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-gray-015-default);
-  --hggs-border-primary-default: var(--hggs-border-size-default)
+  --hggs-border-primary-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-border-primary-default);
-  --hggs-border-primary-big-default: var(--hggs-border-size-lg-default)
+  --hggs-border-primary-big-default:
+    var(--hggs-border-size-lg-default)
     var(--hggs-border-type-default) var(--hggs-color-border-primary-default);
-  --hggs-border-secondary-default: var(--hggs-border-size-default)
+  --hggs-border-secondary-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-border-secondary-default);
-  --hggs-border-secondary-gross-default: var(--hggs-border-size-lg-default)
+  --hggs-border-secondary-gross-default:
+    var(--hggs-border-size-lg-default)
     var(--hggs-border-type-default) var(--hggs-color-border-secondary-default);
-  --hggs-border-tertiary-default: var(--hggs-border-size-default)
+  --hggs-border-tertiary-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-border-tertiary-default);
-  --hggs-border-quaternary-default: var(--hggs-border-size-default)
+  --hggs-border-quaternary-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-border-quaternary-default);
-  --hggs-border-quaternary-xl-default: var(--hggs-border-size-xl-default)
+  --hggs-border-quaternary-xl-default:
+    var(--hggs-border-size-xl-default)
     var(--hggs-border-type-default) var(--hggs-color-border-quaternary-default);
-  --hggs-border-quinary-default: var(--hggs-border-size-default)
+  --hggs-border-quinary-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-border-quinary-default);
-  --hggs-border-senary-default: var(--hggs-border-size-default)
+  --hggs-border-senary-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-border-senary-default);
-  --hggs-border-focus-default: var(--hggs-border-size-default)
+  --hggs-border-focus-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-primary-default);
-  --hggs-border-disabled-default: var(--hggs-border-size-default)
+  --hggs-border-disabled-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-gray-005-default);
-  --hggs-border-invalid-default: var(--hggs-border-size-default)
+  --hggs-border-invalid-default:
+    var(--hggs-border-size-default)
     var(--hggs-border-type-default) var(--hggs-color-error-default);
 
   /* SPACES */
@@ -212,24 +242,25 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* COLORS */
+
     /* Gray Colors */
     --hggs-color-gray-020-default: #f3f3f3;
     --hggs-color-gray-019-default: #f2f2f2;
     --hggs-color-gray-018-default: #e6e6e6;
     --hggs-color-gray-017-default: #d9d9d9;
-    --hggs-color-gray-016-default: #cccccc;
+    --hggs-color-gray-016-default: #ccc;
     --hggs-color-gray-015-default: #bfbfbf;
     --hggs-color-gray-014-default: #b3b3b3;
     --hggs-color-gray-013-default: #a6a6a6;
-    --hggs-color-gray-012-default: #999999;
+    --hggs-color-gray-012-default: #999;
     --hggs-color-gray-011-default: #8c8c8c;
     --hggs-color-gray-010-default: #808080;
     --hggs-color-gray-009-default: #737373;
-    --hggs-color-gray-008-default: #666666;
+    --hggs-color-gray-008-default: #666;
     --hggs-color-gray-007-default: #595959;
     --hggs-color-gray-006-default: #4d4d4d;
     --hggs-color-gray-005-default: #404040;
-    --hggs-color-gray-004-default: #333333;
+    --hggs-color-gray-004-default: #333;
     --hggs-color-gray-003-default: #262626;
     --hggs-color-gray-002-default: #1a1a1a;
     --hggs-color-gray-001-default: #0d0d0d;
@@ -248,17 +279,23 @@
     --hggs-color-senary-hover-default: var(--hggs-color-gray-011-default);
 
     /* Filters colors */
-    --hggs-filter-primary-default: brightness(0) saturate(100%) invert(100%)
+    --hggs-filter-primary-default:
+      brightness(0) saturate(100%) invert(100%)
       sepia(0%) saturate(7439%) hue-rotate(49deg) brightness(109%) contrast(91%);
-    --hggs-filter-secondary-default: brightness(0) saturate(100%) invert(97%)
+    --hggs-filter-secondary-default:
+      brightness(0) saturate(100%) invert(97%)
       sepia(0%) saturate(0%) hue-rotate(139deg) brightness(91%) contrast(91%);
-    --hggs-filter-tertiary-default: brightness(0) saturate(100%) invert(73%)
+    --hggs-filter-tertiary-default:
+      brightness(0) saturate(100%) invert(73%)
       sepia(15%) saturate(0%) hue-rotate(157deg) brightness(97%) contrast(88%);
-    --hggs-filter-senary-default: brightness(0) saturate(100%) invert(67%)
+    --hggs-filter-senary-default:
+      brightness(0) saturate(100%) invert(67%)
       sepia(0%) saturate(1354%) hue-rotate(173deg) brightness(83%) contrast(85%);
-    --hggs-filter-quaternary-default: brightness(0) saturate(100%) invert(100%)
+    --hggs-filter-quaternary-default:
+      brightness(0) saturate(100%) invert(100%)
       sepia(5%) saturate(19%) hue-rotate(127deg) brightness(106%) contrast(106%);
-    --hggs-filter-quinary-default: brightness(0) saturate(100%) invert(0%)
+    --hggs-filter-quinary-default:
+      brightness(0) saturate(100%) invert(0%)
       sepia(0%) saturate(7500%) hue-rotate(272deg) brightness(96%)
       contrast(108%);
 

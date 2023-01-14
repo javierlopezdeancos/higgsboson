@@ -7,10 +7,11 @@
   line-height: var(--text-line-height, var(--hggs-line-height-default));
 
   &.hggs-text--bold {
-    font-weight: var(
-      --text-font-weight-bold,
-      var(--hggs-font-weight-lg-default)
-    );
+    font-weight:
+      var(
+        --text-font-weight-bold,
+        var(--hggs-font-weight-lg-default)
+      );
   }
 
   &.hggs-text--italic {
@@ -19,9 +20,10 @@
 
   &.hggs-text--small {
     font-size: var(--text-font-size-small, var(--hggs-font-size-sm-default));
-    line-height: var(
-      --text-line-height-small,
-      var(--hggs-line-height-sm-default)
-    );
+    line-height:
+      var(
+        --text-line-height-small,
+        var(--hggs-line-height-sm-default)
+      );
   }
 }

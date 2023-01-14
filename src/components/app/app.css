@@ -6,17 +6,18 @@
   min-height: 100vh;
   background: var(--app-background, var(--hggs-color-background-default));
   color: var(--app-color, var(--hggs-color-default));
-  padding: var(
-    --app-padding,
-    var(--hggs-space-md-default) var(--hggs-space-default)
-  );
+  padding:
+    var(
+      --app-padding,
+      var(--hggs-space-md-default) var(--hggs-space-default)
+    );
   font-size: var(--app-font-size, 1.5rem);
   font-family: var(--hggs-font-family, var(--hggs-font-family-default));
 
-  /* TODO: Extract all of this into a container component*/
+  /* TODO: Extract all of this into a container component */
   & > header {
     & > .hggs-h1:first-child {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 
@@ -32,6 +33,7 @@
   & > main,
   & > footer {
     @extend .hggs-flex--column-top-center;
+
     width: 100%;
   }
 }

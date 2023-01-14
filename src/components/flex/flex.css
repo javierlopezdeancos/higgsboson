@@ -20,18 +20,21 @@
 
 .hggs-flex--column-top-center {
   @extend %hggs-flex-column;
+
   align-items: center;
   justify-content: flex-start;
 }
 
 .hggs-flex--column-top-left {
   @extend %hggs-flex-column;
+
   align-items: flex-start;
   justify-content: flex-start;
 }
 
 .hggs-flex--column-top-right {
   @extend %hggs-flex-column;
+
   align-items: flex-end;
   justify-content: flex-start;
 }
@@ -43,36 +46,42 @@
 
 .hggs-flex--row-top-center {
   @extend %hggs-flex-row;
+
   align-items: flex-start;
   justify-content: center;
 }
 
 .hggs-flex--row-left-center {
   @extend %hggs-flex-row;
+
   align-items: center;
   justify-content: flex-start;
 }
 
 .hggs-flex--row-right-center {
   @extend %hggs-flex-row;
+
   align-items: center;
   justify-content: flex-end;
 }
 
 .hggs-flex--row-left-stretch {
   @extend %hggs-flex-row;
+
   align-items: stretch;
   justify-content: flex-start;
 }
 
 .hggs-flex--row-top-left {
   @extend %hggs-flex-row;
+
   align-items: flex-start;
   justify-content: flex-start;
 }
 
 .hggs-flex--row-space-between-center {
   @extend %hggs-flex-row;
+
   align-items: center;
   justify-content: space-between;
 }

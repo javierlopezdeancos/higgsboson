@@ -9,7 +9,8 @@
   --tag-background: var(--hggs-color-gray-002);
   --tag-color: var(--hggs-color-gray-008);
   --tag-padding: var(--hggs-space-horizontal-sm) var(--hggs-space-vertical);
-  --tag-padding-small: var(--hggs-space-horizontal-xs)
+  --tag-padding-small:
+    var(--hggs-space-horizontal-xs)
     var(--hggs-space-vertical-sm);
   --tag-border-radius: calc(var(--hggs-border-radius) * 2);
   --tag-border-outline: 1px solid var(--hggs-color-gray-004);
@@ -32,7 +33,8 @@
   --tag-color-outline-secondary: var(--hggs-color-secondary);
   --tag-background-subtle-secondary: var(--hggs-color-secondary-001);
   --tag-color-subtle-secondary: var(--hggs-color-secondary-005);
-  --tag-border-outline-secondary-subtle: 1px solid
+  --tag-border-outline-secondary-subtle:
+    1px solid
     var(--hggs-color-secondary-001);
   --tag-color-outline-secondary-subtle: var(--hggs-color-secondary-005);
   --tag-background-tertiary: var(--hggs-color-tertiary);
