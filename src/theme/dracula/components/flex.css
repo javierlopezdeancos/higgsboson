@@ -1,8 +1,0 @@
-.hggs-flex {
-  --hggs-flex-column-gap-small: var(--hggs-space-vertical-sm);
-  --hggs-flex-column-gap-medium: var(--hggs-space-vertical);
-  --hggs-flex-column-gap-big: var(--hggs-space-vertical-md);
-  --hggs-flex-row-gap-small: var(--hggs-space-horizontal-sm);
-  --hggs-flex-row-gap-medium: var(--hggs-space-horizontal);
-  --hggs-flex-row-gap-big: var(--hggs-space-horizontal-md);
-}
