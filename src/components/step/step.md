@@ -64,7 +64,7 @@
   <span class="hggs-step-side"><span>2</span></span>
   <section class="hggs-step-main">
     <span class="hggs-step-title">In Progress</span>
-      <span class="hggs-step-description">This is a description</span>
+    <span class="hggs-step-description">This is a description</span>
   </section>
 </article>
 ```
@@ -76,7 +76,7 @@
   <span class="hggs-step-side"><span>2</span></span>
   <section class="hggs-step-main">
     <span class="hggs-step-title">In Progress</span>
-      <span class="hggs-step-description">This is a description</span>
+    <span class="hggs-step-description">This is a description</span>
   </section>
 </article>
 ```
@@ -88,7 +88,7 @@
   <span class="hggs-step-side"><span>2</span></span>
   <section class="hggs-step-main">
     <span class="hggs-step-title">In Progress</span>
-      <span class="hggs-step-description">This is a description</span>
+    <span class="hggs-step-description">This is a description</span>
   </section>
 </article>
 ```
@@ -100,7 +100,7 @@
   <span class="hggs-step-side"></span>
   <section class="hggs-step-main">
     <span class="hggs-step-title">In Progress</span>
-      <span class="hggs-step-description">This is a description</span>
+    <span class="hggs-step-description">This is a description</span>
   </section>
 </article>
 ```
@@ -112,7 +112,7 @@
   <span class="hggs-step-side"></span>
   <section class="hggs-step-main">
     <span class="hggs-step-title">In Progress</span>
-      <span class="hggs-step-description">This is a description</span>
+    <span class="hggs-step-description">This is a description</span>
   </section>
 </article>
 ```

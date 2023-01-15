@@ -25,20 +25,24 @@
       height: var(--radio-size, var(--hggs-space-default));
     }
 
-    &:checked {
-      border: var(--radio-border-checked, var(--hggs-border-default));
-
-      & ~ span::before {
-        border:
-          var(
-            --radio-inside-border-checked,
-            var(--hggs-border-quaternary-xl-default)
-          );
-      }
-
-      &:hover ~ span::before {
-        border: var(--radio-inside-border-checked-hover, var(--hggs-border-quaternary-xl-default));
-      }
+    & span::before {
+      display: inline-block;
+      width: var(--radio-size, var(--hggs-space-default));
+      height: var(--radio-size, var(--hggs-space-default));
+      content: "";
+      background-color:
+        var(
+          --radio-inside-background-color,
+          var(--hggs-color-background-default)
+        );
+      border: var(--radio-inside-border-bold, var(--hggs-border-default));
+      border-radius: 100%;
+      box-sizing: border-box;
+      transition:
+        var(
+          --radio-inside-transition,
+          box-shadow var(--hggs-transition-ease-default)
+        );
     }
 
     &:hover ~ span::before {
@@ -56,6 +60,22 @@
           --radio-inside-box-shadow-focus,
           var(--hggs-shadow-default)
         );
+    }
+
+    &:checked {
+      border: var(--radio-border-checked, var(--hggs-border-default));
+
+      & ~ span::before {
+        border:
+          var(
+            --radio-inside-border-checked,
+            var(--hggs-border-quaternary-xl-default)
+          );
+      }
+
+      &:hover ~ span::before {
+        border: var(--radio-inside-border-checked-hover, var(--hggs-border-quaternary-xl-default));
+      }
     }
   }
 
@@ -76,25 +96,5 @@
     margin-left: var(--radio-label-margin-left, var(--hggs-space-sm-default));
     cursor: pointer;
     order: 2;
-  }
-
-  & span::before {
-    display: inline-block;
-    width: var(--radio-size, var(--hggs-space-default));
-    height: var(--radio-size, var(--hggs-space-default));
-    content: "";
-    background-color:
-      var(
-        --radio-inside-background-color,
-        var(--hggs-color-background-default)
-      );
-    border: var(--radio-inside-border-bold, var(--hggs-border-default));
-    border-radius: 100%;
-    box-sizing: border-box;
-    transition:
-      var(
-        --radio-inside-transition,
-        box-shadow var(--hggs-transition-ease-default)
-      );
   }
 }

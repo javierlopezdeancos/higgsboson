@@ -1,27 +1,6 @@
 .hggs-switch {
   @extend .hggs-flex--row-left-center;
 
-  & input[type="checkbox"] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-
-    &:focus + label {
-      box-shadow: var(--switch-box-shadow-focus, unset);
-    }
-
-    &:checked + label {
-      background: var(--switch-background-checked, var(--hggs-color-gray-005-default));
-
-      &::after {
-        background: var(--switch-circle-background-checked, var(--hggs-color-quaternary-default));
-        border: var(--switch-circle-border-checked, var(--hggs-border-quaternary-default));
-        left: var(--switch-circle-left-checked, calc(100% - 0px));
-        transform: var(--switch-circle-transform-checked, translateX(-100%));
-      }
-    }
-  }
-
   & > input + label {
     cursor: pointer;
     text-indent: -9999px;
@@ -70,5 +49,26 @@
     margin-left: var(--switch-margin-left, var(--hggs-space-sm-default));
     cursor: pointer;
     order: 2;
+  }
+
+  & input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+
+    &:focus + label {
+      box-shadow: var(--switch-box-shadow-focus, unset);
+    }
+
+    &:checked + label {
+      background: var(--switch-background-checked, var(--hggs-color-gray-005-default));
+
+      &::after {
+        background: var(--switch-circle-background-checked, var(--hggs-color-quaternary-default));
+        border: var(--switch-circle-border-checked, var(--hggs-border-quaternary-default));
+        left: var(--switch-circle-left-checked, calc(100% - 0px));
+        transform: var(--switch-circle-transform-checked, translateX(-100%));
+      }
+    }
   }
 }

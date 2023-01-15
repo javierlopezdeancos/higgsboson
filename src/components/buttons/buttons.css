@@ -15,7 +15,7 @@
   letter-spacing: var(--button-font-letter-spacing);
   border-radius: var(--button-border-radius);
   cursor: var(--button-cursor, default);
-  background: var(--button-background, var(--hggs-color-default));
+  background-color: var(--button-background, var(--hggs-color-default));
 
   &:hover {
     background-color: var(--button-background-hover, var(--hggs-color-default));
@@ -197,13 +197,11 @@
 
   &.hggs-button--outline {
     background-color: transparent;
-    background: transparent;
     color: var(--button-color-outline, var(--hggs-color-default));
     border: var(--button-border-outline, var(--hggs-border-default));
 
     &:hover {
       background-color: transparent;
-      background: transparent;
       outline: unset;
       outline-offset: 0;
       box-shadow: var(--button-box-shadow-outline-hover, unset);
@@ -213,13 +211,11 @@
 
     &.hggs-button--primary {
       background-color: transparent;
-      background: transparent;
       color: var(--button-color-outline-primary, var(--hggs-color-primary-default));
       border: var(--button-border-outline-primary, var(--hggs-border-primary-default));
 
       &:hover {
         background-color: transparent;
-        background: transparent;
         outline: unset;
         outline-offset: 0;
         box-shadow: var(--button-box-shadow-outline-primary-hover, unset);
@@ -230,13 +226,11 @@
 
     &.hggs-button--secondary {
       background-color: transparent;
-      background: transparent;
       color: var(--button-color-outline-secondary, var(--hggs-color-quaternary-default));
       border: var(--button-border-outline-secondary, var(--hggs-border-secondary-default));
 
       &:hover {
         background-color: transparent;
-        background: transparent;
         outline: unset;
         outline-offset: 0;
         box-shadow: var(--button-box-shadow-outline-secondary-hover, unset);
@@ -247,13 +241,11 @@
 
     &.hggs-button--tertiary {
       background-color: transparent;
-      background: transparent;
       color: var(--button-color-outline-tertiary, var(--hggs-color-tertiary-default));
       border: var(--button-border-outline-tertiary, var(--hggs-border-tertiary-default));
 
       &:hover {
         background-color: transparent;
-        background: transparent;
         outline: unset;
         outline-offset: 0;
         box-shadow: var(--button-box-shadow-outline-tertiary-hover, unset);
@@ -264,13 +256,11 @@
 
     &.hggs-button--quaternary {
       background-color: transparent;
-      background: transparent;
       color: var(--button-color-outline-quaternary, var(--hggs-color-quaternary-default));
       border: var(--button-border-outline-quaternary, var(--hggs-border-quaternary-default));
 
       &:hover {
         background-color: transparent;
-        background: transparent;
         outline: unset;
         outline-offset: 0;
         box-shadow: var(--button-box-shadow-outline-quaternary-hover, unset);
@@ -281,13 +271,11 @@
 
     &.hggs-button--quinary {
       background-color: transparent;
-      background: transparent;
       color: var(--button-color-outline-quinary, var(--hggs-color-quinary-default));
       border: var(--button-border-outline-quinary, var(--hggs-border-quinary-default));
 
       &:hover {
         background-color: transparent;
-        background: transparent;
         outline: unset;
         outline-offset: 0;
         box-shadow: var(--button-box-shadow-outline-quinary-hover, unset);
@@ -298,13 +286,11 @@
 
     &.hggs-button--senary {
       background-color: transparent;
-      background: transparent;
       color: var(--button-color-outline-senary, var(--hggs-color-senary-default));
       border: var(--button-border-outline-senary, var(--hggs-border-senary-default));
 
       &:hover {
         background-color: transparent;
-        background: transparent;
         outline: unset;
         outline-offset: 0;
         box-shadow: var(--button-box-shadow-outline-senary-hover, unset);

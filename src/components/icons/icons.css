@@ -12,6 +12,100 @@
   height: var(--icon-size-micro, var(--hggs-icon-size-micro-default));
 }
 
+.hggs-icon {
+  @extend %hggs-icon-margin;
+
+  display: block;
+  width: var(--icon-size, var(--hggs-icon-size-default));
+  height: var(--icon-size, var(--hggs-icon-size-default));
+  filter: var(--icon-filter, var(--hggs-filter-default));
+
+  &.hggs-icon--small {
+    @extend %hggs-icon-small;
+
+    margin: var(--icon-margin-small, var(--hggs-space-2xs-default));
+  }
+
+  &.hggs-icon--micro {
+    @extend %hggs-icon-micro;
+
+    margin: var(--icon-margin-micro, var(--hggs-space-3xs-default));
+  }
+
+  &.hggs-icon--user {
+    background: var(--icon-user, var(--hggs-icon-user-default)) no-repeat center;
+  }
+
+  &.hggs-icon--question {
+    background:
+      var(--icon-question, var(--hggs-icon-question-default))
+      no-repeat center;
+  }
+
+  &.hggs-icon--log-out {
+    background:
+      var(--icon-log-out, var(--hggs-icon-log-out-default)) no-repeat
+      center;
+  }
+
+  &.hggs-icon--hamburger-menu {
+    background:
+      var(
+        --icon-hamburger-menu,
+        var(--hggs-icon-hamburger-menu-default)
+      )
+      no-repeat center;
+  }
+
+  &.hggs-icon--edit {
+    background: var(--icon-edit, var(--hggs-icon-edit-default)) no-repeat center;
+  }
+
+  &.hggs-icon--close {
+    background:
+      var(--icon-close, var(--hggs-icon-close-default)) no-repeat
+      center;
+  }
+
+  &.hggs-icon--plus {
+    background: var(--icon-plus, var(--hggs-icon-plus-default)) no-repeat center;
+  }
+
+  &.hggs-icon--chevron-down {
+    background:
+      var(--icon-chevron-down, var(--hggs-icon-chevron-down-default))
+      no-repeat center;
+  }
+
+  &.hggs-icon--check {
+    background: var(--icon-check, var(--hggs-icon-check-default)) no-repeat center;
+  }
+
+  &.hggs-icon--primary {
+    filter: var(--icon-filter-primary, var(--hggs-filter-primary-default));
+  }
+
+  &.hggs-icon--secondary {
+    filter: var(--icon-filter-secondary, var(--hggs-filter-secondary-default));
+  }
+
+  &.hggs-icon--tertiary {
+    filter: var(--icon-filter-tertiary, var(--hggs-filter-tertiary-default));
+  }
+
+  &.hggs-icon--quaternary {
+    filter: var(--icon-filter-quaternary, var(--hggs-filter-quaternary-default));
+  }
+
+  &.hggs-icon--quinary {
+    filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
+  }
+
+  &.hggs-icon--senary {
+    filter: var(--icon-filter-senary, var(--hggs-filter-senary-default));
+  }
+}
+
 .hggs-icon-wrapper {
   @extend .hggs-flex--row-left-center;
   @extend %hggs-icon-margin;
@@ -49,6 +143,7 @@
     & .hggs-icon {
       filter: var(--icon-box-filter, var(--hggs-filter-quinary-default));
     }
+
 
     &.hggs-icon--small {
       padding:
@@ -145,31 +240,8 @@
         filter: var(--icon-box-filter-senary, var(--hggs-filter-quinary-default));
       }
     }
-  }
 
-  &.hggs-icon--circle {
-    background:
-      var(
-        --icon-box-background,
-        var(--hggs-color-quaternary-default)
-      );
-    border: unset;
-    border-radius: 50%;
-  }
-
-  &.hggs-icon--square {
-    background:
-      var(
-        --icon-box-background,
-        var(--hggs-color-quaternary-default)
-      );
-    border: unset;
-    border-radius: 0;
-  }
-
-  &.hggs-icon--circle,
-  &.hggs-icon--square {
-    &.hggs-icon--outline {
+        &.hggs-icon--outline {
       background: transparent;
       border: var(--icon-outline-border, var(--hggs-border-primary-default));
 
@@ -256,98 +328,26 @@
       }
     }
   }
-}
 
-.hggs-icon {
-  @extend %hggs-icon-margin;
-
-  display: block;
-  width: var(--icon-size, var(--hggs-icon-size-default));
-  height: var(--icon-size, var(--hggs-icon-size-default));
-  filter: var(--icon-filter, var(--hggs-filter-default));
-
-  &.hggs-icon--small {
-    @extend %hggs-icon-small;
-
-    margin: var(--icon-margin-small, var(--hggs-space-2xs-default));
-  }
-
-  &.hggs-icon--micro {
-    @extend %hggs-icon-micro;
-
-    margin: var(--icon-margin-micro, var(--hggs-space-3xs-default));
-  }
-
-  &.hggs-icon--user {
-    background: var(--icon-user, var(--hggs-icon-user-default)) no-repeat center;
-  }
-
-  &.hggs-icon--question {
-    background:
-      var(--icon-question, var(--hggs-icon-question-default))
-      no-repeat center;
-  }
-
-  &.hggs-icon--log-out {
-    background:
-      var(--icon-log-out, var(--hggs-icon-log-out-default)) no-repeat
-      center;
-  }
-
-  &.hggs-icon--hamburger-menu {
+  &.hggs-icon--circle {
     background:
       var(
-        --icon-hamburger-menu,
-        var(--hggs-icon-hamburger-menu-default)
-      )
-      no-repeat center;
+        --icon-box-background,
+        var(--hggs-color-quaternary-default)
+      );
+    border: unset;
+    border-radius: 50%;
   }
 
-  &.hggs-icon--edit {
-    background: var(--icon-edit, var(--hggs-icon-edit-default)) no-repeat center;
-  }
-
-  &.hggs-icon--close {
+  &.hggs-icon--square {
     background:
-      var(--icon-close, var(--hggs-icon-close-default)) no-repeat
-      center;
-  }
-
-  &.hggs-icon--plus {
-    background: var(--icon-plus, var(--hggs-icon-plus-default)) no-repeat center;
-  }
-
-  &.hggs-icon--chevron-down {
-    background:
-      var(--icon-chevron-down, var(--hggs-icon-chevron-down-default))
-      no-repeat center;
-  }
-
-  &.hggs-icon--check {
-    background: var(--icon-check, var(--hggs-icon-check-default)) no-repeat center;
-  }
-
-  &.hggs-icon--primary {
-    filter: var(--icon-filter-primary, var(--hggs-filter-primary-default));
-  }
-
-  &.hggs-icon--secondary {
-    filter: var(--icon-filter-secondary, var(--hggs-filter-secondary-default));
-  }
-
-  &.hggs-icon--tertiary {
-    filter: var(--icon-filter-tertiary, var(--hggs-filter-tertiary-default));
-  }
-
-  &.hggs-icon--quaternary {
-    filter: var(--icon-filter-quaternary, var(--hggs-filter-quaternary-default));
-  }
-
-  &.hggs-icon--quinary {
-    filter: var(--icon-filter-quinary, var(--hggs-filter-quinary-default));
-  }
-
-  &.hggs-icon--senary {
-    filter: var(--icon-filter-senary, var(--hggs-filter-senary-default));
+      var(
+        --icon-box-background,
+        var(--hggs-color-quaternary-default)
+      );
+    border: unset;
+    border-radius: 0;
   }
 }
+
+

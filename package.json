@@ -7,8 +7,7 @@
     "build": "cross-env NODE_ENV=production npx postcss ./src/theme/index.css --config ./postcss.config.js --output ./dist/higgsboson.min.css",
     "build:watch": "npx postcss ./src/theme/index.css --config ./postcss.dev.js --output ./dist/higgsboson.css --verbose --watch",
     "format": "npx stylelint --fix \"src/**/*.css\"",
-    "lint:check": "npx stylelint \"src/**/*.css\"",
-    "lint": "npx stylelint \"src/**/*.css\" --fix",
+    "lint": "npx stylelint \"src/**/*.css\"",
     "start": "lite-server"
   },
   "devDependencies": {
@@ -24,7 +23,9 @@
     "postcss-import": "^15.1.0",
     "postcss-nesting": "^10.2.0",
     "postcss-preset-env": "^7.8.3",
+    "prettier": "2.8.3",
     "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^29.0.0",
     "stylelint-use-nesting": "^4.0.0"
   }
