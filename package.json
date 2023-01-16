@@ -9,14 +9,15 @@
     "format": "npx stylelint --fix \"src/**/*.css\"",
     "lint": "npx stylelint \"src/**/*.css\"",
     "start": "lite-server",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-push": "npm run lint"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.14",
     "cssnano-preset-advanced": "^5.3.9",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "lite-server": "^2.6.1",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
