@@ -59,6 +59,7 @@ Now, I know that we have multiple techniques and tools in the ecosystem to solve
       - [Radio](/src/components/radio/radio.md)
       - [Select](/src/components/select/select.md)
       - [Step](/src/components/step/step.md)
+      - [Steps](/src/components/step/steps.md)
       - [Switch](/src/components/switch/switch.md)
       - [Table](/src/components/table/table.md)
       - [Tag](/src/components/tag/tag.md)
@@ -79,15 +80,12 @@ Now, I know that we have multiple techniques and tools in the ecosystem to solve
 - [How to use](#how-to-use)
   - [Install](#install)
   - [Build](#build)
+    - [Plugins that we are using](#plugins-that-we-are-using-in-the-build-process)
   - [Development](#development)
   - [Lint](#lint)
   - [Format](#format)
   - [Pre-push](#pre-push)
-    - [Install](#install-1)
-    - [Configure](#configure)
     - [Usage](#usage)
-- [Postcss](#postcss)
-  - [Plugins that we are using](#plugins-that-we-are-using)
 - [Tools that could help you to develop in this project](#tools-that-could-help-you-to-develop-in-this-project)
   - [Visual Studio Code IDE](#visual-studio-code-ide)
     - [Visual Studio Code useful Extensions](#visual-studio-code-useful-extensions)
@@ -382,9 +380,12 @@ themeA
  │       ├─ button.css
  │       ├─ checkbox.css
  │       ├─ dialog.css
+ │       ├─ divider.css
+ │       ├─ dropdown.css
  │       ├─ field.css
  │       ├─ flex.css
  │       ├─ form.css
+ │       ├─ grid.css
  │       ├─ icon.css
  │       ├─ input.css
  │       ├─ label.css
@@ -394,10 +395,12 @@ themeA
  │       ├─ option.css
  │       ├─ radio.css
  │       ├─ select.css
+ │       ├─ step.css
  │       ├─ table.css
  │       ├─ tag.css
  │       ├─ text.css
  │       ├─ titles.css
+ │       ├─ tooltip.css
  │
  ├─ vars.css
  ├─ fonts.css
@@ -433,7 +436,6 @@ However, for consistency, we describe here what our ideal folder structure and v
                               │
                               │
     HIGGSBOSON                │     CUSTOM  THEME
-
 ```
 
 ## How to use
@@ -449,6 +451,21 @@ At first you should install dependencies after install nodejs and git.
 `npm run build`
 
 Build your css files into `./dist/higgsboson.min.css`
+
+We are using [postcss](https://postcss.org) to transpile the css code into standard
+d css code
+
+#### Plugins that we are using in the build process
+
+- [autoprefixer](https://github.com/postcss/autoprefixer)
+- [postcss-extend](https://github.com/travco/postcss-extend)
+- [postcss-nesting](https://github.com/csstools/postcss-nesting)
+- [postcss-import](https://github.com/postcss/postcss-import)
+- [postcss-preset-env](https://preset-env.cssdb.org/)
+- [postcss-copy-assets](https://github.com/shutterstock/postcss-copy-assets)
+- [cssnano](https://cssnano.co/)
+- [postcss-csso](https://github.com/lahmatiy/postcss-csso)
+
 
 ### Development
 
@@ -469,77 +486,24 @@ Fix your linted css files with `npm run format`
 
 ### Pre-push
 
-**Its mandatory install the git pre-push commit** in order to pass policies about lint and tests before push your changes.
-
-#### Install
-
-Please copy hooks `pre-push.p1` and `pre-push` that we have in the root repository directory `Higgsboson/hooks` into `Higgsboson/.git/hooks`
+**After run `npm i` should be trigger automatically the `npm run prepare` script that is declare in `package.json` that will configure husky pre push hook for you** in order to pass policies about lint before push your changes.
 
 ```text
 Higgsboson
- │
- ├─ hooks
- │    ├─ pre-push.ps1
- │    ├─ pre-push
- │
- ├─.git/
-      ├─ hooks/
-          ├─ pre-push.ps1
-          ├─ pre-push
-```
-
-#### Configure
-
-**If you are using unix**
-
-Please make executable the `pre-push` file with
-
-```shell
-sudo chmod u+x .git/hooks/pre-push
-```
-
-**If you are using powershell**
-
-You need give permissions to execute powershell scripts unsigned into your machine.
-
-You can allow the powershell executions in so many ways but one of them is executing
-
-`Unblock-File .\.git\hooks\pre-push.ps1`
-
-in the root repository project.
-
-Make sure that you have `hooksPath` set in your `.git/config` file:
-
-```
-[core]
-	repositoryformatversion = 0
-	filemode = false
-	bare = false
-	logallrefupdates = true
-	symlinks = false
-	ignorecase = true
-	hooksPath = .git/hooks  // <----  set here your hooksPath folder
+ ├─ .husky/
+ |    ├─ _/
+ |    |  ├─ .gitignore
+ |    |  ├─ husky.sh
+ |    |
+ |    ├─ pre-push
+ |
+ |
+    ...
 ```
 
 #### Usage
 
-If you have permissions whe you run `git push origin {BRANCH}` the pre-push script should be run automatically running the frontend lint rules.
-
-## Postcss
-
-We are using [postcss](https://postcss.org) to transpile the css code into standar
-d css code
-
-### Plugins that we are using
-
-- [autoprefixer](https://github.com/postcss/autoprefixer)
-- [postcss-extend](https://github.com/travco/postcss-extend)
-- [postcss-nesting](https://github.com/csstools/postcss-nesting)
-- [postcss-import](https://github.com/postcss/postcss-import)
-- [postcss-preset-env](https://preset-env.cssdb.org/)
-- [postcss-copy-assets](https://github.com/shutterstock/postcss-copy-assets)
-- [cssnano](https://cssnano.co/)
-- [postcss-csso](https://github.com/lahmatiy/postcss-csso)
+If you have permissions whe you run `git push` or `git push origin {BRANCH}` the pre-push script should be run automatically running the frontend lint rules.
 
 ## Tools that could help you to develop in this project
 
@@ -551,6 +515,6 @@ Discover a free, built on open source and runs everywhere IDE to frontend develo
 #### Visual Studio Code useful Extensions
 
 - [csstools.postcss](https://github.com/csstools/postcss-language)
-- [dbaeumer.vscode-eslint](https://github.com/Microsoft/vscode-eslint)
 - [stylelint.vscode-stylelint](https://github.com/stylelint/vscode-stylelint)
+- [prettier](https://marketplace.visualstudio.com/publishers/esbenp)
 - [usernamehw.errorlens](https://github.com/usernamehw/vscode-error-lens)
