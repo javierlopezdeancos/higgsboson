@@ -18,7 +18,9 @@ module.exports = (ctx) => ({
           copyAssets({ base: "dist" }),
           nesting(),
           extend(),
-          stylelint(),
+          stylelint({
+            configFile: ".stylelintrc",
+          }),
           autoprefixer(),
           minify({
             preset: "advanced",
@@ -30,7 +32,9 @@ module.exports = (ctx) => ({
           copyAssets({ base: "dist" }),
           nesting(),
           extend(),
-          stylelint(),
+          stylelint({
+            configFile: ".stylelintrc",
+          }),
           autoprefixer(),
         ],
 });

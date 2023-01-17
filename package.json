@@ -1,12 +1,17 @@
 {
   "name": "higgsboson",
   "version": "0.1.0",
+  "license": "gpl-3.0",
+  "author": {
+    "name": "Javier Lopez de Ancos",
+    "email": "javierlopezdeancos@outlook.com",
+    "url": "https://javierlopezdeancos.dev/"
+  },
   "description": "Css classes to style native components.",
   "main": "dist/higgsboson.min.css",
   "scripts": {
     "build": "cross-env NODE_ENV=production npx postcss ./src/theme/index.css --config ./postcss.config.js --output ./dist/higgsboson.min.css",
-    "build:watch": "npx postcss ./src/theme/index.css --config ./postcss.dev.js --output ./dist/higgsboson.css --verbose --watch",
-    "lint:check": "npx stylelint-config-prettier-check",
+    "build:watch": "npx postcss ./src/theme/index.css --config ./postcss.config.js --output ./dist/higgsboson.css --verbose --watch",
     "format": "npx stylelint --fix \"src/**/*.css\"",
     "lint": "npx stylelint \"src/**/*.css\"",
     "start": "lite-server",
