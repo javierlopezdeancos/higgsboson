@@ -16,7 +16,8 @@
     "lint": "npx stylelint \"src/**/*.css\"",
     "start": "lite-server",
     "prepare": "husky install",
-    "pre-push": "npm run lint"
+    "pre-push": "npm run lint",
+    "deps:update": "npx npm-check-updates"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
