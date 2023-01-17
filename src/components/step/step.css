@@ -77,10 +77,11 @@
     & > .hggs-step-main {
       & > .hggs-step-title {
         font-size: var(--step-title-font-size-small, var(--hggs-font-size-sm-default));
-        margin: var(
-          --step-title-margin-small,
-          calc(var(--hggs-space-md-default) / 8) 0 var(--hggs-space-2xs-default) 0
-        );
+        margin:
+          var(
+            --step-title-margin-small,
+            calc(var(--hggs-space-md-default) / 8) 0 var(--hggs-space-2xs-default) 0
+          );
       }
 
       & > .hggs-step-description {

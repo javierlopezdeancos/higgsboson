@@ -2,7 +2,8 @@
   border: unset;
   text-align: center;
   padding: var(--button-padding-medium, calc(var(--hggs-space-default) / 1.2) var(--hggs-space-md-default));
-  margin: var(--button-margin-vertical, var(--hggs-space-default))
+  margin:
+    var(--button-margin-vertical, var(--hggs-space-default))
     var(--button-margin-horizontal, var(--hggs-space-xs-default));
   font-size: var(--button-font-size-medium, var(--hggs-font-size-2xl-default));
   font-family: var(--button-font-family, var(--hggs-font-family));
@@ -16,11 +17,12 @@
   &:hover {
     background-color: var(--button-background-hover, var(--hggs-color-default));
     box-shadow: var(--button-box-shadow-hover, var(--hggs-shadow-default));
-    transition: var(
-      --button-transition-hover,
-      width var(--hggs-animation-ease-default),
-      height var(--hggs-animation-ease-default)
-    );
+    transition:
+      var(
+        --button-transition-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
     transform: var(--button-transform-hover, var(--hggs-transform-escale-default));
     color: var(--button-color-hover, var(--hggs-color-quinary-default));
   }
@@ -40,11 +42,12 @@
     &:hover {
       background-color: var(--button-background-primary-hover, var(--hggs-color-primary-hover-default));
       box-shadow: var(--button-box-shadow-primary-hover, var(--hggs-shadow-default));
-      transition: var(
-        --button-transition-primary-hover,
-        width var(--hggs-animation-ease-default),
-        height var(--hggs-animation-ease-default)
-      );
+      transition:
+        var(
+          --button-transition-primary-hover,
+          width var(--hggs-animation-ease-default),
+          height var(--hggs-animation-ease-default)
+        );
       transform: var(--button-transform-primary-hover, var(--hggs-transform-escale-default));
       color: var(--button-color-primary, var(--hggs-color-quinary-default));
     }
@@ -64,11 +67,12 @@
     &:hover {
       background-color: var(--button-background-secondary-hover, var(--hggs-color-secondary-hover-default));
       box-shadow: var(--button-box-shadow-secondary-hover, var(--hggs-shadow-default));
-      transition: var(
-        --button-transition-secondary-hover,
-        width var(--hggs-animation-ease-default),
-        height var(--hggs-animation-ease-default)
-      );
+      transition:
+        var(
+          --button-transition-secondary-hover,
+          width var(--hggs-animation-ease-default),
+          height var(--hggs-animation-ease-default)
+        );
       transform: var(--button-transform-secondary-hover, var(--hggs-transform-escale-default));
       color: var(--button-color-secondary, var(--hggs-color-quinary-default));
     }
@@ -88,11 +92,12 @@
     &:hover {
       background-color: var(--button-background-tertiary-hover, var(--hggs-color-tertiary-hover-default));
       box-shadow: var(--button-box-shadow-tertiary-hover, var(--hggs-shadow-default));
-      transition: var(
-        --button-transition-tertiary-hover,
-        width var(--hggs-animation-ease-default),
-        height var(--hggs-animation-ease-default)
-      );
+      transition:
+        var(
+          --button-transition-tertiary-hover,
+          width var(--hggs-animation-ease-default),
+          height var(--hggs-animation-ease-default)
+        );
       color: var(--button-color-tertiary, var(--hggs-color-quinary-default));
     }
 
@@ -111,11 +116,12 @@
     &:hover {
       background-color: var(--button-background-quaternary-hover, var(--hggs-color-quaternary-hover-default));
       box-shadow: var(--button-box-shadow-quaternary-hover, var(--hggs-shadow-default));
-      transition: var(
-        --button-transition-quaternary-hover,
-        width var(--hggs-animation-ease-default),
-        height var(--hggs-animation-ease-default)
-      );
+      transition:
+        var(
+          --button-transition-quaternary-hover,
+          width var(--hggs-animation-ease-default),
+          height var(--hggs-animation-ease-default)
+        );
       color: var(--button-color-quaternary, var(--hggs-color-quinary-default));
     }
 
@@ -134,11 +140,12 @@
     &:hover {
       background-color: var(--button-background-quinary-hover, var(--hggs-color-quinary-hover-default));
       box-shadow: var(--button-box-shadow-quinary-hover, var(--hggs-shadow-default));
-      transition: var(
-        --button-transition-quinary-hover,
-        width var(--hggs-animation-ease-default),
-        height var(--hggs-animation-ease-default)
-      );
+      transition:
+        var(
+          --button-transition-quinary-hover,
+          width var(--hggs-animation-ease-default),
+          height var(--hggs-animation-ease-default)
+        );
       color: var(--button-color-quinary, var(--hggs-color-quaternary-default));
     }
 
@@ -157,11 +164,12 @@
     &:hover {
       background-color: var(--button-background-senary-hover, var(--hggs-color-senary-hover-default));
       box-shadow: var(--button-box-shadow-senary-hover, var(--hggs-shadow-default));
-      transition: var(
-        --button-transition-senary-hover,
-        width var(--hggs-animation-ease-default),
-        height var(--hggs-animation-ease-default)
-      );
+      transition:
+        var(
+          --button-transition-senary-hover,
+          width var(--hggs-animation-ease-default),
+          height var(--hggs-animation-ease-default)
+        );
       color: var(--button-color-senary, var(--hggs-color-quinary-default));
     }
 

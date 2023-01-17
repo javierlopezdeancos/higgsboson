@@ -4,7 +4,8 @@
   --radio-border: var(--hggs-form-input-border);
   --radio-border-checked: var(--hggs-form-input-border-checked);
   --radio-inside-border-checked: var(--hggs-border-size-xl) var(--hggs-border-type) var(--hggs-color-primary);
-  --radio-inside-border-checked-hover: var(--hggs-border-size-xl) var(--hggs-border-type)
+  --radio-inside-border-checked-hover:
+    var(--hggs-border-size-xl) var(--hggs-border-type)
     var(--hggs-color-primary-hover);
   --radio-inside-border-hover: var(--hggs-border-size-md) var(--hggs-border-type) var(--hggs-color-primary-hover);
   --radio-inside-outline-focus: var(--hggs-form-outline-focus);

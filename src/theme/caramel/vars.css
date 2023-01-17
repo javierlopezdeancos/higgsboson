@@ -326,10 +326,14 @@
   --hggs-border-gray: var(--hggs-border-background-gray);
   --hggs-border-gray-hover: var(--hggs-border-gray-008);
   --hggs-border-gray-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-gray-outline);
-  --hggs-border-gray-outline-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-gray-outline-hover);
-  --hggs-border-gray-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-gray-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
+    var(--hggs-color-gray-outline-hover);
+  --hggs-border-gray-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-gray-outline-subtle);
-  --hggs-border-gray-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-gray-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-gray-outline-subtle-hover);
 
   /* Primary borders */
@@ -339,14 +343,18 @@
   --hggs-border-primary-008: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-primary-008);
   --hggs-border-primary-009: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-primary-009);
   --hggs-border-primary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-primary);
-  --hggs-border-primary-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-primary-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-background-primary-hover);
   --hggs-border-primary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-primary-outline);
-  --hggs-border-primary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-primary-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-primary-outline-hover);
-  --hggs-border-primary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-primary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-primary-outline-subtle);
-  --hggs-border-primary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-primary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-primary-outline-subtle-hover);
 
   /* Secondary borders */
@@ -354,28 +362,36 @@
   --hggs-border-secondary-007: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-secondary-007);
   --hggs-border-secondary-010: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-secondary-010);
   --hggs-border-secondary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-secondary);
-  --hggs-border-secondary-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-background-secondary-hover);
   --hggs-border-secondary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-secondary-outline);
-  --hggs-border-secondary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-secondary-outline-hover);
-  --hggs-border-secondary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-secondary-outline-subtle);
-  --hggs-border-secondary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-secondary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-secondary-outline-subtle-hover);
 
   /* Tertiary borders */
   --hggs-border-tertiary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-tertiary);
   --hggs-border-tertiary-009: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-tertiary-009);
   --hggs-border-tertiary-010: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-tertiary-010);
-  --hggs-border-tertiary-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-tertiary-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-background-tertiary-hover);
   --hggs-border-tertiary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-tertiary-outline);
-  --hggs-border-tertiary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-tertiary-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-tertiary-outline-hover);
-  --hggs-border-tertiary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-tertiary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-tertiary-outline-subtle);
-  --hggs-border-tertiary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-tertiary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-tertiary-outline-subtle-hover);
 
   /* Quaternary borders */
@@ -383,9 +399,11 @@
   --hggs-border-quaternary-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quaternary);
   --hggs-border-quaternary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quaternary);
   --hggs-border-quaternary-outline-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quaternary);
-  --hggs-border-quaternary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-quaternary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-quaternary-outline-subtle);
-  --hggs-border-quaternary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-quaternary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(---hggs-color-quaternary-outline-subtle-hover);
 
   /* Quinary borders */
@@ -393,9 +411,11 @@
   --hggs-border-quinary-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quinary);
   --hggs-border-quinary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quinary);
   --hggs-border-quinary-outline-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-quinary);
-  --hggs-border-quinary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-quinary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-quinary-outline-subtle);
-  --hggs-border-quinary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-quinary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-quinary-outline-subtle);
 
   /* Senary borders */
@@ -406,11 +426,14 @@
   --hggs-border-senary: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-senary);
   --hggs-border-senary-hover: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-background-senary-hover);
   --hggs-border-senary-outline: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-senary-outline);
-  --hggs-border-senary-outline-hover: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-senary-outline-hover:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-senary-outline-hover);
-  --hggs-border-senary-outline-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-senary-outline-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-senary-outline-subtle);
-  --hggs-border-senary-outline-hover-subtle: var(--hggs-border-size) var(--hggs-border-type)
+  --hggs-border-senary-outline-hover-subtle:
+    var(--hggs-border-size) var(--hggs-border-type)
     var(--hggs-color-senary-outline-subtle-hover);
 
   /* SPACES */

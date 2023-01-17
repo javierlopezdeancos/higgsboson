@@ -16,10 +16,11 @@
     transform: translateX(-50%);
     border-width: var(--tooltip-triangle-border-width, 4px 6px 0 6px);
     border-style: var(--tooltip-triangle-border-style, solid);
-    border-color: var(
-      --tooltip-triangle-border-color,
-      var(--hggs-color-gray-004-default) transparent transparent transparent
-    );
+    border-color:
+      var(
+        --tooltip-triangle-border-color,
+        var(--hggs-color-gray-004-default) transparent transparent transparent
+      );
     z-index: var(--tooltip-triangle-z-index, var(--hggs-layer-10-default));
     opacity: 0;
   }
