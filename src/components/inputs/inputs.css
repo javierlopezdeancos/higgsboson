@@ -1,3 +1,19 @@
+%hggs-input-focus {
+  outline: var(--input-outline-focus, --hggs-form-outline-focus-default);
+  border: var(--input-border-focus, var(--hggs-border-default));
+  box-shadow: var(--input-box-shadow-focus, var(--hggs-shadow-default));
+}
+
+%hggs-input-disabled {
+  color: var(--input-color-disabled, var(--hggs-color-gray-002-default));
+  border: var(--input-border-disabled, var(--hggs-border-disabled-default));
+  cursor: not-allowed;
+}
+
+%hggs-input-error {
+  border: var(--input-border-invalid, var(--hggs-border-error-default));
+}
+
 .hggs-input {
   width: 100%;
   height: var(--input-height, var(--hggs-space-md-default));
@@ -29,22 +45,18 @@
 
   &:focus,
   &.hggs-input--focus {
-    outline: var(--input-outline-focus, --hggs-form-outline-focus-default);
-    border: var(--input-border-focus, var(--hggs-border-default));
-    box-shadow: var(--input-box-shadow-focus, var(--hggs-shadow-default));
+    @extend %hggs-input-focus;
   }
 
   &:disabled,
   &[disabled],
   &.hggs-input--disabled {
-    color: var(--input-color-disabled, var(--hggs-color-gray-002-default));
-    border: var(--input-border-disabled, var(--hggs-border-disabled-default));
-    cursor: not-allowed;
+    @extend %hggs-input-disabled;
   }
 
   &:invalid,
   &[error],
   &.hggs-input--error {
-    border: var(--input-border-invalid, var(--hggs-border-error-default));
+    @extend %hggs-input-error;
   }
 }

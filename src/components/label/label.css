@@ -1,3 +1,12 @@
+%hggs-label-focus {
+  color: var(--label-color-focus, var(--hggs-color-primary-default));
+}
+
+%hggs-label-disabled {
+  color: var(--label-color-disabled, var(--hggs-color-disabled-default));
+  cursor: not-allowed;
+}
+
 .hggs-label {
   font-family: var(--label-font-family, var(--hggs-font-family-default));
   font-weight: var(--label-font-weight, var(--hggs-font-weight-default));
@@ -6,13 +15,12 @@
 
   &:focus,
   &.hggs-label--focus {
-    color: var(--label-color-focus, var(--hggs-color-primary-default));
+    @extend %hggs-label-focus;
   }
 
   &:disabled,
   &[disabled],
   &.hggs-label--disabled {
-    color: var(--label-color-disabled, var(--hggs-color-disabled-default));
-    cursor: not-allowed;
+    @extend %hggs-label-disabled;
   }
 }

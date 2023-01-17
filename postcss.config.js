@@ -6,6 +6,7 @@ const extend = require("postcss-extend");
 const stylelint = require("stylelint");
 const copyAssets = require("postcss-copy-assets");
 const minify = require("cssnano");
+const reporter = require("postcss-reporter");
 
 module.exports = (ctx) => ({
   map: ctx.options.map,
@@ -13,28 +14,30 @@ module.exports = (ctx) => ({
   plugins:
     process.env.NODE_ENV === "production"
       ? [
+          stylelint({
+            configFile: ".stylelintrc",
+            quiet: true,
+          }),
           presetEnv(),
           atImport(),
           copyAssets({ base: "dist" }),
           nesting(),
           extend(),
-          stylelint({
-            configFile: ".stylelintrc",
-          }),
           autoprefixer(),
           minify({
             preset: "advanced",
           }),
         ]
       : [
+          stylelint({
+            configFile: ".stylelintrc",
+          }),
           presetEnv(),
           atImport(),
           copyAssets({ base: "dist" }),
           nesting(),
           extend(),
-          stylelint({
-            configFile: ".stylelintrc",
-          }),
           autoprefixer(),
+          reporter({ clearReportedMessages: true }),
         ],
 });

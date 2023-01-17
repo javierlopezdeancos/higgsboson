@@ -9,32 +9,32 @@
   &:focus,
   &.hggs-field--focus {
     & > .hggs-label {
-      @extend .hggs-label.hggs-label--focus;
+      @extend %hggs-label-focus;
     }
 
     & > .hggs-input {
-      @extend .hggs-input.hggs-input--focus;
+      @extend %hggs-input-focus;
     }
   }
 
   &.hggs-field--disabled {
     & > .hggs-label {
-      @extend .hggs-label.hggs-label--disabled;
+      @extend %hggs-label-disabled;
     }
 
     & > .hggs-input {
-      @extend .hggs-input.hggs-input--disabled;
+      @extend %hggs-input-disabled;
     }
   }
 
   &.hggs-field--error {
     & > .hggs-input {
-      @extend .hggs-input.hggs-input--error;
+      @extend %hggs-input-error;
     }
   }
 
   & > .hggs-label:has(+ .hggs-input:focus) {
-    @extend .hggs-label.hggs-label--focus;
+    @extend %hggs-label-focus;
   }
 
   &.hggs-field--required {
