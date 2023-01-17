@@ -1,13 +1,9 @@
 .hggs-button {
   border: unset;
   text-align: center;
-  padding:
-    var(
-      --button-padding-medium,
-      calc(var(--hggs-space-default) / 1.2)
-      var(--hggs-space-md-default)
-    );
-  margin: var(--button-margin-vertical, var(--hggs-space-default)) var(--button-margin-horizontal, var(--hggs-space-xs-default));
+  padding: var(--button-padding-medium, calc(var(--hggs-space-default) / 1.2) var(--hggs-space-md-default));
+  margin: var(--button-margin-vertical, var(--hggs-space-default))
+    var(--button-margin-horizontal, var(--hggs-space-xs-default));
   font-size: var(--button-font-size-medium, var(--hggs-font-size-2xl-default));
   font-family: var(--button-font-family, var(--hggs-font-family));
   font-weight: var(--button-font-weight, var(--hggs-font-weight-default));
@@ -20,12 +16,11 @@
   &:hover {
     background-color: var(--button-background-hover, var(--hggs-color-default));
     box-shadow: var(--button-box-shadow-hover, var(--hggs-shadow-default));
-    transition:
-      var(
-        --button-transition-hover,
-        width var(--hggs-animation-ease-default),
-        height var(--hggs-animation-ease-default)
-      );
+    transition: var(
+      --button-transition-hover,
+      width var(--hggs-animation-ease-default),
+      height var(--hggs-animation-ease-default)
+    );
     transform: var(--button-transform-hover, var(--hggs-transform-escale-default));
     color: var(--button-color-hover, var(--hggs-color-quinary-default));
   }
@@ -45,12 +40,11 @@
     &:hover {
       background-color: var(--button-background-primary-hover, var(--hggs-color-primary-hover-default));
       box-shadow: var(--button-box-shadow-primary-hover, var(--hggs-shadow-default));
-      transition:
-        var(
-          --button-transition-primary-hover,
-          width var(--hggs-animation-ease-default),
-          height var(--hggs-animation-ease-default)
-        );
+      transition: var(
+        --button-transition-primary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
       transform: var(--button-transform-primary-hover, var(--hggs-transform-escale-default));
       color: var(--button-color-primary, var(--hggs-color-quinary-default));
     }
@@ -70,12 +64,11 @@
     &:hover {
       background-color: var(--button-background-secondary-hover, var(--hggs-color-secondary-hover-default));
       box-shadow: var(--button-box-shadow-secondary-hover, var(--hggs-shadow-default));
-      transition:
-        var(
-          --button-transition-secondary-hover,
-          width var(--hggs-animation-ease-default),
-          height var(--hggs-animation-ease-default)
-        );
+      transition: var(
+        --button-transition-secondary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
       transform: var(--button-transform-secondary-hover, var(--hggs-transform-escale-default));
       color: var(--button-color-secondary, var(--hggs-color-quinary-default));
     }
@@ -87,11 +80,7 @@
 
   &.hggs-button--tertiary {
     color: var(--button-color-tertiary, var(--hggs-color-quinary-default));
-    background-color:
-      var(
-        --button-background-tertiary,
-        var(--hggs-color-tertiary-default)
-      );
+    background-color: var(--button-background-tertiary, var(--hggs-color-tertiary-default));
   }
 
   &.hggs-button--tertiary,
@@ -99,12 +88,11 @@
     &:hover {
       background-color: var(--button-background-tertiary-hover, var(--hggs-color-tertiary-hover-default));
       box-shadow: var(--button-box-shadow-tertiary-hover, var(--hggs-shadow-default));
-      transition:
-        var(
-          --button-transition-tertiary-hover,
-          width var(--hggs-animation-ease-default),
-          height var(--hggs-animation-ease-default)
-        );
+      transition: var(
+        --button-transition-tertiary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
       color: var(--button-color-tertiary, var(--hggs-color-quinary-default));
     }
 
@@ -123,12 +111,11 @@
     &:hover {
       background-color: var(--button-background-quaternary-hover, var(--hggs-color-quaternary-hover-default));
       box-shadow: var(--button-box-shadow-quaternary-hover, var(--hggs-shadow-default));
-      transition:
-        var(
-          --button-transition-quaternary-hover,
-          width var(--hggs-animation-ease-default),
-          height var(--hggs-animation-ease-default)
-        );
+      transition: var(
+        --button-transition-quaternary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
       color: var(--button-color-quaternary, var(--hggs-color-quinary-default));
     }
 
@@ -147,12 +134,11 @@
     &:hover {
       background-color: var(--button-background-quinary-hover, var(--hggs-color-quinary-hover-default));
       box-shadow: var(--button-box-shadow-quinary-hover, var(--hggs-shadow-default));
-      transition:
-        var(
-          --button-transition-quinary-hover,
-          width var(--hggs-animation-ease-default),
-          height var(--hggs-animation-ease-default)
-        );
+      transition: var(
+        --button-transition-quinary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
       color: var(--button-color-quinary, var(--hggs-color-quaternary-default));
     }
 
@@ -171,12 +157,11 @@
     &:hover {
       background-color: var(--button-background-senary-hover, var(--hggs-color-senary-hover-default));
       box-shadow: var(--button-box-shadow-senary-hover, var(--hggs-shadow-default));
-      transition:
-        var(
-          --button-transition-senary-hover,
-          width var(--hggs-animation-ease-default),
-          height var(--hggs-animation-ease-default)
-        );
+      transition: var(
+        --button-transition-senary-hover,
+        width var(--hggs-animation-ease-default),
+        height var(--hggs-animation-ease-default)
+      );
       color: var(--button-color-senary, var(--hggs-color-quinary-default));
     }
 
@@ -313,11 +298,7 @@
     }
 
     &:not(> .hggs-icon-wrapper) {
-      width:
-        var(
-          --button-icon-width,
-          calc(var(--hggs-icon-size-default) + var(--hggs-space-sm-default))
-        );
+      width: var(--button-icon-width, calc(var(--hggs-icon-size-default) + var(--hggs-space-sm-default)));
     }
 
     &:hover {
@@ -340,11 +321,7 @@
         transition: var(--button-transition-hover, filter var(--hggs-animation-ease-default));
 
         & + .hggs-icon-label {
-          color:
-            var(
-              --button-icon-label-color-primary-hover,
-              var(--hggs-color-primary-default)
-            );
+          color: var(--button-icon-label-color-primary-hover, var(--hggs-color-primary-default));
         }
       }
 
@@ -404,43 +381,17 @@
   }
 
   &.hggs-button--big {
-    padding:
-      var(
-        --button-padding-big,
-        calc(var(--hggs-space-default) * 1.5) calc(var(--hggs-space-lg-default) * 2)
-      );
-    font-size:
-      var(
-        --button-font-size-extra-medium,
-        var(--hggs-font-size-2xl-default)
-      );
+    padding: var(--button-padding-big, calc(var(--hggs-space-default) * 1.5) calc(var(--hggs-space-lg-default) * 2));
+    font-size: var(--button-font-size-extra-medium, var(--hggs-font-size-2xl-default));
   }
 
   &.hggs-button--medium {
-    padding:
-      var(
-        --button-padding-medium,
-        calc(var(--hggs-space-default) / 1.2)
-        var(--hggs-space-md-default)
-      );
-    font-size:
-      var(
-        --button-font-size-medium,
-        var(--hggs-font-size-2xl-default)
-      );
+    padding: var(--button-padding-medium, calc(var(--hggs-space-default) / 1.2) var(--hggs-space-md-default));
+    font-size: var(--button-font-size-medium, var(--hggs-font-size-2xl-default));
   }
 
   &.hggs-button--small:not(.hggs-button--circle, .hggs-button--square) {
-    padding:
-      var(
-        --button-padding-small,
-        var(--hggs-space-xs-default)
-        var(--hggs-space-sm-default)
-      );
-    font-size:
-      var(
-        --button-font-size-small,
-        var(--hggs-font-size-sm-default)
-      );
+    padding: var(--button-padding-small, var(--hggs-space-xs-default) var(--hggs-space-sm-default));
+    font-size: var(--button-font-size-small, var(--hggs-font-size-sm-default));
   }
 }

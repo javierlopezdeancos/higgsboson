@@ -9,9 +9,7 @@
   --tag-background: var(--hggs-color-gray);
   --tag-color: var(--hggs-color-background);
   --tag-padding: var(--hggs-space-horizontal-sm) var(--hggs-space-vertical);
-  --tag-padding-small:
-    var(--hggs-space-horizontal-xs)
-    var(--hggs-space-vertical-sm);
+  --tag-padding-small: var(--hggs-space-horizontal-xs) var(--hggs-space-vertical-sm);
   --tag-border-radius: var(--hggs-border-radius-md);
   --tag-border-outline: var(--hggs-border);
   --tag-color-outline: var(--hggs-color-gray);

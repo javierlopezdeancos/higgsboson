@@ -33,17 +33,9 @@
   }
 
   & > input + label + label {
-    font-family:
-      var(
-        --switch-label-font-family,
-        var(--hggs-font-family-default)
-      );
+    font-family: var(--switch-label-font-family, var(--hggs-font-family-default));
     font-size: var(--switch-label-font-size, var(--hggs-font-size-default));
-    font-weight:
-      var(
-        --switch-label-font-weight,
-        var(--hggs-font-weight-default)
-      );
+    font-weight: var(--switch-label-font-weight, var(--hggs-font-weight-default));
     font-style: var(--switch-label-font-style, normal);
     color: var(--switch-label-color, var(--hggs-color-default));
     margin-left: var(--switch-margin-left, var(--hggs-space-sm-default));

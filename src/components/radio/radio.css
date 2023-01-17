@@ -30,19 +30,11 @@
       width: var(--radio-size, var(--hggs-space-default));
       height: var(--radio-size, var(--hggs-space-default));
       content: "";
-      background-color:
-        var(
-          --radio-inside-background-color,
-          var(--hggs-color-background-default)
-        );
+      background-color: var(--radio-inside-background-color, var(--hggs-color-background-default));
       border: var(--radio-inside-border-bold, var(--hggs-border-default));
       border-radius: 100%;
       box-sizing: border-box;
-      transition:
-        var(
-          --radio-inside-transition,
-          box-shadow var(--hggs-transition-ease-default)
-        );
+      transition: var(--radio-inside-transition, box-shadow var(--hggs-transition-ease-default));
     }
 
     &:hover ~ span::before {
@@ -50,27 +42,15 @@
     }
 
     &:focus ~ span::before {
-      outline:
-        var(
-          --radio-inside-outline-focus,
-          var(--hggs-form-outline-focus-default)
-        );
-      box-shadow:
-        var(
-          --radio-inside-box-shadow-focus,
-          var(--hggs-shadow-default)
-        );
+      outline: var(--radio-inside-outline-focus, var(--hggs-form-outline-focus-default));
+      box-shadow: var(--radio-inside-box-shadow-focus, var(--hggs-shadow-default));
     }
 
     &:checked {
       border: var(--radio-border-checked, var(--hggs-border-default));
 
       & ~ span::before {
-        border:
-          var(
-            --radio-inside-border-checked,
-            var(--hggs-border-quaternary-xl-default)
-          );
+        border: var(--radio-inside-border-checked, var(--hggs-border-quaternary-xl-default));
       }
 
       &:hover ~ span::before {
@@ -80,17 +60,9 @@
   }
 
   & .hggs-label {
-    font-family:
-      var(
-        --radio--label-font-family,
-        var(--hggs-font-family-default)
-      );
+    font-family: var(--radio--label-font-family, var(--hggs-font-family-default));
     font-size: var(--radio--label-font-size, var(--hggs-font-size-default));
-    font-weight:
-      var(
-        --radio--label-font-weight,
-        var(--hggs-font-weight-default)
-      );
+    font-weight: var(--radio--label-font-weight, var(--hggs-font-weight-default));
     font-style: var(--radio--label-font-style, normal);
     color: var(--radio--label-color, var(--hggs-color-default));
     margin-left: var(--radio-label-margin-left, var(--hggs-space-sm-default));

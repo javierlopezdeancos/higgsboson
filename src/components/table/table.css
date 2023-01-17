@@ -6,11 +6,7 @@
   font-weight: var(--table-cell-font-weight, var(--hggs-font-weight-default));
   font-size: var(--table-cell-font-size, var(--hggs-font-size-default));
   color: var(--table-cell-font-color, var(--hggs-color-primary-default));
-  border-bottom:
-    var(
-      --table-cell-border-bottom,
-      var(--hggs-border-senary-default)
-    );
+  border-bottom: var(--table-cell-border-bottom, var(--hggs-border-senary-default));
   vertical-align: inherit;
 }
 
@@ -18,11 +14,7 @@
   width: 100%;
   overflow-x: auto;
   border: var(--table-wrapper-border, var(--hggs-border-default));
-  border-radius:
-    var(
-      --table-wrapper-border-radius,
-      calc(var(--hggs-border-radius-default) / 2)
-    );
+  border-radius: var(--table-wrapper-border-radius, calc(var(--hggs-border-radius-default) / 2));
   box-shadow: var(--table-wrapper-box-shadow, none);
 
   & .hggs-table {
@@ -44,43 +36,19 @@
       }
 
       &.hggs-table-cell--bold {
-        font-weight:
-          var(
-            --table-cell-font-weight-bold,
-            var(--hggs-font-weight-lg-default)
-          );
+        font-weight: var(--table-cell-font-weight-bold, var(--hggs-font-weight-lg-default));
       }
     }
 
     & .hggs-table-cell--head {
       @extend %hggs-table-cell;
 
-      padding:
-        var(
-          --table-cell-head-padding,
-          var(--hggs-space-default) var(--hggs-space-default)
-        );
+      padding: var(--table-cell-head-padding, var(--hggs-space-default) var(--hggs-space-default));
       color: var(--table-cell-head-color, var(--hggs-app-color-default));
-      font-size:
-        var(
-          --table-cell-head-font-size,
-          var(--hggs-font-size-default)
-        );
-      font-weight:
-        var(
-          --table-cell-head-font-weight,
-          var(--hggs-font-weight-lg-default)
-        );
-      background:
-        var(
-          --table-cell-head-background,
-          --hggs-color-gray-000-default
-        );
-      border-bottom:
-        var(
-          --table-cell-head-border-bottom,
-          var(--hggs-border-secondary-default)
-        );
+      font-size: var(--table-cell-head-font-size, var(--hggs-font-size-default));
+      font-weight: var(--table-cell-head-font-weight, var(--hggs-font-weight-lg-default));
+      background: var(--table-cell-head-background, --hggs-color-gray-000-default);
+      border-bottom: var(--table-cell-head-border-bottom, var(--hggs-border-secondary-default));
 
       &.hggs-table-cell--capitalize {
         text-transform: capitalize;
@@ -89,11 +57,7 @@
 
     & tbody tr {
       &:first-child .hggs-table-cell {
-        padding-top:
-          var(
-            --table-tbody-first-row-padding-top,
-            var(--hggs-space-sm-default)
-          );
+        padding-top: var(--table-tbody-first-row-padding-top, var(--hggs-space-sm-default));
       }
 
       &:last-child .hggs-table-cell {
@@ -101,11 +65,7 @@
       }
 
       & .hggs-table-cell:first-child {
-        padding-left:
-          var(
-            --table-tbody-first-column-padding-left,
-            var(--hggs-space-default)
-          );
+        padding-left: var(--table-tbody-first-column-padding-left, var(--hggs-space-default));
       }
     }
   }
