@@ -2,12 +2,20 @@ const data = {
   title: "Select",
   default: [
     {
-      title: "select-wrapper",
+      titles: {
+        wrapper: "hggs-select-wrapper",
+        select: "hggs-select",
+        icon: "hggs-icon hggs-icon--chevron-down",
+      },
       subtitle: "select",
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
+        titles: {
+          wrapper: titleStyles,
+          select: titleIndentation1xStyles,
+          icon: titleIndentation1xStyles,
+        },
       },
       classes: {
         wrapper: ["hggs-select-wrapper"],

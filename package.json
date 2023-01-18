@@ -17,7 +17,9 @@
     "start": "lite-server",
     "prepare": "husky install",
     "pre-push": "npm run lint",
-    "deps:update": "npx npm-check-updates -u"
+    "deps:update": "npx npm-check-updates -u",
+    "deps:check": "npx depcheck",
+    "deps:remove": "npx npkill"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

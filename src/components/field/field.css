@@ -6,37 +6,6 @@
     margin-bottom: var(--field-label-margin-bottom, var(--hggs-space-sm-default));
   }
 
-  &:focus,
-  &.hggs-field--focus {
-    & > .hggs-label {
-      @extend %hggs-label-focus;
-    }
-
-    & > .hggs-input {
-      @extend %hggs-input-focus;
-    }
-  }
-
-  &.hggs-field--disabled {
-    & > .hggs-label {
-      @extend %hggs-label-disabled;
-    }
-
-    & > .hggs-input {
-      @extend %hggs-input-disabled;
-    }
-  }
-
-  &.hggs-field--error {
-    & > .hggs-input {
-      @extend %hggs-input-error;
-    }
-  }
-
-  & > .hggs-label:has(+ .hggs-input:focus) {
-    @extend %hggs-label-focus;
-  }
-
   &.hggs-field--required {
     & > .hggs-label::after {
       content: "*";

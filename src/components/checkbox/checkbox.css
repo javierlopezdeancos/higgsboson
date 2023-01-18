@@ -1,12 +1,16 @@
 .hggs-checkboxes {
-  @extend .hggs-flex--column-center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: var(--checkboxes-gap, var(--hggs-space-xs-default));
 }
 
 .hggs-checkbox {
-  @extend .hggs-flex--row-left-center;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   position: relative;
 

@@ -58,7 +58,7 @@
 ```html
 <div class="hggs-box">
   <header class="hggs-box-header">
-    <h3 class="hggs-box-title">Title</h3>
+    <h3 class="hggs-box-title hggs-h4">Title</h3>
   </header>
 </div>
 ```
@@ -78,7 +78,7 @@
 ```html
 <div class="hggs-box">
   <header class="hggs-box-header">
-    <h3 class="hggs-box-title">Title</h3>
+    <h3 class="hggs-box-title hggs-h4">Title</h3>
   </header>
   <section class="hggs-box-body">
     <!-- Set here your box body elements -->

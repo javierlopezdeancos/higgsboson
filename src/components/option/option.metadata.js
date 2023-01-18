@@ -2,10 +2,15 @@ const data = {
   title: "Option",
   default: [
     {
-      title: "option",
+      titles: {
+        option: "hggs-option",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          option: titleStyles,
+        },
       },
       classes: {
         option: ["hggs-option"],

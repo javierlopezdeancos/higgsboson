@@ -1,9 +1,14 @@
 .hggs-step {
-  @extend .hggs-flex--row-top-left;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 
   & > .hggs-step-side {
-    @extend .hggs-flex--column-center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: var(--step-side-font-family, var(--hggs-font-family-default));
     font-size: var(--step-side-font-size, var(--hggs-font-size-md-default));
     font-weight: var(--step-side-font-weight, var(--hggs-font-weight-default));
@@ -16,7 +21,10 @@
   }
 
   & > .hggs-step-main {
-    @extend .hggs-flex--column-top-left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 
     & > .hggs-step-title {
       font-family: var(--step-title-font-family, var(--hggs-font-family-default));

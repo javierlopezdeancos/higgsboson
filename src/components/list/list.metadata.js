@@ -2,12 +2,17 @@ const data = {
   title: "List",
   default: [
     {
-      title: "list",
-      subtitle: "list-item",
+      titles: {
+        list: "hggs-list",
+        item: "hggs-list-item",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
+        titles: {
+          list: titleStyles,
+          item: titleIndentation1xStyles,
+        },
       },
       classes: {
         list: ["hggs-list"],

@@ -2,7 +2,9 @@ const data = {
   title: "Tooltip",
   default: [
     {
-      title: "tooltip --up",
+      titles: {
+        tooltip: "hggs-tooltip hggs-tooltip--up",
+      },
       styles: {
         header: headerStyles,
         article: [...articleStyles],
@@ -13,7 +15,9 @@ const data = {
       },
     },
     {
-      title: "tooltip --right",
+      titles: {
+        tooltip: "hggs-tooltip hggs-tooltip--right",
+      },
       styles: {
         header: headerStyles,
         article: [...articleStyles],
@@ -24,7 +28,9 @@ const data = {
       },
     },
     {
-      title: "tooltip --down",
+      titles: {
+        tooltip: "hggs-tooltip hggs-tooltip--down",
+      },
       styles: {
         header: headerStyles,
         article: [...articleStyles],
@@ -35,7 +41,9 @@ const data = {
       },
     },
     {
-      title: "tooltip --left",
+      titles: {
+        tooltip: "hggs-tooltip hggs-tooltip--left",
+      },
       styles: {
         header: headerStyles,
         article: [...articleStyles, "margin-bottom: 50px"],

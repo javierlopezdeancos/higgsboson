@@ -4,122 +4,138 @@ const data = {
   title: "Box",
   default: [
     {
-      title: "box",
+      titles: {
+        box: "hggs-box",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
         box: boxStyles,
+        titles: {
+          box: titleStyles,
+        },
       },
       classes: {
         box: ["hggs-box"],
       },
     },
     {
-      title: "box",
-      subtitles: [
-        {
-          title: "box-header",
-          subtitle: "box-title",
-        },
-        "box-body",
-      ],
+      titles: {
+        box: "hggs-box",
+        header: "hggs-box-header",
+        title: "hggs-box-title hggs-h4",
+        body: "hggs-box-body",
+      },
+      title: "hggs-box",
       styles: {
-        header: headerWithSubtitleStyles,
-        subHeaderH4: subHeaderStyles,
-        subHeaderH4WithH5Child: subHeaderWithChildStyles,
-        subHeaderH5: subHeaderChildWithParentWithSiblingStyles,
         article: articleStyles,
+        header: headerStyles,
         box: boxStyles,
+        titles: {
+          box: titleStyles,
+          header: titleIndentation1xStyles,
+          title: titleIndentation2xStyles,
+          body: titleIndentation1xStyles,
+        },
       },
       classes: {
         box: ["hggs-box"],
         boxHeader: ["hggs-box-header"],
-        boxTitle: ["hggs-box-title"],
+        boxTitle: ["hggs-box-title", "hggs-h4"],
         boxBody: ["hggs-box-body"],
       },
     },
     {
-      title: "box",
-      subtitles: [
-        {
-          title: "box-header",
-          subtitle: "box-title",
-        },
-        "box-body",
-      ],
+      titles: {
+        box: "hggs-box hggs-box--rounded",
+        header: "hggs-box-header",
+        title: "hggs-box-title hggs-h4",
+        body: "hggs-box-body",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
-        subHeaderH4: subHeaderStyles,
-        subHeaderH4WithH5Child: subHeaderWithChildStyles,
-        subHeaderH5: subHeaderChildWithParentWithSiblingStyles,
         article: articleStyles,
+        header: headerStyles,
         box: boxStyles,
+        titles: {
+          box: titleStyles,
+          header: titleIndentation1xStyles,
+          title: titleIndentation2xStyles,
+          body: titleIndentation1xStyles,
+        },
       },
       classes: {
         box: ["hggs-box", "hggs-box--rounded"],
         boxHeader: ["hggs-box-header"],
-        boxTitle: ["hggs-box-title"],
+        boxTitle: ["hggs-box-title", "hggs-h4"],
         boxBody: ["hggs-box-body"],
       },
     },
   ],
   primary: [
     {
-      title: "box --primary",
+      titles: {
+        box: "hggs-box hggs-box--primary",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
         box: boxStyles,
+        titles: {
+          box: titleStyles,
+        },
       },
       classes: {
         box: ["hggs-box", "hggs-box--primary"],
       },
     },
     {
-      title: "box --primary",
-      subtitles: [
-        {
-          title: "box-header",
-          subtitle: "box-title",
-        },
-        "box-body",
-      ],
+      titles: {
+        box: "hggs-box hggs-box--primary",
+        header: "hggs-box-header",
+        title: "hggs-box-title hggs-h4",
+        body: "hggs-box-body",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
-        subHeaderH4WithH5Child: subHeaderWithChildStyles,
-        subHeaderH5: subHeaderChildWithParentWithSiblingStyles,
-        subHeaderH4: subHeaderStyles,
+        header: headerStyles,
         article: articleStyles,
         box: boxStyles,
+        titles: {
+          box: titleStyles,
+          header: titleIndentation1xStyles,
+          title: titleIndentation2xStyles,
+          body: titleIndentation1xStyles,
+        },
       },
       classes: {
         box: ["hggs-box", "hggs-box--primary"],
         boxHeader: ["hggs-box-header"],
-        boxTitle: ["hggs-box-title"],
+        boxTitle: ["hggs-box-title", "hggs-h4"],
         boxBody: ["hggs-box-body"],
       },
     },
     {
-      title: "box --primary",
-      subtitles: [
-        {
-          title: "box-header",
-          subtitle: "box-title",
-        },
-        "box-body",
-      ],
+      titles: {
+        box: "hggs-box hggs-box--primary hggs-box--rounded",
+        header: "hggs-box-header",
+        title: "hggs-box-title hggs-h4",
+        body: "hggs-box-body",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
-        subHeaderH4WithH5Child: subHeaderWithChildStyles,
-        subHeaderH5: subHeaderChildWithParentWithSiblingStyles,
-        subHeaderH4: subHeaderStyles,
+        header: headerStyles,
         article: articleStyles,
         box: boxStyles,
+        box: boxStyles,
+        titles: {
+          box: titleStyles,
+          header: titleIndentation1xStyles,
+          title: titleIndentation2xStyles,
+          body: titleIndentation1xStyles,
+        },
       },
       classes: {
         box: ["hggs-box", "hggs-box--primary", "hggs-box--rounded"],
         boxHeader: ["hggs-box-header"],
-        boxTitle: ["hggs-box-title"],
+        boxTitle: ["hggs-box-title", "hggs-h4"],
         boxBody: ["hggs-box-body"],
       },
     },

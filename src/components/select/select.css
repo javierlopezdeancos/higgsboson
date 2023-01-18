@@ -1,44 +1,34 @@
-%hggs-select-reset-styles {
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-  outline: none;
-}
-
 .hggs-select-wrapper {
   position: relative;
   width: 100%;
   cursor: pointer;
 
+  & .hggs-select {
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 100%;
+    line-height: inherit;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--select-font-family, var(--hggs-font-family-default));
+    font-size: var(--select-font-size, var(--hggs-font-size-lg-default));
+    color: var(--select-color, var(--hggs-color-default));
+    border: var(--select-border, var(--hggs-border-default));
+    border-radius: var(--select-border-radius, var(--hggs-border-radius-default));
+    height: var(--select-height, var(--hggs-space-md-default));
+    padding: var(--select-padding, var(--hggs-space-sm-default) var(--hggs-space-sm-default));
+
+    &:focus {
+      outline: var(--select-outline-focus, none);
+      border: var(--select-border-focus, var(--hggs-border-focus-default));
+      box-shadow: var(--select-box-shadow-focus, var(--hggs-shadow-default));
+    }
+  }
+
   & .hggs-icon--chevron-down {
     position: absolute;
-    top: var(--select-open-icon-top, 25%);
+    top: var(--select-open-icon-top, 15%);
     right: var(--select-open-icon-right, var(--hggs-space-sm-default));
-  }
-}
-
-.hggs-select {
-  @extend %hggs-select-reset-styles;
-
-  cursor: pointer;
-  font-family: var(--select-font-family, var(--hggs-font-family-default));
-  font-size: var(--select-font-size, var(--hggs-font-size-lg-default));
-  color: var(--select-color, var(--hggs-color-default));
-  border: var(--select-border, var(--hggs-border-default));
-  border-radius: var(--select-border-radius, var(--hggs-border-radius-default));
-  height: var(--select-height, var(--hggs-space-md-default));
-  padding: var(--select-padding, var(--hggs-space-sm-default) var(--hggs-space-sm-default));
-
-  &:focus {
-    outline: var(--select-outline-focus, none);
-    border: var(--select-border-focus, var(--hggs-border-focus-default));
-    box-shadow: var(--select-box-shadow-focus, var(--hggs-shadow-default));
   }
 }

@@ -16,8 +16,6 @@
   }
 
   & .hggs-box-title {
-    @extend .hggs-h4;
-
     font-size: var(--box-title-font-size, var(--hggs-font-size-lg-default));
     margin-top: var(--box-title-margin-top, 0);
   }
@@ -35,7 +33,7 @@
   }
 
   &.hggs-box--rounded {
-    border-radius: var(--box-border-radius-with-radius, var(--hggs-border-radius-big-default));
+    border-radius: var(--box-border-radius-with-radius, var(--hggs-border-size-xl-default));
   }
 
   &.hggs-box--primary {

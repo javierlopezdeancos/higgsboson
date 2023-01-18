@@ -2,14 +2,25 @@ const data = {
   title: "Radio",
   default: [
     {
-      title: "radio",
+      titles: {
+        radios: "hggs-radios",
+        radio: "hggs-radio",
+        input: 'input[type="radio"]',
+        label: "hggs-label",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          radios: titleStyles,
+          radio: titleIndentation1xStyles,
+          input: titleIndentation2xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
-        options: ["hggs-radios"],
-        option: ["hggs-radio"],
+        radios: ["hggs-radios"],
+        radio: ["hggs-radio"],
         label: ["hggs-label"],
       },
       options: [

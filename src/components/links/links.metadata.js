@@ -2,24 +2,34 @@ const data = {
   title: "Link",
   default: [
     {
-      title: "link",
+      titles: {
+        link: "hggs-link",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          link: titleStyles,
+        },
       },
       classes: {
-        tag: ["hggs-link"],
+        link: ["hggs-link"],
       },
       label: "default",
     },
     {
-      title: "link --hover",
+      titles: {
+        link: "hggs-link hggs-link--hover",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          link: titleStyles,
+        },
       },
       classes: {
-        tag: ["hggs-link", "hggs-link--hover"],
+        link: ["hggs-link", "hggs-link--hover"],
       },
       label: "default",
     },

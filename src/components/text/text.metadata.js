@@ -2,9 +2,11 @@ const data = {
   title: "Text",
   default: [
     {
-      title: "text",
+      titles: {
+        text: "hggs-text",
+      },
       classes: {
-        label: ["hggs-text"],
+        text: ["hggs-text"],
       },
       styles: {
         header: headerStyles,
@@ -12,9 +14,11 @@ const data = {
       },
     },
     {
-      title: "text --italic",
+      titles: {
+        text: "hggs-text hggs-text--italic",
+      },
       classes: {
-        label: ["hggs-text", "hggs-text--italic"],
+        text: ["hggs-text", "hggs-text--italic"],
       },
       styles: {
         header: headerStyles,
@@ -22,9 +26,11 @@ const data = {
       },
     },
     {
-      title: "text --small",
+      titles: {
+        text: "hggs-text hggs-text--small",
+      },
       classes: {
-        label: ["hggs-text", "hggs-text--small"],
+        text: ["hggs-text", "hggs-text--small"],
       },
       styles: {
         header: headerStyles,
@@ -32,9 +38,11 @@ const data = {
       },
     },
     {
-      title: "text --bold",
+      titles: {
+        text: "hggs-text hggs-text--bold",
+      },
       classes: {
-        label: ["hggs-text", "hggs-text--bold"],
+        text: ["hggs-text", "hggs-text--bold"],
       },
       styles: {
         header: headerStyles,

@@ -1,21 +1,22 @@
-const sectionStyles = [
-  "width: 100%",
-  "padding: 30px",
-  "margin-bottom: 20px",
-  "background: rgba(100,100,100,0.2)",
-];
+const sectionStyles = ["width: 100%", "padding: 30px", "margin-bottom: 20px", "background: rgba(100,100,100,0.2)"];
 
 const data = {
   title: "Grid",
   default: [
     {
-      title: "grid",
-      subtitle: "cell --4of12",
+      titles: {
+        grid: "hggs-grid",
+        cell: "hggs-cell hggs-cell--4of12",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
         section: sectionStyles,
+        cell: smallLightGrayBoxWithHeightStyles,
+        titles: {
+          grid: titleStyles,
+          cell: titleIndentation1xStyles,
+        },
       },
       classes: {
         grid: ["hggs-grid"],
@@ -23,13 +24,19 @@ const data = {
       },
     },
     {
-      title: "grid --center",
-      subtitle: "cell --6of12",
+      titles: {
+        grid: "hggs-grid hggs-grid--center",
+        cell: "hggs-cell hggs-cell--6of12",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
         section: sectionStyles,
+        cell: smallLightGrayBoxWithHeightStyles,
+        titles: {
+          grid: titleStyles,
+          cell: titleIndentation1xStyles,
+        },
       },
       classes: {
         grid: ["hggs-grid hggs-grid--center"],
@@ -37,13 +44,20 @@ const data = {
       },
     },
     {
-      title: "grid --center",
-      subtitle: "cell --4of12 + cell --2of12",
+      titles: {
+        grid: "hggs-grid hggs-grid--center",
+        cellOne: "hggs-cell hggs-cell--4of12",
+        cellTwo: "hggs-cell hggs-cell--2of12",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
         section: sectionStyles,
+        cell: smallLightGrayBoxWithHeightStyles,
+        titles: {
+          grid: titleStyles,
+          cell: titleIndentation1xStyles,
+        },
       },
       classes: {
         grid: ["hggs-grid hggs-grid--center"],
@@ -54,13 +68,21 @@ const data = {
       },
     },
     {
-      title: "grid --center",
-      subtitle: "cell --4of12 + cell --2of12 + cell --4of12",
+      titles: {
+        grid: "hggs-grid hggs-grid--center",
+        cellOne: "hggs-cell hggs-cell--4of12",
+        cellTwo: "hggs-cell hggs-cell--2of12",
+        cellThree: "hggs-cell hggs-cell--4of12",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
         section: sectionStyles,
+        cell: smallLightGrayBoxWithHeightStyles,
+        titles: {
+          grid: titleStyles,
+          cell: titleIndentation1xStyles,
+        },
       },
       classes: {
         grid: ["hggs-grid hggs-grid--center"],
@@ -72,13 +94,20 @@ const data = {
       },
     },
     {
-      title: "grid --right",
-      subtitle: "cell --4of12 + cell --2of12",
+      titles: {
+        grid: "hggs-grid hggs-grid--right",
+        cellOne: "hggs-cell hggs-cell--4of12",
+        cellTwo: "hggs-cell hggs-cell--2of12",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
         section: sectionStyles,
+        cell: smallLightGrayBoxWithHeightStyles,
+        titles: {
+          grid: titleStyles,
+          cell: titleIndentation1xStyles,
+        },
       },
       classes: {
         grid: ["hggs-grid hggs-grid--right"],
@@ -89,13 +118,20 @@ const data = {
       },
     },
     {
-      title: "grid --left",
-      subtitle: "cell --4of12 + cell --2of12",
+      titles: {
+        grid: "hggs-grid hggs-grid--left",
+        cellOne: "hggs-cell hggs-cell--4of12",
+        cellTwo: "hggs-cell hggs-cell--2of12",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
         section: sectionStyles,
+        cell: smallLightGrayBoxWithHeightStyles,
+        titles: {
+          grid: titleStyles,
+          cell: titleIndentation1xStyles,
+        },
       },
       classes: {
         grid: ["hggs-grid hggs-grid--left"],
@@ -106,13 +142,20 @@ const data = {
       },
     },
     {
-      title: "grid --between",
-      subtitle: "cell --4of12 + cell --2of12",
+      titles: {
+        grid: "hggs-grid hggs-grid--between",
+        cellOne: "hggs-cell hggs-cell--4of12",
+        cellTwo: "hggs-cell hggs-cell--2of12",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
         section: sectionStyles,
+        cell: smallLightGrayBoxWithHeightStyles,
+        titles: {
+          grid: titleStyles,
+          cell: titleIndentation1xStyles,
+        },
       },
       classes: {
         grid: ["hggs-grid hggs-grid--between"],
@@ -123,14 +166,24 @@ const data = {
       },
     },
     {
-      title: "grid",
-      subtitle:
-        "cell --6of12 + cell --2of12 + cell --4of12 + cell --4of12 + cell --3of12 + cell --5of12 ",
+      titles: {
+        grid: "hggs-grid",
+        cellOne: "hggs-cell hggs-cell--6of12",
+        cellTwo: "hggs-cell hggs-cell--2of12",
+        cellThree: "hggs-cell hggs-cell--4of12",
+        cellFour: "hggs-cell hggs-cell--4of12",
+        cellFive: "hggs-cell hggs-cell--3of12",
+        cellSix: "hggs-cell hggs-cell--5of12",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
         section: sectionStyles,
+        cell: smallLightGrayBoxWithHeightStyles,
+        titles: {
+          grid: titleStyles,
+          cell: titleIndentation1xStyles,
+        },
       },
       classes: {
         grid: ["hggs-grid"],

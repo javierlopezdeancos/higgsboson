@@ -1,12 +1,16 @@
 .hggs-radios {
-  @extend .hggs-flex--column-center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: var(--radios-gap, var(--hggs-space-xs-default));
 }
 
 .hggs-radio {
-  @extend .hggs-flex--row-left-center;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   height: var(--radio-size, var(--hggs-space-default));
   position: relative;
@@ -25,7 +29,7 @@
       height: var(--radio-size, var(--hggs-space-default));
     }
 
-    & span::before {
+    & ~ span::before {
       display: inline-block;
       width: var(--radio-size, var(--hggs-space-default));
       height: var(--radio-size, var(--hggs-space-default));

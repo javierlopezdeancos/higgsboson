@@ -2,12 +2,19 @@ const data = {
   title: "Switch",
   default: [
     {
-      title: "switch",
-      subtitle: "label",
+      titles: {
+        switch: "hggs-switch",
+        input: "input['checkbox']",
+        label: "hggs-label",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
-        subHeader: subHeaderStyles,
-        article: [...articleStyles],
+        header: headerStyles,
+        article: articleStyles,
+        titles: {
+          switch: titleStyles,
+          input: titleIndentation1xStyles,
+          label: titleIndentation1xStyles,
+        },
       },
       classes: {
         switch: ["hggs-switch"],
