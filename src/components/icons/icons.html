@@ -6,404 +6,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-icon</title>
     <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
-
     <script type="text/javascript" src="../../helpers/dom.js"></script>
     <script type="text/javascript" src="../../helpers/classes.js"></script>
     <script type="text/javascript" src="../../helpers/styles.js"></script>
-
     <script type="text/javascript" src="./icons.metadata.js"></script>
-
     <script id="template" type="text/template">
       <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
 
-      <!-- default icon labeled -->
+      <!-- default icon -->
 
       <% _.each(data.default, function(i) { %>
         <%
-          const articleIconStyle = _.reduce(i?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerIconStyle = _.reduce(i?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const iconStyle = _.reduce(i?.styles?.icon, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
+          const articleStyles = getStyles(i?.styles?.article);
+          const headerStyles = getStyles(i?.styles?.header);
+          const iconTitleStyles = getStyles(i?.styles?.titles?.icon);
+          const iconTitle = i?.titles?.icon;
+          const iconClasses = getClasses(i?.classes?.icon);
+          const iconStyles = getStyles(i?.styles?.icon);
         %>
 
-        <article style="<%= articleIconStyle %>">
-          <h3 class="hggs-h3" style="<%= headerIconStyle %>">
-            <%= i.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= iconTitleStyles %>">
+              <%= iconTitle %>
+            </h3>
+          </header>
+          <div class="hggs-flex hggs-flex--column-top-left hggs-flex--gap-small">
+            <% _.each(i?.classes?.icon?.sizes, function(s) { %>
+              <div class="hggs-flex hggs-flex--row-top-left hggs-flex--gap-small">
+                <% _.each(i?.classes?.icon?.types, function(t) { %>
+                  <%
+                    let iconClasses = getClasses(t);
 
-          <div class="hggs-flex--row-top-left">
-            <% _.each(i?.classes?.icon?.base, function(ibc) { %>
-              <%
-                let defaultIconClass = _.reduce(ibc, (acc, c) => {
-                  if (!acc) {
-                    return c;
-                  }
-
-                  return acc + ' ' + c;
-                }, '');
-
-                if (i?.classes?.icon?.modifier) {
-                  defaultIconClass = defaultIconClass + " " + i.classes.icon.modifier;
-                }
-              %>
-
-              <span class="<%= defaultIconClass %>" style="<%= iconStyle %>"></span>
-            <% }) %>
-          </div>
-
-          <% _.each(i?.classes?.icon?.sizes, function(isc) { %>
-            <div class="hggs-flex--row-top-left">
-              <% _.each(i?.classes?.icon?.base, function(ibc) { %>
-                <%
-                  let defaultIconClass = _.reduce(ibc, (acc, c) => {
-                    if (!acc) {
-                      return c;
+                    if (i?.classes?.icon?.modifier) {
+                      iconClasses = iconClasses + " " + i.classes.icon.modifier;
                     }
 
-                    return acc + ' ' + c;
-                  }, '');
+                    iconClasses = iconClasses + " " + s;
+                  %>
 
-                  if (i?.classes?.icon?.modifier) {
-                    defaultIconClass = defaultIconClass + " " + i.classes.icon.modifier;
-                  }
+                  <span class="<%= iconClasses %>" style="<%= iconStyles %>"></span>
+                <% }) %>
+              </div>
+            <% }) %>
+          </div>
+        </article>
+      <% }) %>
 
-                  defaultIconClass = defaultIconClass + " " + isc;
-                %>
+      <!-- labeled icon -->
 
-                <span class="<%= defaultIconClass %>" style="<%= iconStyle %>"></span>
-              <% }) %>
-            </div>
+      <% _.each(data.labeled, function(i) { %>
+        <%
+          const articleStyles = getStyles(i?.styles?.article);
+          const headerStyles = getStyles(i?.styles?.header);
+          const wrapperTitleStyles = getStyles(i?.styles?.titles?.wrapper);
+          const wrapperTitle = i?.titles?.wrapper;
+          const wrapperClasses = getClasses(i?.classes?.wrapper);
+          const wrapperStyles = getStyles(i?.styles?.wrapper);
+          const iconTitleStyles = getStyles(i?.styles?.titles?.icon);
+          const iconTitle = i?.titles?.icon;
+          const iconClasses = getClasses(i?.classes?.icon);
+          const iconStyles = getStyles(i?.styles?.icon);
+          const labelTitleStyles = getStyles(i?.styles?.titles?.label);
+          const labelTitle = i?.titles?.label;
+          const labelClasses = getClasses(i?.classes?.label);
+          const labelStyles = getStyles(i?.styles?.label);
+         %>
+
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= wrapperTitleStyles %>">
+              <%= wrapperTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= iconTitleStyles %>">
+              <%= iconTitle %>
+            </h4>
+          </header>
+           <div class="hggs-flex hggs-flex--column-top-left hggs-flex--gap-small">
+            <% _.each(i?.classes?.icon?.sizes, function(s) { %>
+              <div class="hggs-flex hggs-flex--row-top-left hggs-flex--gap-small">
+                <% _.each(i?.classes?.icon?.types, function(t) { %>
+                  <%
+                    let iconClasses = getClasses(t);
+
+                    if (i?.classes?.icon?.modifier) {
+                      iconClasses = iconClasses + " " + i.classes.icon.modifier;
+                    }
+
+                    iconClasses = iconClasses + " " + s;
+                  %>
+
+                  <div class="<%= wrapperClasses %>">
+                    <span class="<%= iconClasses %>"></span>
+                    <span class="<%= labelClasses %>">Button labeled</span>
+                  </div>
+                <% }) %>
+              </div>
+            <% }) %>
+          </div>
+        </article>
+      <% }) %>
+
+      <!-- shape icon -->
+
+      <%
+        const shapes = _.keys(data?.shapes);
+
+        _.each(shapes, function(s) {
+          _.each(data?.shapes[s], function(i) {
+      %>
+            <%
+              const articleStyles = getStyles(i?.styles?.article);
+              const headerStyles = getStyles(i?.styles?.header);
+              const wrapperTitleStyles = getStyles(i?.styles?.titles?.wrapper);
+              const wrapperTitle = i?.titles?.wrapper;
+              const wrapperStyles = getStyles(i?.styles?.wrapper);
+              const iconTitleStyles = getStyles(i?.styles?.titles?.icon);
+              const iconTitle = i?.titles?.icon;
+              const iconClasses = getClasses(i?.classes?.icon);
+              const iconStyles = getStyles(i?.styles?.icon);
+            %>
+
+            <article style="<%= articleStyles %>">
+              <header style="<%= headerStyles %>">
+                <h3 class="hggs-h3" style="<%= wrapperTitleStyles %>">
+                  <%= wrapperTitle %>
+                </h3>
+                <h4 class="hggs-h4" style="<%= iconTitleStyles %>">
+                  <%= iconTitle %>
+                </h4>
+              </header>
+              <div class="hggs-flex hggs-flex--column-top-left hggs-flex--gap-small">
+                <% _.each(i?.classes?.icon?.sizes, function(s) { %>
+                  <div class="hggs-flex hggs-flex--row-top-left hggs-flex--gap-small">
+                    <% _.each(i?.classes?.icon?.types, function(t) { %>
+                      <%
+                        let wrapperClasses = getClasses(i?.classes?.wrapper);
+                        let iconClasses = getClasses(t);
+
+                        wrapperClasses = wrapperClasses + " " + s;
+                      %>
+
+                      <div class="<%= wrapperClasses %>">
+                        <span class="<%= iconClasses %>"></span>
+                      </div>
+                    <% }) %>
+                  </div>
+                <% }) %>
+              </div>
+            </article>
           <% }) %>
-        </article>
-      <% }) %>
-
-      <!-- icon labeled -->
-
-      <% _.each(data.default, function(i) { %>
-        <%
-          const articleIconStyle = _.reduce(i?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerIconStyle = _.reduce(i?.styles?.headerWithSubtitle, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const subHeaderIconWithLabelStyle = _.reduce(i?.styles?.subheader, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const iconLabeledStyle = _.reduce(i?.styles?.iconLabeled, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-        %>
-
-        <article style="<%= articleIconStyle %>">
-          <h3 class="hggs-h3" style="<%= headerIconStyle %>">
-            icon-wrapper
-          </h3>
-
-          <h4 class="hggs-h4" style="<%= subHeaderIconWithLabelStyle %>">
-            <%= i.subtitle %>
-          </h4>
-
-          <div class="hggs-flex--row-top-left">
-            <% _.each(i?.classes?.icon?.base, function(ibc) { %>
-              <%
-                let defaultIconClass = _.reduce(ibc, (acc, c) => {
-                  if (!acc) {
-                    return c;
-                  }
-
-                  return acc + ' ' + c;
-                }, '');
-
-                if (i?.classes?.icon?.modifier) {
-                  defaultIconClass = defaultIconClass + " " + i.classes.icon.modifier;
-                }
-              %>
-
-              <div class="hggs-icon-wrapper" style="<%= iconLabeledStyle %>">
-                <span class="<%= defaultIconClass %>"></span>
-                <span class="hggs-icon-label">This is a label</span>
-              </div>
-            <% }) %>
-          </div>
-        </article>
-      <% }) %>
-
-      <!-- icon circle -->
-
-       <% _.each(data.circleIcons, (c) => { %>
-        <%
-          const articleCircleIconsStyle = _.reduce(c?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerCircleIconsStyle = _.reduce(c?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const subHeaderCircleIconsStyle = _.reduce(c?.styles?.subheader, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const circleIconStyle = _.reduce(c?.styles?.circleIcon, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-        %>
-
-        <article style="<%= articleCircleIconsStyle %>">
-          <h3 class="hggs-h3" style="<%= headerCircleIconsStyle %>">
-            <%= c.title %>
-          </h3>
-
-          <h4 class="hggs-h4" style="<%= subHeaderCircleIconsStyle %>">
-            <%= c.subtitle %>
-          </h4>
-
-          <div class="hggs-flex--column-top-left">
-            <div class="hggs-flex--row-top-left">
-              <%
-                const circleWrapperClass = _.reduce(c.classes.wrapper, (acc, bc) => {
-                  if (!acc) {
-                    return bc;
-                  }
-
-                  return acc + ' ' + bc;
-                }, '');
-              %>
-
-              <% _.each(c.classes.span, (spanClasses, index) => { %>
-                <%
-                  const circleSpanClass = _.reduce(spanClasses, (acc, spc) => {
-                    if (!acc) {
-                      return spc;
-                    }
-
-                    return acc + ' ' + spc;
-                  }, '');
-                %>
-
-                <div class="<%= circleWrapperClass %>" style="<%= circleIconStyle %>" />
-                  <span class="<%= circleSpanClass %>"></span>
-                </div>
-              <% }); %>
-            </div>
-
-            <% _.each(c.extraClasses.sizes, (iconSizesClass, index) => { %>
-              <div class="hggs-flex--row-top-left">
-                <%
-                  const circleWrapperClass = _.reduce(c.classes.wrapper, (acc, bc) => {
-                    if (!acc) {
-                      return bc;
-                    }
-
-                    return acc + ' ' + bc;
-                  }, '');
-
-                  const circleWrapperSizeClass = circleWrapperClass + ' ' + iconSizesClass;
-
-                  const circleIconStyle = _.reduce(c?.styles?.circleIcon, (acc, s) => {
-                    if (!acc) {
-                      return s;
-                    }
-
-                    return acc + '; ' + s;
-                  }, '');
-                %>
-
-                <% _.each(c.classes.span, (spanClasses, index) => { %>
-                  <%
-                    const circleSpanClass = _.reduce(spanClasses, (acc, cpc) => {
-                      if (!acc) {
-                        return cpc;
-                      }
-
-                      return acc + ' ' + cpc;
-                    }, '');
-                  %>
-
-                  <div class="<%= circleWrapperSizeClass %>" style="<%= circleIconStyle %>" />
-                    <span class="<%= circleSpanClass %>"></span>
-                  </div>
-                <% }); %>
-              </div>
-            <% }); %>
-          </div>
-        </article>
-      <% }); %>
-
-      <!-- icon square -->
-
-      <% _.each(data.squareIcons, (c) => { %>
-        <%
-          const articleSquareIconsStyle = _.reduce(c?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerSquareIconsStyle = _.reduce(c?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const subHeaderSquareIconsStyle = _.reduce(c?.styles?.subheader, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const squareIconStyle = _.reduce(c?.styles?.squareIcon, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-        %>
-
-        <article style="<%= articleSquareIconsStyle %>">
-          <h3 class="hggs-h3" style="<%= headerSquareIconsStyle %>">
-            <%= c.title %>
-          </h3>
-
-          <h4 class="hggs-h4" style="<%= subHeaderSquareIconsStyle %>">
-            <%= c.subtitle %>
-          </h4>
-
-          <div class="hggs-flex--column-top-left">
-            <div class="hggs-flex--row-top-left">
-              <%
-                const squareWrapperClass = _.reduce(c.classes.wrapper, (acc, bc) => {
-                  if (!acc) {
-                    return bc;
-                  }
-
-                  return acc + ' ' + bc;
-                }, '');
-              %>
-
-              <% _.each(c.classes.span, (spanClasses, index) => { %>
-                <%
-                  const squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
-                    if (!acc) {
-                      return spc;
-                    }
-
-                    return acc + ' ' + spc;
-                  }, '');
-                %>
-
-                <div class="<%= squareWrapperClass %>" style="<%= squareIconStyle %>" />
-                  <span class="<%= squareSpanClass %>"></span>
-                </div>
-              <% }); %>
-            </div>
-
-            <% _.each(c.extraClasses.sizes, (iconSizesClass, index) => { %>
-              <div class="hggs-flex--row-top-left">
-                <%
-                  const squareWrapperClass = _.reduce(c.classes.wrapper, (acc, bc) => {
-                    if (!acc) {
-                      return bc;
-                    }
-
-                    return acc + ' ' + bc;
-                  }, '');
-
-                  const squareWrapperSizeClass = squareWrapperClass + ' ' + iconSizesClass;
-
-                  const squareIconStyle = _.reduce(c?.styles?.squareIcon, (acc, s) => {
-                    if (!acc) {
-                      return s;
-                    }
-
-                    return acc + '; ' + s;
-                  }, '');
-                %>
-
-                <% _.each(c.classes.span, (spanClasses, index) => { %>
-                  <%
-                    const squareSpanClass = _.reduce(spanClasses, (acc, cpc) => {
-                      if (!acc) {
-                        return cpc;
-                      }
-
-                      return acc + ' ' + cpc;
-                    }, '');
-                  %>
-
-                  <div class="<%= squareWrapperSizeClass %>" style="<%= squareIconStyle %>" />
-                    <span class="<%= squareSpanClass %>"></span>
-                  </div>
-                <% }); %>
-              </div>
-            <% }); %>
-          </div>
-        </article>
-      <% }); %>
+        <% }) %>
     </script>
   </head>
 

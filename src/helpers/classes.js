@@ -10,4 +10,4 @@ const iconsClasses = [
   ["hggs-icon", "hggs-icon--check"],
 ];
 
-const iconSizesClases = ["hggs-icon--small", "hggs-icon--micro"];
+const iconSizesClases = ["", "hggs-icon--small", "hggs-icon--micro"];
