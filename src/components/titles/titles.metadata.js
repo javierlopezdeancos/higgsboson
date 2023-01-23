@@ -8,6 +8,9 @@ data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h1"],
@@ -21,6 +24,9 @@ data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h2"],
@@ -34,6 +40,9 @@ data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h3"],
@@ -47,6 +56,9 @@ data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h4"],
@@ -60,6 +72,9 @@ data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h5"],
@@ -73,6 +88,9 @@ data = {
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h6"],
