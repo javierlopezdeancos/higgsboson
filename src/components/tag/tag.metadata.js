@@ -9,6 +9,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag"],
@@ -22,6 +25,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary"],
@@ -35,6 +41,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary"],
@@ -48,6 +57,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary"],
@@ -61,6 +73,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary"],
@@ -72,9 +87,12 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           wrap: wrapperQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary"],
@@ -88,6 +106,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary"],
@@ -101,6 +122,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--subtle"],
@@ -114,6 +138,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--subtle"],
@@ -127,6 +154,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--subtle"],
@@ -140,6 +170,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--subtle"],
@@ -153,6 +186,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--subtle"],
@@ -164,8 +200,11 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--subtle",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--subtle"],
@@ -179,6 +218,9 @@ const data = {
         styles: {
           header: headerStyles,
           article: articleStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--subtle"],
@@ -195,6 +237,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--outline"],
@@ -209,6 +254,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--outline"],
@@ -223,6 +271,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--outline"],
@@ -237,6 +288,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--outline"],
@@ -251,6 +305,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--outline"],
@@ -262,10 +319,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--outline",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--outline"],
@@ -280,6 +340,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--outline"],
@@ -294,6 +357,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--subtle hggs-tag--outline"],
@@ -308,6 +374,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--subtle hggs-tag--outline"],
@@ -322,6 +391,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--subtle hggs-tag--outline"],
@@ -336,6 +408,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--subtle hggs-tag--outline"],
@@ -350,6 +425,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--subtle hggs-tag--outline"],
@@ -361,10 +439,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--outline",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--outline"],
@@ -379,6 +460,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--subtle hggs-tag--outline"],
@@ -395,6 +479,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--rounded"],
@@ -409,6 +496,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--rounded"],
@@ -423,6 +513,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--rounded"],
@@ -437,6 +530,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--rounded"],
@@ -451,6 +547,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--rounded"],
@@ -462,10 +561,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--rounded",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--rounded"],
@@ -480,6 +582,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--rounded"],
@@ -494,6 +599,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--subtle hggs-tag--rounded"],
@@ -508,6 +616,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--subtle hggs-tag--rounded"],
@@ -522,6 +633,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--subtle hggs-tag--rounded"],
@@ -536,6 +650,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--subtle hggs-tag--rounded"],
@@ -550,6 +667,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--subtle hggs-tag--rounded"],
@@ -561,9 +681,12 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--rounded",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--rounded"],
@@ -578,6 +701,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--subtle hggs-tag--rounded"],
@@ -592,6 +718,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--rounded"],
@@ -606,6 +735,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded"],
@@ -620,6 +752,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded"],
@@ -634,6 +769,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded"],
@@ -648,6 +786,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded"],
@@ -659,10 +800,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--outline hggs-tag--subtle hggs-tag--rounded",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded"],
@@ -677,6 +821,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded"],
@@ -693,6 +840,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--small"],
@@ -707,6 +857,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--small"],
@@ -721,6 +874,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--small"],
@@ -735,6 +891,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--small"],
@@ -749,6 +908,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--small"],
@@ -760,10 +922,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--small",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--small"],
@@ -778,6 +943,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--small"],
@@ -792,6 +960,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--subtle hggs-tag--small"],
@@ -806,6 +977,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--subtle hggs-tag--small"],
@@ -820,6 +994,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--subtle hggs-tag--small"],
@@ -834,6 +1011,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--subtle hggs-tag--small"],
@@ -848,6 +1028,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--subtle hggs-tag--small"],
@@ -859,10 +1042,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--small",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--small"],
@@ -877,6 +1063,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--subtle hggs-tag--small"],
@@ -891,6 +1080,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--small"],
@@ -905,6 +1097,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--subtle hggs-tag--outline hggs-tag--small"],
@@ -919,6 +1114,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--subtle hggs-tag--outline hggs-tag--small"],
@@ -933,6 +1131,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--subtle hggs-tag--outline hggs-tag--small"],
@@ -947,6 +1148,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--subtle hggs-tag--outline hggs-tag--small"],
@@ -958,10 +1162,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--outline hggs-tag--subtle hggs-tag--small",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--outline hggs-tag--small"],
@@ -976,6 +1183,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--subtle hggs-tag--outline hggs-tag--small"],
@@ -990,6 +1200,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--rounded hggs-tag--small"],
@@ -1004,6 +1217,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--rounded hggs-tag--small"],
@@ -1018,6 +1234,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--rounded hggs-tag--small"],
@@ -1032,6 +1251,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--rounded hggs-tag--small"],
@@ -1046,6 +1268,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--rounded hggs-tag--small"],
@@ -1057,10 +1282,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--rounded hggs-tag--small",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--rounded hggs-tag--small"],
@@ -1075,6 +1303,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--rounded hggs-tag--small"],
@@ -1089,6 +1320,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--subtle hggs-tag--rounded hggs-tag--small"],
@@ -1103,6 +1337,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--subtle hggs-tag--rounded hggs-tag--small"],
@@ -1117,6 +1354,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--subtle hggs-tag--rounded hggs-tag--small"],
@@ -1131,6 +1371,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tag: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--subtle hggs-tag--rounded hggs-tag--small"],
@@ -1145,6 +1388,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--subtle hggs-tag--rounded hggs-tag--small"],
@@ -1156,9 +1402,12 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--rounded hggs-tag--small",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--rounded hggs-tag--small"],
@@ -1173,6 +1422,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--subtle hggs-tag--rounded hggs-tag--small"],
@@ -1187,6 +1439,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--small"],
@@ -1201,6 +1456,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--primary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--small"],
@@ -1215,6 +1473,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--secondary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--small"],
@@ -1229,6 +1490,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--tertiary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--small"],
@@ -1243,6 +1507,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quaternary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--small"],
@@ -1254,10 +1521,13 @@ const data = {
           tag: "hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--small",
         },
         styles: {
-          header: headerStyles,
-          article: articleStyles,
+          header: headerQuinaryStyles,
+          article: articleQuinaryStyles,
           tag: inlineMarginLeftStyles,
           wrap: inlineMarginLeftWrapQuinaryStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--quinary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--small"],
@@ -1272,6 +1542,9 @@ const data = {
           header: headerStyles,
           article: articleStyles,
           tag: inlineMarginLeftStyles,
+          titles: {
+            tap: titleStyles,
+          },
         },
         classes: {
           tag: ["hggs-tag hggs-tag--senary hggs-tag--subtle hggs-tag--outline hggs-tag--rounded hggs-tag--small"],
