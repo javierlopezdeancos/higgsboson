@@ -9,6 +9,9 @@ const data = {
         header: headerStyles,
         article: [...articleStyles],
         tooltip: ["margin-left: 0"],
+        titles: {
+          tooltip: titleStyles,
+        },
       },
       classes: {
         tooltip: ["hggs-tooltip", "hggs-tooltip--up"],
@@ -22,6 +25,9 @@ const data = {
         header: headerStyles,
         article: [...articleStyles],
         tooltip: ["margin-left: 0"],
+        titles: {
+          tooltip: titleStyles,
+        },
       },
       classes: {
         tooltip: ["hggs-tooltip", "hggs-tooltip--right"],
@@ -35,6 +41,9 @@ const data = {
         header: headerStyles,
         article: [...articleStyles],
         tooltip: ["margin-left: 0"],
+        titles: {
+          tooltip: titleStyles,
+        },
       },
       classes: {
         tooltip: ["hggs-tooltip", "hggs-tooltip--down"],
@@ -48,6 +57,9 @@ const data = {
         header: headerStyles,
         article: [...articleStyles, "margin-bottom: 50px"],
         tooltip: ["margin-left: 20%"],
+        titles: {
+          tooltip: titleStyles,
+        },
       },
       classes: {
         tooltip: ["hggs-tooltip", "hggs-tooltip--left"],
