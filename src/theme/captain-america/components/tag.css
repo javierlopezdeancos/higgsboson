@@ -9,11 +9,10 @@
   --tag-background: var(--hggs-color-gray);
   --tag-color: var(--hggs-color-background);
   --tag-padding: var(--hggs-space-horizontal-sm) var(--hggs-space-vertical);
-  --tag-padding-small: var(--hggs-space-horizontal-xs)
-    var(--hggs-space-vertical-sm);
+  --tag-padding-small: var(--hggs-space-horizontal-xs) var(--hggs-space-vertical-sm);
   --tag-border-radius: var(--hggs-border-radius-md);
   --tag-border-outline: var(--hggs-border);
-  --tag-color-outline:  var(--hggs-color-gray);
+  --tag-color-outline: var(--hggs-color-gray);
   --tag-background-subtle: var(--hggs-color-background-subtle);
   --tag-color-subtle: var(--hggs-color-subtle);
   --tag-border-outline-subtle: var(--hggs-border-subtle);
@@ -55,8 +54,8 @@
   --tag-border-outline-quinary: var(--hggs-border-quinary);
   --tag-color-outline-quinary: var(--hggs-color-quinary);
   --tag-background-subtle-quinary: var(--hggs-color-background-quinary-subtle);
-  --tag-color-subtle-quinary: var( --hggs-color-quinary-subtle);
-  --tag-border-outline-quinary-subtle: var( --hggs-border-quinary-subtle);
+  --tag-color-subtle-quinary: var(--hggs-color-quinary-subtle);
+  --tag-border-outline-quinary-subtle: var(--hggs-border-quinary-subtle);
   --tag-color-outline-quinary-subtle: var(--hggs-color-quinary-subtle-001);
   --tag-background-senary: var(--hggs-color-senary);
   --tag-color-senary: var(--hggs-color-senary-000);

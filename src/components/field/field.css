@@ -3,54 +3,14 @@
 
   & > .hggs-label {
     display: block;
-    margin-bottom: var(
-      --field-label-margin-bottom,
-      var(--hggs-space-sm-default)
-    );
-
-    &:has(+ .hggs-input:focus) {
-      @extend .hggs-label.hggs-label--focus;
-    }
+    margin-bottom: var(--field-label-margin-bottom, var(--hggs-space-sm-default));
   }
 
   &.hggs-field--required {
-    & > .hggs-label:after {
+    & > .hggs-label::after {
       content: "*";
-      color: var(
-        --field-label-after-color-required,
-        var(--hggs-color-error-default)
-      );
-      margin-left: var(
-        --field-label-after-margin-left-required,
-        var(--hggs-space-2xs-default)
-      );
-    }
-  }
-
-  &:focus,
-  &.hggs-field--focus {
-    & > .hggs-label {
-      @extend .hggs-label.hggs-label--focus;
-    }
-
-    & > .hggs-input {
-      @extend .hggs-input.hggs-input--focus;
-    }
-  }
-
-  &.hggs-field--disabled {
-    & > .hggs-label {
-      @extend .hggs-label.hggs-label--disabled;
-    }
-
-    & > .hggs-input {
-      @extend .hggs-input.hggs-input--disabled;
-    }
-  }
-
-  &.hggs-field--error {
-    & > .hggs-input {
-      @extend .hggs-input.hggs-input--error;
+      color: var(--field-label-after-color-required, var(--hggs-color-error-default));
+      margin-left: var(--field-label-after-margin-left-required, var(--hggs-space-2xs-default));
     }
   }
 }

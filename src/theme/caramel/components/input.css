@@ -4,7 +4,7 @@
   --input-border-focus: var(--hggs-form-input-border-focus);
   --input-outline-focus: var(--hggs-form-outline-focus);
   --input-box-shadow-focus: var(--hggs-form-box-shadow-focus);
-  --input-border-disabled: var( --hggs-form-input-border-disabled);
+  --input-border-disabled: var(--hggs-form-input-border-disabled);
   --input-border-invalid: var(--hggs-form-input-border-error);
   --input-height: var(--hggs-form-input-height);
   --input-height-big: var(--hggs-form-input-height-md);

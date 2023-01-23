@@ -2,10 +2,13 @@ const data = {
   title: "Divider",
   default: [
     {
-      title: "divider",
+      title: "hggs-divider",
       styles: {
-        header: headerStyles,
+        title: {
+          divider: titleStyles,
+        },
         article: articleStyles,
+        header: headerStyles,
       },
       classes: {
         divider: ["hggs-divider"],

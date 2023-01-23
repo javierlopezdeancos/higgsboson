@@ -1,12 +1,16 @@
 .hggs-checkboxes {
-  @extend .hggs-flex--column-center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: var(--checkboxes-gap, var(--hggs-space-xs-default));
 }
 
 .hggs-checkbox {
-  @extend .hggs-flex--row-left-center;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   position: relative;
 
@@ -18,39 +22,30 @@
     height: var(--checkbox-size, var(--hggs-space-default));
     background: var(--checkbox-background, transparent);
     border: var(--checkbox-border, var(--hggs-border-default));
-    border-radius: var(
-      --checkbox-border-radius,
-      var(--hggs-border-radius-default)
-    );
+    border-radius: var(--checkbox-border-radius, var(--hggs-border-radius-default));
 
     &:hover {
       cursor: pointer;
     }
 
     &:checked {
-      &:after {
+      &::after {
         content: "";
         position: absolute;
         width: var(--checkbox-ckeck-icon-width-after, 3px);
         height: var(--checkbox-ckeck-icon-height-after, 10px);
-        background-color: var(
-          --checkbox-ckeck-icon-background-color,
-          var(--hggs-color-quaternary-default)
-        );
+        background-color: var(--checkbox-ckeck-icon-background-color, var(--hggs-color-quaternary-default));
         left: var(--checkbox-ckeck-icon-left-after, 12px);
         top: var(--checkbox-ckeck-icon-top-after, 4px);
         transform: var(--checkbox-ckeck-icon-transform-after, rotate(45deg));
       }
 
-      &:before {
+      &::before {
         content: "";
         position: absolute;
         width: var(--checkbox-ckeck-icon-width-before, 8px);
         height: var(--checkbox-ckeck-icon-height-before, 3px);
-        background-color: var(
-          --checkbox-ckeck-icon-background-color,
-          var(--hggs-color-quaternary-default)
-        );
+        background-color: var(--checkbox-ckeck-icon-background-color, var(--hggs-color-quaternary-default));
         left: var(--checkbox-ckeck-icon-left-before, 4px);
         top: var(--checkbox-ckeck-icon-top-before, 10px);
         transform: var(--checkbox-ckeck-icon-transform-before, rotate(45deg));
@@ -64,15 +59,9 @@
   }
 
   & .hggs-label {
-    font-family: var(
-      --checkbox-label-font-family,
-      var(--hggs-font-family-default)
-    );
+    font-family: var(--checkbox-label-font-family, var(--hggs-font-family-default));
     font-size: var(--checkbox-label-font-size, var(--hggs-font-size-default));
-    font-weight: var(
-      --checkbox-label-font-weight,
-      var(--hggs-font-weight-default)
-    );
+    font-weight: var(--checkbox-label-font-weight, var(--hggs-font-weight-default));
     font-style: var(--checkbox-label-font-style, normal);
     color: var(--checkbox-label-color, var(--hggs-color-default));
     margin-left: var(--checkbox-margin-left, var(--hggs-space-sm-default));

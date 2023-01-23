@@ -5,70 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-grid</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../../dist/higgsboson.css"
-    />
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
-    ></script>
-
+    <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
     <script type="text/javascript" src="../../helpers/dom.js"></script>
     <script type="text/javascript" src="../../helpers/styles.js"></script>
-    <script type="text/javascript" src="../../helpers/dom.js"></script>
-
     <script type="text/javascript" src="./grid.metadata.js"></script>
-
     <script id="template" type="text/template">
       <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
 
       <% _.each(data.default, function(g) { %>
         <%
-          const articleGridStyle = getStyles(g?.styles?.article);
-          const headerGridStyle = getStyles(g?.styles?.header);
-          const subHeaderGridStyle = getStyles(g?.styles?.subHeaderH4);
-          const sectionGridStyle = getStyles(g?.styles?.section);
-          const gridClass = getClasses(g?.classes?.grid);
+          const articleStyles = getStyles(g?.styles?.article);
+          const headerStyles = getStyles(g?.styles?.header);
+          const sectionStyles = getStyles(g?.styles?.section);
+          const gridTitleStyles = getStyles(g?.styles?.titles?.grid);
+          const cellTitleStyles = getStyles(g?.styles?.titles?.cell);
+          const gridTitle = g?.titles?.grid;
+          const cellTitle = g?.titles?.cell;
+          const cellOneTitle = g?.titles?.cellOne;
+          const cellTwoTitle = g?.titles?.cellTwo;
+          const cellThreeTitle = g?.titles?.cellThree;
+          const cellFourTitle = g?.titles?.cellFour;
+          const cellFiveTitle = g?.titles?.cellFive;
+          const cellSixTitle = g?.titles?.cellSix;
+          const gridClasses = getClasses(g?.classes?.grid);
         %>
 
-        <article style="<%= articleGridStyle %>">
-          <h3 class="hggs-h3" style="<%= headerGridStyle %>">
-            <%= g.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= gridTitleStyles %>">
+              <%= gridTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= cellTitleStyles %>">
+              <%= cellTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= cellTitleStyles %>">
+              <%= cellOneTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= cellTitleStyles %>">
+              <%= cellTwoTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= cellTitleStyles %>">
+              <%= cellThreeTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= cellTitleStyles %>">
+              <%= cellFourTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= cellTitleStyles %>">
+              <%= cellFiveTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= cellTitleStyles %>">
+              <%= cellSixTitle %>
+            </h4>
+          </header>
 
-          <h4 class="hggs-h4" style="<%= subHeaderGridStyle %>">
-            <%= g.subtitle %>
-          </h4>
-
-          <section style="<%= sectionGridStyle %>">
-             <div class="<%= gridClass %>">
+          <section style="<%= sectionStyles %>">
+            <div class="<%= gridClasses %>">
               <% if(!g?.classes?.cells) { %>
+                <%
+                  const cellClass = getClasses(g?.classes?.cell);
+                  const cellStyles = getStyles(g?.styles?.cell);
+                %>
+
+                <div class="<%= gridClasses %>" style="<%= cellStyles %>"></div>
+              <% } else if (g?.classes?.cells) { %>
+                <% _.each(g.classes.cells, function(c, i) { %>
                   <%
-                    const gridCellClass = getClasses(g?.classes?.cell);
-                    const gridCellStyles = getStyles(smallLightGrayBoxWithHeightStyles);
+                    const cellClass = getClasses(c);
+                    let gridCellStyles = getStyles(smallLightGrayBoxWithHeightStyles);
                   %>
 
-                  <div class="<%= gridCellClass %>" style="<%= gridCellStyles %>"></div>
-              <% } else if (g?.classes?.cells) { %>
-                  <% _.each(g.classes.cells, function(c, i) { %>
-                    <%
-                      const gridCellClass = getClasses(c);
-                      let gridCellStyles = getStyles(smallLightGrayBoxWithHeightStyles);
-                    %>
+                  <%
+                    if (i === 1 || i === 3) {
+                      gridCellStyles = getStyles(smallDarkGrayBoxWithHeightStyles);
+                    } else if (i === 2 || i === 4) {
+                      gridCellStyles = getStyles(smallDarkerGrayBoxWithHeightStyles);
+                    }
+                  %>
 
-                    <%
-                      if (i === 1 || i === 3) {
-                        gridCellStyles = getStyles(smallDarkGrayBoxWithHeightStyles);
-                      } else if (i === 2 || i === 4) {
-                        gridCellStyles = getStyles(smallDarkerGrayBoxWithHeightStyles);
-                      }
-                    %>
-
-                    <div class="<%= gridCellClass %>" style="<%= gridCellStyles %>"></div>
-                  <% }); %>
+                  <div class="<%= cellClass %>" style="<%= gridCellStyles %>"></div>
+                <% }); %>
               <% } %>
             </div>
           </section>
@@ -78,11 +94,7 @@
   </head>
 
   <body>
-    <div
-      id="body"
-      class="hggs-app hggs-flex--column-top-left"
-      style="width: 100%; height: 100%; padding: 30px"
-    ></div>
+    <div id="body" class="hggs-app hggs-app--left" style="width: 100%; height: 100%; padding: 30px"></div>
   </body>
   <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>

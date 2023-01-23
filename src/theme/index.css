@@ -1,36 +1,38 @@
 /* DEFAULT */
-@import "./resets.css";
-@import "./default.css";
+@import url("./resets.css");
+@import url("./default.css");
 
 /* THEME */
-@import "./captain-america/index.css";
-/*@import "./caramel/index.css";*/
+
+/* @import "./captain-america/index.css"; */
+
+/* @import "./caramel/index.css"; */
 
 /* COMPONENTS */
-@import "../components/flex/flex.css";
-@import "../components/grid/grid.css";
-@import "../components/app/app.css";
-@import "../components/logo/logo.css";
-@import "../components/text/text.css";
-@import "../components/titles/titles.css";
-@import "../components/icons/icons.css";
-@import "../components/buttons/buttons.css";
-@import "../components/list/list.css";
-@import "../components/form/form.css";
-@import "../components/checkbox/checkbox.css";
-@import "../components/switch/switch.css";
-@import "../components/radio/radio.css";
-@import "../components/inputs/inputs.css";
-@import "../components/option/option.css";
-@import "../components/select/select.css";
-@import "../components/dropdown/dropdown.css";
-@import "../components/label/label.css";
-@import "../components/field/field.css";
-@import "../components/links/links.css";
-@import "../components/tag/tag.css";
-@import "../components/dialog/dialog.css";
-@import "../components/table/table.css";
-@import "../components/box/box.css";
-@import "../components/tooltip/tooltip.css";
-@import "../components/divider/divider.css";
-@import "../components/step/step.css";
+@import url("../components/flex/flex.css");
+@import url("../components/grid/grid.css");
+@import url("../components/app/app.css");
+@import url("../components/logo/logo.css");
+@import url("../components/text/text.css");
+@import url("../components/titles/titles.css");
+@import url("../components/icons/icons.css");
+@import url("../components/buttons/buttons.css");
+@import url("../components/list/list.css");
+@import url("../components/form/form.css");
+@import url("../components/checkbox/checkbox.css");
+@import url("../components/switch/switch.css");
+@import url("../components/radio/radio.css");
+@import url("../components/inputs/inputs.css");
+@import url("../components/option/option.css");
+@import url("../components/select/select.css");
+@import url("../components/dropdown/dropdown.css");
+@import url("../components/label/label.css");
+@import url("../components/field/field.css");
+@import url("../components/links/links.css");
+@import url("../components/tag/tag.css");
+@import url("../components/dialog/dialog.css");
+@import url("../components/table/table.css");
+@import url("../components/box/box.css");
+@import url("../components/tooltip/tooltip.css");
+@import url("../components/divider/divider.css");
+@import url("../components/step/step.css");

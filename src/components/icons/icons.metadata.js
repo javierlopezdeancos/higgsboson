@@ -6,732 +6,956 @@ const data = {
   title: "Icons",
   default: [
     {
-      title: "icon --{type-of-icon} --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        icon: "hggs-icon hggs-icon--{type-of-icon} hggs-icon--{size}",
+      },
       styles: {
-        header: headerStyles,
-        headerWithSubtitle: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
         article: articleStyles,
+        header: headerStyles,
         icon: iconStyles,
-        iconLabeled: iconLabeledStyles,
+        titles: {
+          icon: titleStyles,
+        },
       },
       classes: {
         icon: {
-          base: iconsClasses,
+          types: iconsClasses,
           sizes: iconSizesClases,
         },
       },
     },
     {
-      title: "icon --primary --{type-of-icon} --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        icon: "hggs-icon hggs-icon--primary hggs-icon--{type-of-icon} hggs-icon--{size}",
+      },
       styles: {
         header: headerStyles,
-        headerWithSubtitle: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
         article: articleStyles,
         icon: iconStyles,
-        iconLabeled: iconLabeledStyles,
+        titles: {
+          icon: titleStyles,
+        },
       },
       classes: {
         icon: {
-          base: iconsClasses,
+          types: iconsClasses,
           sizes: iconSizesClases,
           modifier: "hggs-icon--primary",
         },
       },
     },
     {
-      title: "icon --secondary --{type-of-icon} --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        icon: "hggs-icon hggs-icon--secondary hggs-icon--{type-of-icon} hggs-icon--{size}",
+      },
       styles: {
         header: headerStyles,
-        headerWithSubtitle: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
         article: articleStyles,
         icon: iconStyles,
-        iconLabeled: iconLabeledStyles,
+        titles: {
+          icon: titleStyles,
+        },
       },
       classes: {
         icon: {
-          base: iconsClasses,
+          types: iconsClasses,
           sizes: iconSizesClases,
           modifier: "hggs-icon--secondary",
         },
       },
     },
     {
-      title: "icon --tertiary --{type-of-icon} --{size}",
+      titles: {
+        icon: "hggs-icon hggs-icon--tertiary hggs-icon--{type-of-icon} hggs-icon--{size}",
+      },
       subtitle: "icon --{type-of-icon}",
       styles: {
         header: headerStyles,
-        headerWithSubtitle: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
         article: articleStyles,
         icon: iconStyles,
-        iconLabeled: iconLabeledStyles,
+        titles: {
+          icon: titleStyles,
+        },
       },
       classes: {
         icon: {
-          base: iconsClasses,
+          types: iconsClasses,
           sizes: iconSizesClases,
           modifier: "hggs-icon--tertiary",
         },
       },
     },
     {
-      title: "icon --quaternary --{type-of-icon} --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        icon: "hggs-icon hggs-icon--quaternary hggs-icon--{type-of-icon} hggs-icon--{size}",
+      },
       styles: {
         header: headerStyles,
-        headerWithSubtitle: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
         article: articleStyles,
         icon: iconStyles,
-        iconLabeled: iconLabeledStyles,
+        titles: {
+          icon: titleStyles,
+        },
       },
       classes: {
         icon: {
-          base: iconsClasses,
+          types: iconsClasses,
           sizes: iconSizesClases,
           modifier: "hggs-icon--quaternary",
         },
       },
     },
     {
-      title: "icon --quinary --{type-of-icon} --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        icon: "hggs-icon hggs-icon--quinary hggs-icon--{type-of-icon} hggs-icon--{size}",
+      },
       styles: {
         header: headerQuinaryStyles,
-        subheader: subHeaderQuinaryStyles,
-        headerWithSubtitle: headerWithSubtitleQuinaryStyles,
         article: articleQuinaryStyles,
         icon: iconStyles,
-        iconLabeled: iconLabeledStyles,
+        titles: {
+          icon: titleStyles,
+        },
       },
       classes: {
         icon: {
-          base: iconsClasses,
+          types: iconsClasses,
           sizes: iconSizesClases,
           modifier: "hggs-icon--quinary",
         },
       },
     },
     {
-      title: "icon --senary --{type-of-icon} --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        icon: "hggs-icon hggs-icon--senary hggs-icon--{type-of-icon} hggs-icon--{size}",
+      },
       styles: {
         header: headerStyles,
-        headerWithSubtitle: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
         article: articleStyles,
         icon: iconStyles,
-        iconLabeled: iconLabeledStyles,
+        titles: {
+          icon: titleStyles,
+        },
       },
       classes: {
         icon: {
-          base: iconsClasses,
+          types: iconsClasses,
           sizes: iconSizesClases,
           modifier: "hggs-icon--senary",
         },
       },
     },
   ],
-  circleIcons: [
+  labeled: [
     {
-      title: "icon-wrapper --circle",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        wrapper: "hggs-icon-wrapper",
+        icon: "hggs-icon hggs-icon--{type-of-icon} hggs-icon--{size}",
+        label: "hggs-icon-label",
+      },
       styles: {
         article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
+        header: headerStyles,
+        icon: iconStyles,
+        iconLabeled: iconLabeledStyles,
+        titles: {
+          wrapper: titleStyles,
+          icon: titleIndentation1xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
-        wrapper: ["hggs-icon-wrapper", "hggs-icon--circle"],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
+        wrapper: ["hggs-icon-wrapper"],
+        label: ["hggs-icon-label"],
+        icon: {
+          types: iconsClasses,
+          sizes: iconSizesClases,
+        },
       },
     },
     {
-      title: "icon-wrapper --circle --primary --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        wrapper: "hggs-icon-wrapper",
+        icon: "hggs-icon hggs-icon--{type-of-icon} hggs-icon--{size}",
+        label: "hggs-icon-label",
+      },
       styles: {
+        header: headerStyles,
         article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
+        icon: iconStyles,
+        iconLabeled: iconLabeledStyles,
+        titles: {
+          wrapper: titleStyles,
+          icon: titleIndentation1xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--primary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
+        wrapper: ["hggs-icon-wrapper"],
+        label: ["hggs-icon-label"],
+        icon: {
+          types: iconsClasses,
+          sizes: iconSizesClases,
+          modifier: "hggs-icon--primary",
+        },
       },
     },
     {
-      title: "icon-wrapper --circle --secondary --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        wrapper: "hggs-icon-wrapper",
+        icon: "hggs-icon hggs-icon--{type-of-icon} hggs-icon--{size}",
+        label: "hggs-icon-label",
+      },
       styles: {
+        header: headerStyles,
         article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
+        icon: iconStyles,
+        iconLabeled: iconLabeledStyles,
+        titles: {
+          wrapper: titleStyles,
+          icon: titleIndentation1xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--secondary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
+        wrapper: ["hggs-icon-wrapper"],
+        label: ["hggs-icon-label"],
+        icon: {
+          types: iconsClasses,
+          sizes: iconSizesClases,
+          modifier: "hggs-icon--secondary",
+        },
       },
     },
     {
-      title: "icon-wrapper --circle  --tertiary --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        wrapper: "hggs-icon-wrapper",
+        icon: "hggs-icon hggs-icon--{type-of-icon} hggs-icon--{size}",
+        label: "hggs-icon-label",
+      },
       styles: {
+        header: headerStyles,
         article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
+        icon: iconStyles,
+        iconLabeled: iconLabeledStyles,
+        titles: {
+          wrapper: titleStyles,
+          icon: titleIndentation1xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--tertiary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
+        wrapper: ["hggs-icon-wrapper"],
+        label: ["hggs-icon-label"],
+        icon: {
+          types: iconsClasses,
+          sizes: iconSizesClases,
+          modifier: "hggs-icon--tertiary",
+        },
       },
     },
     {
-      title: "icon-wrapper --circle --quaternary --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        wrapper: "hggs-icon-wrapper",
+        icon: "hggs-icon hggs-icon--{type-of-icon} hggs-icon--{size}",
+        label: "hggs-icon-label",
+      },
       styles: {
+        header: headerStyles,
         article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
+        icon: iconStyles,
+        iconLabeled: iconLabeledStyles,
+        titles: {
+          wrapper: titleStyles,
+          icon: titleIndentation1xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--quaternary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
+        wrapper: ["hggs-icon-wrapper"],
+        label: ["hggs-icon-label"],
+        icon: {
+          types: iconsClasses,
+          sizes: iconSizesClases,
+          modifier: "hggs-icon--quaternary",
+        },
       },
     },
     {
-      title: "icon-wrapper --circle --quinary --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        wrapper: "hggs-icon-wrapper",
+        icon: "hggs-icon hggs-icon--{type-of-icon} hggs-icon--{size}",
+        label: "hggs-icon-label",
+      },
       styles: {
+        header: headerQuinaryStyles,
         article: articleQuinaryStyles,
-        header: headerWithSubtitleQuinaryStyles,
-        subheader: subHeaderQuinaryStyles,
-        circleIcon: iconStyles,
+        icon: iconStyles,
+        iconLabeled: iconLabeledStyles,
+        titles: {
+          wrapper: titleStyles,
+          icon: titleIndentation1xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--quinary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
+        wrapper: ["hggs-icon-wrapper"],
+        label: ["hggs-icon-label"],
+        icon: {
+          types: iconsClasses,
+          sizes: iconSizesClases,
+          modifier: "hggs-icon--quinary",
+        },
       },
     },
     {
-      title: "icon-wrapper --circle --senary --{size}",
-      subtitle: "icon --{type-of-icon}",
+      titles: {
+        wrapper: "hggs-icon-wrapper",
+        icon: "hggs-icon hggs-icon--{type-of-icon} hggs-icon--{size}",
+        label: "hggs-icon-label",
+      },
       styles: {
+        header: headerStyles,
         article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
+        icon: iconStyles,
+        iconLabeled: iconLabeledStyles,
+        titles: {
+          wrapper: titleStyles,
+          icon: titleIndentation1xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--senary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --circle --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--outline",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --circle --primary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--outline",
-          "hggs-icon--primary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --circle --secondary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--outline",
-          "hggs-icon--secondary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --circle --outline --tertiary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--outline",
-          "hggs-icon--tertiary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --circle --quaternary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--outline",
-          "hggs-icon--quaternary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --circle --quinary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleQuinaryStyles,
-        header: headerWithSubtitleQuinaryStyles,
-        subheader: subHeaderQuinaryStyles,
-        circleIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--outline",
-          "hggs-icon--quinary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --circle --senary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        circleIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--circle",
-          "hggs-icon--outline",
-          "hggs-icon--senary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
+        wrapper: ["hggs-icon-wrapper"],
+        label: ["hggs-icon-label"],
+        icon: {
+          types: iconsClasses,
+          sizes: iconSizesClases,
+          modifier: "hggs-icon--senary",
+        },
       },
     },
   ],
-  squareIcons: [
-    {
-      title: "icon-wrapper --square",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+  shapes: {
+    circle: [
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: ["hggs-icon-wrapper", "hggs-icon--square"],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--primary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--primary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--secondary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--secondary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square --primary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--tertiary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--tertiary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--primary",
-        ],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--quaternary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--quaternary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--quinary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleQuinaryStyles,
+          header: headerQuinaryStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--quinary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square --secondary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--senary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--senary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--secondary",
-        ],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--outline hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--outline"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--outline hggs-icon--primary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--outline", "hggs-icon--primary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square  --tertiary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--outline hggs-icon--secondary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--outline", "hggs-icon--secondary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--tertiary",
-        ],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--outline hggs-icon--tertiary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--outline", "hggs-icon--tertiary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--outline hggs-icon--quaternary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--outline", "hggs-icon--quaternary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square --quaternary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--outline hggs-icon--quinary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleQuinaryStyles,
+          header: headerQuinaryStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--outline", "hggs-icon--quinary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--quaternary",
-        ],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--circle hggs-icon--outline hggs-icon--senary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--circle", "hggs-icon--outline", "hggs-icon--senary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+    ],
+    square: [
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square --quinary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleQuinaryStyles,
-        header: headerWithSubtitleQuinaryStyles,
-        subheader: subHeaderQuinaryStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--primary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--primary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--quinary",
-        ],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--secondary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--secondary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--tertiary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--tertiary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square  --senary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--quaternary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--quaternary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--senary",
-        ],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--quinary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleQuinaryStyles,
+          header: headerQuinaryStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--quinary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--senary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--senary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--outline hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--outline"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--outline",
-        ],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--outline hggs-icon--primary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--outline", "hggs-icon--primary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--outline hggs-icon--secondary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--outline", "hggs-icon--secondary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square --primary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--outline hggs-icon--tertiary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--outline", "hggs-icon--tertiary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--outline",
-          "hggs-icon--primary",
-        ],
-        span: iconsClasses,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--outline hggs-icon--quaternary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--outline", "hggs-icon--quaternary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      extraClasses: {
-        sizes: iconSizesClases,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--outline hggs-icon--quinary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleQuinaryStyles,
+          header: headerQuinaryStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--outline", "hggs-icon--quinary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-    },
-    {
-      title: "icon-wrapper --square  --secondary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
+      {
+        titles: {
+          wrapper: "hggs-icon-wrapper hggs-icon--square hggs-icon--outline hggs-icon--senary hggs-icon--{size}",
+          icon: "hggs-icon hggs-icon--{type-of-icon}",
+        },
+        styles: {
+          article: articleStyles,
+          header: headerStyles,
+          icon: iconStyles,
+          titles: {
+            wrapper: titleStyles,
+            icon: titleIndentation1xStyles,
+          },
+        },
+        classes: {
+          wrapper: ["hggs-icon-wrapper", "hggs-icon--square", "hggs-icon--outline", "hggs-icon--senary"],
+          icon: {
+            types: iconsClasses,
+            sizes: iconSizesClases,
+          },
+        },
       },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--outline",
-          "hggs-icon--secondary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --square --outline --tertiary --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--outline",
-          "hggs-icon--tertiary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --square --quaternary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--outline",
-          "hggs-icon--quaternary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --square --quinary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleQuinaryStyles,
-        header: headerWithSubtitleQuinaryStyles,
-        subheader: subHeaderQuinaryStyles,
-        squareIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--outline",
-          "hggs-icon--quinary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-    {
-      title: "icon-wrapper --square --senary --outline --{size}",
-      subtitle: "icon --{type-of-icon}",
-      styles: {
-        article: articleStyles,
-        header: headerWithSubtitleStyles,
-        subheader: subHeaderStyles,
-        squareIcon: iconStyles,
-      },
-      classes: {
-        wrapper: [
-          "hggs-icon-wrapper",
-          "hggs-icon--square",
-          "hggs-icon--outline",
-          "hggs-icon--senary",
-        ],
-        span: iconsClasses,
-      },
-      extraClasses: {
-        sizes: iconSizesClases,
-      },
-    },
-  ],
+    ],
+  },
 };

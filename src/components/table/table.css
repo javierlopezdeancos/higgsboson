@@ -1,26 +1,8 @@
-%hggs-table-cell {
-  display: table-cell;
-  padding: var(--table-cell-padding, var(--hggs-space-sm-default));
-  text-align: var(--table-cell-text-align, left);
-  font-family: var(--table-cell-font-family, var(--hggs-font-family-default));
-  font-weight: var(--table-cell-font-weight, var(--hggs-font-weight-default));
-  font-size: var(--table-cell-font-size, var(--hggs-font-size-default));
-  color: var(--table-cell-font-color, var(--hggs-color-primary-default));
-  border-bottom: var(
-    --table-cell-border-bottom,
-    var(--hggs-border-senary-default)
-  );
-  vertical-align: inherit;
-}
-
 .hggs-table-wrapper {
   width: 100%;
   overflow-x: auto;
   border: var(--table-wrapper-border, var(--hggs-border-default));
-  border-radius: var(
-    --table-wrapper-border-radius,
-    calc(var(--hggs-border-radius-default) / 2)
-  );
+  border-radius: var(--table-wrapper-border-radius, calc(var(--hggs-border-radius-default) / 2));
   box-shadow: var(--table-wrapper-box-shadow, none);
 
   & .hggs-table {
@@ -35,56 +17,40 @@
     }
 
     & .hggs-table-cell {
-      @extend %hggs-table-cell;
-
-      &.hggs-table-cell--capitalize {
-        text-transform: capitalize;
-      }
-
       &.hggs-table-cell--bold {
-        font-weight: var(
-          --table-cell-font-weight-bold,
-          var(--hggs-font-weight-lg-default)
-        );
+        font-weight: var(--table-cell-font-weight-bold, var(--hggs-font-weight-lg-default));
       }
     }
 
     & .hggs-table-cell--head {
-      @extend %hggs-table-cell;
-
-      padding: var(
-        --table-cell-head-padding,
-        var(--hggs-space-default) var(--hggs-space-default)
-      );
+      padding: var(--table-cell-head-padding, var(--hggs-space-default) var(--hggs-space-default));
       color: var(--table-cell-head-color, var(--hggs-app-color-default));
-      font-size: var(
-        --table-cell-head-font-size,
-        var(--hggs-font-size-default)
-      );
-      font-weight: var(
-        --table-cell-head-font-weight,
-        var(--hggs-font-weight-lg-default)
-      );
-      background: var(
-        --table-cell-head-background,
-        --hggs-color-gray-000-default
-      );
-      border-bottom: var(
-        --table-cell-head-border-bottom,
-        var(--hggs-border-secondary-default)
-      );
+      font-size: var(--table-cell-head-font-size, var(--hggs-font-size-default));
+      font-weight: var(--table-cell-head-font-weight, var(--hggs-font-weight-lg-default));
+      background: var(--table-cell-head-background, --hggs-color-gray-000-default);
+      border-bottom: var(--table-cell-head-border-bottom, var(--hggs-border-secondary-default));
+    }
+
+    & .hggs-table-cell,
+    & .hggs-table-cell--head {
+      display: table-cell;
+      padding: var(--table-cell-padding, var(--hggs-space-sm-default));
+      text-align: var(--table-cell-text-align, left);
+      font-family: var(--table-cell-font-family, var(--hggs-font-family-default));
+      font-weight: var(--table-cell-font-weight, var(--hggs-font-weight-default));
+      font-size: var(--table-cell-font-size, var(--hggs-font-size-default));
+      color: var(--table-cell-font-color, var(--hggs-color-primary-default));
+      border-bottom: var(--table-cell-border-bottom, var(--hggs-border-senary-default));
+      vertical-align: inherit;
 
       &.hggs-table-cell--capitalize {
         text-transform: capitalize;
       }
     }
 
-    & tbody tr {
+    & .hggs-table-body tr {
       &:first-child .hggs-table-cell {
-        padding-top: var(
-          --table-tbody-first-row-padding-top,
-          var(--hggs-space-sm-default)
-        );
+        padding-top: var(--table-tbody-first-row-padding-top, var(--hggs-space-sm-default));
       }
 
       &:last-child .hggs-table-cell {
@@ -92,10 +58,7 @@
       }
 
       & .hggs-table-cell:first-child {
-        padding-left: var(
-          --table-tbody-first-column-padding-left,
-          var(--hggs-space-default)
-        );
+        padding-left: var(--table-tbody-first-column-padding-left, var(--hggs-space-default));
       }
     }
   }

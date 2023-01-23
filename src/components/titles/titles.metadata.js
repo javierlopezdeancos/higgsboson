@@ -2,10 +2,15 @@ data = {
   title: "Title",
   default: [
     {
-      title: "h1",
+      titles: {
+        title: "hggs-h1",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h1"],
@@ -13,10 +18,15 @@ data = {
       label: "This is an h1 title",
     },
     {
-      title: "h2",
+      titles: {
+        title: "hggs-h2",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h2"],
@@ -24,10 +34,15 @@ data = {
       label: "This is an h2 title",
     },
     {
-      title: "h3",
+      titles: {
+        title: "hggs-h3",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h3"],
@@ -35,10 +50,15 @@ data = {
       label: "This is an h3 title",
     },
     {
-      title: "h4",
+      titles: {
+        title: "hggs-h4",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h4"],
@@ -46,10 +66,15 @@ data = {
       label: "This is an h4 title",
     },
     {
-      title: "h5",
+      titles: {
+        title: "hggs-h5",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h5"],
@@ -57,10 +82,15 @@ data = {
       label: "This is an h5 title",
     },
     {
-      title: "h6",
+      titles: {
+        title: "hggs-h6",
+      },
       styles: {
         header: headerStyles,
         article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
       },
       classes: {
         title: ["hggs-h6"],

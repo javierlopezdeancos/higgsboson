@@ -1,3 +1,16 @@
+const getIds = (ids) =>
+  _.reduce(
+    ids,
+    (acc, id) => {
+      if (!acc) {
+        return id;
+      }
+
+      return acc + " " + id;
+    },
+    ""
+  );
+
 const getStyles = (styles) =>
   _.reduce(
     styles,
@@ -24,8 +37,6 @@ const getClasses = (classes) =>
     ""
   );
 
-const getClassesIf = (condition, className, classes) =>
-  condition ? classes + " " + className : classes;
+const getClassesIf = (condition, className, classes) => (condition ? classes + " " + className : classes);
 
-const isDarkTheme = () =>
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+const isDarkTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;

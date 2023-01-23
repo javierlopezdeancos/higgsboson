@@ -9,10 +9,7 @@
   & .hggs-field,
   & .hggs-fieldset .hggs-field,
   & .hggs-fieldset .hggs-input {
-    margin-bottom: var(
-      --form-input-space-vertical,
-      var(--hggs-space-sm-default)
-    );
+    margin-bottom: var(--form-input-space-vertical, var(--hggs-space-sm-default));
   }
 
   & .hggs-input:last-child,

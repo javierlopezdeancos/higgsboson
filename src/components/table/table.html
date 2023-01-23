@@ -5,69 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-select</title>
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../../dist/higgsboson.css"
-    />
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
-    ></script>
-
+    <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
     <script type="text/javascript" src="../../helpers/dom.js"></script>
     <script type="text/javascript" src="../../helpers/styles.js"></script>
-    <script type="text/javascript" src="../../helpers/dom.js"></script>
-
     <script type="text/javascript" src="./table.metadata.js"></script>
-
     <script id="template" type="text/template">
       <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
 
       <% _.each(data.default, function(t) { %>
         <%
-          const articleTableStyle = getStyles(t?.styles?.article);
-          const headerTableStyle = getStyles(t?.styles?.header);
-          const headerTableSubtitleStyle = getStyles(t?.styles?.subHeaderH4);
-          const tableWrapperClass = getClasses(t?.classes?.wrapper);
-          const tableClass = getClasses(t?.classes?.table);
-          const tableHeadClass = getClasses(t?.classes?.head);
-          const tableHeadCellClass = getClasses(t?.classes?.headCell);
+          const articleStyles = getStyles(t?.styles?.article);
+          const headerStyles = getStyles(t?.styles?.header);
+          const wrapperTitleStyles = getStyles(t?.styles?.titles?.wrapper);
+          const wrapperTitle = t?.titles?.wrapper;
+          const wrapperClasses = getClasses(t?.classes?.wrapper);
+          const tableTitleStyles = getStyles(t?.styles?.titles?.table);
+          const tableTitle = t?.titles?.table;
+          const tableClasses = getClasses(t?.classes?.table);
+          const theadTitleStyles = getStyles(t?.styles?.titles?.thead);
+          const theadTitle = t?.titles?.thead;
+          const theadClasses = getClasses(t?.classes?.thead);
+          const headCellTitleStyles = getStyles(t?.styles?.titles?.headCell);
+          const headCellTitle = t?.titles?.headCell;
+          const headCellClasses = getClasses(t?.classes?.headCell);
+          const tbodyTitleStyles = getStyles(t?.styles?.titles?.tbody);
+          const tbodyTitle = t?.titles?.tbody;
+          const tbodyClasses = getClasses(t?.classes?.tbody);
+          const cellTitleStyles = getStyles(t?.styles?.titles?.cell);
+          const cellTitle = t?.titles?.cell;
         %>
 
-        <article style="<%= articleTableStyle %>">
-          <h3 class="hggs-h3" style="<%= headerTableStyle %>">
-            <%= t.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= wrapperTitleStyles %>">
+              <%= wrapperTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= tableTitleStyles %>">
+              <%= tableTitle %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= theadTitleStyles %>">
+              <%= theadTitle %>
+            </h5>
+            <h6 class="hggs-h6" style="<%= headCellTitleStyles %>">
+              <%= headCellTitle %>
+            </h6>
+            <h5 class="hggs-h5" style="<%= tbodyTitleStyles %>">
+              <%= tbodyTitle %>
+            </h5>
+            <h6 class="hggs-h6" style="<%= cellTitleStyles %>">
+              <%= cellTitle %>
+            </h6>
+          </header>
 
-          <h4 class="hggs-h4" style="<%= headerTableSubtitleStyle %>">
-            <%= t.subtitle %>
-          </h4>
-
-          <div class="<%= tableWrapperClass %>">
-            <table class="<%= tableClass %>">
-              <thead class="<%= tableHeadClass %>">
+          <div class="<%= wrapperClasses %>">
+            <table class="<%= tableClasses %>">
+              <thead class="<%= theadClasses %>">
                 <tr>
                   <% _.each(t.data.headers, function(h) { %>
                     <%
-                      let tableHeaderClass = getClassesIf(h.isCapitalized, t.classes.capitalize,tableHeadCellClass);
+                      let headerClasses = getClassesIf(h.isCapitalized, t.classes.capitalize, headCellClasses);
                     %>
-                    <th class="<%= tableHeaderClass %>"><%= h.label %></th>
+                    <th class="<%= headerClasses %>"><%= h.label %></th>
                   <% }); %>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="<%= tbodyClasses %>">
                 <% _.each(t.data.rows, function(r) { %>
                   <tr>
                     <% _.each(r, function(cell) { %>
                       <%
-                        let tableCellClass = getClasses(t?.classes?.cell);
-                        tableCellClass = getClassesIf(cell.isBold, t.classes.bold, tableCellClass);
-                        tableCellClass = getClassesIf(cell.isCapitalized, t.classes.capitalize, tableCellClass);
+                        let cellClasses = getClasses(t?.classes?.cell);
+                        cellClass = getClassesIf(cell.isBold, t.classes.bold, cellClasses);
+                        cellClass = getClassesIf(cell.isCapitalized, t.classes.capitalize, cellClasses);
                       %>
-                      <td class="<%= tableCellClass %>">
+                      <td class="<%= cellClasses %>">
                         <% if (cell.state) { %>
                           <% const tagClass = getClasses(t?.classes[cell.state]); %>
                           <div  class="<%= tagClass %>"><%= cell.label %></div>
@@ -87,11 +99,7 @@
   </head>
 
   <body>
-    <div
-      id="body"
-      class="hggs-app hggs-flex--column-top-left"
-      style="width: 100%; height: 100%; padding: 30px"
-    ></div>
+    <div id="body" class="hggs-app hggs-app--left" style="width: 100%; height: 100%; padding: 30px"></div>
   </body>
   <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>

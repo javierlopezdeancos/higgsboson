@@ -5,48 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-step</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../../dist/higgsboson.css"
-    />
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
-    ></script>
-
+    <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
     <script type="text/javascript" src="../../helpers/dom.js"></script>
     <script type="text/javascript" src="../../helpers/styles.js"></script>
-    <script type="text/javascript" src="../../helpers/dom.js"></script>
-
     <script type="text/javascript" src="./step.metadata.js"></script>
-
     <script id="template" type="text/template">
       <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
 
       <!-- default -->
       <% _.each(data.default, function(d) { %>
         <%
-          const articleStyle = getStyles(d?.styles?.article);
-          const headerStyle = getStyles(d?.styles?.header);
-          const stepClass = getClasses(d?.classes?.step);
-          const stepSideClass = getClasses(d?.classes?.side);
-          const stepMainClass = getClasses(d?.classes?.main);
-          const stepTitleClass = getClasses(d?.classes?.title);
-          const stepDescriptionClass = getClasses(d?.classes?.description);
+          const articleStyles = getStyles(d?.styles?.article);
+          const headerStyles = getStyles(d?.styles?.header);
+          const stepClasses = getClasses(d?.classes?.step);
+          const stepTitle = d?.titles?.step;
+          const stepTitleStyles = getStyles(d?.styles?.titles?.step);
+          const sideClasses = getClasses(d?.classes?.side);
+          const sideTitle = d?.titles?.side;
+          const sideTitleStyles = getStyles(d?.styles?.titles?.side);
+          const mainClasses = getClasses(d?.classes?.main);
+          const mainTitle = d?.titles?.main;
+          const mainTitleStyles = getStyles(d?.styles?.titles?.main);
+          const titleClasses = getClasses(d?.classes?.title);
+          const titleTitle = d?.titles?.title;
+          const titleTitleStyles = getStyles(d?.styles?.titles?.title);
+          const descriptionClasses = getClasses(d?.classes?.description);
+          const descriptionTitle = d?.titles?.description;
+          const descriptionTitleStyles = getStyles(d?.styles?.titles?.description);
         %>
 
-        <article style="<%= articleStyle %>">
-          <h3 class="hggs-h3" style="<%= headerStyle %>">
-            <%= d.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= stepTitleStyles %>">
+              <%= stepTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
+              <%= sideTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= mainTitleStyles %>">
+              <%= mainTitle %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= titleTitleStyles %>">
+              <%= titleTitle %>
+            </h5>
+            <h6 class="hggs-h6" style="<%= descriptionTitleStyles %>">
+              <%= descriptionTitle %>
+            </h6>
+          </header>
 
-          <article class="<%= stepClass %>">
-            <span class="<%= stepSideClass %>"><span>2</span></span>
-            <section class="<%= stepMainClass %>">
-              <span class="<%= stepTitleClass %>">In Progress</span>
-               <span class="<%= stepDescriptionClass %>">This is a description</span>
+          <article class="<%= stepClasses %>">
+            <span class="<%= sideClasses %>"><span>2</span></span>
+            <section class="<%= mainClasses %>">
+              <span class="<%= titleClasses %>">In Progress</span>
+               <span class="<%= descriptionClasses %>">This is a description</span>
             </section>
           </article>
         </article>
@@ -55,25 +67,49 @@
       <!-- small -->
       <% _.each(data.small, function(d) { %>
         <%
-          const articleStyle = getStyles(d?.styles?.article);
-          const headerStyle = getStyles(d?.styles?.header);
-          const stepClass = getClasses(d?.classes?.step);
-          const stepSideClass = getClasses(d?.classes?.side);
-          const stepMainClass = getClasses(d?.classes?.main);
-          const stepTitleClass = getClasses(d?.classes?.title);
-          const stepDescriptionClass = getClasses(d?.classes?.description);
+          const articleStyles = getStyles(d?.styles?.article);
+          const headerStyles = getStyles(d?.styles?.header);
+          const stepClasses = getClasses(d?.classes?.step);
+          const stepTitle = d?.titles?.step;
+          const stepTitleStyles = getStyles(d?.styles?.titles?.step);
+          const sideClasses = getClasses(d?.classes?.side);
+          const sideTitle = d?.titles?.side;
+          const sideTitleStyles = getStyles(d?.styles?.titles?.side);
+          const mainClasses = getClasses(d?.classes?.main);
+          const mainTitle = d?.titles?.main;
+          const mainTitleStyles = getStyles(d?.styles?.titles?.main);
+          const titleClasses = getClasses(d?.classes?.title);
+          const titleTitle = d?.titles?.title;
+          const titleTitleStyles = getStyles(d?.styles?.titles?.title);
+          const descriptionClasses = getClasses(d?.classes?.description);
+          const descriptionTitle = d?.titles?.description;
+          const descriptionTitleStyles = getStyles(d?.styles?.titles?.description);
         %>
 
-        <article style="<%= articleStyle %>">
-          <h3 class="hggs-h3" style="<%= headerStyle %>">
-            <%= d.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= stepTitleStyles %>">
+              <%= stepTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
+              <%= sideTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= mainTitleStyles %>">
+              <%= mainTitle %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= titleTitleStyles %>">
+              <%= titleTitle %>
+            </h5>
+            <h6 class="hggs-h6" style="<%= descriptionTitleStyles %>">
+              <%= descriptionTitle %>
+            </h6>
+          </header>
 
-          <article class="<%= stepClass %>">
-            <span class="<%= stepSideClass %>"><span>2</span></span>
-            <section class="<%= stepMainClass %>">
-              <span class="<%= stepTitleClass %>">In Progress</span>
-               <span class="<%= stepDescriptionClass %>">This is a description</span>
+          <article class="<%= stepClasses %>">
+            <span class="<%= sideClasses %>"><span>2</span></span>
+            <section class="<%= mainClasses %>">
+              <span class="<%= titleClasses %>">In Progress</span>
+               <span class="<%= descriptionClasses %>">This is a description</span>
             </section>
           </article>
         </article>
@@ -82,121 +118,123 @@
       <!-- dot -->
       <% _.each(data.dot, function(d) { %>
         <%
-          const articleStyle = getStyles(d?.styles?.article);
-          const headerStyle = getStyles(d?.styles?.header);
-          const stepClass = getClasses(d?.classes?.step);
-          const stepSideClass = getClasses(d?.classes?.side);
-          const stepMainClass = getClasses(d?.classes?.main);
-          const stepTitleClass = getClasses(d?.classes?.title);
-          const stepDescriptionClass = getClasses(d?.classes?.description);
+          const articleStyles = getStyles(d?.styles?.article);
+          const headerStyles = getStyles(d?.styles?.header);
+          const stepClasses = getClasses(d?.classes?.step);
+          const stepTitle = d?.titles?.step;
+          const stepTitleStyles = getStyles(d?.styles?.titles?.step);
+          const sideClasses = getClasses(d?.classes?.side);
+          const sideTitle = d?.titles?.side;
+          const sideTitleStyles = getStyles(d?.styles?.titles?.side);
+          const mainClasses = getClasses(d?.classes?.main);
+          const mainTitle = d?.titles?.main;
+          const mainTitleStyles = getStyles(d?.styles?.titles?.main);
+          const titleClasses = getClasses(d?.classes?.title);
+          const titleTitle = d?.titles?.title;
+          const titleTitleStyles = getStyles(d?.styles?.titles?.title);
+          const descriptionClasses = getClasses(d?.classes?.description);
+          const descriptionTitle = d?.titles?.description;
+          const descriptionTitleStyles = getStyles(d?.styles?.titles?.description);
         %>
 
-        <article style="<%= articleStyle %>">
-          <h3 class="hggs-h3" style="<%= headerStyle %>">
-            <%= d.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= stepTitleStyles %>">
+              <%= stepTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
+              <%= sideTitle %>
+            </h4>
+            <h4 class="hggs-h4" style="<%= mainTitleStyles %>">
+              <%= mainTitle %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= titleTitleStyles %>">
+              <%= titleTitle %>
+            </h5>
+            <h6 class="hggs-h6" style="<%= descriptionTitleStyles %>">
+              <%= descriptionTitle %>
+            </h6>
+          </header>
 
-          <article class="<%= stepClass %>">
-            <span class="<%= stepSideClass %>"></span>
-            <section class="<%= stepMainClass %>">
-              <span class="<%= stepTitleClass %>">In Progress</span>
-               <span class="<%= stepDescriptionClass %>">This is a description</span>
+          <article class="<%= stepClasses %>">
+            <span class="<%= sideClasses %>"></span>
+            <section class="<%= mainClasses %>">
+              <span class="<%= titleClasses %>">In Progress</span>
+               <span class="<%= descriptionClasses %>">This is a description</span>
             </section>
           </article>
         </article>
       <% }); %>
 
-      <!-- completed -->
-      <% _.each(data.completed, function(d) { %>
-        <%
-          const articleStyle = getStyles(d?.styles?.article);
-          const headerStyle = getStyles(d?.styles?.header);
-          const stepClass = getClasses(d?.classes?.step);
-          const stepSideClass = getClasses(d?.classes?.side);
-          const stepIconClass = getClasses(d?.classes?.icon);
-          const stepMainClass = getClasses(d?.classes?.main);
-          const stepTitleClass = getClasses(d?.classes?.title);
-          const stepDescriptionClass = getClasses(d?.classes?.description);
-        %>
+      <!-- states -->
 
-        <article style="<%= articleStyle %>">
-          <h3 class="hggs-h3" style="<%= headerStyle %>">
-            <%= d.title %>
-          </h3>
+      <%
+        const states = _.keys(data?.states);
 
-          <article class="<%= stepClass %>">
-            <div class="<%= stepSideClass %>"><span class="<%= stepIconClass %>"></span></div>
-            <section class="<%= stepMainClass %>">
-              <span class="<%= stepTitleClass %>">In Progress</span>
-               <span class="<%= stepDescriptionClass %>">This is a description</span>
-            </section>
-          </article>
-        </article>
-      <% }); %>
+        _.each(states, function(s) {
+          _.each(data?.states[s], function(s) {
+      %>
+            <%
+              const articleStyles = getStyles(s?.styles?.article);
+              const headerStyles = getStyles(s?.styles?.header);
+              const stepClasses = getClasses(s?.classes?.step);
+              const stepTitle = s?.titles?.step;
+              const stepTitleStyles = getStyles(s?.styles?.titles?.step);
+              const sideClasses = getClasses(s?.classes?.side);
+              const sideTitle = s?.titles?.side;
+              const sideTitleStyles = getStyles(s?.styles?.titles?.side);
+              const iconClasses = getClasses(s?.classes?.icon);
+              const iconTitle = s?.titles?.icon;
+              const iconTitleStyles = getStyles(s?.styles?.titles?.icon);
+              const mainClasses = getClasses(s?.classes?.main);
+              const mainTitle = s?.titles?.main;
+              const mainTitleStyles = getStyles(s?.styles?.titles?.main);
+              const titleClasses = getClasses(s?.classes?.title);
+              const titleTitle = s?.titles?.title;
+              const titleTitleStyles = getStyles(s?.styles?.titles?.title);
+              const descriptionClasses = getClasses(s?.classes?.description);
+              const descriptionTitle = s?.titles?.description;
+              const descriptionTitleStyles = getStyles(s?.styles?.titles?.description);
+            %>
 
-       <!-- error -->
-      <% _.each(data.error, function(d) { %>
-        <%
-          const articleStyle = getStyles(d?.styles?.article);
-          const headerStyle = getStyles(d?.styles?.header);
-          const stepClass = getClasses(d?.classes?.step);
-          const stepSideClass = getClasses(d?.classes?.side);
-          const stepIconClass = getClasses(d?.classes?.icon);
-          const stepMainClass = getClasses(d?.classes?.main);
-          const stepTitleClass = getClasses(d?.classes?.title);
-          const stepDescriptionClass = getClasses(d?.classes?.description);
-        %>
-
-        <article style="<%= articleStyle %>">
-          <h3 class="hggs-h3" style="<%= headerStyle %>">
-            <%= d.title %>
-          </h3>
-
-          <article class="<%= stepClass %>">
-            <div class="<%= stepSideClass %>"><span class="<%= stepIconClass %>"></span></div>
-            <section class="<%= stepMainClass %>">
-              <span class="<%= stepTitleClass %>">Error</span>
-               <span class="<%= stepDescriptionClass %>">This is a description</span>
-            </section>
-          </article>
-        </article>
-      <% }); %>
-
-      <!-- waiting -->
-      <% _.each(data.waiting, function(d) { %>
-        <%
-          const articleStyle = getStyles(d?.styles?.article);
-          const headerStyle = getStyles(d?.styles?.header);
-          const stepClass = getClasses(d?.classes?.step);
-          const stepSideClass = getClasses(d?.classes?.side);
-          const stepMainClass = getClasses(d?.classes?.main);
-          const stepTitleClass = getClasses(d?.classes?.title);
-          const stepDescriptionClass = getClasses(d?.classes?.description);
-        %>
-
-        <article style="<%= articleStyle %>">
-          <h3 class="hggs-h3" style="<%= headerStyle %>">
-            <%= d.title %>
-          </h3>
-
-          <article class="<%= stepClass %>">
-            <span class="<%= stepSideClass %>"><span>2</span></span>
-            <section class="<%= stepMainClass %>">
-              <span class="<%= stepTitleClass %>">Waiting</span>
-               <span class="<%= stepDescriptionClass %>">This is a description</span>
-            </section>
-          </article>
-        </article>
-      <% }); %>
+            <article style="<%= articleStyles %>">
+              <header style="<%= headerStyles %>">
+                <h3 class="hggs-h3" style="<%= stepTitleStyles %>">
+                  <%= stepTitle %>
+                </h3>
+                <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
+                  <%= sideTitle %>
+                </h4>
+                <% if (iconTitle) { %>
+                  <h5 class="hggs-h5" style="<%= iconTitleStyles %>">
+                    <%= iconTitle %>
+                  </h5>
+                <% } %>
+                <h4 class="hggs-h4" style="<%= mainTitleStyles %>">
+                  <%= mainTitle %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= titleTitleStyles %>">
+                  <%= titleTitle %>
+                </h5>
+                <h6 class="hggs-h6" style="<%= descriptionTitleStyles %>">
+                  <%= descriptionTitle %>
+                </h6>
+              </header>
+              <article class="<%= stepClasses %>">
+                <span class="<%= sideClasses %>"><span>2</span></span>
+                <section class="<%= mainClasses %>">
+                  <span class="<%= titleClasses %>">Waiting</span>
+                  <span class="<%= descriptionClasses %>">This is a description</span>
+                </section>
+              </article>
+            </article>
+          <% });
+        }); %>
     </script>
   </head>
 
   <body>
-    <div
-      id="body"
-      class="hggs-app hggs-flex--column-top-left"
-      style="width: 100%; height: 100%; padding: 30px"
-    ></div>
+    <div id="body" class="hggs-app hggs-app--left" style="width: 100%; height: 100%; padding: 30px"></div>
   </body>
   <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>

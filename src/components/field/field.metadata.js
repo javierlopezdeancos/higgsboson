@@ -2,53 +2,108 @@ const data = {
   title: "Fields",
   default: [
     {
-      title: "field",
+      titles: {
+        field: "hggs-field",
+        label: "hggs-label",
+        input: "hggs-input",
+      },
       styles: {
-        header: headerStyles,
+        title: {
+          field: titleStyles,
+          label: titleIndentation1xStyles,
+          input: titleIndentation1xStyles,
+        },
         article: articleStyles,
+        header: headerStyles,
       },
       classes: {
         field: ["hggs-field"],
+        label: ["hggs-label"],
+        input: ["hggs-input"],
       },
     },
     {
-      title: "field --required",
+      titles: {
+        field: "hggs-field hggs-field--required",
+        label: "hggs-label",
+        input: "hggs-input",
+      },
       styles: {
-        header: headerStyles,
+        title: {
+          field: titleStyles,
+          label: titleIndentation1xStyles,
+          input: titleIndentation1xStyles,
+        },
         article: articleStyles,
+        header: headerStyles,
       },
       classes: {
         field: ["hggs-field", "hggs-field--required"],
+        label: ["hggs-label"],
+        input: ["hggs-input"],
       },
     },
     {
-      title: "field --focus",
+      titles: {
+        field: "hggs-field",
+        label: "hggs-label hggs-label--focus",
+        input: "hggs-input hggs-input--focus",
+      },
       styles: {
-        header: headerStyles,
+        title: {
+          field: titleStyles,
+          label: titleIndentation1xStyles,
+          input: titleIndentation1xStyles,
+        },
         article: articleStyles,
+        header: headerStyles,
       },
       classes: {
-        field: ["hggs-field", "hggs-field--focus"],
+        title: ["hggs-field"],
+        label: ["hggs-label", "hggs-label--focus"],
+        input: ["hggs-input", "hggs-input--focus"],
       },
     },
     {
-      title: "field --disabled",
+      titles: {
+        field: "hggs-field",
+        label: "hggs-label hggs-label--disabled",
+        input: "hggs-input hggs-input--disabled",
+      },
       styles: {
-        header: headerStyles,
+        title: {
+          field: titleStyles,
+          label: titleIndentation1xStyles,
+          input: titleIndentation1xStyles,
+        },
         article: articleStyles,
+        header: headerStyles,
       },
       classes: {
-        field: ["hggs-field", "hggs-field--disabled"],
+        field: ["hggs-field"],
+        label: ["hggs-label", "hggs-label--disabled"],
+        input: ["hggs-input", "hggs-input--disabled"],
       },
     },
     {
-      title: "field --error",
+      titles: {
+        field: "hggs-field",
+        label: "hggs-label hggs-label--error",
+        input: "hggs-input hggs-input--error",
+      },
       styles: {
-        header: headerStyles,
+        title: {
+          field: titleStyles,
+          label: titleIndentation1xStyles,
+          input: titleIndentation1xStyles,
+        },
         article: articleStyles,
+        header: headerStyles,
       },
       classes: {
-        field: ["hggs-field", "hggs-field--error"],
+        field: ["hggs-field"],
+        label: ["hggs-label", "hggs-label--error"],
+        input: ["hggs-input", "hggs-input--error"],
       },
     },
   ],

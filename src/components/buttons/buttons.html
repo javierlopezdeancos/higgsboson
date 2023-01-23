@@ -5,23 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-button</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../../dist/higgsboson.css"
-    />
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
-    ></script>
-
+    <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
     <script type="text/javascript" src="../../helpers/dom.js"></script>
     <script type="text/javascript" src="../../helpers/classes.js"></script>
     <script type="text/javascript" src="../../helpers/styles.js"></script>
-
     <script type="text/javascript" src="./buttons.metadata.js"></script>
-
     <script id="template" type="text/template">
       <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
 
@@ -30,200 +19,101 @@
       <% _.each(data.default, function(b) { %>
 
        <%
-          const articleButtonStyle = _.reduce(b?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerButtonStyle = _.reduce(b?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
+          const articleStyles = getStyles(b?.styles?.article);
+          const buttonClass = getClasses(b?.classes?.button);
+          const buttonTitle = b?.titles?.button;
+          const buttonTitleStyles =  getStyles(b?.titles?.button);
+          const headerStyles = getStyles(b?.styles?.header);
         %>
 
-        <article style="<%= articleButtonStyle %>">
-          <h3 class="hggs-h3" style="<%= headerButtonStyle %>">
-            <%= b.title %>
-          </h3>
-
-          <%
-            const buttonClass = _.reduce(b.classes.button, (acc, c) => {
-              if (!acc) {
-                return c;
-              }
-
-              return acc + ' ' + c;
-            }, '');
-
-            const buttonIsDisabled = b?.attributes?.button?.disabled ? b.attributes.button.disabled : false;
-            const buttonHasErrors = b?.attributes?.button?.error ? b.attributes.button.error : false;
-          %>
-
-          <% if(buttonIsDisabled) { %>
-            <button class="<%= buttonClass %>" disabled>Button</button>
-          <% } else if(buttonHasErrors) { %>
-            <button class="<%= buttonClass %>" error>Button</button>
-          <% } else { %>
-            <button class="<%= buttonClass %>">Button</button>
-          <% } %>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= buttonTitleStyles %>">
+              <%= buttonTitle %>
+            </h3>
+          </header>
+          <button class="<%= buttonClass %>">Button</button>
         </article>
       <% }); %>
 
       <!-- icon buttons -->
 
-      <% _.each(data.icons, (i) => { %>
+      <% _.each(data.icons, (b) => { %>
         <%
-          const articleIconButtonStyle = _.reduce(i?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerIconButtonStyle = _.reduce(i?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const subHeaderIconButtonStyle = _.reduce(i?.styles?.subheader, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const IconButtonStyle = _.reduce(i?.styles?.button, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
+          const articleStyles = getStyles(b?.styles?.article);
+          const buttonClass = getClasses(b?.classes?.button);
+          const buttonStyles = getStyles(b?.styles?.button);
+          const buttonTitle = b?.titles?.button;
+          const buttonTitleStyles =  getStyles(b?.styles?.titles?.button);
+          const headerStyles = getStyles(b?.styles?.header);
+          const iconButtonClasses = getClasses(b.classes.button);
+          const iconClass = getClasses(b?.classes?.icon);
+          const iconTitle = b?.titles?.icon;
+          const iconTitleStyles =  getStyles(b?.styles?.titles?.icon);
         %>
 
-        <article style="<%= articleIconButtonStyle %>">
-          <h3 class="hggs-h3" style="<%= headerIconButtonStyle %>">
-            <%= i.title %>
-          </h3>
+         <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= buttonTitleStyles %>">
+              <%= buttonTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= iconTitleStyles %>">
+              <%= iconTitle %>
+            </h4>
+            <div class="hggs-flex hggs-flex--row-top-left">
+              <% _.each(b.classes.spanCommon, (spanClass, index) => { %>
+                <%
+                  const iconSpanClasses = getClasses(spanClass);
+                %>
 
-          <h4 class="hggs-h4" style="<%= subHeaderIconButtonStyle %>">
-            <%= i.subtitle %>
-          </h4>
-
-          <div class="hggs-flex--row-top-left">
-            <%
-              const iconButtonClass = _.reduce(i.classes.button, (acc, bc) => {
-                if (!acc) {
-                  return bc;
-                }
-
-                return acc + ' ' + bc;
-              }, '');
-            %>
-
-            <% _.each(i.classes.spanCommon, (spanClass, index) => { %>
-              <%
-                const iconSpanClass = _.reduce(spanClass, (acc, spc) => {
-                  if (!acc) {
-                    return spc + ' ' + i?.classes?.span;
-                  }
-
-                  return acc + ' ' + spc;
-                }, '');
-              %>
-
-              <button class="<%= iconButtonClass %>" style="<%= IconButtonStyle %>">
-                <span class="<%= iconSpanClass %>"></span>
-              </button>
-            <% }); %>
-
-          </div>
+                <button class="<%= iconButtonClasses %>" style="<%= buttonStyles %>">
+                  <span class="<%= iconSpanClasses %>"></span>
+                </button>
+              <% }); %>
+            </div>
+          </header>
         </article>
       <% }); %>
 
-
       <!-- icon buttons with labels -->
 
-      <% _.each(data.iconsWithLabel, (iwl) => { %>
+      <% _.each(data.iconsWithLabel, (i) => { %>
         <%
-          const articleIconWithLabelButtonStyle = _.reduce(iwl?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerIconWithLabelButtonStyle = _.reduce(iwl?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const subHeaderIconWithLabelButtonStyle = _.reduce(iwl?.styles?.subheader, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const IconButtonWithLabelStyle = _.reduce(iwl?.styles?.button, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
+          const articleStyles = getStyles(i?.styles?.article);
+          const buttonStyles = getStyles(i?.styles?.button);
+          const buttonTitle = i?.titles?.button;
+          const buttonTitleStyles =  getStyles(i?.styles?.titles?.button);
+          const headerStyles = getStyles(i?.styles?.header);
+          const iconButtonClass = getClasses(i.classes.button);
+          const iconTitle = i?.titles?.icon;
+          const iconTitleStyles =  getStyles(i?.styles?.titles?.icon);
+          const labelTitle = i?.titles?.label;
+          const labelTitleStyles =  getStyles(i?.styles?.titles?.label);
+          const wrapperTitle = i?.titles?.wrapper;
+          const wrapperTitleStyles =  getStyles(i?.styles?.titles?.wrapper);
         %>
 
-        <article style="<%= articleIconWithLabelButtonStyle %>">
-          <h3 class="hggs-h3" style="<%= headerIconWithLabelButtonStyle %>">
-            <%= iwl.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= buttonTitleStyles %>">
+              <%= buttonTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= wrapperTitleStyles %>">
+              <%= wrapperTitle %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= iconTitleStyles %>">
+              <%= iconTitle %>
+            </h5>
+            <h5 class="hggs-h5" style="<%= labelTitleStyles %>">
+              <%= labelTitle %>
+            </h5>
+          </header>
 
-          <h4 class="hggs-h4" style="<%= subHeaderIconWithLabelButtonStyle %>">
-            <%= iwl.subtitle %>
-          </h4>
+          <div class="hggs-flex hggs-flex--row-top-left">
+            <% _.each(i.classes.spanCommon, (spanClasses, index) => { %>
+              <% const iconSpanClass = getClasses(spanClasses); %>
 
-          <div class="hggs-flex--row-top-left">
-            <%
-              const iconButtonClass = _.reduce(iwl.classes.button, (acc, bc) => {
-                if (!acc) {
-                  return bc;
-                }
-
-                return acc + ' ' + bc;
-              }, '');
-            %>
-
-            <% _.each(iwl.classes.spanCommon, (spanClasses, index) => { %>
-              <%
-                const iconSpanClass = _.reduce(spanClasses, (acc, spc) => {
-                  if (!acc) {
-                    return spc + ' ' + iwl?.classes?.span;
-                  }
-
-                  return acc + ' ' + spc;
-                }, '');
-
-
-              %>
-
-              <button class="<%= iconButtonClass %>" style="<%= IconButtonWithLabelStyle %>">
+              <button class="<%= iconButtonClass %>" style="<%= buttonStyles %>">
                 <div class="hggs-icon-wrapper">
                   <span class="<%= iconSpanClass %>"></span>
                   <span class="hggs-icon-label"> Button label</span>
@@ -239,106 +129,41 @@
 
       <% _.each(data.squareIcons, (s) => { %>
         <%
-          const articleSquareButtonsStyle = _.reduce(s?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerSquareButtonsStyle = _.reduce(s?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const subHeaderSquareButtonsStyle = _.reduce(s?.styles?.subheader, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const buttonSquareStyle = _.reduce(s?.styles?.button, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
+          const articleStyles = getStyles(s?.styles?.article);
+          const headerStyles = getStyles(s?.styles?.header);
+          const buttonTitle = s?.titles?.button;
+          const buttonTitleStyles =  getStyles(s?.styles?.titles?.button);
+          const buttonStyles = getStyles(s?.styles?.button);
+          const buttonsClasses = s.classes.buttons;
+          const iconsClasses = s.classes.icons;
+          const iconTitle = s?.titles?.icon;
+          const iconTitleStyles =  getStyles(s?.styles?.titles?.icon);
         %>
 
-        <article style="<%= articleSquareButtonsStyle %>">
-          <h3 class="hggs-h3" style="<%= headerSquareButtonsStyle %>">
-            <%= s.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= buttonTitleStyles %>">
+              <%= buttonTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= iconTitleStyles %>">
+              <%= iconTitle %>
+            </h4>
+          </header>
 
-          <h4 class="hggs-h4" style="<%= subHeaderSquareButtonsStyle %>">
-            <%= s.subtitle %>
-          </h4>
-
-          <div class="hggs-flex--column-top-left">
-            <div class="hggs-flex--row-top-left">
+          <div class="hggs-flex hggs-flex--column-top-left">
+            <% _.each(buttonsClasses, (b, index) => { %>
               <%
-                const squareButtonClass = _.reduce(s.classes.button, (acc, bc) => {
-                  if (!acc) {
-                    return bc;
-                  }
-
-                  return acc + ' ' + bc;
-                }, '');
+                const buttonClasses = getClasses(b);
               %>
 
-              <% _.each(s?.classes?.spanCommon, (spanClasses, index) => { %>
-                <%
-                  const squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
-                    if (!acc) {
-                      return spc;
-                    }
-
-                    return acc + ' ' + spc;
-                  }, '');
-                %>
-
-                <button class="<%= squareButtonClass %>" style="<%= buttonSquareStyle %>">
-                  <span class="<%= squareSpanClass %>"></span>
-                </button>
-              <% }); %>
-            </div>
-
-            <% _.each(s.extraClasses.button, (buttonExtraClasses, index) => { %>
-              <div class="hggs-flex--row-top-left">
-                <%
-                  const squareButtonExtraClass = squareButtonClass + ' ' + buttonExtraClasses
-                %>
-
-                <% let squareSpanClass='', squareSpanExtraClass=''; %>
-
-                <% _.each(s?.extraClasses?.span, (spanExtraClasses, index) => { %>
+              <div class="hggs-flex hggs-flex--row-top-left">
+                <% _.each(iconsClasses, (i, index) => { %>
                   <%
-                    squareSpanExtraClass = squareSpanExtraClass + ' ' + spanExtraClasses;
-                  %>
-                <% }); %>
-
-                <% _.each(s?.classes?.span, (spanClasses, index) => { %>
-                  <%
-                    squareSpanClass = _.reduce(spanClasses, (acc, spc) => {
-                      if (!acc) {
-                        return spc;
-                      }
-
-                      return acc + ' ' + spc;
-                    }, '');
+                    const iconClasses = getClasses(i);
                   %>
 
-                  <% squareSpanClass = squareSpanClass + squareSpanExtraClass; %>
-
-                  <button class="<%= squareButtonExtraClass %>" style="<%= buttonSquareStyle %>">
-                    <span class="<%= squareSpanClass %>"></span>
+                  <button class="<%= buttonClasses %>" style="<%= buttonStyles %>">
+                    <span class="<%= iconClasses %>"></span>
                   </button>
                 <% }); %>
               </div>
@@ -347,101 +172,45 @@
         </article>
       <% }); %>
 
-
       <!-- circle buttons -->
 
-      <% _.each(data.circleIcons, (c) => { %>
+      <% _.each(data.circleIcons, (s) => { %>
         <%
-          const articleCircleButtonsStyle = _.reduce(c?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerCircleButtonsStyle = _.reduce(c?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const subHeaderCircleButtonsStyle = _.reduce(c?.styles?.subheader, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const circleButtonsStyle = _.reduce(c?.styles?.button, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
+          const articleStyles = getStyles(s?.styles?.article);
+          const headerStyles = getStyles(s?.styles?.header);
+          const buttonTitle = s?.titles?.button;
+          const buttonTitleStyles =  getStyles(s?.styles?.titles?.button);
+          const buttonStyles = getStyles(s?.styles?.button);
+          const buttonsClasses = s.classes.buttons;
+          const iconsClasses = s.classes.icons;
+          const iconTitle = s?.titles?.icon;
+          const iconTitleStyles =  getStyles(s?.styles?.titles?.icon);
         %>
 
-        <article style="<%= articleCircleButtonsStyle %>">
-          <h3 class="hggs-h3" style="<%= headerCircleButtonsStyle %>">
-            <%= c.title %>
-          </h3>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= buttonTitleStyles %>">
+              <%= buttonTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= iconTitleStyles %>">
+              <%= iconTitle %>
+            </h4>
+          </header>
 
-          <h4 class="hggs-h4" style="<%= subHeaderCircleButtonsStyle %>">
-            <%= c.subtitle %>
-          </h4>
-
-          <div class="hggs-flex--column-top-left">
-            <div class="hggs-flex--row-top-left">
+          <div class="hggs-flex hggs-flex--column-top-left">
+            <% _.each(buttonsClasses, (b, index) => { %>
               <%
-                const circleButtonClass = _.reduce(c.classes.button, (acc, bc) => {
-                  if (!acc) {
-                    return bc;
-                  }
-
-                  return acc + ' ' + bc;
-                }, '');
+                const buttonClasses = getClasses(b);
               %>
 
-              <% _.each(c.classes.span, (spanClasses, index) => { %>
-                <%
-                  const circleSpanClass = _.reduce(spanClasses, (acc, spc) => {
-                    if (!acc) {
-                      return spc;
-                    }
-
-                    return acc + ' ' + spc;
-                  }, '');
-                %>
-
-                <button class="<%= circleButtonClass %>" style="<%= circleButtonsStyle %>">
-                  <span class="<%= circleSpanClass %>"></span>
-                </button>
-              <% }); %>
-            </div>
-
-            <% _.each(c.extraClasses.button, (buttonExtraClasses, index) => { %>
-              <div class="hggs-flex--row-top-left">
-                <%
-                  const circleButtonExtraClass = circleButtonClass + ' ' + buttonExtraClasses
-                %>
-
-                <% _.each(c.classes.span, (spanClasses, index) => { %>
+              <div class="hggs-flex hggs-flex--row-top-left">
+                <% _.each(iconsClasses, (i, index) => { %>
                   <%
-                    const circleSpanClass = _.reduce(spanClasses, (acc, cpc) => {
-                      if (!acc) {
-                        return cpc;
-                      }
-
-                      return acc + ' ' + cpc;
-                    }, '');
+                    const iconClasses = getClasses(i);
                   %>
 
-                  <button class="<%= circleButtonExtraClass %>" style="<%= circleButtonsStyle %>">
-                    <span class="<%= circleSpanClass %>"></span>
+                  <button class="<%= buttonClasses %>" style="<%= buttonStyles %>">
+                    <span class="<%= iconClasses %>"></span>
                   </button>
                 <% }); %>
               </div>
@@ -453,11 +222,7 @@
   </head>
 
   <body>
-    <div
-      id="body"
-      class="hggs-app hggs-flex--column-top-left"
-      style="width: 100%; height: 100%; padding: 30px"
-    ></div>
+    <div id="body" class="hggs-app hggs-app--left" style="width: 100%; height: 100%; padding: 30px"></div>
   </body>
   <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>

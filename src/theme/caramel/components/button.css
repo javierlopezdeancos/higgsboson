@@ -50,7 +50,7 @@
   --button-box-shadow-tertiary-focus: var(--hggs-form-box-shadow-focus);
   --button-box-shadow-senary-focus: var(--hggs-form-box-shadow-focus);
   --button-box-shadow-senary-hover: none;
-  --button-box-shadow-tertiary-hover:none;
+  --button-box-shadow-tertiary-hover: none;
   --button-color: var(--hggs-color-background);
   --button-color-hover: var(--hggs-color-background);
   --button-color-outline-primary-hover: var(--hggs-color-primary-outline-hover);

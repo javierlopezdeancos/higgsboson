@@ -5,191 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-box</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../../dist/higgsboson.css"
-    />
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"
-    ></script>
-
+    <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
     <script type="text/javascript" src="../../helpers/dom.js"></script>
     <script type="text/javascript" src="../../helpers/styles.js"></script>
-
     <script type="text/javascript" src="./box.metadata.js"></script>
-
     <script id="template" type="text/template">
       <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
 
       <!-- default box -->
 
       <% _.each(data.default, function(b) { %>
-
         <%
-          const articleBoxStyle = _.reduce(b?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerBoxStyle = _.reduce(b?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const boxHasSubtitle = !!b?.subtitle;
-          const boxHasSubtitles = !!b?.subtitles;
-
-          let headerSubtitleH4BoxStyle;
-          let headerSubtitleH5BoxStyle;
-          let headerSubtitleH4WithH5ChildBoxStyle;
-
-          if (boxHasSubtitle) {
-            headerSubtitleH4BoxStyle = _.reduce(b?.styles?.subHeaderH4, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
-
-              return acc + '; ' + s;
-            }, '');
-          }
-
-          if (boxHasSubtitles) {
-            headerSubtitleH4WithH5ChildBoxStyle = _.reduce(b?.styles?.subHeaderH4WithH5Child, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
-
-              return acc + '; ' + s;
-            }, '');
-
-            headerSubtitleH4BoxStyle = _.reduce(b?.styles?.subHeaderH4, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
-
-              return acc + '; ' + s;
-            }, '');
-
-            headerSubtitleH5BoxStyle = _.reduce(b?.styles?.subHeaderH5, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
-
-              return acc + '; ' + s;
-            }, '');
-          }
+          const articleStyles = getStyles(b?.styles?.article);
+          const headerStyles = getStyles(b?.styles?.header);
+          const boxStyles = getStyles(b?.styles?.box);
+          const boxTitle = b?.titles?.box;
+          const headerTitle = b?.titles?.header;
+          const titleTitle = b?.titles?.title;
+          const bodyTitle = b?.titles?.body;
+          const boxTitleStyles = getStyles(b?.styles?.titles?.box);
+          const headerTitleStyles = getStyles(b?.styles?.titles?.header);
+          const titleTitleStyles = getStyles(b?.styles?.titles?.title);
+          const bodyTitleStyles = getStyles(b?.styles?.titles?.body);
+          const boxClass = getClasses(b?.classes?.box);
+          const boxHeaderClasses = getClasses(b?.classes?.boxHeader);
+          const boxHeaderTitleClasses = getClasses(b?.classes?.boxTitle);
+          const boxBodyClasses = getClasses(b?.classes?.boxBody);
         %>
 
-        <article style="<%= articleBoxStyle %>">
-          <h3 class="hggs-h3" style="<%= headerBoxStyle %>">
-            <%= b.title %>
-          </h3>
-
-          <% if(boxHasSubtitle) { %>
-            <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxStyle %>">
-              <%= b.subtitle %>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= boxTitleStyles %>">
+              <%= boxTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= headerTitleStyles %>">
+              <%= headerTitle %>
             </h4>
-          <% } %>
-
-          <% if(boxHasSubtitles) { %>
-            <% _.each(b.subtitles, function(s) { %>
-
-              <% const subTitleHasSubtitle = !!s?.subtitle; %>
-
-              <% if(!subTitleHasSubtitle) { %>
-                <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxStyle %>">
-                  <%= s %>
-                </h4>
-              <% } else { %>
-                <h4 class="hggs-h4" style="<%= headerSubtitleH4WithH5ChildBoxStyle %>">
-                  <%= s.title %>
-                </h4>
-                <h5 class="hggs-h5" style="<%= headerSubtitleH5BoxStyle %>">
-                   <%= s.subtitle %>
-                </h5>
-              <% } %>
-            <% }); %>
-          <% } %>
-
-          <%
-            const boxClass = _.reduce(b.classes.box, (acc, c) => {
-              if (!acc) {
-                return c;
-              }
-
-              return acc + ' ' + c;
-            }, '');
-
-            const boxStyles = _.reduce(b.styles.box, (acc, c) => {
-              if (!acc) {
-                return c;
-              }
-
-              return acc + ' ' + c;
-            }, '');
-
-            const boxHasHeader = b?.classes?.boxHeader ? true : false;
-            const boxHasHeaderTitle = b?.classes?.boxTitle ? true : false;
-            const boxHasBody = b?.classes?.boxBody ? true : false;
-
-            let boxHeaderClass, boxHeaderTitleClass;
-
-            if (boxHasHeader && boxHasHeaderTitle) {
-              boxHeaderClass = _.reduce(b.classes.boxHeader, (acc, c) => {
-                if (!acc) {
-                  return c;
-                }
-
-                return acc + ' ' + c;
-              }, '');
-
-              boxHeaderTitleClass = _.reduce(b.classes.boxTitle, (acc, c) => {
-                if (!acc) {
-                  return c;
-                }
-
-                return acc + ' ' + c;
-              }, '');
-            }
-
-            let boxBodyClass;
-
-            if (boxHasBody) {
-              boxBodyClass = _.reduce(b.classes.boxBody, (acc, c) => {
-                if (!acc) {
-                  return c;
-                }
-
-                return acc + ' ' + c;
-              }, '');
-            }
-          %>
+            <h5 class="hggs-h4" style="<%= titleTitleStyles %>">
+              <%= titleTitle %>
+            </h5>
+            <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+              <%= bodyTitle %>
+            </h4>
+          </header>
 
           <div class="<%= boxClass %>" style="<%= boxStyles %>" />
-
-          <% if(boxHasHeader && boxHasHeaderTitle) { %>
-            <header class="<%= boxHeaderClass %>">
-              <h3 class="<%= boxHeaderTitleClass %>">Title</h3>
-            </header>
-          <% } %>
-
-          <% if(boxHasBody) { %>
-            <section class="<%= boxBodyClass %>">
-              <p class="hggs-text">
-               Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe. Coconut estoy fatal de lo mío adipisicing cabeza de viejo cuerpo de joven chavalada eiusmod to sueltecico enjuto mojamuto bonico del tó. Cascoporro con las rodillas in the guanter piticli vivo con tu madre en un castillo freshquisimo ayy qué gustico tontaco. Asquerosito aliqua eres un pirámidee ojete calor ea agazapao. Churretoso nuiiiii exercitation pero qué pelazo monguer Guaper interneeeer melifluo droja payacho mamellas.
-              </p>
-            </section>
-          <% } %>
-
+            <% if(headerTitle && titleTitle) { %>
+              <header class="<%= boxHeaderClasses %>">
+                <h3 class="<%= boxHeaderTitleClasses %>">Title</h3>
+              </header>
+            <% } %>
+            <% if(bodyTitle) { %>
+              <section class="<%= boxBodyClasses %>">
+                <p class="hggs-text">
+                Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe. Coconut estoy fatal de lo mío adipisicing cabeza de viejo cuerpo de joven chavalada eiusmod to sueltecico enjuto mojamuto bonico del tó. Cascoporro con las rodillas in the guanter piticli vivo con tu madre en un castillo freshquisimo ayy qué gustico tontaco. Asquerosito aliqua eres un pirámidee ojete calor ea agazapao. Churretoso nuiiiii exercitation pero qué pelazo monguer Guaper interneeeer melifluo droja payacho mamellas.
+                </p>
+              </section>
+            <% } %>
           </div>
         </article>
       <% }); %>
@@ -199,168 +72,51 @@
       <% _.each(data.primary, function(b) { %>
 
        <%
-          const articleBoxPrimaryStyle = _.reduce(b?.styles?.article, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const headerBoxPrimaryStyle = _.reduce(b?.styles?.header, (acc, s) => {
-            if (!acc) {
-              return s;
-            }
-
-            return acc + '; ' + s;
-          }, '');
-
-          const boxPrimaryHasSubtitle = !!b?.subtitle;
-          const boxPrimaryHasSubtitles = !!b?.subtitles;
-
-          let headerSubtitleH4BoxPrimaryStyle;
-          let headerSubtitleH5BoxPrimaryStyle;
-          let headerSubtitleH4WithH5ChildBoxPrimaryStyle;
-
-          if (boxPrimaryHasSubtitle) {
-            headerSubtitleH4BoxPrimaryStyle = _.reduce(b?.styles?.subHeaderH4, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
-
-              return acc + '; ' + s;
-            }, '');
-          }
-
-          if (boxPrimaryHasSubtitles) {
-            headerSubtitleH4WithH5ChildBoxPrimaryStyle = _.reduce(b?.styles?.subHeaderH4WithH5Child, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
-
-              return acc + '; ' + s;
-            }, '');
-
-            headerSubtitleH4BoxPrimaryStyle = _.reduce(b?.styles?.subHeaderH4, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
-
-              return acc + '; ' + s;
-            }, '');
-
-            headerSubtitleH5BoxPrimaryStyle = _.reduce(b?.styles?.subHeaderH5, (acc, s) => {
-              if (!acc) {
-                return s;
-              }
-
-              return acc + '; ' + s;
-            }, '');
-          }
+          const articleStyles = getStyles(b?.styles?.article);
+          const headerStyles = getStyles(b?.styles?.header);
+          const boxTitle = b?.titles?.box;
+          const headerTitle = b?.titles?.header;
+          const titleTitle = b?.titles?.title;
+          const bodyTitle = b?.titles?.body;
+          const boxTitleStyles = getStyles(b?.styles?.titles?.box);
+          const headerTitleStyles = getStyles(b?.styles?.titles?.header);
+          const titleTitleStyles = getStyles(b?.styles?.titles?.title);
+          const bodyTitleStyles = getStyles(b?.styles?.titles?.body);
+          const boxClass = getClasses(b?.classes?.box);
+          const boxHeaderClasses = getClasses(b?.classes?.boxHeader);
+          const boxHeaderTitleClasses = getClasses(b?.classes?.boxTitle);
+          const boxBodyClasses = getClasses(b?.classes?.boxBody);
         %>
 
-        <article style="<%= articleBoxPrimaryStyle %>">
-          <h3 class="hggs-h3" style="<%= headerBoxPrimaryStyle %>">
-            <%= b.title %>
-          </h3>
-
-          <% if(boxPrimaryHasSubtitle) { %>
-            <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxPrimaryStyle %>">
-              <%= b.subtitle %>
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= boxTitleStyles %>">
+              <%= boxTitle %>
+            </h3>
+            <h4 class="hggs-h4" style="<%= headerTitleStyles %>">
+              <%= headerTitle %>
             </h4>
-          <% } %>
+            <h5 class="hggs-h4" style="<%= titleTitleStyles %>">
+              <%= titleTitle %>
+            </h5>
+            <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+              <%= bodyTitle %>
+            </h4>
+          </header>
 
-          <% if(boxPrimaryHasSubtitles) { %>
-            <% _.each(b.subtitles, function(s) { %>
-
-              <% const subTitleHasSubtitle = !!s?.subtitle; %>
-
-              <% if(!subTitleHasSubtitle) { %>
-                <h4 class="hggs-h4" style="<%= headerSubtitleH4BoxPrimaryStyle %>">
-                  <%= s %>
-                </h4>
-              <% } else { %>
-                <h4 class="hggs-h4" style="<%= headerSubtitleH4WithH5ChildBoxPrimaryStyle %>">
-                  <%= s.title %>
-                </h4>
-                <h5 class="hggs-h5" style="<%= headerSubtitleH5BoxPrimaryStyle %>">
-                   <%= s.subtitle %>
-                </h5>
-              <% } %>
-            <% }); %>
-          <% } %>
-
-          <%
-            const boxPrimaryClass = _.reduce(b.classes.box, (acc, c) => {
-              if (!acc) {
-                return c;
-              }
-
-              return acc + ' ' + c;
-            }, '');
-
-            const boxPrimaryStyles = _.reduce(b.styles.box, (acc, c) => {
-              if (!acc) {
-                return c;
-              }
-
-              return acc + ' ' + c;
-            }, '');
-
-
-            const boxPrimaryHasHeader = b?.classes?.boxHeader ? true : false;
-            const boxPrimaryHasHeaderTitle = b?.classes?.boxTitle ? true : false;
-            const boxPrimaryHasBody = b?.classes?.boxBody ? true : false;
-
-            let boxPrimaryHeaderClass, boxPrimaryHeaderTitleClass;
-
-            if (boxPrimaryHasHeader && boxPrimaryHasHeaderTitle) {
-              boxPrimaryHeaderClass = _.reduce(b.classes.boxHeader, (acc, c) => {
-                if (!acc) {
-                  return c;
-                }
-
-                return acc + ' ' + c;
-              }, '');
-
-              boxPrimaryHeaderTitleClass = _.reduce(b.classes.boxTitle, (acc, c) => {
-                if (!acc) {
-                  return c;
-                }
-
-                return acc + ' ' + c;
-              }, '');
-            }
-
-            let boxPrimaryBodyClass;
-
-            if (boxPrimaryHasBody) {
-              boxPrimaryBodyClass = _.reduce(b.classes.boxBody, (acc, c) => {
-                if (!acc) {
-                  return c;
-                }
-
-                return acc + ' ' + c;
-              }, '');
-            }
-          %>
-
-          <div class="<%= boxPrimaryClass %>" style="<%= boxPrimaryStyles %>" />
-
-            <% if(boxPrimaryHasHeader && boxPrimaryHasHeaderTitle) { %>
-              <header class="<%= boxPrimaryHeaderClass %>">
-                <h3 class="<%= boxPrimaryHeaderTitleClass %>">Title</h3>
+          <div class="<%= boxClass %>" style="<%= boxStyles %>" />
+            <% if(headerTitle && titleTitle) { %>
+              <header class="<%= boxHeaderClasses %>">
+                <h3 class="<%= boxHeaderTitleClasses %>">Title</h3>
               </header>
             <% } %>
-
-            <% if(boxPrimaryHasBody) { %>
-              <section class="<%= boxPrimaryBodyClass %>">
+            <% if(bodyTitle) { %>
+              <section class="<%= boxBodyClasses %>">
                 <p class="hggs-text">
-                 Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe. Coconut estoy fatal de lo mío adipisicing cabeza de viejo cuerpo de joven chavalada eiusmod to sueltecico enjuto mojamuto bonico del tó. Cascoporro con las rodillas in the guanter piticli vivo con tu madre en un castillo freshquisimo ayy qué gustico tontaco. Asquerosito aliqua eres un pirámidee ojete calor ea agazapao. Churretoso nuiiiii exercitation pero qué pelazo monguer Guaper interneeeer melifluo droja payacho mamellas.
+                Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe. Coconut estoy fatal de lo mío adipisicing cabeza de viejo cuerpo de joven chavalada eiusmod to sueltecico enjuto mojamuto bonico del tó. Cascoporro con las rodillas in the guanter piticli vivo con tu madre en un castillo freshquisimo ayy qué gustico tontaco. Asquerosito aliqua eres un pirámidee ojete calor ea agazapao. Churretoso nuiiiii exercitation pero qué pelazo monguer Guaper interneeeer melifluo droja payacho mamellas.
                 </p>
               </section>
             <% } %>
-
           </div>
         </article>
       <% }); %>
@@ -368,11 +124,7 @@
   </head>
 
   <body>
-    <div
-      id="body"
-      class="hggs-app hggs-flex--column-top-left"
-      style="width: 100%; height: 100%; padding: 30px"
-    ></div>
+    <div id="body" class="hggs-app hggs-app--left" style="width: 100%; height: 100%; padding: 30px"></div>
   </body>
   <script type="text/javascript" src="../../helpers/render.js"></script>
 </html>

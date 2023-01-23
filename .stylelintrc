@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["extend"]
+      }
+    ],
+    "selector-class-pattern": null,
+    "custom-property-pattern": null
+  },
+  "plugins": ["stylelint-use-nesting"],
+  "ignoreFiles": ["**/*.html"]
+}

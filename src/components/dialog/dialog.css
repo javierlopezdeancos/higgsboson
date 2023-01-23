@@ -11,25 +11,41 @@
 }
 
 .hggs-dialog {
+  flex-direction: column;
   position: relative;
-  background-color: var(
-    --dialog-background-color,
-    var(--hggs-color-background-default)
-  );
+  background-color: var(--dialog-background-color, var(--hggs-color-background-default));
   color: var(--dialog-color, var(--hggs-color-default));
   text-align: var(--dialog-text-align, left);
   border: none;
-  padding: var(--dialog-padding, var(--hggs-space-sm-default));
+  padding: var(--dialog-padding, var(--hggs-space-default));
   border-radius: var(--dialog-border-radius, var(--hggs-border-default));
   box-shadow: var(--dialog-background-box-shadow, none);
   max-width: var(--dialog-max-width, 100vw);
 
-  & > header {
+  & > .hggs-dialog-header {
     & > .hggs-h3,
     & > .hggs-h4,
     & > .hggs-h5,
     & > .hggs-h6 {
       margin-top: 0;
+    }
+
+    & .hggs-dialog-close {
+      position: var(--dialog-close-position, absolute);
+      top: var(--dialog-close-top, 0);
+      right: var(--dialog-close-right, 1px);
+    }
+  }
+
+  & > .hggs-dialog-body {
+    flex: 1;
+  }
+
+  & > .hggs-dialog-footer {
+    & > .hggs-dialog-actions {
+      & > .hggs-button {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -46,20 +62,11 @@
   }
 
   &[open] {
+    display: flex;
     animation: var(--dialog-anmimation-open, hggs-dialog-appear-default 0.15s);
   }
 
   &::backdrop {
-    background: linear-gradient(
-      45deg,
-      rgba(58, 58, 58, 0.6),
-      rgba(8, 8, 8, 0.6)
-    );
-  }
-
-  & .hggs-dialog-close {
-    position: var(--dialog-close-position, absolute);
-    top: var(--dialog-close-top, 0);
-    right: var(--dialog-close-right, 1px);
+    background: linear-gradient(45deg, rgb(58 58 58 / 60%), rgb(8 8 8 / 60%));
   }
 }

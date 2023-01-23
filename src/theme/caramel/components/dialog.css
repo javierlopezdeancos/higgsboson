@@ -18,8 +18,7 @@
   --dialog-border-radius: var(--hggs-border-radius-sm);
   --dialog-max-width: 90vw;
   --dialog-anmimation-open: hggs-dialog-appear 0.15s;
-  --dialog-background-box-shadow: 0 0 40px var(--hggs-color-gray-alpha-002),
-    0 0 10px var(--hggs-color-gray-alpha-004);
+  --dialog-background-box-shadow: 0 0 40px var(--hggs-color-gray-alpha-002), 0 0 10px var(--hggs-color-gray-alpha-004);
   --dialog-width-big: 80vw;
   --dialog-width-medium: 65vw;
   --dialog-width-small: 40vw;

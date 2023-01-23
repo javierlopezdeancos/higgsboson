@@ -98,12 +98,9 @@
   --button-icon-width: calc(var(--icon-size) + var(--button-icon-padding));
   --button-margin-vertical: var(--hggs-space-vertical-sm);
   --button-margin-horizontal: var(--hggs-space-vertical-xs);
-  --button-padding-big: var(--hggs-space-horizontal)
-    var(--hggs-space-vertical-md);
-  --button-padding-medium: var(--hggs-space-horizontal-sm)
-    var(--hggs-space-vertical);
-  --button-padding-small: var(--hggs-space-horizontal-xs)
-    var(--hggs-space-vertical-sm);
+  --button-padding-big: var(--hggs-space-horizontal) var(--hggs-space-vertical-md);
+  --button-padding-medium: var(--hggs-space-horizontal-sm) var(--hggs-space-vertical);
+  --button-padding-small: var(--hggs-space-horizontal-xs) var(--hggs-space-vertical-sm);
   --button-transition-hover: var(--hggs-animation-ease);
   --button-transition-primary-hover: var(--button-transition-hover);
   --button-transition-quaternary-hover: var(--button-transition-hover);

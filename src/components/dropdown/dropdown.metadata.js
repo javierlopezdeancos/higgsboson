@@ -2,10 +2,13 @@ const data = {
   title: "Dropdown",
   default: [
     {
-      title: "dropdown",
+      title: "hggs-dropdown",
       styles: {
-        header: headerStyles,
+        titles: {
+          dropdown: titleStyles,
+        },
         article: articleStyles,
+        header: headerStyles,
       },
       classes: {
         details: ["hggs-dropdown"],
@@ -26,14 +29,7 @@ const data = {
         ],
       },
       labels: {
-        options: [
-          "Select an item...",
-          "Item 1",
-          "Item 2",
-          "Item 3",
-          "Item 4",
-          "Item 5",
-        ],
+        options: ["Select an item...", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5"],
       },
       types: {
         input: ["radio", "radio", "radio", "radio", "radio", "radio"],

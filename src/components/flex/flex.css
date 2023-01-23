@@ -1,83 +1,83 @@
-%hggs-flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-%hggs-flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-%hggs-flex-center {
-  align-items: center;
-  justify-content: center;
-}
-
-.hggs-flex--column-center {
-  @extend %hggs-flex-column;
-  @extend %hggs-flex-center;
-}
-
-.hggs-flex--column-top-center {
-  @extend %hggs-flex-column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.hggs-flex--column-top-left {
-  @extend %hggs-flex-column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.hggs-flex--column-top-right {
-  @extend %hggs-flex-column;
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-
-.hggs-flex--row-center {
-  @extend %hggs-flex-row;
-  @extend %hggs-flex-center;
-}
-
-.hggs-flex--row-top-center {
-  @extend %hggs-flex-row;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.hggs-flex--row-left-center {
-  @extend %hggs-flex-row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.hggs-flex--row-right-center {
-  @extend %hggs-flex-row;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.hggs-flex--row-left-stretch {
-  @extend %hggs-flex-row;
-  align-items: stretch;
-  justify-content: flex-start;
-}
-
-.hggs-flex--row-top-left {
-  @extend %hggs-flex-row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.hggs-flex--row-space-between-center {
-  @extend %hggs-flex-row;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .hggs-flex {
+  display: flex;
+
+  &.hggs-flex--column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.hggs-flex--column-top-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &.hggs-flex--column-top-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &.hggs-flex--column-top-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  &.hggs-flex--row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.hggs-flex--row-top-center {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &.hggs-flex--row-left-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &.hggs-flex--row-right-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &.hggs-flex--row-left-stretch {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &.hggs-flex--row-top-left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &.hggs-flex--row-space-between-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &.hggs-flex--column-center,
   &.hggs-flex--column-top-center,
   &.hggs-flex--column-top-left,
@@ -102,15 +102,15 @@
   &.hggs-flex--column-top-left,
   &.hggs-flex--column-top-right {
     &.hggs-flex--gap-small {
-      gap: var(--hggs-flex-column-gap-small, --hggs-space-vertical-sm);
+      gap: var(--hggs-flex-column-gap-small, var(--hggs-space-sm-default));
     }
 
     &.hggs-flex--gap-medium {
-      gap: var(--hggs-flex-column-gap-medium, --hggs-space-vertical);
+      gap: var(--hggs-flex-column-gap-medium, var(--hggs-space-default));
     }
 
     &.hggs-flex--gap-big {
-      gap: var(--hggs-flex-column-gap-big, --hggs-space-vertical-md);
+      gap: var(--hggs-flex-column-gap-big, var(--hggs-space-md-default));
     }
   }
 
@@ -122,15 +122,15 @@
   &.hggs-flex--row-top-left,
   &.hggs-flex--row-space-between-center {
     &.hggs-flex--gap-small {
-      gap: var(--hggs-flex-row-gap-small, --hggs-space-horizontal-sm);
+      gap: var(--hggs-flex-row-gap-small, var(--hggs-space-sm-default));
     }
 
     &.hggs-flex--gap-medium {
-      gap: var(--hggs-flex-row-gap-medium, --hggs-space-horizontal);
+      gap: var(--hggs-flex-row-gap-medium, var(--hggs-space-default));
     }
 
     &.hggs-flex--gap-big {
-      gap: var(--hggs-flex-row-gap-big, --hggs-space-horizontal-md);
+      gap: var(--hggs-flex-row-gap-big, var(--hggs-space-md-default));
     }
   }
 }

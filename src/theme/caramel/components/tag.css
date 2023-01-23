@@ -35,7 +35,7 @@
   --tag-color-outline-secondary-subtle: var(--hggs-color-secondary-outline-subtle);
   --tag-background-tertiary: var(--hggs-color-background-tertiary);
   --tag-color-tertiary: var(--hggs-color-tertiary);
-  --tag-border-outline-tertiary:  var(--hggs-border-tertiary-outline);
+  --tag-border-outline-tertiary: var(--hggs-border-tertiary-outline);
   --tag-color-outline-tertiary: var(--hggs-color-tertiary-outline);
   --tag-background-subtle-tertiary: var(--hggs-color-background-tertiary-subtle);
   --tag-color-subtle-tertiary: var(--hggs-color-tertiary-subtle);

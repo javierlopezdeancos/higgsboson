@@ -2,12 +2,17 @@ const data = {
   title: "Checkbox",
   default: [
     {
-      title: "checkbox",
-      subtitle: "label",
+      titles: {
+        checkbox: "hggs-checkbox",
+        label: "hggs-label",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
+        header: headerStyles,
         article: articleStyles,
-        subHeaderH4: subHeaderStyles,
+        titles: {
+          checkbox: titleStyles,
+          label: titleIndentation1xStyles,
+        },
       },
       classes: {
         wrapper: ["hggs-checkbox"],
@@ -17,19 +22,19 @@ const data = {
   ],
   list: [
     {
-      title: "checkboxes",
-      subtitles: [
-        {
-          title: "checkbox",
-          subtitle: "label",
-        },
-      ],
+      titles: {
+        checkboxes: "hggs-checkboxes",
+        checkbox: "hggs-checkbox",
+        label: "hggs-label",
+      },
       styles: {
-        header: headerWithSubtitleStyles,
-        subHeaderH4: subHeaderWithChildStyles,
-        subHeaderH4WithH5Child: subHeaderWithChildStyles,
-        subHeaderH5: subHeaderChildStyles,
+        header: headerStyles,
         article: articleStyles,
+        titles: {
+          checkboxes: titleStyles,
+          checkbox: titleIndentation1xStyles,
+          label: titleIndentation2xStyles,
+        },
       },
       classes: {
         list: "hggs-checkboxes",
