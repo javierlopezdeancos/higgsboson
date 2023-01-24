@@ -219,9 +219,9 @@
   --hggs-transition-ease-default: 0.3s ease;
 
   /* ICONS */
-  --hggs-icon-size-micro-default: 15px;
-  --hggs-icon-size-small-default: 20px;
-  --hggs-icon-size-default: 25px;
+  --hggs-icon-size-micro-default: calc(var(--hggs-icon-size-small-default) / 1.3);
+  --hggs-icon-size-small-default: calc(var(--hggs-icon-size-default) / 1.3);
+  --hggs-icon-size-default: calc(var(--hggs-space-default) / 1.3);
   --hggs-icon-check-default: url("./assets/icons/check.svg");
   --hggs-icon-chevron-down-default: url("./assets/icons/chevron-down.svg");
   --hggs-icon-close-default: url("./assets/icons/close.svg");
