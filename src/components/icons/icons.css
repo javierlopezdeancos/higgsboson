@@ -53,6 +53,10 @@
     background: var(--icon-check, var(--hggs-icon-check-default)) no-repeat center;
   }
 
+  &.hggs-icon--pending {
+    background: var(--icon-pending, var(--hggs-icon-pending-default)) no-repeat center;
+  }
+
   &.hggs-icon--primary {
     filter: var(--icon-filter-primary, var(--hggs-filter-primary-default));
   }
