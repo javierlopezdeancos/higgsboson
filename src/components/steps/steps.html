@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hggs-steps</title>
+    <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
+    <script type="text/javascript" src="../../helpers/dom.js"></script>
+    <script type="text/javascript" src="../../helpers/styles.js"></script>
+    <script type="text/javascript" src="./steps.metadata.js"></script>
+    <script id="template" type="text/template">
+      <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+      <!-- default -->
+      <% _.each(data.default, function(s) { %>
+        <%
+          const articleStyles = getStyles(s?.styles?.article);
+          const headerStyles = getStyles(s?.styles?.header);
+          const stepsClasses = getClasses(s?.classes?.steps);
+          const stepsTitle = s?.titles?.steps;
+          const stepsTitleStyles = getStyles(s?.styles?.titles?.steps);
+        %>
+
+        <article style="<%= articleStyles %>">
+          <header style="<%= headerStyles %>">
+            <h3 class="hggs-h3" style="<%= stepsTitleStyles %>">
+              <%= stepsTitle %>
+            </h3>
+          </header>
+
+          <div class="<%= stepsClasses %>">
+            <% _.each(s?.classes?.items, function(i) { %>
+              <%
+                const stepClasses = getClasses(i?.step);
+                const sideClasses = getClasses(i?.side);
+                const mainClasses = getClasses(i?.main);
+                const titleClasses = getClasses(i?.title);
+                const descriptionClasses = getClasses(i?.description);
+              %>
+
+              <article class="<%= stepClasses %>">
+                <span class="<%= sideClasses %>">
+                  <span>2</span>
+                </span>
+                <section class="<%= mainClasses %>">
+                  <span class="<%= titleClasses %>">In Progress</span>
+                  <span class="<%= dividerClasses %>"></span>
+                  <span class="<%= descriptionClasses %>">This is a description</span>
+                </section>
+              </article>
+            <% }); %>
+          </div>
+        </article>
+      <% }); %>
+    </script>
+  </head>
+
+  <body>
+    <div id="body" class="hggs-app hggs-app--left" style="width: 100%; height: 100%; padding: 30px"></div>
+  </body>
+  <script type="text/javascript" src="../../helpers/render.js"></script>
+</html>

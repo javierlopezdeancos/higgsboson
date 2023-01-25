@@ -1,0 +1,16 @@
+.hggs-steps {
+  display: flex;
+  place-items: flex-start flex-start;
+  width: 100%;
+  gap: var(--steps-gap, var(--hggs-space-md-default));
+
+  & .hggs-step {
+    & .hggs-step-title::after {
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background-color: #1677ff;
+      content: "";
+    }
+  }
+}
