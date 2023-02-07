@@ -27,7 +27,7 @@ const data = {
       classes: {
         step: ["hggs-step hggs-step--divider"],
         side: ["hggs-step-side"],
-        side: ["hggs-step-reference"],
+        reference: ["hggs-step-reference"],
         main: ["hggs-step-main"],
         title: ["hggs-step-title"],
         divider: ["hggs-step-divider"],
