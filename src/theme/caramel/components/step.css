@@ -1,19 +1,22 @@
 .hggs-step {
   --step-description-color-error: var(--hggs-color-error);
+  --step-description-color-waiting: var(--hggs-color-disabled);
   --step-description-color: var(--hggs-font-color-light);
   --step-description-font-family: var(--hggs-font-family);
   --step-description-font-size-dot: var(--hggs-font-size-xs);
   --step-description-font-size-small: var(--hggs-font-size-xs);
   --step-description-font-size: var(--hggs-font-size-sm);
   --step-description-font-weight: var(--hggs-font-weight);
-  --step-description-color-waiting: var(--hggs-color-disabled);
+  --step-divider-background: var(--hggs-color-primary);
+  --step-divider-height: 1px;
+  --step-divider-margin: 0 0 0 var(--hggs-space-sm);
   --step-side-background-complete: var(--hggs-color-tertiary-subtle);
   --step-side-background-error: var(--hggs-color-error);
   --step-side-background-waiting: var(--hggs-color-disabled);
   --step-side-background: var(--hggs-color-background-primary);
   --step-side-border-radius: 100px;
-  --step-side-color: var(--hggs-color-background);
   --step-side-color-waiting: var(--hggs-color-tertiary-hover);
+  --step-side-color: var(--hggs-color-background);
   --step-side-font-family: var(--hggs-font-family);
   --step-side-font-size-small: var(--hggs-font-size-sm);
   --step-side-font-size: var(--hggs-font-size);

@@ -1,6 +1,6 @@
 .hggs-tooltip {
   --tooltip-box-background: var(--hggs-color-background-gray-subtle);
-  --tooltip-box-border-radius: var(--hggs-border-radius);
+  --tooltip-box-border-radius: var(--hggs-border-radius-xs);
   --tooltip-box-color: var(--hggs-font-color-lightest);
   --tooltip-box-font-size: var(--hggs-font-size);
   --tooltip-box-min-width: 100px;

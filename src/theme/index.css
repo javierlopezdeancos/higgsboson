@@ -4,9 +4,10 @@
 
 /* THEME */
 
-/* @import "./captain-america/index.css"; */
-
-/* @import "./caramel/index.css"; */
+/*
+@import url("./captain-america/index.css");
+@import url("./caramel/index.css");
+*/
 
 /* COMPONENTS */
 @import url("../components/flex/flex.css");
