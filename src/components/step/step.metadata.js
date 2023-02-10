@@ -103,6 +103,33 @@ const data = {
         description: ["hggs-step-description"],
       },
     },
+    {
+      titles: {
+        step: "hggs-step hggs-step--no-description",
+        side: "hggs-step-side",
+        main: "hggs-step-main",
+        title: "hggs-step-title",
+        description: "hggs-step-description",
+      },
+      styles: {
+        header: headerStyles,
+        article: [...articleStyles],
+        titles: {
+          step: titleStyles,
+          side: titleIndentation1xStyles,
+          main: titleIndentation1xStyles,
+          title: titleIndentation2xStyles,
+          description: titleIndentation2xStyles,
+        },
+      },
+      classes: {
+        step: ["hggs-step hggs-step--no-description"],
+        side: ["hggs-step-side"],
+        main: ["hggs-step-main"],
+        title: ["hggs-step-title"],
+        description: ["hggs-step-description"],
+      },
+    },
   ],
   small: [
     {
