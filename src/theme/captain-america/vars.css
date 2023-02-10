@@ -19,7 +19,7 @@
   --hggs-color-gray-009: #171717;
   --hggs-color-gray-hover: var(--hggs-color-gray-008);
   --hggs-color-gray-subtle: var(--hggs-color-gray-004);
-  --hggs-color-background-gray-subtle: var(--hggs-color-gray-001);
+  --hggs-color-background-gray-subtle: var(--hggs-color-gray-002);
   --hggs-color-border-gray: var(--hggs-color-gray);
   --hggs-color-border-gray-subtle: var(--hggs-color-gray-001));
   --hggs-color-border-gray-001: var(--hggs-color-gray-001);
@@ -40,6 +40,7 @@
   --hggs-color-primary-005: #3048a9;
   --hggs-color-primary-hover: var(--hggs-color-primary-005);
   --hggs-color-primary-subtle: var(--hggs-color-primary-005);
+  --hggs-color-background-primary: var(--hggs-color-primary);
   --hggs-color-background-primary-subtle: var(--hggs-color-primary-001);
   --hggs-color-border-primary: var(--hggs-color-primary);
   --hggs-color-border-primary-hover: var(--hggs-color-primary-hover);
@@ -186,6 +187,7 @@
   /* Font colors */
   --hggs-font-color: var(--hggs-color-gray-005);
   --hggs-font-color-light: var(--hggs-color-gray-003);
+  --hggs-font-color-dark: var(--hggs-color-gray-002);
   --hggs-font-color-primary-light: var(--hggs-color-primary-000);
 
   /* Font sizes */
@@ -222,6 +224,7 @@
   --hggs-border-radius-md: 20px;
   --hggs-border-radius: 8px;
   --hggs-border-radius-sm: 2px;
+  --hggs-border-radius-xs: 0;
   --hggs-border-size-xl: 5px;
   --hggs-border-size-lg: 3px;
   --hggs-border-size-md: 2px;
@@ -324,7 +327,7 @@
   --hggs-form-input-height: 3.5rem;
   --hggs-form-input-height-sm: 2.5rem;
   --hggs-form-input-height-xs: 1.5rem;
-  --hggs-form-input-border-radius: var(--hggs-border-radius);
+  --hggs-form-input-border-radius: var(--hggs-border-radius-xs);
   --hggs-form-input-placeholder-color: var(--hggs-color-gray-003);
   --hggs-form-input-placeholder-font-style: italic;
   --hggs-form-input-padding:
@@ -378,6 +381,7 @@
     --hggs-color-gray-002: #464646;
     --hggs-color-gray-001: #2e2e2e;
     --hggs-color-gray-000: #171717;
+    --hggs-color-background-gray-subtle: var(--hggs-color-gray-003);
 
     /* Quaternry Colors */
     --hggs-color-quaternary: var(--hggs-color-white);
@@ -395,11 +399,17 @@
 
     /* General colors */
     --hggs-color-gray-hover: var(--hggs-color-gray-007);
-    --hggs-color-background-hover: var(--hggs-color-gray-001);
+    --hggs-color-disabled: var(--hggs-color-gray-003);
+    --hggs-color-background: var(--hggs-color-senary-000);
+    --hggs-color-background-hover: #00080c;
 
     /* FONT */
     --hggs-font-color: var(--hggs-color-gray-008);
-    --hggs-font-color-light: var(--hggs-color-gray-002);
+    --hggs-font-color-light: var(--hggs-color-gray-006);
+    --hggs-font-color-dark: var(--hggs-color-gray-007);
+
+    /* BORDERS */
+    --hggs-border-disabled: var(--hggs-border-size) var(--hggs-border-type) var(--hggs-color-disabled);
 
     /* FILTERS */
     --hggs-filter-gray:

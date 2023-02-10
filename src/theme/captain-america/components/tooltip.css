@@ -1,7 +1,7 @@
 .hggs-tooltip {
-  --tooltip-box-background: var(--hggs-color-gray-007);
+  --tooltip-box-background: var(--hggs-color-background-gray-subtle);
   --tooltip-box-border-radius: var(--hggs-border-radius);
-  --tooltip-box-color: var(--hggs-font-color-light);
+  --tooltip-box-color: var(--hggs-font-color-lightest);
   --tooltip-box-font-size: var(--hggs-font-size);
   --tooltip-box-min-width: 100px;
   --tooltip-box-padding: var(--hggs-space-horizontal-xs);
@@ -14,7 +14,7 @@
   --tooltip-line-height: var(--hggs-line-height);
   --tooltip-margin: var(--hggs-space-horizontal);
   --tooltip-opacity: 0.9;
-  --tooltip-triangle-border-color: var(--hggs-color-gray-007) transparent transparent transparent;
+  --tooltip-triangle-border-color: var(--hggs-color-background-gray-subtle) transparent transparent transparent;
   --tooltip-triangle-border-style: solid;
   --tooltip-triangle-border-width: 4px 6px 0 6px;
   --tooltip-triangle-down-margin-top: 8px;

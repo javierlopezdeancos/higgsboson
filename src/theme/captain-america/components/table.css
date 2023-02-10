@@ -1,26 +1,26 @@
 .hggs-table-wrapper {
   --table-wrapper-border: none;
-  --table-wrapper-border-radius: var(--hggs-border-radius);
+  --table-wrapper-border-radius: var(--hggs-border-radius-xs);
   --table-wrapper-box-shadow: var(--hggs-shadow);
 }
 
 .hggs-table {
   --table-min-width: 650px;
-  --table-tbody-first-row-padding-top: var(--hggs-space-vertical-sm);
-  --table-tbody-first-column-padding-left: unset;
+  --table-tbody-first-row-padding-top: var(--hggs-space-vertical);
+  --table-tbody-first-column-padding-left: var(--hggs-space-vertical);
   --table-cell-font-family: var(--hggs-font-family);
   --table-cell-font-weight: var(--hggs-font-weight);
   --table-cell-font-size: var(--hggs-font-size-sm);
-  --table-cell-font-color: var(--hggs-color-gray-004);
-  --table-cell-padding: var(--hggs-space-vertical-sm);
+  --table-cell-font-color: var(--hggs-font-color-light);
+  --table-cell-padding: var(--hggs-space-vertical) var(--hggs-space-horizontal);
   --table-cell-text-align: left;
   --table-cell-border-bottom: var(--hggs-border);
   --table-cell-border-bottom-last-child: none;
   --table-cell-font-weight-bold: var(--hggs-font-weight-xl);
   --table-cell-head-font-weight: var(--hggs-font-weight-md);
   --table-cell-head-font-size: var(--hggs-font-size);
-  --table-cell-head-color: var(--hggs-color);
+  --table-cell-head-color: var(--hggs-font-color);
   --table-cell-head-background: var(--hggs-color-background);
-  --table-cell-head-padding: var(--hggs-space-vertical) var(--hggs-space-horizontal);
+  --table-cell-head-padding: var(--hggs-space-vertical);
   --table-cell-head-border-bottom: unset;
 }

@@ -1423,7 +1423,7 @@ const data = {
             "hggs-icon-wrapper",
             "hggs-icon--square",
             "hggs-icon--outline",
-            "hggs-icon--primary",
+            "hggs-icon--quaternary",
             "hggs-icon--big",
           ],
           [
