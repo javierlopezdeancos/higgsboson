@@ -5,6 +5,7 @@ const data = {
       titles: {
         step: "hggs-step hggs-step--divider",
         side: "hggs-step-side",
+        signal: "hggs-step-signal",
         reference: "hggs-step-reference",
         body: "hggs-step-body",
         main: "hggs-step-main",
@@ -18,7 +19,8 @@ const data = {
         titles: {
           step: titleStyles,
           side: titleIndentation1xStyles,
-          reference: titleIndentation2xStyles,
+          signal: titleIndentation2xStyles,
+          reference: titleIndentation3xStyles,
           body: titleIndentation1xStyles,
           main: titleIndentation2xStyles,
           title: titleIndentation3xStyles,
@@ -29,6 +31,7 @@ const data = {
       classes: {
         step: ["hggs-step hggs-step--divider"],
         side: ["hggs-step-side"],
+        signal: ["hggs-step-signal"],
         reference: ["hggs-step-reference"],
         body: ["hggs-step-body"],
         main: ["hggs-step-main"],
@@ -1233,4 +1236,47 @@ const data = {
       },
     ],
   },
+  vertical: [
+    {
+      titles: {
+        step: "hggs-step hggs-step--divider hggs-step--complete hggs-step--vertical",
+        side: "hggs-step-side",
+        icon: "hggs-icon hggs-icon--check hggs-icon--primary",
+        body: "hggs-step-body",
+        main: "hggs-step-main",
+        title: "hggs-step-title",
+        divider: "hggs-step-divider",
+        description: "hggs-step-description",
+      },
+      styles: {
+        header: headerStyles,
+        article: [...articleStyles],
+        titles: {
+          step: titleStyles,
+          side: titleIndentation1xStyles,
+          signal: titleIndentation2xStyles,
+          icon: titleIndentation3xStyles,
+          body: titleIndentation1xStyles,
+          main: titleIndentation2xStyles,
+          title: titleIndentation3xStyles,
+          divider: titleIndentation3xStyles,
+          description: titleIndentation2xStyles,
+        },
+      },
+      classes: {
+        step: ["hggs-step", "hggs-step--divider", "hggs-step--complete", "hggs-step--vertical"],
+        sideWrapper: ["hggs-step-side-wrapper hggs-flex hggs-flex--column-center"],
+        side: ["hggs-step-side"],
+        icon: ["hggs-icon", "hggs-icon--check", "hggs-icon--quinary"],
+        body: ["hggs-step-body"],
+        main: ["hggs-step-main"],
+        title: ["hggs-step-title"],
+        divider: ["hggs-step-divider"],
+        description: ["hggs-step-description"],
+      },
+      labels: {
+        title: "Completed",
+      },
+    },
+  ],
 };

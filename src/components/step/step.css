@@ -5,19 +5,29 @@
   justify-content: flex-start;
 
   & > .hggs-step-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--step-side-font-family, var(--hggs-font-family-default));
-    font-size: var(--step-side-font-size, var(--hggs-font-size-md-default));
-    font-weight: var(--step-side-font-weight, var(--hggs-font-weight-default));
-    color: var(--step-side-color, var(--hggs-color-quinary-default));
-    background: var(--step-side-background, var(--hggs-color-quaternary-default));
-    width: var(--step-side-size, calc(var(--hggs-space-md-default) / 1.5));
-    height: var(--step-side-size, calc(var(--hggs-space-md-default) / 1.5));
-    border-radius: var(--step-side-border-radius, 100px);
-    margin-right: var(--step-side-margin-right, var(--hggs-space-sm-default));
+    & > .hggs-step-divider {
+      background: var(--step-divider-background, var(--hggs-color-quaternary-default));
+      height: var(--step-divider-height, 1px);
+      margin: var(--step-divider-margin, 0 0 0 var(--hggs-space-sm-default));
+      flex: 1;
+      display: none;
+    }
+
+    & .hggs-step-signal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--step-side-font-family, var(--hggs-font-family-default));
+      font-size: var(--step-side-font-size, var(--hggs-font-size-md-default));
+      font-weight: var(--step-side-font-weight, var(--hggs-font-weight-default));
+      color: var(--step-side-color, var(--hggs-color-quinary-default));
+      background: var(--step-side-background, var(--hggs-color-quaternary-default));
+      width: var(--step-side-size, calc(var(--hggs-space-md-default) / 1.5));
+      height: var(--step-side-size, calc(var(--hggs-space-md-default) / 1.5));
+      border-radius: var(--step-side-border-radius, 100px);
+      margin-right: var(--step-side-margin-right, var(--hggs-space-sm-default));
+    }
   }
 
   & > .hggs-step-body {
@@ -62,6 +72,14 @@
   }
 
   &.hggs-step--divider {
+    &.hggs-step--vertical {
+      & > .hggs-step-side-wrapper {
+        & > .hggs-step-divider {
+          display: block;
+        }
+      }
+    }
+
     & > .hggs-step-body {
       & > .hggs-step-main {
         & > .hggs-step-divider {

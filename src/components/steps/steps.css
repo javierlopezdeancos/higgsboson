@@ -3,6 +3,12 @@
   align-items: stretch;
   justify-content: space-between;
   gap: var(--steps-gap, var(--hggs-space-sm-default));
+  list-style-type: none;
+  padding-left: 0;
+
+  &.hggs-steps--vertical {
+    flex-direction: column;
+  }
 
   & .hggs-step {
     align-items: stretch;
