@@ -24,7 +24,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.1.14",
+    "cssnano": "^6.0.0",
     "cssnano-preset-advanced": "^5.3.9",
     "husky": "^8.0.3",
     "lite-server": "^2.6.1",
@@ -35,8 +35,8 @@
     "postcss-nesting": "^10.2.0",
     "postcss-preset-env": "^7.8.3",
     "postcss-reporter": "^7.0.5",
-    "stylelint": "^14.16.1",
-    "stylelint-config-standard": "^29.0.0",
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard": "^33.0.0",
     "stylelint-use-nesting": "^4.0.0"
   }
 }
