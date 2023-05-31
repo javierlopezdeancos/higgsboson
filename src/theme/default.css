@@ -92,13 +92,13 @@
   --hggs-font-size-4xl-default: 32px;
   --hggs-font-size-3xl-default: 28px;
   --hggs-font-size-2xl-default: 24px;
-  --hggs-font-size-xl-default: 21px;
-  --hggs-font-size-lg-default: 18px;
-  --hggs-font-size-md-default: 16px;
-  --hggs-font-size-default: 14px;
-  --hggs-font-size-sm-default: 12px;
-  --hggs-font-size-xs-default: 10px;
-  --hggs-font-size-2xs-default: 8px;
+  --hggs-font-size-xl-default: 22px;
+  --hggs-font-size-lg-default: 20px;
+  --hggs-font-size-md-default: 18px;
+  --hggs-font-size-default: 16px;
+  --hggs-font-size-sm-default: 14px;
+  --hggs-font-size-xs-default: 12px;
+  --hggs-font-size-2xs-default: 10px;
 
   /* Font weights */
   --hggs-font-weight-default: 400;
