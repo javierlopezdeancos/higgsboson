@@ -1,11 +1,11 @@
 .hggs-button {
   border: unset;
   text-align: center;
-  padding: var(--button-padding-medium, calc(var(--hggs-space-default) / 1.2) var(--hggs-space-md-default));
+  padding: var(--button-padding-medium, calc(var(--hggs-space-sm-default)) var(--hggs-space-default));
   margin:
     var(--button-margin-vertical, var(--hggs-space-default))
     var(--button-margin-horizontal, var(--hggs-space-xs-default));
-  font-size: var(--button-font-size-medium, var(--hggs-font-size-2xl-default));
+  font-size: var(--button-font-size-medium, var(--hggs-font-size-lg-default));
   font-family: var(--button-font-family, var(--hggs-font-family));
   font-weight: var(--button-font-weight, var(--hggs-font-weight-default));
   color: var(--button-color, var(--hggs-color-quinary-default));
