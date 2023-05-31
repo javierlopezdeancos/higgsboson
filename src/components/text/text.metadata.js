@@ -49,5 +49,29 @@ const data = {
         article: articleStyles,
       },
     },
+    {
+      titles: {
+        text: "hggs-text hggs-text--align-center",
+      },
+      classes: {
+        text: ["hggs-text", "hggs-text--align-center"],
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+      },
+    },
+    {
+      titles: {
+        text: "hggs-text hggs-text--align-right",
+      },
+      classes: {
+        text: ["hggs-text", "hggs-text--align-right"],
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+      },
+    },
   ],
 };
