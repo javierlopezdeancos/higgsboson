@@ -1,0 +1,13 @@
+.hggs-texts {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--texts-gap, var(--hggs-space-default));
+  width: 100%;
+
+  .hggs-text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
