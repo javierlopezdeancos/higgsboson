@@ -64,6 +64,7 @@ Now, I know that we have multiple techniques and tools in the ecosystem to solve
       - [Table](/src/components/table/table.md)
       - [Tag](/src/components/tag/tag.md)
       - [Text](/src/components/text/text.md)
+      - [Texts](/src/components/text/texts.md)
       - [Titles (h1, h2, h3, h4, h5, h6)](/src/components/titles/titles.md)
       - [Tooltip](/src/components/tooltip/tooltip.md)
   - [Helpers](#helpers)
