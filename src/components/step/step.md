@@ -27,7 +27,11 @@
 --step-description-font-weight
 --step-divider-background
 --step-divider-height
+--step-divider-height-vertical
 --step-divider-margin
+--step-divider-margin-vertical
+--step-divider-width-vertical
+--step-gap-vertical
 --step-main-margin
 --step-side-background
 --step-side-background-complete
@@ -39,11 +43,12 @@
 --step-side-font-size
 --step-side-font-size-small
 --step-side-font-weight
+--step-side-height-vertical
 --step-side-margin-right
---step-side-size
 --step-side-size
 --step-side-size-dot
 --step-side-size-small
+--step-signal-margin-right-vertical
 --step-title-color
 --step-title-color-error
 --step-title-color-waiting
