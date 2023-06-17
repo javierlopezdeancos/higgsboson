@@ -43,6 +43,7 @@
 --step-side-font-size
 --step-side-font-size-small
 --step-side-font-weight
+--step-side-gap-vertical
 --step-side-height-vertical
 --step-side-margin-right
 --step-side-size

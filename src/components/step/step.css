@@ -240,6 +240,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
+      gap: var(--step-side-gap-vertical, var(--hggs-space-sm-default));
       height: var(--step-side-height-vertical, 100%);
 
       & > .hggs-step-signal {
