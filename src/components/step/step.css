@@ -267,7 +267,7 @@
       & > .hggs-step-body {
         & > .hggs-step-main {
           & > .hggs-step-title {
-            margin: var(--step-title-margin-vertical, var(--hggs-space-2xs-default) 0 var(--hggs-space-2xs-default) 0);
+            margin: var(--step-title-margin-vertical, var(--hggs-space-xs-default) 0 var(--hggs-space-xs-default) 0);
           }
         }
       }
