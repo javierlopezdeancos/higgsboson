@@ -59,7 +59,7 @@ const data = {
         header: headerStyles,
       },
       classes: {
-        title: ["hggs-field"],
+        field: ["hggs-field"],
         label: ["hggs-label", "hggs-label--focus"],
         input: ["hggs-input", "hggs-input--focus"],
       },

@@ -8,7 +8,7 @@
   --dropdown-options-top: calc(100% + var(--hggs-space-vertical-xs));
   --dropdown-options-background: var(--hggs-color-background);
   --dropdown-options-border: var(--hggs-border);
-  --dropdown-options-border-radius: var(--hggs-border-radius);
+  --dropdown-options-border-radius: var(--hggs-border-radius-xs);
   --dropdown-options-box-shadow: var(--hggs-form-input-box-shadow);
   --dropdown-options-max-height: calc(var(--hggs-space-vertical-md) * 10);
   --dropdown-option-label-font-family: var(--hggs-font-family);
@@ -25,7 +25,7 @@
   --dropdown-option-selected-color: var(--hggs-color);
   --dropdown-open-icon-border-focus: var(----hggs-border-size-lg) var(----hggs-border-type) var(--hggs-color-primary);
   --dropdown-icon-border: 3px solid var(--hggs-color-gray-004);
-  --dropdown-open-icon-top: 37%;
+  --dropdown-open-icon-top: 44%;
   --dropdown-icon-top: 37%;
   --dropdown-icon-right: var(--hggs-space-vertical);
   --dropdown-icon-size: 6px;

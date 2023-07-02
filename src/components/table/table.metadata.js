@@ -31,9 +31,9 @@ const data = {
         capitalize: "hggs-table-cell--capitalize",
         cell: ["hggs-table-cell"],
         bold: ["hggs-table-cell--bold"],
-        preparation: ["hggs-tag", "hggs-tag--primary", "hggs-tag--subtle", "hggs-tag--rounded", "hggs-tag--small"],
-        pending: ["hggs-tag", "hggs-tag--tertiary", "hggs-tag--subtle", "hggs-tag--rounded", "hggs-tag--small"],
-        complete: ["hggs-tag", "hggs-tag--senary", "hggs-tag--subtle", "hggs-tag--rounded", "hggs-tag--small"],
+        preparation: ["hggs-tag", "hggs-tag--primary", "hggs-tag--subtle", "hggs-tag--small"],
+        pending: ["hggs-tag", "hggs-tag--tertiary", "hggs-tag--subtle", "hggs-tag--small"],
+        complete: ["hggs-tag", "hggs-tag--senary", "hggs-tag--subtle", "hggs-tag--small"],
       },
       data: {
         headers: [

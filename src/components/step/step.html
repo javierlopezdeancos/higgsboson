@@ -21,15 +21,27 @@
           const stepClasses = getClasses(d?.classes?.step);
           const stepTitle = d?.titles?.step;
           const stepTitleStyles = getStyles(d?.styles?.titles?.step);
+          const signalClasses = getClasses(d?.classes?.signal);
+          const signalTitle = d?.titles?.signal;
+          const signalTitleStyles = getStyles(d?.styles?.titles?.signal);
           const sideClasses = getClasses(d?.classes?.side);
           const sideTitle = d?.titles?.side;
           const sideTitleStyles = getStyles(d?.styles?.titles?.side);
+          const referenceClasses = getClasses(d?.classes?.reference);
+          const referenceTitle = d?.titles?.reference;
+          const referenceTitleStyles = getStyles(d?.styles?.titles?.reference);
+          const bodyClasses = getClasses(d?.classes?.body);
+          const bodyTitle = d?.titles?.body;
+          const bodyTitleStyles = getStyles(d?.styles?.titles?.body);
           const mainClasses = getClasses(d?.classes?.main);
           const mainTitle = d?.titles?.main;
           const mainTitleStyles = getStyles(d?.styles?.titles?.main);
           const titleClasses = getClasses(d?.classes?.title);
           const titleTitle = d?.titles?.title;
           const titleTitleStyles = getStyles(d?.styles?.titles?.title);
+          const dividerClasses = getClasses(d?.classes?.divider);
+          const dividerTitle = d?.titles?.divider;
+          const dividerTitleStyles = getStyles(d?.styles?.titles?.divider);
           const descriptionClasses = getClasses(d?.classes?.description);
           const descriptionTitle = d?.titles?.description;
           const descriptionTitleStyles = getStyles(d?.styles?.titles?.description);
@@ -43,23 +55,49 @@
             <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
               <%= sideTitle %>
             </h4>
-            <h4 class="hggs-h4" style="<%= mainTitleStyles %>">
-              <%= mainTitle %>
-            </h4>
-            <h5 class="hggs-h5" style="<%= titleTitleStyles %>">
-              <%= titleTitle %>
+            <h5 class="hggs-h5" style="<%= signalTitleStyles %>">
+              <%= signalTitle %>
             </h5>
-            <h6 class="hggs-h6" style="<%= descriptionTitleStyles %>">
-              <%= descriptionTitle %>
+            <% if (referenceTitle) { %>
+              <h5 class="hggs-h5" style="<%= referenceTitleStyles %>">
+                <%= referenceTitle %>
+              </h5>
+            <% } %>
+            <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+              <%= bodyTitle %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= mainTitleStyles %>">
+              <%= mainTitle %>
+            </h5>
+            <h6 class="hggs-h6" style="<%= titleTitleStyles %>">
+              <%= titleTitle %>
             </h6>
+            <% if (dividerTitle) { %>
+              <h6 class="hggs-h6" style="<%= dividerTitleStyles %>">
+                <%= dividerTitle %>
+              </h6>
+            <% } %>
+            <h5 class="hggs-h5" style="<%= descriptionTitleStyles %>">
+              <%= descriptionTitle %>
+            </h5>
+            </h5>
           </header>
 
-          <article class="<%= stepClasses %>">
-            <span class="<%= sideClasses %>"><span>2</span></span>
-            <section class="<%= mainClasses %>">
-              <span class="<%= titleClasses %>">In Progress</span>
-               <span class="<%= descriptionClasses %>">This is a description</span>
-            </section>
+          <div class="<%= stepClasses %>">
+            <div class="<%= sideClasses %>">
+              <div class="<%= signalClasses %>">
+                <span class="<%= referenceClasses %>">2</span>
+              </div>
+            </div>
+            <div class="<%= bodyClasses %>">
+              <div class="<%= mainClasses %>">
+                <span class="<%= titleClasses %>">In Progress</span>
+                <% if (dividerTitle) { %>
+                  <span class="<%= dividerClasses %>"></span>
+                <% } %>
+              </div>
+              <div class="<%= descriptionClasses %>">This is a description</div>
+            </div>
           </article>
         </article>
       <% }); %>
@@ -72,15 +110,27 @@
           const stepClasses = getClasses(d?.classes?.step);
           const stepTitle = d?.titles?.step;
           const stepTitleStyles = getStyles(d?.styles?.titles?.step);
+          const signalClasses = getClasses(d?.classes?.signal);
+          const signalTitle = d?.titles?.signal;
+          const signalTitleStyles = getStyles(d?.styles?.titles?.signal);
           const sideClasses = getClasses(d?.classes?.side);
           const sideTitle = d?.titles?.side;
           const sideTitleStyles = getStyles(d?.styles?.titles?.side);
+          const referenceClasses = getClasses(d?.classes?.reference);
+          const referenceTitle = d?.titles?.reference;
+          const referenceTitleStyles = getStyles(d?.styles?.titles?.reference);
+          const bodyClasses = getClasses(d?.classes?.body);
+          const bodyTitle = d?.titles?.body;
+          const bodyTitleStyles = getStyles(d?.styles?.titles?.body);
           const mainClasses = getClasses(d?.classes?.main);
           const mainTitle = d?.titles?.main;
           const mainTitleStyles = getStyles(d?.styles?.titles?.main);
           const titleClasses = getClasses(d?.classes?.title);
           const titleTitle = d?.titles?.title;
           const titleTitleStyles = getStyles(d?.styles?.titles?.title);
+          const dividerClasses = getClasses(d?.classes?.divider);
+          const dividerTitle = d?.titles?.divider;
+          const dividerTitleStyles = getStyles(d?.styles?.titles?.divider);
           const descriptionClasses = getClasses(d?.classes?.description);
           const descriptionTitle = d?.titles?.description;
           const descriptionTitleStyles = getStyles(d?.styles?.titles?.description);
@@ -91,25 +141,51 @@
             <h3 class="hggs-h3" style="<%= stepTitleStyles %>">
               <%= stepTitle %>
             </h3>
-            <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
+           <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
               <%= sideTitle %>
             </h4>
-            <h4 class="hggs-h4" style="<%= mainTitleStyles %>">
-              <%= mainTitle %>
-            </h4>
-            <h5 class="hggs-h5" style="<%= titleTitleStyles %>">
-              <%= titleTitle %>
+            <h5 class="hggs-h5" style="<%= signalTitleStyles %>">
+              <%= signalTitle %>
             </h5>
-            <h6 class="hggs-h6" style="<%= descriptionTitleStyles %>">
-              <%= descriptionTitle %>
+            <% if (referenceTitle) { %>
+              <h5 class="hggs-h5" style="<%= referenceTitleStyles %>">
+                <%= referenceTitle %>
+              </h5>
+            <% } %>
+            <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+              <%= bodyTitle %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= mainTitleStyles %>">
+              <%= mainTitle %>
+            </h5>
+            <h6 class="hggs-h6" style="<%= titleTitleStyles %>">
+              <%= titleTitle %>
             </h6>
+            <% if (dividerTitle) { %>
+              <h6 class="hggs-h6" style="<%= dividerTitleStyles %>">
+                <%= dividerTitle %>
+              </h6>
+            <% } %>
+            <h5 class="hggs-h5" style="<%= descriptionTitleStyles %>">
+              <%= descriptionTitle %>
+            </h5>
+            </h5>
           </header>
 
           <article class="<%= stepClasses %>">
-            <span class="<%= sideClasses %>"><span>2</span></span>
-            <section class="<%= mainClasses %>">
-              <span class="<%= titleClasses %>">In Progress</span>
-               <span class="<%= descriptionClasses %>">This is a description</span>
+            <div class="<%= sideClasses %>">
+              <div class="<%= signalClasses %>">
+                <span class="<%= referenceClasses %>">2</span>
+              </div>
+            </div>
+            <section class="<%= bodyClasses %>">
+              <section class="<%= mainClasses %>">
+                <span class="<%= titleClasses %>">In Progress</span>
+                <% if (dividerTitle) { %>
+                  <span class="<%= dividerClasses %>"></span>
+                <% } %>
+              </section>
+              <footer class="<%= descriptionClasses %>">This is a description</footer>
             </section>
           </article>
         </article>
@@ -123,15 +199,27 @@
           const stepClasses = getClasses(d?.classes?.step);
           const stepTitle = d?.titles?.step;
           const stepTitleStyles = getStyles(d?.styles?.titles?.step);
+          const signalClasses = getClasses(d?.classes?.signal);
+          const signalTitle = d?.titles?.signal;
+          const signalTitleStyles = getStyles(d?.styles?.titles?.signal);
           const sideClasses = getClasses(d?.classes?.side);
           const sideTitle = d?.titles?.side;
           const sideTitleStyles = getStyles(d?.styles?.titles?.side);
+          const referenceClasses = getClasses(d?.classes?.reference);
+          const referenceTitle = d?.titles?.reference;
+          const referenceTitleStyles = getStyles(d?.styles?.titles?.reference);
+          const bodyClasses = getClasses(d?.classes?.body);
+          const bodyTitle = d?.titles?.body;
+          const bodyTitleStyles = getStyles(d?.styles?.titles?.body);
           const mainClasses = getClasses(d?.classes?.main);
           const mainTitle = d?.titles?.main;
           const mainTitleStyles = getStyles(d?.styles?.titles?.main);
           const titleClasses = getClasses(d?.classes?.title);
           const titleTitle = d?.titles?.title;
           const titleTitleStyles = getStyles(d?.styles?.titles?.title);
+          const dividerClasses = getClasses(d?.classes?.divider);
+          const dividerTitle = d?.titles?.divider;
+          const dividerTitleStyles = getStyles(d?.styles?.titles?.divider);
           const descriptionClasses = getClasses(d?.classes?.description);
           const descriptionTitle = d?.titles?.description;
           const descriptionTitleStyles = getStyles(d?.styles?.titles?.description);
@@ -145,29 +233,52 @@
             <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
               <%= sideTitle %>
             </h4>
-            <h4 class="hggs-h4" style="<%= mainTitleStyles %>">
-              <%= mainTitle %>
-            </h4>
-            <h5 class="hggs-h5" style="<%= titleTitleStyles %>">
-              <%= titleTitle %>
+            <h5 class="hggs-h5" style="<%= signalTitleStyles %>">
+              <%= signalTitle %>
             </h5>
-            <h6 class="hggs-h6" style="<%= descriptionTitleStyles %>">
-              <%= descriptionTitle %>
+            <% if (referenceTitle) { %>
+              <h5 class="hggs-h5" style="<%= referenceTitleStyles %>">
+                <%= referenceTitle %>
+              </h5>
+            <% } %>
+            <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+              <%= bodyTitle %>
+            </h4>
+            <h5 class="hggs-h5" style="<%= mainTitleStyles %>">
+              <%= mainTitle %>
+            </h5>
+            <h6 class="hggs-h6" style="<%= titleTitleStyles %>">
+              <%= titleTitle %>
             </h6>
+            <% if (dividerTitle) { %>
+              <h6 class="hggs-h6" style="<%= dividerTitleStyles %>">
+                <%= dividerTitle %>
+              </h6>
+            <% } %>
+            <h5 class="hggs-h5" style="<%= descriptionTitleStyles %>">
+              <%= descriptionTitle %>
+            </h5>
+            </h5>
           </header>
 
           <article class="<%= stepClasses %>">
-            <span class="<%= sideClasses %>"></span>
-            <section class="<%= mainClasses %>">
-              <span class="<%= titleClasses %>">In Progress</span>
-               <span class="<%= descriptionClasses %>">This is a description</span>
+            <div class="<%= sideClasses %>">
+              <div class="<%= signalClasses %>"></div>
+            </div>
+            <section class="<%= bodyClasses %>">
+              <section class="<%= mainClasses %>">
+                <span class="<%= titleClasses %>">In Progress</span>
+                <% if (dividerTitle) { %>
+                  <span class="<%= dividerClasses %>"></span>
+                <% } %>
+              </section>
+              <footer class="<%= descriptionClasses %>">This is a description</footer>
             </section>
           </article>
         </article>
       <% }); %>
 
       <!-- states -->
-
       <%
         const states = _.keys(data?.states);
 
@@ -180,21 +291,31 @@
               const stepClasses = getClasses(s?.classes?.step);
               const stepTitle = s?.titles?.step;
               const stepTitleStyles = getStyles(s?.styles?.titles?.step);
+              const signalClasses = getClasses(s?.classes?.signal);
+              const signalTitle = s?.titles?.signal;
+              const signalTitleStyles = getStyles(s?.styles?.titles?.signal);
               const sideClasses = getClasses(s?.classes?.side);
               const sideTitle = s?.titles?.side;
               const sideTitleStyles = getStyles(s?.styles?.titles?.side);
               const iconClasses = getClasses(s?.classes?.icon);
               const iconTitle = s?.titles?.icon;
               const iconTitleStyles = getStyles(s?.styles?.titles?.icon);
+              const bodyClasses = getClasses(s?.classes?.body);
+              const bodyTitle = s?.titles?.body;
+              const bodyTitleStyles = getStyles(s?.styles?.titles?.body);
               const mainClasses = getClasses(s?.classes?.main);
               const mainTitle = s?.titles?.main;
               const mainTitleStyles = getStyles(s?.styles?.titles?.main);
               const titleClasses = getClasses(s?.classes?.title);
               const titleTitle = s?.titles?.title;
               const titleTitleStyles = getStyles(s?.styles?.titles?.title);
+              const dividerClasses = getClasses(s?.classes?.divider);
+              const dividerTitle = s?.titles?.divider;
+              const dividerTitleStyles = getStyles(s?.styles?.titles?.divider);
               const descriptionClasses = getClasses(s?.classes?.description);
               const descriptionTitle = s?.titles?.description;
               const descriptionTitleStyles = getStyles(s?.styles?.titles?.description);
+              const stateLabel = s?.labels?.title;
             %>
 
             <article style="<%= articleStyles %>">
@@ -205,31 +326,337 @@
                 <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
                   <%= sideTitle %>
                 </h4>
-                <% if (iconTitle) { %>
-                  <h5 class="hggs-h5" style="<%= iconTitleStyles %>">
-                    <%= iconTitle %>
-                  </h5>
-                <% } %>
-                <h4 class="hggs-h4" style="<%= mainTitleStyles %>">
-                  <%= mainTitle %>
-                </h4>
-                <h5 class="hggs-h5" style="<%= titleTitleStyles %>">
-                  <%= titleTitle %>
+                <h5 class="hggs-h5" style="<%= signalTitleStyles %>">
+                  <%= signalTitle %>
                 </h5>
-                <h6 class="hggs-h6" style="<%= descriptionTitleStyles %>">
-                  <%= descriptionTitle %>
+                <% if (iconTitle) { %>
+                  <h6 class="hggs-h6" style="<%= iconTitleStyles %>">
+                    <%= iconTitle %>
+                  </h6>
+                <% } %>
+                <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+                  <%= bodyTitle %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= mainTitleStyles %>">
+                  <%= mainTitle %>
+                </h5>
+                <h6 class="hggs-h6" style="<%= titleTitleStyles %>">
+                  <%= titleTitle %>
                 </h6>
+                <% if (dividerTitle) { %>
+                  <h6 class="hggs-h6" style="<%= dividerTitleStyles %>">
+                    <%= dividerTitle %>
+                  </h6>
+                <% } %>
+                <h5 class="hggs-h5" style="<%= descriptionTitleStyles %>">
+                  <%= descriptionTitle %>
+                </h5>
+                </h5>
               </header>
+
               <article class="<%= stepClasses %>">
-                <span class="<%= sideClasses %>"><span>2</span></span>
-                <section class="<%= mainClasses %>">
-                  <span class="<%= titleClasses %>">Waiting</span>
-                  <span class="<%= descriptionClasses %>">This is a description</span>
+                <div class="<%= sideClasses %>">
+                  <div class="<%= signalClasses %>">
+                    <span class="<%= iconClasses  %>"></span>
+                  </div>
+                </div>
+                <section class="<%= bodyClasses %>">
+                  <section class="<%= mainClasses %>">
+                    <span class="<%= titleClasses %>"><%= stateLabel %></span>
+                    <% if (dividerTitle) { %>
+                      <span class="<%= dividerClasses %>"></span>
+                    <% } %>
+                  </section>
+                  <footer class="<%= descriptionClasses %>">This is a description</footer>
                 </section>
               </article>
             </article>
           <% });
         }); %>
+
+      <!-- vertical -->
+      <%
+        _.each(data?.vertical.default, function(v) {
+      %>
+          <%
+            const articleStyles = getStyles(v?.styles?.article);
+            const headerStyles = getStyles(v?.styles?.header);
+            const stepClasses = getClasses(v?.classes?.step);
+            const stepTitle = v?.titles?.step;
+            const stepTitleStyles = getStyles(v?.styles?.titles?.step);
+            const signalClasses = getClasses(v?.classes?.signal);
+            const signalTitle = v?.titles?.signal;
+            const signalTitleStyles = getStyles(v?.styles?.titles?.signal);
+            const sideClasses = getClasses(v?.classes?.side);
+            const sideTitle = v?.titles?.side;
+            const sideTitleStyles = getStyles(v?.styles?.titles?.side);
+            const referenceClasses = getClasses(v?.classes?.reference);
+            const referenceTitle = v?.titles?.reference;
+            const referenceTitleStyles = getStyles(v?.styles?.titles?.reference);
+            const bodyClasses = getClasses(v?.classes?.body);
+            const bodyTitle = v?.titles?.body;
+            const bodyTitleStyles = getStyles(v?.styles?.titles?.body);
+            const mainClasses = getClasses(v?.classes?.main);
+            const mainTitle = v?.titles?.main;
+            const mainTitleStyles = getStyles(v?.styles?.titles?.main);
+            const titleClasses = getClasses(v?.classes?.title);
+            const titleTitle = v?.titles?.title;
+            const titleTitleStyles = getStyles(v?.styles?.titles?.title);
+            const dividerClasses = getClasses(v?.classes?.divider);
+            const dividerTitle = v?.titles?.divider;
+            const dividerTitleStyles = getStyles(v?.styles?.titles?.divider);
+            const descriptionClasses = getClasses(v?.classes?.description);
+            const descriptionTitle = v?.titles?.description;
+            const descriptionTitleStyles = getStyles(v?.styles?.titles?.description);
+            const stateLabel = v?.labels?.title;
+          %>
+
+          <%
+            const stepStyles = hasClass("hggs-step--divider", v?.classes?.step) ? "height: 300px" : "";
+          %>
+
+            <article style="<%= articleStyles %>">
+              <header style="<%= headerStyles %>">
+                <h3 class="hggs-h3" style="<%= stepTitleStyles %>">
+                  <%= stepTitle %>
+                </h3>
+                <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
+                  <%= sideTitle %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= signalTitleStyles %>">
+                  <%= signalTitle %>
+                </h5>
+                <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+                  <%= bodyTitle %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= mainTitleStyles %>">
+                  <%= mainTitle %>
+                </h5>
+                <h6 class="hggs-h6" style="<%= titleTitleStyles %>">
+                  <%= titleTitle %>
+                </h6>
+                <% if (dividerTitle) { %>
+                  <h6 class="hggs-h6" style="<%= dividerTitleStyles %>">
+                    <%= dividerTitle %>
+                  </h6>
+                <% } %>
+                <h5 class="hggs-h5" style="<%= descriptionTitleStyles %>">
+                  <%= descriptionTitle %>
+                </h5>
+                </h5>
+              </header>
+
+            <article class="<%= stepClasses %>" style="<%= stepStyles %>">
+              <div class="<%= sideClasses %>">
+                <div class="<%= signalClasses %>">
+                  <span class="<%= referenceClasses %>">2</span>
+                </div>
+                <% if (dividerTitle) { %>
+                  <span class="<%= dividerClasses %>"></span>
+                <% } %>
+              </div>
+              <section class="<%= bodyClasses %>">
+                <section class="<%= mainClasses %>">
+                  <span class="<%= titleClasses %>"><%= stateLabel %></span>
+                </section>
+                <footer class="<%= descriptionClasses %>">This is a description</footer>
+              </section>
+            </article>
+            </article>
+        <% });
+      %>
+
+      <!-- vertical small -->
+      <%
+        _.each(data?.vertical.small, function(v) {
+      %>
+          <%
+            const articleStyles = getStyles(v?.styles?.article);
+            const headerStyles = getStyles(v?.styles?.header);
+            const stepClasses = getClasses(v?.classes?.step);
+            const stepTitle = v?.titles?.step;
+            const stepTitleStyles = getStyles(v?.styles?.titles?.step);
+            const signalClasses = getClasses(v?.classes?.signal);
+            const signalTitle = v?.titles?.signal;
+            const signalTitleStyles = getStyles(v?.styles?.titles?.signal);
+            const sideClasses = getClasses(v?.classes?.side);
+            const sideTitle = v?.titles?.side;
+            const sideTitleStyles = getStyles(v?.styles?.titles?.side);
+            const referenceClasses = getClasses(v?.classes?.reference);
+            const referenceTitle = v?.titles?.reference;
+            const referenceTitleStyles = getStyles(v?.styles?.titles?.reference);
+            const bodyClasses = getClasses(v?.classes?.body);
+            const bodyTitle = v?.titles?.body;
+            const bodyTitleStyles = getStyles(v?.styles?.titles?.body);
+            const mainClasses = getClasses(v?.classes?.main);
+            const mainTitle = v?.titles?.main;
+            const mainTitleStyles = getStyles(v?.styles?.titles?.main);
+            const titleClasses = getClasses(v?.classes?.title);
+            const titleTitle = v?.titles?.title;
+            const titleTitleStyles = getStyles(v?.styles?.titles?.title);
+            const dividerClasses = getClasses(v?.classes?.divider);
+            const dividerTitle = v?.titles?.divider;
+            const dividerTitleStyles = getStyles(v?.styles?.titles?.divider);
+            const descriptionClasses = getClasses(v?.classes?.description);
+            const descriptionTitle = v?.titles?.description;
+            const descriptionTitleStyles = getStyles(v?.styles?.titles?.description);
+            const stateLabel = v?.labels?.title;
+          %>
+
+          <%
+            const stepStyles = hasClass("hggs-step--divider", v?.classes?.step) ? "height: 300px" : "";
+          %>
+
+            <article style="<%= articleStyles %>">
+              <header style="<%= headerStyles %>">
+                <h3 class="hggs-h3" style="<%= stepTitleStyles %>">
+                  <%= stepTitle %>
+                </h3>
+                <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
+                  <%= sideTitle %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= signalTitleStyles %>">
+                  <%= signalTitle %>
+                </h5>
+                <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+                  <%= bodyTitle %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= mainTitleStyles %>">
+                  <%= mainTitle %>
+                </h5>
+                <h6 class="hggs-h6" style="<%= titleTitleStyles %>">
+                  <%= titleTitle %>
+                </h6>
+                <% if (dividerTitle) { %>
+                  <h6 class="hggs-h6" style="<%= dividerTitleStyles %>">
+                    <%= dividerTitle %>
+                  </h6>
+                <% } %>
+                <h5 class="hggs-h5" style="<%= descriptionTitleStyles %>">
+                  <%= descriptionTitle %>
+                </h5>
+                </h5>
+              </header>
+
+            <article class="<%= stepClasses %>" style="<%= stepStyles %>">
+              <div class="<%= sideClasses %>">
+                <div class="<%= signalClasses %>">
+                  <span class="<%= referenceClasses %>">2</span>
+                </div>
+                <% if (dividerTitle) { %>
+                  <span class="<%= dividerClasses %>"></span>
+                <% } %>
+              </div>
+              <section class="<%= bodyClasses %>">
+                <section class="<%= mainClasses %>">
+                  <span class="<%= titleClasses %>"><%= stateLabel %></span>
+                </section>
+                <% if (descriptionClasses) { %>
+                  <footer class="<%= descriptionClasses %>">This is a description</footer>
+                <% } %>
+              </section>
+            </article>
+            </article>
+        <% });
+      %>
+
+      <!-- vertical states -->
+      <%
+        const verticalStates = _.keys(data?.vertical?.states);
+
+        _.each(verticalStates, function(s) {
+          _.each(data?.vertical?.states[s], function(v) {
+      %>
+          <%
+            const articleStyles = getStyles(v?.styles?.article);
+            const headerStyles = getStyles(v?.styles?.header);
+            const stepClasses = getClasses(v?.classes?.step);
+            const stepTitle = v?.titles?.step;
+            const stepTitleStyles = getStyles(v?.styles?.titles?.step);
+            const signalClasses = getClasses(v?.classes?.signal);
+            const signalTitle = v?.titles?.signal;
+            const signalTitleStyles = getStyles(v?.styles?.titles?.signal);
+            const sideClasses = getClasses(v?.classes?.side);
+            const sideTitle = v?.titles?.side;
+            const sideTitleStyles = getStyles(v?.styles?.titles?.side);
+            const iconClasses = getClasses(v?.classes?.icon);
+            const iconTitle = v?.titles?.icon;
+            const iconTitleStyles = getStyles(v?.styles?.titles?.icon);
+            const bodyClasses = getClasses(v?.classes?.body);
+            const bodyTitle = v?.titles?.body;
+            const bodyTitleStyles = getStyles(v?.styles?.titles?.body);
+            const mainClasses = getClasses(v?.classes?.main);
+            const mainTitle = v?.titles?.main;
+            const mainTitleStyles = getStyles(v?.styles?.titles?.main);
+            const titleClasses = getClasses(v?.classes?.title);
+            const titleTitle = v?.titles?.title;
+            const titleTitleStyles = getStyles(v?.styles?.titles?.title);
+            const dividerClasses = getClasses(v?.classes?.divider);
+            const dividerTitle = v?.titles?.divider;
+            const dividerTitleStyles = getStyles(v?.styles?.titles?.divider);
+            const descriptionClasses = getClasses(v?.classes?.description);
+            const descriptionTitle = v?.titles?.description;
+            const descriptionTitleStyles = getStyles(v?.styles?.titles?.description);
+            const stateLabel = v?.labels?.title;
+          %>
+
+            <article style="<%= articleStyles %>">
+              <header style="<%= headerStyles %>">
+                <h3 class="hggs-h3" style="<%= stepTitleStyles %>">
+                  <%= stepTitle %>
+                </h3>
+                <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
+                  <%= sideTitle %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= signalTitleStyles %>">
+                  <%= signalTitle %>
+                </h5>
+                <h6 class="hggs-h6" style="<%= iconTitleStyles %>">
+                  <%= iconTitle %>
+                </h6>
+                <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
+                  <%= bodyTitle %>
+                </h4>
+                <h5 class="hggs-h5" style="<%= mainTitleStyles %>">
+                  <%= mainTitle %>
+                </h5>
+                <h6 class="hggs-h6" style="<%= titleTitleStyles %>">
+                  <%= titleTitle %>
+                </h6>
+                <% if (dividerTitle) { %>
+                  <h6 class="hggs-h6" style="<%= dividerTitleStyles %>">
+                    <%= dividerTitle %>
+                  </h6>
+                <% } %>
+                <h5 class="hggs-h5" style="<%= descriptionTitleStyles %>">
+                  <%= descriptionTitle %>
+                </h5>
+                </h5>
+              </header>
+
+              <%
+                const stepStyles = hasClass("hggs-step--divider", v?.classes?.step) ? "height: 300px" : "";
+              %>
+
+              <article class="<%= stepClasses %>" style="<%= stepStyles %>">
+                <div class="<%= sideClasses %>">
+                  <div class="<%= signalClasses %>">
+                    <span class="<%= iconClasses  %>"></span>
+                  </div>
+                  <% if (dividerTitle) { %>
+                    <span class="<%= dividerClasses %>"></span>
+                  <% } %>
+                </div>
+                <section class="<%= bodyClasses %>">
+                  <section class="<%= mainClasses %>">
+                    <span class="<%= titleClasses %>"><%= stateLabel %></span>
+                  </section>
+                  <footer class="<%= descriptionClasses %>">This is a description</footer>
+                </section>
+              </article>
+            </article>
+          <% });
+      }); %>
     </script>
   </head>
 

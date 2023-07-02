@@ -302,13 +302,13 @@
   }
 
   &.hggs-button--big {
-    padding: var(--button-padding-big, calc(var(--hggs-space-default) * 1.5) calc(var(--hggs-space-lg-default) * 2));
+    padding: var(--button-padding-big, calc(var(--hggs-space-default) * 1.5) var(--hggs-space-lg-default));
     font-size: var(--button-font-size-extra-medium, var(--hggs-font-size-2xl-default));
   }
 
   &.hggs-button--medium {
-    padding: var(--button-padding-medium, calc(var(--hggs-space-default) / 1.2) var(--hggs-space-md-default));
-    font-size: var(--button-font-size-medium, var(--hggs-font-size-2xl-default));
+    padding: var(--button-padding-medium, calc(var(--hggs-space-default) / 1.3) var(--hggs-space-md-default));
+    font-size: var(--button-font-size-medium, var(--hggs-font-size-xl-default));
   }
 
   &.hggs-button--small:not(.hggs-button--circle, .hggs-button--square) {

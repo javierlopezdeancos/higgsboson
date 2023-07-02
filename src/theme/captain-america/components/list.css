@@ -1,7 +1,7 @@
 .hggs-list {
   --list-item-font-family: var(--hggs-font-family);
   --list-item-font-weight: var(--hggs-font-weight);
-  --list-item-color: var(--hggs-color);
+  --list-item-color: var(--hggs-font-color);
   --list-item-font-size: var(--hggs-font-size);
   --list-item-margin-bottom: var(--hggs-space-vertical-xs);
   --list-padding-left: var(--hggs-space-horizontal-md);
