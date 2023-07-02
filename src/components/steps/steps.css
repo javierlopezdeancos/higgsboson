@@ -6,10 +6,6 @@
   list-style-type: none;
   padding-left: 0;
 
-  &.hggs-steps--vertical {
-    flex-direction: column;
-  }
-
   & .hggs-step {
     align-items: stretch;
     justify-content: space-between;
@@ -17,6 +13,22 @@
 
     &:last-child {
       flex: 0;
+    }
+  }
+
+  &.hggs-steps--vertical {
+    flex-direction: column;
+
+    & .hggs-step {
+        flex: unset;
+        align-items: start;
+        justify-content: start;
+
+      &.hggs-step--vertical {
+        & .hggs-step-divider {
+          flex: unset;
+        }
+      }
     }
   }
 }

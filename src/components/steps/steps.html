@@ -79,6 +79,7 @@
               <%
                 const stepClasses = getClasses(i?.step);
                 const sideClasses = getClasses(i?.side);
+                const signalClasses = getClasses(i?.signal);
                 const referenceClasses = getClasses(i?.reference);
                 const bodyClasses = getClasses(i?.body);
                 const mainClasses = getClasses(i?.main);
@@ -95,9 +96,11 @@
 
               <li class="<%= stepClasses %>">
                 <span class="<%= sideClasses %>">
-                  <span class="<%= referenceClasses %>">
-                    <%= sideLabel %>
-                  </span>
+                  <div class="<%= signalClasses %>">
+                    <span class="<%= referenceClasses %>">
+                      <%= sideLabel %>
+                    </span>
+                  </div>
                 </span>
                 <div class="<%= bodyClasses %>">
                   <div class="<%= mainClasses %>">
@@ -130,6 +133,8 @@
           const stepTitleStyles = getStyles(s?.styles?.titles?.step);
           const sideTitle = s?.titles?.side;
           const sideTitleStyles = getStyles(s?.styles?.titles?.side);
+          const signalTitle = s?.titles?.signal;
+          const signalTitleStyles = getStyles(s?.styles?.titles?.signal);
           const referenceTitle = s?.titles?.reference;
           const referenceTitleStyles = getStyles(s?.styles?.titles?.reference);
           const bodyTitle = s?.titles?.body;
@@ -155,10 +160,13 @@
             <h4 class="hggs-h4" style="<%= sideTitleStyles %>">
               <%= sideTitle %>
             </h4>
+            <h5 class="hggs-h5" style="<%= signalTitleStyles %>">
+              <%= signalTitle %>
+            </h5>
             <% if (referenceTitle) { %>
-              <h5 class="hggs-h5" style="<%= referenceTitleStyles %>">
+              <h6 class="hggs-h6" style="<%= referenceTitleStyles %>">
                 <%= referenceTitle %>
-              </h5>
+              </h6>
             <% } %>
             <h4 class="hggs-h4" style="<%= bodyTitleStyles %>">
               <%= bodyTitle %>
@@ -184,7 +192,9 @@
               <%
                 const stepClasses = getClasses(i?.step);
                 const sideClasses = getClasses(i?.side);
+                const signalClasses = getClasses(i?.signal);
                 const referenceClasses = getClasses(i?.reference);
+                const iconClasses = getClasses(i?.icon);
                 const bodyClasses = getClasses(i?.body);
                 const mainClasses = getClasses(i?.main);
                 const titleClasses = getClasses(i?.title);
@@ -200,9 +210,19 @@
 
               <li class="<%= stepClasses %>">
                 <span class="<%= sideClasses %>">
-                  <span class="<%= referenceClasses %>">
-                    <%= sideLabel %>
-                  </span>
+                  <div class="<%= signalClasses %>">
+                    <% if (referenceClasses) { %>
+                      <span class="<%= referenceClasses %>">
+                        <%= sideLabel %>
+                      </span>
+                    <% } %>
+                    <% if (iconClasses) { %>
+                      <span class="<%= iconClasses %>"></span>
+                    <% } %>
+                  </div>
+                  <% if (dividerClasses) { %>
+                    <span class="<%= dividerClasses %>"></span>
+                  <% } %>
                 </span>
                 <div class="<%= bodyClasses %>">
                   <div class="<%= mainClasses %>">
@@ -214,9 +234,6 @@
                      <%= descriptionLabel %>
                   </span>
                 </div>
-                <% if (dividerClasses) { %>
-                  <span class="<%= dividerClasses %>"></span>
-                <% } %>
               </li>
             <% }); %>
           </ul>
