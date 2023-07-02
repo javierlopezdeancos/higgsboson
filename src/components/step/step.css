@@ -267,7 +267,17 @@
       & > .hggs-step-body {
         & > .hggs-step-main {
           & > .hggs-step-title {
-            margin: var(--step-title-margin-vertical, var(--hggs-space-xs-default) 0 var(--hggs-space-xs-default) 0);
+            margin: var(--step-title-margin-vertical-no-description, var(--hggs-space-xs-default) 0 var(--hggs-space-xs-default) 0);
+          }
+        }
+      }
+    }
+
+    &.hggs-step--dot {
+      & > .hggs-step-body {
+        & > .hggs-step-main {
+          & > .hggs-step-title {
+            margin: var(--step-title-margin-vertical-dot, var(--hggs-space-5xs-default) 0 var(--hggs-space-5xs-default) 0);
           }
         }
       }

@@ -1,3 +1,6 @@
+[Home ](../../../Readme)
+[ > Componentes ](../../../Readme#components)
+
 # Step
 
 - [Step](#step)
@@ -7,79 +10,80 @@
   - [4. HTML Structure](#4-html-structure)
     - [4.1. Default](#41-default)
       - [4.1.1. Default Step with divider.](#411-default-step-with-divider)
-        - [4.1.1.1. Default Step.](#4111-default-step)
-      - [4.1.2. Small Step with divider.](#412-small-step-with-divider)
-        - [4.1.2.1. Small Step.](#4121-small-step)
-        - [4.1.2.2. Small Step without description.](#4122-small-step-without-description)
-      - [4.1.3. Dot Step with divider.](#413-dot-step-with-divider)
-        - [4.1.3.1. Dot Step.](#4131-dot-step)
-        - [4.1.3.2. Dot Step without description.](#4132-dot-step-without-description)
-    - [4.2. States](#42-states)
-      - [4.2.1. Complete](#421-complete)
-        - [4.2.1.1. Complete Step with divider.](#4211-complete-step-with-divider)
-        - [4.2.1.2. Complete Step.](#4212-complete-step)
-        - [4.2.1.3. Small Complete Step with divider.](#4213-small-complete-step-with-divider)
-        - [4.2.1.4. Small Complete Step.](#4214-small-complete-step)
-        - [4.2.1.5. Small Complete Step without description.](#4215-small-complete-step-without-description)
-        - [4.2.1.6. Dot Complete Step with divider.](#4216-dot-complete-step-with-divider)
-        - [4.2.1.7. Dot Complete Step.](#4217-dot-complete-step)
-        - [4.2.1.8. Dot Complete Step without description.](#4218-dot-complete-step-without-description)
-      - [4.2.2. Error](#422-error)
-        - [4.2.2.1. Error Step with divider.](#4221-error-step-with-divider)
-        - [4.2.2.2. Error Step.](#4222-error-step)
-          - [4.2.2.2.1. Small Error Step with divider.](#42221-small-error-step-with-divider)
-          - [4.2.2.2.2. Small Error Step.](#42222-small-error-step)
-          - [4.2.2.2.3. Small Error Step without description.](#42223-small-error-step-without-description)
-          - [4.2.2.2.4. Dot Error Step with divider.](#42224-dot-error-step-with-divider)
-          - [4.2.2.2.5. Dot Error Step.](#42225-dot-error-step)
-          - [4.2.2.2.6. Dot Error Step without description.](#42226-dot-error-step-without-description)
-      - [4.2.3. Waiting](#423-waiting)
-        - [4.2.3.1. Waiting Step with divider.](#4231-waiting-step-with-divider)
-          - [4.2.3.1.1. Waiting Step.](#42311-waiting-step)
-          - [4.2.3.1.2. Small Waiting Step with divider.](#42312-small-waiting-step-with-divider)
-          - [4.2.3.1.3. Small Waiting Step.](#42313-small-waiting-step)
-          - [4.2.3.1.4. Small Waiting Step without description.](#42314-small-waiting-step-without-description)
-          - [4.2.3.1.5. Dot Waiting Step without divider.](#42315-dot-waiting-step-without-divider)
-          - [4.2.3.1.6. Dot Waiting Step.](#42316-dot-waiting-step)
-          - [4.2.3.1.7. Dot Waiting Step without description.](#42317-dot-waiting-step-without-description)
-    - [4.3. Vertical](#43-vertical)
-      - [4.3.1. Vertical Step with divider.](#431-vertical-step-with-divider)
-        - [4.3.1.1. Vertical Step.](#4311-vertical-step)
-      - [4.3.2. Vertical Small Step with divider.](#432-vertical-small-step-with-divider)
-        - [4.3.2.1. Vertical Small Step.](#4321-vertical-small-step)
-        - [4.3.2.2. Vertical Small Step without description.](#4322-vertical-small-step-without-description)
-      - [4.3.3. Vertical Dot Step with divider.](#433-vertical-dot-step-with-divider)
-        - [4.3.3.1. Vertical Dot Step.](#4331-vertical-dot-step)
-        - [4.3.3.2. Vertical Dot Step without description.](#4332-vertical-dot-step-without-description)
-    - [4.4. Vertical States](#44-vertical-states)
-      - [4.4.1. Vertical Complete](#441-vertical-complete)
-        - [4.4.1.1. Vertical Complete Step with divider.](#4411-vertical-complete-step-with-divider)
-        - [4.4.1.2. Vertical Complete Step.](#4412-vertical-complete-step)
-        - [4.4.1.3. Vertical Small Complete Step with divider.](#4413-vertical-small-complete-step-with-divider)
-        - [4.4.1.4. Vertical Small Complete Step.](#4414-vertical-small-complete-step)
-        - [4.4.1.5. Vertical Small Complete Step without description.](#4415-vertical-small-complete-step-without-description)
-        - [4.4.1.6. Vertical Dot Complete Step with divider.](#4416-vertical-dot-complete-step-with-divider)
-        - [4.4.1.7. Vertical Dot Complete Step.](#4417-vertical-dot-complete-step)
-        - [4.4.1.8. Vertical Dot Complete Step without description.](#4418-vertical-dot-complete-step-without-description)
-      - [4.4.2. Vertical Error](#442-vertical-error)
-        - [4.4.2.1. Vertical Error Step with divider.](#4421-vertical-error-step-with-divider)
-        - [4.4.2.2. Vertical Error Step.](#4422-vertical-error-step)
-          - [4.4.2.2.1. Vertical Small Error Step with divider.](#44221-vertical-small-error-step-with-divider)
-          - [4.4.2.2.2. Vertical Small Error Step.](#44222-vertical-small-error-step)
-          - [4.4.2.2.3. Vertical Small Error Step without description.](#44223-vertical-small-error-step-without-description)
-          - [4.4.2.2.4. Vertical Dot Error Step with divider.](#44224-vertical-dot-error-step-with-divider)
-          - [4.4.2.2.5. Vertical Dot Error Step.](#44225-vertical-dot-error-step)
-          - [4.4.2.2.6. Vertical Dot Error Step without description.](#44226-vertical-dot-error-step-without-description)
-      - [4.4.3. Vertical Waiting](#443-vertical-waiting)
-        - [4.4.3.1. Vertical Waiting Step with divider.](#4431-vertical-waiting-step-with-divider)
-          - [4.4.3.1.1. Vertical Waiting Step.](#44311-vertical-waiting-step)
-          - [4.4.3.1.2. Vertical Small Waiting Step with divider.](#44312-vertical-small-waiting-step-with-divider)
-          - [4.4.3.1.3. Vertical Small Waiting Step.](#44313-vertical-small-waiting-step)
-          - [4.4.3.1.4. Vertical Small Waiting Step without description.](#44314-vertical-small-waiting-step-without-description)
-          - [4.4.3.1.5. Vertical Dot Waiting Step without divider.](#44315-vertical-dot-waiting-step-without-divider)
-          - [4.4.3.1.6. Vertical Dot Waiting Step.](#44316-vertical-dot-waiting-step)
-          - [4.4.3.1.7. Vertical Dot Waiting Step without description.](#44317-vertical-dot-waiting-step-without-description)
-
+      - [4.1.2. Default Step without divider.](#412-default-step-without-divider)
+    - [4.2. Small Step](#42-small-step)
+      - [4.2.1. Small Step with divider.](#421-small-step-with-divider)
+      - [4.2.2. Small Step without divider.](#422-small-step-without-divider)
+      - [4.2.3. Small Step without description.](#423-small-step-without-description)
+    - [4.3. Dot Step](#43-dot-step)
+      - [4.3.1. Dot Step with divider.](#431-dot-step-with-divider)
+      - [4.3.2. Dot Step without divider.](#432-dot-step-without-divider)
+      - [4.3.3. Dot Step without description.](#433-dot-step-without-description)
+    - [4.4. States](#44-states)
+      - [4.4.1. Complete](#441-complete)
+        - [4.4.1.1. Complete Step with divider.](#4411-complete-step-with-divider)
+        - [4.4.1.2. Complete Step.](#4412-complete-step)
+        - [4.4.1.3. Small Complete Step with divider.](#4413-small-complete-step-with-divider)
+        - [4.4.1.4. Small Complete Step.](#4414-small-complete-step)
+        - [4.4.1.5. Small Complete Step without description.](#4415-small-complete-step-without-description)
+        - [4.4.1.6. Dot Complete Step with divider.](#4416-dot-complete-step-with-divider)
+        - [4.4.1.7. Dot Complete Step.](#4417-dot-complete-step)
+        - [4.4.1.8. Dot Complete Step without description.](#4418-dot-complete-step-without-description)
+      - [4.4.2. Error](#442-error)
+        - [4.4.2.1. Error Step with divider.](#4421-error-step-with-divider)
+        - [4.4.2.2. Error Step.](#4422-error-step)
+          - [4.4.2.2.1. Small Error Step with divider.](#44221-small-error-step-with-divider)
+          - [4.4.2.2.2. Small Error Step.](#44222-small-error-step)
+          - [4.4.2.2.3. Small Error Step without description.](#44223-small-error-step-without-description)
+          - [4.4.2.2.4. Dot Error Step with divider.](#44224-dot-error-step-with-divider)
+          - [4.4.2.2.5. Dot Error Step.](#44225-dot-error-step)
+          - [4.4.2.2.6. Dot Error Step without description.](#44226-dot-error-step-without-description)
+      - [4.4.3. Waiting](#443-waiting)
+        - [4.4.3.1. Waiting Step with divider.](#4431-waiting-step-with-divider)
+          - [4.4.3.1.1. Waiting Step.](#44311-waiting-step)
+          - [4.4.3.1.2. Small Waiting Step with divider.](#44312-small-waiting-step-with-divider)
+          - [4.4.3.1.3. Small Waiting Step.](#44313-small-waiting-step)
+          - [4.4.3.1.4. Small Waiting Step without description.](#44314-small-waiting-step-without-description)
+          - [4.4.3.1.5. Dot Waiting Step without divider.](#44315-dot-waiting-step-without-divider)
+          - [4.4.3.1.6. Dot Waiting Step.](#44316-dot-waiting-step)
+          - [4.4.3.1.7. Dot Waiting Step without description.](#44317-dot-waiting-step-without-description)
+    - [4.5. Vertical](#45-vertical)
+      - [4.5.1. Vertical Step with divider.](#451-vertical-step-with-divider)
+        - [4.5.1.1. Vertical Step.](#4511-vertical-step)
+      - [4.5.2. Vertical Small Step with divider.](#452-vertical-small-step-with-divider)
+        - [4.5.2.1. Vertical Small Step.](#4521-vertical-small-step)
+        - [4.5.2.2. Vertical Small Step without description.](#4522-vertical-small-step-without-description)
+      - [4.5.3. Vertical Dot Step with divider.](#453-vertical-dot-step-with-divider)
+        - [4.5.3.1. Vertical Dot Step.](#4531-vertical-dot-step)
+        - [4.5.3.2. Vertical Dot Step without description.](#4532-vertical-dot-step-without-description)
+    - [4.6. Vertical States](#46-vertical-states)
+      - [4.6.1. Vertical Complete](#461-vertical-complete)
+        - [4.6.1.1. Vertical Complete Step with divider.](#4611-vertical-complete-step-with-divider)
+        - [4.6.1.2. Vertical Complete Step.](#4612-vertical-complete-step)
+        - [4.6.1.3. Vertical Small Complete Step with divider.](#4613-vertical-small-complete-step-with-divider)
+        - [4.6.1.4. Vertical Small Complete Step.](#4614-vertical-small-complete-step)
+        - [4.6.1.5. Vertical Small Complete Step without description.](#4615-vertical-small-complete-step-without-description)
+        - [4.6.1.6. Vertical Dot Complete Step with divider.](#4616-vertical-dot-complete-step-with-divider)
+        - [4.6.1.7. Vertical Dot Complete Step.](#4617-vertical-dot-complete-step)
+        - [4.6.1.8. Vertical Dot Complete Step without description.](#4618-vertical-dot-complete-step-without-description)
+      - [4.6.2. Vertical Error](#462-vertical-error)
+        - [4.6.2.1. Vertical Error Step with divider.](#4621-vertical-error-step-with-divider)
+        - [4.6.2.2. Vertical Error Step.](#4622-vertical-error-step)
+          - [4.6.2.2.1. Vertical Small Error Step with divider.](#46221-vertical-small-error-step-with-divider)
+          - [4.6.2.2.2. Vertical Small Error Step.](#46222-vertical-small-error-step)
+          - [4.6.2.2.3. Vertical Small Error Step without description.](#46223-vertical-small-error-step-without-description)
+          - [4.6.2.2.4. Vertical Dot Error Step with divider.](#46224-vertical-dot-error-step-with-divider)
+          - [4.6.2.2.5. Vertical Dot Error Step.](#46225-vertical-dot-error-step)
+          - [4.6.2.2.6. Vertical Dot Error Step without description.](#46226-vertical-dot-error-step-without-description)
+      - [4.6.3. Vertical Waiting](#463-vertical-waiting)
+        - [4.6.3.1. Vertical Waiting Step with divider.](#4631-vertical-waiting-step-with-divider)
+          - [4.6.3.1.1. Vertical Waiting Step.](#46311-vertical-waiting-step)
+          - [4.6.3.1.2. Vertical Small Waiting Step with divider.](#46312-vertical-small-waiting-step-with-divider)
+          - [4.6.3.1.3. Vertical Small Waiting Step.](#46313-vertical-small-waiting-step)
+          - [4.6.3.1.4. Vertical Small Waiting Step without description.](#46314-vertical-small-waiting-step-without-description)
+          - [4.6.3.1.5. Vertical Dot Waiting Step without divider.](#46315-vertical-dot-waiting-step-without-divider)
+          - [4.6.3.1.6. Vertical Dot Waiting Step.](#46316-vertical-dot-waiting-step)
+          - [4.6.3.1.7. Vertical Dot Waiting Step without description.](#46317-vertical-dot-waiting-step-without-description)
 ## Root component class name
 
 `hggs-step`
@@ -168,7 +172,7 @@
 </article>
 ```
 
-##### Default Step.
+#### Default Step without divider.
 ```html
 <article class="hggs-step">
   <div class="hggs-step-side">
@@ -184,6 +188,8 @@
   </section>
 </article>
 ```
+
+### Small Step
 
 #### Small Step with divider.
 
@@ -204,7 +210,7 @@
 </article>
 ```
 
-##### Small Step.
+#### Small Step without divider.
 
 ```html
 <article class="hggs-step hggs-step--small">
@@ -222,7 +228,7 @@
 </article>
 ```
 
-##### Small Step without description.
+#### Small Step without description.
 
 ```html
 <article class="hggs-step hggs-step--small hggs-step--no-description">
@@ -239,6 +245,8 @@
   </section>
 </article>
 ```
+
+### Dot Step
 
 #### Dot Step with divider.
 
@@ -257,7 +265,7 @@
 </article>
 ```
 
-##### Dot Step.
+#### Dot Step without divider.
 
 ```html
 <article class="hggs-step hggs-step--dot">
@@ -273,7 +281,7 @@
 </article>
 ```
 
-##### Dot Step without description.
+#### Dot Step without description.
 
 ```html
 <article class="hggs-step hggs-step--dot hggs-step--no-description">
