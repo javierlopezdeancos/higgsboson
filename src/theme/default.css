@@ -201,6 +201,9 @@
   --hggs-space-sm-default: calc(var(--hggs-space-default) / 2);
   --hggs-space-xs-default: calc(var(--hggs-space-default) / 4);
   --hggs-space-2xs-default: calc(var(--hggs-space-default) / 6);
+  --hggs-space-3xs-default: calc(var(--hggs-space-default) / 8);
+  --hggs-space-4xs-default: calc(var(--hggs-space-default) / 10);
+  --hggs-space-5xs-default: calc(var(--hggs-space-default) / 12);
 
   /* LAYERS */
   --hggs-layer-20-default: 20;
