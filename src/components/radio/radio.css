@@ -16,6 +16,7 @@
   position: relative;
 
   & input[type="radio"] {
+    accent-color: var(--radio-accent-color, var(--hggs-accent-color-default));
     position: absolute;
     width: var(--radio-size, var(--hggs-space-default));
     height: var(--radio-size, var(--hggs-space-default));
