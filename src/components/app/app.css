@@ -9,7 +9,7 @@
   background: var(--app-background, var(--hggs-color-background-default));
   color: var(--app-color, var(--hggs-color-default));
   padding: var(--app-padding, var(--hggs-space-md-default) var(--hggs-space-default));
-  font-size: var(--app-font-size, 1.5rem);
+  font-size: var(--app-font-size, var(--hggs-font-size-default));
   font-family: var(--hggs-font-family, var(--hggs-font-family-default));
 
   &.hggs-app--left {
