@@ -42,6 +42,9 @@
   --hggs-color-senary-default: var(--hggs-color-gray-011-default);
   --hggs-color-senary-hover-default: var(--hggs-color-tertiary-default);
 
+  /* Accent colors */
+  --hggs-accent-color-default: var(--hggs-color-primary-default);
+
   /* Filters colors */
   --hggs-filter-gray-008-default:
     brightness(0) saturate(100%) invert(8%) sepia(18%) saturate(1214%) hue-rotate(194deg)

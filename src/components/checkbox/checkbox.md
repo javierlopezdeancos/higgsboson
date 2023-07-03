@@ -19,11 +19,7 @@
 ## Component variables
 
 ```
---checkbox-label-color
---checkbox-label-font-family
---checkbox-label-font-size
---checkbox-label-font-style
---checkbox-label-font-weight
+--checkbox-accent-color
 --checkbox-background
 --checkbox-border
 --checkbox-border-radius
@@ -39,6 +35,11 @@
 --checkbox-ckeck-icon-transform-before
 --checkbox-ckeck-icon-width-after
 --checkbox-ckeck-icon-width-before
+--checkbox-label-color
+--checkbox-label-font-family
+--checkbox-label-font-size
+--checkbox-label-font-style
+--checkbox-label-font-weight
 --checkbox-margin-left
 --checkbox-outline-focus
 --checkbox-size
