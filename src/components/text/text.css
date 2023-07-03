@@ -28,7 +28,7 @@
     text-align: var(--text-text-align-right, right);
   }
 
-  &.hgss-text--balance {
+  &.hggs-text--balance {
      text-wrap: balance;
   }
 }
