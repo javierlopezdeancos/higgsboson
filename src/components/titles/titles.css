@@ -6,6 +6,11 @@
 .hggs-h6 {
   color: var(--title-color, var(--hggs-color-default));
   font-family: var(--title-font-family, var(--hggs-font-family-default));
+  text-wrap: balance;
+
+  &.hggs-title--no-balance {
+    text-wrap: initial;
+  }
 }
 
 .hggs-h1 {
