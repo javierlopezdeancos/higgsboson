@@ -98,4 +98,108 @@ data = {
       label: "This is an h6 title",
     },
   ],
+  unbalanced: [
+    {
+      titles: {
+        title: "hggs-h1 hggs-title--unbalanced",
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
+      },
+      classes: {
+        title: ["hggs-h1", "hggs-title--unbalanced"],
+      },
+      label:
+        "Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe.",
+    },
+    {
+      titles: {
+        title: "hggs-h2 hggs-title--unbalanced",
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
+      },
+      classes: {
+        title: ["hggs-h2", "hggs-title--unbalanced"],
+      },
+      label:
+        "Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe.",
+    },
+    {
+      titles: {
+        title: "hggs-h3 hggs-title--unbalanced",
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
+      },
+      classes: {
+        title: ["hggs-h3", "hggs-title--unbalanced"],
+      },
+      label:
+        "Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe.",
+    },
+    {
+      titles: {
+        title: "hggs-h4 hggs-title--unbalanced",
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
+      },
+      classes: {
+        title: ["hggs-h4", "hggs-title--unbalanced"],
+      },
+      label:
+        "Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe.",
+    },
+    {
+      titles: {
+        title: "hggs-h5 hggs-title--unbalanced",
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
+      },
+      classes: {
+        title: ["hggs-h5", "hggs-title--unbalanced"],
+      },
+      label:
+        "Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe.",
+    },
+    {
+      titles: {
+        title: "hggs-h6 hggs-title--unbalanced",
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+        titles: {
+          title: titleStyles,
+        },
+      },
+      classes: {
+        title: ["hggs-h6", "hggs-title--unbalanced"],
+      },
+      label:
+        "Chanante ipsum dolor sit amet, soooy crossoverr nisi forrondosco dolore ahí va qué chorrazo chotera eveniet atiendee. Chachachá ut a tope con la maquinaria, zagal gambitero ea sed enratonao pepinoninoni saepe.",
+    },
+  ],
 };

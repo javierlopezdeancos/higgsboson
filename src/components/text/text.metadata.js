@@ -73,5 +73,17 @@ const data = {
         article: articleStyles,
       },
     },
+    {
+      titles: {
+        text: "hggs-text hggs-text--balanced",
+      },
+      classes: {
+        text: ["hggs-text", "hggs-text--balanced"],
+      },
+      styles: {
+        header: headerStyles,
+        article: articleStyles,
+      },
+    },
   ],
 };

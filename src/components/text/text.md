@@ -88,3 +88,12 @@
   sapien eget turpis lobortis rutrum.
 </p>
 ```
+
+#### Basic HTML structure with `balanced` modifier
+
+```html
+<p class="hggs-text hggs-text--balanced">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod
+  sapien eget turpis lobortis rutrum.
+</p>
+```
