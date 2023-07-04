@@ -8,7 +8,7 @@
   font-family: var(--title-font-family, var(--hggs-font-family-default));
   text-wrap: balance;
 
-  &.hggs-title--no-balance {
+  &.hggs-title--unbalanced {
     text-wrap: initial;
   }
 }
