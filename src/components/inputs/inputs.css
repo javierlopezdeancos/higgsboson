@@ -5,7 +5,7 @@
   border-radius: var(--input-border-radius, var(--hggs-border-radius-default));
   padding: var(--input-padding, var(--hggs-space-sm-default) var(--hggs-space-sm-default));
   font-family: var(--input-font-family, var(--hggs-font-family-default));
-  font-size: var(--input-font-size, var(--hggs-font-size-lg-default));
+  font-size: var(--input-font-size, var(--hggs-font-size-default));
   color: var(--input-color, var(--hggs-color-default));
   box-sizing: border-box;
   background: transparent;
@@ -19,7 +19,7 @@
   &.hggs-input--small {
     height: var(--input-height-small, var(--hggs-space-default));
     padding: var(--input-padding-small, var(--hggs-space-2xs-default) var(--hggs-space-sm-default));
-    font-size: var(--input-font-size-small, var(--hggs-font-size-default));
+    font-size: var(--input-font-size-small, var(--hggs-font-size-2xs-default));
   }
 
   &::placeholder {
