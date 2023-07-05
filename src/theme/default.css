@@ -92,17 +92,18 @@
   --hggs-font-color-002-default: var(--hggs-color-gray-010-default);
 
   /* Font sizes */
-  --hggs-font-size-5xl-default: 38px;
-  --hggs-font-size-4xl-default: 32px;
-  --hggs-font-size-3xl-default: 28px;
-  --hggs-font-size-2xl-default: 24px;
-  --hggs-font-size-xl-default: 22px;
-  --hggs-font-size-lg-default: 20px;
-  --hggs-font-size-md-default: 18px;
-  --hggs-font-size-default: 16px;
-  --hggs-font-size-sm-default: 14px;
-  --hggs-font-size-xs-default: 12px;
-  --hggs-font-size-2xs-default: 10px;
+  --hggs-font-size-root-default: clamp(2.89rem, calc(2.77rem + 0.56vw), 3.21rem);
+  --hggs-font-size-5xl-default: clamp(2.57rem, calc(2.47rem + 0.50vw), 2.85rem);
+  --hggs-font-size-4xl-default: clamp(2.28rem, calc(2.19rem + 0.44vw), 2.53rem);
+  --hggs-font-size-3xl-default: clamp(2.03rem, calc(1.95rem + 0.39vw), 2.25rem);
+  --hggs-font-size-2xl-default: clamp(1.80rem, calc(1.73rem + 0.35vw), 2.00rem);
+  --hggs-font-size-xl-default: clamp(1.60rem, calc(1.54rem + 0.31vw), 1.78rem);
+  --hggs-font-size-lg-default:  clamp(1.42rem, calc(1.37rem + 0.27vw), 1.58rem);
+  --hggs-font-size-md-default: clamp(1.27rem, calc(1.22rem + 0.24vw), 1.41rem);
+  --hggs-font-size-default: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --hggs-font-size-sm-default: clamp(1.00rem, calc(0.96rem + 0.19vw), 1.11rem);
+  --hggs-font-size-xs-default: clamp(0.89rem, calc(0.85rem + 0.17vw), 0.99rem);
+  --hggs-font-size-2xs-default: clamp(0.79rem, calc(0.76rem + 0.15vw), 0.88rem);
 
   /* Font weights */
   --hggs-font-weight-default: 400;
@@ -115,9 +116,9 @@
   --hggs-font-letter-spacing-sm-default: 0.6px;
 
   /* Font line heights */
-  --hggs-line-height-default: 20px;
-  --hggs-line-height-sm-default: 15px;
-  --hggs-line-height-xs-default: 10px;
+  --hggs-line-height-default: 28px;
+  --hggs-line-height-sm-default: 25px;
+  --hggs-line-height-xs-default: 22px;
 
   /* BORDERS */
   --hggs-border-radius-md-default: 0;
