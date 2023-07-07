@@ -35,7 +35,7 @@
     "postcss-nesting": "^10.2.0",
     "postcss-preset-env": "^7.8.3",
     "postcss-reporter": "^7.0.5",
-    "stylelint": "^15.6.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^33.0.0",
     "stylelint-use-nesting": "^4.0.0"
   }
