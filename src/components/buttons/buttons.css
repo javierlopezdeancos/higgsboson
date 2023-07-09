@@ -5,7 +5,7 @@
   margin:
     var(--button-margin-vertical, var(--hggs-space-default))
     var(--button-margin-horizontal, var(--hggs-space-xs-default));
-  font-size: var(--button-font-size-medium, var(--hggs-font-size-lg-default));
+  font-size: var(--button-font-size-medium, var(--hggs-font-size-default));
   font-family: var(--button-font-family, var(--hggs-font-family));
   font-weight: var(--button-font-weight, var(--hggs-font-weight-default));
   color: var(--button-color, var(--hggs-color-quinary-default));
@@ -308,11 +308,11 @@
 
   &.hggs-button--medium {
     padding: var(--button-padding-medium, calc(var(--hggs-space-default) / 1.3) var(--hggs-space-md-default));
-    font-size: var(--button-font-size-medium, var(--hggs-font-size-xl-default));
+    font-size: var(--button-font-size-medium, var(--hggs-font-size-lg-default));
   }
 
   &.hggs-button--small:not(.hggs-button--circle, .hggs-button--square) {
     padding: var(--button-padding-small, var(--hggs-space-xs-default) var(--hggs-space-sm-default));
-    font-size: var(--button-font-size-small, var(--hggs-font-size-sm-default));
+    font-size: var(--button-font-size-small, var(--hggs-font-size-xs-default));
   }
 }

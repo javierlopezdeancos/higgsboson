@@ -13,7 +13,7 @@
   justify-content: flex-start;
   width: 100%;
   position: relative;
-  accent-color: var(--checkbox-accent-color, var(--hggs-accent-color-default));
+  accent-color: var(--checkbox-accent-color, var(--hggs-color-accent-default));
 
   & input[type="checkbox"] {
     appearance: none;
