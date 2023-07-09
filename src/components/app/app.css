@@ -1,3 +1,5 @@
+/* stylelint-disable selector-type-no-unknown */
+
 .hggs-app {
   display: flex;
   flex-direction: column;
@@ -14,6 +16,10 @@
 
   &.hggs-app--left {
     align-items: flex-start;
+  }
+
+  &.hggs-app--transition {
+    view-transition-name: app;
   }
 
   /* TODO: Extract all of this into a container component */
@@ -39,5 +45,27 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+  }
+}
+
+/* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+::view-transition-old(app) {
+  animation: fade 0.2s linear forwards;
+}
+
+/* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+::view-transition-new(app) {
+  animation: fade 0.3s linear reverse;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
   }
 }
