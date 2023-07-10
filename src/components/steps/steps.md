@@ -34,11 +34,11 @@
       - [Vertical Dot Steps with description and no divider](#vertical-dot-steps-with-description-and-no-divider)
       - [Vertical Dot Steps with no divider and no description](#vertical-dot-steps-with-no-divider-and-no-description)
 
-## 1. Root component class name
+## Root component class name
 
 `hggs-steps`
 
-## 2. Theme selector
+## Theme selector
 
 ```css
 .hggs-steps {
@@ -48,17 +48,17 @@
 }
 ```
 
-## 3. Component variables
+## Component variables
 
 ```
 --steps-gap
 ```
 
-## 4. HTML Structure
+## HTML Structure
 
-### 4.1. Default
+### Default
 
-#### 4.1.1. Default steps with divider
+#### Default steps with divider
 
 ```html
 <ul class="hggs-steps">
@@ -161,7 +161,7 @@
 </ul>
 ```
 
-#### 4.1.2. Default steps with divider and no description
+#### Default steps with divider and no description
 
 ```html
 <ul class="hggs-steps">
@@ -249,9 +249,9 @@
 </ul>
 ```
 
-### 4.2. Small Steps
+### Small Steps
 
-#### 4.2.1. Small Steps with divider
+#### Small Steps with divider
 
 ```html
 <ul class="hggs-steps">
@@ -354,7 +354,7 @@
 </ul>
 ```
 
-#### 4.2.2. Small Steps with divider and no description
+#### Small Steps with divider and no description
 
 ```html
 <ul class="hggs-steps">
@@ -442,9 +442,9 @@
 </ul>
 ```
 
-### 4.3. Dot Steps
+### Dot Steps
 
-#### 4.3.1. Dot Steps with divider
+#### Dot Steps with divider
 
 ```html
 <ul class="hggs-steps">
@@ -523,7 +523,7 @@
 </ul>
 ```
 
-#### 4.3.2. Dot Steps with divider and no description
+#### Dot Steps with divider and no description
 
 ```html
 <ul class="hggs-steps">
@@ -602,9 +602,9 @@
 </ul>
 ```
 
-### 4.4. Vertical Default
+### Vertical Default
 
-#### 4.4.1. Vertical Steps with divider
+#### Vertical Steps with divider
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -689,7 +689,7 @@
 </ul>
 ```
 
-#### 4.4.2. Vertical Steps with divider and no description
+#### Vertical Steps with divider and no description
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -785,10 +785,7 @@
 </ul>
 ```
 
-
-
-
-#### 4.4.3 Vertical Steps with description and no divider
+#### Vertical Steps with description and no divider
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -884,7 +881,7 @@
 </ul>
 ```
 
-#### 4.4.4 Vertical Steps with no description and no divider
+#### Vertical Steps with no description and no divider
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -980,9 +977,9 @@
 </ul>
 ```
 
-### 4.5. Vertical Small
+### Vertical Small
 
-#### 4.5.1. Vertical Small Steps with divider
+#### Vertical Small Steps with divider
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -1078,7 +1075,7 @@
 </ul>
 ```
 
-#### 4.5.2. Vertical Small Steps with divider and no description
+#### Vertical Small Steps with divider and no description
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -1174,7 +1171,7 @@
 </ul>
 ```
 
-#### 4.5.3. Vertical Small Steps with description and no divider
+#### Vertical Small Steps with description and no divider
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -1266,7 +1263,7 @@
 </ul>
 ```
 
-#### 4.5.4. Vertical Small Steps with no description and no divider
+#### Vertical Small Steps with no description and no divider
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -1358,9 +1355,9 @@
 </ul>
 ```
 
-### 4.6. Vertical Dot
+### Vertical Dot
 
-#### 4.6.1. Vertical Dot Steps with divider
+#### Vertical Dot Steps with divider
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -1456,7 +1453,7 @@
 </ul>
 ```
 
-#### 4.6.2. Vertical Dot Steps with divider and no description
+#### Vertical Dot Steps with divider and no description
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -1537,7 +1534,7 @@
 </ul>
 ```
 
-#### 4.6.3. Vertical Dot Steps with description and no divider
+#### Vertical Dot Steps with description and no divider
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
@@ -1633,7 +1630,7 @@
 </ul>
 ```
 
-#### 4.6.4. Vertical Dot Steps with no divider and no description
+#### Vertical Dot Steps with no divider and no description
 
 ```html
 <ul class="hggs-steps hggs-steps--vertical">
