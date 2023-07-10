@@ -198,6 +198,7 @@
 
   /* SPACES */
   --hggs-space-default: clamp(0.75rem, 4vw - 1rem, 1.5rem);
+  --hggs-space-xl-default: calc(var(--hggs-space-default) * 6);
   --hggs-space-lg-default: calc(var(--hggs-space-default) * 4);
   --hggs-space-md-default: calc(var(--hggs-space-default) * 2);
   --hggs-space-sm-default: calc(var(--hggs-space-default) / 2);

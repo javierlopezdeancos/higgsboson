@@ -1,0 +1,22 @@
+.hggs-avatar {
+  & .hggs-avatar-image {
+    width: var(--avatar-image-size, var(--hggs-space-lg-default));
+    height: var(--avatar-image-size, var(--hggs-space-lg-default));
+    border-radius:var(--avatar-image-border-radius, 50%);
+  }
+
+  &.hggs-avatar--big {
+    & .hggs-avatar-image {
+      width: var(--avatar-image-size-big, var(--hggs-space-xl-default));
+      height: var(--avatar-image-size-big, var(--hggs-space-xl-default));
+    }
+  }
+
+  &.hggs-avatar--small {
+    & .hggs-avatar-image {
+      width: var(--avatar-image-size-small, var(--hggs-space-md-default));
+      height: var(--avatar-image-size-small, var(--hggs-space-md-default));
+    }
+  }
+}
+

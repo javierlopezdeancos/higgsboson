@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  background: var(--resets-body-color-background, var(--hggs-color-background-default));
 }
 
 * {
