@@ -101,7 +101,7 @@ All available core components defined from their selectors, properties and value
   - [Radio](/src/components/radio/radio.md)
   - [Select](/src/components/select/select.md)
   - [Step](/src/components/step/step.md)
-  - [Steps](/src/components/step/steps.md)
+  - [Steps](/src/components/steps/steps.md)
   - [Switch](/src/components/switch/switch.md)
   - [Table](/src/components/table/table.md)
   - [Tag](/src/components/tag/tag.md)
