@@ -92,6 +92,7 @@
 --button-font-family
 --button-font-letter-spacing
 --button-font-size
+--button-font-size-big
 --button-font-size-medium
 --button-font-size-small
 --button-font-weight

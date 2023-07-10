@@ -303,7 +303,7 @@
 
   &.hggs-button--big {
     padding: var(--button-padding-big, calc(var(--hggs-space-default) * 1.5) var(--hggs-space-lg-default));
-    font-size: var(--button-font-size-extra-medium, var(--hggs-font-size-2xl-default));
+    font-size: var(--button-font-size-big, var(--hggs-font-size-2xl-default));
   }
 
   &.hggs-button--medium {
