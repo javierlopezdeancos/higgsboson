@@ -1,5 +1,5 @@
-[Home ](../../../Readme.md)
-[ > Componentes ](../../../Readme.md#components)
+[Home ](../../../README.md) >
+[ Componentes ](../../../README.md#components)
 
 # Avatar
 

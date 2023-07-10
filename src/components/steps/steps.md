@@ -1,6 +1,6 @@
 
-[Home ](../../../Readme)
-[ > Componentes ](../../../Readme#components)
+[Home ](../../../README.md)
+[ > Componentes ](../../../README.md#components)
 
 # Steps
 
