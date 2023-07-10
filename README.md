@@ -81,6 +81,7 @@ Higgsboson
 All available core components defined from their selectors, properties and values in the form of variables connected to the theme variables or own variables for this component.
 
  - Components docs
+  - [Avatar](/src/components/avatar/avatar.md)
   - [Box](/src/components/box/box.md)
   - [Button](/src/components/buttons/buttons.md)
   - [Checkbox](/src/components/checkbox/checkbox.md)
