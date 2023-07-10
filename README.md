@@ -32,39 +32,39 @@ Now, I know that we have multiple techniques and tools in the ecosystem to solve
 ## Summary
 
 - [Higgsboson](#higgsboson)
-  - [1. What is next](#1-what-is-next)
-  - [2. Why Higgsboson?](#2-why-higgsboson)
-  - [3. Summary](#3-summary)
-  - [4. Structure](#4-structure)
-    - [4.1. Components](#41-components)
-      - [4.1.1. Component files structure](#411-component-files-structure)
-        - [4.1.1.1. componentA.css](#4111-componentacss)
-        - [4.1.1.2. componentA.html](#4112-componentahtml)
-        - [4.1.1.3. componentA.md](#4113-componentamd)
-        - [4.1.1.4. componentA.metadata.js](#4114-componentametadatajs)
-    - [4.2. Helpers](#42-helpers)
-    - [4.3. Theme](#43-theme)
-      - [4.3.1. Theme folder file structure](#431-theme-folder-file-structure)
-      - [4.3.2. assets](#432-assets)
-      - [4.3.3. default](#433-default)
-        - [4.3.3.1. Default theme](#4331-default-theme)
-          - [4.3.3.1.1. Default theme variables API naming](#43311-default-theme-variables-api-naming)
-          - [4.3.3.1.2. Default theme variables API](#43312-default-theme-variables-api)
-      - [4.3.4. Custom theme](#434-custom-theme)
-        - [4.3.4.1. Custom theme folder file structure](#4341-custom-theme-folder-file-structure)
-        - [4.3.4.2. Technical considerations](#4342-technical-considerations)
-  - [5. How to use](#5-how-to-use)
-    - [5.1. Install](#51-install)
-    - [5.2. Build](#52-build)
-      - [5.2.1. Plugins that we are using in the build process](#521-plugins-that-we-are-using-in-the-build-process)
-    - [5.3. Development](#53-development)
-    - [5.4. Lint](#54-lint)
-    - [5.5. Format](#55-format)
-    - [5.6. Pre-push](#56-pre-push)
-      - [5.6.1. Usage](#561-usage)
-  - [6. Tools that could help you to develop in this project](#6-tools-that-could-help-you-to-develop-in-this-project)
-    - [6.1. Visual Studio Code IDE](#61-visual-studio-code-ide)
-      - [6.1.1. Visual Studio Code useful Extensions](#611-visual-studio-code-useful-extensions)
+  - [What is next](#what-is-next)
+  - [Why Higgsboson?](#why-higgsboson)
+  - [Summary](#summary)
+  - [Structure](#structure)
+    - [Components](#components)
+      - [Components docs](#components-docs)
+      - [Component files structure](#component-files-structure)
+        - [componentA.css](#componentacss)
+        - [componentA.html](#componentahtml)
+        - [componentA.md](#componentamd)
+        - [componentA.metadata.js](#componentametadatajs)
+    - [Helpers](#helpers)
+    - [Theme](#theme)
+      - [Theme folder file structure](#theme-folder-file-structure)
+      - [assets](#assets)
+      - [default](#default)
+        - [Default theme](#default-theme)
+          - [Default theme variables API naming](#default-theme-variables-api-naming)
+      - [Custom theme](#custom-theme)
+        - [Custom theme folder file structure](#custom-theme-folder-file-structure)
+        - [Technical considerations](#technical-considerations)
+  - [How to use](#how-to-use)
+    - [Install](#install)
+    - [Build](#build)
+      - [Plugins that we are using in the build process](#plugins-that-we-are-using-in-the-build-process)
+    - [Development](#development)
+    - [Lint](#lint)
+    - [Format](#format)
+    - [Pre-push](#pre-push)
+      - [Usage](#usage)
+  - [Tools that could help you to develop in this project](#tools-that-could-help-you-to-develop-in-this-project)
+    - [Visual Studio Code IDE](#visual-studio-code-ide)
+      - [Visual Studio Code useful Extensions](#visual-studio-code-useful-extensions)
 
 ## Structure
 
@@ -80,7 +80,7 @@ Higgsboson
 
 All available core components defined from their selectors, properties and values in the form of variables connected to the theme variables or own variables for this component.
 
- - Components docs
+#### Components docs
   - [Avatar](/src/components/avatar/avatar.md)
   - [Box](/src/components/box/box.md)
   - [Button](/src/components/buttons/buttons.md)
@@ -181,197 +181,6 @@ Default theme API. Theme default variables as fallback to each theme component A
                   │
               modifier
 ```
-
-###### Default theme variables API
-
-```
-/* COLORS */
-/* Generic colors */
---hggs-color-white-default
---hggs-color-black-default
-
-/* Gray colors */
---hggs-color-gray-001-default
---hggs-color-gray-002-default
---hggs-color-gray-003-default
---hggs-color-gray-004-default
---hggs-color-gray-005-default
---hggs-color-gray-006-default
---hggs-color-gray-007-default
---hggs-color-gray-008-default
---hggs-color-gray-009-default
---hggs-color-gray-010-default
---hggs-color-gray-011-default
---hggs-color-gray-012-default
---hggs-color-gray-013-default
---hggs-color-gray-014-default
---hggs-color-gray-015-default
---hggs-color-gray-016-default
---hggs-color-gray-017-default
---hggs-color-gray-018-default
---hggs-color-gray-019-default
---hggs-color-gray-020-default
-
---hggs-filter-gray-008-default
-
-/* Main colors */
---hggs-color-primary-default
---hggs-color-primary-hover-default
---hggs-color-secondary-default
---hggs-color-secondary-hover-default
---hggs-color-tertiary-default
---hggs-color-tertiary-hover-default
---hggs-color-quaternary-default
---hggs-color-quaternary-hover-default
---hggs-color-quinary-default
---hggs-color-quinary-hover-default
---hggs-color-senary-default
---hggs-color-senary-hover-default
-
---hggs-filter-primary-default
---hggs-filter-secondary-default
---hggs-filter-tertiary-default
---hggs-filter-quaternary-default
---hggs-filter-quinary-default
---hggs-filter-senary-default
---hggs-filter-default
-
-/* General colors */
---hggs-color-default
---hggs-color-error-default
---hggs-color-disabled-default
---hggs-color-background-default
---hggs-color-background-hover-default
-
-/* SHADOWS */
---hggs-shadow-default
---hggs-shadow-primary-default
-
-/* FONT */
-/* Font families */
---hggs-font-family-default
-
-/* Font colors */
---hggs-font-color
-
-/* Font sizes */
---hggs-font-size-5xl-default
---hggs-font-size-4xl-default
---hggs-font-size-3xl-default
---hggs-font-size-2xl-default
---hggs-font-size-xl-default
---hggs-font-size-lg-default
---hggs-font-size-md-default
---hggs-font-size-default
---hggs-font-size-sm-default
---hggs-font-size-xs-default
---hggs-font-size-2xs-default
-
-/* Font weights */
---hggs-font-weight-default
---hggs-font-weight-md-default
---hggs-font-weight-lg-default
---hggs-font-weight-xl-default
-
-/* Font letter spacings */
---hggs-font-letter-spacing-default
---hggs-font-letter-spacing-sm-default
-
-/* Font line heights */
---hggs-line-height-default
---hggs-line-height-sm-default
---hggs-line-height-xs-default
-
-/* BORDERS */
---hggs-border-radius-big-default
---hggs-border-radius-default
---hggs-border-size-default
---hggs-border-size-lg-default
---hggs-border-size-lg-default
---hggs-border-size-xl-default
---hggs-border-type-default
---hggs-border-color-default
---hggs-color-border-primary-default:
---hggs-color-border-secondary-default
---hggs-color-border-tertiary-default
---hggs-color-border-quaternary-default
---hggs-color-border-quinary-default
---hggs-color-border-senary-default
---hggs-border-default
---hggs-border-error-default
---hggs-border-auxiliary-gray-006-default
---hggs-border-auxiliary-gray-008-default
---hggs-border-auxiliary-gray-009-default
---hggs-border-auxiliary-gray-010-default
---hggs-border-auxiliary-gray-012-default
---hggs-border-auxiliary-gray-013-default
---hggs-border-auxiliary-gray-015-default
---hggs-border-primary-default
---hggs-border-primary-big-default
---hggs-border-secondary-default
---hggs-border-secondary-gross-default
---hggs-border-tertiary-default
---hggs-border-quaternary-default
---hggs-border-quaternary-xl-default
---hggs-border-quinary-default
---hggs-border-senary-default
---hggs-border-focus-default
---hggs-border-disabled-default
---hggs-border-invalid-default
-
-/* SPACES */
-/* Horizontal */
---hggs-space-default
---hggs-space-lg-default
---hggs-space-md-default
---hggs-space-sm-default
---hggs-space-xs-default
---hggs-space-2xs-default
-
-/* Vertical */
---hggs-space-default
---hggs-space-lg-default
---hggs-space-md-default
---hggs-space-sm-default
---hggs-space-xs-default
---hggs-space-2xs-default
-
-/* LAYERS */
---hggs-layer-10-default
---hggs-layer-0-default
-
-/* ANIMATIONS */
---hggs-animation-ease-default
---hggs-animation-ease-all-default
-
-/* TRANSFORMS */
---hggs-transform-escale-default
---hggs-transform-escale-small-default
---hggs-transform-rotate-translate-default
-
-/* TRANSITIONS */
---hggs-transition-ease-default
-
-/* ICONS */
---hggs-icon-size-micro-default
---hggs-icon-size-small-default
---hggs-icon-size-default
---hggs-icon-chevron-down-default
---hggs-icon-close-default
---hggs-icon-edit-default
---hggs-icon-hamburger-menu-default
---hggs-icon-log-out-default
---hggs-icon-plus-default
---hggs-icon-question-default
---hggs-icon-user-default
-
-/* LOGO */
---hggs-logo-default
---hggs-logo-dark-default
---hggs-logo-light-default
-```
-
-The default theme not need any custom rule scoped by selector to any component.
 
 #### Custom theme
 
