@@ -1,0 +1,17 @@
+.hggs-avatars {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--avatars-gap, var(--hggs-space-default));
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  & .hggs-avatars-item {
+    display: block;
+  }
+
+  & .hggs-avatar {
+    margin: 0;
+  }
+}

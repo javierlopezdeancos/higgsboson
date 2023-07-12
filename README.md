@@ -82,6 +82,7 @@ All available core components defined from their selectors, properties and value
 
 #### Components docs
   - [Avatar](/src/components/avatar/avatar.md)
+  - [Avatars](/src/components/avatar/avatars.md)
   - [Box](/src/components/box/box.md)
   - [Button](/src/components/buttons/buttons.md)
   - [Checkbox](/src/components/checkbox/checkbox.md)
