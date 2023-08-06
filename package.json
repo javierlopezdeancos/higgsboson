@@ -9,6 +9,9 @@
   },
   "description": "Css classes to style native components.",
   "main": "dist/higgsboson.min.css",
+  "workspaces": [
+    "./themes/*"
+  ],
   "scripts": {
     "build": "cross-env NODE_ENV=production npx postcss ./src/theme/index.css --config ./postcss.config.js --output ./dist/higgsboson.min.css",
     "build:watch": "npx postcss ./src/theme/index.css --config ./postcss.config.js --output ./dist/higgsboson.css --verbose --watch",
