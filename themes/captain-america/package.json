@@ -1,0 +1,12 @@
+{
+  "name": "@higgsboson/theme-captain-america",
+  "version": "0.1.0",
+  "license": "gpl-3.0",
+  "author": {
+    "name": "Javier Lopez de Ancos",
+    "email": "javierlopezdeancos@outlook.com",
+    "url": "https://javierlopezdeancos.dev/"
+  },
+  "description": "Captain America theme to higgsboson css framework.",
+  "main": "src/index.css"
+}
