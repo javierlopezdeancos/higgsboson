@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Higgsboson css framework</title>
-    <!-- Add here css theme bundle to serve -->
-    <link rel="stylesheet" type="text/css" href="packages/core/dist/higgsboson-core.css" />
+    <link rel="stylesheet" type="text/css" href="dist/higgsboson-theme-captain-america.css" />
   </head>
 
   <body>
@@ -18,17 +17,8 @@
         </section>
       </header>
       <main>
-        <h3 class="hggs-h3">Packages</h3>
-        <ul class="hggs-list">
-          <li class="hggs-list-item">
-            <a href="./packages/core/index.html">Default theme</a>
-          </li>
-          <li class="hggs-list-item">
-            <a href="./packages/themes/captain-america/index.html">Captain america</a>
-          </li>
-          <li class="hggs-list-item">
-            <a href="/packages/themes/caramel/index.html">Caramel</a>
-          </li>
+        <h3 class="hggs-h3">Components</h3>
+        <ul  id="components-menu" class="hggs-list">
         </ul>
       </main>
       <footer>
@@ -36,4 +26,5 @@
       </footer>
     </div>
   </body>
+  <script type="text/javascript" src="addComponentsMenu.js"></script>
 </html>

@@ -1,0 +1,7 @@
+{
+  "port": 8001,
+  "files": ["./**/*.{html,htm,css, svg}", "../../../scripts/addComponentsMenu.js"],
+  "server": {
+    "baseDir": "./"
+  }
+}

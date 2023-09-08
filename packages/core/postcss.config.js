@@ -7,6 +7,14 @@ const copyAssets = require("postcss-copy-assets");
 const minify = require("cssnano");
 const reporter = require("postcss-reporter");
 
+function pathTransform(newPath) {
+  const newPathSlots = newPath.split("/");
+  const newPathSlotsWithoutDefaultThemeSlot = newPathSlots.filter((s) => s !== "default-theme");
+  const newPathWithoutDefaultThemeSlot = newPathSlotsWithoutDefaultThemeSlot.join("/");
+
+  return newPathWithoutDefaultThemeSlot;
+}
+
 module.exports = (ctx) => ({
   map: ctx.options.map,
   parser: ctx.options.parser,
@@ -20,7 +28,8 @@ module.exports = (ctx) => ({
           presetEnv(),
           atImport(),
           copyAssets({
-            base: "dist",
+            base: "./dist",
+            pathTransform,
           }),
           nesting({ noIsPseudoSelector: true }),
           autoprefixer(),
@@ -35,7 +44,8 @@ module.exports = (ctx) => ({
           presetEnv(),
           atImport(),
           copyAssets({
-            base: "dist",
+            base: "./dist",
+            pathTransform,
           }),
           nesting({ noIsPseudoSelector: true }),
           autoprefixer(),

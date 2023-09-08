@@ -1,0 +1,14 @@
+{
+  "name": "@higgsboson/utils",
+  "version": "0.1.0",
+  "license": "gpl-3.0",
+  "author": {
+    "name": "Javier Lopez de Ancos",
+    "email": "javierlopezdeancos@outlook.com",
+    "url": "https://javierlopezdeancos.dev/"
+  },
+  "description": "Higgsboson scripts utils tu run across packages.",
+  "main": "src/index.mj.js",
+  "config": {},
+  "scripts": {}
+}
