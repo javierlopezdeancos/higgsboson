@@ -22,7 +22,7 @@ import {
 } from "./devPlaygroundStyles.mjs";
 import { iconsClasses, iconSizesClases } from "./devPlaygroundClasses.mjs";
 
-function addGlobalHelpers() {
+function setGlobalHelpers() {
   const articleQuinaryStyles = getArticleQuinaryStyles(isDarkTheme);
   const inlineMarginLeftWrapQuinaryStyles = getInlineMarginLeftWrapQuinaryStyles(isDarkTheme);
   const wrapperQuinaryStyles = getWrapperQuinaryStyles(isDarkTheme);
@@ -55,4 +55,4 @@ function addGlobalHelpers() {
   setGlobal("wrapperQuinaryStyles", wrapperQuinaryStyles);
 }
 
-export default addGlobalHelpers;
+export default setGlobalHelpers;

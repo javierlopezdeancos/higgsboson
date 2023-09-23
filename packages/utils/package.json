@@ -8,7 +8,7 @@
     "url": "https://javierlopezdeancos.dev/"
   },
   "description": "Higgsboson scripts utils tu run across packages.",
-  "main": "src/index.mj.js",
+  "main": "src/index.mjs",
   "config": {},
   "scripts": {}
 }

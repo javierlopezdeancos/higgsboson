@@ -18,7 +18,12 @@
     "deps:update": "npx npm-check-updates -u",
     "deps:check": "npx depcheck",
     "deps:remove": "npx npkill",
-    "dev:default": "npm run dev --workspace packages/core"
+    "dev:core:default": "npm run dev --workspace packages/core",
+    "dev:core:captain-america": "concurrently \"build:core:default\" \"npm run dev --workspace packages/themes/captain-america\"",
+    "dev:core:caramel": "concurrently \"build:core:default\" \"npm run dev --workspace packages/themes/caramel\"",
+    "build:core:default": "npm run build --workspace packages/core",
+    "build:core:captain-america": "concurrently \"build:core:default\" \"npm run build --workspace packages/themes/captain-america\"",
+    "build:core:caramel": "concurrently \"build:core:default\" \"npm run build --workspace packages/themes/caramel\""
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
