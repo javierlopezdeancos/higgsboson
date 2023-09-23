@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-icon</title>
-    <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
-    <script type="text/javascript" src="../../helpers/dom.js"></script>
-    <script type="text/javascript" src="../../helpers/classes.js"></script>
-    <script type="text/javascript" src="../../helpers/styles.js"></script>
-    <script type="text/javascript" src="./icons.metadata.js"></script>
     <script id="template" type="text/template">
       <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
 
@@ -160,9 +155,29 @@
         <% }) %>
     </script>
   </head>
-
   <body>
     <div id="body" class="hggs-app hggs-app--left" style="width: 100%; height: 100%; padding: 30px"></div>
   </body>
-  <script type="text/javascript" src="../../helpers/render.js"></script>
+  <!-- add global helpers -->
+  <script type="module">
+    import setGlobalHelpers from "../../../setGlobalHelpers.mjs";
+    setGlobalHelpers();
+  </script>
+  <!-- render component -->
+  <script type="module">
+    import getConfiguration from "../../../getConfiguration.mjs";
+    import renderComponent from "../../../renderComponent.mjs";
+    import setGlobal from "../../../setGlobal.mjs";
+    import model, { iconStyles, iconLabeledStyles } from "./icons.mjs";
+
+    const configuration = await getConfiguration("../../../");
+
+    setGlobal("iconStyles",iconStyles);
+    setGlobal("iconLabeledStyles",iconLabeledStyles);
+
+    renderComponent({
+      model,
+      configuration
+    });
+  </script>
 </html>

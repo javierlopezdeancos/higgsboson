@@ -95,7 +95,7 @@ All available core components defined from their selectors, properties and value
   - [Icon](/src/components/icons/icons.md)
   - [Input](/src/components/inputs/input.md)
   - [Label](/src/components/label/label.md)
-  - [Link](/src/components/links/links.md)
+  - [Link](/src/components/link/link.md)
   - [List](/src/components/list/list.md)
   - [Logo](/src/components/logo/logo.md)
   - [Option](/src/components/option/option.md)

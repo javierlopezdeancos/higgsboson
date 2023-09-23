@@ -20,6 +20,7 @@ import {
   titleIndentation4xStyles,
   titleStyles,
 } from "./devPlaygroundStyles.mjs";
+import { iconsClasses, iconSizesClases } from "./devPlaygroundClasses.mjs";
 
 function addGlobalHelpers() {
   const articleQuinaryStyles = getArticleQuinaryStyles(isDarkTheme);
@@ -38,6 +39,8 @@ function addGlobalHelpers() {
   setGlobal("hasClass", hasClass);
   setGlobal("headerQuinaryStyles", headerQuinaryStyles);
   setGlobal("headerStyles", headerStyles);
+  setGlobal("iconsClasses", iconsClasses);
+  setGlobal("iconSizesClases", iconSizesClases);
   setGlobal("inlineMarginLeftStyles", inlineMarginLeftStyles);
   setGlobal("inlineMarginLeftWrapQuinaryStyles", inlineMarginLeftWrapQuinaryStyles);
   setGlobal("isDarkTheme", isDarkTheme);

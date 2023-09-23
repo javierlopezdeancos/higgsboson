@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hggs-field</title>
-    <link rel="stylesheet" type="text/css" href="../../../dist/higgsboson.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
-    <script type="text/javascript" src="../../helpers/dom.js"></script>
-    <script type="text/javascript" src="../../helpers/styles.js"></script>
-    <script type="text/javascript" src="./field.metadata.js"></script>
     <script id="template" type="text/template">
       <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
 
@@ -41,9 +37,93 @@
       <% }) %>
     </script>
   </head>
-
   <body>
     <div id="body" class="hggs-app hggs-app--left" style="width: 100%; height: 100%; padding: 30px"></div>
   </body>
-  <script type="text/javascript" src="../../helpers/render.js"></script>
+ <!-- add global helpers -->
+  <script type="module">
+    import setGlobalHelpers from "../../../setGlobalHelpers.mjs";
+    setGlobalHelpers();
+  </script>
+  <!-- field template -->
+  <script id="template" type="text/template">
+    <h1 class="hggs-h1" style="margin-top: 0"><%= data.title %></h1>
+
+    <!-- default box -->
+
+    <% _.each(data.default, function(a) { %>
+      <%
+        const articleStyles = getStyles(a?.styles?.article);
+        const headerStyles = getStyles(a?.styles?.header);
+        const figureTitle = a?.titles?.figure;
+        const figureTitleStyles = getStyles(a?.styles?.titles?.figure);
+        const figureClass = getClasses(a?.classes?.figure);
+        const imageTitle = a?.titles?.image;
+        const imageTitleStyles = getStyles(a?.styles?.titles?.image);
+        const imageClass = getClasses(a?.classes?.image);
+        const imageSrc = a?.attributes?.image?.src;
+        const imageAlt = a?.attributes?.image?.alt;
+      %>
+
+      <article style="<%= articleStyles %>">
+        <header style="<%= headerStyles %>">
+          <h3 class="hggs-h3" style="<%= figureTitleStyles %>">
+            <%= figureTitle %>
+          </h3>
+          <h4 class="hggs-h4" style="<%= imageTitleStyles %>">
+            <%= imageTitle %>
+          </h4>
+        </header>
+
+        <figure class="<%= figureClass %>">
+          <img class="<%= imageClass %>" src="<%= imageSrc %>" alt="<%= imageAlt %>" />
+        </figure>
+      </article>
+    <% }); %>
+
+    <!-- sizes box -->
+
+    <% _.each(data.sizes, function(a) { %>
+      <%
+        const articleStyles = getStyles(a?.styles?.article);
+        const headerStyles = getStyles(a?.styles?.header);
+        const figureTitle = a?.titles?.figure;
+        const figureTitleStyles = getStyles(a?.styles?.titles?.figure);
+        const figureClass = getClasses(a?.classes?.figure);
+        const imageTitle = a?.titles?.image;
+        const imageTitleStyles = getStyles(a?.styles?.titles?.image);
+        const imageClass = getClasses(a?.classes?.image);
+        const imageSrc = a?.attributes?.image?.src;
+        const imageAlt = a?.attributes?.image?.alt;
+      %>
+
+      <article style="<%= articleStyles %>">
+        <header style="<%= headerStyles %>">
+          <h3 class="hggs-h3" style="<%= figureTitleStyles %>">
+            <%= figureTitle %>
+          </h3>
+          <h4 class="hggs-h4" style="<%= imageTitleStyles %>">
+            <%= imageTitle %>
+          </h4>
+        </header>
+
+        <figure class="<%= figureClass %>">
+          <img class="<%= imageClass %>" src="<%= imageSrc %>" alt="<%= imageAlt %>" />
+        </figure>
+      </article>
+    <% }); %>
+  </script>
+  <!-- render component -->
+  <script type="module">
+    import getConfiguration from "../../../getConfiguration.mjs";
+    import renderComponent from "../../../renderComponent.mjs";
+    import model from "./field.mjs";
+
+    const configuration = await getConfiguration("../../../");
+
+    renderComponent({
+      model,
+      configuration
+    });
+  </script>
 </html>

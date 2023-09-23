@@ -17,7 +17,8 @@
     "pre-push": "npm run lint --workspaces",
     "deps:update": "npx npm-check-updates -u",
     "deps:check": "npx depcheck",
-    "deps:remove": "npx npkill"
+    "deps:remove": "npx npkill",
+    "dev:default": "npm run dev --workspace packages/core"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

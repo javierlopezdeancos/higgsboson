@@ -1,4 +1,4 @@
-data = {
+const data = {
   title: "Title",
   default: [
     {
@@ -203,3 +203,5 @@ data = {
     },
   ],
 };
+
+export default data;

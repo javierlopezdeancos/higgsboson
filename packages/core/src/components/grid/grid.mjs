@@ -1,4 +1,9 @@
-const sectionStyles = ["width: 100%", "padding: 30px", "margin-bottom: 20px", "background: rgba(100,100,100,0.2)"];
+export const sectionStyles = [
+  "width: 100%",
+  "padding: 30px",
+  "margin-bottom: 20px",
+  "background: rgba(100,100,100,0.2)",
+];
 
 const data = {
   title: "Grid",
@@ -199,3 +204,5 @@ const data = {
     },
   ],
 };
+
+export default data;

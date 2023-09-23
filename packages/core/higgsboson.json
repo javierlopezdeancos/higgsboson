@@ -134,7 +134,7 @@
     },
     {
       "name": "Titles",
-      "path": "./src/components/title/title.html",
+      "path": "./src/components/titles/titles.html",
       "new": false
     },
     {
@@ -144,7 +144,7 @@
     },
     {
       "name": "Texts",
-      "path": "./src/components/texts/texts.html",
+      "path": "./src/components/text/texts.html",
       "new": false
     },
     {
