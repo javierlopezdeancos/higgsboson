@@ -4,3 +4,9 @@ node_modules
 !index.html
 dist
 *.exe.*
+# Jetbrains
+.idea
+
+# Visual Studio Code
+.vscode
+
