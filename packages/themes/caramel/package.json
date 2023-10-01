@@ -15,12 +15,11 @@
     "output_directory_name": "dist"
   },
   "scripts": {
-    "config:init": "cross-env ROOT_PATH=$npm_package_config_root_path  OUTPUT_PATH=$npm_package_config_output_path OUTPUT_FILENAME=$npm_package_config_output_filename COMPONENTS_MENU_ITEMS=$npm_package_config_components_menu_items node ../../scripts/setHiggsbosonConfig.js",
     "build": "cross-env NODE_ENV=production npx postcss ./$npm_package_config_input_directory_sources_name/index.css --config ./postcss.config.js --output ./$npm_package_config_output_directory_name/$npm_package_config_output_filename.min.css",
     "build:watch": "npx postcss ./$npm_package_config_input_directory_sources_name/index.css --config ./postcss.config.js --output ./$npm_package_config_output_directory_name/$npm_package_config_output_filename.css --verbose --watch",
     "format": "npx stylelint --fix \"$npm_package_config_input_directory_sources_name/**/*.css\"",
     "lint": "npx stylelint \"$npm_package_config_input_directory_sources_name/**/*.css\"",
     "server:start": "lite-server",
-    "dev": "concurrently \"npm run config:init\" \"npm run build:watch\" \"npm run server:start\""
+    "dev": "concurrently \"npm run build:watch\" \"npm run server:start\""
   }
 }
