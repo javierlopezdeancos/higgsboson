@@ -1,0 +1,156 @@
+{
+  "outputPath": "../../../dist/",
+  "outputFilename": "higgsboson-core",
+  "componentsMenuItems": [
+    {
+      "name": "Avatar",
+      "path": "./src/components/avatar/avatar.html",
+      "new": false
+    },
+    {
+      "name": "Avatars",
+      "path": "./src/components/avatars/avatars.html",
+      "new": false
+    },
+    {
+      "name": "Box",
+      "path": "./src/components/box/box.html",
+      "new": false
+    },
+    {
+      "name": "Buttons",
+      "path": "./src/components/buttons/buttons.html",
+      "new": false
+    },
+    {
+      "name": "Checkbox",
+      "path": "./src/components/checkbox/checkbox.html",
+      "new": false
+    },
+    {
+      "name": "Dialog",
+      "path": "./src/components/dialog/dialog.html",
+      "new": false
+    },
+    {
+      "name": "Divider",
+      "path": "./src/components/divider/divider.html",
+      "new": false
+    },
+    {
+      "name": "Dropdown",
+      "path": "./src/components/dropdown/dropdown.html",
+      "new": false
+    },
+    {
+      "name": "Field",
+      "path": "./src/components/field/field.html",
+      "new": false
+    },
+    {
+      "name": "Flex",
+      "path": "./src/components/flex/flex.html",
+      "new": false
+    },
+    {
+      "name": "Form",
+      "path": "./src/components/form/form.html",
+      "new": false
+    },
+    {
+      "name": "Grid",
+      "path": "./src/components/grid/grid.html",
+      "new": false
+    },
+    {
+      "name": "Icons",
+      "path": "./src/components/icons/icons.html",
+      "new": false
+    },
+    {
+      "name": "Inputs",
+      "path": "./src/components/inputs/inputs.html",
+      "new": false
+    },
+    {
+      "name": "Label",
+      "path": "./src/components/label/label.html",
+      "new": false
+    },
+    {
+      "name": "Link",
+      "path": "./src/components/link/link.html",
+      "new": false
+    },
+    {
+      "name": "List",
+      "path": "./src/components/list/list.html",
+      "new": false
+    },
+    {
+      "name": "Logo",
+      "path": "./src/components/logo/logo.html",
+      "new": false
+    },
+    {
+      "name": "Option",
+      "path": "./src/components/option/option.html",
+      "new": false
+    },
+    {
+      "name": "Radio",
+      "path": "./src/components/radio/radio.html",
+      "new": false
+    },
+    {
+      "name": "Select",
+      "path": "./src/components/select/select.html",
+      "new": false
+    },
+    {
+      "name": "Step",
+      "path": "./src/components/step/step.html",
+      "new": false
+    },
+    {
+      "name": "Steps",
+      "path": "./src/components/steps/steps.html",
+      "new": false
+    },
+    {
+      "name": "Switch",
+      "path": "./src/components/switch/switch.html",
+      "new": false
+    },
+    {
+      "name": "Table",
+      "path": "./src/components/table/table.html",
+      "new": false
+    },
+    {
+      "name": "Tag",
+      "path": "./src/components/tag/tag.html",
+      "new": false
+    },
+    {
+      "name": "Titles",
+      "path": "./src/components/titles/titles.html",
+      "new": false
+    },
+    {
+      "name": "Text",
+      "path": "./src/components/text/text.html",
+      "new": false
+    },
+    {
+      "name": "Texts",
+      "path": "./src/components/text/texts.html",
+      "new": false
+    },
+    {
+      "name": "Tooltip",
+      "path": "./src/components/tooltip/tooltip.html",
+      "new": false
+    }
+  ]
+}

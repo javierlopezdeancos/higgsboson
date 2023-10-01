@@ -1,9 +1,0 @@
-.hggs-logo {
-  --logo-url: url("./captain-america/assets/svg/logo.svg");
-  --logo-width: calc(var(--hggs-space-horizontal) * 10);
-  --logo-height: var(--logo-width);
-  --logo-width-small: calc(var(--hggs-space-horizontal-xs) * 15);
-  --logo-height-small: var(--logo-width-small);
-  --logo-url-light: url("./captain-america/assets/svg/logo-light.svg");
-  --logo-url-dark: url("./captain-america/assets/svg/logo-dark.svg");
-}

@@ -1,0 +1,57 @@
+.hggs-icon-wrapper,
+.hggs-icon,
+.hggs-button {
+  --icon-chevron-down: url("./assets/icons/chevron-down.svg");
+  --icon-close: url("./assets/icons/close.svg");
+  --icon-edit: url("./assets/icons/pencil.svg");
+  --icon-hamburger-menu: url("./assets/icons/hamburger-menu.svg");
+  --icon-log-out: url("./assets/icons/log-out.svg");
+  --icon-plus: url("./assets/icons/plus.svg");
+  --icon-question: url("./assets/icons/question.svg");
+  --icon-user: url("./assets/icons/user.svg");
+  --icon-check: url("./assets/icons/check.svg");
+  --icon-box-background-primary: var(--hggs-color-background-primary);
+  --icon-box-background-quaternary: var(--hggs-color-background-quaternary);
+  --icon-box-background-quinary: var(--hggs-color-background-quinary);
+  --icon-box-background-secondary: var(--hggs-color-background-secondary);
+  --icon-box-background-senary: var(--hggs-color-background-senary);
+  --icon-box-background-tertiary: var(--hggs-color-background-tertiary);
+  --icon-box-background: var(--hggs-color-background-gray);
+  --icon-box-padding-micro: var(--hggs-space-horizontal-xs);
+  --icon-box-padding-small: var(--hggs-space-horizontal-sm);
+  --icon-box-padding: var(--hggs-space-horizontal-sm);
+  --icon-filter-primary: var(--hggs-filter-primary);
+  --icon-filter-quaternary: var(--hggs-filter-quaternary);
+  --icon-filter-quinary: var(--hggs-filter-quinary);
+  --icon-filter-secondary: var(--hggs-filter-secondary);
+  --icon-filter-senary: var(--hggs-filter-senary);
+  --icon-filter-tertiary: var(--hggs-filter-tertiary);
+  --icon-filter: var(--hggs-filter-gray);
+  --icon-box-filter: var(--hggs-filter-background);
+  --icon-box-filter-primary: var(--hggs-filter-background);
+  --icon-box-filter-secondary: var(--hggs-filter-background);
+  --icon-box-filter-tertiary: var(--hggs-filter-background);
+  --icon-box-filter-quaternary: var(--hggs-filter-background);
+  --icon-box-filter-quinary: var(--hggs-filter-background);
+  --icon-box-filter-senary: var(--hggs-filter-background);
+  --icon-label-color: var(--hggs-color);
+  --icon-label-font-family: var(--hggs-font-family);
+  --icon-label-font-size: var(--hggs-font-size);
+  --icon-label-font-weigth: var(--hggs-font-weight-md);
+  --icon-label-text-align: left;
+  --icon-label-margin-left: var(--hggs-space-2xs);
+  --icon-label-quinary-color: var(--hggs-color-background);
+  --icon-outline-border-primary: var(--hggs-border-primary-outline);
+  --icon-outline-border-quaternary: var(--hggs-border-quaternary-outline);
+  --icon-outline-border-quinary: var(--hggs-border-quinary-outline);
+  --icon-outline-border-secondary: var(--hggs-border-secondary-outline);
+  --icon-outline-border-senary: var(--hggs-border-senary-outline);
+  --icon-outline-border-tertiary: var(--hggs-border-tertiary-outline);
+  --icon-outline-border: var(--hggs-border-gray);
+  --icon-size-micro: 10px;
+  --icon-size-small: 15px;
+  --icon-size: 20px;
+  --icon-margin: var(--hggs-space-xs);
+  --icon-margin-small: var(--hggs-space-xs);
+  --icon-margin-micro: var(--hggs-space-2xs);
+}

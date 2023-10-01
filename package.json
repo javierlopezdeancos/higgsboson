@@ -8,26 +8,40 @@
     "url": "https://javierlopezdeancos.dev/"
   },
   "description": "Css classes to style native components.",
-  "main": "dist/higgsboson.min.css",
+  "workspaces": [
+    "./packages/themes/*",
+    "./packages/core"
+  ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production npx postcss ./src/theme/index.css --config ./postcss.config.js --output ./dist/higgsboson.min.css",
-    "build:watch": "npx postcss ./src/theme/index.css --config ./postcss.config.js --output ./dist/higgsboson.css --verbose --watch",
-    "format": "npx stylelint --fix \"src/**/*.css\"",
-    "lint": "npx stylelint \"src/**/*.css\"",
-    "start": "lite-server",
     "prepare": "husky install",
-    "pre-push": "npm run lint",
+    "pre-push": "npm run lint --workspaces",
     "deps:update": "npx npm-check-updates -u",
     "deps:check": "npx depcheck",
-    "deps:remove": "npx npkill"
+    "deps:remove": "npx npkill",
+    "dev": "npm run dev --workspaces",
+    "dev:core:default": "npm run dev --workspace packages/core",
+    "dev:theme:captain-america": "concurrently \"build:core:default\" \"npm run dev --workspace packages/themes/captain-america\"",
+    "dev:theme:caramel": "concurrently \"build:core:default\" \"npm run dev --workspace packages/themes/caramel\"",
+    "build": "npm run build --workspaces",
+    "build:core:default": "npm run build --workspace packages/core",
+    "build:theme:captain-america": "concurrently \"build:core:default\" \"npm run build --workspace packages/themes/captain-america\"",
+    "build:theme:caramel": "concurrently \"build:core:default\" \"npm run build --workspace packages/themes/caramel\"",
+    "lint": "npm run lint --workspaces",
+    "lint:core:default": "npm run lint --workspace packages/core",
+    "lint:theme:captain-america": "npm run lint --workspace packages/themes/captain-america",
+    "lint:theme:caramel": "npm run lint --workspace packages/themes/caramel",
+    "format": "npm run format --workspaces",
+    "format:core:default": "npm run format --workspace packages/core",
+    "format:theme:captain-america": "npm run format --workspace packages/themes/captain-america",
+    "format:theme:caramel": "npm run format --workspace packages/themes/caramel"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "concurrently": "^8.2.0",
     "cross-env": "^7.0.3",
     "cssnano": "^6.0.0",
     "cssnano-preset-advanced": "^5.3.9",
     "husky": "^8.0.3",
-    "lite-server": "^2.6.1",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-copy-assets": "^0.3.1",
@@ -37,6 +51,7 @@
     "postcss-reporter": "^7.0.5",
     "stylelint": "^15.10.1",
     "stylelint-config-standard": "^33.0.0",
-    "stylelint-use-nesting": "^4.0.0"
+    "stylelint-use-nesting": "^4.0.0",
+    "lite-server": "^2.6.1"
   }
 }

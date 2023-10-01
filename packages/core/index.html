@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higgsboson css framework</title>
+    <link rel="stylesheet" type="text/css" href="dist/higgsboson-core.css" />
+  </head>
+
+  <body>
+    <div class="hggs-app">
+      <header>
+        <div class="hggs-flex hggs-flex--row-center">
+          <div class="hggs-logo hggs-logo--small"></div>
+          <h1 class="hggs-h1" style="margin: auto auto auto 10px">Higgsboson</h1>
+        </div>
+      </header>
+      <main>
+        <h3 class="hggs-h3">Components</h3>
+        <ul id="components-menu" class="hggs-list"></ul>
+      </main>
+      <footer>
+        <a href="https://github.com/javierlopezdeancos/higgsboson" class="hggs-link"> Project source code </a>
+      </footer>
+    </div>
+  </body>
+  <script type="module">
+    import getConfiguration from "./getConfiguration.mjs"
+    import addComponentsMenuDomNode from "./addComponentsMenuDomNode.mjs"
+
+    const configuration = await getConfiguration();
+    addComponentsMenuDomNode(configuration?.componentsMenuItems);
+  </script>
+</html>

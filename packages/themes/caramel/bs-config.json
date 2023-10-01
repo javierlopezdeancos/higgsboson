@@ -1,0 +1,5 @@
+{
+  "port": 8002,
+  "files": ["./**/*.{html,htm,css,svg,mjs,js,json}"],
+  "server": ["./", "../../utils/src", "../../core"]
+}

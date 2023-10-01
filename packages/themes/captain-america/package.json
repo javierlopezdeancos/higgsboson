@@ -1,0 +1,25 @@
+{
+  "name": "@higgsboson/theme-captain-america",
+  "version": "0.1.0",
+  "license": "gpl-3.0",
+  "author": {
+    "name": "Javier Lopez de Ancos",
+    "email": "javierlopezdeancos@outlook.com",
+    "url": "https://javierlopezdeancos.dev/"
+  },
+  "description": "Captain America theme to higgsboson css framework.",
+  "main": "dist/higgsboson-theme-captain-america.min.css",
+  "config": {
+    "input_directory_sources_name": "src",
+    "output_filename": "higgsboson-theme-captain-america",
+    "output_directory_name": "dist"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npx postcss ./$npm_package_config_input_directory_sources_name/index.css --config ./postcss.config.js --output ./$npm_package_config_output_directory_name/$npm_package_config_output_filename.min.css",
+    "build:watch": "npx postcss ./$npm_package_config_input_directory_sources_name/index.css --config ./postcss.config.js --output ./$npm_package_config_output_directory_name/$npm_package_config_output_filename.css --verbose --watch",
+    "format": "npx stylelint --fix \"$npm_package_config_input_directory_sources_name/**/*.css\"",
+    "lint": "npx stylelint \"$npm_package_config_input_directory_sources_name/**/*.css\"",
+    "server:start": "lite-server",
+    "dev": "concurrently \"npm run build:watch\" \"npm run server:start\""
+  }
+}
