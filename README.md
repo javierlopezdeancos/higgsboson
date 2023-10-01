@@ -124,8 +124,6 @@ Core package contains the core library and the `default-theme`. Building the cor
 
 ##### Default theme.
 
--------------- Here -------------
-
 ###### assets folder
 
 Folder to allocate different kind of assets as images, svgs, fonts, icons etc to the default theme.
