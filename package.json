@@ -42,7 +42,7 @@
     "cssnano": "^6.0.0",
     "cssnano-preset-advanced": "^5.3.9",
     "husky": "^8.0.3",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-copy-assets": "^0.3.1",
     "postcss-import": "^15.1.0",
