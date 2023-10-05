@@ -18,7 +18,7 @@
 
 ```
 --text-color
---text-font-famiy
+--text-font-family
 --text-font-size
 --text-font-size-small
 --text-font-weight
