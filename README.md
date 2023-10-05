@@ -393,7 +393,7 @@ This is the [configuration file](https://github.com/johnpapa/lite-server#custom-
 
 Usually a `bs-config.json` to a higgsboson theme package should be like:
 
-```json
+```
 {
   // browser port
   "port": 8001,
@@ -411,7 +411,7 @@ This file is responsible for manage some of the theme workspace package configur
 * outputFilename: Set the output filename to the theme build.
 * componentsMenuItems: Set the components menu items data to the theme dev playground.
 
-```json
+```
 {
   "outputPath": "../../../dist/",
   "outputFilename": "higgsboson-theme-name",
@@ -455,7 +455,7 @@ Set the license to the theme workspace package.
   * output_filename: Set the output filename to the theme build.
   * output_directory_name: Set the output directory name to the theme build.
 
-```json
+```
 {
   "main": "dist/higgsboson-theme-name.min.css",
   "config": {
@@ -469,7 +469,7 @@ Set the license to the theme workspace package.
 
 The theme package should have this scripts into him life cycle:
 
-```json
+```
 "scripts": {
   "build": ,
   "build:watch":,
