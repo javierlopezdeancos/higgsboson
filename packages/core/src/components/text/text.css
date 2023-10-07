@@ -21,11 +21,11 @@
   }
 
   &.hggs-text--align-center {
-    text-align: var(--text-text-align-center, center);
+    text-align: center;
   }
 
   &.hggs-text--align-right {
-    text-align: var(--text-text-align-right, right);
+    text-align: right;
   }
 
   &.hggs-text--balanced {

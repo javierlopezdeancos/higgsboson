@@ -27,8 +27,6 @@
 --text-line-height-small
 --text-margin
 --text-text-align
---text-text-align-center
---text-text-align-right
 ```
 
 ## HTML Structure
