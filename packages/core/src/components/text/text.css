@@ -20,6 +20,10 @@
     line-height: var(--text-line-height-small, var(--hggs-line-height-sm-default));
   }
 
+  &.hggs-text--align-left {
+    text-align: left;
+  }
+
   &.hggs-text--align-center {
     text-align: center;
   }
