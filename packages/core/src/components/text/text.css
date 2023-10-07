@@ -5,7 +5,7 @@
   font-weight: var(--text-font-weight, var(--text-font-weight-default));
   margin: var(--text-margin, var(--hggs-space-default) 0);
   line-height: var(--text-line-height, var(--hggs-line-height-default));
-  text-align: var(--text-text-align, left);
+  text-align: var(--text-align, left);
 
   &.hggs-text--bold {
     font-weight: var(--text-font-weight-bold, var(--hggs-font-weight-lg-default));
