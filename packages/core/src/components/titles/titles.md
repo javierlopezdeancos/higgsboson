@@ -29,31 +29,38 @@ Style your heading titles `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`.
 ## Component variables
 
 ```
+--title-align
 --title-color
 --title-font-family
 --title-h1-font-family
 --title-h1-font-size
 --title-h1-font-weight
+--title-h1-line-height
 --title-h1-margin
 --title-h2-font-family
 --title-h2-font-size
 --title-h2-font-weight
+--title-h2-line-height
 --title-h2-margin
 --title-h3-font-family
 --title-h3-font-size
 --title-h3-font-weight
+--title-h3-line-height
 --title-h3-margin
 --title-h4-font-family
 --title-h4-font-size
 --title-h4-font-weight
+--title-h4-line-height
 --title-h4-margin
 --title-h5-font-family
 --title-h5-font-size
 --title-h5-font-weight
+--title-h5-line-height
 --title-h5-margin
 --title-h6-font-family
 --title-h6-font-size
 --title-h6-font-weight
+--title-h6-line-height
 --title-h6-margin
 ```
 

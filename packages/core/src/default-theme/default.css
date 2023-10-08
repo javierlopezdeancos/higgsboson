@@ -114,9 +114,17 @@
   --hggs-font-letter-spacing-sm-default: 0.6px;
 
   /* Font line heights */
-  --hggs-line-height-default: 28px;
-  --hggs-line-height-sm-default: 25px;
-  --hggs-line-height-xs-default: 22px;
+  --hggs-line-height-5xl-default: var(--hggs-font-size-5xl-default);
+  --hggs-line-height-4xl-default: var(--hggs-font-size-4xl-default);
+  --hggs-line-height-3xl-default: var(--hggs-font-size-3xl-default);
+  --hggs-line-height-2xl-default: var(--hggs-font-size-2xl-default);
+  --hggs-line-height-xl-default: var(--hggs-font-size-xl-default);
+  --hggs-line-height-lg-default: var(--hggs-font-size-lg-default);
+  --hggs-line-height-md-default: var(--hggs-font-size-md-default);
+  --hggs-line-height-default: var(--hggs-font-size-default);
+  --hggs-line-height-sm-default: var(--hggs-font-size-sm-default);
+  --hggs-line-height-xs-default: var(--hggs-font-size-xs-default);
+  --hggs-line-height-2xs-default: var(--hggs-font-size-2xs-default);
 
   /* BORDERS */
   --hggs-border-radius-md-default: 0;
