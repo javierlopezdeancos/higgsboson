@@ -7,7 +7,7 @@
     "email": "javierlopezdeancos@outlook.com",
     "url": "https://javierlopezdeancos.dev/"
   },
-  "description": "Css classes to style native components.",
+  "description": "Semantic claseless framework to style native components.",
   "workspaces": [
     "./packages/themes/*",
     "./packages/core"
