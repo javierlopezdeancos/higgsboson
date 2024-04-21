@@ -505,8 +505,52 @@ Technically, a Higgsboson theme can have its own structure as long as it maintai
 
 However, for consistency, we describe here what our ideal folder structure and variable naming would look like.
 
-![[Higgsboson]](images/hggs-what-it-is-light.png#gh-light-mode-only)
-![[Higgsboson]](images/hggs-what-it-is-dark.png#gh-dark-mode-only)
+```
+                                    THEME
+                                  ┌──────────────────────────────────────────────────────┐
+                                  │                                                      │
+                                  │                ┌───────────────────────────┐         │
+                                  │                │                           │         │
+                                  │                │                           │         │
+                                  │                │       theme vars          │         │
+                                  │                │     │             │       │         │
+                                  │                └─────┼─────────────┼───────┘         │
+                                  │                      │             │                 │
+                                  │                ┌─────┼──────┐ ┌────┼───────┐         │
+                                  │                │     │      │ │    │       │         │
+                                  │                │     ▼      │ │    ▼       │         │
+                                  │                │ ComponentA │ │ ComponentB │         │
+                                  └──────────────  │ theme      │ │ theme      ├─────────┘
+                                                   │ values     │ │ values     │
+                                                   │    │       │ │    │       │
+                                                   └────┼───────┘ └────┼───────┘
+                                                        │              │
+                                                   ┌────┼───────┐ ┌────┼───────┐
+                                                   │    │       │ │    │       │
+        CORE                                       │    ▼       │ │    ▼       │
+       ┌───────────────────────────────────────────┤ ComponentA │ │ ComponentB ├─────────┐
+       │                                           │ theme      │ │ theme      │         │
+       │                                           │ properties │ │ properties │         │
+       │                                           │    │       │ │     │      │         │
+       │                                           └────┼───────┘ └─────┼──────┘         │
+       │                                                │               │                │
+       │                                  ┌─────────────┼───────┐ ┌─────┼──────────────┐ │
+       │                                  │             │       │ │     │              │ │
+       │   ┌───────────────────────────┐  │             │       │ │     │              │ │
+       │   │                           │  │             ▼       │ │     ▼              │ │
+       │   │        default      ┌─────┼──┼───────►             │ │                    │ │
+       │   │       theme vars    │     │  │    COMPONENT A      │ │    COMPONENT B     │ │
+       │   │                     │     │  │                     │ │                    │ │
+       │   └─────────────────────┼─────┘  │                     │ │        ▲           │ │
+       │                         │        │                     │ │        │           │ │
+       │                         │        └─────────────────────┘ └────────┼───────────┘ │
+       │                         │                                         │             │
+       │                         │                                         │             │
+       │                         │                                         │             │
+       │                         └─────────────────────────────────────────┘             │
+       │                                                                                 │
+       └─────────────────────────────────────────────────────────────────────────────────┘
+```
 
 ## How to use
 
