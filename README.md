@@ -49,6 +49,7 @@ Higgsboson is a themeable semantic classeless framework to style core native com
           - [package.json](#packagejson)
           - [postcss.config.js](#postcssconfigjs)
         - [Technical considerations](#technical-considerations)
+          - [Complete graph of the ideal higgsboson flow](#complete-graph-of-the-ideal-higgsboson-flow)
   - [How to use](#how-to-use)
     - [Install](#install)
     - [Build](#build)
@@ -501,55 +502,59 @@ File that set the postcss plugins configuration to the theme build.
 
 ##### Technical considerations
 
-Technically, a Higgsboson theme can have its own structure as long as it maintains the connection to the Higgsboson component APIs in a valid way.
+Technically, a Higgsboson theme could have its own structure as long as it maintains the connection to the higgsboson
+core through its component theme values.
 
-However, for consistency, we describe here what our ideal folder structure and variable naming would look like.
+However, for consistency, we describe here what our ideal folder structure and variable names would look like, as well
+as describe all the pieces needed to complete the ideal higgsboson flow.
+
+######  Complete graph of the ideal higgsboson flow
 
 ```
-                                    THEME
-                                  ┌──────────────────────────────────────────────────────┐
-                                  │                                                      │
-                                  │                ┌───────────────────────────┐         │
-                                  │                │                           │         │
-                                  │                │                           │         │
-                                  │                │       theme vars          │         │
-                                  │                │     │             │       │         │
-                                  │                └─────┼─────────────┼───────┘         │
-                                  │                      │             │                 │
-                                  │                ┌─────┼──────┐ ┌────┼───────┐         │
-                                  │                │     │      │ │    │       │         │
-                                  │                │     ▼      │ │    ▼       │         │
-                                  │                │ ComponentA │ │ ComponentB │         │
-                                  └──────────────  │ theme      │ │ theme      ├─────────┘
-                                                   │ values     │ │ values     │
-                                                   │    │       │ │    │       │
-                                                   └────┼───────┘ └────┼───────┘
-                                                        │              │
-                                                   ┌────┼───────┐ ┌────┼───────┐
-                                                   │    │       │ │    │       │
-        CORE                                       │    ▼       │ │    ▼       │
-       ┌───────────────────────────────────────────┤ ComponentA │ │ ComponentB ├─────────┐
-       │                                           │ theme      │ │ theme      │         │
-       │                                           │ properties │ │ properties │         │
-       │                                           │    │       │ │     │      │         │
-       │                                           └────┼───────┘ └─────┼──────┘         │
-       │                                                │               │                │
-       │                                  ┌─────────────┼───────┐ ┌─────┼──────────────┐ │
-       │                                  │             │       │ │     │              │ │
-       │   ┌───────────────────────────┐  │             │       │ │     │              │ │
-       │   │                           │  │             ▼       │ │     ▼              │ │
-       │   │        default      ┌─────┼──┼───────►             │ │                    │ │
-       │   │       theme vars    │     │  │    COMPONENT A      │ │    COMPONENT B     │ │
-       │   │                     │     │  │                     │ │                    │ │
-       │   └─────────────────────┼─────┘  │                     │ │        ▲           │ │
-       │                         │        │                     │ │        │           │ │
-       │                         │        └─────────────────────┘ └────────┼───────────┘ │
-       │                         │                                         │             │
-       │                         │                                         │             │
-       │                         │                                         │             │
-       │                         └─────────────────────────────────────────┘             │
-       │                                                                                 │
-       └─────────────────────────────────────────────────────────────────────────────────┘
+                               THEME
+                            ┌──────────────────────────────────────────────────────┐
+                            │                                                      │
+                            │                ┌───────────────────────────┐         │
+                            │                │                           │         │
+                            │                │                           │         │
+                            │                │       theme vars          │         │
+                            │                │     │             │       │         │
+                            │                └─────┼─────────────┼───────┘         │
+                            │                      │             │                 │
+                            │                ┌─────┼──────┐ ┌────┼───────┐         │
+                            │                │     │      │ │    │       │         │
+                            │                │     ▼      │ │    ▼       │         │
+                            │                │ ComponentA │ │ ComponentB │         │
+                            └──────────────  │ theme      │ │ theme      ├─────────┘
+                                             │ values     │ │ values     │
+                                             │    │       │ │    │       │
+                                             └────┼───────┘ └────┼───────┘
+                                                  │              │
+                                             ┌────┼───────┐ ┌────┼───────┐
+                                             │    │       │ │    │       │
+  CORE                                       │    ▼       │ │    ▼       │
+ ┌───────────────────────────────────────────┤ ComponentA │ │ ComponentB ├─────────┐
+ │                                           │ theme      │ │ theme      │         │
+ │                                           │ properties │ │ properties │         │
+ │                                           │    │       │ │     │      │         │
+ │                                           └────┼───────┘ └─────┼──────┘         │
+ │                                                │               │                │
+ │                                  ┌─────────────┼───────┐ ┌─────┼──────────────┐ │
+ │                                  │             │       │ │     │              │ │
+ │   ┌───────────────────────────┐  │             │       │ │     │              │ │
+ │   │                           │  │             ▼       │ │     ▼              │ │
+ │   │                     ┌─────┼──┼───────►             │ │                    │ │
+ │   │      default vars   │     │  │    COMPONENT A      │ │    COMPONENT B     │ │
+ │   │                     │     │  │                     │ │                    │ │
+ │   └─────────────────────┼─────┘  │                     │ │        ▲           │ │
+ │                         │        │                     │ │        │           │ │
+ │                         │        └─────────────────────┘ └────────┼───────────┘ │
+ │                         │                                         │             │
+ │                         │                                         │             │
+ │                         │                                         │             │
+ │                         └─────────────────────────────────────────┘             │
+ │                                                                                 │
+ └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ## How to use
