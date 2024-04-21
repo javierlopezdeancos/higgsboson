@@ -450,7 +450,7 @@ Set the license to the theme workspace package.
 
 ######  package.json
 
-> [!WARNING]
+> [!IMPORTANT]
 > Note some particular properties:
 
 * main: Set the main css file to the theme build.
@@ -471,7 +471,7 @@ Set the license to the theme workspace package.
 ```
 
 
-The theme package should have this scripts into him life cycle:
+The theme package should have this scripts into his life cycle:
 
 ```
 "scripts": {
