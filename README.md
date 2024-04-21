@@ -122,13 +122,14 @@ Core package contains the core library and the `default-theme`. Building the cor
            ├─ resets.css
 ```
 
-##### Default theme.
+##### Default theme
 
 ###### assets folder
 
 Folder to allocate different kind of assets as images, svgs, fonts, icons etc to the default theme.
 
 ###### default.css
+
 Theme default has variables as fallback to each `core-component-tokens` to each core component.
 
 Higgsboson themes just works with css standard custom variables but we would like to calls this entire concept `default tokens`.
@@ -144,7 +145,9 @@ Higgsboson themes just works with css standard custom variables but we would lik
 
 **default tokens convention name**
 
-⚠️ Take care here, in the same way that I will explain that for each `theme tokens` you can use the naming convention that you want, in this case, you must follow the existing naming convention.
+> [!WARNING]
+> Take care here, in the same way that I will explain that for each `theme tokens` you can use the naming convention that you want, in this case, you must follow the existing naming convention.
+
 ```
 --hggs-border-primary-default
   ──── ────── ─────── ───────
@@ -447,7 +450,8 @@ Set the license to the theme workspace package.
 
 ######  package.json
 
-⚠️ Note some particular properties:
+> [!WARNING]
+> Note some particular properties:
 
 * main: Set the main css file to the theme build.
 * config
@@ -480,7 +484,8 @@ The theme package should have this scripts into him life cycle:
 }
 ```
 
-Please note that you can build this scripts using all config keys defined previously in thi package.json file.
+> [!TIP]
+> Please note that you can build this scripts using all config keys defined previously in thi package.json file.
 
 Use:
 
