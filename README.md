@@ -505,29 +505,8 @@ Technically, a Higgsboson theme can have its own structure as long as it maintai
 
 However, for consistency, we describe here what our ideal folder structure and variable naming would look like.
 
-```
-                              │
-                              │
-                              │
-   ┌───────────────────────┐  │  ┌─────────────────────────┐
-┌──┤   default theme vars  │  │  │      theme vars         ├───┐
-│  └┬──────────────────────┘  │  └────────────────────┬────┘   │
-│   │                         │                       │        │
-│  ┌┼────────────┐ ┌───────┐  │  ┌────────────────────▼────┐   │
-│  ││            │ │       │  │  │                         │   │
-│  │▼ ComponentA ◄─┼─ API  ◄──┼──┤ ComponentA theme values │   │
-│  │             │ │       │  │  │                         │   │
-│  └─────────────┘ └───────┘  │  └─────────────────────────┘   │
-│                             │                                │
-│  ┌─────────────┐ ┌───────┐  │  ┌─────────────────────────┐   │
-│  │             │ │       │  │  │                         │   │
-└──►  ComponentB ◄─┼─ API ◄├──┼──┤ ComponentB theme values ◄───┘
-   │             │ │       │  │  │                         │
-   └─────────────┘ └───────┘  │  └─────────────────────────┘
-                              │
-                              │
-    HIGGSBOSON                │     CUSTOM  THEME
-```
+![[Higgsboson]](images/hggs-what-it-is-light.png#gh-light-mode-only)
+![[Higgsboson]](images/hggs-what-it-is-dark.png#gh-dark-mode-only)
 
 ## How to use
 
