@@ -7,11 +7,13 @@
   line-height: var(--text-line-height, var(--hggs-line-height-default));
   text-align: var(--text-align, left);
 
-  &.hggs-text--bold {
+  &.hggs-text--bold,
+  & .hggs-text--bold {
     font-weight: var(--text-font-weight-bold, var(--hggs-font-weight-lg-default));
   }
 
-  &.hggs-text--italic {
+  &.hggs-text--italic,
+  & .hggs-text--italic {
     font-style: italic;
   }
 
@@ -33,6 +35,6 @@
   }
 
   &.hggs-text--balanced {
-     text-wrap: balance;
+    text-wrap: balance;
   }
 }

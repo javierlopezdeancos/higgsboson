@@ -3,7 +3,7 @@
 
 # Higgsboson
 
-Higgsboson class components is a set of classes to style core native components.
+Higgsboson is a themeable semantic classeless framework to style core native components.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Issues](https://img.shields.io/github/issues/javierlopezdeancos/higgsboson?style=flat-square)](https://github.com/javierlopezdeancos/higgsboson/issues)
