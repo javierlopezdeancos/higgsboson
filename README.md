@@ -486,7 +486,7 @@ The theme package should have this scripts into his life cycle:
 ```
 
 > [!TIP]
-> Please note that you can build this scripts using all config keys defined previously in thi package.json file.
+> Please note that you can build this scripts using all config keys defined previously in thi `package.json` file.
 
 Use:
 
