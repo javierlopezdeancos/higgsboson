@@ -1,5 +1,5 @@
 .hggs-blockquote {
-  background: var(--blockquote-background, var(--hggs-color-gray-001-default));
+  background: var(--blockquote-background, var(--hggs-color-gray-002-default));
   padding: var(--blockquote-padding, calc(var(--hggs-space-sm-default) * 2) calc(var(--hggs-space-sm-default) * 1.5));
   margin: var(--blockquote-margin, var(--hggs-space-default) 0);
 
