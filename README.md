@@ -172,36 +172,36 @@ Use this file as theme entry point. [Import](https://github.com/postcss/postcss-
 All available core components defined from their selectors, properties and values in the form of variables connected to the theme variables or own variables for this component.
 
 ###### Components docs
-  - [Avatar](/src/components/avatar/avatar.md)
-  - [Avatars](/src/components/avatar/avatars.md)
-  - [Blockquote](/src/components/blockquote/blockquote.md)
-  - [Box](/src/components/box/box.md)
-  - [Button](/src/components/buttons/buttons.md)
-  - [Checkbox](/src/components/checkbox/checkbox.md)
-  - [Dialog](/src/components/dialog/dialog.md)
-  - [Divider](/src/components/dialog/divider.md)
-  - [Dropdown](/src/components/dropdown/dropdown.md)
-  - [Field](/src/components/field/field.md)
-  - [Flex](/src/components/flex/flex.md)
-  - [Grid](/src/components/grid/grid.md)
-  - [Icon](/src/components/icons/icons.md)
-  - [Input](/src/components/inputs/input.md)
-  - [Label](/src/components/label/label.md)
-  - [Link](/src/components/link/link.md)
-  - [List](/src/components/list/list.md)
-  - [Logo](/src/components/logo/logo.md)
-  - [Option](/src/components/option/option.md)
-  - [Radio](/src/components/radio/radio.md)
-  - [Select](/src/components/select/select.md)
-  - [Step](/src/components/step/step.md)
-  - [Steps](/src/components/steps/steps.md)
-  - [Switch](/src/components/switch/switch.md)
-  - [Table](/src/components/table/table.md)
-  - [Tag](/src/components/tag/tag.md)
-  - [Text](/src/components/text/text.md)
-  - [Texts](/src/components/text/texts.md)
-  - [Titles (h1, h2, h3, h4, h5, h6)](/src/components/titles/titles.md)
-  - [Tooltip](/src/components/tooltip/tooltip.md)
+  - [Avatar](/packages/core/src/components/avatar/avatar.md)
+  - [Avatars](/packages/core/src/components/avatar/avatars.md)
+  - [Blockquote](/packages/core/src/components/blockquote/blockquote.md)
+  - [Box](/packages/core/src/components/box/box.md)
+  - [Button](/packages/core/src/components/buttons/buttons.md)
+  - [Checkbox](/packages/core/src/components/checkbox/checkbox.md)
+  - [Dialog](/packages/core/src/components/dialog/dialog.md)
+  - [Divider](/packages/core/src/components/dialog/divider.md)
+  - [Dropdown](/packages/core/src/components/dropdown/dropdown.md)
+  - [Field](/packages/core/src/components/field/field.md)
+  - [Flex](/packages/core/src/components/flex/flex.md)
+  - [Grid](/packages/core/src/components/grid/grid.md)
+  - [Icon](/packages/core/src/components/icons/icons.md)
+  - [Input](/packages/core/src/components/inputs/input.md)
+  - [Label](/packages/core/src/components/label/label.md)
+  - [Link](/packages/core/src/components/link/link.md)
+  - [List](/packages/core/src/components/list/list.md)
+  - [Logo](/packages/core/src/components/logo/logo.md)
+  - [Option](/packages/core/src/components/option/option.md)
+  - [Radio](/packages/core/src/components/radio/radio.md)
+  - [Select](/packages/core/src/components/select/select.md)
+  - [Step](/packages/core/src/components/step/step.md)
+  - [Steps](/packages/core/src/components/steps/steps.md)
+  - [Switch](/packages/core/src/components/switch/switch.md)
+  - [Table](/packages/core/src/components/table/table.md)
+  - [Tag](/packages/core/src/components/tag/tag.md)
+  - [Text](/packages/core/src/components/text/text.md)
+  - [Texts](/packages/core/src/components/text/texts.md)
+  - [Titles (h1, h2, h3, h4, h5, h6)](/packages/core/src/components/titles/titles.md)
+  - [Tooltip](/packages/core/src/components/tooltip/tooltip.md)
 
 ###### Component files structure
 
@@ -246,6 +246,7 @@ theme
  │     ├─ assets
  │     ├─ components
  │     │    ├─ app.css
+ |     |    ├─ blockquote.css
  │     │    ├─ box.css
  │     │    ├─ button.css
  │     │    ├─ checkbox.css
