@@ -1,11 +1,19 @@
 .hggs-blockquote {
   background: var(--blockquote-background, var(--hggs-color-gray-001-default));
-  padding: var(--blockquote-padding, var(--hggs-space-sm-default) var(--hggs-space-md-default));
+  padding: var(--blockquote-padding, calc(var(--hggs-space-sm-default) * 2) calc(var(--hggs-space-sm-default) * 1.5));
   margin: var(--blockquote-margin, var(--hggs-space-default) 0);
 
   & .hggs-text,
   & p {
     font-size: var(--blockquote-font-size, var(--hggs-font-size-sm-default));
     line-height: var(--blockquote-line-height, var(--hggs-line-height-sm-default));
+  }
+
+  & p:first-child {
+    margin: 0;
+  }
+
+  & p:last-child {
+    margin-bottom: 0;
   }
 }
