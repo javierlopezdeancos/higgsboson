@@ -1,7 +1,7 @@
 .hggs-blockquote {
   background: var(--blockquote-background, var(--hggs-color-gray-001-default));
   padding: var(--blockquote-padding, var(--hggs-space-sm-default) var(--hggs-space-md-default));
-  margin: var(--blockquote-margin, 0);
+  margin: var(--blockquote-margin, var(--hggs-space-default) 0);
 
   & .hggs-text,
   & p {
