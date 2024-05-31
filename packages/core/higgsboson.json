@@ -13,6 +13,11 @@
       "new": false
     },
     {
+      "name": "Blockquote",
+      "path": "./src/components/blockquote/blockquote.html",
+      "new": false
+    },
+    {
       "name": "Box",
       "path": "./src/components/box/box.html",
       "new": false
