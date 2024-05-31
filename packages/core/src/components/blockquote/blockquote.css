@@ -1,0 +1,11 @@
+.hggs-blockquote {
+  background: var(--blockquote-background, var(--hggs-color-gray-001-default));
+  padding: var(--blockquote-padding, var(--hggs-space-sm-default) var(--hggs-space-md-default));
+  margin: var(--blockquote-margin, 0);
+
+  & .hggs-text,
+  & p {
+    font-size: var(--blockquote-font-size, var(--hggs-font-size-sm-default));
+    line-height: var(--blockquote-line-height, var(--hggs-line-height-sm-default));
+  }
+}
