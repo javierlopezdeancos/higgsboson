@@ -3,7 +3,8 @@
   padding-left: var(--list-padding-left, var(--hggs-space-sm-default));
 
   & .hggs-list-item,
-  & .hggs-list-item a {
+  & .hggs-list-item a,
+  & .hggs-list-item .hggs-link, {
     font-family: var(--list-item-font-family, var(--hggs-font-family-default));
     font-weight: var(--list-item-font-weight, var(--hggs-font-weight-default));
     font-size: var(--list-item-font-size, var(--hggs-font-size-default));
