@@ -27,7 +27,7 @@ const data = {
       attributes: [
         {
           image: {
-            src: "https://javierlopezdeancos.dev/src/images/me.png",
+            src: "https://javierlopezdeancos.dev/img/st09FDI0DN-500.webp",
             alt: "higgsboson avatar example",
           },
         },
@@ -73,7 +73,7 @@ const data = {
       attributes: [
         {
           image: {
-            src: "https://javierlopezdeancos.dev/src/images/me.png",
+            src: "https://javierlopezdeancos.dev/img/st09FDI0DN-500.webp",
             alt: "higgsboson avatar example",
           },
         },
@@ -117,7 +117,7 @@ const data = {
       attributes: [
         {
           image: {
-            src: "https://javierlopezdeancos.dev/src/images/me.png",
+            src: "https://javierlopezdeancos.dev/img/st09FDI0DN-500.webp",
             alt: "higgsboson avatar example",
           },
         },
@@ -161,7 +161,7 @@ const data = {
       attributes: [
         {
           image: {
-            src: "https://javierlopezdeancos.dev/src/images/me.png",
+            src: "https://javierlopezdeancos.dev/img/st09FDI0DN-500.webp",
             alt: "higgsboson avatar example",
           },
         },
