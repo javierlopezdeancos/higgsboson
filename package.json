@@ -24,7 +24,7 @@
     "dev:theme:caramel": "concurrently \"build:core:default\" \"npm run dev --workspace packages/themes/caramel\"",
     "build": "npm run build --workspaces",
     "build:core:default": "npm run build --workspace packages/core",
-    "build:theme:captain-america": "concurrently \"build:core:default\" \"npm run build --workspace packages/themes/captain-america\"",
+    "build:theme:captain-america": "npm run build --workspace packages/themes/captain-america",
     "build:theme:caramel": "concurrently \"build:core:default\" \"npm run build --workspace packages/themes/caramel\"",
     "lint": "npm run lint --workspaces",
     "lint:core:default": "npm run lint --workspace packages/core",
@@ -42,6 +42,7 @@
     "cssnano": "^6.0.0",
     "cssnano-preset-advanced": "^5.3.9",
     "husky": "^8.0.3",
+    "lite-server": "^2.6.1",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-copy-assets": "^0.3.1",
@@ -51,7 +52,6 @@
     "postcss-reporter": "^7.0.5",
     "stylelint": "^15.10.1",
     "stylelint-config-standard": "^33.0.0",
-    "stylelint-use-nesting": "^4.0.0",
-    "lite-server": "^2.6.1"
+    "stylelint-use-nesting": "^4.0.0"
   }
 }
